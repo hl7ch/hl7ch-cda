@@ -516,10 +516,10 @@ History:
 								</tr>
 								<tr>
 									<td>
-										<content ID='m5'>Lisinopril HCT</content>
+										<content ID='m5'>Lisinopril HCT Streuli</content>
 									</td>
 									<td>
-										10mg / 12,5mg
+										10/12,5mg
 									</td>
 									<td>
 										Tbl
@@ -594,7 +594,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='100' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -651,7 +652,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='1000' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -693,7 +695,7 @@ History:
 								<high value='20100203'/>
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
-								<!-- Dosierung 1-1-1 -->
+								<!-- Dosierung 2-2-2 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -708,7 +710,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='1000' unit='mg'/>
+								<!-- 2 Stück (z. B. Tablette) -->
+								<center value='2' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -769,7 +772,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='4' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -817,7 +821,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'/>
 							<doseQuantity>
-								<center value='10' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -833,7 +838,7 @@ History:
 											<!-- ATC WHO Code -->
 											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
 										</code>
-										<name>LISINOPRIL HCT Tabl 10/12.5 100 Stk</name>
+										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 100 Stk</name>
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
@@ -865,7 +870,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'/>
 							<doseQuantity>
-								<center value='5' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>

@@ -374,7 +374,7 @@ History:
 								</tr>
 								<tr>
 									<td>
-										<content ID='m3'>Lisinopril HCT Tbl. 10/12.5 mg</content>
+										<content ID='m3'>Lisinopril HCT Streuli Tbl. 10/12.5 mg</content>
 									</td>
 									<td>Lisinopril und Diuretika</td>
 									<td>1-0-0</td>
@@ -402,7 +402,7 @@ History:
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
-								<!-- Dosierung 1-1-1 -->
+								<!-- Dosierung 2-2-2 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -417,7 +417,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='1000' unit='mg'/>
+								<!-- 2 Stück (z. B. Tablette) -->
+								<center value='2' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -478,7 +479,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='4' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -527,7 +529,8 @@ History:
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<center value='10' unit='mg'/>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
