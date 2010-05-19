@@ -32,7 +32,7 @@ project templates
 ********************************************************
 -->
 <!-- reusable SVV templates -->
-<!ENTITY ent-project-svv-kzbt-1.0 SYSTEM 'svv-kzbt-1.0.ent'>
+<!ENTITY ent-project-svv-kzbt-20090228 SYSTEM 'svv-kzbt-20090228.ent'>
 
 ]
 >
@@ -48,7 +48,7 @@ project templates
 		<xhtml:li>vhitg-ruleset-150.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2_medication-section.ent</xhtml:li>
-		<xhtml:li>svv-kzbt-1.0.ent</xhtml:li>
+		<xhtml:li>svv-kzbt-20090228.ent</xhtml:li>
 	</xhtml:ul>
 
 	<!-- reusable templates -->
@@ -57,6 +57,6 @@ project templates
 	&ent-hl7-cda-ch-1.2_medication-section;
 	
 	<!-- project specific templates -->
-	&ent-project-svv-kzbt-1.0;
+	&ent-project-svv-kzbt-20090228;
 	
 </schema>
