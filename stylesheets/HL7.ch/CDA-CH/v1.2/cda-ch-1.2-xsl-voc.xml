@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Codetabellen für mehrsprachiges CDA-CH Stylesheet
+Language: de-CH
+
+History:
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+
+********************************************************
+-->
+<localization>
+	<text language='de-CH' value='Patient' displayName='Patient'/>
+  <text language='fr-CH' value='Patient' displayName='Patient'/>
+  <text language='it-CH' value='Patient' displayName='Paziente'/>
+
+  <text language='de-CH' value='Birthday' displayName='Geburtsdatum'/>
+	<text language='fr-CH' value='Birthday' displayName='Date de naissance'/>
+  <text language='it-CH' value='Birthday' displayName='Data di nascita'/>
+
+  <text language='de-CH' value='IDsPatient' displayName='ID Patient'/>
+  <text language='fr-CH' value='IDsPatient' displayName='ID patient'/>
+  <text language='it-CH' value='IDsPatient' displayName='ID paziente'/>
+
+  <text language='de-CH' value='Creation' displayName='Erstellt am'/>
+	<text language='fr-CH' value='Creation' displayName='Création'/>
+  <text language='it-CH' value='Creation' displayName='Generata'/>
+
+  <text language='de-CH' value='Sex' displayName='Geschlecht'/>
+	<text language='fr-CH' value='Sex' displayName='Sexe'/>
+  <text language='it-CH' value='Sex' displayName='Genere'/>
+
+  <text language='de-CH' value='man' displayName='männlich'/>
+	<text language='fr-CH' value='man' displayName='masculin'/>
+  <text language='it-CH' value='man' displayName='maschile'/>
+
+  <text language='de-CH' value='woman' displayName='weiblich'/>
+	<text language='fr-CH' value='woman' displayName='féminin'/>
+  <text language='it-CH' value='woman' displayName='femminile'/>
+
+  <text language='de-CH' value='unknown' displayName='unbekannt'/>
+	<text language='fr-CH' value='unknown' displayName='inconnue'/>
+  <text language='it-CH' value='unknown' displayName='sconosciuta'/>
+
+  <text language='de-CH' value='PrimaryReceiver' displayName='Empfänger'/>
+	<text language='fr-CH' value='PrimaryReceiver' displayName='Destinataire'/>
+  <text language='it-CH' value='PrimaryReceiver' displayName='Destinatario'/>
+
+  <text language='de-CH' value='SecondaryReceiver' displayName='Kopie an'/>
+	<text language='fr-CH' value='SecondaryReceiver' displayName='Copie à'/>
+  <text language='it-CH' value='SecondaryReceiver' displayName='In copia a'/>
+
+  <text language='de-CH' value='January' displayName='Januar'/>
+	<text language='fr-CH' value='January' displayName='Janvier'/>
+  <text language='it-CH' value='January' displayName='Gennaio'/>
+
+  <text language='de-CH' value='February' displayName='Februar'/>
+	<text language='fr-CH' value='February' displayName='Février'/>
+  <text language='it-CH' value='February' displayName='Febbraio'/>
+
+  <text language='de-CH' value='March' displayName='März'/>
+  <text language='fr-CH' value='March' displayName='Mars'/>
+  <text language='it-CH' value='March' displayName='Marzo'/>
+
+  <text language='de-CH' value='April' displayName='April'/>
+  <text language='fr-CH' value='April' displayName='Avril'/>
+  <text language='it-CH' value='April' displayName='Aprile'/>
+
+  <text language='de-CH' value='May' displayName='Mai'/>
+  <text language='fr-CH' value='May' displayName='Mai'/>
+  <text language='it-CH' value='May' displayName='Maggio'/>
+
+  <text language='de-CH' value='June' displayName='Juni'/>
+  <text language='fr-CH' value='June' displayName='Juin'/>
+  <text language='it-CH' value='June' displayName='Giugno'/>
+
+  <text language='de-CH' value='July' displayName='Juli'/>
+  <text language='fr-CH' value='July' displayName='Juillet'/>
+  <text language='it-CH' value='July' displayName='Luglio'/>
+
+  <text language='de-CH' value='August' displayName='August'/>
+  <text language='fr-CH' value='August' displayName='Août'/>
+  <text language='it-CH' value='August' displayName='Agosto'/>
+
+  <text language='de-CH' value='September' displayName='September'/>
+  <text language='fr-CH' value='September' displayName='Septembre'/>
+  <text language='it-CH' value='September' displayName='Settembre'/>
+
+  <text language='de-CH' value='October' displayName='Oktober'/>
+  <text language='fr-CH' value='October' displayName='Octobre'/>
+  <text language='it-CH' value='October' displayName='Ottobre'/>
+
+  <text language='de-CH' value='November' displayName='November'/>
+	<text language='fr-CH' value='November' displayName='Novembre'/>
+  <text language='it-CH' value='November' displayName='Novembre'/>
+
+  <text language='de-CH' value='December' displayName='Dezember'/>
+	<text language='fr-CH' value='December' displayName='Décembre'/>
+  <text language='it-CH' value='December' displayName='Dicembre'/>
+
+  <text language='de-CH' value='Holder' displayName='Versicherte/r'/>
+	<text language='fr-CH' value='Holder' displayName='Assuré'/>
+  <text language='it-CH' value='Holder' displayName='Assicurati'/>
+
+  <text language='de-CH' value='Assurance' displayName='Versicherung'/>
+	<text language='fr-CH' value='Assurance' displayName='Assurance'/>
+  <text language='it-CH' value='Assurance' displayName='Assicurazione'/>
+
+  <text language='de-CH' value='Consent' displayName='Einverständniserklärung'/>
+	<text language='fr-CH' value='Consent' displayName='Consentement éclairé'/>
+  <text language='it-CH' value='Consent' displayName='Dichiarazione di consenso'/>
+
+  <text language='de-CH' value='Custodian' displayName='Verwaltende Organisation'/>
+	<text language='fr-CH' value='Custodian' displayName='Organisme de gestion'/>
+  <text language='it-CH' value='Custodian' displayName='Organismo di gestione'/>
+
+  <text language='de-CH' value='Author' displayName='Autor'/>
+	<text language='fr-CH' value='Author' displayName='Auteur'/>
+  <text language='it-CH' value='Author' displayName='Autore'/>
+
+  <text language='de-CH' value='theDate' displayName='am'/>
+	<text language='fr-CH' value='theDate' displayName='le'/>
+  <text language='it-CH' value='theDate' displayName='il'/>
+
+  <text language='de-CH' value='Informer' displayName='Informiert'/>
+	<text language='fr-CH' value='Informer' displayName='Informé'/>
+  <text language='it-CH' value='Informer' displayName='Informati'/>
+
+  <text language='de-CH' value='Authenticator' displayName='Unterzeichner'/>
+  <text language='fr-CH' value='Authenticator' displayName='Signé'/>
+  <text language='it-CH' value='Authenticator' displayName='Firmato'/>
+
+  <text language='de-CH' value='LegalAuthenticator' displayName='Rechtsgültiger Unterzeichner'/>
+  <text language='fr-CH' value='LegalAuthenticator' displayName='Légal signataires'/>
+  <text language='it-CH' value='LegalAuthenticator' displayName='Efficace legge firmato'/>
+
+  <text language='de-CH' value='DataEnterer' displayName='Erfasst durch'/>
+  <text language='fr-CH' value='DataEnterer' displayName='Saisie par'/>
+  <text language='it-CH' value='DataEnterer' displayName='Registrati da'/>
+
+  <text language='de-CH' value='Tel' displayName='Tel'/>
+	<text language='fr-CH' value='Tel' displayName='Tel'/>
+  <text language='it-CH' value='Tel' displayName='Tel'/>
+
+  <text language='de-CH' value='Fax' displayName='Fax'/>
+	<text language='fr-CH' value='Fax' displayName='Fax'/>
+  <text language='it-CH' value='Fax' displayName='Fax'/>
+
+  <text language='de-CH' value='Mail' displayName='Mail'/>
+	<text language='fr-CH' value='Mail' displayName='Mail'/>
+  <text language='it-CH' value='Mail' displayName='Mail'/>
+
+  <text language='de-CH' value='Web' displayName='Web'/>
+  <text language='fr-CH' value='Web' displayName='Web'/>
+  <text language='it-CH' value='Web' displayName='Web'/>
+
+  <text language='de-CH' value='home' displayName='p'/>
+  <text language='fr-CH' value='home' displayName='p'/>
+  <text language='it-CH' value='home' displayName='C'/>
+
+  <text language='de-CH' value='workplace' displayName='g'/>
+  <text language='fr-CH' value='workplace' displayName='travail'/>
+  <text language='it-CH' value='workplace' displayName='U'/>
+
+  <text language='de-CH' value='2.16.756.5.31' displayName='Alte AHV Nr'/>
+  <text language='fr-CH' value='2.16.756.5.31' displayName='No AVS vieux'/>
+  <text language='it-CH' value='2.16.756.5.31' displayName='No AVS vecchio'/>
+
+  <text language='de-CH' value='2.16.756.5.32' displayName='Neue AHV Nr'/>
+  <text language='fr-CH' value='2.16.756.5.32' displayName='No AVS neuve'/>
+  <text language='it-CH' value='2.16.756.5.32' displayName='No AVS nuovo'/>
+
+  <text language='de-CH' value='2.16.756.5.30.1.100.3.1.1' displayName='Suva Schadennummer'/>
+  <text language='fr-CH' value='2.16.756.5.30.1.100.3.1.1' displayName='Suva Schadennummer'/>
+  <text language='it-CH' value='2.16.756.5.30.1.100.3.1.1' displayName='Suva Schadennummer'/>
+
+</localization>

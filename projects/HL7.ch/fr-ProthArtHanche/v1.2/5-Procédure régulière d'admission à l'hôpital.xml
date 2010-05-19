@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="77876BFF-D82E-4A4F-8218-DB9F7D6E109E" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="28616-1" codeSystem="2.16.840.1.113883.6.1" displayName="lettre de transfert"/>
+	<title>INSTRUCTION A L'HÔPITAL</title>
+	<effectiveTime value="20071021"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="fr-CH"/>
+	<setId extension="77876BFF-D82E-4A4F-8218-DB9F7D6E109E" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<addr use="HP">
+				<streetName>Chemin de Croix</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Village spécimen</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>UNTEL</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Toujours Prêt, Cabinet Médical CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071021"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Allée du docteur</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Quelquepart</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:pret@cabinetmedical.ch"/>
+			<telecom use="PUB" value="http:www.cabinetmedical.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Toujours</given>
+					<family>Prêt</family>
+					<suffix>Spécialiste pour médecine générale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Cabinet Médical CH</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071021"/>
+		<assignedEntity>
+			<id extension="2" root="2.16.756.888888.2.1"/>
+			<assignedPerson>
+				<name>
+					Sk
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Cabinet Médical CH, Dr. med. Toujours Prêt, Spécialiste pour médecine générale</name>
+				<addr use="WP">
+					<streetName>Allée du docteur</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Hôpital cantonal, Clinique orthopédique, Direction médicale</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Rue de l'Hôpital</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<informationRecipient typeCode="TRC">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Dr. med. Hans Spécialiste, Orthopédiste</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Rue des médecins</streetName>
+					<houseNumber>13</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071021"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Toujours</given>
+					<family>Prêt</family>
+					<suffix>Spécialiste pour médecine générale</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consentement écrite pour soigner l'articulation droite de la hanche du patient par une opération d'implantation d'une endoprothèse de l'articulation de la hanche lors de la consultation auprès du 15/10/2007 Dr Hans Spécialiste, Orthopédiste
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Préambule
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Préambule</title>
+					<text>
+						<content>
+							Conformément à la recommandation du Dr Spécialiste dans son avis consultatif du 15/10/2007, je vous serais reconnaissant de bien vouloir convoquer le patient susmentionné en vue d'un traitement opératoire.<br/>
+						</content>
+						<content styleCode="Italics">
+							Préambule<br/>
+							<br/>
+					</content>
+				</text>
+			</section>
+		</component>
+		<!-- 
+			********************************************************
+			  Liste de diagnostics
+			********************************************************
+			-->
+		<component>
+			<section>
+				<title>Liste de diagnostics</title>
+				<text>
+					<content styleCode="Italics">
+						Liste des diagnostics connus du patient, le plus souvent structurée. Diagnostic principal (motif du traitement) en premier.<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Anamnèse et pathologie actuelle
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Anamnèse et pathologie actuelle</title>
+					<text>
+						<content styleCode="Italics">
+							Bref récapitulatif des antécédents pathologiques expliquant pourquoi le patient doit être traité.<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Résultats d'examen
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Résultats d'examen</title>
+					<text>
+						<content styleCode="Italics">
+							Résultats d'examen marquants, y compris des résultats d'autres examens au moyen d'équipements médicaux.<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Valeurs de laboratoire
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Valeurs de laboratoire</title>
+					<text>
+						<content styleCode="Italics">
+							Valeurs de laboratoire actuelles<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Diagnostic d'imagerie
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Diagnostic d'imagerie</title>
+					<text>
+						<content>
+							Radio du bassin et prises selon Lauenstein deux côtés du 6/10/2007:<br/>
+							<renderMultiMedia referencedObject="MM1"/><br/>
+							<br/>
+						</content>
+						<content styleCode="Italics">
+							Résumé du résultat de l'examen de radiographie<br/>
+							<br/>
+						</content>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="MM1">
+							<value mediaType="image/jpeg">
+								<reference value="mustermaxhuefte1.jpg"/>
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Médicaments
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Médicaments</title>
+					<text>
+						<content styleCode="Italics">
+							Une liste des médications actuelles du patient<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Pièces jointes
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Beilagen</title>
+					<text>
+						<list>
+							<item>
+								<content ID="a1">
+									<linkHtml href="4-Rapport de consultation.xml">Copie du rapport de consultation du Dr. Spécialiste du 15/10/2007</linkHtml>
+									<br/>
+								</content>
+							</item>
+						</list>
+					</text>
+					<entry>
+						<observation classCode="COND" moodCode="EVN">
+							<code code="11488-4" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport de consultation"/>
+							<effectiveTime value="20071030"/>
+							<value xsi:type="CD" code="11488-4" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport de consultation">
+								<originalText>
+									<reference value="#a1"/>
+								</originalText>
+							</value>
+							<reference typeCode="SPRT">
+								<seperatableInd value="true"/>
+								<externalDocument>
+									<id extension="6072748C-C635-4E5F-910E-35F55B323CD4" root="2.16.756.5.30.1.1.1.1"/>
+									<text mediaType="multipart/related">
+										<reference value="4-Konsiliarbericht.xml"/>
+									</text>
+									<setId extension="6072748C-C635-4E5F-910E-35F55B323CD4" root="2.16.756.5.30.1.1.1.1"/>
+									<versionNumber value="1"/>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

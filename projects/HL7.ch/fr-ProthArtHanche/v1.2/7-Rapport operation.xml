@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération"/>
+	<title>RAPPORT D'OPÉRATION</title>
+	<effectiveTime value="20071030"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="fr-CH"/>
+	<setId extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="278364" root="2.16.756.555555.3.1"/>
+			<addr use="HP">
+				<streetName>Chemin de Croix</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Village spécimen</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>UNTEL</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Hôpital cantonal, Clinique chirurgicale et orthopédique</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PRISURG' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071030"/>
+		<assignedAuthor>
+			<id extension="7605555555555" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Rue de l'Hôpital</streetName>
+				<houseNumber>23</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Quelquepart</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
+			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
+			<telecom use="PUB" value="http:www.kantonales-spital.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Hans</given>
+					<family>Spécialiste</family>
+					<suffix>Orthopédiste</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Hôpital cantonal, Clinique chirurgicale et orthopédique, Dr. Theo Klug, Médecin chef</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071030"/>
+		<assignedEntity>
+			<id extension="29" root="2.16.756.555555.2.1"/>
+			<assignedPerson>
+				<name>
+					wf
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Hôpital cantonal</name>
+				<addr use="WP">
+					<streetName>Rue de l'Hôpital</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Hôpital cantonal, Direction médicale, Clinique orthopédique</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Rue de l'Hôpital</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<informationRecipient typeCode="TRC">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Cabinet Médical CH, Dr. med. Toujours Prêt, FMH médecine générale</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Allée du docteur</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071030"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7605555555555" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Hans</given>
+					<family>Spécialiste</family>
+					<suffix>Orthopédiste</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consentement écrite pour soigner l'articulation droite de la hanche du patient par une opération d'implantation d'une endoprothèse de l'articulation de la hanche lors de la consultation auprès du 15/10/2007 Dr Hans Spécialiste, Orthopédiste
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Date d'opération / Chirurgien opérateur / Assistants / Anesthésie / Durée OP / N° de salle...
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Date d'opération / Chirurgien opérateur / Assistants / Anesthésie / Durée OP / N° de salle...</title>
+					<text>
+						Poste : chirurgie, étage 13, salle 74<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<td valign="top">Date d'opération: 30/10/2007:</td>
+									<td valign="top">Chirurgien opérateur: </td>
+									<td valign="top">Dr. H. Spécialiste</td>
+									<td valign="top"></td>
+								</tr>
+								<tr>
+									<td valign="top">Incision: 11:00</td>
+									<td valign="top">1er Assistant: </td>
+									<td valign="top">Dr. S. Térile</td>
+									<td valign="top"></td>
+								</tr>
+								<tr>
+									<td valign="top">Nahtzeit: 12:30</td>
+									<td valign="top">2ème Assistant: </td>
+									<td valign="top">cm A. Halter</td>
+									<td valign="top">Instrumentiste.: S. Kalpell</td>
+								</tr>
+								<tr>
+									<td valign="top">Salle: 4</td>
+									<td valign="top">Anesthésiste:</td>
+									<td valign="top">Dr. G. Bonne-Nuit</td>
+									<td valign="top"></td>
+								</tr>
+							</tbody>
+						</table>
+						<content styleCode="Italics">
+							<br/>
+							Renseignements structurés sur la statistique d'opération<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Diagnostic d'opération
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Diagnostic d'opération</title>
+					<text>
+						<content styleCode="Italics">
+							Le diagnostic relevé au moyen des résultats pendant l'opération<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Opération réalisée
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Opération réalisée</title>
+					<text>
+						<content styleCode="Italics">
+							Désignation exacte de l'opération réalisée<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Indication d'opération
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Indication d'opération</title>
+					<text>
+						<content styleCode="Italics">
+							Motif de l'intervention<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Déroulement de l'opération
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Déroulement de l'opération</title>
+					<text>
+						<content styleCode="Italics">
+							Description détaillée de l'opération dans l'ordre chronologique du début (désinfection, incision) à la fin (suture cutanée).<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Ordonnance pour le traitement à suivre
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Ordonnance pour le traitement à suivre</title>
+					<text>
+						<content styleCode="Italics">
+							Contraintes du traitement postopératoire liées à l'opération (analgésie, mobilisation, retrait des points de suture, drainages, contrôles radiographiques, etc.)<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

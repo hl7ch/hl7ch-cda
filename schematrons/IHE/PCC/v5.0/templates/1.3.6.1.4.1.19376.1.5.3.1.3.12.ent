@@ -1,0 +1,45 @@
+<!--
+********************************************************
+
+Schematron Entity for Surgeries
+Language: en
+
+History:
+28.12.2009: Pascal Bürki, medshare GmbH (Copied from IHE Wiki)
+30.12.2009: Tony Schaller, medshare GmbH (warning instead of error when no entries available)
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+
+********************************************************
+-->
+
+<pattern name='Template_1.3.6.1.4.1.19376.1.5.3.1.3.12'>
+	<rule context='*[cda:templateId/@root="1.3.6.1.4.1.19376.1.5.3.1.3.12"]'>
+		<!-- Verify that the template id is used on the appropriate type of object -->
+		<assert role='error' test='../cda:section'>
+			The Coded List of Surgeries can only be used on sections.
+		</assert>
+		<!-- Verify that the parent templateId is also present. -->
+		<assert role='error' test='cda:templateId[@root="1.3.6.1.4.1.19376.1.5.3.1.3.11"]'>
+			The parent template identifier for Coded List of Surgeries is not present.
+		</assert>
+		<!-- Verify the section type code -->
+		<assert role='error' test='cda:code[@code = "47519-4"]'>
+			The section type code of a Coded List of Surgeries must be 47519-4
+		</assert>
+		<assert role='error' test='cda:code[@codeSystem = "2.16.840.1.113883.6.1"]'>
+			The section type code must come from the LOINC code
+			system (2.16.840.1.113883.6.1).
+		</assert>
+		<!-- 29.12.2009 ts: error->warning; wenn keine Eintraege bekannt sind, koennen auch keine Entries angegeben werden (z.B. bei Evita SEDS) -->
+		<assert role='warning' test='.//cda:templateId[@root = "1.3.6.1.4.1.19376.1.5.3.1.4.19"]'>
+			<!-- Verify that all required data elements are present -->
+			The Coded List of Surgeries Section must contain a(n) Procedure Entry  Entry.
+			See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.3.12
+		</assert>
+		<assert role='warning' test='.//cda:templateId[@root = "1.3.6.1.4.1.19376.1.5.3.1.4.4"]'>
+			<!-- Alert on any missing required if known elements -->
+			The  Coded List of Surgeries Section should contain a(n) References Entry Entry.
+			See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.3.12
+		</assert>
+	</rule>
+</pattern>

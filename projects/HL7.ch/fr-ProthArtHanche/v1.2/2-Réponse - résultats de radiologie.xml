@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Résultat radiologique"/>
+	<title>RÉSULTAT RADIOLOGIQUE</title>
+	<effectiveTime value="20071007"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="fr-CH"/>
+	<setId extension="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="2345" root="2.16.756.777777.3.1"/>
+			<addr use="HP">
+				<streetName>Chemin de Croix</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Village spécimen</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>UNTEL</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7607777777777" root="1.3.88"/>
+				<name>Institut de Radiologie RoDiag</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='ATTPHYS' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071007"/>
+		<assignedAuthor>
+			<id extension="7607777777777" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Rue de la radio</streetName>
+				<houseNumber>1</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Quelquepart</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.456.99.90"/>
+			<telecom use="PUB" value="fax:+41.32.456.99.99"/>
+			<telecom use="PUB" value="mailto:rodiag@rodiag_institut.ch"/>
+			<telecom use="PUB" value="http:www.rodiag_institut.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>X.</given>
+					<family>Ray</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Institut de Radiologie RoDiag</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071007"/>
+		<assignedEntity>
+			<id extension="23" root="2.16.756.777777.2.1"/>
+			<assignedPerson>
+				<name>
+					Av
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7607777777777" root="1.3.88"/>
+				<name>Institut de Radiologie RoDiag</name>
+				<addr use="WP">
+					<streetName>Rue de la radio</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Cabinet Médical CH, Dr. med. Toujours Prêt, FMH médecine générale</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Allée du docteur</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071007"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7607777777777" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>X.</given>
+					<family>Ray</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consentement indirect par l'instruction d'un diagnostic radilogique du 03/10/2007
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Préambule
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Préambule</title>
+					<text>
+						<content>
+							Veuillez accepter nos remerciements pour votre aimable instruction du 3/10/2007 en vue de l'examen radiologique du patient susmentionné. 
+							La radiographie créé le trouveront ici: <linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/mustermaxhuefte1.jpg">RoDiag Webaccess</linkHtml><br/>
+							<br/>
+						</content>
+						<content styleCode="Italics">
+							Préambule, avec référence éventuelle à la lettre d'instruction<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Radio du bassin du 6/10/2007
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Radio du bassin du 6/10/2007</title>
+					<text>
+						<content styleCode="Italics">
+							Spécification de l'examen réalisé et de la date d'examen dans le titre.<br/>
+							Les résultats de l'examen marquants sont décrits dans le corps du texte de cette section (résultats pathologiques, singularités, variantes de norme, résultats normaux marquants).
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Prise de vues d'après Lauenstein deux côtés du 6/10/2007
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Prise de vues d'après Lauenstein deux côtés du 6/10/2007</title>
+					<text>
+						<content styleCode="Italics">
+							Spécification de l'examen réalisé et de la date d'examen dans le titre.<br/>
+							Les résultats de l'examen marquants sont décrits dans le corps du texte de cette section (résultats pathologiques, singularités, variantes de norme, résultats normaux marquants).
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Avis
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Avis</title>
+					<text>
+						<content styleCode="Italics">
+							Considérations et interprétations du spécialiste sur les résultats décrits plus haut. Souvent, plusieurs examens faisant partie d'un ensemble logique sont formulés dans un avis commun.
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Recommandations
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Recommandations</title>
+					<text>
+						<content styleCode="Italics">
+							Les éventuelles recommandations sur la procédure conseillée peuvent être mentionnées ici (ex: «recommandation d'un examen de contrôle dans 12 semaines» ou «nous recommandons une analyse approfondie des résultats au moyen d'une tomodensitométrie»)
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

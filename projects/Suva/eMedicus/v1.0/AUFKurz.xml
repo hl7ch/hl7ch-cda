@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+eMedicus Sample
+
+History:
+07.11.2008: Tony Schaller, medshare GmbH (Freigabe eMedicus R1)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedicus/v2.0/suva.css'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="2905" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
+	<id extension="807563C2-5146-11D5-A672-00B0D022E945" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
+	<code code="2905" codeSystem="2.16.756.5.30.1.100.2.1" displayName="Arbeitsunfähigkeitszeugnis kurz"/> <!-- OID SUVA/Formularnummer -->
+	<title>Arbeitsunfähigkeitszeugnis ab 3. Tag</title>
+	<effectiveTime value="20081017"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="de-CH"/>
+	<setId extension="807563C2-5146-11D5-A672-00B0D022E945" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="TODO"/> <!-- TODO OID AHV Nummer -->
+			<id extension="5.12006.08.3" root="TODO"/> <!-- TODO OID SUVA/Schadennummer -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Allzeit Bereit, Gruppenpraxis CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20081017"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:bereit@gruppenpraxis.ch"/>
+			<telecom use="PUB" value="http:www.gruppenpraxis.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Gruppenpraxis CH</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20081017"/>
+		<assignedEntity>
+			<id extension="2" root="2.16.756.888888.2.1"/>
+			<assignedPerson>
+				<name>
+					Sk
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Gruppenpraxis CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<id extension="A05" root="0"/>  <!-- TODO OID SUVA/Agenturen -->
+			<informationRecipient>
+				<name>Suva Agentur Aarau</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Rain</streetName>
+					<houseNumber>35</houseNumber>
+					<postalCode>5001</postalCode>
+					<city>Aarau</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20081117"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Mündliche Einwilligung während Konsultation vom 17.10.2008 (inkl. der Bitte an den Arbeitgeber, mit dem behandelnden Arzt Kontakt aufzunehmen)
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+	********************************************************
+	  CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Beurteilungsgeschichte
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Beurteilungsgeschichte</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Konsultation</th>
+									<th>Anwesenheitsdauer</th>
+									<th>Pensum</th>
+									<th>Arbeitsintensität</th>
+									<th>Nächste Beurteilung</th>
+								</tr>
+								<tr>
+									<td>Datum</td>
+									<td>Zumutbare Stunden pro Tag im Betrieb</td>
+									<td>% der üblichen Arbeitszeit</td>
+									<td>% der üblichen Intensität</td>
+									<td>geplant am</td>
+								</tr>
+								<tr>
+									<td>17.20.2008</td>
+									<td>4 h/Tag</td>
+									<td>50%</td>
+									<td>0%</td>
+									<td>29.10.2008</td>
+								</tr>
+								<tr>
+									<td>29.10.2008</td>
+									<td>6 h/Tag</td>
+									<td>75%</td>
+									<td>0%</td>
+									<td>10.11.2008</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Aktuelle Beurteilung Arbeitsfähigkeit
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Aktuelle Beurteilung</title>
+					<text>
+							<table>
+								<tbody>
+									<tr>
+										<th>Arbeitsfähigkeit insgesamt</th>
+										<th>75%</th>
+										<th></th>
+									</tr>
+									<tr>
+										<td>Gültig (von/bis)</td>
+										<td>17.10.2008 - 29.10.2008</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Fall angemeldet als</td>
+										<td>Unfall/Berufskrankheit</td>
+										<td><content styleCode="Italics">| Krankheit | Mutterschaft (nicht krankheitsbedingt)</content></td>
+									</tr>
+								</tbody>
+							</table>						
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Bitte an Arbeitgeber
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Bitte an Arbeitgeber</title>
+					<text>
+						<content>
+							- Bitte beiliegende Arbeitsplatzbeschreibung ausfüllen zur genauen Beurteilung einer längerfristigen Arbeitsunfähigkeit<br/>
+							- Mit dem behandelnden Arzt Kontakt aufnehmen (mit Einverständnis des Patienten)<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Bemerkungen
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Bemerkungen</title>
+					<text>
+						<content>
+							Test-Forumular<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

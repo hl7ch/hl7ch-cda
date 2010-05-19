@@ -1,0 +1,32 @@
+/*********************************************************
+  Project specific CSS for suva eMedicus HL7 CDA Templates
+  Date: 13.11.2009
+*********************************************************/
+/* Logo */
+h1 { 
+	background: transparent url(suvacare.jpg) no-repeat bottom right; 
+}
+/* Header */
+table.head thead tr {
+	background-color: #99b4a6;
+}
+table.head tr {
+	background-color: #bccdc3;	
+}
+/* Body */
+table.body tr th {
+	background-color: #d6ad82;
+}
+table.body tr td {
+	background-color: #e6c9ab;	
+}
+/* Footer */
+table.foot tr th {
+	background-color: #99b4a6;
+}
+table.foot tr td {
+	background-color: #bccdc3;
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="64B47FC1-6BB5-479F-A925-639D81423415" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11492-6" codeSystem="2.16.840.1.113883.6.1" displayName="Anamnesi e Referto"/>
+	<title>VISITA PREOPERATORIA</title>
+	<effectiveTime value="20071028"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="it-CH"/>
+	<setId extension="64B47FC1-6BB5-479F-A925-639D81423415" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Mario</given>
+					<family>BIANCHI</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dott. Allzeit Bereit, Studio medico CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071028"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:bereit@studio-medico.ch"/>
+			<telecom use="PUB" value="http:www.studio-medico.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Specialista in medicina generale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Studio medico CH</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071028"/>
+		<assignedEntity>
+			<id extension="2" root="2.16.756.888888.2.1"/>
+			<assignedPerson>
+				<name>
+					Sk
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Studio medico CH, Dott. Allzeit Bereit, Specialista in medicina generale</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Ospedale cantonale, Direzione medica, Clinica ortopedica</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071028"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Specialista in medicina generale</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2007 Dr med Hans Specialista, specialista di ortopedia.
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Esame clinico
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Esame clinico</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>cardiopolmonare:</td>
+								</tr>
+								<tr>
+									<td>gastrointestinale:</td>
+								</tr>
+								<tr>
+									<td>urogenitale:</td>
+								</tr>
+								<tr>
+									<td>neurologico:</td>
+								</tr>
+								<tr>
+									<td>apparato motorio:</td>
+								</tr>
+							</tbody>
+						</table>
+						<content styleCode="Italics">
+							<br/>
+							Referti e visite fisiche, spesso suddivise per sistemi di organi<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Valori di laboratorio
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Valori di laboratorio</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th align="left">Tipo di analisi</th>
+									<th>Valore di riferimento</th>
+									<th>28/10/2007</th>
+								</tr>
+								<tr>
+									<td align="left">Glucosio [mmol/l]</td>
+									<td>4.2 – 6.1</td>
+									<td>5.8</td>
+								</tr>
+								<tr>
+									<td align="left">Sodio [mmol/l]</td>
+									<td>137 - 145</td>
+									<td>138</td>
+								</tr>
+								<tr>
+									<td align="left">Potassio [mmol/l]</td>
+									<td>3.6 – 5.0</td>
+									<td>3.8</td>
+								</tr>
+								<tr>
+									<td>Creatinina [mmol/l]</td>
+									<td>71 -133</td>
+									<td>78</td>
+								</tr>
+								<tr>
+									<td>Emoglobina [g%]</td>
+									<td>12.0 – 17.6</td>
+									<td>15.4</td>
+								</tr>
+								<tr>
+									<td>Trombociti [g%]</td>
+									<td>15000 – 40000</td>
+									<td>18000</td>
+								</tr>
+								<tr>
+									<td>INR</td>
+									<td>
+										- 1.200
+									</td>
+									<td>0.900</td>
+								</tr>
+							</tbody>
+						</table>
+						<content styleCode="Italics">
+							<br/>
+							Esempio di trasmissione di risultati di analisi di laboratorio<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

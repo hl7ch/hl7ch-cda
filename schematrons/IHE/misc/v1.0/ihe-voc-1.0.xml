@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary zu IHE Schemratrons
+Language: de-CH
+
+History:
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+
+********************************************************
+-->
+<systems>
+  <system codeSystemName='IHERoleCode' root='1.3.5.1.4.1.19376.1.5.3.3'>
+	  <code value='EMPLOYER' displayname="Arbeitgeber" />
+	  <code value='SCHOOL' displayname="Schule" />
+	  <code value='AFFILIATED' displayname="Zugeordnete Organisation/Person" />
+	</system>
+</systems>

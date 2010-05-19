@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Risultato radiologici"/>
+	<title>REFERTO RADIOLOGICO</title>
+	<effectiveTime value="20071007"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="it-CH"/>
+	<setId extension="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="2345" root="2.16.756.777777.3.1"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Mario</given>
+					<family>BIANCHI</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7607777777777" root="1.3.88"/>
+				<name>Istituto radiologico RoDiag</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='ATTPHYS' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071007"/>
+		<assignedAuthor>
+			<id extension="7607777777777" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Röntgenstr</streetName>
+				<houseNumber>1</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.456.99.90"/>
+			<telecom use="PUB" value="fax:+41.32.456.99.99"/>
+			<telecom use="PUB" value="mailto:rodiag@rodiag_institut.ch"/>
+			<telecom use="PUB" value="http:www.rodiag_institut.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>X.</given>
+					<family>Ray</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Istituto radiologico RoDiag</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071007"/>
+		<assignedEntity>
+			<id extension="23" root="2.16.756.777777.2.1"/>
+			<assignedPerson>
+				<name>
+					Av
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7607777777777" root="1.3.88"/>
+				<name>Istituto radiologico RoDiag</name>
+				<addr use="WP">
+					<streetName>Röntgenstr</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Studio medico CH, Dott. Allzeit Bereit, Medico specializzato in medicina generale</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071007"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7607777777777" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>X.</given>
+					<family>Ray</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consenso indiretto di assegnazione delle quote per la diagnostica radiologica sulla 03/10/2007.
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Premessa
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Premessa</title>
+					<text>
+						<content>
+							Ringraziamo per la richiesta del 3/10/2007 relativa all’esame radiologico del paziente suddetto. Il creato a raggi X immagine può essere trovato qui: <linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/mustermaxhuefte1.jpg ">RoDiag Webaccess</linkHtml><br/>
+							<br/>
+						</content>
+						<content styleCode="Italics">
+							Premessa, eventualmente con riferimento all’impegnativa<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Panoramica bacino del 6/10/2007
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Panoramica bacino del 6/10/2007</title>
+					<text>
+						<content styleCode="Italics">
+							Nel titolo, specificazione dell’esame eseguito e della data.<br/>
+							Nel corpo del testo di questo paragrafo vengono descritti referti rilevanti (referti patologici, irregolarità, deviazioni da norme, referti normali rilevanti)
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			 Radiografie con metodo Lauenstein del 6/10/2007
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Radiografie con metodo Lauenstein del 6/10/2007</title>
+					<text>
+						<content styleCode="Italics">
+							Nel titolo, specificazione dell’esame eseguito e della data.<br/>
+							Nel corpo del testo di questo paragrafo vengono descritti referti rilevanti (referti patologici, irregolarità, deviazioni da norme, referti normali rilevanti)
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Valutazione
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Valutazione</title>
+					<text>
+						<content styleCode="Italics">
+							Esame e interpretazione dei suddetti referti da parte del medico specializzato. Esami tra loro correlati vengono spesso presi in considerazione un unico referto.
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Consigli
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Consigli</title>
+					<text>
+						<content styleCode="Italics">
+							Qui è possibile indicare suggerimenti per le procedure successive (ad.”si raccomanda un esame di controllo tra 12 settimane“ o si consiglia un’ulteriore analisi dei referti tramite una tomografia computerizzata”)
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

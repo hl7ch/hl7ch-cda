@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary zu HL7 CDA-CH V1.2 Schematrons
+Language: de-CH
+
+History:
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+
+********************************************************
+-->
+<systems>
+
+	<!--
+	********************************************************
+	CDA-CH: Allgemein einsetzbare minimal struktukturierte Angabe im CDA Body
+	********************************************************
+	-->
+	<system codeSystemName='StandardCDABodySelektion' root='2.16.756.5.30.2.1.1.3.1'>
+		<code value='Y' displayName='Ja'/>
+		<code value='N' displayName='Nein'/>
+		<code value='U' displayName='Unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH: Schwangerschaftsstatus
+	********************************************************
+	-->
+	<system codeSystemName='PregnancyStatus' root='2.16.756.5.30.2.1.1.4.1'>
+		<code value='1' displayName='1. Trimenon'/>
+		<code value='2' displayName='2. Trimenon'/>
+		<code value='3' displayName='3. Trimenon'/>
+		<code value='N' displayName='Nicht schwanger'/>
+		<code value='U' displayName='Unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH: Zugelassene Vitalzeichen (LOINC Codes)
+	********************************************************
+	-->
+	<system codeSystemName='VitalSignCodes' root='2.16.756.5.30.2.1.1.5.1'>
+		<code value='3137-7' displayName='Grösse'/>
+		<code value='3141-9' displayName='Gewicht'/>
+		<code value='11449-6' displayName='Schwangerschaftstatus'/>
+	</system>
+	
+	<!--
+	********************************************************
+	CDA-CH: Arbeitsfähigkeit: Kategorisierung zumutbare Anzahl Arbeitsstunden pro Tag
+	********************************************************
+	-->
+	<system codeSystemName='ArbeitsfähigkeitStunden' root='2.16.756.5.30.2.1.1.6.1'>
+		<code value='0' displayName='Arbeitsunfähig'/>
+		<code value='2' displayName='2 Stunden pro Tag'/>
+		<code value='4' displayName='4 Stunden pro Tag'/>
+		<code value='6' displayName='6 Stunden pro Tag'/>
+		<code value='8+' displayName='8 oder mehr Stunden pro Tag'/>
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH: Arbeitsfähigkeit: Kategorisierung zumutbare Arbeitsintensität
+	********************************************************
+	-->
+	<system codeSystemName='ArbeitsfähigkeitIntensität' root='2.16.756.5.30.2.1.1.7.1'> 
+		<code value='0' displayName='Arbeitsunfähig'/>
+		<code value='50' displayName='reduzierte Arbeitsintensität'/>
+		<code value='100' displayName='volle Arbeitsintensität'/>
+	</system>
+
+	<!--
+	********************************************************
+	LOINC: Diagnosen Section
+	********************************************************
+	-->
+	<system codeSystemName='DiagnosisSectionCode' root='2.16.840.1.113883.6.1'>
+		<!-- DIAGNOSIS:NAR (für alle Diagnosensections, die Diagnosen nur im Freitext enthalten und die Bedeutung der Diagnosen-section nicht genauer definiert ist) -->
+		<code value='29548-5' displayName='Diagnose (Text)'/>
+		<!-- DIAGNOSIS:NOM (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section nicht genauer definiert ist) -->
+		<code value='29308-4' displayName='Diagnose (Codiert)'/>
+		<!-- HOSPITAL DISCHARGE DX:NAR (für alle Diagnosensections, die Diagnosen nur im Freitext enthalten und die Bedeutung der Diagnosen-section als "Entlassdiagnose" definiert ist) -->
+		<code value='11535-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Text)'/>
+		<!-- HOSPITAL DISCHARGE DX (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section als "Entlassdiagnose" definiert ist) -->
+		<code value='8651-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Code)'/>
+		<!-- HOSPITAL ADMISSION DX (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section als "Eintrittsdiagnose" definiert ist) -->
+		<code value='8646-2' displayName='Diagnose bei Aufnahme ins Krankenhaus (Code)'/>
+	</system>
+
+	<!--
+	********************************************************
+	LOINC: Impfungen für xPHR Exctract/Update
+	********************************************************
+	-->
+	<system codeSystemName='Immunization' root='2.16.840.1.113883.6.1'>
+		<!-- universeller code für alle Impfungen -->
+		<code value='11370-4' displayName='Immunization status'/>
+
+		<!-- Nach Möglichkeit aber Impfungen nach einem dieser Codes deklarieren -->
+		<code value='55272-9' displayName='Corynebacterium diphtheriae immunization status'/>
+		<code value='55263-8' displayName='Bordetella pertussis immunization status'/>
+		<code value='11458-7' displayName='Clostridium tetani immunization status'/>
+		<code value='55266-1' displayName='Haemophilus influenzae B immunization status'/>
+		<code value='55264-6' displayName='Hepatitis A virus immunization status'/>
+		<code value='55267-9' displayName='Human papilloma virus immunization status'/>
+		<code value='55262-0' displayName='Influenza virus immunization status'/>
+		<code value='55269-5' displayName='Neisseria meningitidis immunization status'/>
+		<code value='55273-7' displayName='Polio virus immunization status'/>
+		<code value='55261-2' displayName='Rabies virus immunization status'/>
+		<code value='55268-7' displayName='Rotavirus immunization status'/>
+		<code value='55271-1' displayName='Streptococcus pneumoniae conjugated immunization status'/>
+		<code value='55270-3' displayName='Streptococcus pneumoniae polyvalent immunization status'/>
+	</system>
+
+	<!--
+	********************************************************
+	HL7: Geschlecht
+	********************************************************
+	-->
+	<system codeSystemName='AdministrativeGender' root='2.16.840.1.113883.5.1'>
+		<code value='M' displayName='männlich'/>
+		<code value='F' displayName='weiblich'/>
+		<code value='UN' displayName='Undifferenziert'/>
+	</system>
+	
+	<!--
+	********************************************************
+	HL7: Zivilstand
+	********************************************************
+	-->
+	<system codeSystemName='MaritalStatus' root='2.16.840.1.113883.11.12212'>
+		<!-- Annulled: Marriage contract has been declared null and to not have existed -->
+		<code value='A' displayName='Aufgelöste Partnerschaft'/>
+		<!-- Divorced: Marriage contract has been declared dissolved and inactive -->
+		<code value='D' displayName='Geschieden'/>
+		<!-- Domestic partner: Person declares that a domestic partner relationship exists. -->
+		<code value='T' displayName='Eingetragene Partnerschaft'/>
+		<!-- Interlocutory: Subject to an Interlocutory Decree. -->
+		<code value='I' displayName=''/>
+		<!-- Legally Separated -->
+		<code value='L' displayName='Getrennt'/>
+		<!-- Married: A current marriage contract is active -->
+		<code value='M' displayName='Verheiratet'/>
+		<!-- Never Married: No marriage contract has ever been entered -->
+		<code value='S' displayName='Ledig'/>
+		<!-- Polygamous: More than 1 current spouse -->
+		<code value='P' displayName='Polygam'/>
+		<!-- Widowed: The spouse has died --> 
+		<code value='W' displayName='Verwitwet'/>
+	</system>
+	
+	<!--
+	********************************************************
+	HL7: Medikationskategorie (Therapie oder Impfung)
+	********************************************************
+	-->
+	<system codeSystemName='ActSubstanceAdministrationCode' root='2.16.840.1.113883.5.4'>
+		<code value='DRUG' displayName='Medikamentöse Therapie'/>
+		<code value='IMMUNIZ' displayName='Impfung'/>
+	</system>
+	
+	<!--
+	********************************************************
+	HL7: Dringlichkeitsangaben
+	********************************************************
+	-->
+	<system codeSystemName='ActPriority' root='2.16.840.1.113883.5.7'>
+		<!-- ASAP; As soon as possible, next highest priority after stat.-->
+		<code value='A' displayName=''/>
+		<!-- callback for scheduling; Filler should contact the placer (or target) to schedule the service. (Was "C" in HL7 version 2.3's TQ-priority component.)-->
+		<code value='CS' displayName=''/>
+		<!-- callback placer for scheduling; Filler should contact the placer to schedule the service. (Was "C" in HL7 version 2.3's TQ-priority component.)-->
+		<code value='CSP' displayName=''/>
+		<!-- contact recipient for scheduling; Filler should contact the service recipient (target) to schedule the service. (Was "C" in HL7 version 2.3's TQ-priority component.)-->
+		<code value='CSR' displayName=''/>
+		<!-- as needed; An "as needed" order should be accompanied by a description of what constitutes a need. This description is represented by an observation service predicate as a precondition.-->
+		<code value='PRN' displayName='Bei Bedarf'/>
+		<!-- callback results; Filler should contact the placer as soon as results are available, even for preliminary results. (Was "C" in HL7 verion 2.3's reporting priority.)-->
+		<code value='CR' displayName=''/>
+		<!-- elective; Beneficial to the patient but not essential for survival.-->
+		<code value='EL' displayName=''/>
+		<!-- emergency; An unforeseen combination of circumstances or the resulting state that calls for immediate action.-->
+		<code value='EM' displayName=''/>
+		<!-- preop; Used to indicate that a service is to be performed prior to a scheduled surgery. When ordering a service and using the pre-op priority, a check is done to see the amount of time that must be allowed for performance of the service. When the order is placed, a message can be generated indicating the time needed for the service so that it is not ordered in conflict with a scheduled operation.-->
+		<code value='P' displayName=''/>
+		<!-- routine; Routine service, do at usual work hours.-->
+		<code value='R' displayName=''/>
+		<!-- rush reporting; A report should be prepared and sent as quickly as possible.-->
+		<code value='RR' displayName=''/>
+		<!-- stat; With highest priority (e.g., emergency).-->
+		<code value='S' displayName=''/>
+		<!-- timing critical; It is critical to come as close as possible to the requested time (e.g., for a through antimicrobial level).-->
+		<code value='T' displayName=''/>
+		<!-- urgent; Calls for prompt action.-->
+		<code value='UR' displayName=''/>
+		<!-- use as directed; Drug is to be used as directed by the prescriber.-->
+		<code value='UD' displayName=''/>
+		<!-- elective; Beneficial to the patient but not essential for survival.-->
+		<code value='EL' displayName=''/>
+		<!-- emergency; An unforeseen combination of circumstances or the resulting state that calls for immediate action.-->
+		<code value='EM' displayName=''/>
+		<!-- routine; Routine service, do at usual work hours.-->
+		<code value='R' displayName='Routine'/>
+		<!-- urgent; Calls for prompt action.-->
+		<code value='UR' displayName='Dringend'/>
+	</system>
+	
+	<!--
+	********************************************************
+	HL7: Applikation von Medikamenten (Einnahmeart)
+	********************************************************
+	-->
+	<system codeSystemName='RouteOfAdministration' root='2.16.840.1.113883.5.112'>
+		<!-- Injection, amniotic fluid -->
+		<code value='AMNINJ' />
+		<!-- Injection, biliary tract -->
+		<code value='BILINJ' />
+		<!-- Injection, urinary bladder -->
+		<code value='BLADINJ' />
+		<!-- Instillation, urinary catheter -->
+		<code value='BLADINSTL' />
+		<!-- Irrigation, urinary bladder, continuous -->
+		<code value='BLADIRRC' />
+		<!-- Irrigation, urinary bladder, tidal -->
+		<code value='BLADIRRT' />
+		<!-- Topical application, buccal -->
+		<code value='BUC' />
+		<!-- Instillation, continuous ambulatory peritoneal dialysis port -->
+		<code value='CAPDINSTL' />
+		<!-- Instillation, cecostomy -->
+		<code value='CECINSTL' />
+		<!-- Topical application, cervical -->
+		<code value='CERV' />
+		<!-- Injection, cervical -->
+		<code value='CERVINJ' />
+		<!-- Insertion, cervical (uterine) -->
+		<code value='CERVINS' />
+		<!-- Chew, oral -->
+		<code value='CHEW' />
+		<!-- Injection, for cholangiography -->
+		<code value='CHOLINJ' />
+		<!-- Instillation, chest tube -->
+		<code value='CTINSTL' />
+		<!-- Topical application, dental -->
+		<code value='DEN' />
+		<!-- Rinse, dental -->
+		<code value='DENRINSE' />
+		<!-- Dissolve, oral -->
+		<code value='DISSOLVE' />
+		<!-- Douche, vaginal -->
+		<code value='DOUCHE' />
+		<!-- Topical application, soaked dressing -->
+		<code value='DRESS' />
+		<!-- Instillation, enteral feeding tube -->
+		<code value='EFT' />
+		<!-- Electro-osmosis -->
+		<code value='ELECTOSMOS' />
+		<!-- Injection, endosinusial -->
+		<code value='ENDOSININJ' />
+		<!-- Enema, rectal -->
+		<code value='ENEMA' />
+		<!-- Instillation, enteral -->
+		<code value='ENTINSTL' />
+		<!-- Infusion, epidural -->
+		<code value='EPI' />
+		<!-- Injection, epidural -->
+		<code value='EPIDURINJ' />
+		<!-- Injection, epidural, push -->
+		<code value='EPIINJ' />
+		<!-- Injection, epidural, slow push -->
+		<code value='EPINJSP' />
+		<!-- Instillation, endotracheal tube -->
+		<code value='ETINSTL' />
+		<!-- Nebulization, endotracheal tube -->
+		<code value='ETNEB' />
+		<!-- Diffusion, extracorporeal -->
+		<code value='EXTCORPDIF' />
+		<!-- Injection, extracorporeal -->
+		<code value='EXTCORPINJ' />
+		<!-- Injection, extra-amniotic -->
+		<code value='EXTRAMNINJ' />
+		<!-- Gargle -->
+		<code value='GARGLE' />
+		<!-- Injection, gastric button -->
+		<code value='GBINJ' />
+		<!-- Topical application, gingival -->
+		<code value='GIN' />
+		<!-- Injection, gingival -->
+		<code value='GINGINJ' />
+		<!-- Instillation, gastro-jejunostomy tube -->
+		<code value='GJT' />
+		<!-- Instillation, gastrostomy tube -->
+		<code value='GT' />
+		<!-- Irrigation, genitourinary -->
+		<code value='GUIRR' />
+		<!-- Topical application, hair -->
+		<code value='HAIR' />
+		<!-- Diffusion, hemodialysis -->
+		<code value='HEMODIFF' />
+		<!-- Injection, hemodialysis port -->
+		<code value='HEMOPORT' />
+		<!-- Infusion, intraarterial catheter -->
+		<code value='IA' />
+		<!-- Injection, intra-abdominal -->
+		<code value='IABDINJ' />
+		<!-- Injection, intraarterial, push -->
+		<code value='IAINJP' />
+		<!-- Injection, intraarterial, slow push -->
+		<code value='IAINJSP' />
+		<!-- Injection, intraarticular -->
+		<code value='IARTINJ' />
+		<!-- Instillation, intrabronchial -->
+		<code value='IBRONCHINSTIL' />
+		<!-- Injection, intrabursal -->
+		<code value='IBURSINJ' />
+		<!-- Infusion, intracardiac -->
+		<code value='IC' />
+		<!-- Injection, intracardiac, rapid push -->
+		<code value='ICARDINJRP' />
+		<!-- Injection, intracardiac, slow push -->
+		<code value='ICARDINJSP' />
+		<!-- Injection, intracardiac, push -->
+		<code value='ICARINJP' />
+		<!-- Injection, intracartilaginous -->
+		<code value='ICARTINJ' />
+		<!-- Injection, intracaudal -->
+		<code value='ICAUDINJ' />
+		<!-- Injection, intracavernous -->
+		<code value='ICAVINJ' />
+		<!-- Injection, intracavitary -->
+		<code value='ICAVITINJ' />
+		<!-- Injection, intracerebral -->
+		<code value='ICEREBINJ' />
+		<!-- Injection, intracisternal -->
+		<code value='ICISTERNINJ' />
+		<!-- Infusion, intracoronary -->
+		<code value='ICOR' />
+		<!-- Topical application, intracorneal -->
+		<code value='ICORNTA' />
+		<!-- Injection, intracoronary, push -->
+		<code value='ICORONINJP' />
+		<!-- Topical application, intracoronal (dental) -->
+		<code value='ICORONTA' />
+		<!-- Injection, intracorpus cavernosum -->
+		<code value='ICORPCAVINJ' />
+		<!-- Implantation, intradermal -->
+		<code value='IDIMPLNT' />
+		<!-- Injection, intradermal -->
+		<code value='IDINJ' />
+		<!-- Injection, intradiscal -->
+		<code value='IDISCINJ' />
+		<!-- Mucosal absorption, intraduodenal -->
+		<code value='IDOUDMAB' />
+		<!-- Injection, intraductal -->
+		<code value='IDUCTINJ' />
+		<!-- Instillation, intraduodenal -->
+		<code value='IDUODINSTIL' />
+		<!-- Injection, intradural -->
+		<code value='IDURINJ' />
+		<!-- Injection, intraepidermal -->
+		<code value='IEPIDINJ' />
+		<!-- Injection, intraepithelial -->
+		<code value='IEPITHINJ' />
+		<!-- Instillation, intraesophageal -->
+		<code value='IESOPHINSTIL' />
+		<!-- Topical application, intraesophageal -->
+		<code value='IESOPHTA' />
+		<!-- Instillation, intragastric -->
+		<code value='IGASTINSTIL' />
+		<!-- Irrigation, intragastric -->
+		<code value='IGASTIRR' />
+		<!-- Lavage, intragastric -->
+		<code value='IGASTLAV' />
+		<!-- Instillation, intraileal -->
+		<code value='IILEALINJ' />
+		<!-- Topical application, intraileal -->
+		<code value='IILEALTA' />
+		<!-- Injection, intralesional -->
+		<code value='ILESINJ' />
+		<!-- Irrigation, intralesional -->
+		<code value='ILESIRR' />
+		<!-- Topical application, intralesional -->
+		<code value='ILTOP' />
+		<!-- Injection, intraluminal -->
+		<code value='ILUMINJ' />
+		<!-- Topical application, intraluminal -->
+		<code value='ILUMTA' />
+		<!-- Injection, intralymphatic -->
+		<code value='ILYMPJINJ' />
+		<!-- Injection, intramuscular, deep -->
+		<code value='IMD' />
+		<!-- Injection, intramedullary -->
+		<code value='IMEDULINJ' />
+		<!-- Injection, intramuscular, z track -->
+		<code value='IMZ' />
+		<!-- Insufflation -->
+		<code value='INSUF' />
+		<!-- Injection, interameningeal -->
+		<code value='INTERMENINJ' />
+		<!-- Injection, interstitial -->
+		<code value='INTERSTITINJ' />
+		<!-- Injection, intraocular -->
+		<code value='IOINJ' />
+		<!-- Instillation, intraocular -->
+		<code value='IOINSTL' />
+		<!-- Irrigation, intraocular -->
+		<code value='IOIRR' />
+		<!-- Topical application, iontophoresis -->
+		<code value='IONTO' />
+		<!-- Infusion, intraosseous, continuous -->
+		<code value='IOSSC' />
+		<!-- Injection, intraosseous -->
+		<code value='IOSSINJ' />
+		<!-- Insertion, intraocular, surgical -->
+		<code value='IOSURGINS' />
+		<!-- Topical application, intraocular -->
+		<code value='IOTOP' />
+		<!-- Injection, intraovarian -->
+		<code value='IOVARINJ' />
+		<!-- Injection, intrapericardial -->
+		<code value='IPCARDINJ' />
+		<!-- Injection, intraperitoneal -->
+		<code value='IPERINJ' />
+		<!-- Injection, intrapulmonary -->
+		<code value='IPINJ' />
+		<!-- Injection, intrapleural -->
+		<code value='IPLRINJ' />
+		<!-- Inhalation, intermittent positive pressure breathing (ippb) -->
+		<code value='IPPB' />
+		<!-- Injection, intraprostatic -->
+		<code value='IPROSTINJ' />
+		<!-- Injection, insulin pump -->
+		<code value='IPUMPINJ' />
+		<!-- Instillation, intrasinal -->
+		<code value='ISININSTIL' />
+		<!-- Injection, intraspinal -->
+		<code value='ISINJ' />
+		<!-- Injection, intrasternal -->
+		<code value='ISTERINJ' />
+		<!-- Injection, intrasynovial -->
+		<code value='ISYNINJ' />
+		<!-- Infusion, intrathecal -->
+		<code value='IT' />
+		<!-- Injection, intratendinous -->
+		<code value='ITENDINJ' />
+		<!-- Injection, intratesticular -->
+		<code value='ITESTINJ' />
+		<!-- Injection, intrathoracic -->
+		<code value='ITHORINJ' />
+		<!-- Injection, intrathecal -->
+		<code value='ITINJ' />
+		<!-- Instillation, intratracheal -->
+		<code value='ITRACHINSTIL' />
+		<!-- Mucosal absorption, intratracheal -->
+		<code value='ITRACHMAB' />
+		<!-- Injection, intratubular -->
+		<code value='ITUBINJ' />
+		<!-- Injection, intratumor -->
+		<code value='ITUMINJ' />
+		<!-- Injection, intratympanic -->
+		<code value='ITYMPINJ' />
+		<!-- Insertion, intrauterine -->
+		<code value='IU' />
+		<!-- Injection, intracervical (uterus) -->
+		<code value='IUINJ' />
+		<!-- Injection, intracervical (uterus) -->
+		<code value='IUINJC' />
+		<!-- Instillation, intrauterine -->
+		<code value='IUINSTL' />
+		<!-- Injection, intraureteral, retrograde -->
+		<code value='IURETINJ' />
+		<!-- Infusion, intravascular -->
+		<code value='IVASCINFUS' />
+		<!-- Injection, intravascular -->
+		<code value='IVASCINJ' />
+		<!-- Infusion, intravenous catheter -->
+		<code value='IVC' />
+		<!-- Infusion, intravenous catheter, continuous -->
+		<code value='IVCC' />
+		<!-- Infusion, intravenous catheter, intermittent -->
+		<code value='IVCI' />
+		<!-- Injection, intraventricular (heart) -->
+		<code value='IVENTINJ' />
+		<!-- Injection, intravesicle -->
+		<code value='IVESINJ' />
+		<!-- Flush, intravenous catheter -->
+		<code value='IVFLUSH' />
+		<!-- Injection, intravenous, bolus -->
+		<code value='IVINJBOL' />
+		<!-- Implantation, intravitreal -->
+		<code value='IVITIMPLNT' />
+		<!-- Injection, intravitreal -->
+		<code value='IVITINJ' />
+		<!-- Injection, intravenous, push -->
+		<code value='IVPUSH' />
+		<!-- Injection, intravenous, rapid push -->
+		<code value='IVRPUSH' />
+		<!-- Injection, intravenous, slow push -->
+		<code value='IVSPUSH' />
+		<!-- Instillation, jejunostomy tube -->
+		<code value='JJTINSTL' />
+		<!-- Instillation, laryngeal -->
+		<code value='LARYNGINSTIL' />
+		<!-- Topical application, laryngeal -->
+		<code value='LARYNGTA' />
+		<!-- Insertion, lacrimal puncta -->
+		<code value='LPINS' />
+		<!-- Topical application, mucous membrane -->
+		<code value='MUC' />
+		<!-- Topical application, nail -->
+		<code value='NAIL' />
+		<!-- Topical application, nasal -->
+		<code value='NASAL' />
+		<!-- Instillation, nasal -->
+		<code value='NASALINSTIL' />
+		<!-- Inhalation, nebulization, nasal -->
+		<code value='NASNEB' />
+		<!-- Instillation, nasogastric -->
+		<code value='NASOGASINSTIL' />
+		<!-- Instillation, nasogastric tube -->
+		<code value='NGT' />
+		<!-- Inhalation, nasal, prongs -->
+		<code value='NP' />
+		<!-- Instillation, nasotracheal tube -->
+		<code value='NTT' />
+		<!-- Occlusive dressing technique -->
+		<code value='OCDRESTA' />
+		<!-- Instillation, orogastric tube -->
+		<code value='OGT' />
+		<!-- Instillation, orojejunum tube -->
+		<code value='OJJ' />
+		<!-- Topical application, ophthalmic -->
+		<code value='OPTHALTA' />
+		<!-- Topical application, oral -->
+		<code value='ORALTA' />
+		<!-- Topical application, oromucosal -->
+		<code value='ORMUC' />
+		<!-- Inhalation, nebulization, oral -->
+		<code value='ORNEB' />
+		<!-- Topical application, oropharyngeal -->
+		<code value='OROPHARTA' />
+		<!-- Rinse, oral -->
+		<code value='ORRINSE' />
+		<!-- Instillation, otic -->
+		<code value='OT' />
+		<!-- Injection, periarticular -->
+		<code value='PAINJ' />
+		<!-- Injection, parenteral -->
+		<code value='PARENTINJ' />
+		<!-- Infusion, intravenous catheter, pca pump -->
+		<code value='PCA' />
+		<!-- Injection, periodontal -->
+		<code value='PDONTINJ' />
+		<!-- Topical application, periodontal -->
+		<code value='PDONTTA' />
+		<!-- Injection, peritoneal dialysis port -->
+		<code value='PDPINJ' />
+		<!-- Instillation, peritoneal dialysis port -->
+		<code value='PDPINSTL' />
+		<!-- Injection, peridural -->
+		<code value='PDURINJ' />
+		<!-- Topical application, perianal -->
+		<code value='PERIANAL' />
+		<!-- Topical application, perineal -->
+		<code value='PERINEAL' />
+		<!-- Injection, perineural -->
+		<code value='PNINJ' />
+		<!-- Injection, paranasal sinuses -->
+		<code value='PNSINJ' />
+		<!-- Instillation, paranasal sinuses -->
+		<code value='PNSINSTL' />
+		<!-- Swallow, oral -->
+		<code value='PO' />
+		<!-- Insertion, rectal -->
+		<code value='PR' />
+		<!-- Injection, retrobulbar -->
+		<code value='RBINJ' />
+		<!-- Irrigation, rectal -->
+		<code value='RECIRR' />
+		<!-- Topical application, rectal -->
+		<code value='RECTAL' />
+		<!-- Instillation, rectal tube -->
+		<code value='RECTINSTL' />
+		<!-- Enema, rectal retention -->
+		<code value='RETENEMA' />
+		<!-- Topical application, scalp -->
+		<code value='SCALP' />
+		<!-- Injection, subconjunctival -->
+		<code value='SCINJ' />
+		<!-- Shampoo -->
+		<code value='SHAMPOO' />
+		<!-- Instillation, sinus, unspecified -->
+		<code value='SININSTIL' />
+		<!-- Topical application, skin -->
+		<code value='SKIN' />
+		<!-- Dissolve, sublingual -->
+		<code value='SL' />
+		<!-- Injection, sublesional -->
+		<code value='SLESINJ' />
+		<!-- Mucosal absorption, submucosal -->
+		<code value='SMUCMAB' />
+		<!-- Immersion (soak) -->
+		<code value='SOAK' />
+		<!-- Injection, soft tissue -->
+		<code value='SOFTISINJ' />
+		<!-- Instillation, soft tissue -->
+		<code value='SOFTISINSTIL' />
+		<!-- Injection, subcutaneous -->
+		<code value='SQ' />
+		<!-- Implantation, subcutaneous -->
+		<code value='SQIMPLNT' />
+		<!-- Infusion, subcutaneous -->
+		<code value='SQINFUS' />
+		<!-- Insertion, subcutaneous, surgical -->
+		<code value='SQSURGINS' />
+		<!-- Injection, subarachnoid -->
+		<code value='SUBARACHINJ' />
+		<!-- Subconjunctival -->
+		<code value='SUBCONJTA' />
+		<!-- Injection, submucosal -->
+		<code value='SUBMUCINJ' />
+		<!-- Suck, oromucosal -->
+		<code value='SUCK' />
+		<!-- Topical application, swab -->
+		<code value='SWAB' />
+		<!-- Swish and spit out, oromucosal -->
+		<code value='SWISHSPIT' />
+		<!-- Swish and swallow, oromucosal -->
+		<code value='SWISHSWAL' />
+		<!-- Topical application, transmucosal -->
+		<code value='TMUCTA' />
+		<!-- Topical -->
+		<code value='TOPICAL' />
+		<!-- Inhalation, tracheostomy -->
+		<code value='TRACH' />
+		<!-- Instillation, tracheostomy -->
+		<code value='TRACHINSTL' />
+		<!-- Diffusion, transdermal -->
+		<code value='TRNSDERMD' />
+		<!-- Translingual -->
+		<code value='TRNSLING' />
+		<!-- Injection, transplacental -->
+		<code value='TRPLACINJ' />
+		<!-- Injection, transtracheal -->
+		<code value='TRTRACHINJ' />
+		<!-- Instillation, transtympanic -->
+		<code value='TRTYMPINSTIL' />
+		<!-- Topical absorption, transtympanic -->
+		<code value='TTYMPTABSORP' />
+		<!-- Injection, urethral -->
+		<code value='URETHINJ' />
+		<!-- Insertion, urethral -->
+		<code value='URETHINS' />
+		<!-- Instillation, urethral -->
+		<code value='URETHINSTL' />
+		<!-- Suppository, urethral -->
+		<code value='URETHSUP' />
+		<!-- Injection, ureteral -->
+		<code value='URETINJ' />
+		<!-- Insertion, vaginal -->
+		<code value='VAGINS' />
+		<!-- Insertion, vaginal -->
+		<code value='VAGINSI' />
+		<!-- Inhalation, ventilator -->
+		<code value='VENT' />
+		<!-- Inhalation, ventimask -->
+		<code value='VENTMASK' />
+	</system>
+	
+	<!--
+	********************************************************
+	HL7: Intoleranzen bei Medikation (Kategorisierung Allergien und Kontraindikationen)
+	********************************************************
+	-->
+	<system codeSystemName='ObservationIntoleranceType' root='2.16.840.1.113883.5.4'>
+		<!--intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to an agent.-->
+		<code value='OINT' displayName=''/>	
+		<!--Allergy; Hypersensitivity to an agent caused by an immunologic response to an initial exposure.-->
+		<code value='ALG' displayName=''/>	
+		<!--Drug Allergy; An allergy to a pharmaceutical product.-->
+		<code value='DALG' displayName=''/>	
+		<!--Environmental Allergy; An allergy to a substance other than a drug or a food. E.g. Latex, pollen, etc.-->
+		<code value='EALG' displayName=''/>	
+		<!--Food Allergy; An allergy to a substance generally consumed for nutritional purposes.-->
+		<code value='FALG' displayName=''/>	
+		<!--Drug Intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to a drug.-->
+		<code value='DINT' displayName=''/>	
+		<!--Drug Allergy; An allergy to a pharmaceutical product.-->
+		<code value='DALG' displayName=''/>	
+		<!--Drug Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='DNAINT' displayName=''/>	
+		<!--Environmental Intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to environmental conditions.-->
+		<code value='EINT' displayName=''/>
+		<!--Environmental Allergy; An allergy to a substance other than a drug or a food. E.g. Latex, pollen, etc.-->	
+		<code value='EALG' displayName=''/>	
+		<!--Environmental Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='ENAINT' displayName=''/>	
+		<!--Food Intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to food.-->
+		<code value='FINT' displayName=''/>	
+		<!--Food Allergy; An allergy to a substance generally consumed for nutritional purposes.-->
+		<code value='FALG' displayName=''/>	
+		<!--Food Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='FNAINT' displayName=''/>	
+		<!--Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='NAINT' displayName=''/>	
+		<!--Drug Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='DNAINT' displayName=''/>	
+		<!--Environmental Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='ENAINT' displayName=''/>	
+		<!--Food Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
+		<code value='FNAINT' displayName=''/>	
+	</system>
+
+</systems>
+
+

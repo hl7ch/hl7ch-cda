@@ -1,0 +1,34 @@
+/*********************************************************
+  Project specific CSS for SVV HL7 CDA Templates
+  Date: 27.11.2009
+*********************************************************/
+/* No Logo, yet */
+/* 
+h1 { 
+	background: transparent url(suvacare.jpg) no-repeat bottom right; 
+}
+*/
+/* Header */
+table.head thead tr {
+	background-color: #00199f;
+}
+table.head tr {
+	background-color: #ccccff;	
+}
+/* Body */
+table.body tr th {
+	background-color: #ccd1ec;
+}
+table.body tr td {
+	background-color: #edeff8;	
+}
+/* Footer */
+table.foot tr th {
+	background-color: #00199f;
+}
+table.foot tr td {
+	background-color: #ccccff;
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}

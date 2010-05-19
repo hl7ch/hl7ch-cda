@@ -1,0 +1,38 @@
+<!--
+********************************************************
+
+Schematron Entity for Doctors Visits
+Language: en
+
+History:
+28.12.2009: Pascal Bürki, medshare GmbH (Copied from IHE Wiki)
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+
+********************************************************
+-->
+
+<pattern name='Template_1.3.6.1.4.1.19376.1.5.3.1.1.5.3.3'>
+	<rule context='*[cda:templateId/@root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.3"]'>
+		<!-- Verify that the template id is used on the appropriate type of object -->
+		<assert role='error' test='../cda:section'>
+			The Encounter Histories can only be used on sections.
+		</assert>
+		<!-- Verify that the parent templateId is also present. -->
+		<assert role='error' test='cda:templateId[@root="2.16.840.1.113883.10.20.1.3"]'>
+			The parent template identifier for Encounter Histories is not present.
+		</assert>
+		<!-- Verify the section type code -->
+		<assert role='error' test='cda:code[@code = "46240-8"]'>
+			The section type code of a Encounter Histories must be 46240-8
+		</assert>
+		<assert role='error' test='cda:code[@codeSystem = "2.16.840.1.113883.6.1"]'>
+			The section type code must come from the LOINC code
+			system (2.16.840.1.113883.6.1).
+		</assert>
+		<assert role='error' test='.//cda:templateId[@root = "1.3.6.1.4.1.19376.1.5.3.1.4.14"]'>
+			<!-- Verify that all required data elements are present -->
+			The Encounter Histories Section must contain a(n) Encounters Entry.
+			See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.1.5.3.3
+		</assert>
+	</rule>
+</pattern>

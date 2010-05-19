@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="64B47FC1-6BB5-479F-A925-639D81423415" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11492-6" codeSystem="2.16.840.1.113883.6.1" displayName="Anamnèse et resultats"/>
+	<title>EXAMEN PRÉOPÉRATOIRE</title>
+	<effectiveTime value="20071028"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="fr-CH"/>
+	<setId extension="64B47FC1-6BB5-479F-A925-639D81423415" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<addr use="HP">
+				<streetName>Chemin de Croix</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Village spécimen</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>UNTEL</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Toujours Prêt, Cabinet Médical CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071028"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Allée du docteur</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Quelquepart</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:pret@cabinetmedical.ch"/>
+			<telecom use="PUB" value="http:www.cabinetmedical.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Toujours</given>
+					<family>Prêt</family>
+					<suffix>Spécialiste pour médecine générale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Cabinet Médical CH</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071028"/>
+		<assignedEntity>
+			<id extension="2" root="2.16.756.888888.2.1"/>
+			<assignedPerson>
+				<name>
+					Sk
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Cabinet Médical CH, Dr. med. Toujours Prêt, Spécialiste pour médecine générale</name>
+				<addr use="WP">
+					<streetName>Allée du docteur</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Hôpital cantonal, Direction médicale, Clinique orthopédique</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Rue de l'Hôpital</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071028"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Toujours</given>
+					<family>Prêt</family>
+					<suffix>Spécialiste pour médecine générale</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consentement écrite pour soigner l'articulation droite de la hanche du patient par une opération d'implantation d'une endoprothèse de l'articulation de la hanche lors de la consultation auprès du 15/10/2007 Dr Hans Spécialiste, Orthopédiste
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Statut
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Statut</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>cardio-pulmonaire:</td>
+								</tr>
+								<tr>
+									<td>gastro-intestinal:</td>
+								</tr>
+								<tr>
+									<td>uro-génital:</td>
+								</tr>
+								<tr>
+									<td>neurologique:</td>
+								</tr>
+								<tr>
+									<td>Appareil locomoteur:</td>
+								</tr>
+							</tbody>
+						</table>
+						<content styleCode="Italics">
+							<br/>
+							Résultats actuels de l'examen corporel, fréquemment divisé par systèmes d'organes<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Valeurs de laboratoire
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Valeurs de laboratoire</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th align="left">Désignation d'analyse</th>
+									<th>Valeur de référence</th>
+									<th>27/10/2007</th>
+								</tr>
+								<tr>
+									<td align="left">Glucose [mmol/l]</td>
+									<td>4.2 – 6.1</td>
+									<td>5.8</td>
+								</tr>
+								<tr>
+									<td align="left">Sodium [mmol/l]</td>
+									<td>137 - 145</td>
+									<td>138</td>
+								</tr>
+								<tr>
+									<td align="left">Potassium [mmol/l]</td>
+									<td>3.6 – 5.0</td>
+									<td>3.8</td>
+								</tr>
+								<tr>
+									<td>Créatinine [mmol/l]</td>
+									<td>71 -133</td>
+									<td>78</td>
+								</tr>
+								<tr>
+									<td>Hémoglobine [g%]</td>
+									<td>12.0 – 17.6</td>
+									<td>15.4</td>
+								</tr>
+								<tr>
+									<td>Thrombocytes [g%]</td>
+									<td>15000 – 40000</td>
+									<td>18000</td>
+								</tr>
+								<tr>
+									<td>INR</td>
+									<td>
+										- 1.200
+									</td>
+									<td>0.900</td>
+								</tr>
+							</tbody>
+						</table>
+						<content styleCode="Italics">
+							<br/>
+							Exemples de transmission des résultats d'analyse de laboratoire<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

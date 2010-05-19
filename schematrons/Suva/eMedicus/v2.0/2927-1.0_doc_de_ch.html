@@ -1,0 +1,4122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="de_ch">
+   <head>
+      <title>Suva eMedicus Arztzeugnis UVG</title>
+      <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+      <link rel="stylesheet" type="text/css"
+            href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"/>
+   </head>
+   <body>
+      <h1 class="title">Suva eMedicus Arztzeugnis UVG</h1>
+      <h2 class="reference">Referenzierte Entities</h2>
+      <ul id="reference">
+		
+		
+		
+		
+		
+	        <li>2927-1.0.ent</li>
+         <li>emedicus-1.0.ent</li>
+         <li>cda-ch-1.2_medication-section.ent</li>
+         <li>cda-ch-1.2.ent</li>
+         <li>vhitg-ruleset-150.ent</li>
+      </ul>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">Entity</th>
+                  <th>suva-form-2927</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Dateiname</td>
+                  <td>2927-1.0.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">Version</td>
+                  <td>1.0</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <h3>Suva Arztzeugnis: CDA Header</h3>
+      <p>Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für das Suva Arztzeugnis</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0001</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@extension="2927"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Die Formularnummer für Suva Arztzeugnis UVG muss lauten: 2927</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0002</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:code/@code="51848-0"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Der LOINC Code für das Suva Arztzeugnis UVG muss lauten: 51848-0 (Assessment note)</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0003</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:title="Arztzeugnis UVG" and //cda:languageCode/@code="de-CH"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Der deutsche Titel muss lauten 'Arztzeugnis UVG'</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0004</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss einen Arbeitgeber enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0005</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.SchadenInfo"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Schadeninformationen' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0006</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.AngabenPat"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Angaben des Patienten' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0007</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Allgemeinzustand"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Allgemeinzustand' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0008</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Befund"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Befund' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0009</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.DiagList"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Diagnosen' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0010</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Kausalität"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Kausalität' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0011</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Therapie"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Therapie' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0012</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.ArbeitsfähigkeitList"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Arbeitsfähigkeit' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0013</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">information</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.BehAbschluss"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG enthält keine Section 'Behandlungsabschluss'</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0014</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.Rem"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Suva Arztzeugnis UVG muss eine Section 'Bemerkungen' enthalten (auch wenn keine Bemerkungen - dann 'Keine' angeben).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Schadeninformationen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Schadeninformationen des Arztzeugnis UVG</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0101</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.ErstbehandlungL3"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Schadeninformationen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Schadeninformationen (Angaben zur Erstbehandlung) des Arztzeugnis UVG</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0201</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1.1.3.1"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das Arztzeugnis UVG muss bei den Schadeninformationen die Angaben zur Erstbehandlung enthalten (templateId 2.16.756.5.30.1.100.2.2.1.1.3.1)</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Angaben des Patienten</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Angaben des Patienten im Arztzeugnis UVG</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0301</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Angaben des Patienten' müssen als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0302</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Angaben des Patienten' müssen einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0303</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Angaben des Patienten'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Angaben des Patienten' müssen einen section title 'Angaben des Patienten' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Allgemeinzustand des Patienten (Beurteilung durch Arzt)</h3>
+      <p>Die nachfolgenden Regeln beschreiben Allgemeinzustand des Patienten im Arztzeugnis UVG, beurteilt durch den Arzt.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0401</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Allgemeinzustand' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0402</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Allgemeinzustand' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0403</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Allgemeinzustand'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Allgemeinzustand' muss einen section title 'Allgemeinzustand' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0404</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.BesoWahrn"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Allgemeinzustand' muss eine observation 'Besondere Wahrnehmungen' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0405</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.FolgenVon"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Allgemeinzustand' muss eine observation 'Folgen von' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Befund</h3>
+      <p>Die nachfolgenden Regeln beschreiben den Befund im Arztzeugnis UVG</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0501</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Befund' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0502</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Befund' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0503</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Befund'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Befund' muss einen section title 'Befund' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0504</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.Lokalbefund"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Befund' muss eine observation 'Lokalbefund' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Kausalität (Ausschliesslich Unfallfolgen)</h3>
+      <p>Die nachfolgenden Regeln beschreibt die Kausalität (ausschliesslich Unfallfolgen) im Arztzeugnis UVG</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0601</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Kausalität' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0602</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Kausalität' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0603</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Kausalität'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Kausalität' muss einen section title 'Kausalität' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0604</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.Unfallfolgen"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Kausalität' muss eine observation 'Unfallfolgen' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>Arztzeugnis UVG: Therapie</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Therapie im Arztzeugnis UVG</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0701</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Therapie' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0702</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Therapie' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0703</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Therapie'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Therapie' muss einen section title 'Therapie' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0704</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.TherapieMassnahme"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Therapie' muss min. 1 procedure 'TherapieMassnahme' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0706</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.BesoUmstände"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Therapie' muss eine observation 'Besondere Umstände' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-form-2927-1.0-0707</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.PatHospitalisiert"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">eMedicus 'Therapie' muss eine observation 'Patient hospitalisiert' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">Entity</th>
+                  <th>suva_eMedicus</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Dateiname</td>
+                  <td>emedicus-1.0.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">Version</td>
+                  <td>1.0</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Headerinformationen prüfen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den Headerinformationen.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0001</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Die OID Domain für Suva Formularnummern muss lauten: 2.16.756.5.30.1.100.2.1</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0002</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">//cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Die OID Domain für die Codierung von CDA Dokumenten muss lauten: 2.16.840.1.113883.6.1 (LOINC)</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Schadeninformationen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0100</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0101</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0102</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Schadeninformationen'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0103</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.SchadenInfoL3"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen das Schadendatum enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Schadeninformation: SchadenDatum, Anmeldeart (Rückfall als Anmeldeart)</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0201</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Das eMedicus 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0202</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:id/@root="2.16.756.5.30.1.100.3.1.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen die externe Schadennummer der Suva enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0203</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen ein 'Schadendatum' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0204</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.1.100.3.2.2"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen eine Anmeldeart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.2').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0205</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("emedicus-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.2"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Schadeninformationen müssen eine Anmeldeart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.2').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Schadeninformation: Erstbehandlung durch ausfüllenden Arzt</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der Schadeninformation Erstbehandlung.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0301</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:encounter</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Erstbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0302</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Erstbehandlung muss ein Konsultationsdatum enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0303</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.1.100.3.2.3"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Erstbehandlung muss die Angabe zur Inkonvenienz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.3').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0304</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("emedicus-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.3"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Erstbehandlung muss die Angabe zur Inkonvenienz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.3').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0305</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">count(cda:code)&lt;2</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Die Angabe zur Inkonvenienz bei der eMedicus Erstbehandlung darf nur einmal vorkommen.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0306</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Allgemeinzustand: Besondere Wahrnehmungen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die besonderen Wahrnehmungen des Allgemeinzustandes.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0401</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Wahrnehmungen als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0402</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Wahrnehmungen müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0403</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Wahrnehmungen müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0404</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Wahrnehmungen müssen einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Allgemeinzustand: Folgen von</h3>
+      <p>Die nachfolgenden Regeln beschreiben die 'Folgen von' des Allgemeinzustandes.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0501</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Folgen von als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0502</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Folgen von müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0503</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Folgen von müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0504</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="Y" and cda:value/@xsi:type="ST") or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Folgen von müssen einen narrativen Text im Element value enthalten, wenn der code="Y" ist.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Befund: Lokalbefund</h3>
+      <p>Die nachfolgenden Regeln beschreiben den Lokalbefund.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0601</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Lokalbefund muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0602</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Lokalbefund muss einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Befund: Röntgenbefund</h3>
+      <p>Die nachfolgenden Regeln beschreiben den Röntgenbefund.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0701</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Röntgenbefund muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0702</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Röntgenbefund muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0703</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Röntgenbefund muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Kausalität: Ausschliesslich Unfallfolgen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Kausalität (Ausschliesslich Unfallfolgen).</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0801</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Unfallfolgen muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0802</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Unfallfolgen muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0803</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="N" and cda:text) or (cda:code/@code!="N")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Wenn nicht ausschliesslich Unfallfolgen vorliegen, muss die observation einen narrativen Text mit der Begründung enthalten (wenn der code="N" ist).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Therapie: Massnahmen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Therapie (Massnahmen).</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0901</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:procedure</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Therapie Massnahme muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-0902</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Therapie Massnahme muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Therapie: Besondere Umstände</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Therapie (Besondere Umstände).</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1001</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Umstände müssen als 'observation' im CDA Body (section 'Therapie') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1002</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Umstände müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1003</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Umstände müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1004</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Besondere Umstände müssen einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Behandlungsabschluss</h3>
+      <p>Die nachfolgenden Regeln beschreiben den Behandlungsabschluss.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1101</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Behandlungsabschluss' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1102</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Behandlungsabschluss' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1103</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Behandlungsabschluss'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Behandlungsabschluss' muss einen section title 'Behandlungsabschluss' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1104</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.BehAbschlussL3"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Behandlungsabschluss' muss einen encounter mit Template 'BehAbschlussL3' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Behandlungsabschluss L3</h3>
+      <p>Die nachfolgenden Regeln beschreiben den Behandlungsabschluss L3.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1201</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:encounter</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Behandlungsabschluss muss als 'encounter' im CDA Body (section 'Behandlungsabschluss') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1202</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime/cda:high</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Behandlungsabschluss Datum muss im high element von effectiveTime angegeben werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1203</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code="8649-6"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Behandlungsabschluss muss als LOINC Code deklariert sein (8649-6; Hospital discharge date)</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1204</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:assignedEntity/cda:representedOrganization/cda:name]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Behandlungsabschluss muss die Letzbehandelnde Organisation angeben ('performer/assignedEntity/representedOrganization', min. Namen angeben)</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>eMedicus Therapie: Patient hospitalisiert</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Therapie (Patient hospitalisiert).</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1301</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:procedure</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Patient hospitalisiert muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1302</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Patient hospitalisiert muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1303</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Patient hospitalisiert muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">suva-emedicus-voc-1.0-1304</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="Y" and count(cda:performer/cda:assignedEntity/cda:representedOrganization/cda:name)=1) or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Patient hospitalisiert muss über 'performer/assignedEntity/representedOrganization' das behandelnde Spital angeben (min. Namen angeben), wenn der code="Y" ist.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">Entity</th>
+                  <th>cda-ch-1.2_medication-section</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Dateiname</td>
+                  <td>cda-ch-1.2_medication-section.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">Version</td>
+                  <td>1.2</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Medication Section</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Section Templates.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0001</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0002</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0003</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen einen narrativen Titel enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Medication Section Template Check</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Section Template Check.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0101</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.MediL3"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationseinträge müssen mit der templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3" angegeben werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0102</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.5.4"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen eine Verordnungsart beinhalten (gültiger Wert aus der Wertetabelle 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0103</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.4"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen eine Verordnungsart beinhalten (gültiger Wert aus der Wertetabelle 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0104</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:id/@root="2.16.756.5.30.2.6.1" or cda:id/@root="1.3.88"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationseinträge müssen mindestens mit der Packungs-GTIN oder der Identifikation aus SwissIndex identifiziert werden (Strichcode oder Pharmacode).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0105</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code[@codeSystem="2.16.756.5.30.2.6.2" or @codeSystem="2.16.840.1.113883.6.73"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen mit dem WHO ATC Code oder mit dem Generic Group Code klassifiziert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0106</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code/@codeSystem!="2.16.756.5.30.2.6.2" or cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code/cda:translation/@codeSystem="2.16.840.1.113883.6.73"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten, welche mit dem Generic Group Code klassifiziert werden, müssen eine translation nach WHO ATC code enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0107</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:priorityCode/@codeSystem="2.16.840.1.113883.5.7"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen eine Dringlichkeitsangabe beinhalten (gültiger Wert aus der Wertetabelle 'ActPriority (2.16.840.1.113883.5.7)').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0108</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:priorityCode/@codeSystem="2.16.840.1.113883.5.7" and (cda:priorityCode/@code="R" or cda:priorityCode/@code="UR" or cda:priorityCode/@code="PRN")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Dringlichkeitsangabe entspricht nicht den Empfehlungen im VHitG Arztbrief V1.0</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0109</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:priorityCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.7"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen eine Dringlichkeitsangabe beinhalten (gültiger Wert aus der Wertetabelle 'ActPriority (2.16.840.1.113883.5.7)').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0110</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:routeCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.112"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen eine Einnahmeart beinhalten (gültiger Wert aus der Wertetabelle 'RouteOfAdministration (2.16.840.1.113883.5.112)').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0111</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:doseQuantity</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Die Dosierung muss gemäss Addendum zum VHitG Arztbrief, Kapitel 1.2.5 spezifiziert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0112</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Der Einnahmeplan muss gemäss Addendum zum VHitG Arztbrief, Kapitel 1.2.6 spezifiziert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0113</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">count(cda:doseQuantity/cda:center)=0 or cda:doseQuantity/cda:center/@value!="0"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Die Dosierung darf nicht 0 oder leer sein.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Medication Section CDA-CH.Body.MediL3 Checks</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Section CDA-CH.Body.MediL3 Checks.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0201</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:substanceAdministration</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen als 'substanceAdministration' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0202</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten müssen auch im entry einen narrativen Text enthalten (Bezeichnung des Artikels).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0203</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:templateId/@root="1.3.6.1.4.1.19376.1.5.3.1.4.7"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Medikationsdaten sollten das IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7) implementieren.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">Entity</th>
+                  <th>entity_HL7-cda-ch-1.2</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Dateiname</td>
+                  <td>cda-ch-1.2.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">Version</td>
+                  <td>1.0</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Header Templates</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0001</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:participant/@typeCode="IND"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitgeber ' müssen als 'participant' mit typeCode 'IND' im CDA Header deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0002</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:templateId/@root="1.3.6.1.4.1.19376.1.5.3.1.2.2"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH Arbeitgeber müssen mit der IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2) deklariert werden</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Bemerkungen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Bemerkungen.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0101</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Bemerkungen' müssen als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0102</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Bemerkungen'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Bemerkungen' müssen einen section title 'Bemerkungen' enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0103</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Bemerkungen' müssen einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Diagnosenliste</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Diagnosenliste.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1001</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosenliste' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1002</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosenliste' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1003</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Diagnosen'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosenliste' muss einen section title 'Diagnosen' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1004</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1005</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="DiagnosisSectionCode"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1006</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and (cda:templateId/@extension="CDA-CH.Body.DiagL1" or cda:templateId/@extension="CDA-CH.Body.DiagL3")]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosenliste' muss mindestens eine observation 'Diagnose' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Diagnosenliste</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Diagnosenliste.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1101</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1102</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1103</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Einzelne Diagnose im Level 3</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Einzelne Diagnose im Level 3.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1201</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1202</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1203</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1204</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1205</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen einen Code enthalten (CDA Body Level 3).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1206</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Vitalzeichenliste</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Vitalzeichenliste.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1301</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichenliste' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1302</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichenliste' muss einen narrativen Text enthalten</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1303</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Vitalzeichen'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichenliste' muss einen section title 'Vitalzeichen' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1304</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (OID für LOINC: 2.16.840.1.113883.6.1).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1305</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code="8716-3"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code 8716-3 Physical findings; Sytem Vital signs).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1306</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and (cda:templateId/@extension="CDA-CH.Body.VitalSignL1" or cda:templateId/@extension="CDA-CH.Body.VitalSignL3")]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichenliste' muss mindestens eine observation 'Vitalzeichen' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Vitalzeichenliste</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Vitalzeichenliste.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1401</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1402</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen ein Datum der Feststellung enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1403</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1404</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen einen Code enthalten und das Code System angeben).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1405</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen einen Code enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1406</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code angegeben werden).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1407</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.5.1" and @codeSystemName="VitalSignCodes"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code aus der Wertetabelle 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1' angegeben werden).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1408</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@codeSystem="2.16.756.5.30.2.1.1.4.1")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' Schwangerschaftstatus muss als CE mit codeSystem 2.16.756.5.30.2.1.1.4.1 angegeben werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1409</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.4.1"]/code/@value)</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' für 'Schwangerschaftstatus' müssen mit einem LOINC Code aus der Wertetabelle 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1' angegeben werden).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1410</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Vitalzeichen' müssen ein Wert enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Intoleranzliste (Allergien / Unverträglichkeiten)</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Intoleranzliste (Allergien / Unverträglichkeiten).</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1501</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Intoleranzliste' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1502</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Intoleranzliste' muss einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1503</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Allergien und Unverträglichkeiten'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Intoleranzliste' muss einen section title 'Allergien und Unverträglichkeiten' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Einzelne Allergie oder Unverträglichkeit</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Einzelne Allergie oder Unverträglichkeit.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1601</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Allergien und Unverträglichkeiten müssen als 'observation' im CDA Body (section 'Allergien und Unverträglichkeiten') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1602</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1603</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1604</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">Allergien und Unverträglichkeiten müssen einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Liste mit Arbeitsfähigkeitseinträgen</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Liste mit Arbeitsfähigkeitseinträgen.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1701</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit' muss als 'section' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1702</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit' muss einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1703</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:title='Arbeitsfähigkeit'</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit' muss einen section title 'Arbeitsfähigkeit' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1704</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (OID für LOINC: 2.16.840.1.113883.6.1).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1705</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@code="X-ATWRK"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1706</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.ArbeitsfähigkeitL3"]</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit' muss mindestens eine observation 'Beurteilung Arbeitsfähigkeit' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Beurteilung Arbeitsfähigkeit im Level 3</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Beurteilung Arbeitsfähigkeit im Level 3.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1801</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1802</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen ein Datum der Feststellung enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1803</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen einen narrativen Text enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1804</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code="X-ATWRK"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mit LOINC klassifiziert werden (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1805</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime/cda:low</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen ein 'Gültig ab Datum' enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1806</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime/cda:high</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' sollten ein 'Gültig bis Datum / Datum der geplanten, nächsten Beurteilung' enthalten (letzte Beurteulung kann nullFlavor='NA' enthalten).</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1807</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:value/@codeSystem="2.16.756.5.30.2.1.1.6.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Anzahl Stunden/Tag enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1808</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.6.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Anzahl Stunden/Tag) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitStunden', 2.16.756.5.30.2.1.1.6.1 angegeben werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1809</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:interpretationCode/@codeSystem="2.16.756.5.30.2.1.1.7.1"</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Arbeitsintensität enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1810</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:interpretationCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.7.1"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Arbeitsintensität) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitIntensität', 2.16.756.5.30.2.1.1.7.1 angegeben werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1811</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name').</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Impfungsstatus</h3>
+      <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Impfungsstatus.</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1901</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Impfung' müssen als 'observation' im CDA Body deklariert werden.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1902</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="Immunization"]/code/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Impfung' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1', Teilmenge Immunization)</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">Rule</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1903</th>
+                  <th class="label1" width="10%">Role</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">Assert</td>
+                  <td colspan="3">cda:effectiveTime/cda:low or cda:effectiveTime/@value</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>Beschreibung</td>
+               <td colspan="3">CDA-CH 'Impfungen' müssen ein Datum enthalten.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+   </body>
+</html>

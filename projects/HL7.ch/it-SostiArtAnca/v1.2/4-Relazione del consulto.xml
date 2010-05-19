@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="6072748C-C635-4E5F-910E-35F55B323CD4" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11488-4" codeSystem="2.16.840.1.113883.6.1" displayName="Rapporto di consulto"/>
+	<title>RAPPORTO DI CONSULTO</title>
+	<effectiveTime value="20071015"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="it-CH"/>
+	<setId extension="6072748C-C635-4E5F-910E-35F55B323CD4" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="2131" root="2.16.756.666666.3.1"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Mario</given>
+					<family>BIANCHI</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7606666666666" root="1.3.88"/>
+				<name>Dott. Hans Specialista, Specialista ortopedico</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='ATTPHYS' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071015"/>
+		<assignedAuthor>
+			<id extension="7606666666666" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Ärztegasse</streetName>
+				<houseNumber>13</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.444.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.444.55.67"/>
+			<telecom use="PUB" value="tel:+41.32.252.25.25"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>Hans</given>
+					<family>Spezialist</family>
+					<suffix>Specialista ortopedico</suffix>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071015"/>
+		<assignedEntity>
+			<id extension="5" root="2.16.756.666666.2.1"/>
+			<assignedPerson>
+				<name>
+					wf
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7606666666666" root="1.3.88"/>
+				<name>Dott. Hans Specialista, Specialista ortopedico</name>
+				<addr use="WP">
+					<streetName>Ärztegasse</streetName>
+					<houseNumber>13</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Studio medico CH, Dott. Allzeit Bereit, Medico specializzato in medicina generale</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071015"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7606666666666" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>Hans</given>
+					<family>Spezialist</family>
+					<suffix>Specialista ortopedico</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2007 Dr med Hans Specialista, specialista di ortopedia.
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+	********************************************************
+	  CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Premessa
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Premessa</title>
+					<text>
+						<content>
+							Ringrazio per la cortese richiesta di consulto per il suddetto paziente presso il mio ambulatorio.<br/>
+						</content>
+						<content styleCode="Italics">
+							Premessa<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Elenco diagnosi
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Elenco diagnosi</title>
+					<text>
+						<content styleCode="Italics">
+							Elenco delle diagnosi note del paziente, per lo più strutturato<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Anamnesi e disturbi correnti
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Anamnesi e disturbi correnti</title>
+					<text>
+						<content styleCode="Italics">
+							Breve riepilogo dell’anamnesi dei disturbi per cui il paziente ha richiesto il consulto.<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Referti esaminati
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Referti esaminati</title>
+					<text>
+						<content styleCode="Italics">
+							Referti esaminati rilevanti, eventualmente anche risultati di ulteriori esami<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Perizia e suggerimenti di ulteriori misure = Valutazione e procedere
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Perizia e suggerimenti di ulteriori misure = Valutazione e procedere</title>
+					<text>
+						<content styleCode="Italics">
+							Valutazione della situazione complessiva sulla base dei referti raccolti, indicazione di ulteriori misure consigliate, es. tipo di terapia<br/>
+							<br/>
+						</content>
+						<content>
+							La prego di eseguire eventuali analisi preoperatorie presso il Suo ambulatorio.<br/>
+						</content>
+						<content styleCode="Italics">
+							Elenco degli esami e delle analisi di laboratorio da eseguire<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

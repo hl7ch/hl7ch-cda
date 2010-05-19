@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+eMedicus Ärztlicher Zwischenberict
+
+History:
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+11.05.2010: Tony Schaller, medshare GmbH (Definitive Formularnummer Suva eingetragen)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedicus/v2.0/suva.css'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId extension="2928" root="2.16.756.5.30.1.100.2.1"/>
+	<id extension="fbca3d60-a20d-406f-81fe-6ca45b887254" root="2.16.756.5.30.1.100.2"/>
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
+	<!-- Regel CDLN: Als Codesystem für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
+	<title>Ärztlicher Zwischenbericht</title>
+	<effectiveTime value="20080430103249"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="de-CH"/>
+	<setId extension="fbca3d60-a20d-406f-81fe-6ca45b887254" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+			<!-- Suva OID für Schaden-Nr -->
+			<id extension="123.73.423.123" root="2.16.756.5.31"/>
+			<!-- OID für alte AHV-Nr -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>2927</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>Muster</family>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19730611"/>
+				<maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Allzeit Bereit, Gruppenpraxis CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code="PCP" codeSystem="2.16.756.5.30.2.1.1.1"/>
+		<time value="20080430103249"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:bereit@gruppenpraxis.ch"/>
+			<telecom use="PUB" value="http://www.gruppenpraxis.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Gruppenpraxis CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20080430103249"/>
+		<assignedEntity>
+			<id extension="2" root="2.16.756.888888.2.1"/>
+			<assignedPerson>
+				<name>
+					ab
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Gruppenpraxis CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<id extension="A05" root="2.16.756.5.30.1.100.1.1"/>
+			<informationRecipient>
+				<name>Suva Agentur Aarau</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetAddressLine>Rain 35</streetAddressLine>
+					<postalCode>5001</postalCode>
+					<city>Aarau</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20080430103249"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="2099988871229" root="1.3.88"/>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode='IND'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<id extension='987654321' root='2.16.756.5.30.1.100.2927999'/>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<associatedPerson>
+				<name nullFlavor='UNK' />
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Brötligeber AG</name>
+				<telecom nullFlavor='UNK' />
+				<addr use="WP">
+					<streetAddressLine>Lohnbüro</streetAddressLine>
+					<streetAddressLine>Postfach</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Zürich</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.SchadenInfo"/>
+					<title>Schadeninformationen</title>
+					<text>
+						<content styleCode="Italics">Umsetzungshinweis für Applikation: Der Header und das Schadendatum sollen bereits vorausgefüllt sein.<br />Umsetzungshinweis für CDA Template: Section zwingend und voll strukturiert<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Schadendatum</td>
+									<td>21.08.2008</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedicus Observation Template: Schadeninformationen -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.SchadenInfoL3"/>
+							<!-- Schadennummer -->
+							<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+							<!-- Anmeldeart -->
+							<code code="U" codeSystem="2.16.756.5.30.1.100.3.2.2" displayName="Unfall"/>
+							<!-- Schadendatum -->
+							<effectiveTime value="20080821"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagList"/>
+					<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
+					<title>Diagnosen</title>
+					<text>
+						<content styleCode="Italics">Umsetzungshinweis für Applikation: Die Liste der bisherigen Einträge soll bereits vorausgefüllt sein. Nur Einträge hinzufügen, aber nicht bestehende Einträge ändern/löschen.<br />Umsetzungshinweis für CDA Template: Section zwingend - soll auf neuem, wiederverwendbarem Diagnose-Section Template basieren, Liste (0..* Einträge). Diagnose als Freitext zwingend. Optional kann dazu ein Code inkl. dessen Codesystem angegeben werden<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Diagnose</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Datum</th>
+									<th>Beurteilt durch</th>
+								</tr>
+								<tr>
+									<td>Schulterkontusion rechts</td>
+									<td></td>
+									<td></td>
+									<td>03.06.2008</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+								<tr>
+									<td>Reaktive Angstdepression mit Angstsymptomatik</td>
+									<td></td>
+									<td></td>
+									<td>03.06.2008</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Diagnose (L1; Freitext) -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+							<!-- für Diagnose im Level 3:
+							<code code="blabla" codeSystem="2.16.756.5.30" />
+							-->
+							<code nullFlavor='UNK' />
+							<text>Schulterkontusion rechts</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<!-- CDA-CH Observation Template: Diagnose (L1; Freitext) -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+							<!-- für Diagnose im Level 3:
+							<code code="blabla" codeSystem="2.16.756.5.30" />
+							-->
+							<code nullFlavor='UNK' />
+							<text>Reaktive Angstdepression mit Angstsymptomatik</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Verlauf"/>
+					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
+					<title>Verlauf</title>
+					<text>
+						<content styleCode="Italics">Umsetzungshinweis für Applikation: Die Liste der bisherigen Einträge soll bereits vorausgefüllt sein. Nur Einträge hinzufügen, aber nicht bestehende Einträge ändern/löschen. Beim Ausfüllen des Formulars ist das Hinzufügen eines neuen Verlaufseintrages zwingend.<br />Umsetzungshinweis für CDA Template: Section zwingend ("Bish. Verlauf" und "unfallremde Faktoren": Codesystem/OID für Codierung notwendig). Inhalt zu den Entries Freitext<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Bisheriger Verlauf und gegenwärtiger Zustand (subjektiv und objektiv)</th>
+									<th>Beeinflussung Heilungsverlauf durch unfallfremde Faktoren</th>
+									<th>Datum</th>
+									<th>Beurteilt durch</th>
+								</tr>
+								<tr>
+									<td>Notfallbehandlung im Stadtspital Triemli. Erstkonsultation am 25.08.08 in unserer Praxis. Damals nebst körperlichen Schmerzen schon im Vordergrund deutliche Angststörug nach Sturz vom Gerüst. Auch Schlafstörungen mit Alpträumen. Körperliche Muskelverspannungen im Schulterbereich und Nackenbereich, schmerzhafte Schultermobiltät vor allem in Elevation und Innenrotation. Nebst Analgesie Beginn mit Jarsin-Therapie später Citalopram. Ein zunächst geplanter Arbeitswiederbeginn am 01.10.2009 scheiterte. Es bestand Tendenz zu Aggravation. Jetzt Verordnung von Physiotherapie zur Kräftigung und Mobilisation.</td>
+									<td>Möglicherweise ja. Persönlichkeitsstruktur des Pat. mit Neigung zu Ängstlichkeit.</td>
+									<td>03.06.2008</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlauf"/>
+							<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
+							<statusCode code='completed'/>
+							<effectiveTime value="20080603"/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+							<component typeCode='COMP'>
+								<!-- Bisheriger Verlauf und gegenwärtiger Zustand (subjektiv und objektiv) -->
+								<procedure moodCode="EVN" classCode="PROC">
+									<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlaufProc"/>
+									<code nullFlavor="UNK" />
+									<text>Notfallbehandlung im Stadtspital Triemli. Erstkonsultation am 25.08.08 in unserer Praxis. Damals nebst körperlichen Schmerzen schon im Vordergrund deutliche Angststörug nach Sturz vom Gerüst. Auch Schlafstörungen mit Alpträumen. Körperliche Muskelverspannungen im Schulterbereich und Nackenbereich, schmerzhafte Schultermobiltät vor allem in Elevation und Innenrotation. Nebst Analgesie Beginn mit Jarsin-Therapie später Citalopram. Ein zunächst geplanter Arbeitswiederbeginn am 01.10.2009 scheiterte. Es bestand Tendenz zu Aggravation. Jetzt Verordnung von Physiotherapie zur Kräftigung und Mobilisation.</text>
+								</procedure>
+							</component>
+							<component typeCode='COMP'>
+								<!-- Beeinflussung Heilungsverlauf durch unfallfremde Faktoren -->
+								<observation moodCode="EVN" classCode="OBS">
+									<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlaufExtFaktoren"/>
+									<code nullFlavor="UNK" />
+									<text>Möglicherweise ja. Persönlichkeitsstruktur des Pat. mit Neigung zu Ängstlichkeit.</text>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Therapie"/>
+					<title>Therapie</title>
+					<text>
+						<content styleCode="Italics">Umsetzungshinweis für CDA Template: Section zwingend. Einträge als Freitext<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Gegenwärtige Behandlung:</td>
+									<td>abgeschlossen</td>
+								</tr>
+								<tr>
+									<td>Vorschläge (weitere Behandlung, Röntgen, kreisärztliche Untersuchung):</td>
+									<td>keine</td>
+								</tr>
+								<tr>
+									<td>Beratungsintervall:</td>
+									<td>mit Datum vom 12.12.08 abgeschlossen</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- Gegenwärtige Behandlung -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.AktBehandlung"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>abgeschlossen</text>
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Therapie Vorschläge -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.Vorschläge"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>keine</text>
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Beratungsintervall -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.Beratungsintervall"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>mit Datum vom 12.12.08 abgeschlossen</text>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitList"/>
+					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Arbeitsfähigkeit</title>
+					<text>
+						<content styleCode="Italics">Umsetzungshinweis für Applikation: Die Liste der bisherigen Einträge soll bereits vorausgefüllt sein. Nur Einträge hinzufügen, aber nicht bestehende Einträge ändern/löschen.<br />Umsetzungshinweis für CDA Template: Section zwingend - soll auf neuem, wiederverwendbarem Arbeitsfähigkeit-Section Template basieren, Liste (1..* Einträge). Voll strukturiert (könnte recht komplizierte HL7 Statements geben)<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Konsultation</th>
+									<th>Anwesenheitsdauer</th>
+									<th>Pensum</th>
+									<th>Nächste Beurteilung</th>
+									<th>Beurteilt durch</th>
+								</tr>
+								<tr>
+									<td>Datum</td>
+									<td>Zumutbare Stunden pro Tag im Betrieb</td>
+									<td>% der üblichen Arbeitszeit</td>
+									<td>geplant am</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>24.08.2008</td>
+									<td>0 h/Tag</td>
+									<td>0%</td>
+									<td>25.09.2008</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+								</tr>
+								<tr>
+									<td>14.12.2008</td>
+									<td>8 h/Tag</td>
+									<td>100%</td>
+									<td>keine</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>Voll arbeitsfähig ab 3.6.2008</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20080824"/>
+								<high value="20080925"/>
+							</effectiveTime>
+							<value xsi:type='CE' code="0" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="0" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>Voll arbeitsfähig ab 3.6.2008</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20081214"/>
+								<high nullFlavor='NA'/>
+							</effectiveTime>
+							<value xsi:type='CE' code="8+" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="100" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.BehAbschluss"/>
+					<title>Behandlungsabschluss</title>
+					<text>
+						<content styleCode="Italics">Umsetzungshinweis für Applikation:<br />- Bei "Beim Betrieb um Zuweisung geeigneter Arbeit anfragen"=Ja: Bei Suva soll der Prozess zur Anforderung der Arbeitsplatzbeschreibung ausgelöst werden.<br />
+							- Bei "Zu erwartende, bleibende Nachteile"=Ja: Bei Suva soll der Prozess zur Anforderung der Komplexfallmeldung ausgelöst werden.<br />
+							Umsetzungshinweis für CDA Template: Section optional. Wenn vorhanden, dann voll strukturiert (Codesystem/OID für defintiv/geplant notwendig). Heutige Angabe "geplant in Wochen" wird neu mit einem Datum spezifiziert<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Behandlungsabschluss:</td>
+									<td>12.12.2008</td>
+								<td>definitiv <content styleCode="Italics"> | geplant</content>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br />
+				Weitere Angaben:
+				<table>
+					<tbody>
+						<tr>
+							<td>Beim Betrieb um Zuweisung geeigneter Arbeit anfragen:</td>
+							<td>Nein</td>
+							<td>
+								<content styleCode="Italics"> | Ja</content>
+							</td>
+						</tr>
+						<tr>
+							<td>Zu erwartende, bleibende Nachteile:</td>
+							<td>Nein</td>
+							<td>
+								<content styleCode="Italics"> | Ja</content>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</text>
+			<entry>
+				<!-- eMedicus Encounter Template: Behandlungsabschluss (moodCode="EVN": definitiv, moodCode="INT": geplant) -->
+				<encounter classCode="ENC" moodCode="EVN">
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.BehAbschlussL3"/>
+					<code code="8649-6" codeSystem="2.16.840.1.113883.6.1" />
+					<effectiveTime>
+						<low nullFlavor='NA'/>
+						<high value='20081212'/>
+					</effectiveTime>
+					<performer>
+						<assignedEntity>
+							<id nullFlavor="UNK" />
+							<representedOrganization>
+								<name>Musterspital</name>
+								<addr use="WP">
+									<streetName>Hospitalgasse</streetName>
+									<houseNumber>2</houseNumber>
+									<postalCode>8888</postalCode>
+									<city>Musterhausen</city>
+								</addr>
+							</representedOrganization>
+						</assignedEntity>
+					</performer>
+				</encounter>
+			</entry>
+			<entry>
+				<!-- Zuweisung Arbeit -->
+				<procedure moodCode="EVN" classCode="PROC">
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.ZuweisungArbeit"/>
+					<!-- Strukturierte Angabe -->
+					<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+				</procedure>
+			</entry>
+			<entry>
+				<!-- Bleibende Nachteile -->
+				<observation moodCode="EVN" classCode="OBS">
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BleibendeNachteile"/>
+					<!-- Strukturierte Angabe -->
+					<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+				</observation>
+			</entry>
+		</section>
+	</component>
+	<component>
+		<section>
+			<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+			<title>Bemerkungen</title>
+			<text>
+				<content>Keine</content>
+			</text>
+		</section>
+	</component>
+</structuredBody>
+</component>
+</ClinicalDocument>

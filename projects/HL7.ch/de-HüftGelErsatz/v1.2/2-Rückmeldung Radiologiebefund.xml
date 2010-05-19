@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Röntgenbefund"/>
+	<title>Radiologischer Befund</title>
+	<effectiveTime value="20071007"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="de-CH"/>
+	<setId extension="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="2345" root="2.16.756.777777.3.1"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7607777777777" root="1.3.88"/>
+				<name>Radiologieinstitut RoDiag</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='ATTPHYS' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071007"/>
+		<assignedAuthor>
+			<id extension="7607777777777" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Röntgenstr</streetName>
+				<houseNumber>1</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.456.99.90"/>
+			<telecom use="PUB" value="fax:+41.32.456.99.99"/>
+			<telecom use="PUB" value="mailto:rodiag@rodiag_institut.ch"/>
+			<telecom use="PUB" value="http:www.rodiag_institut.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>X.</given>
+					<family>Ray</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Radiologieinstitut RoDiag</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071007"/>
+		<assignedEntity>
+			<id extension="23" root="2.16.756.777777.2.1"/>
+			<assignedPerson>
+				<name>
+					Av
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7607777777777" root="1.3.88"/>
+				<name>Radiologieinstitut RoDiag</name>
+				<addr use="WP">
+					<streetName>Röntgenstr</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit, FMH Allgemeine Medizin</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071007"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7607777777777" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>X.</given>
+					<family>Ray</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Indirekte Einwilligung durch Zuweisung zur Radiologischen Diagnostik vom 03.10.2007
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Präambel
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Präambel</title>
+					<text>
+						<content>
+							Besten Dank für die freundliche Zuweisung vom 3.10.2007 zur Radiologischen Untersuchung des oben genannten Patienten. Das erstellte Röntgenbild finden sie hier: <linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/mustermaxhuefte1.jpg ">RoDiag Webaccess</linkHtml><br/>
+							<br/>
+						</content>
+						<content styleCode="Italics">
+							Präambel, ev. mit Referenz auf das Überweisungsschreiben<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Beckenübersicht vom 6.10.2007
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Beckenübersicht vom 6.10.2007</title>
+					<text>
+						<content styleCode="Italics">
+							Spezifizierung der durchgeführten Untersuchung und des Untersuchungsdatums in der Überschrift.<br/>
+							Im Textkörper dieses Abschnittes werden erwähnenswerte Befunde der Untersuchung beschrieben (pathologische Befunde, Auffälligkeiten, Normvarianten, erwähnenswerte Normalbefunde)
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Aufnahme nach Lauenstein bds. vom 6.10.2007
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Aufnahme nach Lauenstein bds. vom 6.10.2007</title>
+					<text>
+						<content styleCode="Italics">
+							Spezifizierung der durchgeführten Untersuchung und des Untersuchungsdatums in der Überschrift.<br/>
+							Im Textkörper dieses Abschnittes werden erwähnenswerte Befunde der Untersuchung beschrieben (pathologische Befunde, Auffälligkeiten, Normvarianten, erwähnenswerte Normalbefunde)
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Beurteilung
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Beurteilung</title>
+					<text>
+						<content styleCode="Italics">
+							Fachärztliche Erwägungen und Interpretationen zu den oben geschilderten Befunden. Häufig werden mehrere, logisch zusammengehörige Untersuchungen in einer gemeinsamen Beurteilung gewürdigt.
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Empfehlungen
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Empfehlungen</title>
+					<text>
+						<content styleCode="Italics">
+							Hier können allenfalls Empfehlungen zum weiteren Vorgehen aufgeführt werden (z.B. „Kontrolluntersuchung in 12 Wochen empfohlen“ oder „Wir empfehlen die weitere Abklärung der Befunde mittels Computertomografie“)
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

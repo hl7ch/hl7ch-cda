@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+********************************************************
+CDA-CH V1.2 Sample
+
+History:
+27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!-- 
+	********************************************************
+	  CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<id extension="E8BB6F1A-965B-4A03-866C-4E3667850B6E" root="2.16.756.5.30.1.1.1.1"/>
+	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" displayName="Rapporto di dimissione"/>
+	<title>RAPPORTO D’USCITA</title>
+	<effectiveTime value="20071113"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="it-CH"/>
+	<setId extension="E8BB6F1A-965B-4A03-866C-4E3667850B6E" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="278364" root="2.16.756.555555.3.1"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Mario</given>
+					<family>BIANCHI</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Ospedale cantonale, Clinica di chirurgia e ortopedia</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20071113"/>
+		<assignedAuthor>
+			<id extension="7605555555555" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Spitalstr.</streetName>
+				<houseNumber>23</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
+			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
+			<telecom use="PUB" value="http:www.ospedale-cantonale.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>A.</given>
+					<family>Assistente</family>
+					<suffix>Medico assistente</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. Theo Klug, primario</name>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20071113"/>
+		<assignedEntity>
+			<id extension="35" root="2.16.756.555555.2.1"/>
+			<assignedPerson>
+				<name>
+					es
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Ospedale cantonale</name>
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Casa di cura Blumenalp, Centro di riabilitzione ortopedica, Direzione medica</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<postalCode>9876</postalCode>
+					<city>Blumenalp</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<informationRecipient typeCode="TRC">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Studio medico CH, Dott. Allzeit Bereit, Medico specializzato in medicina generale</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<informationRecipient typeCode="TRC">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. H. Spezialist, medico ortopedico</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20071113"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7605555555555" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>A.</given>
+					<family>Assistente</family>
+					<suffix>Medico assistente</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authenticator>
+		<time value="20071113"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7605555555555" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dott.</prefix>
+					<given>Theo</given>
+					<family>Klug</family>
+					<suffix>primario</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</authenticator>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2007 Dr med Hans Specialista, specialista di ortopedia.
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+	<!-- 
+********************************************************
+  CDA Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+			********************************************************
+			  Premessa
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Premessa</title>
+					<text>
+						<content>
+							Con la presente ringrazio per l’ulteriore persa in carico del suddetto paziente, ospedalizzato presso la nostra struttura dal 29/10/2007 al 10/11/2007 e ricoverato in data 10/11/2007 presso il vostro istituto per riabilitazione.<br/>
+							<br/>
+						</content>
+						<content styleCode="Italics">
+							Premessa con l’indicazione della durata della degenza<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Elenco diagnosi
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Elenco diagnosi</title>
+					<text>
+						<content styleCode="Italics">
+							Elenco strutturato delle diagnosi note, in ordine di rilevanza<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Trattamenti eseguiti
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Trattamenti eseguiti</title>
+					<text>
+						<content styleCode="Italics">
+							Interventi terapeutici, chirurgici o trattamenti non invasivi eseguiti (ad es. medicamentosi).<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Anamnesi
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Anamnesi</title>
+					<text>
+						<content>
+							Anamnesi remota<br/>
+						</content>
+						<content styleCode="Italics">
+							Anamnesi medica del paziente (malattie e interventi passati, disturbi noti, ecc…)<br/>
+							<br/>
+						</content>
+						<content>
+							Anamnesi sistemica<br/>
+						</content>
+						<content styleCode="Italics">
+							Anamnesi fisica del paziente, spesso divisa per sistemi di organi<br/>
+							<br/>
+						</content>
+						<content>
+							Allergie note<br/>
+						</content>
+						<content styleCode="Italics">
+							Descrizione di allergie e delle relazioni all’esposizione<br/>
+							<br/>
+						</content>
+						<content>
+							Anamnesi sociale<br/>
+						</content>
+						<content styleCode="Italics">
+							Anamnesi sociale, condizioni di vita del paziente<br/>
+							<br/>
+						</content>
+						<content>
+							Anamnesi familiare<br/>
+						</content>
+						<content styleCode="Italics">
+							Predisposizioni familiari a malattie nota<br/>
+							<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Anamnesi attuale
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Anamnesi attuale</title>
+					<text>
+						<content styleCode="Italics">
+							Descrizione della motivazione della cura corrente<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Terapia al momento del ricovero
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Terapia al momento del ricovero</title>
+					<text>
+						<content styleCode="Italics">
+							Elenco dei farmaci assunti al momento del ricovero (ad es. “Aspirin cardio 1-0-0”)<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Referti clinici al momento del ricovero
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Referti clinici al momento del ricovero</title>
+					<text>
+						<content styleCode="Italics">
+							Stato clinico del paziente, eventualmente diviso per sistemi di organi<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Diagnostica per immagini
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Diagnostica per immagini</title>
+					<text>
+						<content styleCode="Italics">
+							Referti e valutazioni della diagnostica per immagini (radiografie, ecc...)<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Risultati di ulteriori esami
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Risultati di ulteriori esami</title>
+					<text>
+						<content styleCode="Italics">
+							Referti e valutazioni di endoscopie<br/>
+							Valutazioni consultive<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Risultati di laboratorio
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Risultati di laboratorio</title>
+					<text>
+						<content styleCode="Italics">
+							Referti della diagnostica di laboratorio o patologia, spesso anche sotto forma di relazione di laboratorio riepilogativa (primo/ultimo valore e valore più alto/più basso di ogni analisi eseguita)<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Valutazione e decorso
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Valutazione e decorso</title>
+					<text>
+						<content styleCode="Italics">
+							Descrizione del decorso del trattamento, interpretazione e valutazione dei referti raccolti, descrizione delle misure eseguite<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Terapia alla dimissione
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Terapia alla dimissione</title>
+					<text>
+						<content styleCode="Italics">
+							Elenco dei farmaci da utilizzare dopo la degenza in ospedale dal momento dell’uscita<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Procedere
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Procedere</title>
+					<text>
+						<content styleCode="Italics">
+							Consigli per ulteriori cure<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Allegati
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Allegati</title>
+					<text>
+						<list>
+							<item>
+								<content ID="a1">
+									<linkHtml href="9-Laborbericht_Spital.pdf">Relazione riepilogativa di laboratorio</linkHtml><br/>
+								</content>
+							</item>
+							<item>
+								<content ID="a2">
+									<linkHtml href="7-Rapporto operatorio.xml">Copia relazione operatoria</linkHtml><br/>
+								</content>
+							</item>
+							<item>
+								<content ID="a3">
+									Raggi X, vi verrà inviato tradizionali. Un rifiuto di elettronica, provvederemo ad aggiungere qui:<br/>
+									<linkHtml href="mustermaxhuefte1.jpg">X-Ray immagine pre operativo</linkHtml><br/>
+								<linkHtml href="mustermaxhuefte2.jpg">X-Ray immagine post operativo</linkHtml><br/>
+								</content>
+							</item>
+						</list>
+					</text>
+					<entry>
+						<observation classCode="COND" moodCode="EVN">
+							<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laborbericht"/>
+							<effectiveTime value="20071109"/>
+							<value xsi:type="CD" code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laborbericht">
+								<originalText>
+									<reference value="#a1"/>
+								</originalText>
+							</value>
+							<reference typeCode="SPRT">
+								<seperatableInd value="true"/>
+								<externalDocument>
+									<text mediaType="application/pdf">
+										<reference value="9-Laborbericht_Spital.pdf"/>
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="COND" moodCode="EVN">
+							<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Interventosbericht"/>
+							<effectiveTime value="20071030"/>
+							<value xsi:type="CD" code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Interventosbericht">
+								<originalText>
+									<reference value="#a2"/>
+								</originalText>
+							</value>
+							<reference typeCode="SPRT">
+								<seperatableInd value="true"/>
+								<externalDocument>
+									<id extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
+									<text mediaType="multipart/related">
+										<reference value="7-Interventosbericht.xml"/>
+									</text>
+									<setId extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
+									<versionNumber value="1"/>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="COND" moodCode="EVN">
+							<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="X-Ray immagine"/>
+							<effectiveTime value="20071109"/>
+							<value xsi:type="CD" code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="X-Ray immagine">
+								<originalText>
+									<reference value="#a3"/>
+								</originalText>
+							</value>
+							<reference typeCode="SPRT">
+								<seperatableInd value="true"/>
+								<externalDocument>
+									<text>
+										Raggi X, vi verrà inviato tradizionali.
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

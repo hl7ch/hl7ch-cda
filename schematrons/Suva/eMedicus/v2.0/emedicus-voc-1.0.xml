@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+********************************************************
+
+Vocabulary zu Suva eMedicus Schematron Regeln
+Language: de-CH
+
+History:
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+
+********************************************************
+-->
+<systems>
+	<!--
+	********************************************************
+	Anmeldeart
+	********************************************************
+	-->
+	<system codeSystemName='SuvaSchadenAnmeldeart' root='2.16.756.5.30.1.100.3.2.2'>
+		<code value='U' displayName='Unfall'/>
+		<code value='B' displayName='Berufskrankheit'/>
+		<code value='K' displayName='Krankheit'/>
+		<code value='M' displayName='Mutterschaft - nicht krankheitsbedingt'/>
+		<code value='Z' displayName='Zahnschaden'/>
+		<code value='R' displayName='Rückfall'/>
+	</system>
+	<!--
+	********************************************************
+	Inkonvenienz bei Erstbehandlung
+	********************************************************
+	-->
+	<system codeSystemName='SuvaErstbehandlungInkonvenienz' root='2.16.756.5.30.1.100.3.2.3'>
+		<code value='N' displayName='in Praxis während Praxisöffnungszeit'/>
+		<code value='I' displayName='in Praxis ausserhalb Praxisöffnungszeit'/>
+		<code value='U' displayName='am Unfallort'/>
+		<code value='W' displayName='in der Wohnung des Patienten'/>
+	</system>
+</systems>

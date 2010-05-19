@@ -1,0 +1,702 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+********************************************************
+Fallbeispiel "Auffahrunfall" CDA-CH-II
+xPHR Extract Notfallaufnahme Kant. Spital
+
+History:
+12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd' xmlns:sdtc='urn:hl7-org:sdtc'>
+
+	<typeId extension='POCD_HD000040' root='2.16.840.1.113883.1.3'/>
+	<!-- Template OID für ASTM/HL7 Continuity of Care Document (CCD) -->
+	<templateId root='2.16.840.1.113883.10.20.1'/>
+	<!-- Template OID für IHE Medical Documents Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
+	<!-- Template OID für IHE Medical Summary Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.2'/>
+	<!-- Template OID für IHE PHR Extract Specification  -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5'/>
+	<id root='2.16.756.5.30.1.109.2' extension='0FD2BE73-EE93-4AEC-B178-B27C4011DB49' />
+	<code code='34133-9' displayName='Summary of Episode Note' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+	<title>xPHR Extract Personal Health Record</title>
+	<effectiveTime value='20100201151500'/>
+	<confidentialityCode code='N' displayName='Normal' codeSystem='2.16.840.1.113883.5.25' codeSystemName='Confidentiality' />
+	<languageCode code='de-CH'/>
+	<setId root='2.16.756.5.30.1.1.1.1' extension='0FD2BE73-EE93-4AEC-B178-B27C4011DB49' />
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="1234567891234" root="2.16.756.5.32"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19480611"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value='20100201151500'/>
+		<assignedAuthor>
+			<!-- id of the system that generated the given xPHR Export -->
+			<id extension='23421' root='2.16.756.5.30.1.434343434.1.1'/>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!-- id of the system that generated the given xPHR Export -->
+				<id extension='23421' root='2.16.756.5.30.1.434343434.1.1'/>
+				<name>Personal Health Record</name>
+				<addr use='WP'>
+					<streetAddressLine>Providergasse 88</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode='PRCP'>
+		<intendedRecipient>
+			<id extension='A05' root='2.16.756.5.30.1.999999.1.1'/>
+			<informationRecipient>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>E.</given>
+					<family>Mergency</family>
+					<suffix>Assistenzarzt</suffix>
+				</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<name>Kantonales Spital, Klinik für Chirurgie</name>
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>33</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<documentationOf>
+		<serviceEvent classCode='PCPR'>
+			<!-- The <serviceEvent> element describes the activity being documented. This element shall be present, and shall have a classCode attribute of 'PCPR'. -->
+			<effectiveTime>
+				<low value='20040101'/>
+				<high value='20100201'/>
+			</effectiveTime>
+			<performer typeCode='PRF'>
+				<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.3'/>
+				<functionCode code='OF' displayName='Outpatient facility' codeSystem='2.16.840.1.113883.11.12206' codeSystemName='RoleCode'/>
+				<time>
+					<low value='20040101'/>
+					<high value='20100201'/>
+				</time>
+				<assignedEntity>
+					<!-- id of the system that generated the given xPHR Export -->
+					<id extension='23421' root='2.16.756.5.30.1.434343434.1.1'/>
+					<representedOrganization>
+						<name>Personal Health Record</name>
+						<addr use='WP'>
+							<streetAddressLine>Providergasse 88</streetAddressLine>
+							<postalCode>8888</postalCode>
+							<city>Musterhausen</city>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<!-- Required Conditions (cont) Section content -->
+					<templateId root='2.16.840.1.113883.10.20.1.11'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
+					<code code='11450-4' displayName='PROBLEM LIST' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Diagnosenliste</title>
+					<text>
+						<content ID='diag1'>St.n. Implantation einer Hüftgelenks-Endoprothese links Juli 2009 bei primärer Coxarthrose links</content>
+						<br />
+						<content ID='diag2'>Essentielle arterielle Hypertonie</content>
+						<br />
+						<content ID='diag3'>
+							Symptomatische Hyperthyreose anamnestisch<br />
+							- mit paroxysmalem tachykardem Vorhofflimmern<br />
+							- Carbimazol 5mg/die bis Juli 2009, seither ohne Behandlung<br />
+						</content>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id nullFlavor='NA'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' >
+									<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
+									<id nullFlavor='NA'/>
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
+									<text>
+									<reference value='#diag1'/>St.n. Implantation einer Hüftgelenks-Endoprothese links Juli 2009 bei primärer Coxarthrose links</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='UNK' />
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' >
+									<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
+									<id nullFlavor='NA'/>
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
+									<text>
+									<reference value='#diag2'/>Essentielle arterielle Hypertonie</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='UNK' />
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' >
+									<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
+									<id nullFlavor='NA'/>
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
+									<text>
+										<reference value='#diag3'/>
+										Symptomatische Hyperthyreose anamnestisch,-mit paroxysmalem tachykardem Vorhofflimmern,-Carbimazol 5mg/die bis Juli 2009, seither ohne Behandlung
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='UNK' />
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<!-- Required Allergies and Drug Sensitivities Section content -->
+					<templateId extension='CDA-CH.Body.IntoleranceList' root='2.16.756.5.30.1.1.1.1.1'/>
+					<templateId root='2.16.840.1.113883.10.20.1.2'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13'/>
+					<code code='48765-2' displayName='Allergies, adverse reactions, alerts' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Allergien und Unverträglichkeiten</title>
+					<text>
+						<content ID='allergy1'>
+							Penicillin-Allergie<br />
+							- Generalisiertes Arzneimittel-Exanthem nach Penicillinbehandlung 1986
+						</content>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3'/>
+							<id nullFlavor='NA'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId extension='evita.seds.intolerance' root='2.16.756.5.30.1.109.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.6'/>
+									<id nullFlavor='NA'/>
+									<code code='418799008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Symptom' >
+										<originalText>
+											<reference nullFlavor='NA' />
+										</originalText>
+									</code>
+									<text>
+									<reference value='#allergy1'/>Generalisiertes Arzneimittel-Exanthem nach Penicillinbehandlung 1986</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' codeSystem='2.16.840.1.113883.6.96' code='91936005' codeSystemName='SNOMED-CT' displayName='Allergy to penicillin' ></value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<!-- Optional Clinical Tests / Blood Type Section content -->
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.28'/>
+					<code code='30954-2' displayName='STUDIES SUMMARY' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Blutgruppe</title>
+					<text>
+						<content ID='bloodgr'>Blutgruppe A, Rh pos.</content>
+						<br />
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.6'/>
+							<templateId root='2.16.840.1.113883.10.20.1.31'/>
+							<id root='2.16.756.5.30.1.109.3.1' extension='0F842BC2-2F87-4E33-A070-77B3B88AAD86' />
+							<code code='882-1' displayName='ABO+RH GROUP' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<text>
+							<reference value='#bloodgr'/>Blutgruppe A, Rh pos.</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='20091113012005'/>
+							<value xsi:type='CD' nullFlavor='UNK' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<!-- Required Conditions Section content -->
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8'/>
+					<code code='11348-0' displayName='HISTORY OF PAST ILLNESS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId extension='CDA-CH.Body.MediList' root='2.16.756.5.30.1.1.1.1.1'/>
+					<!-- Required Medications – Prescription and Non-Prescription Section content -->
+					<templateId root='2.16.840.1.113883.10.20.1.8'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.19'/>
+					<!-- smeex Template für Medikamente -->
+					<code code='10160-0' displayName='HISTORY OF MEDICATION USE' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Medikamente</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										Produktname
+									</th>
+									<th>
+										Dosierung
+									</th>
+									<th>
+										Galenische Form
+									</th>
+									<th>
+										ATC
+									</th>
+									<th>
+										Einnahmevorschrift
+									</th>
+									<th>
+										Beginn Verordnung
+									</th>
+									<th>
+										Ende Verordnung
+									</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='medi1'>Carbimazol</content>
+									</td>
+									<td>
+										5mg
+									</td>
+									<td>
+										Tbl
+									</td>
+									<td>
+										H03BB01
+									</td>
+									<td>
+										1-0-0
+									</td>
+									<td>
+										13.04.2009
+									</td>
+									<td>
+										31.08.2009
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID='medi2'>Lisinopril HCT</content>
+									</td>
+									<td>
+										10mg / 12,5mg
+									</td>
+									<td>
+										Tbl
+									</td>
+									<td>
+										C09BA03
+									</td>
+									<td>
+										1-0-0
+									</td>
+									<td>
+										01.01.2004
+									</td>
+									<td>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN'>
+							<templateId extension='CDA-CH.Body.MediL3' root='2.16.756.5.30.1.1.1.1.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<!-- GTIN -->
+							<id extension='7680210370280' root='1.3.88' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
+							<text>
+								<reference value='#medi1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low value='20090413'/>
+								<high value='20090831'/>
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+								<!-- Dosierung 1-0-0 -->
+								<phase value='190001010800'/>
+								<period value='24' unit='h'/>
+							</effectiveTime>
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'/>
+							<doseQuantity>
+								<center value='5' unit='mg'/>
+							</doseQuantity>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- Generic GroupCode -->
+										<code code="H03BB01SETN000000005TABL" codeSystem="2.16.756.5.30.2.6.2">
+											<originalText>
+												<reference nullFlavor='UNK' />
+											</originalText>
+											<!-- ATC WHO Code -->
+											<translation code="H03BB01" codeSystem="2.16.840.1.113883.6.73"/>
+										</code>
+										<name>NEO MERCAZOLE Tabl 5 mg 50 Stk</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN'>
+							<templateId extension='CDA-CH.Body.MediL3' root='2.16.756.5.30.1.1.1.1.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<!-- GTIN -->
+							<id extension='7680569020119' root='1.3.88' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
+							<text>
+								<reference value='#medi1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low value='20040101'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+								<!-- Dosierung 1-0-0 -->
+								<phase value='190001010800'/>
+								<period value='24' unit='h'/>
+							</effectiveTime>
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'/>
+							<doseQuantity>
+								<center value='10' unit='mg'/>
+							</doseQuantity>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- Generic GroupCode -->
+										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+											<originalText>
+												<reference nullFlavor='UNK' />
+											</originalText>
+											<!-- ATC WHO Code -->
+											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+										</code>
+										<name>LISINOPRIL HCT Tabl 10/12.5 100 Stk</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<!-- Required if known Immunizations Section content -->
+					<templateId root='2.16.840.1.113883.10.20.1.6'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
+					<code code='11369-6' displayName='HISTORY OF IMMUNIZATIONS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Impfungen</title>
+					<text>
+						<content ID='immu1'></content>DiTePe im Kindesalter<br />
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' >
+							<templateId extension='CDA-CH.Body.ImpfungStatusL2' root='2.16.756.5.30.1.1.1.1.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.31'/>
+							<id nullFlavor='NA' />
+							<code code='55272-9' displayName='Corynebacterium diphtheriae immunization status' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<text>
+								<reference value='#immu1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='199001' />
+							<value xsi:type='CD' nullFlavor='UNK' />
+							<!--
+							<effectiveTime>
+							<low nullFlavor='UNK' />
+							<high nullFlavor='UNK' />
+							</effectiveTime>
+							-->
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<title>Bildgebende Verfahren</title>
+					<text>
+						<content styleCode="Bold">Beckenübersicht vom 6.6.2009 (Radiologieinstitut RoDiag, Dr. X. Ray):</content><br />
+						Deutliche arthrotische Veränderung der Hüftgelenke bds. re. mehr als li.; deutliche Verschmälerung des Gelenkspaltes und subchondrale Sklerosierung mit Osteophytenbildung am Pfannenrand<br />
+					</text>
+					<!-- entry todo -->
+				</section>
+			</component>
+			<component>
+				<section>
+					<title>Weitere apparative Diagnostik</title>
+					<text>
+						<content styleCode="Bold">EKG vom 11.7.2009 (Kantonales Spital):</content><br />
+						Normocarder Sinusrhythmus, Linkslage, keine Repolarisationsstörungen, vereinzelte SVES<br />
+					</text>
+					<!-- entry todo -->
+				</section>
+			</component>
+			<component>
+				<section>
+					<title>Laborwerte</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										Analyse-Datum
+									</th>
+									<th>
+										Analyse
+									</th>
+									<th>
+										Normbereich
+									</th>
+									<th>
+										Einheit
+									</th>
+									<th>
+										Wert
+									</th>
+								</tr>
+								<tr>
+									<td>
+										12.12.2009
+									</td>
+									<td>
+										Quick<br />
+										Hämoglobin<br />
+										MCV<br />
+										Leukozyten<br />
+										Thrombozyten<br />
+
+									</td>
+									<td>
+										70-120<br />
+										120-160<br />
+										79-95<br />
+										3.5-10  10^9<br />
+										150-450  10^9<br />
+									</td>
+									<td>
+										%<br />
+										g/l<br />
+										fl<br />
+										/l<br />
+										/l<br />
+									</td>
+									<td>
+										117<br />
+										121<br />
+										89<br />
+										7<br />
+										338<br />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										12.12.2009
+									</td>
+									<td>
+										Natrium<br />
+										Kalium<br />
+										Calcium<br />
+										Phosphat<br />
+										Kreatinin<br />
+									</td>
+									<td>
+										136-145<br />
+										3.6-5.1<br />
+										2.10-2.55<br />
+										0.87-1.45<br />
+										45-84<br />
+									</td>
+									<td>
+										mmol/l<br />
+										mmol/l<br />
+										mmol/l<br />
+										mmol/l<br />
+										umol/l<br />
+									</td>
+									<td>
+										139<br />
+										4.5<br />
+										2.3<br />
+										0.9<br />
+										79<br />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										09.11.2008
+									</td>
+									<td>
+										TSH<br />
+										FT4<br />
+									</td>
+									<td>
+										0.34-5.60<br />
+										9.0-20.0<br />
+									</td>
+									<td>
+										mU/l<br />
+										pmol/l<br />
+									</td>
+									<td>
+										0.17<br />
+										33.2<br />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										12.02.2009
+									</td>
+									<td>
+										TSH<br />
+										FT4<br />
+									</td>
+									<td>
+										0.34-5.60<br />
+										9.0-20.0<br />
+									</td>
+									<td>
+										mU/l<br />
+										pmol/l<br />
+									</td>
+									<td>
+										0.27<br />
+										22.3<br />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										02.03.2009
+									</td>
+									<td>
+										TSH<br />
+										FT4<br />
+									</td>
+									<td>
+										0.34-5.60<br />
+										9.0-20.0<br />
+									</td>
+									<td>
+										mU/l<br />
+										pmol/l<br />
+									</td>
+									<td>
+										0.87<br />
+										18.6<br />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- entry todo -->
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

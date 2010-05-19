@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+********************************************************
+Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma
+http://www.svv.ch/article7221/medizin/formulare/-erstdokubogen-kzbt-.htm
+
+History:
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.xsl'?>
+<?xml-stylesheet type='text/css' href='SVV.css'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+  <templateId extension="erstdokubogen-kzbt" root="2.16.756.5.30.1.110.2.1.1"/>
+  <id extension="fbca3d60-a20d-406f-81fe-6ca45b887254" root="2.16.756.5.30.1.100.2"/>
+  <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
+  <!-- Regel CDLN: Als Codesystem für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
+  <title>Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma</title>
+  <effectiveTime value="20080430103249"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+  <languageCode code="de-CH"/>
+  <setId extension="fbca3d60-a20d-406f-81fe-6ca45b887254" root="2.16.756.5.30.1.1.1.1"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+      <!-- Suva OID für Schaden-Nr -->
+      <id extension="123.73.423.123" root="2.16.756.5.31"/>
+      <!-- OID für alte AHV-Nr -->
+      <addr use="HP">
+        <streetName>Leidensweg</streetName>
+        <houseNumber>10</houseNumber>
+        <postalCode>2927</postalCode>
+        <city>Specimendorf</city>
+      </addr>
+      <telecom use="HP" value="tel:+41.32.685.12.34"/>
+      <telecom use="PUB" value="tel:+41.32.123.77.88"/>
+      <patient>
+        <name>
+          <given>Max</given>
+          <family>Muster</family>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1"/>
+        <birthTime value="19730611"/>
+        <maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2"/>
+      </patient>
+      <providerOrganization>
+        <id extension="7608888888888" root="1.3.88"/>
+        <name>Dr. med. Allzeit Bereit, Gruppenpraxis CH</name>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <functionCode code="PCP" codeSystem="2.16.756.5.30.2.1.1.1"/>
+    <time value="20080430103249"/>
+    <assignedAuthor>
+      <id extension="7608888888888" root="1.3.88"/>
+      <addr use="WP">
+        <streetName>Doktorgasse</streetName>
+        <houseNumber>2</houseNumber>
+        <postalCode>8888</postalCode>
+        <city>Musterhausen</city>
+      </addr>
+      <telecom use="PUB" value="tel:+41.32.234.55.66"/>
+      <telecom use="PUB" value="fax:+41.32.234.66.77"/>
+      <telecom use="PUB" value="mailto:bereit@gruppenpraxis.ch"/>
+      <telecom use="PUB" value="http://www.gruppenpraxis.ch"/>
+      <assignedPerson>
+        <name>
+          <prefix>Dr. med.</prefix>
+          <given>Allzeit</given>
+          <family>Bereit</family>
+          <suffix>Facharzt für Allgemeine Medizin</suffix>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <name>Gruppenpraxis CH</name>
+        <addr use="WP">
+          <streetName>Doktorgasse</streetName>
+          <houseNumber>2</houseNumber>
+          <postalCode>8888</postalCode>
+          <city>Musterhausen</city>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <dataEnterer>
+    <time value="20080430103249"/>
+    <assignedEntity>
+      <id extension="2" root="2.16.756.888888.2.1"/>
+      <assignedPerson>
+        <name>
+          ab
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </dataEnterer>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="7608888888888" root="1.3.88"/>
+        <name>Gruppenpraxis CH</name>
+        <addr use="WP">
+          <streetName>Doktorgasse</streetName>
+          <houseNumber>2</houseNumber>
+          <postalCode>8888</postalCode>
+          <city>Musterhausen</city>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient typeCode="PRCP">
+    <intendedRecipient>
+      <id extension="A05" root="2.16.756.5.30.1.100.1.1"/>
+      <informationRecipient>
+        <name>Suva Agentur Aarau</name>
+      </informationRecipient>
+      <receivedOrganization>
+        <addr use="WP">
+          <streetAddressLine>Rain 35</streetAddressLine>
+          <postalCode>5001</postalCode>
+          <city>Aarau</city>
+        </addr>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+  <legalAuthenticator>
+    <time value="20080430103249"/>
+    <signatureCode code="S"/>
+    <assignedEntity>
+      <id extension="2099988871229" root="1.3.88"/>
+      <id extension="7608888888888" root="1.3.88"/>
+      <assignedPerson>
+        <name>
+          <prefix>Dr. med.</prefix>
+          <given>Allzeit</given>
+          <family>Bereit</family>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchadenInfo"/>
+          <title>Schadeninformationen</title>
+          <text>
+            <content styleCode="Italics">Umsetzungshinweis für Applikation: Der Header und der Unfallzeitpunkt sollen bereits vorausgefüllt sein. Das Ambulanzprotokoll soll falls vorhanden und Datenschutztechnisch erlaubt, vorausgefüllt sein.<br />
+            Umsetzungshinweis für CDA Template: Section zwingend und voll strukturiert (Codesystem/OID für Flag "Einweisung per Ambulanz" notwendig). Beilage ist Optional und erfolgt als Referenz (Link)<br /><br /></content>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Unfallzeitpunkt</content></td>
+                  <td>17.11.2008 17:30</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Erstbehandlung</content></td>
+                  <td>18.11.2008</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Einweisung per Ambulanz</content></td>
+                  <td>Nein</td>
+                  <td><content ID="a1" styleCode="Italics"> | Ja. Kopie des <linkHtml href="Ambulanzprotokoll.pdf">Ambulanzprotokolls</linkHtml></content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Weiterbehandlung bei</content></td>
+                  <td><content styleCode="Italics">keine Angaben</content></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+					<entry>
+						<!-- SVV Observation Template: Schadeninformationen -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchadenInfoL3"/>
+							<!-- Schadennummer(n) -->
+							<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+							<id extension="another id" root="2.16.756.5.30.1.889900"/>
+							<!-- Anmeldeart -->
+							<code nullFlavor='NA'/>
+							<!-- z.B. Anmeldeart nach Suva ist erlaubt:
+							<code code="U" codeSystem="2.16.756.5.30.1.100.3.2.2" displayName="Unfall"/>
+							-->
+							<!-- Schadendatum -->
+							<effectiveTime value="20081117173000"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- SVV Encounter Template: Erstbehandlung -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.ErstbehandlungL3"/>
+							<code nullFlavor='NA'/>
+							<!-- Datum und evtl. Zeit der Erstbehandlung -->
+							<effectiveTime value="20081118"/>
+							<!-- Erstbehandlung durch ausfüllenden Arzt -->
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+					<entry>
+						<observation classCode="COND" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.AmbulanzL3"/>
+							<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1"/>
+							<!--LOINC 52019-7: Description of services performed to support level of service (System: Ambulance transport) -->
+							<value xsi:type="CD" code="52019-7" codeSystem="2.16.840.1.113883.6.1">
+								<originalText>
+									Kopie des Ambulanzprotokolls
+									<reference value="#a1"/>
+								</originalText>
+							</value>
+							<reference typeCode="SPRT">
+								<seperatableInd value="true"/>
+								<externalDocument>
+									<text mediaType="application/pdf">
+										<reference value="Ambulanzprotokoll.pdf"/>
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+					<entry>
+						<encounter classCode="ENC" moodCode="RQO">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.WeiterbehandlungL3"/>
+							<code code="185389009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Follow-up visit"/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<!-- das wäre, wenn die Weiterbehandlungsstelle bekannt wäre: 
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<name>Musterspital</name>
+										<addr use="WP">
+											<streetName>Hospitalgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<postalCode>8888</postalCode>
+											<city>Musterhausen</city>
+										</addr>
+									</representedOrganization>
+									-->
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchilderungUnfallhergang"/>
+          <title>Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten</title>
+          <text>
+            <content styleCode="Italics">Umsetzungshinweis für CDA Template: Freitext<br /><br /></content>
+						Keine Angaben
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Unfallhergang"/>
+          <title>Unfallhergang</title>
+          <text>
+            <content styleCode="Italics">Umsetzungshinweis für CDA Template: Freitext (aber durch die erfassende Applikation mittels geeigneter Benutzersteuerelementen wie z.B. Checkbox, Radiobuttons,... zu erfassen)<br />Diese Hinweise gelten für alle folgenden Sections, bei denen nichts anderes defniniert ist<br /><br /></content>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Angaben durch</content></td>
+                  <td>Patient</td>
+                  <td><content styleCode="Italics"> | Fremdangabe durch:</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Unfallart</content></td>
+                  <td>Heckkollision</td>
+                  <td><content styleCode="Italics"> | Seitenkollision | Frontalkollision | Andere: Beschreibung</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Position</content></td>
+                  <td>Fahrer</td>
+                  <td><content styleCode="Italics"> | Beifahrer | Rücksitz</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Kopfanprall</content></td>
+                  <td>ja, an Kopfstütze <br /><br />ja, ausserhalb Kopfstütze</td>
+                  <td><content styleCode="Italics"> | nein <br /><br /> Beschreibung Anprallort bei "ausserhalb Kopfstütze"</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Auf Kollision gefasst</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Kopfstellung</content></td>
+                  <td>gerade (gilt auch für Blick in den Rückspiegel)</td>
+                  <td><content styleCode="Italics"> | flektiert | rotiert rechts / links (gilt nicht für Rückspiegel) | nicht bekannt</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Körperhaltung</content></td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics"> | aufrechte Sitzposition | nach vorne gebeugt | nach rechts / links gebeugt</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Kopfstütze vorhanden</content></td>
+                  <td>ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Sicherheitsgurt getragen</content></td>
+                  <td>ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Airbag ausgelöst</content></td>
+                  <td>nicht vorhanden</td>
+                  <td><content styleCode="Italics"> | ja | nein </content></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.BefragungUnfallablauf"/>
+          <title>Befragung zum Unfallablauf ergibt Anhaltspunkte für</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Bewusstlosigkeit</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, Dauer: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Gedächtnislücke</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, für das Ereignis | ja, für nach dem Ereignis | ja, für vor dem Ereignis, Dauer:</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Angst- und / oder Schreckreaktion</content></td>
+                  <td>ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.TätigkeitNachUnfall"/>
+          <title>Tätigkeiten nach dem Unfallereignis</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Konnte PatientIn nach dem Unfallereignis als LenkerIn mit dem Unfallauto weiterfahren?</td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics"> | ja | nein, weil:</content></td>
+                </tr>
+                <tr>
+                  <td>Konnte PatientIn nach dem Unfallereignis als BeifahrerIn mit dem Unfallauto weiterfahren?</td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics"> | ja | nein, weil:</content></td>
+                </tr>
+                <tr>
+                  <td>Konnte PatientIn nach dem Unfallereignis die geplanten Tätigkeiten verrichten?</td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics"> | ja | nein, weil:</content></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Beschwerdeverlauf"/>
+          <title>Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Kopfschmerzen</content></td>
+                  <td>ja, sofort (nach 0.5 Std.)<br />spontan erzählt<br />Schmerzintensität: 2...6</td>
+                  <td><content styleCode="Italics"> | nein | ja, später | erfragt<br /><br />Schmerzausstrahlung: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Nackenschmerzen</content></td>
+                  <td>ja, sofort (nach 0.5 Std.)<br />erfragt<br />Schmerzintensität: 6</td>
+                  <td><content styleCode="Italics"> | nein | ja, später | spontan erzählt<br /><br />Schmerzausstrahlung: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Schwindel</content></td>
+                  <td>ja, sofort (nach 0.5 Std.)<br />spontan erzählt</td>
+                  <td><content styleCode="Italics"> | nein | ja, später | erfragt</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Übelkeit</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, sofort | ja, später | erfragt | spontan erzählt<br /><br />nach Anzahl Std.: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Erbrechen</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, sofort | ja, später | erfragt | spontan erzählt<br /><br />nach Anzahl Std.: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Hörstörungen</content></td>
+                  <td>ja, sofort (nach 0.5 Std.)<br />spontan erzählt</td>
+                  <td><content styleCode="Italics"> | nein | ja, später | erfragt </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Sehstörungen</content></td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics">nein | ja, sofort | ja, später | erfragt | spontan erzählt<br /><br />nach Anzahl Std.: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Schlafstörungen</content></td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics">nein | ja, sofort | ja, später | erfragt | spontan erzählt<br /><br />nach Anzahl Std.: </content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Andere Symptome</content></td>
+                  <td>ja, sofort (nach 0.5 Std.)<br />Knieschmerzen (Dashborderaufprall)<br />spontan erzählt</td>
+                  <td><content styleCode="Italics">nein | ja, sofort | ja, später | erfragt <br /><br />nach Anzahl Std.: </content></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.FrühereAnamnese"/>
+          <title>Frühere Anamnese</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Früherer Unfall</content></td>
+                  <td>ja, vor 10 Jahren (Thoraxkontusion)</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">mit HWS-Beteiligung</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, wann:</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">mit Kopf-Beteiligung</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, wann:</content></td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Behandlungsbedürftige Beschwerden vor dem Unfall / Medikamente vor dem Unfall</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Kopf </content>(inkl. Migräne)</td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Nacken</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Rücken</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Augen</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Gehör</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Psyche </content>(z.B. Psychotherapie)</td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Andere</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, nämlich:</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Aktuelle Medikamente</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, nämlich:</content></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Untersuchungsbefunde"/>
+          <title>Untersuchungsbefunde</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Grösse</content></td>
+                  <td>175 cm</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Gewicht</content></td>
+                  <td>89 kg</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Schmerzen/Beweglichkeit der HWS (aktive, durch den Patienten ausgeführte Bewegungen)</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <th><content styleCode="Bold">Schmerz</content></th>
+                  <th></th>
+                  <th><content styleCode="Bold">Beweglichkeit</content></th>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Flexion </content>Kinn-Sternum-Abstand</td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja</content></td>
+                  <td>3 cm</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Extension </content>Kinn-Sternum-Abstand</td>
+                  <td>Ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                  <td>12 cm</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Rechtsdrehung</content></td>
+                  <td>Ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                  <td>45 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Linksdrehung</content></td>
+                  <td>Ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                  <td>55 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Seitneigung rechts</content></td>
+                  <td>Ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                  <td>15 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Seitneigung links</content></td>
+                  <td>Ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                  <td>15 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Druckschmerz</content></td>
+                  <td>Ja, siehe Lokalisationsgrafik</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Ruheschmerzen</content></td>
+                  <td>ja</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Stauchungsschmerz</content></td>
+                  <td>ja, ohne Ausstrahlung</td>
+                  <td><content styleCode="Italics"> | nein | ja, mit Ausstrahlung<br /><br />Wohin:</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Schmerz / Funktionseinschränkung an anderer Lokalisation</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics"> | ja, nämlich:</content></td>
+                </tr>
+               </tbody>
+            </table>
+            <br />
+            <content styleCode="Italics">Umsetzungshinweis für Applikation: Die Lokalisationsgrafik soll von der Applikation erstellt werden (Benutzer kann genau die, im nachfolgenden Beispiel angegebenen Kreuze setzen; Koordinaten fix).<br/><br/></content>
+            Lokalisationsgrafik:<br />
+            <renderMultiMedia referencedObject="image1"/><br/>
+            <br />
+            <br />
+            <content styleCode="Bold">Neurologische Untersuchung</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Sehnenreflexe</content></td>
+                  <td>normal</td>
+                  <td><content styleCode="Italics">pathologisch: Welche?</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Muskelkraft</content></td>
+                  <td>normal</td>
+                  <td><content styleCode="Italics">Paresen: Welche?</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Parästhesien</content></td>
+                  <td>normal</td>
+                  <td><content styleCode="Italics">ja: Welche?</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Sensible Defizite</content></td>
+                  <td>normal</td>
+                  <td><content styleCode="Italics">ja: Welche?</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Romberg-Versuch</content></td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics"> | sicher | schwanken | Ausfallschritt nach rechts | Ausfallschritt nach links</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Unterberger Tretversuch </content>Definition pathologisch = Abweichung > 45° nach 50 Schritten</td>
+                  <td>keine Angaben</td>
+                  <td><content styleCode="Italics"> | sicher | pathologisch nach rechts | pathologisch nach links</content></td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Andere pathologische neurologische Befunde </content>(z.B. Hirnnerven): Keine
+            <br />
+            <br />
+            <content styleCode="Bold">Aktuelle Bewusstseinslage</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">GCS-Score</content></td>
+                  <td>15</td>
+                  <td><content styleCode="Italics"> | kleiner 15, nämlich:</content></td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Sonstiges</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Sonstige Feststellungen oder Auffälligkeiten (auch Psyche)</content></td>
+                  <td>ja, nämlich: Druckdolenz beide Kniegel. ventral</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Äussere Verletzungen</content></td>
+                  <td>nein</td>
+                  <td><content styleCode="Italics">ja, nämlich:</content></td>
+                </tr>
+              </tbody>
+            </table>          
+            <br />
+            <content styleCode="Bold">Röntgen</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">HWS ap / seitlich</content></td>
+                  <td>ja, Befund: minimal Skoliose, Spondylose, UV-Artrose diss.</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Densaufnahme transbuccal</content></td>
+                  <td>ja, Befund: normal</td>
+                  <td><content styleCode="Italics"> | nein</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Andere bildgebende Untersuchungen</content></td>
+                  <td>Keine Angaben</td>
+                  <td><content styleCode="Italics"> | nein | ja, Welche?/Befund:</content></td>
+                </tr>
+              </tbody>
+            </table>          
+          </text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.32'/>
+							<templateId root='2.16.840.1.113883.10.20.1.35'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.1'/>
+							<code code='46680005' displayName='Vital signs' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT'/>
+							<statusCode code='completed'/>
+							<!-- one or more vital signs observations -->
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2'/>
+									<code code='3137-7' codeSystem='2.16.840.1.113883.6.1' />
+									<text>
+										175cm
+										<reference value='#o1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime value="20081118"/>
+									<value xsi:type='PQ' value='175' unit='cm'/>
+								</observation>
+							</component>
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2'/>
+									<code code='3141-9' codeSystem='2.16.840.1.113883.6.1' />
+									<text>
+										89kg
+										<reference value='#o2'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime value="20081118"/>
+									<value xsi:type='PQ' value='89' unit='kg'/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="image1">
+							<value xsi:type='ED' mediaType="image/jpeg">
+								<reference value="Druckschmerz.jpg"/>
+							</value>
+						</observationMedia>
+					</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.VorläufigeDiagnose"/>
+          <title>Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Grad</th>
+                  <th>Klinische Präsentation</th>
+                  <th>Status*</th>
+                  <th>Diagnose*</th>
+                </tr>
+                <tr>
+                  <td>0<content styleCode="Italics"> | I | II | III | IV </content></td>
+                  <td>Keine Nackenbeschwerden, keine somatischen Befunde
+	                  <content styleCode="Italics">
+		                   | <br />Nackenbeschwerden mit Schmerz, Steifigkeitsgefühl oder nur Schmerzhaftigkeit, keine somatischen Befunde, normale Beweglichkeit
+		                   | <br />Nackenbeschwerden und muskuloskelettale Befunde (verminderte Beweglichkeit und punktuelle Druckschmerzhaftigkeit mit eingeschlossen)
+		                   | <br />Nackenbeschwerden und neurologische Befunde (abgeschwächte oder fehlende Muskeleigenreflexe, Muskelschwäche und sensible Ausfälle mit eingeschlossen)
+		                   | <br />Nackenbeschwerden und Fraktur oder Dislokation
+	                  </content>
+                  </td>
+                  <td>Verdacht auf</td>
+                  <td>keine Angaben<content styleCode="Italics"> | ja | nein</content></td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            Differentialdiagnose(n)*: Keine Angaben<br />
+						zusätzliche Diagnose(n): Keine Angaben<br />
+						weitere Abklärung(en): Keine Angaben<br />
+						<br />
+            * entspricht den Forderungen/Ausführungen im Sinne des Bundesgerichtsentscheides BGE 134 V 109
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Therapie"/>
+          <title>Therapie / angeordnete Massnahmen</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Therapie / Massnahmen</content></td>
+                  <td>Analgetika (Paracetamol u.ä.)<br />NSAR topisch</td>
+                  <td><content styleCode="Italics"> | Keine Therapie | NSAR systemisch | Opioide | Physiotherapie aktiv | andere Massnahmen, nämlich:</content></td>
+                </tr>
+              </tbody>
+            </table>          
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Arbeitsfähigkeit"/>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitList"/>
+					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Arbeitsfähigkeit</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">aktuelle berufliche Tätigkeit</content></td>
+                  <td>Bauarbeiter</td>
+                  <td>mit körperlicher Belastung</td>
+                  <td><content styleCode="Italics"> | mit teilweise körperlicher Belastung | ohne körperliche Belastung (Büroarbeit)</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">aktuelles Arbeitspensum in %</content></td>
+                  <td>keine Angaben</td>
+                </tr>
+              </tbody>
+            </table>          
+						<br />
+            <content styleCode="Bold">Psychosoziale/soziokulturelle Verhältnisse: Persönliche Verhältnisse betreffend</content><br />
+            <table>
+              <tbody>
+                <tr>
+                  <td>a) Beruf/Arbeitsstelle</td>
+                  <td>Keine Angaben</td>
+                </tr>
+                <tr>
+                  <td>b) Familie</td>
+                  <td>Keine Angaben</td>
+                </tr>
+                <tr>
+                  <td>c) Freizeit</td>
+                  <td>Keine Angaben</td>
+                </tr>
+                <tr>
+                  <td>d) Integration (Sprachkenntnisse)</td>
+                  <td>Keine Angaben</td>
+                  <td><content styleCode="Italics">ev. auf <linkHtml href="Zusatzblatt.pdf">Zusatzblatt</linkHtml></content></td>
+                </tr>
+              </tbody>
+            </table>          
+            <br />
+            <content styleCode="Italics">Umsetzungshinweis für CDA Template: Section zwingend - soll auf neuem, wiederverwendbarem Arbeitsfähigkeit-Section Template basieren, Liste (1..* Einträge). Voll strukturiert (könnte recht komplizierte HL7 statements geben)<br /><br /></content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Konsultation</th>
+									<th>Anwesenheitsdauer</th>
+									<th>Pensum</th>
+									<th>Nächste Beurteilung</th>
+									<th>Beurteilt durch</th>
+								</tr>
+								<tr>
+									<td>Datum</td>
+									<td>Zumutbare Stunden pro Tag im Betrieb</td>
+									<td>% der üblichen Arbeitszeit</td>
+									<td>geplant am</td>
+									<td/>
+							</tr>
+								<tr>
+									<td>19.11.2009</td>
+									<td>0 h/Tag</td>
+									<td>0 %</td>
+									<td>keine Angabe</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+								</tr>
+							</tbody>
+						</table>
+          </text>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
+						<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+						<text>Voll Arbeitsunfähig ab 19.11.2009</text>
+						<statusCode code="completed"/>
+						<effectiveTime>
+							<low value="20091119"/>
+							<high nullFlavor='NA'/>
+						</effectiveTime>
+						<value xsi:type='CE' code="0" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+						<interpretationCode code="0" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+						<performer>
+							<assignedEntity>
+								<id nullFlavor="UNK" />
+								<assignedPerson>
+									<name>
+										<prefix>Dr. med.</prefix>
+										<given>Allzeit</given>
+										<family>Bereit</family>
+										<suffix>Facharzt für Allgemeine Medizin</suffix>
+									</name>
+								</assignedPerson>
+							</assignedEntity>
+						</performer>
+					</observation>
+				</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+          <title>Bemerkungen</title>
+          <text>
+            <content styleCode="Italics">Umsetzungshinweis für CDA Template: Freitext<br /><br /></content>
+						Keine
+          </text>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

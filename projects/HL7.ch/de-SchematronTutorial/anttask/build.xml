@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Nov 25, 2009 9:18:07 PM                                                        
+     project    	tutorial for schematron validation
+     oliveregger                                                                
+     ====================================================================== -->
+<project name="schematron" default="validate" basedir="..">
+
+	<target name="init">
+		<tstamp />
+		<!-- put 1 or 2 -->
+		<property name="xsltversion" value="2" />
+		<!-- schematron path put also saxon9he.jar in there -->
+		<property name="schematronpath" value="../../../iso-schematron-xslt${xsltversion}" />
+
+		<property name="xml" value="" />
+		<property name="sch" value="" />
+		<property name="lang" value="" />
+
+	</target>
+
+	<target name="generateValidator" description="generates xsl File used for validation" depends="init">
+
+		<delete file="project_schematrons/${sch}.xsl" /> 
+
+		<!-- expand inclusions -->
+		<xslt style="${schematronpath}/iso_dsdl_include.xsl" in="project_schematrons/${sch}.sch" out="project_schematrons/${sch}1.sch">
+			<classpath>
+				<pathelement location="${schematronpath}/saxon9he.jar" />
+			</classpath>
+		</xslt>
+
+		<!-- expand abstract patterns -->
+		<xslt style="${schematronpath}/iso_abstract_expand.xsl" in="project_schematrons/${sch}1.sch" out="project_schematrons/${sch}2.sch">
+			<classpath>
+				<pathelement location="${schematronpath}/saxon9he.jar" />
+			</classpath>
+		</xslt>
+
+		<delete file="project_schematrons/${sch}1.sch" />
+
+		<!-- compile it -->
+		<xslt style="${schematronpath}/iso_svrl_for_xslt${xsltversion}.xsl" in="project_schematrons/${sch}2.sch" out="project_schematrons/${sch}.xsl">
+			<param name="allow-foreign" expression="true" />
+			<classpath>
+				<pathelement location="${schematronpath}/saxon9he.jar" />
+			</classpath>
+		</xslt>
+
+		<delete file="project_schematrons/${sch}2.sch" />
+
+	</target>
+	
+	<target name="validate" depends="init">
+		
+		<delete file="validations/${xml}.svrlt" failonerror="false"/> 
+
+		<!-- validate -->
+		<xslt style="project_schematrons/${sch}.xsl" in="${xml}.xml" out="validations/${xml}.svrlt">
+			<classpath>
+				<pathelement location="${schematronpath}/saxon9he.jar" />
+			</classpath>
+		</xslt>
+	</target>
+	
+	<target name="document" description="document schema files with rule" depends="init">
+		<delete file="project_schematrons/${sch}_doc_${lang}.html" failonerror="false"/> 
+		<!-- expand inclusions -->
+		<xslt style="../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.xsl" in="project_schematrons/${sch}.sch" out="project_schematrons/${sch}_doc_${lang}.html">
+			<param name="language" expression="${lang}" />
+			<classpath>
+				<pathelement location="${schematronpath}/saxon9he.jar" />
+			</classpath>
+		</xslt>
+	</target>
+
+</project>
