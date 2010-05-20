@@ -17,7 +17,7 @@ Created by oliver egger, visionary ag
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:sch="http://purl.oclc.org/dsdl/schematron">
 
-<xsl:output method="xml" version="1.0" encoding="UTF-8" doctype-public="-//W3C//DTD XHTML 1.1//EN" doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" indent="yes"/> 
+<xsl:output method="xml" omit-xml-declaration="yes" version="1.0" encoding="UTF-8" indent="yes"/> 
 
 	<xsl:param name="language">de_ch</xsl:param>
 
@@ -30,7 +30,7 @@ Created by oliver egger, visionary ag
 		    <title><xsl:value-of select="xhtml:h1[@lang=$language or count(@lang)=0]"/></title>
 		    </xsl:if>
 		    <meta http-equiv = "content-type" content = "application/xhtml+xml; charset=UTF-8" />
-		    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"></link>
+ 		    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"></link>  
 		</head>
 	    <body>
 			<xsl:apply-templates />
