@@ -7,6 +7,7 @@ xPHR Extract Notfallaufnahme Kant. Spital
 History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 
 ********************************************************
 -->
@@ -405,7 +406,7 @@ History:
 								<low value='20090413'/>
 								<high value='20090831'/>
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 1-0-0 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
@@ -453,7 +454,7 @@ History:
 								<low value='20040101'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 1-0-0 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>

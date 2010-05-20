@@ -7,6 +7,7 @@ Ambulanter Spitalaustrittsbericht gemäss CDA-CH plus Medikationstemplate CDA-CH
 History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 
 ********************************************************
 -->
@@ -199,7 +200,7 @@ History:
 								</tr>
 								<tr>
 									<td>
-										<content ID='d4'>
+										<content ID='d3'>
 											Anamnestisch bekannte Penicillin-Allergie (Generalisiertes Arzneimittel-Exanthem nach Penicillinbehandlung 1986)
 										</content>
 									</td>
@@ -250,17 +251,17 @@ History:
 							</text>
 							<effectiveTime value="20100201"/>
 						</observation>
-						<entry>
-							<observation classCode="OBS" moodCode="EVN">
-								<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
-								<code nullFlavor='UNK'/>
-								<text>
-									St.n. Implantation einer Hüftgelenks-Endoprothese links Juli 2009 bei primärer Coxarthorse links
-									<reference value='#d4'/>
-								</text>
-								<effectiveTime value="20100201"/>
-							</observation>
-						</entry>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+							<code nullFlavor='UNK'/>
+							<text>
+								St.n. Implantation einer Hüftgelenks-Endoprothese links Juli 2009 bei primärer Coxarthorse links
+								<reference value='#d4'/>
+							</text>
+							<effectiveTime value="20100201"/>
+						</observation>
 					</entry>
 				</section>
 			</component>
@@ -401,16 +402,16 @@ History:
 								<low nullFlavor='UNK' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 2-2-2 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<phase value='190001011200'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<phase value='190001011600'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -459,20 +460,20 @@ History:
 								<low value='20100201'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 1-1-1-1 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<phase value='190001011200'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<phase value='190001011600'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<phase value='190001012000'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -521,7 +522,7 @@ History:
 								<low nullFlavor='UNK' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
-							<effectiveTime xsi:type='PIVL_TS' institutionSpecified='true' operator='A'>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 1-0-0 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>

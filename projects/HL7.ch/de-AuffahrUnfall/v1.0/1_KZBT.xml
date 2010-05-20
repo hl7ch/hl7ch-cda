@@ -8,6 +8,7 @@ http://www.svv.ch/article7221/medizin/formulare/-erstdokubogen-kzbt-.htm
 History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 
 ********************************************************
 -->
@@ -458,11 +459,11 @@ History:
               <tbody>
                 <tr>
                   <td><content styleCode="Bold">Grösse</content></td>
-                  <td>178 cm</td>
+                  <td><content ID='o1'>178 cm</content></td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Gewicht</content></td>
-                  <td>72 kg</td>
+                  <td><content ID='o2'>72 kg</content></td>
                 </tr>
               </tbody>
             </table>
