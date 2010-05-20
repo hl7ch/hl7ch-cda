@@ -6,6 +6,7 @@ CDA-CH V1.2 Sample
 History:
 27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
 22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit aktuellem Eclipse CDA Instance Validator korrekt validiert)
 
 ********************************************************
 -->
@@ -301,7 +302,7 @@ History:
 						<list>
 							<item>
 								<content ID="a1">
-									<linkHtml href="4-Relazione del consulto.xml">Copia della relazione del consulto del Dott. Specialista del 15/10/2007</linkHtml>
+									<linkHtml href="4-Relazione%20del%20consulto.xml">Copia della relazione del consulto del Dott. Specialista del 15/10/2007</linkHtml>
 									<br/>
 								</content>
 							</item>
@@ -320,8 +321,8 @@ History:
 								<seperatableInd value="true"/>
 								<externalDocument>
 									<id extension="6072748C-C635-4E5F-910E-35F55B323CD4" root="2.16.756.5.30.1.1.1.1"/>
-									<text mediaType="multipart/related">
-										<reference value="4-Relazione del consulto.xml"/>
+									<text mediaType="multipart/x-hl7-cda-level-one">
+										<reference value="4-Relazione%20del%20consulto.xml"/>
 									</text>
 									<setId extension="6072748C-C635-4E5F-910E-35F55B323CD4" root="2.16.756.5.30.1.1.1.1"/>
 									<versionNumber value="1"/>

@@ -109,7 +109,7 @@ History:
 	</custodian>
 	<informationRecipient typeCode="PRCP">
 		<intendedRecipient>
-			<id extension="A05" root="0"/>  <!-- TODO OID SUVA/Agenturen -->
+			<id extension="A05" root="2.16.756.5.30.1.100.1.1"/>
 			<informationRecipient>
 				<name>Suva Agentur Aarau</name>
 			</informationRecipient>

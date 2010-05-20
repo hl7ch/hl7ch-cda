@@ -8,6 +8,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 
 ********************************************************
 -->
@@ -533,11 +534,11 @@ History:
               <tbody>
                 <tr>
                   <td><content styleCode="Bold">Grösse</content></td>
-                  <td>175 cm</td>
+                  <td><content ID='o1'>175 cm</content></td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Gewicht</content></td>
-                  <td>89 kg</td>
+                  <td><content ID='o2'>89 kg</content></td>
                 </tr>
               </tbody>
             </table>
