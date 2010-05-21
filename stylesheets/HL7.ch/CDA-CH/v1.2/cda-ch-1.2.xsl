@@ -54,7 +54,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				<xsl:element name="link">
 					<xsl:attribute name="rel">stylesheet</xsl:attribute>
 					<xsl:attribute name="type">text/css</xsl:attribute>
-					<xsl:attribute name="href">../../../../stylesheets/HL7.ch/CDA-CH/v1.2/CDA-CH-1.2.css</xsl:attribute>
+					<xsl:attribute name="href">../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.css</xsl:attribute>
 				</xsl:element>
 				<xsl:apply-templates select="/processing-instruction('xml-stylesheet')"/>
 			</head>
