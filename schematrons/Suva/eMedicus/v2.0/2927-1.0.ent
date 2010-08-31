@@ -9,6 +9,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 25.03.2010: Stefan Schenk, medshare GmbH (Anpassungen Dokumentation XHTML)
 11.05.2010: Tony Schaller, medshare GmbH (Definitive Formularnummer Suva eingetragen)
+31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
 
 ********************************************************
 -->
@@ -69,7 +70,7 @@ History:
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
 		-->
-		<assert id="suva-form-2927-1.0-0005" test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.SchadenInfo"'>
+		<assert id="suva-form-2927-1.0-0005" test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfo"'>
 			<xhtml:p lang="de_ch">Das Suva Arztzeugnis UVG muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
@@ -125,7 +126,7 @@ History:
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0013" role='information' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.BehAbschluss"'>
+		<assert id="suva-form-2927-1.0-0013" role='information' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.BehAbschluss"'>
 			<xhtml:p lang="de_ch">Das Suva Arztzeugnis UVG enthält keine Section 'Behandlungsabschluss'</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
@@ -147,7 +148,7 @@ History:
 	Arztzeugnis UVG: Schadeninformationen
 	********************************************************
 	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.SchadenInfo"]'>
+	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.SchadenInfo"]'>
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">Arztzeugnis UVG: Schadeninformationen</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Schadeninformationen des Arztzeugnis UVG</xhtml:p>
@@ -158,8 +159,8 @@ History:
 		<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 		-->
 
-		<assert id="suva-form-2927-1.0-0101" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.ErstbehandlungL3"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0101" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.ErstbehandlungL3"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -204,21 +205,21 @@ History:
 		-->
 
 		<assert id="suva-form-2927-1.0-0301" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Angaben des Patienten' müssen als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Angaben des Patienten' müssen als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0302" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Angaben des Patienten' müssen einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Angaben des Patienten' müssen einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0303" test="cda:title='Angaben des Patienten'">
-			<xhtml:p lang="de_ch">eMedicus 'Angaben des Patienten' müssen einen section title 'Angaben des Patienten' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Angaben des Patienten' müssen einen section title 'Angaben des Patienten' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -244,35 +245,35 @@ History:
 		-->
 
 		<assert id="suva-form-2927-1.0-0401" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Allgemeinzustand' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Allgemeinzustand' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0402" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Allgemeinzustand' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Allgemeinzustand' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0403" test="cda:title='Allgemeinzustand'">
-			<xhtml:p lang="de_ch">eMedicus 'Allgemeinzustand' muss einen section title 'Allgemeinzustand' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Allgemeinzustand' muss einen section title 'Allgemeinzustand' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0404" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.BesoWahrn"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Allgemeinzustand' muss eine observation 'Besondere Wahrnehmungen' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0404" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.BesoWahrn"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Allgemeinzustand' muss eine observation 'Besondere Wahrnehmungen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0405" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.FolgenVon"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Allgemeinzustand' muss eine observation 'Folgen von' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0405" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.FolgenVon"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Allgemeinzustand' muss eine observation 'Folgen von' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -297,28 +298,28 @@ History:
 		-->
 
 		<assert id="suva-form-2927-1.0-0501" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Befund' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Befund' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0502" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Befund' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Befund' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0503" test="cda:title='Befund'">
-			<xhtml:p lang="de_ch">eMedicus 'Befund' muss einen section title 'Befund' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Befund' muss einen section title 'Befund' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0504" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.Lokalbefund"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Befund' muss eine observation 'Lokalbefund' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0504" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.Lokalbefund"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Befund' muss eine observation 'Lokalbefund' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -343,28 +344,28 @@ History:
 		-->
 
 		<assert id="suva-form-2927-1.0-0601" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Kausalität' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Kausalität' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0602" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Kausalität' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Kausalität' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0603" test="cda:title='Kausalität'">
-			<xhtml:p lang="de_ch">eMedicus 'Kausalität' muss einen section title 'Kausalität' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Kausalität' muss einen section title 'Kausalität' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0604" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.Unfallfolgen"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Kausalität' muss eine observation 'Unfallfolgen' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0604" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.Unfallfolgen"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Kausalität' muss eine observation 'Unfallfolgen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -389,42 +390,42 @@ History:
 		-->
 
 		<assert id="suva-form-2927-1.0-0701" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0702" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2927-1.0-0703" test="cda:title='Therapie'">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0704" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.TherapieMassnahme"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss min. 1 procedure 'TherapieMassnahme' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0704" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.TherapieMassnahme"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss min. 1 procedure 'TherapieMassnahme' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0706" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.BesoUmstände"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss eine observation 'Besondere Umstände' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0706" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.BesoUmstände"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine observation 'Besondere Umstände' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2927-1.0-0707" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.PatHospitalisiert"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss eine observation 'Patient hospitalisiert' enthalten</xhtml:p>
+		<assert id="suva-form-2927-1.0-0707" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.PatHospitalisiert"]'>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine observation 'Patient hospitalisiert' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>

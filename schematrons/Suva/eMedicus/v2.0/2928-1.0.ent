@@ -10,6 +10,7 @@ History:
 15.03.2010: Tony Schaller, medshare GmbH (Einbau Dokumentation)
 11.05.2010: Tony Schaller, medshare GmbH (Definitive Formularnummer Suva eingetragen)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
 
 ********************************************************
 -->
@@ -73,7 +74,7 @@ History:
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
 		-->
-		<assert id="suva-form-2928-1.0-0005" test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.SchadenInfo"'>
+		<assert id="suva-form-2928-1.0-0005" test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfo"'>
 			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
@@ -108,7 +109,7 @@ History:
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id="suva-form-2928-1.0-0010" role='information' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.BehAbschluss"'>
+		<assert id="suva-form-2928-1.0-0010" role='information' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.BehAbschluss"'>
 			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss'</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
@@ -150,35 +151,35 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0101" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0102" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0103" test="cda:title='Verlauf'">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss einen section title 'Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss einen section title 'Verlauf' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0103" test='cda:code/@code="47519-4" and cda:code/@codeSystem="2.16.840.1.113883.6.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0104" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="Suva.2928.BishVerlauf"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss eine min. 1 organizer 'Bisheriger Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss eine min. 1 organizer 'Bisheriger Verlauf' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -198,42 +199,42 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0201" test="self::cda:organizer">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss als 'organizer' im CDA Body (section 'Verlauf') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss als 'organizer' im CDA Body (section 'Verlauf') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0202" test='cda:code/@code="47519-4" and cda:code/@codeSystem="2.16.840.1.113883.6.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0203" test='cda:effectiveTime'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss ein Beurteilungsdatum enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss ein Beurteilungsdatum enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0204" test='cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3).</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3).</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0205" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="Suva.2928.BishVerlaufProc"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss eine min. 1 procedure 'Bisheriger Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss eine min. 1 procedure 'Bisheriger Verlauf' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0206" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="Suva.2928.BishVerlaufExtFaktoren"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf' muss eine min. 1 observation 'Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss eine min. 1 observation 'Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -253,14 +254,14 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0301" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf, Bisheriger Verlauf' muss als 'procedure' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Bisheriger Verlauf' muss als 'procedure' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0302" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf, Bisheriger Verlauf' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Bisheriger Verlauf' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -280,14 +281,14 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0401" test="self::cda:observation">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss als 'observation' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss als 'observation' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0402" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -307,42 +308,42 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0501" test="self::cda:section">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0502" test="cda:text">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss einen narrativen Text enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0503" test="cda:title='Therapie'">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0504" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="Suva.2928.AktBehandlung"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss eine procedure 'Gegenwärtige Behandlung' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine procedure 'Gegenwärtige Behandlung' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0505" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="Suva.2928.Vorschläge"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss eine procedure 'Vorschläge' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine procedure 'Vorschläge' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0506" test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="Suva.2928.Beratungsintervall"]'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie' muss eine procedure 'Beratungsintervall' enthalten</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine procedure 'Beratungsintervall' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -362,28 +363,28 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0601" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Gegenwärtige Behandlung' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0602" test='cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0603" test='cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0004" test='(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Gegenwärtige Behandlung' muss einen narrativen Text enthalten, wenn der code="Y" ist.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss einen narrativen Text enthalten, wenn der code="Y" ist.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -403,28 +404,28 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0701" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Vorschläge' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0702" test='cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0703" test='cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0704" test='(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Vorschläge' muss einen narrativen Text enthalten, wenn der code="Y" ist.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss einen narrativen Text enthalten, wenn der code="Y" ist.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -444,28 +445,28 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0801" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Beratungsintervall' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0802" test='cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0803" test='cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0804" test='(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")'>
-			<xhtml:p lang="de_ch">eMedicus 'Therapie, Beratungsintervall' muss einen narrativen Text enthalten, wenn der code="Y" ist.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss einen narrativen Text enthalten, wenn der code="Y" ist.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -485,21 +486,21 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-0901" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">eMedicus 'Behandlungsabschluss, Zuweisung Arbeit' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0902" test='cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-0903" test='cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value'>
-			<xhtml:p lang="de_ch">eMedicus 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
@@ -519,21 +520,21 @@ History:
 		-->
 
 		<assert id="suva-form-2928-1.0-1001" test="self::cda:observation">
-			<xhtml:p lang="de_ch">eMedicus 'Behandlungsabschluss, bleibende Nachteile' muss als 'observation' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss als 'observation' im CDA Body (section 'Therapie') deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-1002" test='cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"'>
-			<xhtml:p lang="de_ch">eMedicus 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id="suva-form-2928-1.0-1003" test='cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value'>
-			<xhtml:p lang="de_ch">eMedicus 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</xhtml:p>
 			<!--
 			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
