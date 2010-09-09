@@ -12,7 +12,7 @@ History:
 ********************************************************
 -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.xsl'?>
-<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedicus/v2.0/suva.css'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
 <ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
 	<templateId extension="2928" root="2.16.756.5.30.1.100.2.1"/>
@@ -161,7 +161,7 @@ History:
 		<structuredBody>
 			<component>
 				<section>
-					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.SchadenInfo"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfo"/>
 					<title>Schadeninformationen</title>
 					<text>
 						<table>
@@ -174,9 +174,9 @@ History:
 						</table>
 					</text>
 					<entry>
-						<!-- eMedicus Observation Template: Schadeninformationen -->
+						<!-- eMedidoc Observation Template: Schadeninformationen -->
 						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.SchadenInfoL3"/>
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoL3"/>
 							<!-- Schadennummer -->
 							<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
 							<!-- Anmeldeart -->
@@ -632,7 +632,7 @@ History:
 			</component>
 			<component>
 				<section>
-					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.BehAbschluss"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschluss"/>
 					<title>Behandlungsabschluss</title>
 					<text>
 						<table>
@@ -660,9 +660,9 @@ History:
 						</table>
 					</text>
 					<entry>
-						<!-- eMedicus Encounter Template: Behandlungsabschluss (moodCode="EVN": definitiv, moodCode="INT": geplant) -->
+						<!-- eMedidoc Encounter Template: Behandlungsabschluss (moodCode="EVN": definitiv, moodCode="INT": geplant) -->
 						<encounter classCode="ENC" moodCode="EVN">
-							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedicus.BehAbschlussL3"/>
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschlussL3"/>
 							<code code="8649-6" codeSystem="2.16.840.1.113883.6.1" />
 							<effectiveTime>
 								<low nullFlavor='NA'/>
