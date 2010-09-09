@@ -4,13 +4,13 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xml:lang="de_ch">
    <head>
-      <title>Suva eMedicus Ärztlicher Zwischenbericht</title>
+      <title>Suva eMedidoc Ärztlicher Zwischenbericht</title>
       <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
       <link rel="stylesheet" type="text/css"
             href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"/>
    </head>
    <body>
-      <h1 class="title">Suva eMedicus Ärztlicher Zwischenbericht</h1>
+      <h1 class="title">Suva eMedidoc Ärztlicher Zwischenbericht</h1>
       <h2 class="reference">Referenzierte Entities</h2>
       <ul id="reference">
 		
@@ -19,7 +19,7 @@
 		
 		
 	        <li>2928-1.0.ent</li>
-         <li>emedicus-1.0.ent</li>
+         <li>eMedidoc-1.0.ent</li>
          <li>cda-ch-1.2_medication-section.ent</li>
          <li>cda-ch-1.2.ent</li>
          <li>vhitg-ruleset-150.ent</li>
@@ -152,7 +152,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.SchadenInfo"</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfo"</td>
                </tr>
             </tbody>
             <tr>
@@ -267,7 +267,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedicus.BehAbschluss"</td>
+                  <td colspan="3">//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.BehAbschluss"</td>
                </tr>
             </tbody>
             <tr>
@@ -366,7 +366,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss als 'section' im CDA Body deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss als 'section' im CDA Body deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -389,7 +389,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss einen narrativen Text enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss einen narrativen Text enthalten</td>
             </tr>
          </table>
          <br/>
@@ -412,7 +412,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss einen section title 'Verlauf' enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss einen section title 'Verlauf' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -435,7 +435,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</td>
             </tr>
          </table>
          <br/>
@@ -458,7 +458,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss eine min. 1 organizer 'Bisheriger Verlauf' enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss eine min. 1 organizer 'Bisheriger Verlauf' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -483,7 +483,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss als 'organizer' im CDA Body (section 'Verlauf') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss als 'organizer' im CDA Body (section 'Verlauf') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -506,7 +506,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</td>
             </tr>
          </table>
          <br/>
@@ -529,7 +529,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss ein Beurteilungsdatum enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss ein Beurteilungsdatum enthalten</td>
             </tr>
          </table>
          <br/>
@@ -552,7 +552,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3).</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3).</td>
             </tr>
          </table>
          <br/>
@@ -575,7 +575,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss eine min. 1 procedure 'Bisheriger Verlauf' enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss eine min. 1 procedure 'Bisheriger Verlauf' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -598,7 +598,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf' muss eine min. 1 observation 'Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf' muss eine min. 1 observation 'Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -623,7 +623,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf, Bisheriger Verlauf' muss als 'procedure' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Verlauf, Bisheriger Verlauf' muss als 'procedure' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -646,7 +646,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf, Bisheriger Verlauf' muss einen narrativen Text enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf, Bisheriger Verlauf' muss einen narrativen Text enthalten</td>
             </tr>
          </table>
          <br/>
@@ -671,7 +671,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss als 'observation' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss als 'observation' im CDA Body (im organizer der section 'Verlauf') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -694,7 +694,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss einen narrativen Text enthalten</td>
+               <td colspan="3">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss einen narrativen Text enthalten</td>
             </tr>
          </table>
          <br/>
@@ -719,7 +719,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie' muss als 'section' im CDA Body deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -742,7 +742,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie' muss einen narrativen Text enthalten</td>
+               <td colspan="3">eMedidoc 'Therapie' muss einen narrativen Text enthalten</td>
             </tr>
          </table>
          <br/>
@@ -765,7 +765,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie' muss einen section title 'Therapie' enthalten</td>
+               <td colspan="3">eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -788,7 +788,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie' muss eine procedure 'Gegenwärtige Behandlung' enthalten</td>
+               <td colspan="3">eMedidoc 'Therapie' muss eine procedure 'Gegenwärtige Behandlung' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -811,7 +811,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie' muss eine procedure 'Vorschläge' enthalten</td>
+               <td colspan="3">eMedidoc 'Therapie' muss eine procedure 'Vorschläge' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -834,7 +834,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie' muss eine procedure 'Beratungsintervall' enthalten</td>
+               <td colspan="3">eMedidoc 'Therapie' muss eine procedure 'Beratungsintervall' enthalten</td>
             </tr>
          </table>
          <br/>
@@ -859,7 +859,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Gegenwärtige Behandlung' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -882,7 +882,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -905,7 +905,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -928,7 +928,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Gegenwärtige Behandlung' muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+               <td colspan="3">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
             </tr>
          </table>
          <br/>
@@ -953,7 +953,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Vorschläge' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Therapie, Vorschläge' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -976,7 +976,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -999,7 +999,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1022,7 +1022,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Vorschläge' muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+               <td colspan="3">eMedidoc 'Therapie, Vorschläge' muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
             </tr>
          </table>
          <br/>
@@ -1047,7 +1047,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Beratungsintervall' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Therapie, Beratungsintervall' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -1070,7 +1070,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1093,7 +1093,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1116,7 +1116,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Therapie, Beratungsintervall' muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
+               <td colspan="3">eMedidoc 'Therapie, Beratungsintervall' muss einen narrativen Text enthalten, wenn der code="Y" ist.</td>
             </tr>
          </table>
          <br/>
@@ -1141,7 +1141,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Behandlungsabschluss, Zuweisung Arbeit' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -1164,7 +1164,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1187,7 +1187,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1212,7 +1212,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Behandlungsabschluss, bleibende Nachteile' muss als 'observation' im CDA Body (section 'Therapie') deklariert werden.</td>
+               <td colspan="3">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss als 'observation' im CDA Body (section 'Therapie') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -1235,7 +1235,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1258,7 +1258,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">eMedicus 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
+               <td colspan="3">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1').</td>
             </tr>
          </table>
          <br/>
@@ -1268,13 +1268,13 @@
             <thead>
                <tr>
                   <th class="label1">Entity</th>
-                  <th>suva_eMedicus</th>
+                  <th>suva_eMedidoc</th>
                </tr>
             </thead>
             <tbody>
                <tr>
                   <td class="label1">Dateiname</td>
-                  <td>emedicus-1.0.ent</td>
+                  <td>eMedidoc-1.0.ent</td>
                </tr>
                <tr>
                   <td class="label1">Version</td>
@@ -1284,14 +1284,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Headerinformationen prüfen</h3>
+      <h3>eMedidoc Headerinformationen prüfen</h3>
       <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den Headerinformationen.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0001</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1314,7 +1314,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0002</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1332,14 +1332,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Schadeninformationen</h3>
+      <h3>eMedidoc Schadeninformationen</h3>
       <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0100</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0100</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1362,7 +1362,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0101</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1385,7 +1385,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0102</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1408,7 +1408,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0103</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1416,7 +1416,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.SchadenInfoL3"]</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.SchadenInfoL3"]</td>
                </tr>
             </tbody>
             <tr>
@@ -1426,14 +1426,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Schadeninformation: SchadenDatum, Anmeldeart (Rückfall als Anmeldeart)</h3>
+      <h3>eMedidoc Schadeninformation: SchadenDatum, Anmeldeart (Rückfall als Anmeldeart)</h3>
       <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0201</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1446,7 +1446,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">Das eMedicus 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
+               <td colspan="3">Das eMedidoc 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -1456,7 +1456,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0202</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1479,7 +1479,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0203</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1502,7 +1502,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0204</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0204</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1525,7 +1525,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0205</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0205</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1533,7 +1533,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("emedicus-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.2"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("eMedidoc-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.2"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1543,14 +1543,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Schadeninformation: Erstbehandlung durch ausfüllenden Arzt</h3>
+      <h3>eMedidoc Schadeninformation: Erstbehandlung durch ausfüllenden Arzt</h3>
       <p>Die nachfolgenden Regeln beschreiben die Prüfungen zu der Schadeninformation Erstbehandlung.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0301</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0301</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1573,7 +1573,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0302</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0302</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1596,7 +1596,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0303</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0303</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1619,7 +1619,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0304</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0304</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1627,7 +1627,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("emedicus-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.3"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("eMedidoc-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.3"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1642,7 +1642,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0305</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0305</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1655,7 +1655,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">Die Angabe zur Inkonvenienz bei der eMedicus Erstbehandlung darf nur einmal vorkommen.</td>
+               <td colspan="3">Die Angabe zur Inkonvenienz bei der eMedidoc Erstbehandlung darf nur einmal vorkommen.</td>
             </tr>
          </table>
          <br/>
@@ -1665,7 +1665,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0306</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0306</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1683,14 +1683,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Allgemeinzustand: Besondere Wahrnehmungen</h3>
+      <h3>eMedidoc Allgemeinzustand: Besondere Wahrnehmungen</h3>
       <p>Die nachfolgenden Regeln beschreiben die besonderen Wahrnehmungen des Allgemeinzustandes.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0401</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0401</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1713,7 +1713,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0402</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0402</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1736,7 +1736,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0403</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0403</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1759,7 +1759,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0404</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0404</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1777,14 +1777,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Allgemeinzustand: Folgen von</h3>
+      <h3>eMedidoc Allgemeinzustand: Folgen von</h3>
       <p>Die nachfolgenden Regeln beschreiben die 'Folgen von' des Allgemeinzustandes.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0501</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0501</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1807,7 +1807,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0502</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0502</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1830,7 +1830,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0503</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0503</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1853,7 +1853,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0504</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0504</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1871,14 +1871,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Befund: Lokalbefund</h3>
+      <h3>eMedidoc Befund: Lokalbefund</h3>
       <p>Die nachfolgenden Regeln beschreiben den Lokalbefund.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0601</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0601</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1901,7 +1901,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0602</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0602</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1919,14 +1919,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Befund: Röntgenbefund</h3>
+      <h3>eMedidoc Befund: Röntgenbefund</h3>
       <p>Die nachfolgenden Regeln beschreiben den Röntgenbefund.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0701</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0701</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1949,7 +1949,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0702</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0702</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1972,7 +1972,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0703</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0703</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1990,14 +1990,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Kausalität: Ausschliesslich Unfallfolgen</h3>
+      <h3>eMedidoc Kausalität: Ausschliesslich Unfallfolgen</h3>
       <p>Die nachfolgenden Regeln beschreiben die Kausalität (Ausschliesslich Unfallfolgen).</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0801</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0801</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2020,7 +2020,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0802</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0802</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2043,7 +2043,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0803</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0803</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2061,14 +2061,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Therapie: Massnahmen</h3>
+      <h3>eMedidoc Therapie: Massnahmen</h3>
       <p>Die nachfolgenden Regeln beschreiben die Therapie (Massnahmen).</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0901</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0901</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2091,7 +2091,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-0902</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-0902</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2109,14 +2109,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Therapie: Besondere Umstände</h3>
+      <h3>eMedidoc Therapie: Besondere Umstände</h3>
       <p>Die nachfolgenden Regeln beschreiben die Therapie (Besondere Umstände).</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1001</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2139,7 +2139,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1002</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2162,7 +2162,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1003</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2185,7 +2185,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1004</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1004</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2203,14 +2203,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Behandlungsabschluss</h3>
+      <h3>eMedidoc Behandlungsabschluss</h3>
       <p>Die nachfolgenden Regeln beschreiben den Behandlungsabschluss.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1101</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2233,7 +2233,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1102</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2256,7 +2256,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1103</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2279,7 +2279,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1104</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1104</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2287,7 +2287,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedicus.BehAbschlussL3"]</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.BehAbschlussL3"]</td>
                </tr>
             </tbody>
             <tr>
@@ -2297,14 +2297,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Behandlungsabschluss L3</h3>
+      <h3>eMedidoc Behandlungsabschluss L3</h3>
       <p>Die nachfolgenden Regeln beschreiben den Behandlungsabschluss L3.</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1201</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2327,7 +2327,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1202</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2350,7 +2350,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1203</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2373,7 +2373,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1204</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1204</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2391,14 +2391,14 @@
          </table>
          <br/>
       </div>
-      <h3>eMedicus Therapie: Patient hospitalisiert</h3>
+      <h3>eMedidoc Therapie: Patient hospitalisiert</h3>
       <p>Die nachfolgenden Regeln beschreiben die Therapie (Patient hospitalisiert).</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1301</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1301</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2421,7 +2421,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1302</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1302</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2444,7 +2444,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1303</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1303</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2467,7 +2467,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">suva-emedicus-voc-1.0-1304</th>
+                  <th class="value1">suva-eMedidoc-voc-1.0-1304</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
