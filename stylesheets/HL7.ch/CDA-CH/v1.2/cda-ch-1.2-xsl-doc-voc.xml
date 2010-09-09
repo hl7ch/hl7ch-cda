@@ -174,35 +174,35 @@ History:
   <!-- Dokumentation Schematron -->
 
   <text language='de_ch' value='Entity' displayName='Entity'/>
-  <text language='fr_ch' value='Entity' displayName='entity tbd fr'/>
+  <text language='fr_ch' value='Entity' displayName='Entity'/>
   <text language='it_ch' value='Entity' displayName='entity tbd it'/>
 
   <text language='de_ch' value='File' displayName='Dateiname'/>
-  <text language='fr_ch' value='File' displayName='fichier tbd fr'/>
+  <text language='fr_ch' value='File' displayName='Fichier'/>
   <text language='it_ch' value='File' displayName='File tbd it'/>
   
   <text language='de_ch' value='Version' displayName='Version'/>
-  <text language='fr_ch' value='Version' displayName='version tbd fr'/>
+  <text language='fr_ch' value='Version' displayName='Version'/>
   <text language='it_ch' value='Version' displayName='version tbd it'/>
 
   <text language='de_ch' value='Rule' displayName='Rule'/>
-  <text language='fr_ch' value='Rule' displayName='rule tbd fr'/>
-  <text language='it_ch' value='Rule' displayName='rule tbd it'/>
+  <text language='fr_ch' value='Rule' displayName='Rule'/>
+  <text language='it_ch' value='Rule' displayName='Rule'/>
 
   <text language='de_ch' value='Assert' displayName='Assert'/>
-  <text language='fr_ch' value='Assert' displayName='assert tbd fr'/>
-  <text language='it_ch' value='Assert' displayName='assert tbd it'/>
+  <text language='fr_ch' value='Assert' displayName='Assert'/>
+  <text language='it_ch' value='Assert' displayName='Assert'/>
 
   <text language='de_ch' value='Role' displayName='Role'/>
-  <text language='fr_ch' value='Role' displayName='role tbd fr'/>
-  <text language='it_ch' value='Role' displayName='role tbd it'/>
+  <text language='fr_ch' value='Role' displayName='Role'/>
+  <text language='it_ch' value='Role' displayName='Role'/>
 
   <text language='de_ch' value='Test' displayName='Test'/>
-  <text language='fr_ch' value='Test' displayName='test tbd fr'/>
-  <text language='it_ch' value='Test' displayName='test tbd it'/>
+  <text language='fr_ch' value='Test' displayName='Test'/>
+  <text language='it_ch' value='Test' displayName='Test'/>
 
   <text language='de_ch' value='Description' displayName='Beschreibung'/>
-  <text language='fr_ch' value='Description' displayName='description tbd fr'/>
+  <text language='fr_ch' value='Description' displayName='Description'/>
   <text language='it_ch' value='Description' displayName='descritpiton tbd it'/>
   
 
