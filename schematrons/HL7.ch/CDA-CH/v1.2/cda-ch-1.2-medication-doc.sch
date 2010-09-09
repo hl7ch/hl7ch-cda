@@ -57,8 +57,8 @@ reusable templates
 	</xhtml:ul>
 
 	<!-- reusable templates -->
-	&ent-hl7-cda-ch-1.2_medication-doc;
 	&ent-hl7-cda-ch-1.2_medication-section;
+	&ent-hl7-cda-ch-1.2_medication-doc;
 	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;
 	&ent-ihe-pcc-1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2;
 	&ent-hl7-cda-ch-1.2;
