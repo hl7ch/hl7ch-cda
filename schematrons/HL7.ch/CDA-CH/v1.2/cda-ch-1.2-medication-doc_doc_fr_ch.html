@@ -1,0 +1,1872 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="fr_ch">
+   <head>
+      <title>CDA-CH Modèle Médicaments</title>
+      <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+      <link rel="stylesheet" type="text/css"
+            href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"/>
+   </head>
+   <body>
+      <h1 class="title">CDA-CH Modèle Médicaments</h1>
+      <h2 class="reference">entités référencées</h2>
+      <ul id="reference">
+		
+		
+		
+		
+		
+		
+	        <li>cda-ch-1.2_medication-doc.ent</li>
+         <li>cda-ch-1.2_medication-section.ent</li>
+         <li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</li>
+         <li>1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</li>
+         <li>cda-ch-1.2.ent</li>
+         <li>vhitg-ruleset-150.ent</li>
+      </ul>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">entity tbd fr</th>
+                  <th>cda-ch-1.2_medication-doc</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">fichier tbd fr</td>
+                  <td>cda-ch-1.2_medication-doc.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">version tbd fr</td>
+                  <td>1.2</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Medication Header Templates</h3>
+      <p>Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Header Templates</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0001</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">count(cda:administrativeGenderCode)&gt;0</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0002</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@codeSystem="2.16.840.1.113883.5.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0003</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="AdministrativeGender"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0004</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">count(cda:birthTime)&gt;0</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0101</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.MediList"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0102</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.VitalSignList"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0103</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::cda:templateId[(@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.DiagList") or (@root="1.3.6.1.4.1.19376.1.5.3.1.3.6")]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0104</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::cda:observation[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.VitalSignL3" and cda:code/@code="3137-7"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0105</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::cda:observation[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.VitalSignL3" and cda:code/@code="3141-9"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0106</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code="M" or cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code="UN" or (cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code="F" and descendant::cda:observation[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.VitalSignL3" and cda:code/@code="11449-6"])</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-doc-0107</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.IntoleranceList"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">entity tbd fr</th>
+                  <th>cda-ch-1.2_medication-section</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">fichier tbd fr</td>
+                  <td>cda-ch-1.2_medication-section.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">version tbd fr</td>
+                  <td>1.2</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <h3>CDA-CH Medication Header Templates</h3>
+      <p>Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Section Templates</p>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0001</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>description tbd fr</td>
+               <td colspan="3">Les données de médication doivent être déclarées  en tant que « section » dans le CDA Body.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0002</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+            <tr>
+               <td>description tbd fr</td>
+               <td colspan="3">Les données de médication doivent contenir un texte narratif.</td>
+            </tr>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0003</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:title</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0101</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.MediL3"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0102</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.5.4"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0103</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.4"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0104</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:id/@root="2.16.756.5.30.2.6.1" or cda:id/@root="1.3.88"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0105</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code[@codeSystem="2.16.756.5.30.2.6.2" or @codeSystem="2.16.840.1.113883.6.73"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0106</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code/@codeSystem!="2.16.756.5.30.2.6.2" or cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code/cda:translation/@codeSystem="2.16.840.1.113883.6.73"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0107</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:priorityCode/@codeSystem="2.16.840.1.113883.5.7"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0108</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:priorityCode/@codeSystem="2.16.840.1.113883.5.7" and (cda:priorityCode/@code="R" or cda:priorityCode/@code="UR" or cda:priorityCode/@code="PRN")</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0109</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:priorityCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.7"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0110</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:routeCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.112"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0111</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:doseQuantity</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0112</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0113</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">count(cda:doseQuantity/cda:center)=0 or cda:doseQuantity/cda:center/@value!="0"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0201</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:substanceAdministration</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0202</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0203</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:templateId/@root="1.3.6.1.4.1.19376.1.5.3.1.4.7"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="head">
+            <thead>
+               <tr>
+                  <th class="label1">entity tbd fr</th>
+                  <th>entity_HL7-cda-ch-1.2</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">fichier tbd fr</td>
+                  <td>cda-ch-1.2.ent</td>
+               </tr>
+               <tr>
+                  <td class="label1">version tbd fr</td>
+                  <td>1.0</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0001</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:participant/@typeCode="IND"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0002</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:templateId/@root="1.3.6.1.4.1.19376.1.5.3.1.2.2"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0101</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0102</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:title='Bemerkungen'</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-0103</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1001</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1002</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1003</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:title='Diagnosen'</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1004</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1005</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="DiagnosisSectionCode"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1006</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and (cda:templateId/@extension="CDA-CH.Body.DiagL1" or cda:templateId/@extension="CDA-CH.Body.DiagL3")]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1101</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1102</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1103</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1201</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1202</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1203</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1204</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1205</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1206</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1301</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1302</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1303</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:title='Vitalzeichen'</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1304</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1305</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code="8716-3"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1306</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and (cda:templateId/@extension="CDA-CH.Body.VitalSignL1" or cda:templateId/@extension="CDA-CH.Body.VitalSignL3")]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1401</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1402</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1403</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1404</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1405</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1406</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1407</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.5.1" and @codeSystemName="VitalSignCodes"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1408</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@codeSystem="2.16.756.5.30.2.1.1.4.1")</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1409</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.4.1"]/code/@value)</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1410</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1501</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1502</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1503</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:title='Allergien und Unverträglichkeiten'</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1601</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1602</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.756.5.30.2.1.1.3.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1603</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1604</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">(cda:code/@code="Y" and cda:text) or (cda:code/@code!="Y")</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1701</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:section</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1702</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1703</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:title='Arbeitsfähigkeit'</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1704</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1705</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@code="X-ATWRK"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1706</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">descendant::*[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.ArbeitsfähigkeitL3"]</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1801</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1802</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1803</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:text</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1804</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code="X-ATWRK"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1805</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime/cda:low</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1806</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">warning</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime/cda:high</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1807</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:value/@codeSystem="2.16.756.5.30.2.1.1.6.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1808</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.6.1"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1809</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:interpretationCode/@codeSystem="2.16.756.5.30.2.1.1.7.1"</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1810</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:interpretationCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.7.1"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1811</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1901</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">self::cda:observation</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1902</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="Immunization"]/code/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+      <div>
+         <table class="body" width="100%">
+            <thead>
+               <tr>
+                  <th class="label1" width="10%">rule tbd fr</th>
+                  <th class="value1">entity_HL7-cda-ch-1.2-1903</th>
+                  <th class="label1" width="10%">role tbd fr</th>
+                  <th class="value2" width="10%">error</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1">assert tbd fr</td>
+                  <td colspan="3">cda:effectiveTime/cda:low or cda:effectiveTime/@value</td>
+               </tr>
+            </tbody>
+         </table>
+         <br/>
+      </div>
+   </body>
+</html>
