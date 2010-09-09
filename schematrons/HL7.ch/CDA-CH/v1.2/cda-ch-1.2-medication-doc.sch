@@ -25,8 +25,8 @@ reusable templates
 
 <!-- cda-ch patterns -->
 <!ENTITY ent-hl7-cda-ch-1.2 SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.ent'>
-<!ENTITY ent-hl7-cda-ch-1.2_medication-doc SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2_medication-doc.ent'>
 <!ENTITY ent-hl7-cda-ch-1.2_medication-section SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2_medication-section.ent'>
+<!ENTITY ent-hl7-cda-ch-1.2_medication-doc SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2_medication-doc.ent'>
 
 <!-- ihe patterns -->
 <!-- Arbeitgeber -->
@@ -48,8 +48,8 @@ reusable templates
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">entités référencées</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>cda-ch-1.2_medication-doc.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2_medication-section.ent</xhtml:li>
+		<xhtml:li>cda-ch-1.2_medication-doc.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2.ent</xhtml:li>
