@@ -8,7 +8,8 @@ Language: de-CH
 History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
-01.04.2010: Stefan Schenk, medshare GmbH, (XHTML-Dokumentation)
+01.04.2010: Stefan Schenk, medshare GmbH (XHTML-Dokumentation)
+09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
 
 ********************************************************
 -->
@@ -29,9 +30,9 @@ History:
     	<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">CDA-CH Medication Header Templates</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Header Templates.</xhtml:p>
+		<xhtml:h3 lang="fr_ch">CDA-CH Medication Header Templates</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Header Templates</xhtml:p>
 		<!--
-		<xhtml:h3 lang="fr_ch">todo: francaise</xhtml:h3>
-		<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 		<xhtml:h3 lang="it_ch">todo: italiano</xhtml:h3>
 		<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 		-->     

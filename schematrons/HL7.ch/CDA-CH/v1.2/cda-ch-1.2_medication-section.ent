@@ -10,6 +10,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 01.04.2010: Stefan Schenk, medshare GmbH, (XHTML-Dokumentation)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
 
 ********************************************************
 -->
@@ -31,24 +32,24 @@ Medikamentenliste
     	<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">CDA-CH Medication Section</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Section Templates.</xhtml:p>
+		<xhtml:h3 lang="fr_ch">CDA-CH Medication Header Templates</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Section Templates</xhtml:p>
 		<!--
-		<xhtml:h3 lang="fr_ch">todo: francaise</xhtml:h3>
-		<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 		<xhtml:h3 lang="it_ch">todo: italiano</xhtml:h3>
 		<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 		-->   
 
  		<assert id="entity_HL7-cda-ch-1.2_medication-section-0001" test="self::cda:section">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang="fr_ch">Les données de médication doivent être déclarées  en tant que « section » dans le CDA Body.</xhtml:p>
 			<!--
-			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>
  		<assert id="entity_HL7-cda-ch-1.2_medication-section-0002" test="cda:text">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen einen narrativen Text enthalten.</xhtml:p>
+			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un texte narratif.</xhtml:p>
 			<!--
-			<xhtml:p lang="fr_ch">todo: francaise</xhtml:p>
 			<xhtml:p lang="it_ch">todo: italiano</xhtml:p>
 			-->
 		</assert>

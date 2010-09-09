@@ -9,6 +9,7 @@ History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 01.04.2010: Stefan Schenk, medshare GmbH (XHTML-Dokumentation)
+09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
 
 ********************************************************
 -->
@@ -37,7 +38,7 @@ reusable templates
 >
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xhtml:h1 class="title" lang="de_ch">CDA-CH Medikationstemplate</xhtml:h1>
-	<!--<xhtml:h1 class="title" lang="fr_ch">TODO francais</xhtml:h1>-->
+	<xhtml:h1 class="title" lang="fr_ch">CDA-CH Modèle Médicaments</xhtml:h1>
 	<!--<xhtml:h1 class="title" lang="it_ch">TODO italiano</xhtml:h1>-->
 	<ns prefix='cda' uri='urn:hl7-org:v3'/>
 	<ns prefix='sdtc' uri='urn:hl7-org:sdtc'/>
@@ -45,7 +46,7 @@ reusable templates
 
 	<!-- documentation of external references -->
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
-	<xhtml:h2 class="reference" lang="fr_ch">franz: Referenzierte Entities</xhtml:h2>
+	<xhtml:h2 class="reference" lang="fr_ch">entités référencées</xhtml:h2>
 	<xhtml:ul id="reference">
 		<xhtml:li>cda-ch-1.2_medication-doc.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2_medication-section.ent</xhtml:li>
