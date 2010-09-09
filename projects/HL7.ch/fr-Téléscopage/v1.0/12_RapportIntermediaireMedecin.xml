@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+Exemple de cas «téléscopage» CDA-CH-II
+Rapport médical intermédiaire LAA à l’intention de la Suva
+
+History:
+12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId extension="2928" root="2.16.756.5.30.1.100.2.1"/>
+	<id root="2.16.756.5.30.1.100.2" extension="4304ED8F-14BF-459E-B3BE-7F5EF626C470" />
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
+	<!-- Regel CDLN: Als System de code für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
+	<title>Rapport médical intermédiaire</title>
+	<effectiveTime value="20100215103249"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="fr-CH"/>
+	<setId root="2.16.756.5.30.1.1.1.1" extension="4304ED8F-14BF-459E-B3BE-7F5EF626C470" />
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+			<!-- Suva OID pour Schaden-Nr -->
+			<id extension="123.73.423.123" root="2.16.756.5.31"/>
+			<!-- OID pour No AVS ancien -->
+			<addr use="HP">
+				<streetName>Chemin du calvaire</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Hameau des malades</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Jean</given>
+					<family>DUPONT</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19480611"/>
+				<maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Théodore Guéri, Cabinet Médical CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code="PCP" codeSystem="2.16.756.5.30.2.1.1.1"/>
+		<time value="20100215103249"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Rue de l'hôpital</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Guérison-ville</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:gueri@cabinet-medical.ch"/>
+			<telecom use="PUB" value="http://www.cabinet-medical.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+					<suffix>Spécialiste de médecine générale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Cabinet Médical CH</name>
+				<addr use="WP">
+					<streetName>Rue de l'hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Cabinet Médical CH</name>
+				<addr use="WP">
+					<streetName>Rue de l'hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<id extension="A99" root="2.16.756.5.30.1.100.1.2.3"/>
+			<!-- TODO OID SUVA/Agence -->
+			<informationRecipient>
+				<name>Agence Suva Guérison-ville</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetAddressLine>Rainweg 53</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20100215103249"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="2099988871229" root="1.3.88"/>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode='IND'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<id extension='987654321' root='2.16.756.5.30.1.100.9999999'/>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<associatedPerson>
+				<name nullFlavor='UNK' />
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Brötligeber AG</name>
+				<telecom nullFlavor='UNK' />
+				<addr use="WP">
+					<streetAddressLine>Lohnbüro</streetAddressLine>
+					<streetAddressLine>Postfach</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Zürich</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfo"/>
+					<title>Information sur le sinistre</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>Date du sinistre</td>
+									<td>01.02.2010</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedidoc Observation Template: Information sur le sinistre -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoL3"/>
+							<!-- Schadennummer -->
+							<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+							<!-- Anmeldeart -->
+							<code code="U" codeSystem="2.16.756.5.30.1.100.3.2.2" displayName="Unfall"/>
+							<!-- Date du sinistre -->
+							<effectiveTime value="20100201"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagList"/>
+					<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
+					<title>Diagnostics</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Diagnostic</th>
+									<th>Code</th>
+									<th>System de code</th>
+									<th>Date</th>
+									<th>Evaluée par</th>
+								</tr>
+								<tr>
+									<td>Distorsion des vertèbres cervicales après téléscopage</td>
+									<td>S13.4</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Guérison-ville</td>
+								</tr>
+								<tr>
+									<td>Hyperthyréose</td>
+									<td>E05.9</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Guérison-ville</td>
+								</tr>
+								<tr>
+									<td>Fibrillation auriculaire paroxystique</td>
+									<td>I48.10</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Guérison-ville</td>
+								</tr>
+								<tr>
+									<td>Hypertension artérielle</td>
+									<td>I10.0</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Guérison-ville</td>
+								</tr>
+								<tr>
+									<td>Coxarthrose primaire</td>
+									<td>M16.0</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Guérison-ville</td>
+								</tr>
+								<tr>
+									<td>Statut consécutif à l’implantation d’une endoprothèse de la hanche gauche en juillet 2009</td>
+									<td></td>
+									<td></td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Guérison-ville</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="S13.4" codeSystem="1.2.276.0.76.5.388" />
+							<text>Hyperthyréose</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="E05.9" codeSystem="1.2.276.0.76.5.388" />
+							<text>Distorsion des vertèbres cervicales après téléscopage</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="I48.10" codeSystem="1.2.276.0.76.5.388" />
+							<text>Fibrillation auriculaire paroxystique</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="I10.0" codeSystem="1.2.276.0.76.5.388" />
+							<text>Hypertension artérielle</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="M16.0" codeSystem="1.2.276.0.76.5.388" />
+							<text>Coxarthrose primaire</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+							<code nullFlavor='UNK'/>
+							<text>Statut consécutif à l’implantation d’une endoprothèse de la hanche gauche en juillet 2009</text>
+							<effectiveTime value='20080603'/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Déroulement"/>
+					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
+					<title>Déroulement</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Déroulement precedent et état actuel (subjectivement et objectivement)</th>
+									<th>Influence du déroulement guérison par des facteurs pas lié à l'accident</th>
+									<th>Date</th>
+									<th>Evaluée par</th>
+								</tr>
+								<tr>
+									<td>
+										Téléscopage le 1.2.2010 vers 14h30 sur l’autoroute reliant le Hameau des malades et Villemodèle. Le patient doit arrêter sa voiture en raison d’un malaise, dû vraisemblablement à un nouvel épisode de fibrillation auriculaire tachycarde. Traitement ambulatoire à l’hôpital cantonal. L’examen radiologique conventionnel ne fournit aucun indice de fracture au niveau des vertèbres cervicales.<br />
+									</td>
+									<td>Oui, co-morbidité cardiaque, hyperthyroïdie</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Spécialiste de médecine générale</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlauf"/>
+							<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
+							<statusCode code='completed'/>
+							<effectiveTime value="20100215"/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+							<component typeCode='COMP'>
+								<!-- Bisheriger Déroulement und gegenwärtiger Zustand (subjektiv und objektiv) -->
+								<procedure moodCode="EVN" classCode="PROC">
+									<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlaufProc"/>
+									<code nullFlavor="UNK" />
+									<text>
+										Téléscopage le 1.2.2010 vers 14h30 sur l’autoroute reliant le Hameau des malades et Villemodèle. Le patient doit arrêter sa voiture en raison d’un malaise, dû vraisemblablement à un nouvel épisode de fibrillation auriculaire tachycarde. Traitement ambulatoire à l’hôpital cantonal. L’examen radiologique conventionnel ne fournit aucun indice de fracture au niveau des vertèbres cervicales.
+										Subjectivement, le patient n’est pas encore exempt de troubles. Les douleurs cervicales apparaissent en fonction des mouvements (en particulier douleurs en fin de rotation vers la droite), ainsi qu’après un long moment en station as-sise.
+										Objectivement, la mobilité de la colonne cervicale est légèrement limitée. Statut somatique par ailleurs sans indices pathologiques.
+									</text>
+								</procedure>
+							</component>
+							<component typeCode='COMP'>
+								<!-- Beeinflussung déroulement guérison durch unfallfremde Faktoren -->
+								<observation moodCode="EVN" classCode="OBS">
+									<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlaufExtFaktoren"/>
+									<!-- Strukturierte Angabe -->
+									<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+									<text>Oui, co-morbidité cardiaque, hyperthyroïdie</text>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Thérapie"/>
+					<title>Thérapie</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>Traitement en cours:</td>
+									<td>
+										Tizanidine 4mg 3 fois par jour; Paracétamol 1000 mg selon les besoins, jusqu’à 3 fois par jour.<br />
+										Physiothérapie de soutien: analgésique, amélioration de la mobilité, reconstitution des muscles
+									</td>
+								</tr>
+								<tr>
+									<td>Propositions (autre traitement, radiographies, examen par le médecin d’arrondissement):</td>
+									<td>néant</td>
+								</tr>
+								<tr>
+									<td>A quels intervalles ont lieu les consultations:</td>
+									<td>2-10 jours</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- Traitement en cours -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.AktBehandlung"/>
+							<!-- Strukturierte Angabe -->
+							<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>
+								Tizanidine 4mg 3 fois par jour; Paracétamol 1000 mg selon les besoins, jusqu’à 3 fois par jour; Physiothérapie de soutien: analgésique, amélioration de la mobilité, reconstitution des muscles
+							</text>
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Thérapie Vorschläge -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.Vorschläge"/>
+							<!-- Strukturierte Angabe -->
+							<code code="U" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Beratungsintervall -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.Beratungsintervall"/>
+							<!-- Strukturierte Angabe -->
+							<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>2-10 Tage</text>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Reprise du travailList"/>
+					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Reprise du travail</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Consultation</th>
+									<th>Durée de présence</th>
+									<th>Charge de travail</th>
+									<th>Date de la prochaine évaluation</th>
+									<th>Evaluée par</th>
+								</tr>
+								<tr>
+									<td>Date</td>
+									<td>Nombre raisonnable d’heures en entreprise</td>
+									<td>% de l’intensité de travail habituelle</td>
+									<td>prévu le</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>01.02.2010</td>
+									<td>0 h/jour</td>
+									<td>0%</td>
+									<td>03.02.2010</td>
+									<td>Dr. med. E. Mergency, Notfallstation Hôpital cantonal</td>
+								</tr>
+								<tr>
+									<td>03.02.2010</td>
+									<td>4 h/jour</td>
+									<td>100%</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Théodore Guéri, Spécialiste de médecine générale</td>
+								</tr>
+								<tr>
+									<td>15.02.2010</td>
+									<td>6 h/jour</td>
+									<td>100%</td>
+									<td></td>
+									<td>Dr. med. Théodore Guéri, Spécialiste de médecine générale</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Arbeitsfähigkeit3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>arbeitsunfähig</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20100201"/>
+								<high value="20100203"/>
+							</effectiveTime>
+							<value xsi:type='CE' code="0" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="0" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>E.</given>
+											<family>Mergency</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<name>Hôpital cantonal, Clinique de chirurgie</name>
+										<addr use="WP">
+											<streetName>Rue de l'hôpital</streetName>
+											<houseNumber>33</houseNumber>
+											<postalCode>1234</postalCode>
+											<city>Villemodèle</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Arbeitsfähigkeit3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>halbtags</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20100203"/>
+								<high value="20100215"/>
+							</effectiveTime>
+							<value xsi:type='CE' code="4" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="100" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Arbeitsfähigkeit3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>75%</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20100215"/>
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<value xsi:type='CE' code="6" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="100" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschluss"/>
+					<title>Fin du traitement</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>Fin du traitement:</td>
+									<td>15.03.2010</td>
+									<td>geplant</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Plus de détails:
+						<table>
+							<tbody>
+								<tr>
+									<td>Affectation à un travail adapté dans l’entreprise:</td>
+									<td>Non</td>
+								</tr>
+								<tr>
+									<td>Séquelles persistantes, si oui, lesquelles:</td>
+									<td>Non</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedidoc Encounter Template: Fin du traitement (moodCode="EVN": definitiv, moodCode="INT": geplant) -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschlussL3"/>
+							<code code="8649-6" codeSystem="2.16.840.1.113883.6.1" />
+							<effectiveTime>
+								<low nullFlavor='NA'/>
+								<high value='20100315'/>
+							</effectiveTime>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<representedOrganization>
+										<name>DUPONTspital</name>
+										<addr use="WP">
+											<streetName>Hospitalgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<postalCode>8888</postalCode>
+											<city>Guérison-ville</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+					<entry>
+						<!-- Zuweisung Arbeit -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.ZuweisungArbeit"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Bleibende Nachteile -->
+						<observation moodCode="EVN" classCode="OBS">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BleibendeNachteile"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<title>Remarques</title>
+					<text>
+						<content>Néant</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+********************************************************
+Exemple de cas «téléscopage» CDA-CH-II
+Fiche documentaire pour première consultation après un traumatisme d’accélération crânio-cervical
+http://www.svv.ch/article7337/medecine/formulaires/fiche-documentaire-pour-premiere-consultation-apres-un-traumatisme-d-acceleration-cranio-cervical.htm
+
+History:
+12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/SVV/de-KZBT/v20090208/svv.css'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+  <templateId extension="erstdokubogen-kzbt" root="2.16.756.5.30.1.110.2.1.1" />
+  <id extension="A9BFE245-FA3E-40B1-BFBC-E1406205C56E" root="2.16.756.5.30.1.1.1.1"/>
+  <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
+  <title>Fiche documentaire pour première consultation après un traumatisme d’accélération crânio-cervical</title>
+  <effectiveTime value="20100201173000"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+  <languageCode code="fr-CH"/>
+  <setId extension="A9BFE245-FA3E-40B1-BFBC-E1406205C56E" root="2.16.756.5.30.1.1.1.1"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+      <!-- Suva OID pour Schaden-Nr -->
+      <id extension="123.73.423.123" root="2.16.756.5.31"/>
+      <!-- OID pour No AVS ancien -->
+      <addr use="HP">
+        <streetName>Chemin du calvaire</streetName>
+        <houseNumber>10</houseNumber>
+        <postalCode>9876</postalCode>
+        <city>Hameau des malades</city>
+      </addr>
+      <telecom use="HP" value="tel:+41.32.685.12.34"/>
+      <telecom use="PUB" value="tel:+41.32.123.77.88"/>
+      <patient>
+        <name>
+          <given>Jean</given>
+          <family>DUPONT</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+        <birthTime value="19480611"/>
+        <maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2"/>
+      </patient>
+			<providerOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Hôpital cantonal, Clinique de chirurgie</name>
+			</providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <functionCode code="ATTPHYS" codeSystem="2.16.756.5.30.2.1.1.1"/>
+    <time value="20100201173000"/>
+    <assignedAuthor>
+			<id extension="7605555555555" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Rue de l'hôpital</streetName>
+				<houseNumber>33</houseNumber>
+				<postalCode>1234</postalCode>
+				<city>Villemodèle</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
+			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
+			<telecom use="PUB" value="http:www.hopital-cantonal.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>E.</given>
+					<family>Mergency</family>
+					<suffix>Médecin assistant</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<addr use="WP">
+					<streetName>Rue de l'hôpital</streetName>
+					<houseNumber>33</houseNumber>
+					<postalCode>1234</postalCode>
+					<city>Villemodèle</city>
+				</addr>
+			</representedOrganization>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Hôpital cantonal</name>
+				<addr use="WP">
+					<streetName>Rue de l'hôpital</streetName>
+					<houseNumber>33</houseNumber>
+					<postalCode>1234</postalCode>
+					<city>Villemodèle</city>
+				</addr>
+			</representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient typeCode="PRCP">
+    <intendedRecipient>
+			<id extension="A99" root="2.16.756.5.30.1.100.1.2.3"/>
+      <informationRecipient>
+        <name>Agence Suva Guérison-ville</name>
+      </informationRecipient>
+      <receivedOrganization>
+        <addr use="WP">
+          <streetAddressLine>Rainweg 53</streetAddressLine>
+          <postalCode>8888</postalCode>
+          <city>Guérison-ville</city>
+        </addr>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+  <legalAuthenticator>
+    <time value="20100201173000"/>
+    <signatureCode code="S"/>
+    <assignedEntity>
+			<id extension="7605555555555" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>E.</given>
+					<family>Mergency</family>
+					<suffix>Médecin assistant</suffix>
+				</name>
+			</assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchadenInfo"/>
+          <title>Information sur le sinistre</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Date d’accident</content></td>
+                  <td>01.02.2010 14:30</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Traitement initial</content></td>
+                  <td>01.02.2010 15:30</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Admission en ambulance</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Poursuite du traitement auprès de</content></td>
+                  <td>Dr. T. Guéri, 8888 Guérison-ville</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+					<entry>
+						<!-- SVV Observation Template: Information sur le sinistre -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchadenInfoL3"/>
+							<!-- Schadennummer(n) -->
+							<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+							<!-- Anmeldeart -->
+							<code nullFlavor='NA'/>
+							<!-- Date du sinistre -->
+							<effectiveTime value="20100201143000"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- SVV Encounter Template: Traitement initial -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Traitement initialL3"/>
+							<code nullFlavor='NA'/>
+							<!-- Date und evtl. Zeit der Traitement initial -->
+							<effectiveTime value="20100201153000"/>
+							<!-- Traitement initial durch ausfüllenden Arzt -->
+							<performer>
+								<assignedEntity>
+									<id extension="7605555555555" root="1.3.88"/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>E.</given>
+											<family>Mergency</family>
+											<suffix>Médecin assistant</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+					<entry>
+						<observation classCode="COND" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.AmbulanzL3"/>
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1"/>
+						</observation>
+					</entry>
+					<entry>
+						<encounter classCode="ENC" moodCode="RQO">
+							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.WeiterbehandlungL3"/>
+							<code code="185389009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Follow-up visit"/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<name>Cabinet Médical CH, Dr. med. Théodore Guéri, FMH Médecine générale</name>
+										<addr use="WP">
+											<streetName>Rue de l'hôpital</streetName>
+											<houseNumber>2</houseNumber>
+											<postalCode>8888</postalCode>
+											<city>Guérison-ville</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchilderungUnfallhergang"/>
+          <title>Description libre par le patient du déroulement chronologique de l’accident</title>
+          <text>
+						TODO: Ich war mit meinem Personenwagen unterwegs von Hameau des malades nach Guérison-ville, als ein plötzlich aufgetretenes Unwohlsein, Schwindel und Herzrasen mich veranlassten, meinen Wagen anzuhalten. Ich hatte etwas abrupt gebremst, und das nachfolgende Fahrzeug ist in das Heck meines Wagens geprallt.
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Unfallhergang"/>
+          <title>Circonstances de l’accident</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Indications données par</content></td>
+                  <td>le patient</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Type d’accident</content></td>
+                  <td>Collision arrière</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Position</content></td>
+                  <td>Conducteur</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Choc de la tête</content></td>
+                  <td>Oui, contre l’appuie-tête</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">S’attendait à la collision</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Position de la tête</content></td>
+                  <td>Droite, en avant (y c. en cas de coup d’oeil dans le rétroviseur )</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Position du corps</content></td>
+                  <td>Droite</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Appuie-tête installé</content></td>
+                  <td>Oui</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Ceinture de sécurité attachée</content></td>
+                  <td>Oui</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Airbag déclenché</content></td>
+                  <td>Non</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.BefragungUnfallablauf"/>
+          <title>Indications résultant de la prise de renseignements sur le déroulement chronologique</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Perte de connaissance</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Trou de mémoire</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Réaction de peur et/ou de frayeur</content></td>
+                  <td>Oui</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.TätigkeitNachUnfall"/>
+          <title>Activités après l’accident</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Après l’accident, le patient a-t-il pu poursuivre sa route au volant du véhicule accidenté?</td>
+                  <td>Oui</td>
+                </tr>
+                <tr>
+                  <td>Après l’accident, le patient a-t-il pu poursuivre sa route sur le siège du passager avant du véhicule accidenté?</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Après l’accident, le patient a-t-il pu réaliser ses activités prévues?</td>
+                  <td>Oui</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.BeschwerdeDéroulement"/>
+          <title>Indications du patient sur l’évolution des symptômes depuis l’accident</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Céphalées</content></td>
+                  <td>Oui, après 1 heure<br />mentionné spontanément<br />Intensité des douleurs: 3<br />Irradiation des douleurs: aucune information</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Douleurs de nuque</content></td>
+                  <td>Oui, immédiatement<br />mentionné spontanément<br />Intensité des douleurs: 5<br />Irradiation des douleurs: dans l’arrière de la tête</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Vertiges</content></td>
+                  <td>Oui, après 1 heure<br />mentionné sur demande</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Nausées</content></td>
+                  <td>Oui, après 1 heure<br />mentionné sur demande</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Vomissements</content></td>
+                  <td>Non<br />mentionné sur demande</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Troubles de l’audition</content></td>
+                  <td>Non<br />mentionné sur demande</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Troubles de la vue</content></td>
+                  <td>Non<br />mentionné sur demande</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Troubles du sommeil</content></td>
+                  <td>Non<br />mentionné sur demande</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Autres symptômes</content></td>
+                  <td>Non<br />mentionné sur demande</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.FrühereAnamnèse"/>
+          <title>Anamnèse antérieure</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Accident antérieur</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Participation de la colonne cervicale</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Participation de la tête</content></td>
+                  <td>Non</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Plaintes nécessitant un traitement avant l’accident / médicaments avant l’accident</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Tête</content>(y c. migraine)</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Nuque</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Dos</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Yeux</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Audition</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Psychisme</content>(p. ex. psychothérapie)</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Autres</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Médicaments actuels</content></td>
+                  <td>Non</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.UntersuchungsRésultate"/>
+          <title>Examen médical</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Taille</content></td>
+                  <td><content ID='o1'>178 cm</content></td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Poids</content></td>
+                  <td><content ID='o2'>72 kg</content></td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Douleurs / mobilité de la colonne cervicale (active, c’est-à-dire mouvements effectués par le patient)</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <th><content styleCode="Bold">Douleur</content></th>
+                  <th><content styleCode="Bold">Mobilité</content></th>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Flexion </content>Distance menton-sternum</td>
+                  <td>Non</td>
+                  <td>5 cm</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Extension </content>Distance menton-sternum</td>
+                  <td>Non</td>
+                  <td>12 cm</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Rotation à droite</content></td>
+                  <td>Oui</td>
+                  <td>60 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Rotation à gauche</content></td>
+                  <td>Non</td>
+                  <td>80 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Inclinaison latérale droite</content></td>
+                  <td>Oui</td>
+                  <td>25 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Inclinaison latérale gauche</content></td>
+                  <td>Non</td>
+                  <td>40 Grad</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Douleurs à la pression</content></td>
+                  <td>Oui, voir graphique de localisation</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Douleurs au repos</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Douleur au choc</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Douleurs / limitation fonctionnelle d’autre localisation</content></td>
+                  <td>Non</td>
+                </tr>
+               </tbody>
+            </table>
+            <br />
+            Graphique de localisation:<br />
+            <renderMultiMedia referencedObject="image1"/><br/>
+            <br />
+            <br />
+            <content styleCode="Bold">Examen neurologique</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Réflexes tendineux</content></td>
+                  <td>Normaux</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Force musculaire</content></td>
+                  <td>Normaux</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Paresthésies</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Déficits sensitifs</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Test de Romberg</content></td>
+                  <td>Sûr</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Test d’Unterberger </content>Définition de pathologique = Déviation > 45° après 50 pas</td>
+                  <td>Normal</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Autres signes neurologiques pathologiques</content>(p. ex. nerfs crâniens): Aucune
+            <br />
+            <br />
+            <content styleCode="Bold">Etat de conscience actuel</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Score GCS</content></td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <content styleCode="Bold">Autres</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Autres constatations ou éléments frappants (y c. psychiques)</content></td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Lésions externes</content></td>
+                  <td>Non</td>
+                </tr>
+              </tbody>
+            </table>          
+            <br />
+            <content styleCode="Bold">Radiographies</content>
+            <br />
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Colonne cervicale ap / latéral</content></td>
+                  <td>Oui, décrire: légère scoliose convexe à droite, pas de fracture</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Cliché transbuccal de l’apophyse odontoïde</content></td>
+                  <td>Oui, décrire: TODO Kein Hinweis auf Densfraktur</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Autres examens par imagerie médicale</content></td>
+                  <td>Non</td>
+                </tr>
+              </tbody>
+            </table>          
+          </text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.32'/>
+							<templateId root='2.16.840.1.113883.10.20.1.35'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.1'/>
+							<code code='46680005' displayName='Vital signs' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT'/>
+							<statusCode code='completed'/>
+							<!-- one or more vital signs observations -->
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2'/>
+									<code code='3137-7' codeSystem='2.16.840.1.113883.6.1' />
+									<text>
+										178cm
+										<reference value='#o1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime value="20081118"/>
+									<value xsi:type='PQ' value='178' unit='cm'/>
+								</observation>
+							</component>
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2'/>
+									<code code='3141-9' codeSystem='2.16.840.1.113883.6.1' />
+									<text>
+										72kg
+										<reference value='#o2'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime value="20081118"/>
+									<value xsi:type='PQ' value='72' unit='kg'/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="image1">
+							<value xsi:type='ED' mediaType="image/jpeg">
+								<reference value="DouleursPression.jpg"/>
+							</value>
+						</observationMedia>
+					</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.VorläufigeDiagnostic"/>
+          <title>Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Degré</th>
+                  <th>Présentation clinique</th>
+                  <th>Status*</th>
+                  <th>Diagnostic*</th>
+                </tr>
+                <tr>
+                  <td>II</td>
+                  <td>Douleurs de nuque et troubles ostéo-musculaires (y c. baisse de mobilité et douleurs ponctuelles à la pression)
+                  </td>
+                  <td>présumé</td>
+                  <td>Non</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            Diagnostic(s) différentiel(s)*: aucune information<br />
+						Diagnostic(s) supplémentaire(s): TODO Verdacht auf intermittierende Herzrhythmusstörung, Zustand nach Hyperthyréose, Hypertension artérielle<br />
+						Autre(s) éclaircissement(s): TODO ECG, Schilddrüsenfunktion durch den Hausarzt<br />
+						<br />
+            * Répond aux exigences / commentaires selon l’arrêt du tribunal fédéral ATF 134 V 109
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Thérapie"/>
+          <title>Traitement / mesures prescrites</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Traitement / mesures</content></td>
+                  <td>Analgésiques (paracétamol, etc.)<br />
+                  	Physiothérapie active<br />
+                  	Autres mesures, c’est-à-dire: TODO muskelrelaxierende Medikamente
+                  	</td>
+                </tr>
+              </tbody>
+            </table>          
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Reprise du travail"/>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Reprise du travailList"/>
+					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Capacité de travail</title>
+          <text>
+            <table>
+              <tbody>
+                <tr>
+                  <td><content styleCode="Bold">Activité professionnelle actuelle:</content></td>
+                  <td>TODO Bankfachmann</td>
+                  <td>Sans effort physique (travail de bureau)</td>
+                </tr>
+                <tr>
+                  <td><content styleCode="Bold">Taux d’occupation en %</content></td>
+                  <td>100</td>
+                </tr>
+              </tbody>
+            </table>          
+						<br />
+            <content styleCode="Bold">Situation psychosociale / socioculturelle en termes de rapports personnels</content><br />
+            <table>
+              <tbody>
+                <tr>
+                  <td>a) Profession / place de travail</td>
+                  <td>TODO Festanstellung als Bankfachmann</td>
+                </tr>
+                <tr>
+                  <td>b) Famille</td>
+                  <td>TODO verheiratet, 4 erwachsene Kinder</td>
+                </tr>
+                <tr>
+                  <td>c) Loisirs</td>
+                  <td>TODO Wandern</td>
+                </tr>
+                <tr>
+                  <td>d) Intégration (connaissances linguistiques) (éventuellement sur une feuille séparée)</td>
+                  <td>aucune information</td>
+                </tr>
+              </tbody>
+            </table>          
+            <br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Consultation</th>
+									<th>Durée de présence</th>
+									<th>Charge de travail</th>
+									<th>Date de la prochaine évaluation</th>
+									<th>Evaluée par</th>
+								</tr>
+								<tr>
+									<td>Date</td>
+									<td>Nombre raisonnable d’heures en entreprise</td>
+									<td>% de l’intensité de travail habituelle</td>
+									<td>prévu le</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>01.02.2010</td>
+									<td>0 h/jour</td>
+									<td>0 %</td>
+									<td>03.02.2010</td>
+									<td>Dr. med. E. Mergency, Hôpital cantonal Guérison-ville</td>
+								</tr>
+							</tbody>
+						</table>
+          </text>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Arbeitsfähigkeit3"/>
+						<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+						<text>Voll Arbeitsunfähig ab 01.02.2010</text>
+						<statusCode code="completed"/>
+						<effectiveTime>
+							<low value="20100201"/>
+							<high value="20100204"/>
+						</effectiveTime>
+						<value xsi:type='CE' code="0" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+						<interpretationCode code="0" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+						<performer>
+							<assignedEntity>
+								<id nullFlavor="UNK" />
+								<assignedPerson>
+									<name>
+										<prefix>Dr. med.</prefix>
+										<given>E.</given>
+										<family>Mergency</family>
+									</name>
+								</assignedPerson>
+							</assignedEntity>
+						</performer>
+					</observation>
+				</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+          <title>Remarques</title>
+          <text>
+						Néant
+          </text>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
