@@ -39,6 +39,7 @@ History:
 			<xhtml:h3 lang="fr_ch">	verifier ClinicalDocument</xhtml:h3>
 			<assert test="self::cda:ClinicalDocument"  id="minimal_docu_002">
 			<xhtml:p lang="de_ch">ClinicalDocument element muss aus dem urn:hl7-org-v3 namespace sein.</xhtml:p>
+			<xhtml:p lang="fr_ch">L'élément ClinicalDocument doit provenir du namespace urn :hl-org-v3.</xhtml:p>
 			</assert>
 		</rule>
 		
