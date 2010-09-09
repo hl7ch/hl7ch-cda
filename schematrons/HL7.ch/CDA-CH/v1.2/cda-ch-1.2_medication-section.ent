@@ -32,7 +32,7 @@ Medikamentenliste
     	<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">CDA-CH Medication Section</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Section Templates.</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Medication Header Templates</xhtml:h3>
+		<xhtml:h3 lang="fr_ch">CDA-CH Medication Section Templates</xhtml:h3>
 		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Section Templates</xhtml:p>
 		<!--
 		<xhtml:h3 lang="it_ch">todo: italiano</xhtml:h3>
