@@ -3,7 +3,10 @@
 ********************************************************
 Schematron Tutorial
 Language: de-CH
-History:  30.03.2010: Oliver Egger, visionary ag 
+History:  
+30.03.2010: Oliver Egger, visionary ag 
+09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
+
 ********************************************************
 -->
 <schema xmlns='http://purl.oclc.org/dsdl/schematron'
@@ -26,10 +29,8 @@ History:  30.03.2010: Oliver Egger, visionary ag
 			<xhtml:h3 lang="fr_ch">Règle CH-TPLT</xhtml:h3>
 			
 			<assert test="cda:templateId[@root='2.16.756.5.30.1.1.1.1' and @extension='CDA-CH']" id="minimal_docu_001">
-			<xhtml:p lang="de_ch">Für Dokumente, welche anhand der vorliegenden Spezifikation erstellt wurden soll folgende template ID verwendet werden:
-			templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"</xhtml:p>
-			<xhtml:p lang="fr_ch">Le modèle d'identifiant suivant doit être utilisé pour les documents pro-
-duits au moyen de la présente spécification: templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"</xhtml:p>
+			<xhtml:p lang="de_ch">Für Dokumente, welche anhand der vorliegenden Spezifikation erstellt wurden soll folgende template ID verwendet werden: templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"</xhtml:p>
+			<xhtml:p lang="fr_ch">Le modèle d'identifiant suivant doit être utilisé pour les documents produits au moyen de la présente spécification: templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"</xhtml:p>
 			</assert>
 		</rule>
 		
@@ -40,8 +41,6 @@ duits au moyen de la présente spécification: templateId extension="CDA-CH" roo
 			<xhtml:p lang="de_ch">ClinicalDocument element muss aus dem urn:hl7-org-v3 namespace sein.</xhtml:p>
 			</assert>
 		</rule>
-		
-		
 		
 	</pattern>	
 </schema>
