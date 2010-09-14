@@ -9,7 +9,7 @@ History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
-09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
+14.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
 
 ********************************************************
 -->
@@ -236,7 +236,7 @@ History:
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchilderungUnfallhergang"/>
           <title>Description libre par le patient du déroulement chronologique de l’accident</title>
           <text>
-						TODO: Ich war mit meinem Personenwagen unterwegs von Hameau des malades nach Guérison-ville, als ein plötzlich aufgetretenes Unwohlsein, Schwindel und Herzrasen mich veranlassten, meinen Wagen anzuhalten. Ich hatte etwas abrupt gebremst, und das nachfolgende Fahrzeug ist in das Heck meines Wagens geprallt.
+						J'étais en route avec ma voiture privée du hameau des malades en direction de Guérison-ville lorsque tout à coup j’ai ressenti un  malaise avec des étourdissements et des palpitations cardiaques, ce qui m’a forcé à arrêter ma voiture. J’ai freiné un peu brusquement et le véhicule suivant est entré en collision avec l’arrière de ma voiture.
           </text>
         </section>
       </component>
@@ -601,7 +601,7 @@ History:
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Cliché transbuccal de l’apophyse odontoïde</content></td>
-                  <td>Oui, décrire: TODO Kein Hinweis auf Densfraktur</td>
+                  <td>Oui, décrire: Aucun signe de fracture de l'apophyse</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Autres examens par imagerie médicale</content></td>
@@ -685,8 +685,8 @@ History:
             </table>
             <br />
             Diagnostic(s) différentiel(s)*: aucune information<br />
-						Diagnostic(s) supplémentaire(s): TODO Verdacht auf intermittierende Herzrhythmusstörung, Zustand nach Hyperthyréose, Hypertension artérielle<br />
-						Autre(s) éclaircissement(s): TODO ECG, Schilddrüsenfunktion durch den Hausarzt<br />
+						Diagnostic(s) supplémentaire(s): Suspicion de troubles du rythme cardiaque intermittent, status après hyperthyroïdie, hypertension artérielle.<br />
+						Autre(s) éclaircissement(s): ECG, fonctions thyroïdienne par le médecin de famille.<br />
 						<br />
             * Répond aux exigences / commentaires selon l’arrêt du tribunal fédéral ATF 134 V 109
           </text>
@@ -703,7 +703,7 @@ History:
                   <td><content styleCode="Bold">Traitement / mesures</content></td>
                   <td>Analgésiques (paracétamol, etc.)<br />
                   	Physiothérapie active<br />
-                  	Autres mesures, c’est-à-dire: TODO muskelrelaxierende Medikamente
+                  	Autres mesures, c’est-à-dire: Médicaments myorelaxants
                   	</td>
                 </tr>
               </tbody>
@@ -722,7 +722,7 @@ History:
               <tbody>
                 <tr>
                   <td><content styleCode="Bold">Activité professionnelle actuelle:</content></td>
-                  <td>TODO Bankfachmann</td>
+                  <td>Banquier</td>
                   <td>Sans effort physique (travail de bureau)</td>
                 </tr>
                 <tr>
@@ -737,15 +737,15 @@ History:
               <tbody>
                 <tr>
                   <td>a) Profession / place de travail</td>
-                  <td>TODO Festanstellung als Bankfachmann</td>
+                  <td>Poste fixe en tant que banquier</td>
                 </tr>
                 <tr>
                   <td>b) Famille</td>
-                  <td>TODO verheiratet, 4 erwachsene Kinder</td>
+                  <td>marié, 4 enfants adultes</td>
                 </tr>
                 <tr>
                   <td>c) Loisirs</td>
-                  <td>TODO Wandern</td>
+                  <td>Randonnée</td>
                 </tr>
                 <tr>
                   <td>d) Intégration (connaissances linguistiques) (éventuellement sur une feuille séparée)</td>
