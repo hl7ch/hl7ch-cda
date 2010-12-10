@@ -7,6 +7,7 @@ Language: de-CH
 
 History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
+09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 
 ********************************************************
 -->

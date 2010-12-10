@@ -9,6 +9,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
+09.12.2010: Tony Schaller, medshare GmbH (Erwerbstatus hinzugefügt auf Antrag Thomas Lanz, Suva)
 
 ********************************************************
 -->
@@ -16,9 +17,10 @@ History:
 	<!--
 	********************************************************
 	Anmeldeart
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/schadenanmart
 	********************************************************
 	-->
-	<system codeSystemName='SuvaSchadenAnmeldeart' root='2.16.756.5.30.1.100.3.2.2'>
+	<system symbolicName='schadenanmart' root='2.16.756.5.30.1.100.3.2.2'>
 		<code value='U' displayName='Unfall'/>
 		<code value='B' displayName='Berufskrankheit'/>
 		<code value='K' displayName='Krankheit'/>
@@ -26,15 +28,136 @@ History:
 		<code value='Z' displayName='Zahnschaden'/>
 		<code value='R' displayName='Rückfall'/>
 	</system>
+
 	<!--
 	********************************************************
 	Inkonvenienz bei Erstbehandlung
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/erstbehinkonv
 	********************************************************
 	-->
-	<system codeSystemName='SuvaErstbehandlungInkonvenienz' root='2.16.756.5.30.1.100.3.2.3'>
+	<system symbolicName='erstbehinkonv' root='2.16.756.5.30.1.100.3.2.3'>
 		<code value='N' displayName='in Praxis während Praxisöffnungszeit'/>
 		<code value='I' displayName='in Praxis ausserhalb Praxisöffnungszeit'/>
 		<code value='U' displayName='am Unfallort'/>
 		<code value='W' displayName='in der Wohnung des Patienten'/>
 	</system>
+
+	<!--
+	********************************************************
+	Erwerbstatus
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/employstatus
+	********************************************************
+	-->
+	<system symbolicName='employstatus' root='2.16.756.5.30.1.100.3.2.4'>
+		<code value='A' displayName='Arbeitslos'/>
+		<code value='E' displayName='Erwerbstätig'/>
+		<code value='O' displayName='Andere (other)'/>
+	</system>
+
+	<!--
+	********************************************************
+	Bitte an Arbeitgeber
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/askemployer
+	********************************************************
+	-->
+	<system symbolicName='askemployer' root='2.16.756.5.30.1.100.3.2.5'>
+		<code value='A' displayName='Arbeitsplatzbeschreibung ausfüllen'/>
+		<code value='K' displayName='Mit behandelndem Arzt Kontakt aufnehmen'/>
+		<code value='N/A' displayName='Keine'/>
+	</system>
+
+	<!--
+	********************************************************
+	Liste der Speziellen Anforderungen / Rahmenbedingungen zur Arbeitsfähigkeit
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/patabilitylist
+	********************************************************
+	-->
+	<system symbolicName='patabilitylist' root='2.16.756.5.30.1.100.3.2.6'>
+		<code value='TF' displayName='Tagesbetrieb fix'/>
+		<code value='TV' displayName='Tagesbetrieb variabel'/>
+		<code value='2S' displayName='2-Schicht Betrieb (rotierend)'/>
+		<code value='3S' displayName='3-Schicht Betrieb (rotierend)'/>
+		<code value='NS' displayName='nur Nachtschicht'/>
+		<code value='SI' displayName='sitzende Tätigkeit'/>
+		<code value='ST' displayName='stehende Tätigkeit'/>
+		<code value='BI' displayName='Bildschirmarbeit'/>
+		<code value='VI' displayName='visuelle Kontrolltätigkeit'/>
+		<code value='LE' displayName='Lärmexposition'/>
+		<code value='KE' displayName='Kälteexposition'/>
+		<code value='WE' displayName='Wärmeexposition'/>
+		<code value='SE' displayName='Staub/Geruchsexposition'/>
+		<code value='RP' displayName='regelmässige Pausen'/>
+		<code value='UK' displayName='Überkopfarbeit'/>
+		<code value='HL' displayName='Heben von Lasten'/>
+		<code value='BT' displayName='Besuch Therapie notwendig'/>
+		<code value='FT' displayName='Fahrtüchtigkeit'/>
+	</system>
+
+	<!--
+	********************************************************
+	Bewertung der Speziellen Anforderungen / Rahmenbedingungen zur Arbeitsfähigkeit
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/patabilityclass
+	********************************************************
+	-->
+	<system symbolicName='patabilityclass' root='2.16.756.5.30.1.100.3.2.7'>
+		<code value='NR' displayName='nicht relevant'/>
+		<code value='NM' displayName='nicht möglich'/>
+		<code value='MO' displayName='möglich'/>
+		<code value='EM' displayName='empfohlen'/>
+	</system>
+
+	<!--
+	********************************************************
+	Bewertung "Heben von Lasten" der Speziellen Anforderungen / Rahmenbedingungen zur Arbeitsfähigkeit
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/patabilityclass
+	********************************************************
+	-->
+	<system symbolicName='patabilityclass' root='2.16.756.5.30.1.100.3.2.8'>
+		<code value='5-' displayName='bis 5kg'/>
+		<code value='10' displayName='5kg - 10kg'/>
+		<code value='15' displayName='10kg - 15kg'/>
+		<code value='15+' displayName='mehr als 15kg'/>
+	</system>
+
+	<!--
+	********************************************************
+	Meldungsart/Vorgehen für "Meldung komplexer Fall"
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/complexcaseproc
+	********************************************************
+	-->
+	<system symbolicName='complexcaseproc' root='2.16.756.5.30.1.100.3.2.9'>
+		<code value='VM' displayName='vorsorgliche Meldung'/>
+		<code value='SS' displayName='ich bitte um telefonischen Kontakt durch Schadenspezialist'/>
+		<code value='KA' displayName='ich bitte um telefonischen Kontakt durch Kreisarzt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Liste der Wahrnehmungen zur Meldung Komplexfall
+	oid:/joint-iso-itu-t/country/ch/swiss-application/ehealth-ch/domains/suva/suvadomainroot/suvacodes/complexobslist
+	********************************************************
+	-->
+	<system symbolicName='patabilitylist' root='2.16.756.5.30.1.100.3.2.10'>
+		<code value='STRA' displayName='Somatisches: Polytrauma/Schädelhirntrauma'/>
+		<code value='SHWS' displayName='Somatisches: Craniocervicales Beschleunigungstrauma'/>
+		<code value='SCRP' displayName='Somatisches: CRPS/Sudeck'/>
+		<code value='SVKS' displayName='Somatisches: vorbestehende körperliche Schädigungen'/>
+		<code value='SOTH' displayName='Somatisches: Anderes'/>
+		<code value='PFAM' displayName='Psychosoziales: familiär'/>
+		<code value='PFIN' displayName='Psychosoziales: finanziell'/>
+		<code value='PCUL' displayName='Psychosoziales: kulturell'/>
+		<code value='PPSY' displayName='Psychosoziales: psychisch'/>
+		<code value='POTH' displayName='Psychosoziales: Anderes'/>
+		<code value='BDIA' displayName='Berufliches: durch Diagnose gefährdeter Arbeitsplatz'/>
+		<code value='BVER' displayName='Berufliches: drohender Arbeitsplatzverlust'/>
+		<code value='BJOB' displayName='Berufliches: Arbeitsplatzbedingungen'/>
+		<code value='BNJB' displayName='Berufliches: stellenlos'/>
+		<code value='BOTH' displayName='Berufliches: Anderes'/>
+		<code value='PSVO' displayName='Patient: Diskrepanz subjektiv - objektiv'/>
+		<code value='PVAA' displayName='Patient: Verdacht auf Abhängigkeit'/>
+		<code value='PSSP' displayName='Patient: schlechte Selbstprognose'/>
+		<code value='PSSA' displayName='Patient: sekundäre Symptomausweitung'/>
+		<code value='POTH' displayName='Patient: Anderes'/>
+	</system>
+
 </systems>

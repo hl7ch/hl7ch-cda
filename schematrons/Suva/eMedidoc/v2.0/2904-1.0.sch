@@ -2,15 +2,12 @@
 <!--
 ********************************************************
 
-Schematron Master für Suva eMedidoc 'Ärztlicher Zwischenbericht' (Suva Form 2928 'Ärztlicher Zwischenbericht')
+Schematron Master für Suva eMedidoc 'Behandlungsmeldung' (Suva Form 2904 'Behandlungsmeldung')
 Language: de-CH
 
 History:
-20.12.2009: Tony Schaller, medshare GmbH (Draft)
-31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
-15.03.2010: Tony Schaller, medshare GmbH (Einbau Dokumentation)
-11.05.2010: Tony Schaller, medshare GmbH (Definitive Formularnummer Suva eingetragen)
-31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
+31.08.2010: Tony Schaller, medshare GmbH (Draft)
+09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 
 ********************************************************
 -->
@@ -37,12 +34,11 @@ project templates
 <!ENTITY ent-project-eMedidoc-1.0 SYSTEM 'eMedidoc-1.0.ent'>
 
 <!-- specific Arztzeugnis templates -->
-<!ENTITY ent-project-2928-1.0 SYSTEM '2928-1.0.ent'>
+<!ENTITY ent-project-2904-1.0 SYSTEM '2904-1.0.ent'>
 ]
 >
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
-	<xhtml:h1 class="title" lang="de_ch">Suva eMedidoc Ärztlicher Zwischenbericht</xhtml:h1>
-	<!--<xhtml:h1 class="title" lang="fr_ch">totranslate: francais</xhtml:h1>-->
+	<xhtml:h1 class="title" lang="de_ch">Suva eMedidoc Behandlungsmeldung</xhtml:h1>
 	<ns prefix='cda' uri='urn:hl7-org:v3'/>
 	<ns prefix='sdtc' uri='urn:hl7-org:sdtc'/>
 	<ns prefix='xsi' uri='http://www.w3.org/2001/XMLSchema-instance'/>
@@ -51,7 +47,7 @@ project templates
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">franz: Referenzierte Entities</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>2928-1.0.ent</xhtml:li>
+		<xhtml:li>2904-1.0.ent</xhtml:li>
 		<xhtml:li>eMedidoc-1.0.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2_medication-section.ent</xhtml:li>
 		<xhtml:li>cda-ch-1.2.ent</xhtml:li>
@@ -59,7 +55,7 @@ project templates
 	</xhtml:ul>
 	
 	<!-- project specific templates -->
-	&ent-project-2928-1.0;
+	&ent-project-2904-1.0;
 	&ent-project-eMedidoc-1.0;
 
 	<!-- reusable templates from other sources -->
