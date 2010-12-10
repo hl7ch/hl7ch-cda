@@ -705,10 +705,29 @@ History:
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
 					<title>Bemerkungen</title>
 					<text>
-						<content>Keine</content>
+						<content>Keine<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Erwerbstatus:</td>
+									<td>Erwerbstätig</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Erwerbstatus -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
+							<!-- Strukturierte Angabe "Erwerbstatus" -->
+							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
+						</observation>
+					</entry>
 				</section>
 			</component>
 		</structuredBody>
