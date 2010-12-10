@@ -14,10 +14,22 @@ Updated by Nico Ehinger, ELCA SA, code refactoring
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised for CDA-CH V1.2 Body templates and language dependent rendering
 ********************************************************
 -->
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:n1="urn:hl7-org:v3"
-	xmlns:n2="urn:hl7-org:v3/meta/voc" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<xsl:stylesheet
+	version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:n1="urn:hl7-org:v3"
+	xmlns:n2="urn:hl7-org:v3/meta/voc"
+	xmlns:voc="urn:hl7-org:v3/voc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	>
 
 	<xsl:output method="html" indent="yes" version="4.01" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.01//EN"/>
+
+	<!-- The following variables are designed to be overwritten in a project specific xsl that imports the current cda-ch-1.2.xsl an example can be found in suva-emedidoc-2.0.xsl -->
+	<xsl:variable name="organizationName">
+		<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='HL7.ch']/@displayName"/>
+	</xsl:variable>
 
 	<xsl:variable name="language">
 		<xsl:choose>
@@ -141,6 +153,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				</table>
 				<hr/>
 				<xsl:apply-templates select="n1:component/n1:structuredBody|n1:component/n1:nonXMLBody"/>
+				<xsl:apply-templates select="n1:participant"/>
 				<hr/>
 				<xsl:call-template name="bottomline"/>
 				<hr/>
@@ -495,8 +508,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:when test="//n1:regionOfInterest[@ID=$imageRef]">
 				<!-- Here is where the Region of Interest image referencing goes -->
 				<xsl:if
-					test="//n1:regionOfInterest[@ID=$imageRef]//n1:observationMedia/n1:value[@mediaType='image/gif'           or
-					@mediaType='image/jpeg']">
+					test="//n1:regionOfInterest[@ID=$imageRef]//n1:observationMedia/n1:value[@mediaType='image/gif' or @mediaType='image/jpeg']">
 					<br clear="all"/>
 					<xsl:element name="img">
 						<xsl:attribute name="src">
@@ -507,7 +519,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- Here is where the direct MultiMedia image referencing goes -->
-				<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[@mediaType='image/gif' or           @mediaType='image/jpeg']">
+				<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[@mediaType='image/gif' or  @mediaType='image/jpeg']">
 					<br clear="all"/>
 					<xsl:element name="img">
 						<xsl:attribute name="src">
@@ -682,38 +694,57 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		</table>
 	</xsl:template>
 
-	<!--
-	-->
-	<xsl:template name="support">
-		<table width="100%">
-			<xsl:for-each select="/n1:ClinicalDocument/n1:participant[@typeCode='IND']">
-				<tr>
-					<td>
-						<b>
-							<xsl:for-each select="n1:associatedEntity/n1:code">
-								<xsl:call-template name="translateCode">
-									<xsl:with-param name="code" select="."/>
-								</xsl:call-template>
-								<xsl:text> </xsl:text>
-							</xsl:for-each>
-						</b>
-					</td>
-					<td>
-						<xsl:call-template name="getName">
-							<xsl:with-param name="name" select="n1:associatedEntity/n1:associatedPerson/n1:name"/>
-						</xsl:call-template>
-					</td>
-				</tr>
-				<tr>
-					<td/>
-					<td>
-						<xsl:call-template name="getContactInfo">
-							<xsl:with-param name="contact" select="n1:associatedEntity"/>
-						</xsl:call-template>
-					</td>
-				</tr>
-			</xsl:for-each>
-		</table>
+	<!-- Participants (z.B. Arbeitgeber)	-->
+	<xsl:template match="n1:participant">
+		<xsl:for-each select="n1:associatedEntity">
+			<b>
+				<xsl:variable name="code"	select="n1:code/@code"/>
+				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value=$code]/@displayName"/>
+			</b>
+			<ul>
+				<table class="body">
+					<tr>
+						<th>
+							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Company']/@displayName"/>
+						</th>
+						<th>
+							<xsl:call-template name="getName">
+								<xsl:with-param name="name" select="n1:scopingOrganization/n1:name"/>
+							</xsl:call-template>
+						</th>
+					</tr>
+					<tr>
+						<th>
+		<xsl:choose>
+			<xsl:when test="$organizationName">
+				<xsl:value-of select="$organizationName"/>
+							<xsl:text> </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>N/A</xsl:otherwise>
+		</xsl:choose>
+							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='CustNo']/@displayName"/>
+						</th>
+						<th>
+							<xsl:value-of select="n1:id/@extension"/>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
+						</td>
+						<td>
+							<xsl:call-template name="getName">
+								<xsl:with-param name="name" select="n1:associatedPerson/n1:name"/>
+							</xsl:call-template>
+							<br />
+							<xsl:call-template name="getContactInfo">
+								<xsl:with-param name="contact" select="n1:scopingOrganization"/>
+							</xsl:call-template>
+						</td>
+					</tr>
+				</table>
+			</ul>
+		</xsl:for-each>
 	</xsl:template>
 
 	<!--
@@ -993,4 +1024,5 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+
 </xsl:stylesheet>
