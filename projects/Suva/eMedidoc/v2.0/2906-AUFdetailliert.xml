@@ -6,11 +6,11 @@ eMedidoc Sample
 History:
 07.11.2008: Tony Schaller, medshare GmbH (Freigabe eMedidoc R1)
 22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
-09.12.2010: Tony Schaller, medshare GmbH (Neues Feld Erwerbstatus eingefügt und Wechsel auf suva-emedidoc-2.0.xsl)
+09.12.2010: Tony Schaller, medshare GmbH (Neues Feld Erwerbstatus eingefügt und Wechsel auf suva-emedidoc.xsl)
 
 ********************************************************
 -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/Suva/eMedidoc/v2.0/suva-emedidoc-2.0.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/Suva/eMedidoc/v2.0/suva-emedidoc.xsl'?>
 <?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
 	<!--

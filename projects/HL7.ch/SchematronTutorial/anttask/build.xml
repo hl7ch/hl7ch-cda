@@ -66,7 +66,7 @@
 	<target name="document" description="document schema files with rule" depends="init">
 		<delete file="project_schematrons/${sch}_doc_${lang}.html" failonerror="false"/> 
 		<!-- expand inclusions -->
-		<xslt style="../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.xsl" in="project_schematrons/${sch}.sch" out="project_schematrons/${sch}_doc_${lang}.html">
+		<xslt style="../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-doc.xsl" in="project_schematrons/${sch}.sch" out="project_schematrons/${sch}_doc_${lang}.html">
 			<param name="language" expression="${lang}" />
 			<classpath>
 				<pathelement location="${schematronpath}/saxon9he.jar" />
