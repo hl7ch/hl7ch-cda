@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************
+eMedidoc Sample Behandlungsmeldung
+
+History:
+07.11.2008: Tony Schaller, medshare GmbH (Freigabe eMedidoc R1)
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+09.12.2010: Tony Schaller, medshare GmbH (Neues Feld Erwerbstatus eingefügt und Wechsel auf suva-emedidoc-2.0.xsl)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/Suva/eMedidoc/v2.0/suva-emedidoc-2.0.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+	<!--
+	********************************************************
+	CDA Header
+	********************************************************
+	-->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId extension="2904" root="2.16.756.5.30.1.100.2.1"/>
+	<id extension="807563C2-5146-11D5-A672-00B0D022E945" root="2.16.756.5.30.1.100.2.1"/>
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Behandlungsmeldung"/>
+	<!-- Regel CDLN: Als Codesystem für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
+	<title>Behandlungsmeldung</title>
+	<effectiveTime value="20081017"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="de-CH"/>
+	<setId extension="807563C2-5146-11D5-A672-00B0D022E945" root="2.16.756.5.30.1.1.1.1"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="5.12006.08.3" root="2.16.756.5.30.1.100.3.1.1"/>
+			<!-- Suva OID für Schaden-Nr -->
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<!-- OID für alte AHV-Nr -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19381212"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Allzeit Bereit, Gruppenpraxis CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value="20081017"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:bereit@gruppenpraxis.ch"/>
+			<telecom use="PUB" value="http:www.gruppenpraxis.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Gruppenpraxis CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value="20081017"/>
+		<assignedEntity>
+			<id extension="2" root="2.16.756.888888.2.1"/>
+			<assignedPerson>
+				<name>
+					Sk
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<id extension="A05" root="2.16.756.5.30.1.100.1.1"/>
+			<informationRecipient>
+				<name>Suva Agentur Aarau</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetName>Rain</streetName>
+					<houseNumber>35</houseNumber>
+					<postalCode>5001</postalCode>
+					<city>Aarau</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<participant typeCode='IND'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<!-- Suva Kundennummer extern -->
+			<id extension='603-15515.7' root='2.16.756.5.30.1.100.3.7.1'/>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<associatedPerson>
+				<name>
+					<given>Kurt</given>
+					<family>Chef</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Brötligeber AG</name>
+				<telecom use="HP" value="tel:+41.44.555.66.77"/>
+				<telecom use="PUB" value="mailto:kurt.chef@broetligeber.ch"/>
+				<addr use="WP">
+					<streetAddressLine>Lohnbüro</streetAddressLine>
+					<streetAddressLine>Postfach</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Zürich</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			Behandlungsmeldung
+			********************************************************
+			-->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoBehandlungsmeldung"/>
+					<title>Schadeninformationen</title>
+					<text>
+						<content styleCode="Italics">
+							Umsetzungshinweis für CDA Template: Section zwingend und voll strukturiert.<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Schadendatum</td>
+									<td>17.10.2008</td>
+								</tr>
+								<tr>
+									<td>Behandlungsdatum</td>
+									<td>17.10.2008</td>
+								</tr>
+								<tr>
+									<td>Wahrnehmung</td>
+									<td>Der Patient ist beim Reinigen von Scheiben von der Leiter gefallen</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedidoc Observation Template: Schadeninformationen -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoMinL3"/>
+							<!-- Schadennummer -->
+							<id nullFlavor="UNK" />
+							<!-- Anmeldeart -->
+							<code nullFlavor="UNK" />
+							<!-- Schadendatum -->
+							<effectiveTime value="20080821"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- eMedidoc Encounter Template: Behandlung -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehandlungsmeldungL3"/>
+							<!-- Wahrnehmung -->
+							<text>Der Patient ist beim Reinigen von Scheiben von der Leiter gefallen</text>
+							<!-- Datum und evtl. Zeit der Erstbehandlung -->
+							<effectiveTime value="20081017"/>
+							<!-- Erstbehandlung durch ausfüllenden Arzt -->
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<title>Bemerkungen</title>
+					<text>
+						<content styleCode="Italics">
+							Umsetzungshinweis für CDA Template: Section zwingend. Erwerbstatus strukturiert. Bemerkungen als Freitext. Wenn keine Bemerkungen, dann 'Keine' angeben.<br/>
+							<br/>
+						</content>
+						<content>Keine<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Erwerbstatus:</td>
+									<td>
+										Erwerbstätig
+										<content styleCode="Italics"> | Arbeitslos | Anderer Status</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Erwerbstatus -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
+							<!-- Strukturierte Angabe "Erwerbstatus" -->
+							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
