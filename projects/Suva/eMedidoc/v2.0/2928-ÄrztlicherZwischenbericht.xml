@@ -8,10 +8,11 @@ History:
 22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
 11.05.2010: Tony Schaller, medshare GmbH (Definitive Formularnummer Suva eingetragen)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+09.12.2010: Tony Schaller, medshare GmbH (Neues Feld Erwerbstatus eingefügt und Wechsel auf suva-emedidoc-2.0.xsl)
 
 ********************************************************
 -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/Suva/eMedidoc/v2.0/suva-emedidoc-2.0.xsl'?>
 <?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
 <ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
@@ -175,9 +176,6 @@ History:
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfo"/>
 					<title>Schadeninformationen</title>
 					<text>
-						<content styleCode="Italics">Umsetzungshinweis für Applikation: Der Header und das Schadendatum sollen bereits vorausgefüllt sein.<br />Umsetzungshinweis für CDA Template: Section zwingend und voll strukturiert<br />
-							<br />
-						</content>
 						<table>
 							<tbody>
 								<tr>
@@ -207,9 +205,6 @@ History:
 					<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
 					<title>Diagnosen</title>
 					<text>
-						<content styleCode="Italics">Umsetzungshinweis für Applikation: Die Liste der bisherigen Einträge soll bereits vorausgefüllt sein. Nur Einträge hinzufügen, aber nicht bestehende Einträge ändern/löschen.<br />Umsetzungshinweis für CDA Template: Section zwingend - soll auf neuem, wiederverwendbarem Diagnose-Section Template basieren, Liste (0..* Einträge). Diagnose als Freitext zwingend. Optional kann dazu ein Code inkl. dessen Codesystem angegeben werden<br />
-							<br />
-						</content>
 						<table>
 							<tbody>
 								<tr>
@@ -294,9 +289,6 @@ History:
 					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
 					<title>Verlauf</title>
 					<text>
-						<content styleCode="Italics">Umsetzungshinweis für Applikation: Die Liste der bisherigen Einträge soll bereits vorausgefüllt sein. Nur Einträge hinzufügen, aber nicht bestehende Einträge ändern/löschen. Beim Ausfüllen des Formulars ist das Hinzufügen eines neuen Verlaufseintrages zwingend.<br />Umsetzungshinweis für CDA Template: Section zwingend ("Bish. Verlauf" und "unfallremde Faktoren": Codesystem/OID für Codierung notwendig). Inhalt zu den Entries Freitext<br />
-							<br />
-						</content>
 						<table>
 							<tbody>
 								<tr>
@@ -358,9 +350,6 @@ History:
 					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Therapie"/>
 					<title>Therapie</title>
 					<text>
-						<content styleCode="Italics">Umsetzungshinweis für CDA Template: Section zwingend. Einträge als Freitext<br />
-							<br />
-						</content>
 						<table>
 							<tbody>
 								<tr>
@@ -413,9 +402,6 @@ History:
 					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<title>Arbeitsfähigkeit</title>
 					<text>
-						<content styleCode="Italics">Umsetzungshinweis für Applikation: Die Liste der bisherigen Einträge soll bereits vorausgefüllt sein. Nur Einträge hinzufügen, aber nicht bestehende Einträge ändern/löschen.<br />Umsetzungshinweis für CDA Template: Section zwingend - soll auf neuem, wiederverwendbarem Arbeitsfähigkeit-Section Template basieren, Liste (1..* Einträge). Voll strukturiert (könnte recht komplizierte HL7 Statements geben)<br />
-							<br />
-						</content>
 						<table>
 							<tbody>
 								<tr>
@@ -510,94 +496,101 @@ History:
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschluss"/>
 					<title>Behandlungsabschluss</title>
 					<text>
-						<content styleCode="Italics">Umsetzungshinweis für Applikation:<br />- Bei "Beim Betrieb um Zuweisung geeigneter Arbeit anfragen"=Ja: Bei Suva soll der Prozess zur Anforderung der Arbeitsplatzbeschreibung ausgelöst werden.<br />
-							- Bei "Zu erwartende, bleibende Nachteile"=Ja: Bei Suva soll der Prozess zur Anforderung der Komplexfallmeldung ausgelöst werden.<br />
-							Umsetzungshinweis für CDA Template: Section optional. Wenn vorhanden, dann voll strukturiert (Codesystem/OID für defintiv/geplant notwendig). Heutige Angabe "geplant in Wochen" wird neu mit einem Datum spezifiziert<br />
-							<br />
-						</content>
 						<table>
 							<tbody>
 								<tr>
 									<td>Behandlungsabschluss:</td>
 									<td>12.12.2008</td>
-								<td>definitiv <content styleCode="Italics"> | geplant</content>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<br />
-				Weitere Angaben:
-				<table>
-					<tbody>
-						<tr>
-							<td>Beim Betrieb um Zuweisung geeigneter Arbeit anfragen:</td>
-							<td>Nein</td>
-							<td>
-								<content styleCode="Italics"> | Ja</content>
-							</td>
-						</tr>
-						<tr>
-							<td>Zu erwartende, bleibende Nachteile:</td>
-							<td>Nein</td>
-							<td>
-								<content styleCode="Italics"> | Ja</content>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</text>
-			<entry>
-				<!-- eMedidoc Encounter Template: Behandlungsabschluss (moodCode="EVN": definitiv, moodCode="INT": geplant) -->
-				<encounter classCode="ENC" moodCode="EVN">
-					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschlussL3"/>
-					<code code="8649-6" codeSystem="2.16.840.1.113883.6.1" />
-					<effectiveTime>
-						<low nullFlavor='NA'/>
-						<high value='20081212'/>
-					</effectiveTime>
-					<performer>
-						<assignedEntity>
-							<id nullFlavor="UNK" />
-							<representedOrganization>
-								<name>Musterspital</name>
-								<addr use="WP">
-									<streetName>Hospitalgasse</streetName>
-									<houseNumber>2</houseNumber>
-									<postalCode>8888</postalCode>
-									<city>Musterhausen</city>
-								</addr>
-							</representedOrganization>
-						</assignedEntity>
-					</performer>
-				</encounter>
-			</entry>
-			<entry>
-				<!-- Zuweisung Arbeit -->
-				<procedure moodCode="EVN" classCode="PROC">
-					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.ZuweisungArbeit"/>
-					<!-- Strukturierte Angabe -->
-					<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
-				</procedure>
-			</entry>
-			<entry>
-				<!-- Bleibende Nachteile -->
-				<observation moodCode="EVN" classCode="OBS">
-					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BleibendeNachteile"/>
-					<!-- Strukturierte Angabe -->
-					<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
-				</observation>
-			</entry>
-		</section>
+									<td>definitiv</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Weitere Angaben:
+						<table>
+							<tbody>
+								<tr>
+									<td>Beim Betrieb um Zuweisung geeigneter Arbeit anfragen:</td>
+									<td>Nein</td>
+								</tr>
+								<tr>
+									<td>Zu erwartende, bleibende Nachteile:</td>
+									<td>Nein</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedidoc Encounter Template: Behandlungsabschluss (moodCode="EVN": definitiv, moodCode="INT": geplant) -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschlussL3"/>
+							<code code="8649-6" codeSystem="2.16.840.1.113883.6.1" />
+							<effectiveTime>
+								<low nullFlavor='NA'/>
+								<high value='20081212'/>
+							</effectiveTime>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<representedOrganization>
+										<name>Musterspital</name>
+										<addr use="WP">
+											<streetName>Hospitalgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<postalCode>8888</postalCode>
+											<city>Musterhausen</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+					<entry>
+						<!-- Zuweisung Arbeit -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.ZuweisungArbeit"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Bleibende Nachteile -->
+						<observation moodCode="EVN" classCode="OBS">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BleibendeNachteile"/>
+							<!-- Strukturierte Angabe -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<title>Bemerkungen</title>
+					<text>
+						<content>Keine<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Erwerbstatus:</td>
+									<td>Erwerbstätig</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Erwerbstatus -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
+							<!-- Strukturierte Angabe "Erwerbstatus" -->
+							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
 	</component>
-	<component>
-		<section>
-			<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
-			<title>Bemerkungen</title>
-			<text>
-				<content>Keine</content>
-			</text>
-		</section>
-	</component>
-</structuredBody>
-</component>
 </ClinicalDocument>
