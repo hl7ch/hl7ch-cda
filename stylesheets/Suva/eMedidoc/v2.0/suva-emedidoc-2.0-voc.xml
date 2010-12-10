@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Codetabellen für mehrsprachiges Suva eMedidoc Stylesheet
+
+History:
+09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+
+********************************************************
+-->
+<localization>
+	
+  <text language="de-CH" value="Suva" displayName="Suva"/>
+  <text language="fr-CH" value="Suva" displayName="Suva"/>
+  <text language="it-CH" value="Suva" displayName="Suva"/>
+
+</localization>
