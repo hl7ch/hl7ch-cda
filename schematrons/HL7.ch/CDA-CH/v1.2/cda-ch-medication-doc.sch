@@ -10,6 +10,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 01.04.2010: Stefan Schenk, medshare GmbH (XHTML-Dokumentation)
 09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
+11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 
 ********************************************************
 -->
@@ -21,12 +22,12 @@ reusable templates
 ********************************************************
 -->
 <!-- vhitg patterns -->
-<!ENTITY ent-hl7-vhitg-ruleset-150 SYSTEM '../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset-150.ent'>
+<!ENTITY ent-hl7-vhitg-ruleset SYSTEM '../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset.ent'>
 
 <!-- cda-ch patterns -->
-<!ENTITY ent-hl7-cda-ch-1.2 SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.ent'>
-<!ENTITY ent-hl7-cda-ch-1.2_medication-section SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2_medication-section.ent'>
-<!ENTITY ent-hl7-cda-ch-1.2_medication-doc SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2_medication-doc.ent'>
+<!ENTITY ent-hl7-cda-ch SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch.ent'>
+<!ENTITY ent-hl7-cda-ch_medication-section SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch_medication-section.ent'>
+<!ENTITY ent-hl7-cda-ch_medication-doc SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch_medication-doc.ent'>
 
 <!-- ihe patterns -->
 <!-- Arbeitgeber -->
@@ -48,20 +49,20 @@ reusable templates
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">entités référencées</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>cda-ch-1.2_medication-section.ent</xhtml:li>
-		<xhtml:li>cda-ch-1.2_medication-doc.ent</xhtml:li>
+		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
+		<xhtml:li>cda-ch_medication-doc.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</xhtml:li>
-		<xhtml:li>cda-ch-1.2.ent</xhtml:li>
-		<xhtml:li>vhitg-ruleset-150.ent</xhtml:li>
+		<xhtml:li>cda-ch.ent</xhtml:li>
+		<xhtml:li>vhitg-ruleset.ent</xhtml:li>
 	</xhtml:ul>
 
 	<!-- reusable templates -->
-	&ent-hl7-cda-ch-1.2_medication-section;
-	&ent-hl7-cda-ch-1.2_medication-doc;
+	&ent-hl7-cda-ch_medication-section;
+	&ent-hl7-cda-ch_medication-doc;
 	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;
 	&ent-ihe-pcc-1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2;
-	&ent-hl7-cda-ch-1.2;
-	&ent-hl7-vhitg-ruleset-150;
+	&ent-hl7-cda-ch;
+	&ent-hl7-vhitg-ruleset;
 	
 </schema>

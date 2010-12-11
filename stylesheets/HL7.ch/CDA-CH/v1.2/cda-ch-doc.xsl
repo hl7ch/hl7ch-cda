@@ -30,7 +30,7 @@ Created by oliver egger, visionary ag
 		    <title><xsl:value-of select="xhtml:h1[@lang=$language or count(@lang)=0]"/></title>
 		    </xsl:if>
 		    <meta http-equiv = "content-type" content = "application/xhtml+xml; charset=UTF-8" />
- 		    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"></link>  
+ 		    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-doc.css"></link>  
 		</head>
 	    <body>
 			<xsl:apply-templates />
@@ -80,15 +80,15 @@ Created by oliver egger, visionary ag
 			<table class="head">
 			    <thead>
 				<tr>
-					<th class="label1"><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/></th><th><xsl:value-of select="xhtml:ul/@id" /></th>
+					<th class="label1"><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/></th><th><xsl:value-of select="xhtml:ul/@id" /></th>
 				</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="label1"><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/></td><td><xsl:value-of select="xhtml:ul/xhtml:li[@class='filename']" /></td>
+						<td class="label1"><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/></td><td><xsl:value-of select="xhtml:ul/xhtml:li[@class='filename']" /></td>
 					</tr>
 					<tr>
-						<td class="label1"><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/></td><td><xsl:value-of select="xhtml:ul/xhtml:li[@class='version']" /></td>
+						<td class="label1"><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/></td><td><xsl:value-of select="xhtml:ul/xhtml:li[@class='version']" /></td>
 					</tr>
 				</tbody>
 			</table>
@@ -105,9 +105,9 @@ Created by oliver egger, visionary ag
 		<table class="body" width="100%">
 		    <thead>
 			<tr>
-				<th class="label1" width="10%"><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Rule']/@displayName"/></th>
+				<th class="label1" width="10%"><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Rule']/@displayName"/></th>
                 <th class="value1"><xsl:value-of select="@id" /></th>
-                <th class="label1" width="10%"><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Role']/@displayName"/></th>
+                <th class="label1" width="10%"><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Role']/@displayName"/></th>
                 <th class="value2" width="10%">
                     <xsl:choose>
                         <xsl:when test="string(@role)"><xsl:value-of select="@role"/></xsl:when>
@@ -118,7 +118,7 @@ Created by oliver egger, visionary ag
 			</thead>
 			<tbody>
 				<tr>
-					<td class="label1"><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Assert']/@displayName"/></td>
+					<td class="label1"><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Assert']/@displayName"/></td>
                     <td colspan="3"><xsl:value-of select="@test" /></td>
 				</tr>
 			</tbody>
@@ -130,7 +130,7 @@ Created by oliver egger, visionary ag
 	
 	<xsl:template match="xhtml:p[@lang=$language or count(@lang)=0]" mode="rulestranslated">
 		<tr>
-			<td><xsl:value-of select="document('cda-ch-1.2-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/></td>
+			<td><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/></td>
 			<td colspan="3"><xsl:value-of select="."/><xsl:apply-templates  mode="rulestranslated" /></td>
 		</tr>
 	</xsl:template>

@@ -9,6 +9,7 @@ History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 15.03.2010: Stefan Schenk, medshare GmbH (XHTML-Dokumentation)
+11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 
 ********************************************************
 -->
@@ -20,11 +21,11 @@ reusable templates
 ********************************************************
 -->
 <!-- vhitg patterns -->
-<!ENTITY ent-hl7-vhitg-ruleset-150 SYSTEM '../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset-150.ent'>
+<!ENTITY ent-hl7-vhitg-ruleset SYSTEM '../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset.ent'>
 
 <!-- cda-ch patterns -->
-<!ENTITY ent-hl7-cda-ch-1.2 SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.ent'>
-<!ENTITY ent-hl7-cda-ch-1.2_medication-section SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2_medication-section.ent'>
+<!ENTITY ent-hl7-cda-ch SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch.ent'>
+<!ENTITY ent-hl7-cda-ch_medication-section SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch_medication-section.ent'>
 
 <!--
 ********************************************************
@@ -32,7 +33,7 @@ project templates
 ********************************************************
 -->
 <!-- reusable SVV templates -->
-<!ENTITY ent-project-svv-kzbt-20090228 SYSTEM 'svv-kzbt-20090228.ent'>
+<!ENTITY ent-project-svv-kzbt SYSTEM 'svv-kzbt.ent'>
 
 ]
 >
@@ -45,18 +46,18 @@ project templates
 	<!-- documentation of external references -->
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>vhitg-ruleset-150.ent</xhtml:li>
-		<xhtml:li>cda-ch-1.2.ent</xhtml:li>
-		<xhtml:li>cda-ch-1.2_medication-section.ent</xhtml:li>
-		<xhtml:li>svv-kzbt-20090228.ent</xhtml:li>
+		<xhtml:li>vhitg-ruleset.ent</xhtml:li>
+		<xhtml:li>cda-ch.ent</xhtml:li>
+		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
+		<xhtml:li>svv-kzbt.ent</xhtml:li>
 	</xhtml:ul>
 
 	<!-- reusable templates -->
-	&ent-hl7-vhitg-ruleset-150;
-	&ent-hl7-cda-ch-1.2;
-	&ent-hl7-cda-ch-1.2_medication-section;
+	&ent-hl7-vhitg-ruleset;
+	&ent-hl7-cda-ch;
+	&ent-hl7-cda-ch_medication-section;
 	
 	<!-- project specific templates -->
-	&ent-project-svv-kzbt-20090228;
+	&ent-project-svv-kzbt;
 	
 </schema>

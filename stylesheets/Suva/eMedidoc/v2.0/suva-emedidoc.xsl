@@ -11,10 +11,10 @@ History:
 -->
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:import href ="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.xsl"/>
+	<xsl:import href ="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl"/>
 
 	<xsl:variable name="organizationName">
-		<xsl:value-of select="document('suva-emedidoc-2.0-voc.xml')/localization/text[@language=$language and @value='Suva']/@displayName"/>
+		<xsl:value-of select="document('suva-emedidoc-voc.xml')/localization/text[@language=$language and @value='Suva']/@displayName"/>
 	</xsl:variable>
 
 </xsl:stylesheet>

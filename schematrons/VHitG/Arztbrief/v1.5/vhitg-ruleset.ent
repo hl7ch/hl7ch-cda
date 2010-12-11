@@ -6,47 +6,48 @@ Language: de-CH
 
 History:
 30.12.2009: Tony Schaller, medshare GmbH (Übernahme von supporting documents des VHitG und ein paar Anpassungen - alle kommentiert)
+11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 
 ********************************************************
 -->
 <pattern name="GENC ClinicalDocument General Constraints">
 	<rule id="general-addr" context="cda:addr[@nullFlavor]">
 		<assert id="null-or-no-content" test="normalize-space(.) = ''">
-			vhitg-ruleset-150.ent: When the <emph>addr</emph> element is null, it should not	have content.
+			vhitg-ruleset.ent: When the <emph>addr</emph> element is null, it should not	have content.
 		</assert>
 	</rule>
 	<rule id="general-addr-1" context="cda:addr[normalize-space(.) = '']">
 		<assert id="empty-implies-null" test="not(string(@nullFlavor)='')">
-			vhitg-ruleset-150.ent: When the <emph>addr</emph> element is empty, it must have a value for <emph>nullFlavor</emph>.
+			vhitg-ruleset.ent: When the <emph>addr</emph> element is empty, it must have a value for <emph>nullFlavor</emph>.
 		</assert>
 	</rule>
 	<rule id="general-time-req" context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
 		<assert test="(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value) &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z')) &gt; 7">
-			vhitg-ruleset-150.ent: The <emph>time</emph> element must be precise at least to the day.
+			vhitg-ruleset.ent: The <emph>time</emph> element must be precise at least to the day.
 		</assert>
 	</rule>
 	<rule id="cda-id-oid" context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
 		<assert test="translate(@root, '0123456789.', '') = ''">
-			vhitg-ruleset-150.ent: Characters that are not in the set 0-9 or . are not present in a valid OID.
+			vhitg-ruleset.ent: Characters that are not in the set 0-9 or . are not present in a valid OID.
 		</assert>
 		<assert test="not(substring(@root, 1, 1) = '.') and not(substring(@root, string-length(@root), 1) = '.')">
-			vhitg-ruleset-150.ent: The first and last characters of an OID must be a digit.
+			vhitg-ruleset.ent: The first and last characters of an OID must be a digit.
 		</assert>
 		<assert test="not(contains(@root,'..'))">
-			vhitg-ruleset-150.ent: A properly formatted OID should not contain two . characters without any intervening digits
+			vhitg-ruleset.ent: A properly formatted OID should not contain two . characters without any intervening digits
 		</assert>
 		<assert test="string-length(@root) &lt; 65">
-			vhitg-ruleset-150.ent: An OID must be shorter than 65 characters.
+			vhitg-ruleset.ent: An OID must be shorter than 65 characters.
 		</assert>
 	</rule>
 	<rule id="cda-id" context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 		<assert test="false()">
-			vhitg-ruleset-150.ent: The root attribute of the id element must be a syntactically correct OID.
+			vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
 		</assert>
 	</rule>
 	<rule id="general-id" context="cda:id">
 		<assert id="null-or-no-root-attribute" test="./@nullFlavor or ./@root">
-			vhitg-ruleset-150.ent: When the <emph>id</emph> element is not null, at least a root attribute must be present.
+			vhitg-ruleset.ent: When the <emph>id</emph> element is not null, at least a root attribute must be present.
 		</assert>
 	</rule>
 </pattern>
@@ -61,7 +62,7 @@ nen aufweisen.
 <pattern name="NMSP Namespaces">
 	<rule id="cda-root" context="/*">
 		<assert test="self::cda:ClinicalDocument">
-			vhitg-ruleset-150.ent: The root of a Clinical Document must be a <emph>ClinicalDocument</emph> element from the <emph>urn:hl7-org-v3</emph> namespace.
+			vhitg-ruleset.ent: The root of a Clinical Document must be a <emph>ClinicalDocument</emph> element from the <emph>urn:hl7-org-v3</emph> namespace.
 		</assert>
 	</rule>
 </pattern>
@@ -75,7 +76,7 @@ kations-Informationen (telecom) aufweisen.
 	<!-- abstract rules -->
 	<rule id="nameTest" abstract="true">
 		<assert test="cda:name">
-		vhitg-ruleset-150.ent: A Person (<name/>) must have a name
+		vhitg-ruleset.ent: A Person (<name/>) must have a name
 	</assert>
 </rule>
 <!-- rules in context -->
@@ -108,7 +109,7 @@ Name is already handled in person pattern
 	-->
 	<rule id="addresTestPersonOrRole" abstract="true">
 		<assert test="../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'">
-		vhitg-ruleset-150.ent: A Healthcare professional (<name/>) must have a non-empty addres associated with the role / scoping organization or the attribute 'nullFlavor' must be set to 'UNK'.
+		vhitg-ruleset.ent: A Healthcare professional (<name/>) must have a non-empty addres associated with the role / scoping organization or the attribute 'nullFlavor' must be set to 'UNK'.
 	</assert>
 </rule>
 
@@ -138,12 +139,12 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 <pattern name="ORGC Organization">
 	<rule id="nameTestOrg" abstract="true">
 		<assert test="cda:name">
-		vhitg-ruleset-150.ent: An Organization (<name/>) must have a name.
+		vhitg-ruleset.ent: An Organization (<name/>) must have a name.
 	</assert>
 </rule>
 <rule id="addresTestOrg" abstract="true">
 	<assert test="cda:addr/*">
-	vhitg-ruleset-150.ent: An Organization (<name/>) must have a non-empty addres.
+	vhitg-ruleset.ent: An Organization (<name/>) must have a non-empty addres.
 </assert>
 </rule>
 
@@ -173,13 +174,13 @@ Separatorzeichen nur Bindestrich –, Punkte . oder Klammern ( ) verwenden.
 	<!-- Basic datatype, no need for abstract rules -->
 	<rule context="cda:telecom">
 		<assert test="(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:' or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor">
-			vhitg-ruleset-150.ent: Telecom values must begin with 'tel:' or 'fax:' or 'mailto:'.
+			vhitg-ruleset.ent: Telecom values must begin with 'tel:' or 'fax:' or 'mailto:'.
 		</assert>
 		<assert id="telcom-regex" test="(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+0123456789()-.',''),translate(substring(@value,6),'0123456789()-.',''))) = 0">
-			vhitg-ruleset-150.ent: Telephone/fax numbers must match the regular expression pattern tel:\+?[-0-9().]
+			vhitg-ruleset.ent: Telephone/fax numbers must match the regular expression pattern tel:\+?[-0-9().]
 		</assert>
 		<assert id="telcom-has-digit" test="(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+()-.',''),translate(substring(@value,6),'()-.',''))) &gt; 0">
-			vhitg-ruleset-150.ent: At least one dialing digit must be present in the telephone/fax number after visual separators are removed.
+			vhitg-ruleset.ent: At least one dialing digit must be present in the telephone/fax number after visual separators are removed.
 		</assert>
 	</rule>
 </pattern>
@@ -221,25 +222,25 @@ component               CDA Body 1..1 SCHEMA
 <pattern name="HEAD General Header constraints">
 	<rule context="cda:ClinicalDocument">
 		<assert test="not(cda:realmCode)">
-			vhitg-ruleset-150.ent: The <emph>realmCode</emph> element is not allowed.
+			vhitg-ruleset.ent: The <emph>realmCode</emph> element is not allowed.
 		</assert>
 		<!-- 29.11.2009 ts: auskommentiert, da z.B. IHE PHR Extract mehrere Template IDs erfordert
 		<assert test="count(cda:templateId)&lt;2">
-		vhitg-ruleset-150.ent: The <emph>templateId</emph> element may only appear once.
+		vhitg-ruleset.ent: The <emph>templateId</emph> element may only appear once.
 		</assert>
 		-->
 		<assert test="not(cda:copyTime)">
-			vhitg-ruleset-150.ent: The <emph>copyTime</emph> element is not allowed.
+			vhitg-ruleset.ent: The <emph>copyTime</emph> element is not allowed.
 		</assert>
 		<assert test="not(cda:informant)">
-			vhitg-ruleset-150.ent: The <emph>informant</emph> association element is not allowed.
+			vhitg-ruleset.ent: The <emph>informant</emph> association element is not allowed.
 		</assert>
 		<assert test="not(cda:inFulfillmentOf)">
-			vhitg-ruleset-150.ent: The <emph>inFulfillmentOf</emph> association element is not allowed.
+			vhitg-ruleset.ent: The <emph>inFulfillmentOf</emph> association element is not allowed.
 		</assert>
 		<!-- 29.11.2009 ts: auskommentiert, da z.B. IHE PHR Extract genau dies erfodert
 		<assert test="not(cda:documentationOf)">
-		vhitg-ruleset-150.ent: The <emph>documentationOf</emph> association element is not allowed.
+		vhitg-ruleset.ent: The <emph>documentationOf</emph> association element is not allowed.
 		</assert>
 		-->
 	</rule>
@@ -254,7 +255,7 @@ zugeben.
 	<!-- Single instance, no need for abstract rules -->
 	<rule context="cda:ClinicalDocument/cda:typeId">
 		<assert test="normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'">
-			vhitg-ruleset-150.ent: The <emph>extension</emph> attribute of the <emph>typeId</emph> element must be <emph>POCD_HD000040</emph> and the <emph>root</emph> attribute must be <emph>2.16.840.1.113883.1.3</emph>.
+			vhitg-ruleset.ent: The <emph>extension</emph> attribute of the <emph>typeId</emph> element must be <emph>POCD_HD000040</emph> and the <emph>root</emph> attribute must be <emph>2.16.840.1.113883.1.3</emph>.
 		</assert>
 	</rule>
 </pattern>
@@ -265,7 +266,7 @@ Regel IIRT: Das @root Attribut ist bei Instanzidentifikatoren verpflichtend anzu
 	<!-- Basic datatype, no need for abstract rules -->
 	<rule context="cda:id">
 		<assert test="@root or @nullFlavor">
-			vhitg-ruleset-150.ent: Instance Identifiers must at least contain a <emph>root</emph> attribute.
+			vhitg-ruleset.ent: Instance Identifiers must at least contain a <emph>root</emph> attribute.
 		</assert>
 	</rule>
 </pattern>
@@ -280,10 +281,10 @@ verwenden.
 	<!-- Single instance, no need for abstract rules -->
 	<rule context="cda:ClinicalDocument/cda:code">
 		<assert test="@code and @codeSystem">
-			vhitg-ruleset-150.ent: The code element of the ClinicalDocument must have a <emph>code</emph> and <emph>codeSystem</emph>.
+			vhitg-ruleset.ent: The code element of the ClinicalDocument must have a <emph>code</emph> and <emph>codeSystem</emph>.
 		</assert>
 		<assert test="normalize-space(@codeSystem)='2.16.840.1.113883.6.1'">
-			vhitg-ruleset-150.ent: The <emph>OID root</emph> of ClinicalDocument.code must point to <emph>LOINC (2.16.840.1.113883.6.1)</emph>
+			vhitg-ruleset.ent: The <emph>OID root</emph> of ClinicalDocument.code must point to <emph>LOINC (2.16.840.1.113883.6.1)</emph>
 		</assert>
 	</rule>
 </pattern>
@@ -297,7 +298,7 @@ Datum mit Jahr, Monat und Tag angegeben sein.
 	<!-- Single instance, no need for abstract rules -->
 	<rule context="cda:ClinicalDocument/cda:effectiveTime">
 		<assert test="string-length(@value)&gt;7">
-			vhitg-ruleset-150.ent: The <emph>effectiveTime</emph> element of the ClinicalDocument must be at least specific to the day.
+			vhitg-ruleset.ent: The <emph>effectiveTime</emph> element of the ClinicalDocument must be at least specific to the day.
 		</assert>
 	</rule>
 </pattern>
@@ -310,18 +311,18 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
 <pattern name="CDLC ClinicalDocument languageCode">
 	<rule id="cda-languageCode" context="/cda:ClinicalDocument">
 		<assert test="cda:languageCode">
-			vhitg-ruleset-150.ent: The <emph>languageCode</emph> element must be present.
+			vhitg-ruleset.ent: The <emph>languageCode</emph> element must be present.
 		</assert>
 	</rule>
 	<rule id="cda-languageCode-format" context="/cda:ClinicalDocument/cda:languageCode">
 		<assert test="(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code) = 2">
-			vhitg-ruleset-150.ent: The language code must be in the form <emph>nn</emph>, or <emph>nn-CC</emph>.
+			vhitg-ruleset.ent: The language code must be in the form <emph>nn</emph>, or <emph>nn-CC</emph>.
 		</assert>
-		<assert test="substring(@code,1,2) = document('../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset-150-voc.xml')/systems/system[@codeSystemName='ISO639-1']/code/@value">
-			vhitg-ruleset-150.ent: The language must be a legal ISO-639-1 language code in lower case.
+		<assert test="substring(@code,1,2) = document('../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset-voc.xml')/systems/system[@codeSystemName='ISO639-1']/code/@value">
+			vhitg-ruleset.ent: The language must be a legal ISO-639-1 language code in lower case.
 		</assert>
-		<assert test="string-length(@code) = 2 or substring(@code,4,2) = document('../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset-150-voc.xml')/systems/system[@codeSystemName='ISO3166-1']/code/@value">
-			vhitg-ruleset-150.ent: The country code portion, if present must be an ISO-3166 country code in upper case.
+		<assert test="string-length(@code) = 2 or substring(@code,4,2) = document('../../../../schematrons/VHitG/Arztbrief/v1.5/vhitg-ruleset-voc.xml')/systems/system[@codeSystemName='ISO3166-1']/code/@value">
+			vhitg-ruleset.ent: The country code portion, if present must be an ISO-3166 country code in upper case.
 		</assert>
 	</rule>
 </pattern>
@@ -333,7 +334,7 @@ nem Patienten (entity) anzugeben.
 <pattern name="PATR Patient Role">
 	<rule context="cda:recordTarget">
 		<assert test="count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1">
-			vhitg-ruleset-150.ent: There must be exactly one <emph>patientRole</emph> element containing exactly one patient element
+			vhitg-ruleset.ent: There must be exactly one <emph>patientRole</emph> element containing exactly one patient element
 		</assert>
 	</rule>
 </pattern>
@@ -345,7 +346,7 @@ country beim Geburtsort ist verpflichtend.
 <pattern name="BRCC Birthplace">
 	<rule context="cda:patient/cda:birthplace/cda:place/cda:addr">
 		<assert test="cda:city or cda:country">
-			vhitg-ruleset-150.ent: for the <emph>birthplace</emph> at least country or city must be present.
+			vhitg-ruleset.ent: for the <emph>birthplace</emph> at least country or city must be present.
 		</assert>
 	</rule>
 </pattern>
@@ -373,22 +374,22 @@ addr, muss bei einer beteiligten Person vorliegen.
 <pattern name="PTNO PTEC PTPH PTPR PTTL Participants">
 	<rule context="cda:participant">
 		<assert test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK' and cda:associatedentity/cda:associatedPerson)">
-			vhitg-ruleset-150.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='NOK', an <emph>associatedPerson</emph> element must be present.
+			vhitg-ruleset.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='NOK', an <emph>associatedPerson</emph> element must be present.
 		</assert>
 		<assert test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON' and cda:associatedentity/cda:associatedPerson)">
-			vhitg-ruleset-150.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='ECON', an <emph>associatedPerson</emph> element must be present.
+			vhitg-ruleset.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='ECON', an <emph>associatedPerson</emph> element must be present.
 		</assert>
 		<assert test="not(normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD') or (normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD' and cda:associatedentity/cda:scopingOrganization)">
-			vhitg-ruleset-150.ent: When the particapation.typecode='HLD' and the associatedEntityClasscode='POLHOLD', a <emph>scopingOrganization</emph> element must be present.
+			vhitg-ruleset.ent: When the particapation.typecode='HLD' and the associatedEntityClasscode='POLHOLD', a <emph>scopingOrganization</emph> element must be present.
 		</assert>
 		<assert test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS' and cda:associatedentity/cda:associatedPerson)">
-			vhitg-ruleset-150.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='PRS', an <emph>associatedPerson</emph> element must be present.
+			vhitg-ruleset.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='PRS', an <emph>associatedPerson</emph> element must be present.
 		</assert>
 	</rule>
 	<!-- 29.11.2009 ts: auskommentiert, da gemäss POCD_MT000040.xsd beim Datentyp POCD_MT000040.Person gar keine addr oder telecom erlaubt sind...
 	<rule context="cda:participant/cda:associatedEntity/cda:associatedPerson">
 	<assert test="../cda:addr or ../cda:telecom">
-	vhitg-ruleset-150.ent: Participating persons must have an <emph>addr</emph> or a <emph>telecom</emph> element.
+	vhitg-ruleset.ent: Participating persons must have an <emph>addr</emph> or a <emph>telecom</emph> element.
 	</assert>
 	</rule>
 	-->
@@ -412,16 +413,16 @@ In XML Schema
 <pattern name="RELD Relating documents">
 	<rule context="cda:ClinicalDocument">
 		<assert test="count(cda:relatedDocument[@typeCode='APND'])&lt;2">
-			vhitg-ruleset-150.ent: A <emph>relatedDocument</emph> with typeCode='APND' may appear only once.
+			vhitg-ruleset.ent: A <emph>relatedDocument</emph> with typeCode='APND' may appear only once.
 		</assert>
 		<assert test="count(cda:relatedDocument[@typeCode='RPLC'])&lt;2">
-			vhitg-ruleset-150.ent: A <emph>relatedDocument</emph> with typeCode='RPLC' may appear only once.
+			vhitg-ruleset.ent: A <emph>relatedDocument</emph> with typeCode='RPLC' may appear only once.
 		</assert>
 		<assert test="count(cda:relatedDocument[@typeCode='XFRM'])&lt;2">
-			vhitg-ruleset-150.ent: A <emph>relatedDocument</emph> with typeCode='XFRM' may appear only once.
+			vhitg-ruleset.ent: A <emph>relatedDocument</emph> with typeCode='XFRM' may appear only once.
 		</assert>
 		<assert test="count(cda:relatedDocument)&lt;3">
-			vhitg-ruleset-150.ent: No more than two <emph>relatedDocument</emph>s are allowed.
+			vhitg-ruleset.ent: No more than two <emph>relatedDocument</emph>s are allowed.
 		</assert>
 	</rule>
 </pattern>
@@ -432,7 +433,7 @@ Regel BDSC: Ein Clinical Document muss mindestens ein „section“-Element enth
 <pattern name="BDSC Section">
 	<rule context="cda:structuredBody">
 		<assert test="count(/cda:component/cda:section)&lt;1">
-			vhitg-ruleset-150.ent: A Clinical Document must at least contain one <emph>section</emph> element.
+			vhitg-ruleset.ent: A Clinical Document must at least contain one <emph>section</emph> element.
 		</assert>
 	</rule>
 </pattern>
@@ -443,7 +444,7 @@ Regel SCTX: Eine Sektion muss genau ein „Text“-Element enthalten.
 <pattern name="SCTX Section Text">
 	<rule context="cda:structeredbody/cda:component/cda:section">
 		<assert test="count(cda:text)=1 and string-length(normalize-space(cda:text))=0">
-			vhitg-ruleset-150.ent: A <emph>section</emph> must contain exactly one non-empty text element.
+			vhitg-ruleset.ent: A <emph>section</emph> must contain exactly one non-empty text element.
 		</assert>
 	</rule>
 </pattern>
@@ -456,7 +457,7 @@ angegeben werden.
 <pattern name="SCLN Section code">
 <rule context="cda:section/cda:code">
 <assert test="@codeSystem='2.16.840.1.113883.6.1'">
-vhitg-ruleset-150.ent: The <emph>codeSystem</emph> of the <emph>section.code</emph> element must point to <emph>LOINC (2.16.840.1.113883.6.1)</emph>.
+vhitg-ruleset.ent: The <emph>codeSystem</emph> of the <emph>section.code</emph> element must point to <emph>LOINC (2.16.840.1.113883.6.1)</emph>.
 </assert>
 </rule>
 </pattern>
@@ -474,7 +475,7 @@ zu benutzen, der alternative Code steht dann in der <translation>.
 <pattern name="SCLN Section code">
 	<rule context="cda:section/cda:code">
 		<assert test="@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0 and count(cda:translation/@codeSystem)>0 and count(cda:translation/@code)>0)">
-			vhitg-ruleset-150.ent: Rule SCLN: The <emph>codeSystem</emph> of the <emph>section.code</emph> element must point to <emph>LOINC (2.16.840.1.113883.6.1)</emph>. nullFlavor Codes must have a translation. See also "VHitG Arztbrief V1.50", page 90/91.
+			vhitg-ruleset.ent: Rule SCLN: The <emph>codeSystem</emph> of the <emph>section.code</emph> element must point to <emph>LOINC (2.16.840.1.113883.6.1)</emph>. nullFlavor Codes must have a translation. See also "VHitG Arztbrief V1.50", page 90/91.
 		</assert>
 	</rule>
 </pattern>
@@ -485,7 +486,7 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
 <pattern name="OMVL observationMedia Class">
 	<rule context="cda:observationMedia">
 		<assert test="cda:value/@xsi:type='ED'">
-			vhitg-ruleset-150.ent: <emph>observationMedia</emph> must contain a value of type ED.
+			vhitg-ruleset.ent: <emph>observationMedia</emph> must contain a value of type ED.
 		</assert>
 	</rule>
 </pattern>
@@ -500,7 +501,7 @@ ist (XML Attribut @nullFlavour ist "UNK").
 <pattern name="DGCD DGCN Diagnosis">
 	<rule context="cda:entry/cda:observation/cda:value">
 		<assert test="(@code and @codeSystem) or @nullFlavor='UNK'">
-			vhitg-ruleset-150.ent: The <emph>value</emph> element of a diagnosis must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
+			vhitg-ruleset.ent: The <emph>value</emph> element of a diagnosis must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
 		</assert>
 	</rule>
 </pattern>
@@ -509,7 +510,7 @@ Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen 
 <pattern name="DGCD DGCN Diagnosis">
 	<rule context="cda:entry/cda:observation/cda:value">
 		<assert test="@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')">
-			vhitg-ruleset-150.ent: The <emph>value</emph> element of a diagnosis must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
+			vhitg-ruleset.ent: The <emph>value</emph> element of a diagnosis must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
 		</assert>
 	</rule>
 </pattern>
@@ -521,13 +522,13 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
 <pattern name="DGQL Diagnosis">
 	<rule context="cda:entry/cda:observation/cda:value/cda:qualifier">
 		<assert test="(./cda:name) and (./cda:value)">
-			vhitg-ruleset-150.ent: The <emph>qualifier</emph> element of a diagnosis code must contain a <emph>name</emph> and a <emph>value</emph> node
+			vhitg-ruleset.ent: The <emph>qualifier</emph> element of a diagnosis code must contain a <emph>name</emph> and a <emph>value</emph> node
 		</assert>
 		<assert test="(./cda:name/@code and ./cda:name/@codeSystem)">
-			vhitg-ruleset-150.ent: The <emph>qualifier/name</emph> element of a diagnosis code must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute
+			vhitg-ruleset.ent: The <emph>qualifier/name</emph> element of a diagnosis code must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute
 		</assert>
 		<assert test="(./cda:value/@code and ./cda:value/@codeSystem)">
-			vhitg-ruleset-150.ent: The <emph>qualifier/value</emph> element of a diagnosis code must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute
+			vhitg-ruleset.ent: The <emph>qualifier/value</emph> element of a diagnosis code must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute
 		</assert>
 	</rule>
 </pattern>

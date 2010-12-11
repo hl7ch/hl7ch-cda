@@ -7,6 +7,7 @@ Language: de-CH
 History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
 09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 
 ********************************************************
 -->
@@ -14,7 +15,7 @@ History:
 
 	<!-- Entity Information -->
 	<xhtml:ul id='suva-form-2905'>
-		<xhtml:li class='filename'>2905-1.0.ent</xhtml:li>
+		<xhtml:li class='filename'>2905.ent</xhtml:li>
 		<xhtml:li class='version'>1.0</xhtml:li>
 	</xhtml:ul>
 
@@ -30,7 +31,7 @@ History:
 		-->
 
 		<!-- Formularnummer prüfen -->
-		<assert id='suva-form-2905-1.0-0001' test='//cda:templateId/@extension="2905"'>
+		<assert id='suva-form-2905-0001' test='//cda:templateId/@extension="2905"'>
 			<xhtml:p lang='de_ch'>Die Formularnummer für Suva 'Arbeitsunfähigkeitszeugnis einfach' muss lauten: 2905</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -38,7 +39,7 @@ History:
 			-->
 		</assert>
 		<!-- code prüfen -->
-		<assert id='suva-form-2905-1.0-0002' test='//cda:code/@code="51848-0"'>
+		<assert id='suva-form-2905-0002' test='//cda:code/@code="51848-0"'>
 			<xhtml:p lang='de_ch'>Der LOINC Code für das Suva 'Arbeitsunfähigkeitszeugnis einfach' muss lauten: 51848-0 (Assessment note)</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -46,7 +47,7 @@ History:
 			-->
 		</assert>
 		<!-- title prüfen -->
-		<assert id='suva-form-2905-1.0-0003' test='(//cda:title="Arbeitsunfähigkeitszeugnis einfach" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2905-0003' test='(//cda:title="Arbeitsunfähigkeitszeugnis einfach" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Arbeitsunfähigkeitszeugnis einfach'</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -54,7 +55,7 @@ History:
 			-->
 		</assert>
 		<!-- Arbeitgeber prüfen -->
-		<assert id='suva-form-2905-1.0-0004' test='//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]'>
+		<assert id='suva-form-2905-0004' test='//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]'>
 			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis einfach' muss einen Arbeitgeber enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -67,28 +68,28 @@ History:
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
 		-->
-		<assert id='suva-form-2905-1.0-0005' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.ArbeitsfähigkeitList"'>
+		<assert id='suva-form-2905-0005' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.ArbeitsfähigkeitList"'>
 			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis einfach' eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2905-1.0-0006' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.AktuelleArbeitsfähigkeit"'>
+		<assert id='suva-form-2905-0006' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.AktuelleArbeitsfähigkeit"'>
 			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis einfach' eine Section 'Aktuelle Beurteilung der Arbeitsfähigkeit' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2905-1.0-0007' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="2905.BitteAnArbeitgeber"'>
+		<assert id='suva-form-2905-0007' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="2905.BitteAnArbeitgeber"'>
 			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis einfach' eine Section 'Bitte an Arbeitgeber' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2905-1.0-0008' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
+		<assert id='suva-form-2905-0008' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
 			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis einfach' eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben).</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -113,28 +114,28 @@ History:
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 		-->
 
-		<assert id='suva-form-2905-1.0-0100' test='self::cda:section'>
+		<assert id='suva-form-2905-0100' test='self::cda:section'>
 			<xhtml:p lang='de_ch'>'Bitte an Arbeitgeber' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2905-1.0-0101' test='(cda:title="Bitte an Arbeitgeber" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2905-0101' test='(cda:title="Bitte an Arbeitgeber" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>'Bitte an Arbeitgeber' muss einen section title 'Bitte an Arbeitgeber' enthalten.</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2905-1.0-0102' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="2905.BitteAnArbeitgeberL3"]'>
+		<assert id='suva-form-2905-0102' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="2905.BitteAnArbeitgeberL3"]'>
 			<xhtml:p lang='de_ch'>'Bitte an Arbeitgeber' muss ein observation mit Template '2905.BitteAnArbeitgeberL3' enthalten.</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2905-1.0-0103' test='descendant::*[cda:code/@code=document("emedidoc-voc-1.0.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.5"]/code/@value]'>
+		<assert id='suva-form-2905-0103' test='descendant::*[cda:code/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.5"]/code/@value]'>
 			<xhtml:p lang='de_ch'>'Bitte an Arbeitgeber' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.5').</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>

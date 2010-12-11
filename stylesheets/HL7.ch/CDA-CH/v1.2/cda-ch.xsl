@@ -26,9 +26,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 
 	<xsl:output method="html" indent="yes" version="4.01" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.01//EN"/>
 
-	<!-- The following variables are designed to be overwritten in a project specific xsl that imports the current cda-ch-1.2.xsl an example can be found in suva-emedidoc-2.0.xsl -->
+	<!-- The following variables are designed to be overwritten in a project specific xsl that imports the current cda-ch.xsl an example can be found in suva-emedidoc.xsl -->
 	<xsl:variable name="organizationName">
-		<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='HL7.ch']/@displayName"/>
+		<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='HL7.ch']/@displayName"/>
 	</xsl:variable>
 
 	<xsl:variable name="language">
@@ -66,7 +66,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				<xsl:element name="link">
 					<xsl:attribute name="rel">stylesheet</xsl:attribute>
 					<xsl:attribute name="type">text/css</xsl:attribute>
-					<xsl:attribute name="href">../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2.css</xsl:attribute>
+					<xsl:attribute name="href">../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.css</xsl:attribute>
 				</xsl:element>
 				<xsl:apply-templates select="/processing-instruction('xml-stylesheet')"/>
 			</head>
@@ -80,7 +80,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					<thead>
 						<tr>
 							<th class="label1">
-								<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Patient']/@displayName"/>
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Patient']/@displayName"/>
 								<xsl:text>:</xsl:text>
 							</th>
 							<th class="value1">
@@ -89,7 +89,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								</xsl:call-template>
 							</th>
 							<th class="label2">
-								<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Birthday']/@displayName"/>
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Birthday']/@displayName"/>
 								<xsl:text>:</xsl:text>
 							</th>
 							<th class="value2">
@@ -110,7 +110,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								</xsl:call-template>
 							</td>
 							<td class="label2">
-								<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='IDsPatient']/@displayName"/>
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='IDsPatient']/@displayName"/>
 								<xsl:text>:</xsl:text>
 							</td>
 							<td class="value2">
@@ -121,7 +121,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 						</tr>
 						<tr>
 							<td class="label1">
-								<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Creation']/@displayName"/>
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Creation']/@displayName"/>
 								<xsl:text>:</xsl:text>
 							</td>
 							<td class="value1">
@@ -130,7 +130,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								</xsl:call-template>
 							</td>
 							<td class="label2">
-								<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Sex']/@displayName"/>
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Sex']/@displayName"/>
 								<xsl:text>:</xsl:text>
 							</td>
 							<td class="value2">
@@ -138,13 +138,13 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								select="/n1:ClinicalDocument/n1:recordTarget/n1:patientRole/n1:patient/n1:administrativeGenderCode/@code"/>
 								<xsl:choose>
 									<xsl:when test="$sex='M'">
-										<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='man']/@displayName"/>
+										<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='man']/@displayName"/>
 									</xsl:when>
 									<xsl:when test="$sex='F'">
-										<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='woman']/@displayName"/>
+										<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='woman']/@displayName"/>
 									</xsl:when>
 									<xsl:otherwise>
-										<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='unknown']/@displayName"/>
+										<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='unknown']/@displayName"/>
 									</xsl:otherwise>
 								</xsl:choose>
 							</td>
@@ -191,13 +191,13 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				select="./@root"/>
 				<xsl:choose>
 					<xsl:when test="$domain='2.16.756.5.31'">
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.31']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.31']/@displayName"/>
 					</xsl:when>
 					<xsl:when test="$domain='2.16.756.5.32'">
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.32']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.32']/@displayName"/>
 					</xsl:when>
 					<xsl:when test="$domain='2.16.756.5.30.1.100.3.1.1'">
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.30.1.100.3.1.1']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.30.1.100.3.1.1']/@displayName"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="./@root"/>
@@ -252,13 +252,13 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		<xsl:param name="typeCode"/>
 		<xsl:choose>
 			<xsl:when test="$typeCode='PRCP'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='PrimaryReceiver']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='PrimaryReceiver']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$typeCode='TRC'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='SecondaryReceiver']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='SecondaryReceiver']/@displayName"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='unknown']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='unknown']/@displayName"/>
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:text>:</xsl:text>
@@ -281,40 +281,40 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		<xsl:variable name="month" select="substring ($date, 5, 2)"/>
 		<xsl:choose>
 			<xsl:when test="$month='01'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='January']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='January']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='02'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='February']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='February']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='03'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='March']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='March']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='04'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='April']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='April']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='05'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='May']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='May']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='06'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='June']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='June']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='07'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='July']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='July']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='08'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='August']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='August']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='09'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='September']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='September']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='10'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='October']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='October']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='11'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='November']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='November']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$month='12'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='December']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='December']/@displayName"/>
 			</xsl:when>
 		</xsl:choose>
 		<xsl:text> </xsl:text>
@@ -651,7 +651,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				<tr>
 					<td>
 						<b>
-							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Assured']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assured']/@displayName"/>
 							<xsl:text>: </xsl:text>
 						</b>
 					</td>
@@ -662,7 +662,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					</td>
 					<td>
 						<b>
-							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
 							<xsl:text>: </xsl:text>
 						</b>
 					</td>
@@ -699,13 +699,13 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		<xsl:for-each select="n1:associatedEntity">
 			<b>
 				<xsl:variable name="code"	select="n1:code/@code"/>
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value=$code]/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$code]/@displayName"/>
 			</b>
 			<ul>
 				<table class="body">
 					<tr>
 						<th>
-							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Company']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Company']/@displayName"/>
 						</th>
 						<th>
 							<xsl:call-template name="getName">
@@ -722,7 +722,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			</xsl:when>
 			<xsl:otherwise>N/A</xsl:otherwise>
 		</xsl:choose>
-							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='CustNo']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='CustNo']/@displayName"/>
 						</th>
 						<th>
 							<xsl:value-of select="n1:id/@extension"/>
@@ -730,7 +730,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					</tr>
 					<tr>
 						<td>
-							<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
 						</td>
 						<td>
 							<xsl:call-template name="getName">
@@ -787,7 +787,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		<table class="foot">
 			<tr>
 				<th>
-					<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Consent']/@displayName"/>
+					<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Consent']/@displayName"/>
 					<xsl:text>:</xsl:text>
 				</th>
 				<td>
@@ -796,7 +796,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			</tr>
 			<tr>
 				<th>
-					<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Custodian']/@displayName"/>
+					<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Custodian']/@displayName"/>
 					<xsl:text>:</xsl:text>
 				</th>
 				<td>
@@ -818,7 +818,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:for-each select="/n1:ClinicalDocument/n1:author">
 				<tr>
 					<th>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Author']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Author']/@displayName"/>
 						<xsl:text>:</xsl:text>
 					</th>
 					<td>
@@ -837,7 +837,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							<xsl:value-of select="n1:assignedAuthoringDevice/n1:softwareName"/>
 						</xsl:if>
 						<xsl:text> </xsl:text>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
 						<xsl:text> </xsl:text>
 						<xsl:call-template name="formatDate">
 							<xsl:with-param name="date" select="n1:time/@value"/>
@@ -856,7 +856,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:for-each select="/n1:ClinicalDocument/n1:informant">
 				<tr>
 					<th>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Informer']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Informer']/@displayName"/>
 						<xsl:text>:</xsl:text>
 					</th>
 					<td>
@@ -887,7 +887,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:for-each select="/n1:ClinicalDocument/n1:authenticator">
 				<tr>
 					<th>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Authenticator']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Authenticator']/@displayName"/>
 						<xsl:text>:</xsl:text>
 					</th>
 					<td>
@@ -895,7 +895,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							<xsl:with-param name="name" select="n1:assignedEntity/n1:assignedPerson/n1:name"/>
 						</xsl:call-template>
 						<xsl:text> </xsl:text>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
 						<xsl:text> </xsl:text>
 						<xsl:call-template name="formatDate">
 							<xsl:with-param name="date" select="n1:time/@value"/>
@@ -914,7 +914,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:for-each select="/n1:ClinicalDocument/n1:legalAuthenticator">
 				<tr>
 					<th>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='LegalAuthenticator']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='LegalAuthenticator']/@displayName"/>
 						<xsl:text>:</xsl:text>
 					</th>
 					<td>
@@ -922,7 +922,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							<xsl:with-param name="name" select="n1:assignedEntity/n1:assignedPerson/n1:name"/>
 						</xsl:call-template>
 						<xsl:text> </xsl:text>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
 						<xsl:text> </xsl:text>
 						<xsl:call-template name="formatDate">
 							<xsl:with-param name="date" select="n1:time/@value"/>
@@ -941,7 +941,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:for-each select="/n1:ClinicalDocument/n1:dataEnterer">
 				<tr>
 					<th>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='DataEnterer']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='DataEnterer']/@displayName"/>
 						<xsl:text>:</xsl:text>
 					</th>
 					<td>
@@ -949,7 +949,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							<xsl:with-param name="name" select="n1:assignedEntity/n1:assignedPerson/n1:name"/>
 						</xsl:call-template>
 						<xsl:text> </xsl:text>
-						<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
 						<xsl:text> </xsl:text>
 						<xsl:call-template name="formatDate">
 							<xsl:with-param name="date" select="n1:time/@value"/>
@@ -997,25 +997,25 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		<xsl:choose>
 			<!-- lookup table Telecom URI -->
 			<xsl:when test="$code='tel'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Tel']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Tel']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$code='fax'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Fax']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Fax']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$code='http'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Web']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Web']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$code='mailto'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='Mail']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Mail']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$code='HP'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='home']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='home']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$code='WP'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='workplace']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='workplace']/@displayName"/>
 			</xsl:when>
 			<xsl:when test="$code='PUB'">
-				<xsl:value-of select="document('cda-ch-1.2-xsl-voc.xml')/localization/text[@language=$language and @value='workplace']/@displayName"/>
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='workplace']/@displayName"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>{$code='</xsl:text>

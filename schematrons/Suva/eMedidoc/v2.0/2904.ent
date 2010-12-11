@@ -7,6 +7,7 @@ Language: de-CH
 History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
 09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 
 ********************************************************
 -->
@@ -14,7 +15,7 @@ History:
 
 	<!-- Entity Information -->
 	<xhtml:ul id='suva-form-2904'>
-		<xhtml:li class='filename'>2904-1.0.ent</xhtml:li>
+		<xhtml:li class='filename'>2904.ent</xhtml:li>
 		<xhtml:li class='version'>1.0</xhtml:li>
 	</xhtml:ul>
 
@@ -30,7 +31,7 @@ History:
 		-->
 
 		<!-- Formularnummer prüfen -->
-		<assert id='suva-form-2904-1.0-0001' test='//cda:templateId/@extension="2904"'>
+		<assert id='suva-form-2904-0001' test='//cda:templateId/@extension="2904"'>
 			<xhtml:p lang='de_ch'>Die Formularnummer für Suva Behandlungsmeldung muss lauten: 2904</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -38,7 +39,7 @@ History:
 			-->
 		</assert>
 		<!-- code prüfen -->
-		<assert id='suva-form-2904-1.0-0002' test='//cda:code/@code="51848-0"'>
+		<assert id='suva-form-2904-0002' test='//cda:code/@code="51848-0"'>
 			<xhtml:p lang='de_ch'>Der LOINC Code für die Suva Behandlungsmeldung muss lauten: 51848-0 (Assessment note)</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -46,7 +47,7 @@ History:
 			-->
 		</assert>
 		<!-- title prüfen -->
-		<assert id='suva-form-2904-1.0-0003' test='(//cda:title="Behandlungsmeldung" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2904-0003' test='(//cda:title="Behandlungsmeldung" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Behandlungsmeldung'</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -54,7 +55,7 @@ History:
 			-->
 		</assert>
 		<!-- Arbeitgeber prüfen -->
-		<assert id='suva-form-2904-1.0-0004' test='//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]'>
+		<assert id='suva-form-2904-0004' test='//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]'>
 			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss einen Arbeitgeber enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -67,14 +68,14 @@ History:
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
 		-->
-		<assert id='suva-form-2904-1.0-0005' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfoBehandlungsmeldung"'>
+		<assert id='suva-form-2904-0005' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfoBehandlungsmeldung"'>
 			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2904-1.0-0006' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
+		<assert id='suva-form-2904-0006' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
 			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben).</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
