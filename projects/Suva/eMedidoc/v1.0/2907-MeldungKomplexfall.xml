@@ -9,8 +9,8 @@ History:
 
 ********************************************************
 -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
-<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedicus/v2.0/suva.css'?>
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/Suva/eMedidoc/v2.0/suva-emedidoc.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
 	<!-- 
 	********************************************************
