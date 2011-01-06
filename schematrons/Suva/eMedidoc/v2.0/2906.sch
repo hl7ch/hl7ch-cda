@@ -2,7 +2,7 @@
 <!--
 ********************************************************
 
-Schematron Master für Suva eMedidoc 'Arbeitsunfähigkeitszeugnis ab 15. Tag' (Suva Form 2906 'AUF lang')
+Schematron Master für Suva eMedidoc 'Arbeitsunfähigkeitszeugnis detailliert' (Suva Form 2906)
 Language: de-CH
 
 History:
@@ -39,7 +39,7 @@ project templates
 ]
 >
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
-	<xhtml:h1 class="title" lang="de_ch">Suva eMedidoc Arbeitsunfähigkeitszeugnis ab 15. Tag</xhtml:h1>
+	<xhtml:h1 class="title" lang="de_ch">Suva eMedidoc Arbeitsunfähigkeitszeugnis detailliert</xhtml:h1>
 	<ns prefix='cda' uri='urn:hl7-org:v3'/>
 	<ns prefix='sdtc' uri='urn:hl7-org:sdtc'/>
 	<ns prefix='xsi' uri='http://www.w3.org/2001/XMLSchema-instance'/>
