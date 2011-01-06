@@ -20,9 +20,9 @@ History:
 	********************************************************
 	-->
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
-	<templateId extension="2904" root="1.2.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
-	<id extension="E0FA0CF3-0DA0-4A49-9AD0-DE26EB78AB12" root="1.2.756.5.30.1.100.2.1"/>  <!-- OID SUVA/Formularnummer -->
-	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" displayName="Zusammenfassung bei Entlassung"/>
+	<templateId extension="2904" root="2.16.756.5.30.1.100.2.1"/>
+	<id extension="E0FA0CF3-0DA0-4A49-9AD0-DE26EB78AB12" root="1.2.756.5.30.1.100.2.1"/> 
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Behandlungsmeldung"/>
 	<title>Behandlungsmeldung</title>
 	<effectiveTime value="20100201"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
@@ -127,11 +127,32 @@ History:
 			<statusCode code="completed"/>
 		</consent>
 	</authorization>
+	<participant typeCode='IND'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<!-- Suva Kundennummer extern -->
+			<id extension='888-77777.6' root='2.16.756.5.30.1.100.3.7.1'/>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<scopingOrganization>
+				<name>Bank Scheffel und Co.</name>
+				<addr use="WP">
+					<streetAddressLine>Dagobertweg</streetAddressLine>
+					<postalCode>8787</postalCode>
+					<city>Entenhausen</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
 	<!-- 
-********************************************************
-  CDA Body
-********************************************************
--->
+	********************************************************
+	  CDA Body
+	********************************************************
+	-->
 	<component>
 		<structuredBody>
 			<!-- 
@@ -141,7 +162,8 @@ History:
 			-->
 			<component>
 				<section>
-					<title>Grund der Behandlung</title>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoBehandlungsmeldung"/>
+					<title>Schadeninformationen</title>
 					<text>
 							<table>
 								<tbody>
@@ -160,38 +182,70 @@ History:
 								</tbody>
 							</table>						
 					</text>
+					<entry>
+						<!-- eMedidoc Observation Template: Schadeninformationen -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoMinL3"/>
+							<!-- Schadennummer -->
+							<id nullFlavor="UNK" />
+							<!-- Anmeldeart -->
+							<code nullFlavor="UNK" />
+							<!-- Schadendatum -->
+							<effectiveTime value="20100201"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- eMedidoc Encounter Template: Behandlung -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehandlungsmeldungL3"/>
+							<!-- Wahrnehmung -->
+							<text>Verstauchung Halswirbelsäule</text>
+							<!-- Datum und evtl. Zeit der Erstbehandlung -->
+							<effectiveTime value="20100201"/>
+							<!-- Erstbehandlung durch ausfüllenden Arzt -->
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>E.</given>
+											<family>Mergency</family>
+											<suffix>Assistenzarzt</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
 				</section>
 			</component>
-			<!-- 
-			********************************************************
-			  Arbeitgeber
-			********************************************************
-			-->
 			<component>
 				<section>
-					<title>Arbeitgeber</title>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<title>Bemerkungen</title>
 					<text>
-							<table>
-								<tbody>
-									<tr>
-										<th>Betrieb</th>
-										<th>Bank Scheffel und Co.</th>
-									</tr>
-									<tr>
-										<th>Suva Kunden-Nr.</th>
-										<th>888-77777.6</th>
-									</tr>
-									<tr>
-										<td>Adresse</td>
-										<td>Dagobertweg, 8787 Entenhausen</td>
-									</tr>
-									<tr>
-										<td>Kontakt</td>
-										<td></td>
-									</tr>
-								</tbody>
-							</table>						
+						<content>Keine<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Erwerbstatus:</td>
+									<td>Erwerbstätig</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Erwerbstatus -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
+							<!-- Strukturierte Angabe "Erwerbstatus" -->
+							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
+						</observation>
+					</entry>
 				</section>
 			</component>
 		</structuredBody>
