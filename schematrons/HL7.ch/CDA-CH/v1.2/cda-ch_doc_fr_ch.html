@@ -6,7 +6,7 @@
    <head>
       <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
       <link rel="stylesheet" type="text/css"
-            href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"/>
+            href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-doc.css"/>
    </head>
    <body>
       <ul id="reference">
@@ -15,8 +15,8 @@
 		
 		
 	        <li>vhitg-ruleset.ent</li>
-         <li>cda-ch-1.2.ent</li>
-         <li>cda-ch-1.2_medication-section.ent</li>
+         <li>cda-ch.ent</li>
+         <li>cda-ch_medication-section.ent</li>
          <li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</li>
       </ul>
       <div>
@@ -24,13 +24,13 @@
             <thead>
                <tr>
                   <th class="label1">Entity</th>
-                  <th>entity_HL7-cda-ch-1.2</th>
+                  <th>entity_HL7-cda-ch</th>
                </tr>
             </thead>
             <tbody>
                <tr>
                   <td class="label1">Fichier</td>
-                  <td>cda-ch-1.2.ent</td>
+                  <td>cda-ch.ent</td>
                </tr>
                <tr>
                   <td class="label1">Version</td>
@@ -45,7 +45,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0001</th>
+                  <th class="value1">entity_HL7-cda-ch-0001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -64,7 +64,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0002</th>
+                  <th class="value1">entity_HL7-cda-ch-0002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -83,7 +83,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0101</th>
+                  <th class="value1">entity_HL7-cda-ch-0101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -102,7 +102,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0102</th>
+                  <th class="value1">entity_HL7-cda-ch-0102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -110,7 +110,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Bemerkungen'</td>
+                  <td colspan="3">(cda:title="Bemerkungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
          </table>
@@ -121,7 +121,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0103</th>
+                  <th class="value1">entity_HL7-cda-ch-0103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -140,7 +140,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1001</th>
+                  <th class="value1">entity_HL7-cda-ch-1001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -159,7 +159,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1002</th>
+                  <th class="value1">entity_HL7-cda-ch-1002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -178,7 +178,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1003</th>
+                  <th class="value1">entity_HL7-cda-ch-1003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -186,7 +186,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Diagnosen'</td>
+                  <td colspan="3">(cda:title="Diagnosen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
          </table>
@@ -197,7 +197,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1004</th>
+                  <th class="value1">entity_HL7-cda-ch-1004</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -216,7 +216,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1005</th>
+                  <th class="value1">entity_HL7-cda-ch-1005</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -224,7 +224,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="DiagnosisSectionCode"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@codeSystemName="DiagnosisSectionCode"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -235,7 +235,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1006</th>
+                  <th class="value1">entity_HL7-cda-ch-1006</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -254,7 +254,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1101</th>
+                  <th class="value1">entity_HL7-cda-ch-1101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -273,7 +273,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1102</th>
+                  <th class="value1">entity_HL7-cda-ch-1102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -292,7 +292,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1103</th>
+                  <th class="value1">entity_HL7-cda-ch-1103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -311,7 +311,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1201</th>
+                  <th class="value1">entity_HL7-cda-ch-1201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -330,7 +330,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1202</th>
+                  <th class="value1">entity_HL7-cda-ch-1202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -349,7 +349,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1203</th>
+                  <th class="value1">entity_HL7-cda-ch-1203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -368,7 +368,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1204</th>
+                  <th class="value1">entity_HL7-cda-ch-1204</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -387,7 +387,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1205</th>
+                  <th class="value1">entity_HL7-cda-ch-1205</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -406,7 +406,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1206</th>
+                  <th class="value1">entity_HL7-cda-ch-1206</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -425,7 +425,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1301</th>
+                  <th class="value1">entity_HL7-cda-ch-1301</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -444,7 +444,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1302</th>
+                  <th class="value1">entity_HL7-cda-ch-1302</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -463,7 +463,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1303</th>
+                  <th class="value1">entity_HL7-cda-ch-1303</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -471,7 +471,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Vitalzeichen'</td>
+                  <td colspan="3">(cda:title="Vitalzeichen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
          </table>
@@ -482,7 +482,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1304</th>
+                  <th class="value1">entity_HL7-cda-ch-1304</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -501,7 +501,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1305</th>
+                  <th class="value1">entity_HL7-cda-ch-1305</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -520,7 +520,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1306</th>
+                  <th class="value1">entity_HL7-cda-ch-1306</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -539,7 +539,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1401</th>
+                  <th class="value1">entity_HL7-cda-ch-1401</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -558,7 +558,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1402</th>
+                  <th class="value1">entity_HL7-cda-ch-1402</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -577,7 +577,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1403</th>
+                  <th class="value1">entity_HL7-cda-ch-1403</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -596,7 +596,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1404</th>
+                  <th class="value1">entity_HL7-cda-ch-1404</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -615,7 +615,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1405</th>
+                  <th class="value1">entity_HL7-cda-ch-1405</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -634,7 +634,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1406</th>
+                  <th class="value1">entity_HL7-cda-ch-1406</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -653,7 +653,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1407</th>
+                  <th class="value1">entity_HL7-cda-ch-1407</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -661,7 +661,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.5.1" and @codeSystemName="VitalSignCodes"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.5.1" and @codeSystemName="VitalSignCodes"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -672,7 +672,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1408</th>
+                  <th class="value1">entity_HL7-cda-ch-1408</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -691,7 +691,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1409</th>
+                  <th class="value1">entity_HL7-cda-ch-1409</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -699,7 +699,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.4.1"]/code/@value)</td>
+                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.4.1"]/code/@value)</td>
                </tr>
             </tbody>
          </table>
@@ -710,7 +710,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1410</th>
+                  <th class="value1">entity_HL7-cda-ch-1410</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -729,7 +729,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1501</th>
+                  <th class="value1">entity_HL7-cda-ch-1501</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -748,7 +748,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1502</th>
+                  <th class="value1">entity_HL7-cda-ch-1502</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -767,7 +767,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1503</th>
+                  <th class="value1">entity_HL7-cda-ch-1503</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -775,7 +775,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Allergien und Unverträglichkeiten'</td>
+                  <td colspan="3">(cda:title="Allergien und Unverträglichkeiten" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
          </table>
@@ -786,7 +786,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1601</th>
+                  <th class="value1">entity_HL7-cda-ch-1601</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -805,7 +805,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1602</th>
+                  <th class="value1">entity_HL7-cda-ch-1602</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -824,7 +824,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1603</th>
+                  <th class="value1">entity_HL7-cda-ch-1603</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -832,7 +832,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -843,7 +843,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1604</th>
+                  <th class="value1">entity_HL7-cda-ch-1604</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -862,7 +862,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1701</th>
+                  <th class="value1">entity_HL7-cda-ch-1701</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -881,7 +881,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1702</th>
+                  <th class="value1">entity_HL7-cda-ch-1702</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -900,7 +900,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1703</th>
+                  <th class="value1">entity_HL7-cda-ch-1703</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -908,7 +908,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Arbeitsfähigkeit'</td>
+                  <td colspan="3">(cda:title="Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
          </table>
@@ -919,7 +919,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1704</th>
+                  <th class="value1">entity_HL7-cda-ch-1704</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -938,7 +938,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1705</th>
+                  <th class="value1">entity_HL7-cda-ch-1705</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -957,7 +957,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1706</th>
+                  <th class="value1">entity_HL7-cda-ch-1706</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -976,7 +976,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1801</th>
+                  <th class="value1">entity_HL7-cda-ch-1801</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -995,26 +995,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1802</th>
-                  <th class="label1" width="10%">Role</th>
-                  <th class="value2" width="10%">error</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td class="label1">Assert</td>
-                  <td colspan="3">cda:effectiveTime</td>
-               </tr>
-            </tbody>
-         </table>
-         <br/>
-      </div>
-      <div>
-         <table class="body" width="100%">
-            <thead>
-               <tr>
-                  <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1803</th>
+                  <th class="value1">entity_HL7-cda-ch-1803</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1033,7 +1014,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1804</th>
+                  <th class="value1">entity_HL7-cda-ch-1804</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1052,7 +1033,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1805</th>
+                  <th class="value1">entity_HL7-cda-ch-1805</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1071,7 +1052,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1806</th>
+                  <th class="value1">entity_HL7-cda-ch-1806</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">warning</th>
                </tr>
@@ -1090,7 +1071,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1807</th>
+                  <th class="value1">entity_HL7-cda-ch-1807</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1109,7 +1090,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1808</th>
+                  <th class="value1">entity_HL7-cda-ch-1808</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1117,7 +1098,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.6.1"]/code/@value</td>
+                  <td colspan="3">cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.6.1"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -1128,7 +1109,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1809</th>
+                  <th class="value1">entity_HL7-cda-ch-1809</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1147,7 +1128,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1810</th>
+                  <th class="value1">entity_HL7-cda-ch-1810</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1155,7 +1136,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:interpretationCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.7.1"]/code/@value</td>
+                  <td colspan="3">cda:interpretationCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.7.1"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -1166,7 +1147,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1811</th>
+                  <th class="value1">entity_HL7-cda-ch-1811</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1185,7 +1166,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1901</th>
+                  <th class="value1">entity_HL7-cda-ch-1901</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1204,7 +1185,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1902</th>
+                  <th class="value1">entity_HL7-cda-ch-1902</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1212,7 +1193,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="Immunization"]/code/@value</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@codeSystemName="Immunization"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -1223,7 +1204,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1903</th>
+                  <th class="value1">entity_HL7-cda-ch-1903</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1242,13 +1223,13 @@
             <thead>
                <tr>
                   <th class="label1">Entity</th>
-                  <th>cda-ch-1.2_medication-section</th>
+                  <th>cda-ch_medication-section</th>
                </tr>
             </thead>
             <tbody>
                <tr>
                   <td class="label1">Fichier</td>
-                  <td>cda-ch-1.2_medication-section.ent</td>
+                  <td>cda-ch_medication-section.ent</td>
                </tr>
                <tr>
                   <td class="label1">Version</td>
@@ -1258,14 +1239,14 @@
          </table>
          <br/>
       </div>
-      <h3>CDA-CH Medication Header Templates</h3>
+      <h3>CDA-CH Medication Section Templates</h3>
       <p>Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Section Templates</p>
       <div>
          <table class="body" width="100%">
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0001</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1288,7 +1269,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0002</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1311,7 +1292,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0003</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1330,7 +1311,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0101</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1349,7 +1330,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0102</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1368,7 +1349,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0103</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1376,7 +1357,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.4"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.840.1.113883.5.4"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -1387,7 +1368,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0104</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0104</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1395,7 +1376,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:id/@root="2.16.756.5.30.2.6.1" or cda:id/@root="1.3.88"</td>
+                  <td colspan="3">cda:id/@root="2.16.756.5.30.2.6.1" or cda:id/@root="1.3.88" or cda:id/@root="1.3.160"</td>
                </tr>
             </tbody>
          </table>
@@ -1406,7 +1387,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0105</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0105</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1425,7 +1406,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0106</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0106</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1444,7 +1425,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0107</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0107</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1463,7 +1444,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0108</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0108</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">warning</th>
                </tr>
@@ -1482,7 +1463,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0109</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0109</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1490,7 +1471,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:priorityCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.7"]/code/@value</td>
+                  <td colspan="3">cda:priorityCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.840.1.113883.5.7"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -1501,7 +1482,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0110</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0110</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1509,7 +1490,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:routeCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.112"]/code/@value</td>
+                  <td colspan="3">cda:routeCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.840.1.113883.5.112"]/code/@value</td>
                </tr>
             </tbody>
          </table>
@@ -1520,7 +1501,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0111</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0111</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1539,7 +1520,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0112</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0112</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1558,7 +1539,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0113</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0113</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1577,7 +1558,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0201</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1596,7 +1577,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0202</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1615,7 +1596,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0203</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">warning</th>
                </tr>

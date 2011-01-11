@@ -7,7 +7,7 @@
       <title>SVV Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma (KZBT; HWS Formular)</title>
       <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
       <link rel="stylesheet" type="text/css"
-            href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-doc.css"/>
+            href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-doc.css"/>
    </head>
    <body>
       <h1 class="title">SVV Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma (KZBT; HWS Formular)</h1>
@@ -18,22 +18,22 @@
 		
 		
 	        <li>vhitg-ruleset.ent</li>
-         <li>cda-ch-1.2.ent</li>
-         <li>cda-ch-1.2_medication-section.ent</li>
-         <li>svv-kzbt-20090228.ent</li>
+         <li>cda-ch.ent</li>
+         <li>cda-ch_medication-section.ent</li>
+         <li>svv-kzbt.ent</li>
       </ul>
       <div>
          <table class="head">
             <thead>
                <tr>
                   <th class="label1">Entity</th>
-                  <th>entity_HL7-cda-ch-1.2</th>
+                  <th>entity_HL7-cda-ch</th>
                </tr>
             </thead>
             <tbody>
                <tr>
                   <td class="label1">Dateiname</td>
-                  <td>cda-ch-1.2.ent</td>
+                  <td>cda-ch.ent</td>
                </tr>
                <tr>
                   <td class="label1">Version</td>
@@ -50,7 +50,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0001</th>
+                  <th class="value1">entity_HL7-cda-ch-0001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -73,7 +73,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0002</th>
+                  <th class="value1">entity_HL7-cda-ch-0002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -98,7 +98,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0101</th>
+                  <th class="value1">entity_HL7-cda-ch-0101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -121,7 +121,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0102</th>
+                  <th class="value1">entity_HL7-cda-ch-0102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -129,7 +129,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Bemerkungen'</td>
+                  <td colspan="3">(cda:title="Bemerkungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -144,7 +144,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-0103</th>
+                  <th class="value1">entity_HL7-cda-ch-0103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -169,7 +169,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1001</th>
+                  <th class="value1">entity_HL7-cda-ch-1001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -192,7 +192,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1002</th>
+                  <th class="value1">entity_HL7-cda-ch-1002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -215,7 +215,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1003</th>
+                  <th class="value1">entity_HL7-cda-ch-1003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -223,7 +223,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Diagnosen'</td>
+                  <td colspan="3">(cda:title="Diagnosen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -238,7 +238,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1004</th>
+                  <th class="value1">entity_HL7-cda-ch-1004</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -261,7 +261,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1005</th>
+                  <th class="value1">entity_HL7-cda-ch-1005</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -269,7 +269,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="DiagnosisSectionCode"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@codeSystemName="DiagnosisSectionCode"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -284,7 +284,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1006</th>
+                  <th class="value1">entity_HL7-cda-ch-1006</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -309,7 +309,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1101</th>
+                  <th class="value1">entity_HL7-cda-ch-1101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -332,7 +332,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1102</th>
+                  <th class="value1">entity_HL7-cda-ch-1102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -355,7 +355,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1103</th>
+                  <th class="value1">entity_HL7-cda-ch-1103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -380,7 +380,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1201</th>
+                  <th class="value1">entity_HL7-cda-ch-1201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -393,7 +393,7 @@
             </tbody>
             <tr>
                <td>Beschreibung</td>
-               <td colspan="3">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden.</td>
+               <td colspan="3">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body deklariert werden.</td>
             </tr>
          </table>
          <br/>
@@ -403,7 +403,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1202</th>
+                  <th class="value1">entity_HL7-cda-ch-1202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -426,7 +426,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1203</th>
+                  <th class="value1">entity_HL7-cda-ch-1203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -449,7 +449,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1204</th>
+                  <th class="value1">entity_HL7-cda-ch-1204</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -472,7 +472,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1205</th>
+                  <th class="value1">entity_HL7-cda-ch-1205</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -495,7 +495,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1206</th>
+                  <th class="value1">entity_HL7-cda-ch-1206</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -520,7 +520,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1301</th>
+                  <th class="value1">entity_HL7-cda-ch-1301</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -543,7 +543,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1302</th>
+                  <th class="value1">entity_HL7-cda-ch-1302</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -566,7 +566,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1303</th>
+                  <th class="value1">entity_HL7-cda-ch-1303</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -574,7 +574,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Vitalzeichen'</td>
+                  <td colspan="3">(cda:title="Vitalzeichen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -589,7 +589,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1304</th>
+                  <th class="value1">entity_HL7-cda-ch-1304</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -612,7 +612,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1305</th>
+                  <th class="value1">entity_HL7-cda-ch-1305</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -635,7 +635,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1306</th>
+                  <th class="value1">entity_HL7-cda-ch-1306</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -660,7 +660,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1401</th>
+                  <th class="value1">entity_HL7-cda-ch-1401</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -683,7 +683,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1402</th>
+                  <th class="value1">entity_HL7-cda-ch-1402</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -706,7 +706,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1403</th>
+                  <th class="value1">entity_HL7-cda-ch-1403</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -729,7 +729,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1404</th>
+                  <th class="value1">entity_HL7-cda-ch-1404</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -752,7 +752,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1405</th>
+                  <th class="value1">entity_HL7-cda-ch-1405</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -775,7 +775,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1406</th>
+                  <th class="value1">entity_HL7-cda-ch-1406</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -798,7 +798,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1407</th>
+                  <th class="value1">entity_HL7-cda-ch-1407</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -806,7 +806,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.5.1" and @codeSystemName="VitalSignCodes"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.5.1" and @codeSystemName="VitalSignCodes"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -821,7 +821,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1408</th>
+                  <th class="value1">entity_HL7-cda-ch-1408</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -844,7 +844,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1409</th>
+                  <th class="value1">entity_HL7-cda-ch-1409</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -852,7 +852,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.4.1"]/code/@value)</td>
+                  <td colspan="3">cda:code/@code!="11449-6" or (cda:code/@code="11449-6" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.4.1"]/code/@value)</td>
                </tr>
             </tbody>
             <tr>
@@ -867,7 +867,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1410</th>
+                  <th class="value1">entity_HL7-cda-ch-1410</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -892,7 +892,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1501</th>
+                  <th class="value1">entity_HL7-cda-ch-1501</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -915,7 +915,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1502</th>
+                  <th class="value1">entity_HL7-cda-ch-1502</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -938,7 +938,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1503</th>
+                  <th class="value1">entity_HL7-cda-ch-1503</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -946,7 +946,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Allergien und Unverträglichkeiten'</td>
+                  <td colspan="3">(cda:title="Allergien und Unverträglichkeiten" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -963,7 +963,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1601</th>
+                  <th class="value1">entity_HL7-cda-ch-1601</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -986,7 +986,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1602</th>
+                  <th class="value1">entity_HL7-cda-ch-1602</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1009,7 +1009,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1603</th>
+                  <th class="value1">entity_HL7-cda-ch-1603</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1017,7 +1017,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1032,7 +1032,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1604</th>
+                  <th class="value1">entity_HL7-cda-ch-1604</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1057,7 +1057,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1701</th>
+                  <th class="value1">entity_HL7-cda-ch-1701</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1080,7 +1080,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1702</th>
+                  <th class="value1">entity_HL7-cda-ch-1702</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1103,7 +1103,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1703</th>
+                  <th class="value1">entity_HL7-cda-ch-1703</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1111,7 +1111,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Arbeitsfähigkeit'</td>
+                  <td colspan="3">(cda:title="Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -1126,7 +1126,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1704</th>
+                  <th class="value1">entity_HL7-cda-ch-1704</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1149,7 +1149,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1705</th>
+                  <th class="value1">entity_HL7-cda-ch-1705</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1172,7 +1172,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1706</th>
+                  <th class="value1">entity_HL7-cda-ch-1706</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1197,7 +1197,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1801</th>
+                  <th class="value1">entity_HL7-cda-ch-1801</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1220,30 +1220,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1802</th>
-                  <th class="label1" width="10%">Role</th>
-                  <th class="value2" width="10%">error</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td class="label1">Assert</td>
-                  <td colspan="3">cda:effectiveTime</td>
-               </tr>
-            </tbody>
-            <tr>
-               <td>Beschreibung</td>
-               <td colspan="3">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen ein Datum der Feststellung enthalten.</td>
-            </tr>
-         </table>
-         <br/>
-      </div>
-      <div>
-         <table class="body" width="100%">
-            <thead>
-               <tr>
-                  <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1803</th>
+                  <th class="value1">entity_HL7-cda-ch-1803</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1266,7 +1243,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1804</th>
+                  <th class="value1">entity_HL7-cda-ch-1804</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1289,7 +1266,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1805</th>
+                  <th class="value1">entity_HL7-cda-ch-1805</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1312,7 +1289,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1806</th>
+                  <th class="value1">entity_HL7-cda-ch-1806</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">warning</th>
                </tr>
@@ -1335,7 +1312,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1807</th>
+                  <th class="value1">entity_HL7-cda-ch-1807</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1358,7 +1335,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1808</th>
+                  <th class="value1">entity_HL7-cda-ch-1808</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1366,7 +1343,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.6.1"]/code/@value</td>
+                  <td colspan="3">cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.6.1"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1381,7 +1358,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1809</th>
+                  <th class="value1">entity_HL7-cda-ch-1809</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1404,7 +1381,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1810</th>
+                  <th class="value1">entity_HL7-cda-ch-1810</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1412,7 +1389,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:interpretationCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.7.1"]/code/@value</td>
+                  <td colspan="3">cda:interpretationCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.7.1"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1427,7 +1404,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1811</th>
+                  <th class="value1">entity_HL7-cda-ch-1811</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1452,7 +1429,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1901</th>
+                  <th class="value1">entity_HL7-cda-ch-1901</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1475,7 +1452,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1902</th>
+                  <th class="value1">entity_HL7-cda-ch-1902</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1483,7 +1460,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@codeSystemName="Immunization"]/code/@value</td>
+                  <td colspan="3">cda:code/@codeSystem="2.16.840.1.113883.6.1" and cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@codeSystemName="Immunization"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1498,7 +1475,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2-1903</th>
+                  <th class="value1">entity_HL7-cda-ch-1903</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1521,13 +1498,13 @@
             <thead>
                <tr>
                   <th class="label1">Entity</th>
-                  <th>cda-ch-1.2_medication-section</th>
+                  <th>cda-ch_medication-section</th>
                </tr>
             </thead>
             <tbody>
                <tr>
                   <td class="label1">Dateiname</td>
-                  <td>cda-ch-1.2_medication-section.ent</td>
+                  <td>cda-ch_medication-section.ent</td>
                </tr>
                <tr>
                   <td class="label1">Version</td>
@@ -1544,7 +1521,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0001</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1567,7 +1544,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0002</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1590,7 +1567,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0003</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1615,7 +1592,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0101</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1638,7 +1615,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0102</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1661,7 +1638,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0103</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1669,7 +1646,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.4"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.840.1.113883.5.4"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1684,7 +1661,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0104</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0104</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1692,7 +1669,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:id/@root="2.16.756.5.30.2.6.1" or cda:id/@root="1.3.88"</td>
+                  <td colspan="3">cda:id/@root="2.16.756.5.30.2.6.1" or cda:id/@root="1.3.88" or cda:id/@root="1.3.160"</td>
                </tr>
             </tbody>
             <tr>
@@ -1707,7 +1684,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0105</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0105</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1730,7 +1707,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0106</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0106</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1753,7 +1730,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0107</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0107</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1776,7 +1753,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0108</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0108</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">warning</th>
                </tr>
@@ -1799,7 +1776,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0109</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0109</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1807,7 +1784,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:priorityCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.7"]/code/@value</td>
+                  <td colspan="3">cda:priorityCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.840.1.113883.5.7"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1822,7 +1799,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0110</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0110</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1830,7 +1807,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:routeCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.840.1.113883.5.112"]/code/@value</td>
+                  <td colspan="3">cda:routeCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.840.1.113883.5.112"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -1845,7 +1822,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0111</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0111</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1868,7 +1845,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0112</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0112</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1891,7 +1868,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0113</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0113</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1916,7 +1893,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0201</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1939,7 +1916,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0202</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -1962,7 +1939,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">entity_HL7-cda-ch-1.2_medication-section-0203</th>
+                  <th class="value1">entity_HL7-cda-ch_medication-section-0203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">warning</th>
                </tr>
@@ -1991,7 +1968,7 @@
             <tbody>
                <tr>
                   <td class="label1">Dateiname</td>
-                  <td>svv-kzbt-20090228.ent</td>
+                  <td>svv-kzbt.ent</td>
                </tr>
                <tr>
                   <td class="label1">Version</td>
@@ -2008,7 +1985,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0001</th>
+                  <th class="value1">svv-kzbt-0001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2031,7 +2008,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0003</th>
+                  <th class="value1">svv-kzbt-0003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2054,7 +2031,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0004</th>
+                  <th class="value1">svv-kzbt-0004</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2077,7 +2054,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0005</th>
+                  <th class="value1">svv-kzbt-0005</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2085,7 +2062,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">//cda:title="Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma" and //cda:languageCode/@code="de-CH"</td>
+                  <td colspan="3">(//cda:title="Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -2100,7 +2077,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0006</th>
+                  <th class="value1">svv-kzbt-0006</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2123,7 +2100,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0007</th>
+                  <th class="value1">svv-kzbt-0007</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2146,7 +2123,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0008</th>
+                  <th class="value1">svv-kzbt-0008</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2169,7 +2146,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0009</th>
+                  <th class="value1">svv-kzbt-0009</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2192,7 +2169,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0010</th>
+                  <th class="value1">svv-kzbt-0010</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2215,7 +2192,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0011</th>
+                  <th class="value1">svv-kzbt-0011</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2238,7 +2215,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0012</th>
+                  <th class="value1">svv-kzbt-0012</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2261,7 +2238,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0013</th>
+                  <th class="value1">svv-kzbt-0013</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2284,7 +2261,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0014</th>
+                  <th class="value1">svv-kzbt-0014</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2307,7 +2284,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0015</th>
+                  <th class="value1">svv-kzbt-0015</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2330,7 +2307,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0016</th>
+                  <th class="value1">svv-kzbt-0016</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2353,7 +2330,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0017</th>
+                  <th class="value1">svv-kzbt-0017</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2376,7 +2353,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0018</th>
+                  <th class="value1">svv-kzbt-0018</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2401,7 +2378,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0100</th>
+                  <th class="value1">svv-kzbt-0100</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2424,7 +2401,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0101</th>
+                  <th class="value1">svv-kzbt-0101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2447,7 +2424,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0102</th>
+                  <th class="value1">svv-kzbt-0102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2455,7 +2432,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Schadeninformationen'</td>
+                  <td colspan="3">(cda:title="Schadeninformationen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -2470,7 +2447,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0103</th>
+                  <th class="value1">svv-kzbt-0103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2493,7 +2470,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0104</th>
+                  <th class="value1">svv-kzbt-0104</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2516,7 +2493,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0105</th>
+                  <th class="value1">svv-kzbt-0105</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2539,7 +2516,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0106</th>
+                  <th class="value1">svv-kzbt-0106</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2564,7 +2541,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0201</th>
+                  <th class="value1">svv-kzbt-0201</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2587,7 +2564,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0202</th>
+                  <th class="value1">svv-kzbt-0202</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2610,7 +2587,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0203</th>
+                  <th class="value1">svv-kzbt-0203</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2635,7 +2612,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0301</th>
+                  <th class="value1">svv-kzbt-0301</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2658,7 +2635,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0302</th>
+                  <th class="value1">svv-kzbt-0302</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2681,7 +2658,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0303</th>
+                  <th class="value1">svv-kzbt-0303</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2704,7 +2681,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0304</th>
+                  <th class="value1">svv-kzbt-0304</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2729,7 +2706,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0401</th>
+                  <th class="value1">svv-kzbt-0401</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2752,7 +2729,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0403</th>
+                  <th class="value1">svv-kzbt-0403</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2775,7 +2752,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0404</th>
+                  <th class="value1">svv-kzbt-0404</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">information</th>
                </tr>
@@ -2800,7 +2777,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-200902280501</th>
+                  <th class="value1">svv-kzbt0501</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2823,7 +2800,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0502</th>
+                  <th class="value1">svv-kzbt-0502</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2846,7 +2823,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0503</th>
+                  <th class="value1">svv-kzbt-0503</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2854,7 +2831,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-1.2-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
+                  <td colspan="3">cda:code/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value</td>
                </tr>
             </tbody>
             <tr>
@@ -2869,7 +2846,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0504</th>
+                  <th class="value1">svv-kzbt-0504</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2892,7 +2869,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0505</th>
+                  <th class="value1">svv-kzbt-0505</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2915,7 +2892,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0506</th>
+                  <th class="value1">svv-kzbt-0506</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2940,7 +2917,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0601</th>
+                  <th class="value1">svv-kzbt-0601</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2963,7 +2940,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0602</th>
+                  <th class="value1">svv-kzbt-0602</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -2971,7 +2948,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten'</td>
+                  <td colspan="3">(cda:title="Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -2986,7 +2963,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0603</th>
+                  <th class="value1">svv-kzbt-0603</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3011,7 +2988,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0701</th>
+                  <th class="value1">svv-kzbt-0701</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3034,7 +3011,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0702</th>
+                  <th class="value1">svv-kzbt-0702</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3042,7 +3019,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Unfallhergang'</td>
+                  <td colspan="3">(cda:title="Unfallhergang" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3057,7 +3034,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0703</th>
+                  <th class="value1">svv-kzbt-0703</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3082,7 +3059,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0801</th>
+                  <th class="value1">svv-kzbt-0801</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3105,7 +3082,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0802</th>
+                  <th class="value1">svv-kzbt-0802</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3113,7 +3090,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Befragung zum Unfallablauf ergibt Anhaltspunkte für'</td>
+                  <td colspan="3">(cda:title="Befragung zum Unfallablauf ergibt Anhaltspunkte für" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3128,7 +3105,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0803</th>
+                  <th class="value1">svv-kzbt-0803</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3153,7 +3130,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0901</th>
+                  <th class="value1">svv-kzbt-0901</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3176,7 +3153,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0902</th>
+                  <th class="value1">svv-kzbt-0902</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3184,7 +3161,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Tätigkeiten nach dem Unfallereignis'</td>
+                  <td colspan="3">(cda:title="Tätigkeiten nach dem Unfallereignis" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3199,7 +3176,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-0903</th>
+                  <th class="value1">svv-kzbt-0903</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3224,7 +3201,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1001</th>
+                  <th class="value1">svv-kzbt-1001</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3247,7 +3224,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1002</th>
+                  <th class="value1">svv-kzbt-1002</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3255,7 +3232,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt'</td>
+                  <td colspan="3">(cda:title="Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3270,7 +3247,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1003</th>
+                  <th class="value1">svv-kzbt-1003</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3295,7 +3272,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1101</th>
+                  <th class="value1">svv-kzbt-1101</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3318,7 +3295,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1102</th>
+                  <th class="value1">svv-kzbt-1102</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3326,7 +3303,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Frühere Anamnese'</td>
+                  <td colspan="3">(cda:title="Frühere Anamnese" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3341,7 +3318,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1103</th>
+                  <th class="value1">svv-kzbt-1103</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3366,7 +3343,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1301</th>
+                  <th class="value1">svv-kzbt-1301</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3389,7 +3366,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1302</th>
+                  <th class="value1">svv-kzbt-1302</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3397,7 +3374,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Untersuchungsbefunde'</td>
+                  <td colspan="3">(cda:title="Untersuchungsbefunde" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3412,7 +3389,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1303</th>
+                  <th class="value1">svv-kzbt-1303</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3435,7 +3412,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1304</th>
+                  <th class="value1">svv-kzbt-1304</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3458,7 +3435,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1305</th>
+                  <th class="value1">svv-kzbt-1305</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3483,7 +3460,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1401</th>
+                  <th class="value1">svv-kzbt-1401</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3506,7 +3483,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1402</th>
+                  <th class="value1">svv-kzbt-1402</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3514,7 +3491,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation'</td>
+                  <td colspan="3">(cda:title="Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3529,7 +3506,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1403</th>
+                  <th class="value1">svv-kzbt-1403</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3554,7 +3531,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1501</th>
+                  <th class="value1">svv-kzbt-1501</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3577,7 +3554,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1502</th>
+                  <th class="value1">svv-kzbt-1502</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3585,7 +3562,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Therapie / angeordnete Massnahmen'</td>
+                  <td colspan="3">(cda:title="Therapie / angeordnete Massnahmen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3600,7 +3577,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1503</th>
+                  <th class="value1">svv-kzbt-1503</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3625,7 +3602,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1601</th>
+                  <th class="value1">svv-kzbt-1601</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3648,7 +3625,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1602</th>
+                  <th class="value1">svv-kzbt-1602</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
@@ -3656,7 +3633,7 @@
             <tbody>
                <tr>
                   <td class="label1">Assert</td>
-                  <td colspan="3">cda:title='Arbeitsfähigkeit'</td>
+                  <td colspan="3">(cda:title="Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"</td>
                </tr>
             </tbody>
             <tr>
@@ -3671,7 +3648,7 @@
             <thead>
                <tr>
                   <th class="label1" width="10%">Rule</th>
-                  <th class="value1">svv-kzbt-20090228-1603</th>
+                  <th class="value1">svv-kzbt-1603</th>
                   <th class="label1" width="10%">Role</th>
                   <th class="value2" width="10%">error</th>
                </tr>
