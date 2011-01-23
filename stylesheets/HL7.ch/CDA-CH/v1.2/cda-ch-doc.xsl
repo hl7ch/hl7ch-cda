@@ -26,8 +26,8 @@ Created by oliver egger, visionary ag
 		<html xmlns="http://www.w3.org/1999/xhtml">
 			<xsl:attribute name="xml:lang"><xsl:value-of select="$language" /></xsl:attribute>
 	    <head>
-		    <xsl:if test="xhtml:h1[@lang=$language or count(@lang)=0]">
-		    <title><xsl:value-of select="xhtml:h1[@lang=$language or count(@lang)=0]"/></title>
+		    <xsl:if test="xhtml:h1[@lang='$language' or count(@lang)=0]">
+		    <title><xsl:value-of select="xhtml:h1[@lang='$language' or count(@lang)=0]"/></title>
 		    </xsl:if>
 		    <meta http-equiv = "content-type" content = "application/xhtml+xml; charset=UTF-8" />
  		    <link rel="stylesheet" type="text/css" href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-doc.css"></link>  
@@ -46,7 +46,7 @@ Created by oliver egger, visionary ag
 	<!--  1. Wechsel des Namspaces der xhtml Elemente auf den Standard Namespace 
 		  2. Seleketion nur von xhmtl Elementen die richtige Sprache gesetzt haben (oder keine)
 		  3. Entfernen des Sprachattributes aus dem Output -->
-	<xsl:template match="xhtml:*[@lang=$language or count(@lang)=0]">
+	<xsl:template match="xhtml:*[@lang='$language' or count(@lang)=0]">
 	    <xsl:element name="{local-name()}">
     		<xsl:for-each select="@*">
     			<xsl:if test="name()!='lang'">
@@ -61,7 +61,7 @@ Created by oliver egger, visionary ag
 		<!--  1. Wechsel des Namspaces der xhtml Elemente auf den Standard Namespace 
 		  2. Seleketion nur von xhmtl Elementen die richtige Sprache gesetzt haben (oder keine)
 		  3. Entfernen des Sprachattributes aus dem Output -->
-	<xsl:template match="xhtml:*[@lang=$language or count(@lang)=0]" mode="entitydocumented">
+	<xsl:template match="xhtml:*[@lang='$language' or count(@lang)=0]" mode="entitydocumented">
 	    <xsl:element name="{local-name()}">
     		<xsl:for-each select="@*">
     			<xsl:if test="name()!='lang'">
@@ -128,7 +128,7 @@ Created by oliver egger, visionary ag
 	</div>
 	</xsl:template>
 	
-	<xsl:template match="xhtml:p[@lang=$language or count(@lang)=0]" mode="rulestranslated">
+	<xsl:template match="xhtml:p[@lang='$language' or count(@lang)=0]" mode="rulestranslated">
 		<tr>
 			<td><xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/></td>
 			<td colspan="3"><xsl:value-of select="."/><xsl:apply-templates  mode="rulestranslated" /></td>
