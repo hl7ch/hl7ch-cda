@@ -2,12 +2,15 @@
 <!--
 ********************************************************
 Stylesheet for Documenting Schematron Rules and output as xhtml
-Stand: Entwurf vom 11.02.2010
 
-Mit param name language werden die entsprechenden sprachlichen Meldungen herausgenommen
+Mit param name language werden die sprachlichen Meldungen gefiltert. 
+Dieser Parameter kann mittels Angabe als Xslt Argument beim XSL Transformer angegeben werden und damit kann dieses Stylesheet für alle Sprachen eingesetzt werden
+- Java: <param name="lang" value="fr_ch" />
+- .Net: XsltArgumentList.AddParam("language", "", "fr_ch");
 
 History:
-Created by oliver egger, visionary ag
+11.02.2010 Created by oliver egger, visionary ag
+23.01.2011 Changed by Tony Schaller, medshare GmbH (Variables xsl:template match not allowed when using .Net XslCompiledTransform.Transform -> select in template not in match)
 ********************************************************
 -->
 <xsl:stylesheet version="2.0"
@@ -19,6 +22,7 @@ Created by oliver egger, visionary ag
 
 	<xsl:output method="xml" omit-xml-declaration="yes" version="1.0" encoding="UTF-8" indent="yes"/>
 
+	<!-- SDefault Sprach-Filter; wird durch Angabe als Parameter von 'aussen' übersteuert -->
 	<xsl:param name="language">de_ch</xsl:param>
 
 	<!-- Matched das Schemaelement -->
@@ -28,9 +32,9 @@ Created by oliver egger, visionary ag
 				<xsl:value-of select="$language" />
 			</xsl:attribute>
 			<head>
-				<xsl:if test="xhtml:h1[@lang='$language' or count(@lang)=0]">
+				<xsl:if test="xhtml:h1">
 					<title>
-						<xsl:value-of select="xhtml:h1[@lang='$language' or count(@lang)=0]"/>
+						<xsl:value-of select="xhtml:h1"/>
 					</title>
 				</xsl:if>
 				<meta http-equiv = "content-type" content = "application/xhtml+xml; charset=UTF-8" />
@@ -50,35 +54,43 @@ Created by oliver egger, visionary ag
 	<!--  1. Wechsel des Namspaces der xhtml Elemente auf den Standard Namespace
 	2. Seleketion nur von xhmtl Elementen die richtige Sprache gesetzt haben (oder keine)
 	3. Entfernen des Sprachattributes aus dem Output -->
-	<xsl:template match="xhtml:*[@lang='$language' or count(@lang)=0]">
-		<xsl:element name="{local-name()}">
-			<xsl:for-each select="@*">
-				<xsl:if test="name()!='lang'">
-					<xsl:attribute name="{name()}">
-						<xsl:value-of select="." />
-					</xsl:attribute>
-				</xsl:if>
-			</xsl:for-each>
-			<xsl:value-of select="text()"/>
-			<xsl:apply-templates />
-		</xsl:element>
+	<xsl:template match="xhtml:*">
+		<xsl:choose>
+			<xsl:when test="string(@lang)=$language or string(@lang)=''">
+				<xsl:element name="{local-name()}">
+					<xsl:for-each select="@*">
+						<xsl:if test="name()!='lang'">
+							<xsl:attribute name="{name()}">
+								<xsl:value-of select="." />
+							</xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:value-of select="text()"/>
+					<xsl:apply-templates />
+				</xsl:element>
+			</xsl:when>
+		</xsl:choose>
 	</xsl:template>
 
 	<!--  1. Wechsel des Namspaces der xhtml Elemente auf den Standard Namespace
 	2. Seleketion nur von xhmtl Elementen die richtige Sprache gesetzt haben (oder keine)
 	3. Entfernen des Sprachattributes aus dem Output -->
-	<xsl:template match="xhtml:*[@lang='$language' or count(@lang)=0]" mode="entitydocumented">
-		<xsl:element name="{local-name()}">
-			<xsl:for-each select="@*">
-				<xsl:if test="name()!='lang'">
-					<xsl:attribute name="{name()}">
-						<xsl:value-of select="." />
-					</xsl:attribute>
-				</xsl:if>
-			</xsl:for-each>
-			<xsl:value-of select="text()"/>
-			<xsl:apply-templates mode="entitydocumented"/>
-		</xsl:element>
+	<xsl:template match="xhtml:*" mode="entitydocumented">
+		<xsl:choose>
+			<xsl:when test="string(@lang)=$language or string(@lang)=''">
+				<xsl:element name="{local-name()}">
+					<xsl:for-each select="@*">
+						<xsl:if test="name()!='lang'">
+							<xsl:attribute name="{name()}">
+								<xsl:value-of select="." />
+							</xsl:attribute>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:value-of select="text()"/>
+					<xsl:apply-templates mode="entitydocumented"/>
+				</xsl:element>
+			</xsl:when>
+		</xsl:choose>
 	</xsl:template>
 
 
@@ -163,16 +175,20 @@ Created by oliver egger, visionary ag
 		</div>
 	</xsl:template>
 
-	<xsl:template match="xhtml:p[@lang='$language' or count(@lang)=0]" mode="rulestranslated">
-		<tr>
-			<td>
-				<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/>
-			</td>
-			<td colspan="3">
-				<xsl:value-of select="."/>
-				<xsl:apply-templates  mode="rulestranslated" />
-			</td>
-		</tr>
+	<xsl:template match="xhtml:p" mode="rulestranslated">
+		<xsl:choose>
+			<xsl:when test="string(@lang)=$language or string(@lang)=''">
+				<tr>
+					<td>
+						<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/>
+					</td>
+					<td colspan="3">
+						<xsl:value-of select="."/>
+						<xsl:apply-templates  mode="rulestranslated" />
+					</td>
+				</tr>
+			</xsl:when>
+		</xsl:choose>
 	</xsl:template>
 
 </xsl:stylesheet>
