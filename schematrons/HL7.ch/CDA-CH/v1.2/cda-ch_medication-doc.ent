@@ -31,7 +31,7 @@ History:
 	<rule context='cda:patientRole/cda:patient'>
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang='de_ch'>CDA-CH Medication Header Templates</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Header Templates.</xhtml:p>
+		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Header Templates</xhtml:p>
 		<xhtml:h3 lang='fr_ch'>CDA-CH Medication Header Templates</xhtml:h3>
 		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Header Templates</xhtml:p>
 		<!--
@@ -40,29 +40,29 @@ History:
 		-->
 
 		<assert id='entity_HL7-cda-ch_medication-doc-0001' test='count(cda:administrativeGenderCode)>0'>
-			<xhtml:p lang='de_ch'>Beim Patient fehlt die Angabe des Geschlechts.</xhtml:p>
-			<xhtml:p lang='fr_ch'>L’indication du sexe manque pour le patient.</xhtml:p>
+			<xhtml:p lang='de_ch'>Beim Patient fehlt die Angabe des Geschlechts</xhtml:p>
+			<xhtml:p lang='fr_ch'>L'indication du sexe manque pour le patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='entity_HL7-cda-ch_medication-doc-0002' test='/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@codeSystem="2.16.840.1.113883.5.1"'>
-			<xhtml:p lang='de_ch'>Ungültiges Codesystem bei der Angabe des Geschlechts des Patienten.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Codesystem non valable pour l’indication du sexe du patient.</xhtml:p>
+			<xhtml:p lang='de_ch'>Ungültiges Codesystem bei der Angabe des Geschlechts des Patienten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Codesystem non valable pour l'indication du sexe du patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='entity_HL7-cda-ch_medication-doc-0003' test='/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@codeSystemName="AdministrativeGender"]/code/@value'>
-			<xhtml:p lang='de_ch'>Ungültige Angabe beim Geschlecht des Patienten.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Indication non valable pour le sexe du patient.</xhtml:p>
+			<xhtml:p lang='de_ch'>Ungültige Angabe beim Geschlecht des Patienten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Indication non valable pour le sexe du patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='entity_HL7-cda-ch_medication-doc-0004' test='count(cda:birthTime)>0'>
-			<xhtml:p lang='de_ch'>Beim Patient fehlt die Angabe des Geburtsdatums.</xhtml:p>
-			<xhtml:p lang='fr_ch'>L’indication de la date de naissance manque pour le patient.</xhtml:p>
+			<xhtml:p lang='de_ch'>Beim Patient fehlt die Angabe des Geburtsdatums</xhtml:p>
+			<xhtml:p lang='fr_ch'>L'indication de la date de naissance manque pour le patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
@@ -76,7 +76,7 @@ History:
 	<rule context='cda:ClinicalDocument'>
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang='de_ch'>CDA-CH Medication Body Templates</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Body Templates.</xhtml:p>
+		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Body Templates</xhtml:p>
 		<xhtml:h3 lang='fr_ch'>CDA-CH Medication Body Templates</xhtml:h3>
 		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Body Templates</xhtml:p>
 		<!--
@@ -86,50 +86,50 @@ History:
 
 		<!-- Existenz der Sections prüfen -->
 		<assert id='entity_HL7-cda-ch_medication-doc-0101' test='descendant::cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.MediList"]'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument muss eine Section 'Medikation' enthalten.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section ’Médication’.</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument muss eine Section 'Medikation' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section 'Médication'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert role='warning' id='entity_HL7-cda-ch_medication-doc-0102' test='descendant::cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.VitalSignList"]'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument sollte eine Section 'Vitalzeichen' enthalten.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section ’Signes vitaux’.</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument sollte eine Section 'Vitalzeichen' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section 'Signes vitaux'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert role='warning' id='entity_HL7-cda-ch_medication-doc-0103' test='descendant::cda:templateId[(@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.DiagList") or (@root="1.3.6.1.4.1.19376.1.5.3.1.3.6")]'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument sollte eine Section 'Diagnosenliste' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section ’Liste de diagnostics’ afin que d’éventuelles interactions puissent être interprétées correctement par le destinataire.</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument sollte eine Section 'Diagnosenliste' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section 'Liste de diagnostics' afin que d'éventuelles interactions puissent être interprétées correctement par le destinataire</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert role='warning' id='entity_HL7-cda-ch_medication-doc-0104' test='descendant::cda:observation[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.VitalSignL3" and cda:code/@code="3137-7"]'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument sollte das 'Vitalzeichen' Gewicht enthalten.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir le ’signe vital’ Poids.</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument sollte das 'Vitalzeichen' Gewicht enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir le 'signe vital' Poids</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert role='warning' id='entity_HL7-cda-ch_medication-doc-0105' test='descendant::cda:observation[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.VitalSignL3" and cda:code/@code="3141-9"]'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument sollte das 'Vitalzeichen' Grösse enthalten.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir le ’signe vital’ Taille.</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument sollte das 'Vitalzeichen' Grösse enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir le 'signe vital' Taille</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert role='warning' id='entity_HL7-cda-ch_medication-doc-0106' test='cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code="M" or cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code="UN" or (cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code="F" and descendant::cda:observation[cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and cda:templateId/@extension="CDA-CH.Body.VitalSignL3" and cda:code/@code="11449-6"])'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument sollte das 'Vitalzeichen' Schwangerschaft/Trimenon enthalten (nur bei Frauen).</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir le ’signe vital’ Grossesse/Trimestre (uniquement pour les femmes).</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument sollte das 'Vitalzeichen' Schwangerschaft/Trimenon enthalten (nur bei Frauen)</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir le 'signe vital' Grossesse/Trimestre (uniquement pour les femmes)</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert role='warning' id='entity_HL7-cda-ch_medication-doc-0107' test='descendant::cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Body.IntoleranceList"]'>
-			<xhtml:p lang='de_ch'>Das CDA Dokument sollte eine Section 'Allergien und Unverträglichkeiten' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können.</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section ’Allergies et intolérances’ afin que d’éventuelles interactions puissent être interprétées correctement par le destinataire.</xhtml:p>
+			<xhtml:p lang='de_ch'>Das CDA Dokument sollte eine Section 'Allergien und Unverträglichkeiten' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le document CDA doit contenir une section 'Allergies et intolérances' afin que d'éventuelles interactions puissent être interprétées correctement par le destinataire</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->

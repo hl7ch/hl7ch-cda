@@ -90,7 +90,7 @@ History:
 			-->
 		</assert>
 		<assert id='suva-form-2906-0008' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
-			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis detailliert' eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben).</xhtml:p>
+			<xhtml:p lang='de_ch'>Das Suva 'Arbeitsunfähigkeitszeugnis detailliert' eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -106,7 +106,7 @@ History:
 	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="2906.Rahmenbedingungen"]'>
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang='de_ch'>Arbeitsunfähigkeitszeugnis einfach: Spezielle Anforderungen / Rahmenbedingungen</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Spezielle Anforderungen / Rahmenbedingungen.</xhtml:p>
+		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Spezielle Anforderungen / Rahmenbedingungen</xhtml:p>
 		<!--
 		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
 		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -115,28 +115,28 @@ History:
 		-->
 
 		<assert id='suva-form-2906-0101' test='self::cda:section'>
-			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss als 'section' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss als 'section' im CDA Body deklariert werden</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='suva-form-2906-0102' test='(cda:title="Spezielle Anforderungen / Rahmenbedingungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss einen section title 'Spezielle Anforderungen / Rahmenbedingungen' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss einen section title 'Spezielle Anforderungen / Rahmenbedingungen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='suva-form-2906-0103' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="2906.RahmenbedingungL3"]'>
-			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss ein observation mit Template '2906.RahmenbedingungL3' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss ein observation mit Template '2906.RahmenbedingungL3' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='suva-form-2906-0104' test='count(descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="2906.RahmenbedingungL3"])=count(document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.6"]/code)'>
-			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss für jeden Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.6' genau eine strukturierte Angabe enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss für jeden Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.6' genau eine strukturierte Angabe enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -152,7 +152,7 @@ History:
 	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="2906.RahmenbedingungL3"]'>
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang='de_ch'>Arbeitsunfähigkeitszeugnis einfach: Spezielle Anforderung / Rahmenbedingung</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben eine Spezielle Anforderung / Rahmenbedingung.</xhtml:p>
+		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben eine Spezielle Anforderung / Rahmenbedingung</xhtml:p>
 		<!--
 		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
 		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -161,21 +161,21 @@ History:
 		-->
 
 		<assert id='suva-form-2906-1101' test='self::cda:observation'>
-			<xhtml:p lang='de_ch'>Eine 'Spezielle Anforderung / Rahmenbedingung' muss als 'observation' im CDA Body deklariert werden.</xhtml:p>
+			<xhtml:p lang='de_ch'>Eine 'Spezielle Anforderung / Rahmenbedingung' muss als 'observation' im CDA Body deklariert werden</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='suva-form-2906-1102' test='cda:code/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.6"]/code/@value'>
-			<xhtml:p lang='de_ch'>Eine 'Spezielle Anforderung / Rahmenbedingung' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.6' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Eine 'Spezielle Anforderung / Rahmenbedingung' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.6' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
 		<assert id='suva-form-2906-1103' test='cda:code/@code!="TF" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Tagesbetrieb fix' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Tagesbetrieb fix' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -183,7 +183,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1104' test='cda:code/@code!="TV" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Tagesbetrieb variabel' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Tagesbetrieb variabel' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -191,7 +191,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1105' test='cda:code/@code!="2S" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu '2-Schicht Betrieb (rotierend)' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu '2-Schicht Betrieb (rotierend)' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -199,7 +199,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1106' test='cda:code/@code!="3S" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu '3-Schicht Betrieb (rotierend)' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu '3-Schicht Betrieb (rotierend)' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -207,7 +207,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1107' test='cda:code/@code!="NS" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'nur Nachtschicht' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'nur Nachtschicht' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -215,7 +215,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1108' test='cda:code/@code!="SI" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'sitzende Tätigkeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'sitzende Tätigkeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -223,7 +223,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1109' test='cda:code/@code!="ST" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'stehende Tätigkeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'stehende Tätigkeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -231,7 +231,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1110' test='cda:code/@code!="BI" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Bildschirmarbeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Bildschirmarbeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -239,7 +239,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1111' test='cda:code/@code!="VI" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'visuelle Kontrolltätigkeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'visuelle Kontrolltätigkeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -247,7 +247,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1112' test='cda:code/@code!="LE" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Lärmexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Lärmexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -255,7 +255,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1113' test='cda:code/@code!="KE" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Kälteexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Kälteexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -263,7 +263,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1114' test='cda:code/@code!="WE" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Wärmeexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Wärmeexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -271,7 +271,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1115' test='cda:code/@code!="SE" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Staub/Geruchsexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Staub/Geruchsexposition' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -279,7 +279,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1116' test='cda:code/@code!="RP" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'regelmässige Pausen' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'regelmässige Pausen' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -287,7 +287,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1117' test='cda:code/@code!="UK" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.7"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.7")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Überkopfarbeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Überkopfarbeit' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.7' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -295,7 +295,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1118' test='cda:code/@code!="HL" or (cda:value/@xsi:type="CE" and cda:value/@code=document("eMedidoc-voc.xml")/systems/system[@root="2.16.756.5.30.1.100.3.2.8"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.1.100.3.2.8")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Heben von Lasten' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.8' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Heben von Lasten' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.8' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -303,7 +303,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1119' test='cda:code/@code!="BT" or (cda:value/@xsi:type="INT")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Besuch Therapie notwendig' muss einen ganzzahligen Wert (Anzahl Therapien pro Woche) enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Besuch Therapie notwendig' muss einen ganzzahligen Wert (Anzahl Therapien pro Woche) enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -311,7 +311,7 @@ History:
 		</assert>
 
 		<assert id='suva-form-2906-1120' test='cda:code/@code!="FT" or (cda:value/@xsi:type="CE" and cda:value/@code=document("../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml")/systems/system[@root="2.16.756.5.30.2.1.1.3.1"]/code/@value and cda:value/@codeSystem="2.16.756.5.30.2.1.1.3.1")'>
-			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Heben von Lasten' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1' enthalten.</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Beurteilung zu 'Heben von Lasten' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>

@@ -76,7 +76,7 @@ History:
 			-->
 		</assert>
 		<assert id='suva-form-2904-0006' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
-			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben).</xhtml:p>
+			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
