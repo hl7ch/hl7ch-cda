@@ -10,6 +10,7 @@ History:
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
 09.12.2010: Tony Schaller, medshare GmbH (Erwerbstatus hinzugefügt auf Antrag Thomas Lanz, Suva)
+24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->
@@ -21,12 +22,12 @@ History:
 	********************************************************
 	-->
 	<system symbolicName='schadenanmart' root='2.16.756.5.30.1.100.3.2.2'>
-		<code value='U' displayName='Unfall'/>
-		<code value='B' displayName='Berufskrankheit'/>
-		<code value='K' displayName='Krankheit'/>
-		<code value='M' displayName='Mutterschaft - nicht krankheitsbedingt'/>
-		<code value='Z' displayName='Zahnschaden'/>
-		<code value='R' displayName='Rückfall'/>
+		<code value='U' displayName='Unfall/Accident'/>
+		<code value='B' displayName='Berufskrankheit/Maladie professionnelle'/>
+		<code value='K' displayName='Krankheit/Maladie'/>
+		<code value='M' displayName='Mutterschaft - nicht krankheitsbedingt/Grossesse – n’est pas suite de maladie'/>
+		<code value='Z' displayName='Zahnschaden/Dommage dentaire'/>
+		<code value='R' displayName='Rückfall/Rechute'/>
 	</system>
 
 	<!--
@@ -36,10 +37,10 @@ History:
 	********************************************************
 	-->
 	<system symbolicName='erstbehinkonv' root='2.16.756.5.30.1.100.3.2.3'>
-		<code value='N' displayName='in Praxis während Praxisöffnungszeit'/>
-		<code value='I' displayName='in Praxis ausserhalb Praxisöffnungszeit'/>
-		<code value='U' displayName='am Unfallort'/>
-		<code value='W' displayName='in der Wohnung des Patienten'/>
+		<code value='N' displayName='in Praxis während Praxisöffnungszeit/Au cabinet pendant les horaires d’ouverture'/>
+		<code value='I' displayName='in Praxis ausserhalb Praxisöffnungszeit/Au cabinet à l’extérieur des horaires d’ouverture'/>
+		<code value='U' displayName='am Unfallort/Sur le lieu de l’accident'/>
+		<code value='W' displayName='in der Wohnung des Patienten/Au domicile du patient'/>
 	</system>
 
 	<!--

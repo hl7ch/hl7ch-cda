@@ -8,6 +8,7 @@ Language: de-CH
 History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->
@@ -19,9 +20,9 @@ History:
 	********************************************************
 	-->
 	<system codeSystemName='StandardCDABodySelektion' root='2.16.756.5.30.2.1.1.3.1'>
-		<code value='Y' displayName='Ja'/>
-		<code value='N' displayName='Nein'/>
-		<code value='U' displayName='Unbekannt'/>
+		<code value='Y' displayName='Ja/Oui'/>
+		<code value='N' displayName='Nein/Non'/>
+		<code value='U' displayName='Unbekannt/Inconnu'/>
 	</system>
 
 	<!--
@@ -33,8 +34,8 @@ History:
 		<code value='1' displayName='1. Trimenon'/>
 		<code value='2' displayName='2. Trimenon'/>
 		<code value='3' displayName='3. Trimenon'/>
-		<code value='N' displayName='Nicht schwanger'/>
-		<code value='U' displayName='Unbekannt'/>
+		<code value='N' displayName='Nicht schwanger/Pas de grossesse'/>
+		<code value='U' displayName='Unbekannt/Inconnu'/>
 	</system>
 
 	<!--
@@ -43,9 +44,9 @@ History:
 	********************************************************
 	-->
 	<system codeSystemName='VitalSignCodes' root='2.16.756.5.30.2.1.1.5.1'>
-		<code value='3137-7' displayName='Grösse'/>
-		<code value='3141-9' displayName='Gewicht'/>
-		<code value='11449-6' displayName='Schwangerschaftstatus'/>
+		<code value='3137-7' displayName='Grösse/Taille'/>
+		<code value='3141-9' displayName='Gewicht/Poids'/>
+		<code value='11449-6' displayName='Schwangerschaftstatus/Etat de la grossesse'/>
 	</system>
 	
 	<!--
@@ -54,11 +55,11 @@ History:
 	********************************************************
 	-->
 	<system codeSystemName='ArbeitsfähigkeitStunden' root='2.16.756.5.30.2.1.1.6.1'>
-		<code value='0' displayName='Arbeitsunfähig'/>
-		<code value='2' displayName='2 Stunden pro Tag'/>
-		<code value='4' displayName='4 Stunden pro Tag'/>
-		<code value='6' displayName='6 Stunden pro Tag'/>
-		<code value='8+' displayName='8 oder mehr Stunden pro Tag'/>
+		<code value='0' displayName='Arbeitsunfähig/Incapable de travailler'/>
+		<code value='2' displayName='2 Stunden pro Tag / heures par jour'/>
+		<code value='4' displayName='4 Stunden pro Tag / heures par jour'/>
+		<code value='6' displayName='6 Stunden pro Tag / heures par jour'/>
+		<code value='8+' displayName='8 oder mehr Stunden pro Tag / heures par jour'/>
 	</system>
 
 	<!--
@@ -67,9 +68,9 @@ History:
 	********************************************************
 	-->
 	<system codeSystemName='ArbeitsfähigkeitIntensität' root='2.16.756.5.30.2.1.1.7.1'> 
-		<code value='0' displayName='Arbeitsunfähig'/>
-		<code value='50' displayName='reduzierte Arbeitsintensität'/>
-		<code value='100' displayName='volle Arbeitsintensität'/>
+		<code value='0' displayName='Arbeitsunfähig/Incapable de travailler'/>
+		<code value='50' displayName='reduzierte Arbeitsintensität/Degré réduit d’intensité du travail'/>
+		<code value='100' displayName='volle Arbeitsintensität/Degré complet d’intensité du travail'/>
 	</system>
 
 	<!--
@@ -79,15 +80,15 @@ History:
 	-->
 	<system codeSystemName='DiagnosisSectionCode' root='2.16.840.1.113883.6.1'>
 		<!-- DIAGNOSIS:NAR (für alle Diagnosensections, die Diagnosen nur im Freitext enthalten und die Bedeutung der Diagnosen-section nicht genauer definiert ist) -->
-		<code value='29548-5' displayName='Diagnose (Text)'/>
+		<code value='29548-5' displayName='Diagnose (Text)/Diagnostic (texte)'/>
 		<!-- DIAGNOSIS:NOM (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section nicht genauer definiert ist) -->
-		<code value='29308-4' displayName='Diagnose (Codiert)'/>
+		<code value='29308-4' displayName='Diagnose (Codiert)/Diagnostic (codé)'/>
 		<!-- HOSPITAL DISCHARGE DX:NAR (für alle Diagnosensections, die Diagnosen nur im Freitext enthalten und die Bedeutung der Diagnosen-section als "Entlassdiagnose" definiert ist) -->
-		<code value='11535-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Text)'/>
+		<code value='11535-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Text)/Diagnostic lors de la sortie de l’hôpital (texte)'/>
 		<!-- HOSPITAL DISCHARGE DX (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section als "Entlassdiagnose" definiert ist) -->
-		<code value='8651-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Code)'/>
+		<code value='8651-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Code)/Diagnostic lors de la sortie de l’hôpital (code)'/>
 		<!-- HOSPITAL ADMISSION DX (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section als "Eintrittsdiagnose" definiert ist) -->
-		<code value='8646-2' displayName='Diagnose bei Aufnahme ins Krankenhaus (Code)'/>
+		<code value='8646-2' displayName='Diagnose bei Aufnahme ins Krankenhaus (Code)/Diagnostic lors de l’admission à l’hôpital (code)'/>
 	</system>
 
 	<!--
@@ -121,9 +122,9 @@ History:
 	********************************************************
 	-->
 	<system codeSystemName='AdministrativeGender' root='2.16.840.1.113883.5.1'>
-		<code value='M' displayName='männlich'/>
-		<code value='F' displayName='weiblich'/>
-		<code value='UN' displayName='Undifferenziert'/>
+		<code value='M' displayName='männlich/Homme'/>
+		<code value='F' displayName='weiblich/Femme'/>
+		<code value='UN' displayName='Undifferenziert/Non différencié'/>
 	</system>
 	
 	<!--
@@ -133,23 +134,23 @@ History:
 	-->
 	<system codeSystemName='MaritalStatus' root='2.16.840.1.113883.11.12212'>
 		<!-- Annulled: Marriage contract has been declared null and to not have existed -->
-		<code value='A' displayName='Aufgelöste Partnerschaft'/>
+		<code value='A' displayName='Aufgelöste Partnerschaft/Partenariat dissous'/>
 		<!-- Divorced: Marriage contract has been declared dissolved and inactive -->
-		<code value='D' displayName='Geschieden'/>
+		<code value='D' displayName='Geschieden/Divorcé'/>
 		<!-- Domestic partner: Person declares that a domestic partner relationship exists. -->
-		<code value='T' displayName='Eingetragene Partnerschaft'/>
+		<code value='T' displayName='Eingetragene Partnerschaft/Partenariat enregistré'/>
 		<!-- Interlocutory: Subject to an Interlocutory Decree. -->
 		<code value='I' displayName=''/>
 		<!-- Legally Separated -->
-		<code value='L' displayName='Getrennt'/>
+		<code value='L' displayName='Getrennt/Séparé'/>
 		<!-- Married: A current marriage contract is active -->
-		<code value='M' displayName='Verheiratet'/>
+		<code value='M' displayName='Verheiratet/Marié'/>
 		<!-- Never Married: No marriage contract has ever been entered -->
-		<code value='S' displayName='Ledig'/>
+		<code value='S' displayName='Ledig/Célibataire'/>
 		<!-- Polygamous: More than 1 current spouse -->
-		<code value='P' displayName='Polygam'/>
+		<code value='P' displayName='Polygam/Polygame'/>
 		<!-- Widowed: The spouse has died --> 
-		<code value='W' displayName='Verwitwet'/>
+		<code value='W' displayName='Verwitwet/Veuf'/>
 	</system>
 	
 	<!--
@@ -158,8 +159,8 @@ History:
 	********************************************************
 	-->
 	<system codeSystemName='ActSubstanceAdministrationCode' root='2.16.840.1.113883.5.4'>
-		<code value='DRUG' displayName='Medikamentöse Therapie'/>
-		<code value='IMMUNIZ' displayName='Impfung'/>
+		<code value='DRUG' displayName='Medikamentöse Therapie/Thérapie médicamenteuse'/>
+		<code value='IMMUNIZ' displayName='Impfung/Vaccin'/>
 	</system>
 	
 	<!--
@@ -177,7 +178,7 @@ History:
 		<!-- contact recipient for scheduling; Filler should contact the service recipient (target) to schedule the service. (Was "C" in HL7 version 2.3's TQ-priority component.)-->
 		<code value='CSR' displayName=''/>
 		<!-- as needed; An "as needed" order should be accompanied by a description of what constitutes a need. This description is represented by an observation service predicate as a precondition.-->
-		<code value='PRN' displayName='Bei Bedarf'/>
+		<code value='PRN' displayName='Bei Bedarf/Si nécessaire'/>
 		<!-- callback results; Filler should contact the placer as soon as results are available, even for preliminary results. (Was "C" in HL7 verion 2.3's reporting priority.)-->
 		<code value='CR' displayName=''/>
 		<!-- elective; Beneficial to the patient but not essential for survival.-->
@@ -203,9 +204,9 @@ History:
 		<!-- emergency; An unforeseen combination of circumstances or the resulting state that calls for immediate action.-->
 		<code value='EM' displayName=''/>
 		<!-- routine; Routine service, do at usual work hours.-->
-		<code value='R' displayName='Routine'/>
+		<code value='R' displayName='Routine/Routine'/>
 		<!-- urgent; Calls for prompt action.-->
-		<code value='UR' displayName='Dringend'/>
+		<code value='UR' displayName='Dringend/Urgent'/>
 	</system>
 	
 	<!--
