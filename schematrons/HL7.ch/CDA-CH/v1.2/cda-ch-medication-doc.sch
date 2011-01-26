@@ -49,8 +49,8 @@ reusable templates
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">Entities référencées</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
 		<xhtml:li>cda-ch_medication-doc.ent</xhtml:li>
+		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</xhtml:li>
 		<xhtml:li>cda-ch.ent</xhtml:li>
@@ -58,8 +58,8 @@ reusable templates
 	</xhtml:ul>
 
 	<!-- reusable templates -->
-	&ent-hl7-cda-ch_medication-section;
 	&ent-hl7-cda-ch_medication-doc;
+	&ent-hl7-cda-ch_medication-section;
 	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;
 	&ent-ihe-pcc-1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2;
 	&ent-hl7-cda-ch;
