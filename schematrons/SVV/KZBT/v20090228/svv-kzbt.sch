@@ -54,12 +54,12 @@ project templates
 		<xhtml:li>svv-kzbt.ent</xhtml:li>
 	</xhtml:ul>
 
-	<!-- reusable templates -->
-	&ent-hl7-vhitg-ruleset;
-	&ent-hl7-cda-ch;
-	&ent-hl7-cda-ch_medication-section;
-	
 	<!-- project specific templates -->
 	&ent-project-svv-kzbt;
+	
+	<!-- reusable templates -->
+	&ent-hl7-cda-ch_medication-section;
+	&ent-hl7-cda-ch;
+	&ent-hl7-vhitg-ruleset;
 	
 </schema>
