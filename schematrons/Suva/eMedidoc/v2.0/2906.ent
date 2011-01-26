@@ -2,7 +2,6 @@
 ********************************************************
 
 Schematron rules for 2.16.756.5.30.1.100.2 (Suva Documents, Form 2906 'Arbeitsunfähigkeitszeugnis detailliert')
-Language: de-CH
 
 History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
@@ -47,7 +46,7 @@ History:
 			-->
 		</assert>
 		<!-- title prüfen -->
-		<assert id='suva-form-2906-0003' test='(//cda:title="Arbeitsunfähigkeitszeugnis detailliert" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2906-0003-de-CH' test='(//cda:title="Arbeitsunfähigkeitszeugnis detailliert" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Arbeitsunfähigkeitszeugnis detailliert'</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -121,7 +120,7 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2906-0102' test='(cda:title="Spezielle Anforderungen / Rahmenbedingungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2906-0102-de-CH' test='(cda:title="Spezielle Anforderungen / Rahmenbedingungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>'Spezielle Anforderungen / Rahmenbedingungen' muss einen section title 'Spezielle Anforderungen / Rahmenbedingungen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>

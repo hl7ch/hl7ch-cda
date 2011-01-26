@@ -119,16 +119,9 @@ table.head thead tr {
 table.head thead tr th.label1, table.head thead tr th.value1 {
 	font-weight: bold;
 }
-table.head thead tr th.label2, table.head tbody tr td.label2 {
+table.head thead tr th.label2, table.head thead tr td.label2 {
 	text-align: right;
 }
-table.head thead tr th.label1, table.head thead tr th.label2 {
-	width: 10%;
-}
-table.head thead tr th.value1, table.head thead tr th.value2 {
-	width: 40%;
-}
-
 
 /*********************************************************
   Body Tables
@@ -143,18 +136,27 @@ table.body tr th, table.body tr td {
 }
 
 table.body tr th {
-	font-weight: bold;
 	background-color: #dddddd;
-	text-align: left;
 }
 table.body tr td {
 	background-color: #eeeeee;
+}
+table.body tr th.value1, tr th.value2{
+	font-weight: bold;
+}
+table.body th.label2{
+	text-align: right;
+}
+table.body th.label1{
 	text-align: left;
 }
 
 /*********************************************************
   Foot Table
 *********************************************************/
+/*
+not used, yet
+
 table.foot {
 	width: 100%;
 }
@@ -174,3 +176,4 @@ table.foot tr td {
 	background-color: #ccccff;
 	width: 80%;
 }
+*/

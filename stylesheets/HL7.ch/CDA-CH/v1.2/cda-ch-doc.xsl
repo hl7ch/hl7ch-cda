@@ -3,7 +3,7 @@
 ********************************************************
 Stylesheet for Documenting Schematron Rules and output as xhtml
 
-Mit param name language werden die sprachlichen Meldungen gefiltert. 
+Mit param name language werden die sprachlichen Meldungen gefiltert.
 Dieser Parameter kann mittels Angabe als Xslt Argument beim XSL Transformer angegeben werden und damit kann dieses Stylesheet für alle Sprachen eingesetzt werden
 - Java: <param name="lang" value="fr_ch" />
 - .Net: XsltArgumentList.AddParam("language", "", "fr_ch");
@@ -100,10 +100,11 @@ History:
 			<table class="head">
 				<thead>
 					<tr>
-						<th class="label1">
+						<th class="label1" width="10%">
 							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/>
+							<xsl:text>:</xsl:text>
 						</th>
-						<th>
+						<th class="value1">
 							<xsl:value-of select="xhtml:ul/@id" />
 						</th>
 					</tr>
@@ -112,6 +113,7 @@ History:
 					<tr>
 						<td class="label1">
 							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/>
+							<xsl:text>:</xsl:text>
 						</td>
 						<td>
 							<xsl:value-of select="xhtml:ul/xhtml:li[@class='filename']" />
@@ -120,6 +122,7 @@ History:
 					<tr>
 						<td class="label1">
 							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/>
+							<xsl:text>:</xsl:text>
 						</td>
 						<td>
 							<xsl:value-of select="xhtml:ul/xhtml:li[@class='version']" />
@@ -142,19 +145,26 @@ History:
 					<tr>
 						<th class="label1" width="10%">
 							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Rule']/@displayName"/>
+							<xsl:text>:</xsl:text>
 						</th>
 						<th class="value1">
 							<xsl:value-of select="@id" />
 						</th>
-						<th class="label1" width="10%">
+						<th class="label2" width="10%">
 							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Role']/@displayName"/>
+							<xsl:text>:</xsl:text>
 						</th>
 						<th class="value2" width="10%">
 							<xsl:choose>
 								<xsl:when test="string(@role)">
-									<xsl:value-of select="@role"/>
+									<xsl:variable name="role">
+										<xsl:value-of select="@role"/>
+									</xsl:variable>
+									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value=$role]/@displayName"/>
 								</xsl:when>
-								<xsl:otherwise>error</xsl:otherwise>
+								<xsl:otherwise>
+									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='error']/@displayName"/>
+								</xsl:otherwise>
 							</xsl:choose>
 						</th>
 					</tr>
@@ -163,6 +173,7 @@ History:
 					<tr>
 						<td class="label1">
 							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Assert']/@displayName"/>
+							<xsl:text>:</xsl:text>
 						</td>
 						<td colspan="3">
 							<xsl:value-of select="@test" />

@@ -2,7 +2,6 @@
 ********************************************************
 
 Schematron rules for 2.16.756.5.30.1.100.2 (Suva Documents, Form 2928 'Ärztlicher Zwischenbericht')
-Language: de-CH
 
 History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
@@ -13,7 +12,7 @@ History:
 31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
 09.12.2010: Tony Schaller, medshare GmbH (Erwerbstatus hinzugefügt auf Antrag Thomas Lanz, Suva)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->
@@ -55,8 +54,15 @@ History:
 		</assert>
 
 		<!-- title prüfen -->
-		<assert id='suva-form-2928-0003' test='(//cda:title="Ärztlicher Zwischenbericht" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2928-0003-de-CH' test='(//cda:title="Ärztlicher Zwischenbericht" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Ärztlicher Zwischenbericht'</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le titre français doit être 'Ärztlicher Zwischenbericht'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-form-2928-0003-fr-CH' test='(//cda:title="Rapport médical intermédiaire" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Rapport médical intermédiaire'</xhtml:p>
 			<xhtml:p lang='fr_ch'>Le titre français doit être 'Rapport médical intermédiaire'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -167,8 +173,15 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2928-0103' test='(cda:title="Verlauf" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2928-0103-de-CH' test='(cda:title="Verlauf" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>eMedidoc 'Verlauf' muss einen section title 'Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>'Evolution' eMedidoc doit contenir un section title 'Verlauf'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-form-2928-0103-fr-CH' test='(cda:title="Evolution" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>eMedidoc 'Verlauf' muss einen section title 'Evolution' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>'Evolution' eMedidoc doit contenir un section title 'Evolution'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -324,8 +337,15 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2928-0503' test='(cda:title="Therapie" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2928-0503-de-CH' test='(cda:title="Therapie" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir un section title 'Therapie'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-form-2928-0503-fr-CH' test='(cda:title="Thérapie" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss einen section title 'Thérapie' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir un section title 'Thérapie'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>

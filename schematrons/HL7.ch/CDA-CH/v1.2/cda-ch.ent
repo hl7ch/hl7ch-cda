@@ -2,7 +2,6 @@
 ********************************************************
 
 Schematron rules for HL7 CDA-CH, V1.2 (2.16.756.5.30.1.1.1.1.1 )
-Language: de-CH
 
 History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
@@ -10,7 +9,7 @@ History:
 26.03.2010: Stefan Schenk, medshare GmbH, (XHTML-Dokumentation)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-23.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->
@@ -83,8 +82,15 @@ Header Templates
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
- 		<assert id='entity_HL7-cda-ch-0102' test='(cda:title="Bemerkungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+ 		<assert id='entity_HL7-cda-ch-0102-de-CH' test='(cda:title="Bemerkungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>CDA-CH 'Bemerkungen' müssen einen section title 'Bemerkungen' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Les 'Remarques' CDA-CH doivent contenir un section title 'Bemerkungen'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+ 		<assert id='entity_HL7-cda-ch-0102-fr-CH' test='(cda:title="Remarques" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>CDA-CH 'Bemerkungen' müssen einen section title 'Remarques' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>Les 'Remarques' CDA-CH doivent contenir un section title 'Remarques'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -129,8 +135,15 @@ Header Templates
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
- 		<assert id='entity_HL7-cda-ch-1003' test='(cda:title="Diagnosen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+ 		<assert id='entity_HL7-cda-ch-1003-de-CH' test='(cda:title="Diagnosen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>CDA-CH 'Diagnosenliste' muss einen section title 'Diagnosen' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>La 'liste de diagnostics' CDA-CH doit contenir un section title 'Diagnosen'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+ 		<assert id='entity_HL7-cda-ch-1003-fr-CH' test='(cda:title="Diagnostics" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>CDA-CH 'Diagnosenliste' muss einen section title 'Diagnostics' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>La 'liste de diagnostics' CDA-CH doit contenir un section title 'Diagnostics'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -288,8 +301,15 @@ Header Templates
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
- 		<assert id='entity_HL7-cda-ch-1303' test='(cda:title="Vitalzeichen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+ 		<assert id='entity_HL7-cda-ch-1303-de-CH' test='(cda:title="Vitalzeichen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>CDA-CH 'Vitalzeichenliste' muss einen section title 'Vitalzeichen' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>La 'liste des signes vitaux' CDA-CH doit contenir un section title 'Vitalzeichen'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+ 		<assert id='entity_HL7-cda-ch-1303-fr-CH' test='(cda:title="Signes vitaux" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>CDA-CH 'Vitalzeichenliste' muss einen section title 'Signes vitaux</xhtml:p>
 			<xhtml:p lang='fr_ch'>La 'liste des signes vitaux' CDA-CH doit contenir un section title 'Signes vitaux'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -436,8 +456,15 @@ Header Templates
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
- 		<assert id='entity_HL7-cda-ch-1503' test='(cda:title="Allergien und Unverträglichkeiten" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+ 		<assert id='entity_HL7-cda-ch-1503-de-CH' test='(cda:title="Allergien und Unverträglichkeiten" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>CDA-CH 'Intoleranzliste' muss einen section title 'Allergien und Unverträglichkeiten' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>La 'liste d'intolérances' CDA-CH doit contenir un section title 'Allergien und Unverträglichkeiten'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+ 		<assert id='entity_HL7-cda-ch-1503-fr-CH' test='(cda:title="Allergies et intolérances" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>CDA-CH 'Intoleranzliste' muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>La 'liste d'intolérances' CDA-CH doit contenir un section title 'Allergies et intolérances'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -521,8 +548,15 @@ Header Templates
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
- 		<assert id='entity_HL7-cda-ch-1703' test='(cda:title="Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+ 		<assert id='entity_HL7-cda-ch-1703-de-CH' test='(cda:title="Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>CDA-CH 'Arbeitsfähigkeit' muss einen section title 'Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>La 'Capacité de travail' CDA-CH doit contenir un section title 'Arbeitsfähigkeit'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+ 		<assert id='entity_HL7-cda-ch-1703-fr-CH' test='(cda:title="Capacité de travail" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>CDA-CH 'Arbeitsfähigkeit' muss einen section title 'Capacité de travail' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>La 'Capacité de travail' CDA-CH doit contenir un section title 'Capacité de travail'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>

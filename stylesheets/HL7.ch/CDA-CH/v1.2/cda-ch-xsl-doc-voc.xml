@@ -185,17 +185,17 @@ History:
   <text language='fr_ch' value='Version' displayName='Version'/>
   <text language='it_ch' value='Version' displayName='version tbd it'/>
 
-  <text language='de_ch' value='Rule' displayName='Rule'/>
-  <text language='fr_ch' value='Rule' displayName='Rule'/>
-  <text language='it_ch' value='Rule' displayName='Rule'/>
+  <text language='de_ch' value='Rule' displayName='Regel'/>
+  <text language='fr_ch' value='Rule' displayName='Règle'/>
+  <text language='it_ch' value='Rule' displayName='Regola'/>
 
   <text language='de_ch' value='Assert' displayName='Assert'/>
   <text language='fr_ch' value='Assert' displayName='Assert'/>
   <text language='it_ch' value='Assert' displayName='Assert'/>
 
-  <text language='de_ch' value='Role' displayName='Role'/>
-  <text language='fr_ch' value='Role' displayName='Role'/>
-  <text language='it_ch' value='Role' displayName='Role'/>
+  <text language='de_ch' value='Role' displayName='Kategorie'/>
+  <text language='fr_ch' value='Role' displayName='Catégorie'/>
+  <text language='it_ch' value='Role' displayName='Categoria'/>
 
   <text language='de_ch' value='Test' displayName='Test'/>
   <text language='fr_ch' value='Test' displayName='Test'/>
@@ -205,5 +205,15 @@ History:
   <text language='fr_ch' value='Description' displayName='Description'/>
   <text language='it_ch' value='Description' displayName='descritpiton tbd it'/>
   
+  <text language='de_ch' value='error' displayName='Fehler'/>
+  <text language='fr_ch' value='error' displayName='Erreur'/>
+  <text language='it_ch' value='error' displayName='Errore'/>
 
+  <text language='de_ch' value='warning' displayName='Warnung'/>
+  <text language='fr_ch' value='warning' displayName='Alerte'/>
+  <text language='it_ch' value='warning' displayName='Allarme'/>
+
+  <text language='de_ch' value='information' displayName='Information'/>
+  <text language='fr_ch' value='information' displayName='Information'/>
+  <text language='it_ch' value='information' displayName='Informazioni'/>
 </localization>

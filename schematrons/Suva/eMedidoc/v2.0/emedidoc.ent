@@ -2,7 +2,6 @@
 ********************************************************
 
 Schematron rules for 2.16.756.5.30.1.100.2.2.1 (Suva eMedidoc, V1.0)
-Language: de-CH
 
 History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
@@ -12,7 +11,7 @@ History:
 31.08.2010: Tony Schaller, medshare GmbH (eMedicus in eMedidoc umbenannt)
 09.12.2010: Tony Schaller, medshare GmbH (Erwerbstatus hinzugefügt auf Antrag Thomas Lanz, Suva)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-23.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->
@@ -86,8 +85,15 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-eMedidoc-0102' test='(cda:title="Schadeninformationen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-eMedidoc-0102-de-CH' test='(cda:title="Schadeninformationen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-eMedidoc-0102-fr-CH' test='(cda:title="Informations sur le sinistre" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>Schadeninformationen müssen einen section title 'Informations sur le sinistre' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>Les informations sur le sinistre doivent contenir un section title 'Informations sur le sinistre'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -132,8 +138,15 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-eMedidoc-0112' test='(cda:title="Schadeninformationen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-eMedidoc-0112-de-CH' test='(cda:title="Schadeninformationen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-eMedidoc-0112-fr-CH' test='(cda:title="Informations sur le sinistre" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>Schadeninformationen müssen einen section title 'Informations sur le sinistre' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>Les informations sur le sinistre doivent contenir un section title 'Informations sur le sinistre'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -667,8 +680,15 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-eMedidoc-1103' test='(cda:title="Behandlungsabschluss" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-eMedidoc-1103-de-CH' test='(cda:title="Behandlungsabschluss" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>'Behandlungsabschluss' muss einen section title 'Behandlungsabschluss' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Le 'Traitement terminé' CDA-CH doit contenir un section title 'Behandlungsabschluss'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-eMedidoc-1103-fr-CH' test='(cda:title="Traitement terminé" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>'Behandlungsabschluss' muss einen section title 'Traitement terminé' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>Le 'Traitement terminé' CDA-CH doit contenir un section title 'Traitement terminé'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -863,8 +883,15 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-eMedidoc-1602' test='(cda:title="Aktuelle Beurteilung der Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-eMedidoc-1602-de-CH' test='(cda:title="Aktuelle Beurteilung der Arbeitsfähigkeit" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Aktuelle Beurteilung der Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang='fr_ch'>Les 'Evaluations de la capacité de travail' eMedidoc doivent contenir un section title 'Aktuelle Beurteilung der Arbeitsfähigkeit'</xhtml:p>
+			<!--
+			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+			-->
+		</assert>
+		<assert id='suva-eMedidoc-1602-fr-CH' test='(cda:title="Evaluations de la capacité de travail" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
+			<xhtml:p lang='de_ch'>'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Evaluations de la capacité de travail' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>Les 'Evaluations de la capacité de travail' eMedidoc doivent contenir un section title 'Evaluations de la capacité de travail'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>

@@ -2,7 +2,6 @@
 ********************************************************
 
 Schematron rules for 2.16.756.5.30.1.100.2 (Suva Documents, Form 2907 'Meldung möglicher komplexer Fall')
-Language: de-CH
 
 History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
@@ -47,7 +46,7 @@ History:
 			-->
 		</assert>
 		<!-- title prüfen -->
-		<assert id='suva-form-2907-0003' test='(//cda:title="Meldung möglicher komplexer Fall" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2907-0003-de-CH' test='(//cda:title="Meldung möglicher komplexer Fall" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Meldung möglicher komplexer Fall'</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -128,7 +127,7 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2907-0102' test='(cda:title="Beurteilung komplexer Fall" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2907-0102-de-CH' test='(cda:title="Beurteilung komplexer Fall" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>'Schadeninformationen Komplexfall' müssen einen section title 'Beurteilung komplexer Fall' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
@@ -241,7 +240,7 @@ History:
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
 		</assert>
-		<assert id='suva-form-2907-0402' test='(cda:title="Wahrnehmungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
+		<assert id='suva-form-2907-0402-de-CH' test='(cda:title="Wahrnehmungen" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
 			<xhtml:p lang='de_ch'>'Wahrnehmungen Komplexfall' müssen einen section title 'Wahrnehmungen' enthalten</xhtml:p>
 			<!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
