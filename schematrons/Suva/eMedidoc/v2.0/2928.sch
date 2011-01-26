@@ -3,7 +3,6 @@
 ********************************************************
 
 Schematron Master für Suva eMedidoc 'Ärztlicher Zwischenbericht' (Suva Form 2928 'Ärztlicher Zwischenbericht')
-Language: de-CH
 
 History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
@@ -12,7 +11,7 @@ History:
 11.05.2010: Tony Schaller, medshare GmbH (Definitive Formularnummer Suva eingetragen)
 31.08.2010: Tony Schaller, medshare GmbH (emedidoc in eMedidoc umbenannt)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-23.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->

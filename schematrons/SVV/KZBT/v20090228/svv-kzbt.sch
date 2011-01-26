@@ -3,14 +3,13 @@
 ********************************************************
 
 Schematron master for SVV Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma (KZBT; HWS Formular)
-Language: de-CH
 
 History:
 20.12.2009: Tony Schaller, medshare GmbH (Draft)
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 15.03.2010: Stefan Schenk, medshare GmbH (XHTML-Dokumentation)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-23.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->

@@ -3,13 +3,12 @@
 ********************************************************
 
 Schematron Master für Suva eMedidoc 'Arbeitsunfähigkeitszeugnis einfach' (Suva Form 2905)
-Language: de-CH
 
 History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
 09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-23.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
 -->

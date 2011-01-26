@@ -2,7 +2,6 @@
 <!--
 ********************************************************
 Schematron Tutorial
-Language: de-CH
 History:  
 30.03.2010: Oliver Egger, visionary ag 
 09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
