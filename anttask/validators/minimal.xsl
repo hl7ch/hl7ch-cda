@@ -15,7 +15,7 @@
       <xsl:value-of select="document-uri(/)"/>
    </xsl:variable>
 
-   <!--PHASES-->
+   <!-- PHASES-->
 
 
 <!--PROLOG-->
