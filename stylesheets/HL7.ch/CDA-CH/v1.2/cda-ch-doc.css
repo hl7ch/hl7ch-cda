@@ -36,6 +36,11 @@ p {
     margin-bottom: 1em;
     font-style: italic;
 }
+/* Logo */
+h1 { 
+	background: transparent url(../../../../stylesheets/HL7.ch/CDA-CH/v1.2/hl7ch.jpg) no-repeat top right; 
+	height:58px
+}
 /* headers */
 h1 { 
 	font-size: 20px;
