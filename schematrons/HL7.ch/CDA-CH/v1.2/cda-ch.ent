@@ -10,6 +10,7 @@ History:
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+07.02.2011: Tony Schaller, medshare GmbH (Korrekturen Übersetzungen französisch)
 
 ********************************************************
 -->
@@ -309,7 +310,7 @@ Header Templates
 			-->
 		</assert>
  		<assert id='entity_HL7-cda-ch-1303-fr-CH' test='(cda:title="Signes vitaux" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>CDA-CH 'Vitalzeichenliste' muss einen section title 'Signes vitaux</xhtml:p>
+			<xhtml:p lang='de_ch'>CDA-CH 'Vitalzeichenliste' muss einen section title 'Signes vitaux' enthalten</xhtml:p>
 			<xhtml:p lang='fr_ch'>La 'liste des signes vitaux' CDA-CH doit contenir un section title 'Signes vitaux'</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
@@ -323,8 +324,8 @@ Header Templates
 			-->
 		</assert>
  		<assert id='entity_HL7-cda-ch-1305' test='cda:code/@code="8716-3"'>
-			<xhtml:p lang='de_ch'>CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code 8716-3 Physical findings; Sytem Vital signs)</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'liste des signes vitaux' CDA-CH doit contenir un codage de la signification de la section (LOINC Code 8716-3 Physical findings; Sytem Vital signs)</xhtml:p>
+			<xhtml:p lang='de_ch'>CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code 8716-3 Physical findings; Vital signs)</xhtml:p>
+			<xhtml:p lang='fr_ch'>La 'liste des signes vitaux' CDA-CH doit contenir un codage de la signification de la section (LOINC Code 8716-3 Physical findings; Vital signs)</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
 			-->
