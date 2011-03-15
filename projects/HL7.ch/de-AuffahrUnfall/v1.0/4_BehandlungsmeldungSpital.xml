@@ -117,16 +117,6 @@ History:
       </receivedOrganization>
 		</intendedRecipient>
 	</informationRecipient>
-	<authorization>
-		<consent>
-			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
-				<originalText>
-					Patient mit Meldung an SUVA einverstanden.
-				</originalText>
-			</code>
-			<statusCode code="completed"/>
-		</consent>
-	</authorization>
 	<participant typeCode='IND'>
 		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
 		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
@@ -148,6 +138,16 @@ History:
 			</scopingOrganization>
 		</associatedEntity>
 	</participant>
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Patient mit Meldung an SUVA einverstanden.
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
 	<!-- 
 	********************************************************
 	  CDA Body

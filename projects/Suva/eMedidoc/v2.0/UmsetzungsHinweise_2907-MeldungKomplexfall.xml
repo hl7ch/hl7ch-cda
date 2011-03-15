@@ -343,7 +343,7 @@ History:
 							-->
 							<code nullFlavor='UNK' />
 							<text>Vordere Beckenringfraktur links S32.89</text>
-							<effectiveTime value='200811017'/>
+							<effectiveTime value='20081017'/>
 							<!-- für Diagnose im Level 3:
 							<performer>
 							<assignedEntity>
@@ -367,7 +367,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK' />
 							<text>mit traumatischer Symphysensprengung S33.4</text>
-							<effectiveTime value='200811017'/>
+							<effectiveTime value='20081017'/>
 						</observation>
 					</entry>
 					<entry>
@@ -376,7 +376,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK' />
 							<text>Fraktur der Massa lateralis links des Os sacrum S32.1</text>
-							<effectiveTime value='200811017'/>
+							<effectiveTime value='20081017'/>
 						</observation>
 					</entry>
 					<entry>
@@ -385,7 +385,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK' />
 							<text>Temporäre stumme Niere nach Nierenkontusion N19</text>
-							<effectiveTime value='200811017'/>
+							<effectiveTime value='20081017'/>
 						</observation>
 					</entry>
 				</section>
