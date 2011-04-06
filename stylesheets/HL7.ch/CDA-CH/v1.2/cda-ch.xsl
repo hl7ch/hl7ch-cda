@@ -703,6 +703,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					<xsl:when test="$typeCode='COV'">
 						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
 					</xsl:when>
+					<xsl:when test="$typeCode='HLD'">
+						<!-- no header -->
+					</xsl:when>
 					<xsl:when test="$typeCode='IND'">
 						<xsl:variable name="code"	select="n1:code/@code"/>
 						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$code]/@displayName"/>
@@ -712,21 +715,25 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			</b>
 			<ul>
 				<table class="body">
-					<tr>
-						<th>
-							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Company']/@displayName"/>
-						</th>
-						<th>
-							<xsl:call-template name="getName">
-								<xsl:with-param name="name" select="n1:scopingOrganization/n1:name"/>
-							</xsl:call-template>
-						</th>
-					</tr>
+					<xsl:choose>
+						<xsl:when test="$typeCode!='HLD'">
+							<tr>
+								<th>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Company']/@displayName"/>
+								</th>
+								<th>
+									<xsl:call-template name="getName">
+										<xsl:with-param name="name" select="n1:scopingOrganization/n1:name"/>
+									</xsl:call-template>
+								</th>
+							</tr>
+						</xsl:when>
+					</xsl:choose>
 					<tr>
 						<th>
 							<xsl:variable name="oid"
-								select="n1:id/@root"/>
-								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
+							select="n1:id/@root"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
 						</th>
 						<th>
 							<xsl:value-of select="n1:id/@extension"/>
@@ -734,7 +741,14 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					</tr>
 					<tr>
 						<td>
-							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
+							<xsl:choose>
+								<xsl:when test="$typeCode='HLD'">
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Holder']/@displayName"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
+								</xsl:otherwise>
+							</xsl:choose>
 						</td>
 						<td>
 							<xsl:call-template name="getName">
