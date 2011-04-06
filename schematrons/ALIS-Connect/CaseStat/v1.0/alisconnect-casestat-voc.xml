@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary for ALIS-Connect case statistics (casestat) V1.0 schematrons
+
+History:
+13.03.2011: Tony Schaller, medshare GmbH (Initial draft)
+20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+
+********************************************************
+-->
+<systems>
+
+	<!--
+	********************************************************
+	DRG Daten Kategorien
+	********************************************************
+	-->
+	<system codeSystemName='CaseStatDatenKategorien' root='2.16.756.5.30.PlaceholderCaseStatDataCat'>
+		<code value='I' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist'/>
+		<code value='F' displayName='Fallgruppe'/>
+		<code value='S' displayName='Codierstatus'/>
+	</system>
+
+	<!--
+	********************************************************
+	DRG Codierstatus
+	********************************************************
+	-->
+	<system codeSystemName='CaseStatCodierstatus' root='2.16.756.5.30.PlaceholderCaseStatCodingStatus'>
+		<code value='P' displayName='Pending'/>
+		<code value='COS' displayName='Coding started'/>
+		<code value='COC' displayName='Coding completed'/>
+		<code value='CHS' displayName='Charging started'/>
+		<code value='CHC' displayName='Charging completed'/>
+		<code value='C' displayName='Closed'/>
+	</system>
+
+</systems>

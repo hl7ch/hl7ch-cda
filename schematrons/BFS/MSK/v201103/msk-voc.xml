@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary for "Medizinische Statistik der Krankenhäuser" V201103 schematrons: "Variablen der Medizinischen Statistik"
+
+Juni 2008 (Stand 05/2010)
+Spezifikationen gültig ab 2009
+("Schnittstellenkonzept", Version 1.0) / Letzte Aktualisierung: Mai 2010
+
+History:
+13.03.2011: Tony Schaller, medshare GmbH (Initial draft)
+18.03.2011: Tony Schaller, medshare GmbH (Draft sent to BFS)
+20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+
+********************************************************
+-->
+<systems>
+
+	<!--
+	********************************************************
+	Aufenthaltsort vor dem Eintritt (Standard)
+	********************************************************
+	-->
+	<system codeSystemName='AufenthaltsortVorEintritt' root='2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt'>
+		<code value='1' displayName='Zuhause'/>
+		<code value='2' displayName='Zuhause mit SPITEX Versorgung'/>
+		<code value='3' displayName='Krankenheim, Pflegeheim'/>
+		<code value='4' displayName='Altersheim, andere sozialmed. Institutionen'/>
+		<code value='5' displayName='Psychiatrische Klinik'/>
+		<code value='6' displayName='anderes Krankenhaus (Akutspital) oder Geburtshaus'/>
+		<code value='7' displayName='Strafvollzugsanstalt'/>
+		<code value='8' displayName='andere'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Aufenthaltsort vor dem Eintritt (Psychiatrie)
+	********************************************************
+	-->
+	<system codeSystemName='AufenthaltsortVorEintrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie'>
+		<code value='11' displayName='Zuhause, alleine'/>
+		<code value='12' displayName='Zuhause, mit anderen'/>
+		<code value='21' displayName='Zuhause, alleine, mit Spitex'/>
+		<code value='22' displayName='Zuhause, mit anderen, mit Spitex'/>
+		<code value='30' displayName='Krankenheim, Pflegeheim'/>
+		<code value='40' displayName='Altersheim, andere sozialmed. Instit.'/>
+		<code value='41' displayName='Wohnheim'/>
+		<code value='50' displayName='Psychiatrische Klinik'/>
+		<code value='60' displayName='anderes Krankenhaus, (Akutspital)'/>
+		<code value='70' displayName='Strafvollzugsanstalt'/>
+		<code value='81' displayName='andere'/>
+		<code value='82' displayName='ohne festen Wohnsitz'/>
+		<code value='90' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Eintrittsart
+	********************************************************
+	-->
+	<system codeSystemName='Eintrittsart' root='2.16.756.5.30.PlaceholderMSKEintrittsart'>
+		<code value='1' displayName='Notfall (Behandlung innerhalb von 12 Std. unabdingbar)'/>
+		<code value='2' displayName='angemeldet, geplant'/>
+		<code value='3' displayName='Geburt (Kind in dieser Klinik geboren)'/>
+		<code value='4' displayName='interner Übertritt'/>
+		<code value='5' displayName='Verlegung innerhalb 24 Std.'/>
+		<code value='8' displayName='andere'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Einweisende Instanz
+	********************************************************
+	-->
+	<system codeSystemName='EinweisendeInstanz' root='2.16.756.5.30.PlaceholderMSKEinweisendeInstanz'>
+		<code value='1' displayName='selbst, Angehörige'/>
+		<code value='2' displayName='Rettungsdienst (Ambulanz, Polizei)'/>
+		<code value='3' displayName='Arzt'/>
+		<code value='4' displayName='nichtmedizinischer Therapeut'/>
+		<code value='5' displayName='sozialmedizinischer Dienst'/>
+		<code value='6' displayName='Justizbehörden'/>
+		<code value='8' displayName='andere'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Einweisende Instanz (Psychiatrie)
+	********************************************************
+	-->
+	<system codeSystemName='EinweisendeInstanzPsychiatrie' root='2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie'>
+		<code value='11' displayName='Patient kommt auf eigene Initiative'/>
+		<code value='12' displayName='Angehörige, Bezugsperson, freiw. Mitarb., Laien'/>
+		<code value='31' displayName='praktizierender Arzt'/>
+		<code value='32' displayName='praktizierender Psychiater/innen'/>
+		<code value='40' displayName='nicht ärztliche (Psycho-, u.a.) Therapeut/innen'/>
+		<code value='33' displayName='Allgemeinspital, somatisches Spital'/>
+		<code value='34' displayName='Psychiatrie eigene Instit. ambulant'/>
+		<code value='35' displayName='Psychiatrie eigene Instit. teilstationär'/>
+		<code value='36' displayName='Psychiatrie eigene Instit. stationär'/>
+		<code value='37' displayName='Psychiatrie andere Instit. ambulant'/>
+		<code value='38' displayName='Psychiatrie andere Instit. teilstationär'/>
+		<code value='39' displayName='Psychiatrie andere Instit. stationär'/>
+		<code value='20' displayName='Rettungsdienst (Ambulanz o.ä., nicht ärztlich)'/>
+		<code value='50' displayName='Beratungsstelle, soziale Institution'/>
+		<code value='81' displayName='Behörden: Vormundschaft, Fürsorge, zivilrechtlich'/>
+		<code value='60' displayName='strafrechtlich, Justizbehörden'/>
+		<code value='82' displayName='Militär'/>
+		<code value='83' displayName='Versicherungen, IV, SUVA'/>
+		<code value='84' displayName='andere'/>
+		<code value='90' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Behandlungsart
+	********************************************************
+	-->
+	<system codeSystemName='Behandlungsart' root='2.16.756.5.30.PlaceholderMSKBehandlungsart'>
+		<code value='1' displayName='ambulant'/>
+		<code value='3' displayName='stationär'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Klasse
+	********************************************************
+	-->
+	<system codeSystemName='Klasse' root='2.16.756.5.30.PlaceholderMSKKlasse'>
+		<code value='1' displayName='allgemein'/>
+		<code value='2' displayName='halbprivat'/>
+		<code value='3' displayName='privat'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Hauptkostenstelle
+	********************************************************
+	-->
+	<system codeSystemName='Hauptkostenstelle' root='2.16.756.5.30.PlaceholderMSKHauptkostenstelle'>
+		<code value='M000' displayName='Fachgebiete (allgemein)'/>
+		<code value='M050' displayName='Intensivmedizin'/>
+		<code value='M100' displayName='Innere Medizin'/>
+		<code value='M200' displayName='Chirurgie'/>
+		<code value='M300' displayName='Gynäkologie und Geburtshilfe'/>
+		<code value='M400' displayName='Pädiatrie'/>
+		<code value='M500' displayName='Psychiatrie und Psychotherapie'/>
+		<code value='M600' displayName='Ophthalmologie'/>
+		<code value='M700' displayName='Oto-Rhino-Laryngologie'/>
+		<code value='M800' displayName='Dermatologie und Venereologie'/>
+		<code value='M850' displayName='Medizinische Radiologie'/>
+		<code value='M900' displayName='Geriatrie'/>
+		<code value='M950' displayName='Physikalische Medizin und Rehabilitation'/>
+		<code value='M990' displayName='Andere Tätigkeitsbereiche'/>
+	</system>
+
+	<!--
+	********************************************************
+	Hauptkostenträger für Grundversicherungsleistungen
+	********************************************************
+	-->
+	<system codeSystemName='HauptkostenträgerGrundversicherungsleistungen' root='2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen'>
+		<code value='1' displayName='Krankenversicherung (obligat.)'/>
+		<code value='2' displayName='Invalidenversicherung'/>
+		<code value='3' displayName='Militärversicherung'/>
+		<code value='4' displayName='Unfallversicherung'/>
+		<code value='5' displayName='Selbstzahler (zB. Ausländer ohne Grundversicherung)'/>
+		<code value='8' displayName='andere'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Entscheid für Austritt
+	********************************************************
+	-->
+	<system codeSystemName='EntscheidAustritt' root='2.16.756.5.30.PlaceholderMSKEntscheidAustritt'>
+		<code value='1' displayName='auf Initiative des Behandelnden'/>
+		<code value='2' displayName='auf Initiative des Patienten (gegen Ansicht des Behandelnden)'/>
+		<code value='3' displayName='auf Initiative einer Drittperson'/>
+		<code value='4' displayName='interner Übertritt'/>
+		<code value='5' displayName='gestorben'/>
+		<code value='8' displayName='anderes'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Entscheid für Austritt (Psychiatrie)
+	********************************************************
+	-->
+	<system codeSystemName='EntscheidAustrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKEntscheidAustrittPsychiatrie'>
+		<code value='11' displayName='in gegenseitigem Einvernehmen'/>
+		<code value='12' displayName='auf Initiative der Behandelnden'/>
+		<code value='20' displayName='auf Initiative des/r Patienten/in (nur gegen Ansicht des Behandelnden)'/>
+		<code value='30' displayName='auf Initiative Dritter'/>
+		<code value='40' displayName='Wechsel der Hauptdiagnose'/>
+		<code value='51' displayName='Patient hat sich suizidiert'/>
+		<code value='52' displayName='Patient ist gestorben (ausser Suizid)'/>
+		<code value='80' displayName='anderes'/>
+		<code value='90' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Aufenthalt nach Austritt
+	********************************************************
+	-->
+	<system codeSystemName='AufenthaltNachAustritt' root='2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt'>
+		<code value='1' displayName='Zuhause'/>
+		<code value='2' displayName='Krankenheim, Pflegeheim'/>
+		<code value='3' displayName='Altersheim, andere sozialmed. Institution'/>
+		<code value='4' displayName='Psychiatrische Klinik'/>
+		<code value='5' displayName='Rehabilitationsklinik'/>
+		<code value='6' displayName='anderes Krankenhaus (Akutspital) oder Geburtshaus'/>
+		<code value='7' displayName='Strafvollzugsanstalt'/>
+		<code value='8' displayName='andere'/>
+		<code value='9' displayName='unbekannt'/>
+		<code value='0' displayName='Todesfall'/>
+	</system>
+
+	<!--
+	********************************************************
+	Aufenthalt nach Austritt (Psychiatrie)
+	********************************************************
+	-->
+	<system codeSystemName='AufenthaltNachAustrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKAufenthaltNachAustrittPsychiatrie'>
+		<code value='11' displayName='Zuhause, alleine'/>
+		<code value='12' displayName='Zuhause, mit anderen'/>
+		<code value='20' displayName='Krankenheim, Pflegeheim'/>
+		<code value='32' displayName='Altersheim, andere sozialmed. Instit.'/>
+		<code value='31' displayName='Wohnheim'/>
+		<code value='40' displayName='Psychiatrische Klinik'/>
+		<code value='50' displayName='Rehabilitationsklinik'/>
+		<code value='60' displayName='anderes Krankenhaus, (Akutspital)'/>
+		<code value='70' displayName='Strafvollzugsanstalt'/>
+		<code value='81' displayName='ohne festen Wohnsitz'/>
+		<code value='82' displayName='andere'/>
+		<code value='90' displayName='unbekannt'/>
+		<code value='00' displayName='gestorben'/>
+	</system>
+
+	<!--
+	********************************************************
+	Behandlung nach Austritt
+	********************************************************
+	-->
+	<system codeSystemName='BehandlungNachAustritt' root='2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt'>
+		<code value='1' displayName='geheilt/kein Behandlungsbedarf'/>
+		<code value='2' displayName='ambulante Behandlung'/>
+		<code value='3' displayName='ambulante Pflege (z.B. SPITEX)'/>
+		<code value='4' displayName='stationäre Behandlung oder Pflege'/>
+		<code value='5' displayName='Rehabilitation (amb. oder stat.)'/>
+		<code value='8' displayName='anderes'/>
+		<code value='9' displayName='unbekannt'/>
+		<code value='0' displayName='Todesfall'/>
+	</system>
+
+	<!--
+	********************************************************
+	Behandlung nach Austritt (Psychiatrie)
+	********************************************************
+	-->
+	<system codeSystemName='BehandlungNachAustrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKBehandlungNachAustrittPsychiatrie'>
+		<code value='10' displayName='geheilt / kein Behandlungsbedarf'/>
+		<code value='21' displayName='Bezugsperson, freiw. Mitarb., Laien'/>
+		<code value='22' displayName='Beratungsstelle, soziale Institution, Sozialdienst, etc.'/>
+		<code value='23' displayName='praktizierender Arzt/in'/>
+		<code value='24' displayName='praktizierender Psychiater/in'/>
+		<code value='25' displayName='nicht ärztlicher Psychotherapeut/in'/>
+		<code value='26' displayName='Psychiatrie, eigene Instit., ambulant'/>
+		<code value='27' displayName='Psychiatrie, andere Instit., ambulant'/>
+		<code value='28' displayName='keine, wäre aber notwendig gewesen'/>
+		<code value='30' displayName='Pflegepersonal, Spitex, etc.'/>
+		<code value='41' displayName='Allgemeinspital, somatisches Spital'/>
+		<code value='42' displayName='Psychiatrie, eigene Instit., stationär'/>
+		<code value='43' displayName='Psychiatrie, andere Instit., stationär'/>
+		<code value='51' displayName='Rehabilitation (ambulant oder stationär)'/>
+		<code value='52' displayName='Psychiatrie, eigene Inst., teilstat.'/>
+		<code value='53' displayName='Psychiatrie, andere Inst., teilstat.'/>
+		<code value='81' displayName='Behörden'/>
+		<code value='82' displayName='andere'/>
+		<code value='90' displayName='unbekannt'/>
+		<code value='00' displayName='gestorben'/>
+	</system>
+
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten; Angaben betreffend das Kind: 	Vitalstatus
+	********************************************************
+	-->
+	<system codeSystemName='VitalstatusGeburt' root='2.16.756.5.30.PlaceholderMSKVitalstatusGeburt'>
+		<code value='0' displayName='totgeboren'/>
+		<code value='1' displayName='lebendgeboren'/>
+	</system>
+
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten; Angaben betreffend das Kind: 	Mehrling
+	********************************************************
+	-->
+	<system codeSystemName='Mehrling' root='2.16.756.5.30.PlaceholderMSKMehrling'>
+		<code value='1' displayName='Einling'/>
+		<code value='2' displayName='Zwilling'/>
+		<code value='3' displayName='Driling'/>
+		<code value='4' displayName='Vierling'/>
+		<code value='5' displayName='Fünfling'/>
+		<code value='6' displayName='Sechsling'/>
+		<code value='7' displayName='Siebenling'/>
+		<code value='8' displayName='Achtling'/>
+		<code value='9' displayName='Neunling'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten; Daten zur Person; Zivilstand
+	********************************************************
+	-->
+	<system codeSystemName='Zivilstand' root='2.16.756.5.30.PlaceholderMSKZivilstand'>
+		<code value='1' displayName='ledig'/>
+		<code value='2' displayName='verheiratet, zusammenlebend'/>
+		<code value='3' displayName='verheiratet, getrennt lebend'/>
+		<code value='4' displayName='verwitwet'/>
+		<code value='5' displayName='geschieden'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten; Daten zur Person; Bildung
+	********************************************************
+	-->
+	<system codeSystemName='Bildung' root='2.16.756.5.30.PlaceholderMSKBildung'>
+		<code value='1' displayName='keine abgeschlossene Schulbildung'/>
+		<code value='2' displayName='obligatorische Volksschule'/>
+		<code value='3' displayName='Berufslehre oder Vollzeitberufsschule'/>
+		<code value='4' displayName='Maturitätsschule'/>
+		<code value='5' displayName='Höhere Fach- oder Berufsschule'/>
+		<code value='6' displayName='Universität, Hochschule'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten; Daten zum Eintritt: Freiwilligkeit
+	********************************************************
+	-->
+	<system codeSystemName='Freiwilligkeit' root='2.16.756.5.30.PlaceholderMSKFreiwilligkeit'>
+		<code value='1' displayName='freiwilliger Eintritt'/>
+		<code value='2' displayName='unfreiwilliger Eintritt'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten; Daten zum Eintritt: Fürsorgerischer Freiheitsentzug
+	********************************************************
+	-->
+	<system codeSystemName='FFE' root='2.16.756.5.30.PlaceholderMSKFFE'>
+		<code value='1' displayName='ohne FFE'/>
+		<code value='2' displayName='mit FFE'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten; Daten zu Behandlung/Verlauf; Behandlung
+	********************************************************
+	-->
+	<system codeSystemName='BehandlungPsychiatrie' root='2.16.756.5.30.PlaceholderMSKBehandlungPsychiatrie'>
+		<code value='1' displayName='Krisenintervention'/>
+		<code value='2' displayName='Beratung'/>
+		<code value='3' displayName='Psychotherapie (einzel)'/>
+		<code value='4' displayName='Psychotherapie (Paar oder Familie)'/>
+		<code value='5' displayName='Psychotherapie (Gruppe)'/>
+		<code value='6' displayName='integrierte psychiatrische Behandlung'/>
+		<code value='7' displayName='Sozialpsychiatrische Behandlung/Betreuung'/>
+		<code value='8' displayName='Konsilium, Liaisondienst'/>
+		<code value='9' displayName='Sachhilfe'/>
+		<code value='10' displayName='Abklärung (nur)'/>
+		<code value='11' displayName='Begutachtung'/>
+		<code value='12' displayName='andere'/>
+	</system>
+
+	<!--
+	********************************************************
+	MD-Diagnosen und Behandlungen (Typ)
+	********************************************************
+	-->
+	<system codeSystemName='EintragsTypDiagnoseBehandlung' root='2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung'>
+		<code value='H' displayName='Haupteintrag'/>
+		<code value='Z' displayName='Zusatzeintrag zu Haupteintrag'/>
+		<code value='N' displayName='Nebeneintrag'/>
+	</system>
+
+	<!--
+	********************************************************
+	MD-Diagnosen (Seitigkeit)
+	********************************************************
+	-->
+	<system codeSystemName='Seitigkeit' root='2.16.756.5.30.PlaceholderMSKSeitigkeit'>
+		<code value='0' displayName='beidseitig'/>
+		<code value='1' displayName='einseitig rechts'/>
+		<code value='2' displayName='einseitig links'/>
+		<code value='3' displayName='einseitig unbekannt'/>
+		<code value='9' displayName='unbekannt'/>
+		<code value='N/A' displayName='Frage stellt sich nicht'/>
+	</system>
+
+	<!--
+	********************************************************
+	MD-Diagnosen (Tumoraktivität)
+	********************************************************
+	-->
+	<system codeSystemName='Tumoraktivität' root='2.16.756.5.30.PlaceholderMSKTumoraktivität'>
+		<code value='0' displayName='inaktiv'/>
+		<code value='1' displayName='aktiv'/>
+		<code value='9' displayName='unbekannt'/>
+		<code value='N/A' displayName='Frage stellt sich nicht'/>
+	</system>
+
+	<!--
+	********************************************************
+	MD-Intensivmedizin (Art des Score)
+	********************************************************
+	-->
+	<system codeSystemName='ScoreArtIPS' root='2.16.756.5.30.PlaceholderMSKScoreArtIPS'>
+		<code value='S' displayName='SAPS'/>
+		<code value='P' displayName='PIM2'/>
+		<code value='C' displayName='CRIB'/>
+	</system>
+
+	<!--
+	********************************************************
+	MD-Kennzeichnung von Wiedereintritten; Grund
+	********************************************************
+	-->
+	<system codeSystemName='GrundWiedereintritt' root='2.16.756.5.30.PlaceholderMSKGrundWiedereintritt'>
+		<!-- gemäss Infoblatt MS-03-2012 http://www.bfs.admin.ch/bfs/portal/de/index/infothek/erhebungen__quellen/blank/blank/mkh/04/04_03.Document.140378.pdf
+		-->
+		<code value='N/A' displayName='leer/default'/>
+		<code value='1' displayName='Wiederaufnahme mit gleicher MDC'/>
+		<code value='2' displayName='Wiederaufnahme mit gleicher MDC durch Komplikationen'/>
+		<code value='3' displayName='Rückverlegung'/>
+		<code value='9' displayName='unbekannt'/>
+		<!-- gemäss Konzept:
+		<code value='N/A' displayName='leer/default'/>
+		<code value='1' displayName='Wiederaufnahme mit gleicher Basis-DRG'/>
+		<code value='2' displayName='Wiederaufnahme mit Partitionswechsel'/>
+		<code value='3' displayName='Wiederaufnahme wegen Komplikation'/>
+		<code value='4' displayName='Rückverlegung'/>
+		<code value='9' displayName='unbekannt'/>
+		-->
+	</system>
+
+	<!--
+	********************************************************
+	MD-Kennzeichnung von Wiedereintritten; Weitere Wiedereintritte
+	********************************************************
+	-->
+	<system codeSystemName='WeitereWiedereintritte' root='2.16.756.5.30.PlaceholderMSKWeitereWiedereintritte'>
+		<code value='0' displayName='(default) nicht mehr als 5 Aufenthalte bzw. 4 Wiedereintritte'/>
+		<code value='1' displayName='mehr als 5 Aufenthalte bzw. 4 Wiedereintritte'/>
+	</system>
+
+	<!--
+	********************************************************
+	Gestationsalter Code
+	********************************************************
+	-->
+	<system codeSystemName='GestationsalterCode' root='2.16.756.5.30.PlaceholderMSKGestationsalterCode'>
+		<code value='1' displayName='Gestationsalter 1'/>
+		<code value='2' displayName='Gestationsalter 2'/>
+	</system>
+
+	<!--
+	********************************************************
+	Gestationswoche (gemäss MedPlaus 5)
+	********************************************************
+	-->
+	<system codeSystemName='Gestationswoche' root='2.16.756.5.30.PlaceholderMSKGestationswoche'>
+		<code value='16' displayName='Woche 16'/>
+		<code value='17' displayName='Woche 17'/>
+		<code value='18' displayName='Woche 18'/>
+		<code value='19' displayName='Woche 19'/>
+		<code value='20' displayName='Woche 20'/>
+		<code value='21' displayName='Woche 21'/>
+		<code value='22' displayName='Woche 22'/>
+		<code value='23' displayName='Woche 23'/>
+		<code value='24' displayName='Woche 24'/>
+		<code value='25' displayName='Woche 25'/>
+		<code value='26' displayName='Woche 26'/>
+		<code value='27' displayName='Woche 27'/>
+		<code value='28' displayName='Woche 28'/>
+		<code value='29' displayName='Woche 29'/>
+		<code value='30' displayName='Woche 30'/>
+		<code value='31' displayName='Woche 31'/>
+		<code value='32' displayName='Woche 32'/>
+		<code value='33' displayName='Woche 33'/>
+		<code value='34' displayName='Woche 34'/>
+		<code value='35' displayName='Woche 35'/>
+		<code value='36' displayName='Woche 36'/>
+		<code value='37' displayName='Woche 37'/>
+		<code value='38' displayName='Woche 38'/>
+		<code value='39' displayName='Woche 39'/>
+		<code value='40' displayName='Woche 40'/>
+		<code value='41' displayName='Woche 41'/>
+		<code value='42' displayName='Woche 42'/>
+		<code value='43' displayName='Woche 43'/>
+		<code value='44' displayName='Woche 44'/>
+		<code value='45' displayName='Woche 45'/>
+		<code value='46' displayName='Woche 46'/>
+		<code value='47' displayName='Woche 47'/>
+		<code value='48' displayName='Woche 48'/>
+		<code value='49' displayName='Woche 49'/>
+		<code value='50' displayName='Woche 50'/>
+		<code value='51' displayName='Woche 51'/>
+		<code value='52' displayName='Woche 52'/>
+	</system>
+
+	<!--
+	********************************************************
+	Gestationstag (gemäss MedPlaus 5)
+	********************************************************
+	-->
+	<system codeSystemName='Gestationstag' root='2.16.756.5.30.PlaceholderMSKGestationstag'>
+		<code value='0' displayName='Tag 0'/>
+		<code value='1' displayName='Tag 1'/>
+		<code value='2' displayName='Tag 2'/>
+		<code value='3' displayName='Tag 3'/>
+		<code value='4' displayName='Tag 4'/>
+		<code value='5' displayName='Tag 5'/>
+		<code value='6' displayName='Tag 6'/>
+	</system>
+
+	<!--
+	********************************************************
+	Verlegungen
+	********************************************************
+	-->
+	<system codeSystemName='GeburtVerlegungen' root='2.16.756.5.30.PlaceholderMSKGeburtVerlegungen'>
+		<code value='1' displayName='Verlegung Kind in anderes Spital'/>
+		<code value='2' displayName='Verlegung Mutter aus anderem Spital'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Kategorien
+	********************************************************
+	-->
+	<system codeSystemName='PsychiatrieZusatzdatenKategorien' root='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien'>
+		<code value='1' displayName='Beschäftigung vor Eintritt'/>
+		<code value='2' displayName='Psychopharmakotherapie'/>
+		<code value='3' displayName='Wiedereintritte'/>
+		<code value='4' displayName='Hochteure Medikamente'/>
+		<code value='5' displayName='Kumulierte Dosis eines hochteuren Medikaments'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt
+	********************************************************
+	-->
+	<system codeSystemName='BeschäftigungVorEintritt' root='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt'>
+		<code value='1' displayName='teilzeit erwerbstätig'/>
+		<code value='2' displayName='voll erwerbstätig'/>
+		<code value='3' displayName='nicht erwerbstätig oder arbeitslos'/>
+		<code value='4' displayName='Hausarbeit in eigenem Haushalt'/>
+		<code value='5' displayName='in Ausbildung (Schule, Lehre, Studium)'/>
+		<code value='6' displayName='Rehabilitationsprogramm'/>
+		<code value='7' displayName='IV, AHV oder andere Rente'/>
+		<code value='8' displayName='Arbeit in geschütztem oder beschützendem Rahmen'/>
+		<code value='9' displayName='unbekannt'/>
+	</system>
+
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie
+	********************************************************
+	-->
+	<system codeSystemName='Psychopharmakotherapie' root='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie'>
+		<code value='1' displayName='Neuroleptika'/> 
+		<code value='2' displayName='Depotneuroleptika'/>
+		<code value='3' displayName='Antidepressiva'/>
+		<code value='4' displayName='Tranquilizer'/> 
+		<code value='5' displayName='Hypnotika'/>
+		<code value='6' displayName='Antiepileptika'/>
+		<code value='7' displayName='Lithium'/>
+		<code value='8' displayName='Suchtsubstitutionsmittel (z.B. Methadon)'/>
+		<code value='9' displayName='Suchtaversionsmittel (z.B. Antabus, Nemexin)'/>
+		<code value='10' displayName='Antiparkinsonmittel'/>
+		<code value='11' displayName='andere'/>
+		<code value='12' displayName='Medikamente zur Behandlung körperlicher Leiden'/>
+	</system>
+
+	<!--
+	********************************************************
+	Zwischenaustritte
+	********************************************************
+	-->
+	<system codeSystemName='Zwischenaustritte' root='2.16.756.5.30.PlaceholderMSKZwischenaustritte'>
+		<code value='1' displayName='1. Zwischenaustritt'/> 
+		<code value='2' displayName='2. Zwischenaustritt'/>
+		<code value='3' displayName='3. Zwischenaustritt'/>
+		<code value='4' displayName='4. Zwischenaustritt'/> 
+	</system>
+
+	<!--
+	********************************************************
+	Wiedereintritte
+	********************************************************
+	-->
+	<system codeSystemName='Wiedereintritte' root='2.16.756.5.30.PlaceholderMSKWiedereintritte'>
+		<code value='1' displayName='1. Wiedereintritt'/> 
+		<code value='2' displayName='2. Wiedereintritt'/>
+		<code value='3' displayName='3. Wiedereintritt'/>
+		<code value='4' displayName='4. Wiedereintritt'/> 
+		<code value='9' displayName='Weitere Wiedereintritte'/> 
+	</system>
+
+	<!--
+	********************************************************
+	Frühere Schwangerschaften
+	********************************************************
+	-->
+	<system codeSystemName='FrühereSchwangerschaften' root='2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften'>
+		<code value='1' displayName='Anzahl vorausgegangener Schwangerschaften insgesamt'/>
+		<code value='2' displayName='Anzahl vorausgegangener Lebendgeburten'/>
+		<code value='3' displayName='Anzahl vorausgegangener Fehl- oder Totgeburten'/>
+		<code value='4' displayName='Anzahl vorausgegangener Schwangerschaftsabbrüche'/>
+	</system>
+</systems>

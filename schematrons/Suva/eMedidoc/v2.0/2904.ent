@@ -9,79 +9,31 @@ History:
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 
 ********************************************************
--->
-<pattern>
-
-	<!-- Entity Information -->
-	<xhtml:ul id='suva-form-2904'>
-		<xhtml:li class='filename'>2904.ent</xhtml:li>
-		<xhtml:li class='version'>1.0</xhtml:li>
-	</xhtml:ul>
-
-	<rule context='cda:ClinicalDocument'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Suva Behandlungsmeldung: CDA Header</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für die Suva Behandlungsmeldung</xhtml:p>
-		<!--
+--><pattern><!-- Entity Information --><xhtml:ul id="suva-form-2904" xmlns:xhtml="http://www.w3.org/1999/xhtml"><xhtml:li class="filename">2904.ent</xhtml:li><xhtml:li class="version">1.0</xhtml:li></xhtml:ul><rule context="cda:ClinicalDocument"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Behandlungsmeldung: CDA Header</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für die Suva Behandlungsmeldung</xhtml:p><!--
 		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
 		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<!-- Formularnummer prüfen -->
-		<assert id='suva-form-2904-0001' test='//cda:templateId/@extension="2904"'>
-			<xhtml:p lang='de_ch'>Die Formularnummer für Suva Behandlungsmeldung muss lauten: 2904</xhtml:p>
-			<!--
+		--><!-- Formularnummer prüfen --><assert id="suva-form-2904-0101" test="//cda:templateId/@extension=&quot;2904&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Formularnummer für Suva Behandlungsmeldung muss lauten: 2904</xhtml:p><!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<!-- code prüfen -->
-		<assert id='suva-form-2904-0002' test='//cda:code/@code="51848-0"'>
-			<xhtml:p lang='de_ch'>Der LOINC Code für die Suva Behandlungsmeldung muss lauten: 51848-0 (Assessment note)</xhtml:p>
-			<!--
+			--></assert><!-- code prüfen --><assert id="suva-form-2904-0102" test="//cda:code/@code=&quot;51848-0&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der LOINC Code für die Suva Behandlungsmeldung muss lauten: 51848-0 (Assessment note)</xhtml:p><!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<!-- title prüfen -->
-		<assert id='suva-form-2904-0003-de-CH' test='(//cda:title="Behandlungsmeldung" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Behandlungsmeldung'</xhtml:p>
-			<!--
+			--></assert><!-- title prüfen --><assert id="suva-form-2904-0103" test="(//cda:title=&quot;Behandlungsmeldung&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Behandlungsmeldung'</xhtml:p><!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<!-- Arbeitgeber prüfen -->
-		<assert id='suva-form-2904-0004' test='//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]'>
-			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss einen Arbeitgeber enthalten</xhtml:p>
-			<!--
+			--></assert><!-- Arbeitgeber prüfen --><assert id="suva-form-2904-0104" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva Behandlungsmeldung muss einen Arbeitgeber enthalten</xhtml:p><!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-
-		<!--
+			--></assert><!--
 		********************************************************
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
-		-->
-		<assert id='suva-form-2904-0005' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfoBehandlungsmeldung"'>
-			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
-			<!--
+		--><assert id="suva-form-2904-0105" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.SchadenInfoBehandlungsmeldung&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva Behandlungsmeldung muss eine Section 'Schadeninformationen' enthalten</xhtml:p><!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2904-0006' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
-			<xhtml:p lang='de_ch'>Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2904-0106" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p><!--
 			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-
-	</rule>
-
-</pattern>
+			--></assert></rule></pattern>

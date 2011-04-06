@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+BFS Codetabellen für Schematron Validierungen
+Vocabulary for "Medizinische Statistik der Krankenhäuser" V201103 schematrons: "Liste der in der medizinischen Statistik erfassbaren Medikamente/Substanzen"
+Quelle: http://www.bfs.admin.ch/bfs/portal/de/index/infothek/nomenklaturen/blank/blank/codage/04.html
+
+History:
+15.03.2011: Tony Schaller, medshare GmbH (Initial draft)
+18.03.2011: Tony Schaller, medshare GmbH (Draft sent to BFS)
+20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+
+********************************************************
+-->
+
+<systems>
+
+	<!-- Verabreichungsart 	-->
+	<system codeSystemName='INDICATION' root='2.16.756.5.30.PlaceholderMSKMediINDICATION'>
+		<code value='IMPL' displayName='Knochenimplantat' version='20100101' deprecated='0'/>
+		<code value='Inhal' displayName='Inhalation' version='20100101' deprecated='0'/>
+		<code value='IOC' displayName='intraokulär' version='20100101' deprecated='0'/>
+		<code value='IT' displayName='intrathekal' version='20100101' deprecated='0'/>
+		<code value='IVITR' displayName='intravitreal' version='20100101' deprecated='0'/>
+		<code value='N' displayName='nasal' version='20100101' deprecated='0'/>
+		<code value='O' displayName='oral' version='20100101' deprecated='0'/>
+		<code value='P' displayName='parenteral' version='20100101' deprecated='0'/>
+		<code value='R' displayName='rektal' version='20100101' deprecated='0'/>
+		<code value='SL' displayName='sublingual/bukkal' version='20100101' deprecated='0'/>
+		<code value='T' displayName='topisch' version='20100101' deprecated='0'/>
+		<code value='TD' displayName='transdermal' version='20100101' deprecated='0'/>
+		<code value='VAG' displayName='vaginal' version='20100101' deprecated='0'/>
+		<code value='U' displayName='urethral' version='20100101' deprecated='0'/>
+		<code value='N/A' displayName='Frage stellt sich nicht'/>
+	</system>
+
+	<!-- Zusatzangabe 	-->
+	<system codeSystemName='MEDICATIONEXTENSION' root='2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION'>
+		<code value='L' displayName='Liposomal' version='20100101' deprecated='0'/>
+		<code value='NL' displayName='Nonliposomal' version='20100101' deprecated='0'/>
+		<code value='NP' displayName='Non-peg' version='20100101' deprecated='0'/>
+		<code value='P' displayName='Peg' version='20100101' deprecated='0'/>
+		<code value='Pl' displayName='Plasmatisch' version='20100101' deprecated='0'/>
+		<code value='Re' displayName='Rekombinant' version='20100101' deprecated='0'/>
+		<code value='N/A' displayName='Frage stellt sich nicht'/>
+	</system>
+
+	<!-- Medikamente 	-->
+	<system codeSystemName='MEDICATIONLIST' root='2.16.756.5.30.PlaceholderMSKMediMEDICATIONLIST'>
+		<code value='B01AB02' displayName='Antithrombin III' version='20100101' deprecated='0'/>
+		<code value='B01AC09' displayName='Epoprostenol' version='20100101' deprecated='0'/>
+		<code value='B01AC11' displayName='Iloprost' version='20100101' deprecated='0'/>
+		<code value='B01AC13' displayName='Abciximab' version='20100101' deprecated='0'/>
+		<code value='B01AC16' displayName='Eptifibatid' version='20100101' deprecated='0'/>
+		<code value='B01AC17' displayName='Tirofiban' version='20100101' deprecated='0'/>
+		<code value='B01AC21' displayName='Treprostinil' version='20100101' deprecated='0'/>
+		<code value='B01AD02' displayName='Alteplase' version='20100101' deprecated='0'/>
+		<code value='B01AD04' displayName='Urokinase' version='20100101' deprecated='0'/>
+		<code value='B01AD07' displayName='Reteplase' version='20100101' deprecated='0'/>
+		<code value='B01AD11' displayName='Tenecteplase' version='20100101' deprecated='0'/>
+		<code value='B01AD12' displayName='Recombinantes aktiviertes Protein C' version='20100101' deprecated='0'/>
+		<code value='B01AE02' displayName='Lepirudin' version='20100101' deprecated='0'/>
+		<code value='B02AB02' displayName='Alpha-1 Antitrypsin' version='20100101' deprecated='0'/>
+		<code value='B02AB03' displayName='C1-Esterase-Inhibitor' version='20100101' deprecated='0'/>
+		<code value='B02BB01' displayName='Fibrinogen' version='20100101' deprecated='0'/>
+		<code value='B02BD01' displayName='Gerinnungsfaktoren II, VII IX und X in Kombination (Prothrombinkomplex)' version='20100101' deprecated='0'/>
+		<code value='B02BD02' displayName='Gerinnungsfaktor VIII' version='20100101' deprecated='0'/>
+		<code value='B02BD03' displayName='Faktor VIII Inhibitor' version='20100101' deprecated='0'/>
+		<code value='B02BD04' displayName='Gerinnungskaktor IX plasmatisch' version='20100101' deprecated='0'/>
+		<code value='B02BD05' displayName='Gerinnungsfaktor VII plasmatisch' version='20100101' deprecated='0'/>
+		<code value='B02BD06' displayName='Von-Willebrand-Faktor und Faktor VIII in Kombination' version='20100101' deprecated='0'/>
+		<code value='B02BD07' displayName='Gerinnungsfaktor XIII' version='20100101' deprecated='0'/>
+		<code value='B02BD08' displayName='Eptacog alfa (Gerinnungsfaktor VII rekombinant)' version='20100101' deprecated='0'/>
+		<code value='B02BD09' displayName='Nonacog alfa (Gerinnungskaktor IX rekombinant)' version='20100101' deprecated='0'/>
+		<code value='B03XA01' displayName='Epoetin alfa' version='20100101' deprecated='0'/>
+		<code value='B03XA02' displayName='Darbepoetin alfa' version='20100101' deprecated='0'/>
+		<code value='B03XA03' displayName='Epoetin beta' version='20100101' deprecated='0'/>
+		<code value='C01EA01' displayName='Alprostadil' version='20100101' deprecated='0'/>
+		<code value='C02KX01' displayName='Bosentan' version='20100101' deprecated='0'/>
+		<code value='G04BE03' displayName='Sildenafil' version='20100101' deprecated='0'/>
+		<code value='H01BA04' displayName='Terlipressin' version='20100101' deprecated='0'/>
+		<code value='H01CB01' displayName='Somatostatin' version='20100101' deprecated='0'/>
+		<code value='H01CB02' displayName='Octreotid' version='20100101' deprecated='0'/>
+		<code value='H02AB04' displayName='Methylprednisolon' version='20100101' deprecated='0'/>
+		<code value='J01DH02' displayName='Meropenem' version='20100101' deprecated='0'/>
+		<code value='J01GB01' displayName='Tobramycin' version='20100101' deprecated='0'/>
+		<code value='J02AA01' displayName='Amphotericin B' version='20100101' deprecated='0'/>
+		<code value='J02AC02' displayName='Itraconazol' version='20100101' deprecated='0'/>
+		<code value='J02AC03' displayName='Voriconazol' version='20100101' deprecated='0'/>
+		<code value='J02AC04' displayName='Posaconazol' version='20100101' deprecated='0'/>
+		<code value='J02AX04' displayName='Caspofungin' version='20100101' deprecated='0'/>
+		<code value='J02AX06' displayName='Anidulafungin' version='20100101' deprecated='0'/>
+		<code value='J05AB01' displayName='Acyclovir' version='20100101' deprecated='0'/>
+		<code value='J05AD01' displayName='Foscarnet' version='20100101' deprecated='0'/>
+		<code value='J06BA02' displayName='Human-Immunglobulin, polyvalent' version='20100101' deprecated='0'/>
+		<code value='J06BA03' displayName='Human-Immunglobulin gegen Varicella-Zoster-Virus' version='20100101' deprecated='0'/>
+		<code value='J06BA04' displayName='Human-Immunglobulin gegen Hepatitis-B' version='20100101' deprecated='0'/>
+		<code value='J06BB05' displayName='Human-Immunglobulin gegen Tollwut-Virus' version='20100101' deprecated='0'/>
+		<code value='J06BB09' displayName='Human-Immunglobulin gegen Cytomegalovirus' version='20100101' deprecated='0'/>
+		<code value='J06BB16' displayName='Palivizumab' version='20100101' deprecated='0'/>
+		<code value='L01AB01' displayName='Busulfan' version='20100101' deprecated='0'/>
+		<code value='L01AD01' displayName='Carmustin' version='20100101' deprecated='0'/>
+		<code value='L01AX03' displayName='Temozolomid' version='20100101' deprecated='0'/>
+		<code value='L01BA01' displayName='Methotrexat' version='20100101' deprecated='0'/>
+		<code value='L01BA04' displayName='Pemetrexed' version='20100101' deprecated='0'/>
+		<code value='L01BB04' displayName='Cladribin' version='20100101' deprecated='0'/>
+		<code value='L01BB05' displayName='Fludarabin' version='20100101' deprecated='0'/>
+		<code value='L01BB06' displayName='Clofarabin' version='20100101' deprecated='0'/>
+		<code value='L01BB07' displayName='Nelarabin' version='20100101' deprecated='0'/>
+		<code value='L01BC01' displayName='Cytarabin' version='20100101' deprecated='0'/>
+		<code value='L01BC05' displayName='Gemcitabin' version='20100101' deprecated='0'/>
+		<code value='L01CA04' displayName='Vinorelbin' version='20100101' deprecated='0'/>
+		<code value='L01CD01' displayName='Paclitaxel' version='20100101' deprecated='0'/>
+		<code value='L01CD02' displayName='Docetaxel' version='20100101' deprecated='0'/>
+		<code value='L01DB01' displayName='Doxorubicin' version='20100101' deprecated='0'/>
+		<code value='L01DB06' displayName='Idarubicin' version='20100101' deprecated='0'/>
+		<code value='L01DB07' displayName='Mitoxantron' version='20100101' deprecated='0'/>
+		<code value='L01XA03' displayName='Oxaliplatin' version='20100101' deprecated='0'/>
+		<code value='L01XC02' displayName='Rituximab' version='20100101' deprecated='0'/>
+		<code value='L01XC03' displayName='Trastuzumab' version='20100101' deprecated='0'/>
+		<code value='L01XC04' displayName='Alemtuzumab' version='20100101' deprecated='0'/>
+		<code value='L01XC05' displayName='Gemtuzumab ozogamicin' version='20100101' deprecated='0'/>
+		<code value='L01XC06' displayName='Cetuximab' version='20100101' deprecated='0'/>
+		<code value='L01XC07' displayName='Bevacizumab' version='20100101' deprecated='0'/>
+		<code value='L01XE01' displayName='Imatinib' version='20100101' deprecated='0'/>
+		<code value='L01XE04' displayName='Sunitinib' version='20100101' deprecated='0'/>
+		<code value='L01XE05' displayName='Sorafenib' version='20100101' deprecated='0'/>
+		<code value='L01XE06' displayName='Dasatinib' version='20100101' deprecated='0'/>
+		<code value='L01XE07' displayName='Erlotinib' version='20100101' deprecated='0'/>
+		<code value='L01XE08' displayName='Nilotinib' version='20100101' deprecated='0'/>
+		<code value='L01XX01' displayName='Amsacrin' version='20100101' deprecated='0'/>
+		<code value='L01XX02' displayName='Asparaginase' version='20100101' deprecated='0'/>
+		<code value='L01XX17' displayName='Topotecan' version='20100101' deprecated='0'/>
+		<code value='L01XX19' displayName='Irinotecan' version='20100101' deprecated='0'/>
+		<code value='L01XX32' displayName='Bortezomib' version='20100101' deprecated='0'/>
+		<code value='L03AA02' displayName='Filgrastim' version='20100101' deprecated='0'/>
+		<code value='L03AA09' displayName='Sargramostin' version='20100101' deprecated='0'/>
+		<code value='L03AA10' displayName='Lenograstim' version='20100101' deprecated='0'/>
+		<code value='L03AA13' displayName='Pegfilgrastim' version='20100101' deprecated='0'/>
+		<code value='L03AB03' displayName='Interferon gamma' version='20100101' deprecated='0'/>
+		<code value='L03AB04' displayName='Interferon alpha 2a (non PEG)' version='20100101' deprecated='0'/>
+		<code value='L03AB05' displayName='Interferon alpha 2b (non PEG)' version='20100101' deprecated='0'/>
+		<code value='L03AB08' displayName='Interferon beta-1b' version='20100101' deprecated='0'/>
+		<code value='L03AB10' displayName='Peginterferon alfa-2b' version='20100101' deprecated='0'/>
+		<code value='L03AB11' displayName='Peginterferon alfa-2a' version='20100101' deprecated='0'/>
+		<code value='L03AC01' displayName='Aldesleukin' version='20100101' deprecated='0'/>
+		<code value='L04AA02' displayName='Muromonab' version='20100101' deprecated='0'/>
+		<code value='L04AA03' displayName='Anti-Human-T-Lymphozyten-Immunglobulin' version='20100101' deprecated='0'/>
+		<code value='L04AA15' displayName='Alefacept' version='20100101' deprecated='0'/>
+		<code value='L04AA21' displayName='Efalizumab' version='20100101' deprecated='0'/>
+		<code value='L04AA23' displayName='Natalizumab' version='20100101' deprecated='0'/>
+		<code value='L04AA24' displayName='Abatacept' version='20100101' deprecated='0'/>
+		<code value='L04AA25' displayName='Eculizumab' version='20100101' deprecated='0'/>
+		<code value='L04AB01' displayName='Etanercept' version='20100101' deprecated='0'/>
+		<code value='L04AB02' displayName='Infliximab' version='20100101' deprecated='0'/>
+		<code value='L04AB04' displayName='Adalimumab' version='20100101' deprecated='0'/>
+		<code value='L04AB05' displayName='Certolizumab' version='20100101' deprecated='0'/>
+		<code value='L04AB06' displayName='Golimumab' version='20100101' deprecated='0'/>
+		<code value='L04AC01' displayName='Daclizumab' version='20100101' deprecated='0'/>
+		<code value='L04AC02' displayName='Basiliximab' version='20100101' deprecated='0'/>
+		<code value='L04AC03' displayName='Anakinra' version='20100101' deprecated='0'/>
+		<code value='L04AC07' displayName='Tocilizumab' version='20100101' deprecated='0'/>
+		<code value='L04AX04' displayName='Lenalidomid' version='20100101' deprecated='0'/>
+		<code value='M03AX01' displayName='Botulinumtoxin' version='20100101' deprecated='0'/>
+		<code value='M05BA08' displayName='Zoledronic acid' version='20100101' deprecated='0'/>
+		<code value='M05BC01' displayName='Dibotermin alfa' version='20100101' deprecated='0'/>
+		<code value='M05BC02' displayName='Eptotermin alfa' version='20100101' deprecated='0'/>
+		<code value='R03DX05' displayName='Omalizumab' version='20100101' deprecated='0'/>
+		<code value='R07AA02' displayName='Surfactant' version='20100101' deprecated='0'/>
+		<code value='S01LA03' displayName='Pegaptanib' version='20100101' deprecated='0'/>
+		<code value='S01LA04' displayName='Ranibizumab' version='20100101' deprecated='0'/>
+		<code value='V03AF02' displayName='Dexrazoxan' version='20100101' deprecated='0'/>
+		<code value='V03AF07' displayName='Rasburicase' version='20100101' deprecated='0'/>
+		<code value='V03AF08' displayName='Palifermin' version='20100101' deprecated='0'/>
+		<code value='V04CX' displayName='Mannitol' version='20100101' deprecated='0'/>
+		<code value='V09IX02' displayName='Jod-131-Metajodobenzylguanidin (MIBG)' version='20100101' deprecated='0'/>
+		<code value='V10XX02' displayName='90Y-Ibritumomab-Tiuxetan' version='20100101' deprecated='0'/>
+		<code value='A16AB01' displayName='Alglucerase' version='20100101' deprecated='0'/>
+		<code value='A16AB02' displayName='Imiglucerase' version='20100101' deprecated='0'/>
+		<code value='A16AB03' displayName='Agalsidase alfa' version='20100101' deprecated='0'/>
+		<code value='A16AB04' displayName='Agalsidase beta' version='20100101' deprecated='0'/>
+		<code value='A16AB05' displayName='Laronidase' version='20100101' deprecated='0'/>
+		<code value='A16AB06' displayName='Sacrosidase' version='20100101' deprecated='0'/>
+		<code value='A16AB07' displayName='Alglucosidase alfa' version='20100101' deprecated='0'/>
+		<code value='A16AB08' displayName='Galsulfase' version='20100101' deprecated='0'/>
+		<code value='A16AB09' displayName='Idusrsulfase' version='20100101' deprecated='0'/>
+		<code value='HTRVBKZ' displayName='Transfusion von Vollblut' version='20100101' deprecated='0'/>
+		<code value='HTRECKZ' displayName='Transfusion von Erythrozytenkonzentraten' version='20100101' deprecated='0'/>
+		<code value='HTRTRKZ' displayName='Transfusion von Thrombozytenkonzentraten' version='20100101' deprecated='0'/>
+		<code value='HTRPTKZ' displayName='Transfusion von patientenbezogenen Thrombozytenkonzentraten' version='20100101' deprecated='0'/>
+		<code value='HTRATKZ' displayName='Transfusion von Apherese-Thrombozytenkonzentraten' version='20100101' deprecated='0'/>
+		<code value='HTRPLKZ' displayName='Transfusion von Plasma' version='20100101' deprecated='0'/>
+		<code value='HTRLYKZ' displayName='Transfusion von Lymphozytenkonzentraten ' version='20100101' deprecated='0'/>
+		<code value='HTRGRKZ' displayName='Transfusion von Granulozytenkonzentraten' version='20100101' deprecated='0'/>
+	</system>
+
+	<!-- Einheiten 	-->
+	<system codeSystemName='MEDICATIONUNITS' root='2.16.756.5.30.PlaceholderMSKMediMEDICATIONUNITS'>
+		<code value='FIPU' displayName='International Pharmaceutical Federation Unit' deprecated='0'/>
+		<code value='g' displayName='Gramm' version='20100101' deprecated='0'/>
+		<code value='gBq' displayName='Gigabequerel' version='20100101' deprecated='0'/>
+		<code value='IU International Unit' version='20100101' deprecated='0'/>
+		<code value='mcg' displayName='Microgramm' version='20100101' deprecated='0'/>
+		<code value='mcm' displayName='Micrometer' version='20100101' deprecated='0'/>
+		<code value='mg' displayName='Milligramm' version='20100101' deprecated='0'/>
+		<code value='MIU Million International Unit' version='20100101' deprecated='0'/>
+		<code value='ml' displayName='Milliliter' version='20100101' deprecated='0'/>
+		<code value='mmol' displayName='Millimol' version='20100101' deprecated='0'/>
+		<code value='MU' displayName='Million Units' version='20100101' deprecated='0'/>
+		<code value='U' displayName='Unit' version='20100101' deprecated='0'/>
+		<code value='UD' displayName='Unit Dose' version='20100101' deprecated='0'/>
+		<code value='TU' displayName='Thousand Units' version='20100101' deprecated='0'/>
+	</system>
+
+</systems>

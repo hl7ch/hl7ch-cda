@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+********************************************************
+Medizinische Statistik der Krankenhäuser und Minimal Clinical Data Set im Spitalinternen Datenaustausch
+Beispiel eines GrpStatus Dokuments
+
+History:
+20.03.2011: Tony Schaller, medshare GmbH (Initial draft)
+20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!--
+	********************************************************
+	CDA Header
+	********************************************************
+	-->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+	<templateId extension='CDA-CH' root='2.16.756.5.30.1.1.1.1'/>
+	<templateId extension='alisconnect.casestat-grpstatus.doc' root='2.16.756.5.30.PlaceholderCaseStatV1'/>
+	<id extension='E8BB6F1A-965B-4A03-866C-4E3667850B6E' root='2.16.756.5.30.1.1.1.1'/>
+	<code code='34106-5' codeSystem='2.16.840.1.113883.6.1' displayName='Zusammenfassung bei Entlassung'/>
+	<title>Gruppierstatus der Codierabteilung</title>
+	<effectiveTime value='20110115'/>
+	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
+	<languageCode code='de-CH'/>
+	<setId extension='02F3FA7E-57F8-4E40-971D-3800F6290386' root='2.16.756.5.30.1.1.1.1'/>
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<id extension='999.8888.7777.66' root='2.16.756.5.32'/>
+			<addr use='HP'>
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use='HP' value='tel:+41.32.685.12.34'/>
+			<telecom use='PUB' value='tel:+41.32.123.77.88'/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
+				<birthTime value='19381212'/>
+				<maritalStatusCode code='M' codeSystem='2.16.840.1.113883.5.2'>
+					<!-- Mapping auf MSK Code für Psychiatrie-Zusatzdaten -->
+					<translation code='2' codeSystem='2.16.756.5.30.PlaceholderMSKZivilstand' />
+				</maritalStatusCode>
+			</patient>
+			<providerOrganization>
+				<id extension='7605555555555' root='1.3.88'/>
+				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value='20071113'/>
+		<assignedAuthor>
+			<id extension='7604444444444' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Spitalstr.</streetName>
+				<houseNumber>23</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use='PUB' value='tel:+41.32.211.11.11'/>
+			<telecom use='PUB' value='fax:+41.32.211.11.54'/>
+			<telecom use='PUB' value='http:www.kantonales-spital.ch'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>A.</given>
+					<family>Assistenz</family>
+					<suffix>Assistenzarzt</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<addr use='WP'>
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>33</houseNumber>
+					<postalCode>1234</postalCode>
+					<city>Musterstadt</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<time value='20071113'/>
+		<assignedEntity>
+			<id extension='35' root='2.16.756.555555.2.1'/>
+			<assignedPerson>
+				<name>
+					es
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension='7605555555555' root='1.3.88'/>
+				<name>Kantonales Spital</name>
+				<addr use='WP'>
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode='PRCP'>
+		<intendedRecipient>
+			<informationRecipient>
+				<name>Kantonales Spital, Patientenaufnahme</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use='WP'>
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value='20071113'/>
+		<signatureCode code='S'/>
+		<assignedEntity>
+			<id extension='7603333333333' root='1.3.88'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Theo</given>
+					<family>Klug</family>
+					<suffix>Chefarzt</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authenticator>
+		<time value='20071113'/>
+		<signatureCode code='S'/>
+		<assignedEntity>
+			<id extension='7604444444444' root='1.3.88'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>A.</given>
+					<family>Assistenz</family>
+					<suffix>Assistenzarzt</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</authenticator>
+	<participant typeCode='COV'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Insurance"/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high nullFlavor='NASK' />
+		</time>
+		<associatedEntity classCode='COVPTY'>
+			<!-- EAN der Versicherung -->
+			<id extension='7607777777777' root='1.3.88'/>
+			<associatedPerson>
+				<name>
+					<given>Kontakt</given>
+					<family>Person</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<name>WirZahlenAlles Versicherungen</name>
+				<telecom nullFlavor='NASK' />
+				<addr use='WP'>
+					<streetName>Zahlgasse</streetName>
+					<houseNumber>89</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='HLD'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.InsuranceCard"/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high nullFlavor='20141231' />
+		</time>
+		<associatedEntity classCode='POLHOLD'>
+			<!-- Nummer der Versichertenkarte -->
+			<id extension='8077560000000000000000' root='2.16.756.5.34'/>
+			<associatedPerson>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<authorization>
+		<consent>
+			<code nullFlavor='OTH' codeSystem='2.16.756.5.30.2.1.1.2'>
+				<originalText>
+					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 20.12.2010 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+				</originalText>
+			</code>
+			<statusCode code='completed'/>
+		</consent>
+	</authorization>
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			DRG Daten
+			********************************************************
+			-->
+			<component>
+				<section>
+					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGData'/>
+					<title>DRG Daten</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content styleCode='Bold'>Behandlungsfall über DRG abgerechnet</content>
+									</td>
+									<td>Nein</td>
+								</tr>
+								<tr>
+									<td>
+										<content styleCode='Bold'>Spitalinterner DRG Codierstatus</content>
+									</td>
+									<td>Pending</td>
+								</tr>
+								<tr>
+									<td>
+										<content styleCode='Bold'>DRG Fallgruppe</content>
+									</td>
+									<td>I47B<br />
+										Revision oder Ersatz des Hüftgelenkes ohne komplizierende Diagnose. ohne Arthrodese. ohne äußerst schwere CC. Alter > 15 Jahre. ohne komplizierenden Eingriff
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<encounter classCode='OBS' moodCode='EVN'>
+							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
+							<id extension='283641' root='2.16.756.5.30.133333' />
+						</encounter>
+					</entry>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGDataStatusL3' />
+							<code code='4' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Nein' />
+							<statusCode code='completed'/>
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGStatusL3' />
+									<code code='I' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist' />
+									<statusCode code='completed'/>
+									<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
+								</observation>
+							</component>
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGFallgruppeL3' />
+									<code code='F' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Fallgruppe' />
+									<statusCode code='completed'/>
+									<effectiveTime value='20110115'/>
+									<value xsi:type='CE' code='I47B' codeSystem='2.16.756.5.30.PlaceholderSwissDRG' displayName='Revision oder Ersatz des Hüftgelenkes ohne komplizierende Diagnose. ohne Arthrodese. ohne äußerst schwere CC. Alter > 15 Jahre. ohne komplizierenden Eingriff'/>
+									<performer>
+										<assignedEntity>
+											<id nullFlavor='NASK' />
+											<assignedPerson>
+												<name>
+													<given>C.</given>
+													<family>Odier</family>
+												</name>
+											</assignedPerson>
+										</assignedEntity>
+									</performer>
+								</observation>
+							</component>
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGCodierStatusL3' />
+									<code code='S' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Codierstatus' />
+									<statusCode code='completed'/>
+									<value xsi:type='CE' code='P' codeSystem='2.16.756.5.30.PlaceholderCaseStatCodingStatus' displayName='Pending'/>
+									<value xsi:type='INT' value='0' />
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

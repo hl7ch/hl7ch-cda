@@ -694,12 +694,21 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		</table>
 	</xsl:template>
 
-	<!-- Participants (z.B. Arbeitgeber)	-->
+	<!-- Participants (z.B. Arbeitgeber, Versicherung)	-->
 	<xsl:template match="n1:participant">
+		<xsl:variable name="typeCode"	select="@typeCode"/>
 		<xsl:for-each select="n1:associatedEntity">
 			<b>
-				<xsl:variable name="code"	select="n1:code/@code"/>
-				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$code]/@displayName"/>
+				<xsl:choose>
+					<xsl:when test="$typeCode='COV'">
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
+					</xsl:when>
+					<xsl:when test="$typeCode='IND'">
+						<xsl:variable name="code"	select="n1:code/@code"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$code]/@displayName"/>
+					</xsl:when>
+					<xsl:otherwise>Undefined Participant</xsl:otherwise>
+				</xsl:choose>
 			</b>
 			<ul>
 				<table class="body">
@@ -715,14 +724,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					</tr>
 					<tr>
 						<th>
-		<xsl:choose>
-			<xsl:when test="$organizationName">
-				<xsl:value-of select="$organizationName"/>
-							<xsl:text> </xsl:text>
-			</xsl:when>
-			<xsl:otherwise>N/A</xsl:otherwise>
-		</xsl:choose>
-							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='CustNo']/@displayName"/>
+							<xsl:variable name="oid"
+								select="n1:id/@root"/>
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
 						</th>
 						<th>
 							<xsl:value-of select="n1:id/@extension"/>

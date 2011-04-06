@@ -46,7 +46,7 @@ History:
 		</html>
 	</xsl:template>
 
-	<!-- Unterdrücken von nich xhtml Text Elementen -->
+	<!-- Unterdrücken von nicht xhtml Text Elementen -->
 	<xsl:template match="text()" />
 	<xsl:template match="text()" mode="rulestranslated"/>
 	<xsl:template match="text()" mode="entitydocumented"/>
@@ -95,43 +95,47 @@ History:
 
 
 	<!--  Stellt einen Enitität dar -->
-	<xsl:template match="sch:pattern[xhtml:ul[@id]]">
-		<div>
-			<table class="head">
-				<thead>
-					<tr>
-						<th class="label1" width="10%">
-							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/>
-							<xsl:text>:</xsl:text>
-						</th>
-						<th class="value1">
-							<xsl:value-of select="xhtml:ul/@id" />
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="label1">
-							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/>
-							<xsl:text>:</xsl:text>
-						</td>
-						<td>
-							<xsl:value-of select="xhtml:ul/xhtml:li[@class='filename']" />
-						</td>
-					</tr>
-					<tr>
-						<td class="label1">
-							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/>
-							<xsl:text>:</xsl:text>
-						</td>
-						<td>
-							<xsl:value-of select="xhtml:ul/xhtml:li[@class='version']" />
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<br />
-		</div>
+	<xsl:template match="sch:pattern">
+		<xsl:choose>
+			<xsl:when test="xhtml:ul/@id">
+				<div>
+					<table class="head">
+						<thead>
+							<tr>
+								<th class="label1" width="10%">
+									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/>
+									<xsl:text>:</xsl:text>
+								</th>
+								<th class="value1">
+									<xsl:value-of select="xhtml:ul/@id" />
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="label1">
+									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/>
+									<xsl:text>:</xsl:text>
+								</td>
+								<td>
+									<xsl:value-of select="xhtml:ul/xhtml:li[@class='filename']" />
+								</td>
+							</tr>
+							<tr>
+								<td class="label1">
+									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/>
+									<xsl:text>:</xsl:text>
+								</td>
+								<td>
+									<xsl:value-of select="xhtml:ul/xhtml:li[@class='version']" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br />
+				</div>
+			</xsl:when>
+		</xsl:choose>
 
 		<xsl:apply-templates select="sch:rule" mode="entitydocumented"/>
 

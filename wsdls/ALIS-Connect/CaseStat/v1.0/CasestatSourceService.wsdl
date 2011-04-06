@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+********************************************************
+Medizinische Statistik der Krankenhäuser und Minimal Clinical Data Set im Spitalinternen Datenaustausch
+Webservice Definition für den Empfang von GrpStatus CDA Dokumenten
+
+History:
+05.04.2011: Tony Schaller, medshare GmbH (Initial draft)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz)
+
+********************************************************
+-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:msg="uri:alis-connect.ch:casestat:schemas:source:messages:201103"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:tns="uri:alis-connect.ch:casestat:schemas:source:201103"
+                  targetNamespace="uri:alis-connect.ch:casestat:schemas:source:201103">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:cda="urn:hl7-org:v3"
+            xmlns:cct="uri:alis-connect.ch:casestat:schemas:data:201103"
+            xmlns:tns="uri:alis-connect.ch:casestat:schemas:source:messages:201103"
+            targetNamespace="uri:alis-connect.ch:casestat:schemas:source:messages:201103"
+            elementFormDefault="qualified">
+
+      <import namespace="urn:hl7-org:v3" schemaLocation="..\..\..\..\schemas\CDA.xsd"/>
+      <import namespace="uri:alis-connect.ch:casestat:schemas:data:201103" schemaLocation="CasestatCommonTypes.xsd" />
+
+      <!-- Collect grouping status (ALIS Connect Casestat) -->
+      <element name="RegisterGrpStatusRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="GrpStatus" type="cda:POCD_MT000040.ClinicalDocument"/>
+          </sequence>
+        </complexType>
+      </element>
+
+      <!-- Response to Collect grouping status (ALIS Connect Casestat) -->
+      <element name="RegisterGrpStatusResponse">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="ackType" type="cct:AcknowledgementType"/> 
+            <element minOccurs="0" maxOccurs="1" name="ackDetailCode" type="cda:CD"/> 
+            <element minOccurs="0" maxOccurs="1" name="ackMessage" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+
+      <element name="InteroperabilityServiceGeneralFault">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="1" name="Message" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  
+  <wsdl:message name="RegisterGrpStatusRequest">
+    <wsdl:part element="msg:RegisterGrpStatusRequest" name="body" />
+  </wsdl:message>
+  <wsdl:message name="RegisterGrpStatusResponse">
+    <wsdl:part element="msg:RegisterGrpStatusResponse" name="body" />
+  </wsdl:message>
+  
+  
+  <wsdl:message name="InteroperabilityServiceGeneralFault">
+    <wsdl:part element="msg:InteroperabilityServiceGeneralFault" name="detail"/>
+  </wsdl:message>
+
+  <wsdl:portType name="CasestatGroupingSource">
+    <wsdl:operation name="RegisterGrpStatus">
+      <wsdl:input message="tns:RegisterGrpStatusRequest" name="RegisterGrpStatusRequest" wsaw:Action="RegisterGrpStatus" />
+      <wsdl:output message="tns:RegisterGrpStatusResponse" name="RegisterGrpStatusResponse" wsaw:Action="uri:alis-connect.ch:casestat:schemas:source:messages:201103:RegisterGrpStatusResponse" />
+      <wsdl:fault message="tns:InteroperabilityServiceGeneralFault" name="InteroperabilityServiceGeneralFault" wsaw:Action="uri:alis-connect.ch:casestat:schemas:source:messages:201103:InteroperabilityServiceGeneralFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="CasestatGroupingSourceBinding" type="tns:CasestatGroupingSource">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterGrpStatus">
+      <soap:operation soapAction="RegisterGrpStatus" style="document"/>
+      <wsdl:input name="RegisterGrpStatusRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RegisterGrpStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InteroperabilityServiceGeneralFault">
+        <soap:fault name="InteroperabilityServiceGeneralFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  
+  <!-- CasestatGroupingSourceService instance of your system -->
+  <wsdl:service name="CasestatGroupingSourceService">
+    <wsdl:port binding="tns:CasestatGroupingSourceBinding" name="CasestatGroupingSourcePort">
+		  <!-- Please change the following address to your service location -->
+      <soap:address location="http://dummy.host.ch/CasestatGroupingSourceService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

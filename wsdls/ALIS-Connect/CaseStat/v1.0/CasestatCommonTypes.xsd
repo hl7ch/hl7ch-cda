@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************
+Medizinische Statistik der Krankenhäuser und Minimal Clinical Data Set im Spitalinternen Datenaustausch
+Webservice Definition für den Empfang von GrpInfo CDA Dokumenten
+
+History:
+05.04.2011: Tony Schaller, medshare GmbH (Initial draft)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz)
+
+********************************************************
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	      targetNamespace="uri:alis-connect.ch:casestat:schemas:data:201103"
+	      xmlns:tns="uri:alis-connect.ch:casestat:schemas:data:201103"
+	      elementFormDefault="qualified">
+  
+	<!-- This enum defines the valid Acknowledge Codes; for a description see HL7 code table AcknowledgementType -->
+	<simpleType name="AcknowledgementType">
+		<restriction base="string">
+			<enumeration value="AA" />
+			<enumeration value="AE" />
+		</restriction>
+	</simpleType>
+</schema>

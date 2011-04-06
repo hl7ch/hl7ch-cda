@@ -14,465 +14,144 @@ History:
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 
 ********************************************************
--->
-<pattern>
-
-	<!-- Entity Information -->
-	<xhtml:ul id='suva-form-2927'>
-		<xhtml:li class='filename'>2927.ent</xhtml:li>
-		<xhtml:li class='version'>1.0</xhtml:li>
-	</xhtml:ul>
-
-	<rule context='cda:ClinicalDocument'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Suva Arztzeugnis UVG: CDA Header</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für das Suva Arztzeugnis</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Suva certificat de médecin UVG: CDA Header</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles 'CDA Header' pour le certificat de médecin UVG Suva</xhtml:p>
-		<!--
+--><pattern><!-- Entity Information --><xhtml:ul id="suva-form-2927" xmlns:xhtml="http://www.w3.org/1999/xhtml"><xhtml:li class="filename">2927.ent</xhtml:li><xhtml:li class="version">1.0</xhtml:li></xhtml:ul><rule context="cda:ClinicalDocument"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Arztzeugnis UVG: CDA Header</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für das Suva Arztzeugnis</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva certificat de médecin UVG: CDA Header</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles 'CDA Header' pour le certificat de médecin UVG Suva</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<!-- Formularnummer prüfen -->
-		<assert id='suva-form-2927-0001' test='//cda:templateId/@extension="2927"'>
-			<xhtml:p lang='de_ch'>Die Formularnummer für Suva Arztzeugnis UVG muss lauten: 2927</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le numéro de formulaire pour le rapport médical initial LAA de la Suva doit être: 2927</xhtml:p>
-			<!--
+		--><!-- Formularnummer prüfen --><assert id="suva-form-2927-0101" test="//cda:templateId/@extension=&quot;2927&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Formularnummer für Suva Arztzeugnis UVG muss lauten: 2927</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le numéro de formulaire pour le rapport médical initial LAA de la Suva doit être: 2927</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<!-- code prüfen -->
-		<assert id='suva-form-2927-0002' test='//cda:code/@code="51848-0"'>
-			<xhtml:p lang='de_ch'>Der LOINC Code für das Suva Arztzeugnis UVG muss lauten: 51848-0 (Assessment note)</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le code LOINC pour le rapport médical initial LAA de la Suva doit être: 51848-0 (Assessment note)</xhtml:p>
-			<!--
+			--></assert><!-- code prüfen --><assert id="suva-form-2927-0102" test="//cda:code/@code=&quot;51848-0&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der LOINC Code für das Suva Arztzeugnis UVG muss lauten: 51848-0 (Assessment note)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le code LOINC pour le rapport médical initial LAA de la Suva doit être: 51848-0 (Assessment note)</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<!-- title prüfen -->
-		<assert id='suva-form-2927-0003-de-CH' test='(//cda:title="Arztzeugnis UVG" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Arztzeugnis UVG'</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le titre français doit être 'Arztzeugnis UVG'</xhtml:p>
-			<!--
+			--></assert><!-- title prüfen --><assert id="suva-form-2927-0103" test="(//cda:title=&quot;Arztzeugnis UVG&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Arztzeugnis UVG'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le titre français doit être 'Arztzeugnis UVG'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0003-fr-CH' test='(//cda:title="Rapport médical initial LAA" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>Der deutsche Titel muss lauten 'Rapport médical initial LAA'</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le titre français doit être 'Rapport médical initial LAA'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0104" test="(//cda:title=&quot;Rapport médical initial LAA&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Rapport médical initial LAA'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le titre français doit être 'Rapport médical initial LAA'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<!-- Arbeitgeber prüfen -->
-		<assert id='suva-form-2927-0004' test='//cda:participant/cda:templateId[@root="2.16.756.5.30.1.1.1.1.1" and @extension="CDA-CH.Head.Empl"]'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss einen Arbeitgeber enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir un employeur</xhtml:p>
-			<!--
+			--></assert><!-- Arbeitgeber prüfen --><assert id="suva-form-2927-0105" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss einen Arbeitgeber enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir un employeur</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-
-		<!--
+			--></assert><!--
 		********************************************************
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
-		-->
-		<assert id='suva-form-2927-0005' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.SchadenInfo"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Informations sur le sinistre'</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0106" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.SchadenInfo&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Schadeninformationen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Informations sur le sinistre'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0006' test='//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.AngabenPat"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Angaben des Patienten' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Indications du patient'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0107" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2927.AngabenPat&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Angaben des Patienten' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Indications du patient'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0007' test='//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Allgemeinzustand"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Allgemeinzustand' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Etat général'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2927.Allgemeinzustand&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Allgemeinzustand' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Etat général'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0008' test='//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Befund"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Befund' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Constatations'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2927.Befund&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Befund' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Constatations'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0009' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.DiagList"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Diagnosen' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Diagnostics'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0110" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Diagnosen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Diagnostics'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0010' test='//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Kausalität"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Kausalität' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva de la Suva doit contenir une section 'Causalité'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0111" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2927.Kausalität&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Kausalität' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva de la Suva doit contenir une section 'Causalité'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0011' test='//cda:templateId/@root="2.16.756.5.30.1.100.2" and //cda:templateId/@extension="Suva.2927.Therapie"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Therapie' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Thérapie'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0112" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2927.Therapie&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Therapie' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Thérapie'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0012' test='//cda:templateId/@root="2.16.756.5.30.1.1.1.1.1" and //cda:templateId/@extension="CDA-CH.Body.ArbeitsfähigkeitList"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Capacité de travail'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0113" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Capacité de travail'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0013' role='information' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.BehAbschluss"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG enthält keine Section 'Behandlungsabschluss'</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva ne contient pas de section 'Traitement terminé'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0114" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.BehAbschluss&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG enthält keine Section 'Behandlungsabschluss'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva ne contient pas de section 'Traitement terminé'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0014' test='//cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and //cda:templateId/@extension="eMedidoc.Rem"'>
-			<xhtml:p lang='de_ch'>Das Suva Arztzeugnis UVG muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA de la Suva doit contenir une section 'Remarques' (même s'il n'y a pas de remarques – indiquer alors 'Aucune')</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0115" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Remarques' (même s'il n'y a pas de remarques – indiquer alors 'Aucune')</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-	</rule>
-
-	<!--
+			--></assert></rule><!--
 	********************************************************
 	Arztzeugnis UVG: Schadeninformationen
 	********************************************************
-	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.SchadenInfo"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Schadeninformationen</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Schadeninformationen' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: Informations sur le sinistre</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'Informations sur le sinistre' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfo&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Schadeninformationen</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Schadeninformationen' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: Informations sur le sinistre</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Informations sur le sinistre' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0101' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.ErstbehandlungL3"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Informations sur le sinistre' eMedidoc doivent contenir des informations sur le traitement initial</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0201" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.ErstbehandlungL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Informations sur le sinistre' eMedidoc doivent contenir des informations sur le traitement initial</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-	</rule>
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1.1.1.1"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Schadeninformationen (Angaben zur Erstbehandlung)</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Schadeninformationen, Angaben zur Erstbehandlung' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: Informations sur le sinistre (informations sur le traitement initial)</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'Informations sur le sinistre, informations sur le traitement initial' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1.1.1.1&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Schadeninformationen (Angaben zur Erstbehandlung)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Schadeninformationen, Angaben zur Erstbehandlung' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: Informations sur le sinistre (informations sur le traitement initial)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Informations sur le sinistre, informations sur le traitement initial' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0201' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1.1.3.1"]'>
-			<xhtml:p lang='de_ch'>Das Arztzeugnis UVG muss bei den Schadeninformationen die Angaben zur Erstbehandlung enthalten (templateId 2.16.756.5.30.1.100.2.2.1.1.3.1)</xhtml:p>
-			<xhtml:p lang='fr_ch'>Le rapport médical initial LAA doit contenir les indications sur le traitement initial dans les informations sur le sinistre (templateId 2.16.756.5.30.1.100.2.2.1.1.3.1)</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0301" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1.1.3.1&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Arztzeugnis UVG muss bei den Schadeninformationen die Angaben zur Erstbehandlung enthalten (templateId 2.16.756.5.30.1.100.2.2.1.1.3.1)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA doit contenir les indications sur le traitement initial dans les informations sur le sinistre (templateId 2.16.756.5.30.1.100.2.2.1.1.3.1)</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-
-	</rule>
-
-	<!--
+			--></assert></rule><!--
 	********************************************************
 	Arztzeugnis UVG: Angaben des Patienten
 	********************************************************
-	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2" and cda:templateId/@extension="Suva.2927.AngabenPat"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Angaben des Patienten</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Angaben des Patienten' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: Indications du patient</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'Indications du patient' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2927.AngabenPat&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Angaben des Patienten</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Angaben des Patienten' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: Indications du patient</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Indications du patient' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0301' test='self::cda:section'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Angaben des Patienten' müssen als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Indications du patient' eMedidoc doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0401" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Angaben des Patienten' müssen als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Indications du patient' eMedidoc doivent être déclarées comme 'section' dans le CDA Body</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0302' test='cda:text'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Angaben des Patienten' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Indications du patient' eMedidoc doivent contenir un texte narratif</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0402" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Angaben des Patienten' müssen einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Indications du patient' eMedidoc doivent contenir un texte narratif</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0303-de-CH' test='(cda:title="Angaben des Patienten" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Angaben des Patienten' müssen einen section title 'Angaben des Patienten' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Indications du patient' eMedidoc doivent contenir un section title 'Angaben des Patienten'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0403" test="(cda:title=&quot;Angaben des Patienten&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Angaben des Patienten' müssen einen section title 'Angaben des Patienten' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Indications du patient' eMedidoc doivent contenir un section title 'Angaben des Patienten'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0303-fr-CH' test='(cda:title="Indications du patient" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Angaben des Patienten' müssen einen section title 'Indications du patient' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Indications du patient' eMedidoc doivent contenir un section title 'Indications du patient'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0404" test="(cda:title=&quot;Indications du patient&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Angaben des Patienten' müssen einen section title 'Indications du patient' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Indications du patient' eMedidoc doivent contenir un section title 'Indications du patient'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-
-	</rule>
-
-	<!--
+			--></assert></rule><!--
 	********************************************************
 	Arztzeugnis UVG: Allgemeinzustand des Patienten (Beurteilung durch Arzt)
 	********************************************************
-	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2" and cda:templateId/@extension="Suva.2927.Allgemeinzustand"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Allgemeinzustand des Patienten (Beurteilung durch Arzt)</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Allgemeinzustand des Patienten (Beurteilung durch Arzt)' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: L''Etat général' du patient (Évalué par le médecin)</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'L''Etat général' du patient (Évalué par le médecin)' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2927.Allgemeinzustand&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Allgemeinzustand des Patienten (Beurteilung durch Arzt)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Allgemeinzustand des Patienten (Beurteilung durch Arzt)' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: L''Etat général' du patient (Évalué par le médecin)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'L''Etat général' du patient (Évalué par le médecin)' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0401' test='self::cda:section'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Allgemeinzustand' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang='fr_ch'>L''Etat général' eMedidoc doit être déclaré comme 'section' dans le CDA Body</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0501" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Allgemeinzustand' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L''Etat général' eMedidoc doit être déclaré comme 'section' dans le CDA Body</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0402' test='cda:text'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Allgemeinzustand' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>L''Etat général' eMedidoc doit contenir un texte narratif</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0502" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Allgemeinzustand' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L''Etat général' eMedidoc doit contenir un texte narratif</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0403-de-CH' test='(cda:title="Allgemeinzustand" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Allgemeinzustand' muss einen section title 'Allgemeinzustand' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>L''Etat général' eMedidoc doit contenir un section title 'Allgemeinzustand'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0503" test="(cda:title=&quot;Allgemeinzustand&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Allgemeinzustand' muss einen section title 'Allgemeinzustand' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L''Etat général' eMedidoc doit contenir un section title 'Allgemeinzustand'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0403-fr-CH' test='(cda:title="Etat général" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Allgemeinzustand' muss einen section title 'Etat général' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>L''Etat général' eMedidoc doit contenir un section title 'Etat général'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0504" test="(cda:title=&quot;Etat général&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Allgemeinzustand' muss einen section title 'Etat général' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L''Etat général' eMedidoc doit contenir un section title 'Etat général'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0404' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.BesoWahrn"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Allgemeinzustand' muss eine observation 'Besondere Wahrnehmungen' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>L''Etat général' eMedidoc doit contenir une observation 'Observations particulières'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0505" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BesoWahrn&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Allgemeinzustand' muss eine observation 'Besondere Wahrnehmungen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L''Etat général' eMedidoc doit contenir une observation 'Observations particulières'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0405' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.FolgenVon"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Allgemeinzustand' muss eine observation 'Folgen von' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>L''Etat général' eMedidoc doit contenir une observation 'Suites de'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0506" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.FolgenVon&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Allgemeinzustand' muss eine observation 'Folgen von' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L''Etat général' eMedidoc doit contenir une observation 'Suites de'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-	</rule>
-
-	<!--
+			--></assert></rule><!--
 	********************************************************
 	Arztzeugnis UVG: Befund
 	********************************************************
-	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2" and cda:templateId/@extension="Suva.2927.Befund"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Befund</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Befund' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: Constatations</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'Constatations' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2927.Befund&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Befund</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Befund' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: Constatations</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Constatations' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0501' test='self::cda:section'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Befund' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Constatations' eMedidoc doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0601" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Befund' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constatations' eMedidoc doivent être déclarées comme 'section' dans le CDA Body</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0502' test='cda:text'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Befund' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Constatations' eMedidoc doivent contenir un texte narratif</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0602" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Befund' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constatations' eMedidoc doivent contenir un texte narratif</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0503-de-CH' test='(cda:title="Befund" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Befund' muss einen section title 'Befund' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Constatations' eMedidoc doivent contenir un section title 'Befund'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0603" test="(cda:title=&quot;Befund&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Befund' muss einen section title 'Befund' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constatations' eMedidoc doivent contenir un section title 'Befund'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0503-fr-CH' test='(cda:title="Constatations" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Befund' muss einen section title 'Constatations' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Constatations' eMedidoc doivent contenir un section title 'Constatations'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0604" test="(cda:title=&quot;Constatations&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Befund' muss einen section title 'Constatations' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constatations' eMedidoc doivent contenir un section title 'Constatations'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0504' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.Lokalbefund"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Befund' muss eine observation 'Lokalbefund' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>Les 'Constatations' eMedidoc doivent contenir une observation 'Constatations locales'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0605" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Lokalbefund&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Befund' muss eine observation 'Lokalbefund' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constatations' eMedidoc doivent contenir une observation 'Constatations locales'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-	</rule>
-
-	<!--
+			--></assert></rule><!--
 	********************************************************
 	Arztzeugnis UVG: Kausalität (Ausschliesslich Unfallfolgen)
 	********************************************************
-	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2" and cda:templateId/@extension="Suva.2927.Kausalität"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Kausalität (Ausschliesslich Unfallfolgen)</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Kausalität (Ausschliesslich Unfallfolgen)' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: Causalité (exclusivement des suites d'accident)</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'Causalité (exclusivement des suites d'accident)' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2927.Kausalität&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Kausalität (Ausschliesslich Unfallfolgen)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Kausalität (Ausschliesslich Unfallfolgen)' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: Causalité (exclusivement des suites d'accident)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Causalité (exclusivement des suites d'accident)' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0601' test='self::cda:section'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Kausalität' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Causalité' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0701" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Kausalität' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Causalité' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0602' test='cda:text'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Kausalität' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Causalité' eMedidoc doit contenir un texte narratif</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0702" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Kausalität' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Causalité' eMedidoc doit contenir un texte narratif</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0603-de-CH' test='(cda:title="Kausalität" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Kausalität' muss einen section title 'Kausalität' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Causalité' eMedidoc doit contenir un section title 'Kausalität'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0703" test="(cda:title=&quot;Kausalität&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Kausalität' muss einen section title 'Kausalität' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Causalité' eMedidoc doit contenir un section title 'Kausalität'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0603-fr-CH' test='(cda:title="Causalité" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Kausalität' muss einen section title 'Causalité' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Causalité' eMedidoc doit contenir un section title 'Causalité'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0704" test="(cda:title=&quot;Causalité&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Kausalität' muss einen section title 'Causalité' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Causalité' eMedidoc doit contenir un section title 'Causalité'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0604' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.Unfallfolgen"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Kausalität' muss eine observation 'Unfallfolgen' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Causalité' eMedidoc doit contenir une observation 'Suites d'accident'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0705" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Unfallfolgen&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Kausalität' muss eine observation 'Unfallfolgen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Causalité' eMedidoc doit contenir une observation 'Suites d'accident'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-	</rule>
-
-	<!--
+			--></assert></rule><!--
 	********************************************************
 	Arztzeugnis UVG: Therapie
 	********************************************************
-	-->
-	<rule context='*[cda:templateId/@root="2.16.756.5.30.1.100.2" and cda:templateId/@extension="Suva.2927.Therapie"]'>
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang='de_ch'>Arztzeugnis UVG: Therapie</xhtml:h3>
-		<xhtml:p lang='de_ch'>Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie' des Arztzeugnis UVG</xhtml:p>
-		<xhtml:h3 lang='fr_ch'>Rapport médical initial LAA: Thérapie</xhtml:h3>
-		<xhtml:p lang='fr_ch'>Les règles suivantes décrivent les contrôles sur 'Thérapie' pour le certificat de médecin LAA</xhtml:p>
-		<!--
+	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2927.Therapie&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Arztzeugnis UVG: Therapie</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie' des Arztzeugnis UVG</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport médical initial LAA: Thérapie</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Thérapie' pour le certificat de médecin LAA</xhtml:p><!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
-
-		<assert id='suva-form-2927-0701' test='self::cda:section'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
+		--><assert id="suva-form-2927-0801" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0702' test='cda:text'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir un texte narratif</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0802" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir un texte narratif</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0703-de-CH' test='(cda:title="Therapie" and //cda:languageCode/@code="de-CH") or //cda:languageCode/@code!="de-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir un section title 'Therapie'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0803" test="(cda:title=&quot;Therapie&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir un section title 'Therapie'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0703-fr-CH' test='(cda:title="Thérapie" and //cda:languageCode/@code="fr-CH") or //cda:languageCode/@code!="fr-CH"'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss einen section title 'Thérapie' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir un section title 'Thérapie'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0804" test="(cda:title=&quot;Thérapie&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss einen section title 'Thérapie' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir un section title 'Thérapie'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0704' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.TherapieMassnahme"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss min. 1 procedure 'TherapieMassnahme' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir au moins une 1 procedure 'Mesure thérapeutique'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0805" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.TherapieMassnahme&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss min. 1 procedure 'TherapieMassnahme' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir au moins une 1 procedure 'Mesure thérapeutique'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0705' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.BesoUmstände"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss eine observation 'Besondere Umstände' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir une observation 'Facteurs particuliers'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0806" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BesoUmstände&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss eine observation 'Besondere Umstände' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir une observation 'Facteurs particuliers'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-		<assert id='suva-form-2927-0706' test='descendant::*[cda:templateId/@root="2.16.756.5.30.1.100.2.2.1" and cda:templateId/@extension="eMedidoc.PatHospitalisiert"]'>
-			<xhtml:p lang='de_ch'>eMedidoc 'Therapie' muss eine observation 'Patient hospitalisiert' enthalten</xhtml:p>
-			<xhtml:p lang='fr_ch'>La 'Thérapie' eMedidoc doit contenir une observation 'Patient hospitalisé'</xhtml:p>
-			<!--
+			--></assert><assert id="suva-form-2927-0807" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.PatHospitalisiert&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss eine observation 'Patient hospitalisiert' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir une observation 'Patient hospitalisé'</xhtml:p><!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
-		</assert>
-	</rule>
-</pattern>
+			--></assert></rule></pattern>

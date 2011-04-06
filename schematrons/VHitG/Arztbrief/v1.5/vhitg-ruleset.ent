@@ -10,21 +10,37 @@ History:
 ********************************************************
 -->
 <pattern name="GENC ClinicalDocument General Constraints">
+
+	<!-- Entity Information -->
+	<xhtml:ul id='vhitg-ruleset'>
+		<xhtml:li class='filename'>vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules in vhitg-ruleset.ent)</xhtml:li>
+		<xhtml:li class='version'>1.5</xhtml:li>
+	</xhtml:ul>
+
 	<rule id="general-addr" context="cda:addr[@nullFlavor]">
 		<assert id="null-or-no-content" test="normalize-space(.) = ''">
 			vhitg-ruleset.ent: When the <emph>addr</emph> element is null, it should not	have content.
 		</assert>
 	</rule>
+</pattern>
+
+<pattern>
 	<rule id="general-addr-1" context="cda:addr[normalize-space(.) = '']">
 		<assert id="empty-implies-null" test="not(string(@nullFlavor)='')">
 			vhitg-ruleset.ent: When the <emph>addr</emph> element is empty, it must have a value for <emph>nullFlavor</emph>.
 		</assert>
 	</rule>
+</pattern>
+
+<pattern>
 	<rule id="general-time-req" context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
 		<assert test="(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value) &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z')) &gt; 7">
 			vhitg-ruleset.ent: The <emph>time</emph> element must be precise at least to the day.
 		</assert>
 	</rule>
+</pattern>
+
+<pattern>
 	<rule id="cda-id-oid" context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
 		<assert test="translate(@root, '0123456789.', '') = ''">
 			vhitg-ruleset.ent: Characters that are not in the set 0-9 or . are not present in a valid OID.
@@ -39,11 +55,17 @@ History:
 			vhitg-ruleset.ent: An OID must be shorter than 65 characters.
 		</assert>
 	</rule>
+</pattern>
+
+<pattern>
 	<rule id="cda-id" context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 		<assert test="false()">
 			vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
 		</assert>
 	</rule>
+</pattern>
+
+<pattern>
 	<rule id="general-id" context="cda:id">
 		<assert id="null-or-no-root-attribute" test="./@nullFlavor or ./@root">
 			vhitg-ruleset.ent: When the <emph>id</emph> element is not null, at least a root attribute must be present.
@@ -75,19 +97,28 @@ kations-Informationen (telecom) aufweisen.
 	<!-- abstract rules -->
 	<rule id="nameTest" abstract="true">
 		<assert test="cda:name">
-		vhitg-ruleset.ent: A Person (<name/>) must have a name
-	</assert>
-</rule>
-<!-- rules in context -->
-<rule context="cda:patient">
-	<extends rule="nameTest"/>
-</rule>
-<rule context="cda:assignedPerson">
-	<extends rule="nameTest"/>
-</rule>
-<rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient">
-	<extends rule="nameTest"/>
-</rule>
+			vhitg-ruleset.ent: A Person (<name/>) must have a name
+		</assert>
+	</rule>
+</pattern>
+
+<pattern>
+	<!-- rules in context -->
+	<rule context="cda:patient">
+		<extends rule="nameTest"/>
+	</rule>
+</pattern>
+
+<pattern>
+	<rule context="cda:assignedPerson">
+		<extends rule="nameTest"/>
+	</rule>
+</pattern>
+
+<pattern>
+	<rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient">
+		<extends rule="nameTest"/>
+	</rule>
 </pattern>
 
 <!--
@@ -111,6 +142,9 @@ Name is already handled in person pattern
 		vhitg-ruleset.ent: A Healthcare professional (<name/>) must have a non-empty addres associated with the role / scoping organization or the attribute 'nullFlavor' must be set to 'UNK'.
 	</assert>
 </rule>
+</pattern>
+
+<pattern>
 
 <!--
 <rule id="telecomTestPerson" abstract="true">
@@ -123,6 +157,9 @@ telecom addres or the attribute 'nullFlavor' must be set to 'UNK' </assert>
 	<extends rule="addresTestPerson"/>
 	<extends rule="telecomTestPerson"/>
 </rule>
+</pattern>
+
+<pattern>
 <rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient">
 	<extends rule="addresTestPersonOrRole"/>
 	<extends rule="telecomTestPerson"/>
@@ -141,11 +178,17 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 		vhitg-ruleset.ent: An Organization (<name/>) must have a name.
 	</assert>
 </rule>
+</pattern>
+
+<pattern>
 <rule id="addresTestOrg" abstract="true">
 	<assert test="cda:addr/*">
 	vhitg-ruleset.ent: An Organization (<name/>) must have a non-empty addres.
 </assert>
 </rule>
+</pattern>
+
+<pattern>
 
 <!--
 <rule id="telecomTestOrg" abstract="true">
@@ -313,6 +356,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
 			vhitg-ruleset.ent: The <emph>languageCode</emph> element must be present.
 		</assert>
 	</rule>
+</pattern>
+
+<pattern>
 	<rule id="cda-languageCode-format" context="/cda:ClinicalDocument/cda:languageCode">
 		<assert test="(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code) = 2">
 			vhitg-ruleset.ent: The language code must be in the form <emph>nn</emph>, or <emph>nn-CC</emph>.
@@ -498,11 +544,11 @@ Regel DGCN: Fehlt der Code, so muss in der Level 3 Darstellung das
 code Element die Kennzeichnung erhalten, dass der Code unbekannt
 ist (XML Attribut @nullFlavour ist "UNK").
 <pattern name="DGCD DGCN Diagnosis">
-	<rule context="cda:entry/cda:observation/cda:value">
-		<assert test="(@code and @codeSystem) or @nullFlavor='UNK'">
-			vhitg-ruleset.ent: The <emph>value</emph> element of a diagnosis must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
-		</assert>
-	</rule>
+<rule context="cda:entry/cda:observation/cda:value">
+<assert test="(@code and @codeSystem) or @nullFlavor='UNK'">
+vhitg-ruleset.ent: The <emph>value</emph> element of a diagnosis must contain a <emph>code</emph> and a <emph>codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
+</assert>
+</rule>
 </pattern>
 Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen eingesetztw werden.
 -->

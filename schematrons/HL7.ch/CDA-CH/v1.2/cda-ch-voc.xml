@@ -47,6 +47,7 @@ History:
 		<code value='3137-7' displayName='Grösse/Taille'/>
 		<code value='3141-9' displayName='Gewicht/Poids'/>
 		<code value='11449-6' displayName='Schwangerschaftstatus/Etat de la grossesse'/>
+		<code value='9845-9' displayName='Kopfumfang Kinder/périmètre crânien des enfants'/>
 	</system>
 	
 	<!--
@@ -75,6 +76,25 @@ History:
 
 	<!--
 	********************************************************
+	CDA-CH: Minimale Codierung für Bemerkungen im CDA Body TODO: im OID Register eintragen lassen
+	********************************************************
+	-->
+	<system codeSystemName='StandardCodierungBemerkungen' root='2.16.756.5.30.2.1.1.8.1'>
+		<code value='N' displayName='Keine Bemerkungen/Pas de remarques'/>
+		<code value='F' displayName='Bemerkung im Freitext/Remarque comme texte narratif'/>
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH: Codierungen von CDA Level3 Elementen TODO: im OID Register eintragen lassen
+	********************************************************
+	-->
+	<system codeSystemName='CodierungVonElementen' root='2.16.756.5.30.2.1.1.9.1'>
+		<code value='1' displayName='Bemerkungen/remarques'/>
+	</system>
+
+	<!--
+	********************************************************
 	LOINC: Diagnosen Section
 	********************************************************
 	-->
@@ -89,6 +109,20 @@ History:
 		<code value='8651-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Code)/Diagnostic lors de la sortie de l’hôpital (code)'/>
 		<!-- HOSPITAL ADMISSION DX (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section als "Eintrittsdiagnose" definiert ist) -->
 		<code value='8646-2' displayName='Diagnose bei Aufnahme ins Krankenhaus (Code)/Diagnostic lors de l’admission à l’hôpital (code)'/>
+	</system>
+
+	<!--
+	********************************************************
+	LOINC: Behandlungen Section
+	********************************************************
+	-->
+	<system codeSystemName='TreatmentSectionCode' root='2.16.840.1.113883.6.1'>
+		<!-- PROCEDURE:NAR (für alle Behandlungssections, die Behandlungen nur im Freitext enthalten und die Bedeutung der Behandlunges-section nicht genauer definiert ist) -->
+		<code value='29554-3' displayName='Behandlung (Text)/Treatment (texte)'/>
+		<!-- PROCEDURE:NOM (für alle Behandlungssections, die codierte Behandlungen enthalten und die Bedeutung der Behandlungs-section nicht genauer definiert ist) -->
+		<code value='29300-1' displayName='Behandlung (Codiert)/Treatment (codé)'/>
+		<!-- Hospital discharge procedures(für alle Behandlungssections, die Behandlungen nur im Freitext enthalten und die Bedeutung der Behandlung-section als "Entlassbehandlung" definiert ist) -->
+		<code value='8655-3' displayName='Behandlung bei Entlassung aus dem Krankenhaus (Text)/Treatment lors de la sortie de l’hôpital (texte)'/>
 	</system>
 
 	<!--
@@ -714,7 +748,7 @@ History:
 		<!--Food Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
 		<code value='FNAINT' displayName=''/>	
 	</system>
-
+	
 </systems>
 
 

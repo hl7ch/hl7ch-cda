@@ -1,0 +1,1748 @@
+<!--
+********************************************************
+
+Schematron rules for ALIS-Connect case statistics (casestat) V1.0 (2.16.756.5.30.PlaceholderCaseStatV1)
+Common content rules for GrpInfo and GrpStatus
+
+TODOs:
+- Temporäre OIDs ersetzen
+
+
+History:
+13.03.2011: Tony Schaller, medshare GmbH (Initial draft)
+20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+
+********************************************************
+-->
+<!--
+********************************************************
+Document Templates
+********************************************************
+-->
+<pattern>
+	<!-- Entity Information -->
+	<xhtml:ul id="entity-alisconnect-casestat" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+		<xhtml:li class="filename">alisconnect-casestat.ent</xhtml:li>
+		<xhtml:li class="version">1.0</xhtml:li>
+	</xhtml:ul>
+	<!--
+	********************************************************
+	Externe Templates
+	********************************************************
+	Soziodemographische Angaben Patient:
+	- Geschlecht: entity_HL7-cda-ch_vitalsigns-0001
+	- Geburtsdatum: entity_HL7-cda-ch_vitalsigns-0004
+	-->
+</pattern>
+<!--
+********************************************************
+Header Templates
+********************************************************
+-->
+<pattern>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and (cda:templateId/@extension=&quot;alisconnect.casestat-grpinfo.doc&quot; or cda:templateId/@extension=&quot;alisconnect.casestat-grpstatus.doc&quot;)]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Header Templates</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Header von ALIS-Connect CaseStat Dokumenten</xhtml:p>
+		<!-- Soziodemographische Angaben Patient: Wohnort -->
+		<assert role="warning" id="entity-alisconnect-casestat-0101" test="count(cda:recordTarget/cda:patientRole/cda:addr/cda:city)=1">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect CaseStat Header: Soziodemographische Angaben Patient: Wohnort sollte angegeben werden</xhtml:p>
+		</assert>
+		<!-- Versicherung -->
+		<assert role="warning" id="entity-alisconnect-casestat-0102" test="cda:participant[@typeCode=&quot;COV&quot;]/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Insurance&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect CaseStat Header: Versicherung sollte angegeben werden (mit Template 'CDA-CH.Head.Insurance')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<!--
+********************************************************
+Body Templates
+********************************************************
+-->
+<pattern>
+	<!--
+	********************************************************
+	Soziodemographie: Nationalität
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Soziodemographie&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Soziodemographie'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Soziodemographie'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-0201" test="(cda:title=&quot;Soziodemographische Angaben&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Soziodemographische Angaben Patient müssen einen section title 'Soziodemographische Angaben' enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0202" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.NationalityL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Soziodemographische Angaben Patient: Nationalität muss mit dem Template 'CDA-CH.Body.NationalityL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Eintrittsmerkmale
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Eintrittsmerkmale&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Eintrittsmerkmale'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Eintrittsmerkmale'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-0301" test="(cda:title=&quot;Eintrittsmerkmale&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintrittsmerkmale müssen einen section title 'Eintrittsmerkmale' enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0302" test="cda:entry/cda:encounter/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.EintrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintrittsmerkmale: Eintritt muss mit dem Template 'alisconnect.casestat.body.EintrittL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0303" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.EintrittAngabenMSKL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintrittsmerkmale: Angaben für MSK müssen mit dem Template 'alisconnect.casestat.body.EintrittAngabenMSKL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Eintrittsmerkmale: Eintritt L3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.EintrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Eintritt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Eintritt'</xhtml:p>
+		<!-- Deklaration als Encounter -->
+		<assert id="entity-alisconnect-casestat-0401" test="self::cda:encounter">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Eintritt muss als 'encounter' im CDA Body (section 'Eintrittsmerkmale') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Fallnummer -->
+		<assert id="entity-alisconnect-casestat-0402" test="cda:id">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt: Die Fallnummer muss als 'id' deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Eintrittsmerkmale: Eintrittsdatum und -Stunde -->
+		<assert id="entity-alisconnect-casestat-0403" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt: Das Eintrittsdatum inkl. Stunde muss angegeben werden</xhtml:p>
+		</assert>
+		<!-- Ausfüllender Arzt -->
+		<assert id="entity-alisconnect-casestat-0404" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt: Es muss mindestens der Namen des Arztes, der den Eintrittsbericht verfasst hat angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Eintrittsmerkmale: EintrittAngabenMSKL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.EintrittAngabenMSKL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Eintritt Angaben MSK'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Eintritt Angaben MSK'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-0501" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Der Eintritt muss als 'observation' im CDA Body (section 'Eintrittsmerkmale') deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Eintrittsmerkmale: Eintrittsart -->
+		<assert id="entity-alisconnect-casestat-0502" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEintrittsart&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEintrittsart&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Der Eintritt muss die Angabe zur Eintrittsart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEintrittsart')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0503" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Die Angabe zur Eintrittsart darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Eintrittsmerkmale: Aufenthalt vor Eintritt -->
+		<assert id="entity-alisconnect-casestat-0504" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Der Eintritt muss die Angabe zum Aufenthalt vor Eintritt enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0505" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Die Angabe zum Aufenthalt vor Eintritt darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Eintrittsmerkmale: Einweisende Instanz -->
+		<assert id="entity-alisconnect-casestat-0506" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanz&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanz&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Der Eintritt muss die Angabe zur Einweisenden Instanz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEinweisendeInstanz')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0507" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanz&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eintritt Angaben MSK: Die Angabe zur Einweisenden Instanz darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Aufenthaltsmerkmale
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Aufenthaltsmerkmale&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Aufenthaltsmerkmale'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Aufenthaltsmerkmale'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-0601" test="(cda:title=&quot;Aufenthaltsmerkmale&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthaltsmerkmale müssen einen section title 'Aufenthaltsmerkmale' enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0602" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.AufenthaltAngabenMSKL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthaltsmerkmale: Angaben für MSK müssen mit dem Template 'alisconnect.casestat.body.AufenthaltAngabenMSKL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert role="information" id="entity-alisconnect-casestat-0603" test="cda:entry/cda:encounter/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.IPSAufenthaltL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthaltsmerkmale können Angaben für MSK zum Aufenthalt in einer Intensivstation enthalten (Template 'alisconnect.casestat.body.IPSAufenthaltL3')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Aufenthaltsmerkmale: Aufenthalt in einer Intensivstation L3 (Gerüst zur Berechnung der vollendeten Stunden)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.IPSAufenthaltL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Aufenthalt in einer Intensivstation'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Aufenthalt in einer Intensivstation'. Hinweis: Wo der Aufenthalt nur in Form von Stunden und nicht als Zeitraum (von/bis) verfügbar ist, im 'low value' ein Datum mit Zeitpunkt 00:00 Uhr und im 'high value' die Anzahl Stunden als Differenz zum 'low value' angeben</xhtml:p>
+		<!-- Deklaration als Encounter -->
+		<assert id="entity-alisconnect-casestat-0701" test="self::cda:encounter">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Der Eintritt in die Intensivstation muss als 'encounter' im CDA Body (section 'Aufenthaltsmerkmale') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Fallnummer -->
+		<assert id="entity-alisconnect-casestat-0702" test="cda:id">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Die Fallnummer muss als 'id' deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthalt in einer Intensivstation: Eintrittsdatum und -Stunde -->
+		<assert id="entity-alisconnect-casestat-0703" test="cda:effectiveTime/cda:low/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Der Eintritt in die Intensivstation muss inkl. Stunde deklariert werden (dient der Berechnung des IPS Aufenthaltes in der Codierabteilung)</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthalt in einer Intensivstation: Austrittsdatum und -Stunde -->
+		<assert id="entity-alisconnect-casestat-0704" test="cda:effectiveTime/cda:high/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Der Austritt aus der Intensivstation muss inkl. Stunde deklariert werden (dient der Berechnung des IPS Aufenthaltes in der Codierabteilung)</xhtml:p>
+		</assert>
+		<!-- Ausfüllender Arzt -->
+		<assert id="entity-alisconnect-casestat-0705" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Es muss mindestens der Namen des Arztes, der den IPS Verlegungsbericht verfasst hat angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+		<assert role="warning" id="entity-alisconnect-casestat-0706" test="cda:entryRelationship/cda:encounter/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.IPSAufenthaltBeatmungL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation kann Angaben für MSK zur künstlichen Beatmung in einer Intensivstation enthalten (Template 'alisconnect.casestat.body.IPSAufenthaltBeatmungL3')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0707" test="cda:entryRelationship/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.IPSAufenthaltSchweregradL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Die Angaben zum Schwergrad der akuten Erkrankung für MSK müssen mit dem Template 'alisconnect.casestat.body.IPSAufenthaltSchweregradL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0708" test="cda:entryRelationship/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.IPSAufenthaltNEMSL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt in einer Intensivstation: Die Angaben zu NEMS für MSK müssen mit dem Template 'alisconnect.casestat.body.IPSAufenthaltNEMSL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	MD-Intensivstation: IPSAufenthaltBeatmungL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.IPSAufenthaltBeatmungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MD-Intensivstation künstliche Beatmung'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MD-Intensivstation künstliche Beatmung'. Hinweis: Wo die Beatmungszeit nur in Form von Stunden und nicht als Zeitraum (von/bis) verfügbar ist, im 'low value' ein Datum mit Zeitpunkt 00:00 Uhr und im 'high value' die Anzahl Stunden als Differenz zum 'low value' angeben</xhtml:p>
+		<!-- Deklaration als Encounter -->
+		<assert id="entity-alisconnect-casestat-0801" test="self::cda:encounter">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die künstliche Beatmung in einer Intensivstation für MD-Intensivmedizin muss als 'encounter' mittels entryRelationship zum Entry gemäss 'IPSAufenthaltL3' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Fallnummer -->
+		<assert id="entity-alisconnect-casestat-0802" test="cda:id">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Künstliche Beatmung in einer Intensivstation: Die Fallnummer muss als 'id' deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthalt in einer Intensivstation: Beginn künstliche Beatmung -->
+		<assert id="entity-alisconnect-casestat-0803" test="cda:effectiveTime/cda:low/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Künstliche Beatmung in einer Intensivstation: Der Beginn einer künstlichen Beatmung muss deklariert werden (dient der Berechnung des Dauer der künstlichen Beatmung in der Codierabteilung)</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthalt in einer Intensivstation: Ende künstliche Beatmung -->
+		<assert id="entity-alisconnect-casestat-0804" test="cda:effectiveTime/cda:high/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Künstliche Beatmung in einer Intensivstation: Das Ende einer künstlichen Beatmung muss deklariert werden (dient der Berechnung des Dauer der künstlichen Beatmung in der Codierabteilung)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	MD-Intensivstation: IPSAufenthaltSchweregradL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.IPSAufenthaltSchweregradL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MD-Intensivstation Schweregrad'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MD-Intensivstation Schweregrad'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-0901" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Schweregrad für MD-Intensivmedizin muss als 'observation' mittels entryRelationship zum Entry gemäss 'IPSAufenthaltL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0902" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKScoreArtIPS&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKScoreArtIPS&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Schweregrad für MD-Intensivmedizin muss die Art des Score enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKScoreArtIPS')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-0903" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=999]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Schweregrad für MD-Intensivmedizin muss gemäss Definition SGI angegeben werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	MD-Intensivstation: IPSAufenthaltNEMSL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.IPSAufenthaltNEMSL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MD-Intensivstation NEMS'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MD-Intensivstation NEMS'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-1001" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">NEMS: Der Betreuungs- und Behandlungsaufwand Score für MD-Intensivmedizin muss als 'observation' mittels entryRelationship zum Entry gemäss 'IPSAufenthaltL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1002" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=999999]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">NEMS: Der Betreuungs- und Behandlungsaufwand Score für MD-Intensivmedizin muss gemäss Definition NEMS (SGI) angegeben werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Aufenthaltsmerkmale: AufenthaltAngabenMSKL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.AufenthaltAngabenMSKL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Aufenthalt Angaben MSK'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Aufenthalt Angaben MSK'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-1101" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt Angaben MSK: Der Eintritt muss als 'observation' im CDA Body (section 'Aufenthaltsmerkmale') deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthaltsmerkmale: Behandlungsart -->
+		<assert id="entity-alisconnect-casestat-1102" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBehandlungsart&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKBehandlungsart&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt Angaben MSK: Der Aufenthalt muss die Angabe zur Behandlungsart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBehandlungsart')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1103" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt Angaben MSK: Die Angabe zur Behandlungsart darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthaltsmerkmale: Klasse -->
+		<assert id="entity-alisconnect-casestat-1104" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKKlasse&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKKlasse&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt Angaben MSK: Der Aufenthalt muss die Angabe zur Klasse enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKKlasse')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1105" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKKlasse&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt Angaben MSK: Die Angabe zur Klasse darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Aufenthaltsmerkmale: Administrativer Urlaub und Ferien (vollendete Stunden) -->
+		<assert id="entity-alisconnect-casestat-1106" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Aufenthalt Angaben MSK: Der Aufenthalt muss die Angabe zum Administrativen Urlaub und Ferien (vollendete Stunden) enthalten</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Betriebswirtschaftliche Angaben
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.BetriebswirtschaftlicheAngaben&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Betriebswirtschaftliche Angaben'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Betriebswirtschaftliche Angaben'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-1201" test="(cda:title=&quot;Betriebswirtschaftliche Angaben&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben müssen einen section title 'Betriebswirtschaftliche Angaben' enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1202" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.BetriebswirtschaftlicheAngabenL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben für MSK müssen mit dem Template 'alisconnect.casestat.body.BetriebswirtschaftlicheAngabenL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Betriebswirtschaftliche Angaben: BetriebswirtschaftlicheAngabenL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.BetriebswirtschaftlicheAngabenL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Betriebswirtschaftliche Angaben MSK'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Betriebswirtschaftliche Angaben MSK'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-1301" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben MSK: Hauptkostenstelle und -träger müssen als 'observation' im CDA Body (section 'Betriebswirtschaftliche Angaben') deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Betriebswirtschaftliche Angaben: Hauptkostenstelle -->
+		<assert id="entity-alisconnect-casestat-1302" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKHauptkostenstelle&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKHauptkostenstelle&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben MSK: Der Aufenthalt muss die Angabe zur Hauptkostenstelle enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKHauptkostenstelle')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1303" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben MSK: Die Angabe zur Hauptkostenstelle darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Betriebswirtschaftliche Angaben: Hauptkostenträger -->
+		<assert id="entity-alisconnect-casestat-1304" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben MSK: Der Aufenthalt muss die Angabe zum Hauptkostenträger enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1305" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Betriebswirtschaftliche Angaben MSK: Die Angabe zum Hauptkostenträger darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Austrittsmerkmale
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Austrittsmerkmale&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Austrittsmerkmale'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Austrittsmerkmale'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-1401" test="(cda:title=&quot;Austrittsmerkmale&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austrittsmerkmale müssen einen section title 'Austrittsmerkmale' enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1402" test="cda:entry/cda:encounter/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.AustrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austrittsmerkmale: Austritt muss mit dem Template 'alisconnect.casestat.body.AustrittL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1403" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.AustrittAngabenMSKL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austrittsmerkmale: Angaben für MSK müssen mit dem Template 'alisconnect.casestat.body.AustrittAngabenMSKL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Austrittsmerkmale: Austritt L3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.AustrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Austritt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Austritt'</xhtml:p>
+		<!-- Deklaration als Encounter -->
+		<assert id="entity-alisconnect-casestat-1501" test="self::cda:encounter">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt: Der Austritt muss als 'encounter' im CDA Body (section 'Austrittsmerkmale') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Fallnummer -->
+		<assert id="entity-alisconnect-casestat-1502" test="cda:id">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt: Die Fallnummer muss als 'id' deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Austrittsmerkmale: Austrittsdatum und -Stunde -->
+		<assert id="entity-alisconnect-casestat-1503" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt: Der Austritt muss das Austrittsdatum inkl. Stunde enthalten</xhtml:p>
+		</assert>
+		<!-- Ausfüllender Arzt -->
+		<assert id="entity-alisconnect-casestat-1504" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt: Es muss mindestens der Namen des Arztes, der den Austrittsbericht verfasst hat angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Austrittsmerkmale: AustrittAngabenMSKL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.AustrittAngabenMSKL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Austritt Angaben MSK'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Austritt Angaben MSK'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-1601" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Der Austritt muss als 'observation' im CDA Body (section 'Austrittsmerkmale') deklariert werden</xhtml:p>
+		</assert>
+		<!-- MSK Austrittsmerkmale: Entscheid für Austritt -->
+		<assert id="entity-alisconnect-casestat-1602" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEntscheidAustritt&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEntscheidAustritt&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Der Austritt muss die Angabe zum Entscheid für Austritt enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEntscheidAustritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1603" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Die Angabe zum Entscheid für Austritt darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Austrittsmerkmale: Aufenthalt nach Austritt -->
+		<assert id="entity-alisconnect-casestat-1604" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Der Austritt muss die Angabe zum Aufenthalt nach Austritt enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1605" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Die Angabe zum Aufenthalt nach Austritt darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- MSK Austrittsmerkmale: Behandlung nach Austritt -->
+		<assert id="entity-alisconnect-casestat-1606" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Der Austritt muss die Angabe zur Behandlung nach Austritt enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1607" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Austritt Angaben MSK: Die Angabe zur Behandlung nach Austritt darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Diagnosenliste
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Diagnosenliste&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Diagnosenliste'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Diagnosenliste'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-1701" test="cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.DiagList&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnosen müssen mit dem Template 'CDA-CH.Body.DiagList' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1702" test="cda:code[@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and @code=&quot;29308-4&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnosenliste muss codiert angegeben werden (LOINC code 29308-4 für section)</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1703" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.DiagnoseL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnosen: Angaben für MSK müssen mit dem Template 'alisconnect.casestat.body.DiagnoseL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Diagnosenliste: DiagnoseL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.DiagnoseL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Diagnose Angaben MSK'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Diagnose Angaben MSK'</xhtml:p>
+		<!-- Diagnose: Codesysten ICD-10-GM Version 2010 -->
+		<assert id="entity-alisconnect-casestat-1801" test="cda:code[@codeSystem=&quot;1.2.276.0.76.5.384&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Diagnose muss mit dem Codesysten ICD-10-GM Version 2010 deklariert werden (OID: 1.2.276.0.76.5.384)</xhtml:p>
+		</assert>
+		<!-- Diagnose: Seitigkeit -->
+		<assert id="entity-alisconnect-casestat-1802" test="cda:targetSiteCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKSeitigkeit&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKSeitigkeit&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Diagnose muss die Angabe zur Seitigkeit enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKSeitigkeit')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1803" test="count(cda:targetSiteCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKSeitigkeit&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Angabe zur Seitigkeit darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Diagnose: Eintragstyp Haupt- oder Nebendiagnose -->
+		<assert id="entity-alisconnect-casestat-1804" test="cda:interpretationCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Diagnose muss die Angabe zum Typ (Haupt- oder Nebendiagnose) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1805" test="count(cda:interpretationCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Angabe zum Typ (Haupt- oder Nebendiagnose) darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Diagnose: Tumoraktivität -->
+		<assert id="entity-alisconnect-casestat-1806" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKTumoraktivität&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKTumoraktivität&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Diagnose muss die Angabe zur Tumoraktivität enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKTumoraktivität')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1807" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKTumoraktivität&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Diagnose Angaben MSK: Die Angabe zur Tumoraktivität darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Behandlungsliste
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Behandlungsliste&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Behandlungsliste'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Behandlungsliste'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-1901" test="cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.ProcList&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungen müssen mit dem Template 'CDA-CH.Body.ProcList' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1902" test="cda:code[@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and @code=&quot;29300-1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsliste muss codiert angegeben werden (LOINC code 29300-1 für section)</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-1903" test="cda:entry/cda:procedure/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.BehandlungL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungen: Angaben für MSK müssen mit dem Template 'alisconnect.casestat.body.BehandlungL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Behandlungsliste: BehandlungL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.BehandlungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Behandlungsangaben MSK'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Behandlungsangaben MSK'</xhtml:p>
+		<!-- Behandlung: CHOP -->
+		<assert id="entity-alisconnect-casestat-2001" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderCHOP&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Die Behandlung muss mit dem Codesysten CHOP deklariert werden (OID: 2.16.756.5.30.PlaceholderCHOP)</xhtml:p>
+		</assert>
+		<!-- MSK Behandlungsdatum -->
+		<assert id="entity-alisconnect-casestat-2002" test="cda:effectiveTime/cda:low/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Der Start der Behandlung muss inkl. Stunde angegeben werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2003" test="cda:effectiveTime/cda:high/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Das Ende der Behandlung muss inkl. Stunde angegeben werden</xhtml:p>
+		</assert>
+		<!-- Behandlung: Seitigkeit -->
+		<assert id="entity-alisconnect-casestat-2004" test="cda:targetSiteCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKSeitigkeit&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKSeitigkeit&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Die Behandlung muss die Angabe zur Seitigkeit enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKSeitigkeit')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2005" test="count(cda:targetSiteCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKSeitigkeit&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Die Angabe zur Seitigkeit darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Behandlung: Eintragstyp Haupt- oder NebenBehandlung -->
+		<assert id="entity-alisconnect-casestat-2006" test="cda:entryRelationship/cda:observation/cda:interpretationCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Die Behandlung muss die Angabe zum Typ (Haupt- oder NebenBehandlung) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2007" test="count(cda:entryRelationship/cda:observation/cda:interpretationCode[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsangaben MSK: Die Angabe zum Typ (Haupt- oder NebenBehandlung) darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdaten&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Neugeborenen-Zusatzdaten'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Neugeborenen-Zusatzdaten'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-2101" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenGeburtL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Allgemeine Angaben zur Geburt für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenGeburtL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2102" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenMehrlingL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben zu Mehrling für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenMehrlingL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2103" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenMissbildungenL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben zu Missbildungen für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenMissbildungenL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2104" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungKindL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben zu Verlegung Kind in anderes Spital für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungKindL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2105" test="cda:entry/cda:organizer/cda:component/cda:observation[cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3137-7&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen das CDA-CH Vitalzeichen Körperlänge enthalten (Körperlänge bei Geburt angeben)</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2106" test="cda:entry/cda:organizer/cda:component/cda:observation[cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3141-9&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen das CDA-CH Vitalzeichen Gewicht enthalten (Bei Geburt im eignenen Haus, Geburtsgewicht und bei Verlegung Aufnahmegewicht angeben)</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2107" test="cda:entry/cda:organizer/cda:component/cda:observation[cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;9845-9&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen das CDA-CH Vitalzeichen Kopfumfang enthalten (Kopfumfang bei Geburt angeben)</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2108" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenMutterL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben zum Geburtsdatum der Mutter für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenMutterL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2109" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter1L3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben zum Gestationsalter 1 für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter1L3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2110" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter2L3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben zum Gestationsalter 2 für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter2L3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2111" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftenL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Anzahl vorausgegangener Schwangerschaften insgesamt für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftenL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2112" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenLebendgeburtenL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Anzahl vorausgegangener Lebendgeburten für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenLebendgeburtenL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2113" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenFehlgeburtenL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Anzahl vorausgegangener Fehl- oder Totgeburten für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenFehlgeburtenL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2114" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftsabbruchL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Anzahl vorausgegangener Schwangerschaftsabbrüche für MSK müssen mit dem Template 'alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftsabbruchL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Allgemeine Angaben und Angaben betreffend das Kind GeburtL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenGeburtL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zur Geburt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zur Geburt'</xhtml:p>
+		<!-- Spitalinterne Laufnummer der Geburt gemäss Hebammentagebuch  -->
+		<assert id="entity-alisconnect-casestat-2201" test="cda:id">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Allgemeine Angaben müssen die interne Geburtsnummer als 'id' angeben (OID für Hebammentagebuch erforderlich)</xhtml:p>
+		</assert>
+		<!-- Geburtszeitpunkt -->
+		<assert id="entity-alisconnect-casestat-2202" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Allgemeine Angaben müssen den Geburtszeitpunkt als 'effectiveTime' angeben</xhtml:p>
+		</assert>
+		<!-- Vitalstatus Geburt -->
+		<assert id="entity-alisconnect-casestat-2203" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKVitalstatusGeburt&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKVitalstatusGeburt&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen den Vitalstatus (lebend- oder totgeboren) angeben. (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKVitalstatusGeburt')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend das Kind MehrlingL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenMehrlingL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zu Mehrling'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zu Mehrling'</xhtml:p>
+		<!-- Mehrling -->
+		<assert id="entity-alisconnect-casestat-2301" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKMehrling&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKMehrling&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen die Angabe zu Mehrling angeben. (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKMehrling')</xhtml:p>
+		</assert>
+		<!-- Geburtsrang bei Mehrlingsgeburten -->
+		<assert id="entity-alisconnect-casestat-2302" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=1 and @value&lt;=9]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen den Geburtsrang angeben</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend das Kind MissbildungenL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenMissbildungenL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zu Missbildungen'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zu Missbildungen'</xhtml:p>
+		<!-- Kongenitale Missbildungen -->
+		<assert id="entity-alisconnect-casestat-2401" test="cda:code[@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Angaben betreffend das Kind müssen eine Angabe zu Kongenitale Missbildungen enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend das Kind VerlegungKindL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungKindL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zu Verlegung Kind in anderes Spital'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zu Verlegung Kind in anderes Spital'</xhtml:p>
+		<!-- Verlegung Kind in anderes Spital -->
+		<assert id="entity-alisconnect-casestat-2501" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGeburtVerlegungen&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend das Kind müssen die Verlegung Kind in anderes Spital angeben (Wert 1 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGeburtVerlegungen')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2502" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Angaben betreffend das Kind müssen eine Angabe zu Verlegung Kind in anderes Spital enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Allgemeine Angaben und Angaben betreffend die Mutter (Geburtsdatum)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenMutterL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zur Mutter'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zur Mutter'</xhtml:p>
+		<!-- Geburtsdatum der Mutter -->
+		<assert id="entity-alisconnect-casestat-2601" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen das Geburtsdatum der Mutter als 'effectiveTime' angeben</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Allgemeine Angaben und Angaben betreffend die Mutter (Gestationsalter 1)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter1L3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zum Gestationsalter 1'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zum Gestationsalter 1'</xhtml:p>
+		<!-- Gestationsalter 1 -->
+		<assert id="entity-alisconnect-casestat-2701" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGestationsalterCode&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen das Gestationsalter 1 angeben (Wert 1 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGestationsalterCode')</xhtml:p>
+		</assert>
+		<!-- Gestationswochen 1 -->
+		<assert id="entity-alisconnect-casestat-2702" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGestationswoche&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKGestationswoche&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Gestationswoche 1 angeben (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGestationswoche')</xhtml:p>
+		</assert>
+		<!-- Gestationstage 1 -->
+		<assert id="entity-alisconnect-casestat-2703" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGestationstag&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKGestationstag&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen den Gestationstag 1 angeben.  (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGestationstag')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Allgemeine Angaben und Angaben betreffend die Mutter (Gestationsalter 2)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter2L3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zum Gestationsalter 2'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zum Gestationsalter 2'</xhtml:p>
+		<!-- Gestationsalter 1 -->
+		<assert id="entity-alisconnect-casestat-2801" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGestationsalterCode&quot; and @code=&quot;2&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen das Gestationsalter 2 angeben (Wert 2 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGestationsalterCode')</xhtml:p>
+		</assert>
+		<!-- Gestationswochen 1 -->
+		<assert id="entity-alisconnect-casestat-2802" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGestationswoche&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKGestationswoche&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Gestationswoche 2 angeben (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGestationswoche')</xhtml:p>
+		</assert>
+		<!-- Gestationstage 1 -->
+		<assert id="entity-alisconnect-casestat-2803" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGestationstag&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKGestationstag&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen den Gestationstag 2 angeben.  (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGestationstag')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter (Anzahl vorausgegangener Schwangerschaften insgesamt)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftenL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Schwangerschaften insgesamt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Schwangerschaften insgesamt'</xhtml:p>
+		<!-- Anzahl vorausgegangener Schwangerschaften insgesamt  -->
+		<assert id="entity-alisconnect-casestat-2901" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Anzahl vorausgegangener Schwangerschaften insgesamt angeben (Wert 1 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-2902" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=50]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Anzahl vorausgegangener Schwangerschaften insgesamt muss angegeben werden (0-50)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter (Anzahl vorausgegangener Lebendgeburten)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenLebendgeburtenL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Lebendgeburten'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Lebendgeburten'</xhtml:p>
+		<!-- Anzahl vorausgegangener Lebendgeburten  -->
+		<assert id="entity-alisconnect-casestat-3001" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften&quot; and @code=&quot;2&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Anzahl vorausgegangener Lebendgeburten angeben (Wert 2 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3002" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=20]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Anzahl vorausgegangener Lebendgeburten muss angegeben werden (0-20)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter (Anzahl vorausgegangener Fehl- oder Totgeburten)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenFehlgeburtenL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Fehl- oder Totgeburten'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Fehl- oder Totgeburten'</xhtml:p>
+		<!-- Anzahl vorausgegangener Fehl- oder Totgeburten  -->
+		<assert id="entity-alisconnect-casestat-3101" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften&quot; and @code=&quot;3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Anzahl vorausgegangener Fehl- oder Totgeburten angeben (Wert 3 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3102" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=20]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Anzahl vorausgegangener Fehl- oder Totgeburten muss angegeben werden (0-20)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter (Anzahl vorausgegangener Schwangerschaftsabbrüche)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftsabbruchL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Schwangerschaftsabbrüche'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zur Anzahl vorausgegangener Schwangerschaftsabbrüche'</xhtml:p>
+		<!-- Anzahl vorausgegangener Schwangerschaftsabbrüche  -->
+		<assert id="entity-alisconnect-casestat-3201" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften&quot; and @code=&quot;4&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Anzahl vorausgegangener Schwangerschaftsabbrüche angeben (Wert 4 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3202" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=30]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Anzahl vorausgegangener Schwangerschaftsabbrüche muss angegeben werden (0-30)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter VerlegungMutterL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungMutterL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Neugeborenen-Zusatzdaten: Angaben zu Verlegung Mutter aus anderem Spital'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Neugeborenen-Zusatzdaten: Angaben zu Verlegung Mutter aus anderem Spital'</xhtml:p>
+		<!-- Verlegung Mutter aus anderem Spital -->
+		<assert id="entity-alisconnect-casestat-3301" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKGeburtVerlegungen&quot; and @code=&quot;2&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Neugeborenen-Zusatzdaten: Angaben betreffend die Mutter müssen die Verlegung Mutter aus anderem Spital angeben (Wert 2 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKGeburtVerlegungen')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3302" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Angaben betreffend die Mutter müssen eine Angabe zu Verlegung Mutter aus anderem Spital enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdaten&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Psychiatrie-Zusatzdaten'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Psychiatrie-Zusatzdaten'</xhtml:p>
+		<!-- Zivilstand -->
+		<assert id="entity-alisconnect-casestat-3401" test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:maritalStatusCode/cda:translation[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKZivilstand&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKZivilstand&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Der Zivilstand muss als 'translation' zum Element 'maritalStatusCode' des Patienten angegeben werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKZivilstand')</xhtml:p>
+		</assert>
+		<!-- Daten zum Eintritt -->
+		<assert id="entity-alisconnect-casestat-3402" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenEintrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Angaben für Psychiatrie zum Eintritt müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenEintrittL3' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Daten zur Person -->
+		<assert id="entity-alisconnect-casestat-3403" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPersonL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Angaben für Psychiatrie zur Person müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPersonL3' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Daten zur Beschäftigung vor Eintritt -->
+		<assert id="entity-alisconnect-casestat-3404" test="cda:entry/cda:organizer/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Angaben für Psychiatrie zur Beschäftigung vor Eintritt der Person müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittL3' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Daten zur Behandlung -->
+		<assert id="entity-alisconnect-casestat-3405" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBehandlungL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Angaben für Psychiatrie zur Behandlung müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBehandlungL3' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Daten zu Psychopharmakotherapie -->
+		<assert id="entity-alisconnect-casestat-3406" test="cda:entry/cda:organizer/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Angaben für Psychiatrie zu Psychopharmakotherapie müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieL3' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Daten zum Austritt -->
+		<assert id="entity-alisconnect-casestat-3407" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenAustrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Angaben für Psychiatrie zum Austritt müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenAustrittL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zum Eintritt
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenEintrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Psychiatrie-Zusatzdaten: Daten zum Eintritt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Psychiatrie-Zusatzdaten: Daten zum Eintritt'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-3501" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Der Eintritt muss als 'observation' im CDA Body (section 'Psychiatrie-Zusatzdaten') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Freiwilligkeit -->
+		<assert id="entity-alisconnect-casestat-3502" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFreiwilligkeit&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKFreiwilligkeit&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Eintritt muss die Angabe zur Freiwilligkeit enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKFreiwilligkeit')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3503" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angabe zur Eintrittsart darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Aufenthalt vor Eintritt (Psychiatrie) -->
+		<assert id="entity-alisconnect-casestat-3504" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Eintritt muss die Angabe zum Aufenthalt vor Eintritt (Psychiatrie) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3505" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angabe zum Aufenthalt vor Eintritt (Psychiatrie) darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Einweisende Instanz (Psychiatrie) -->
+		<assert id="entity-alisconnect-casestat-3506" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Eintritt muss die Angabe zur Einweisenden Instanz (Psychiatrie) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3507" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angabe zur Einweisenden Instanz (Psychiatrie) darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Fürsorgerischer Freiheitsentzug -->
+		<assert id="entity-alisconnect-casestat-3508" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFFE&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKFFE&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Eintritt muss die Angabe zum fürsorgerischen Freiheitsentzug enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKFFE')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3509" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKFFE&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angabe zum fürsorgerischen Freiheitsentzug darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Person
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPersonL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Psychiatrie-Zusatzdaten: Daten zur Person'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Psychiatrie-Zusatzdaten: Daten zur Person'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-3601" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Daten zur Person müssen als 'observation' im CDA Body (section 'Psychiatrie-Zusatzdaten') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Höchste abgeschlossene Schul- oder Berufsbildung -->
+		<assert id="entity-alisconnect-casestat-3602" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBildung&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKBildung&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Der Eintritt muss die Angabe zur höchsten abgeschlossenen Schul- oder Berufsbildung enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBildung')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3603" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Angabe zur höchsten abgeschlossenen Schul- oder Berufsbildung darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt der Person
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt der Person'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt der Person'</xhtml:p>
+		<!-- Deklaration als Organizer -->
+		<assert id="entity-alisconnect-casestat-3701" test="self::cda:organizer">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Daten zur Beschäftigung vor Eintritt der Person müssen als 'organizer' im CDA Body (section 'Psychiatrie-Zusatzdaten') deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3702" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Daten zur Beschäftigung vor Eintritt müssen deklariert werden (Wert 1 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3703" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittTeilzeitL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'teilzeit erwerbstätig' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittTeilzeitL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3704" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittVollzeitL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'voll erwerbstätig' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittVollzeitL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3705" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittNichtErwerbstätigL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'nicht erwerbstätig' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittNichtErwerbstätigL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3706" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittHausarbeitL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'Hausarbeit in eigenem Haushalt' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittHausarbeitL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3707" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittAusbildungL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'in Ausbildung (Schule, Lehre, Studium)' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittAusbildungL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3708" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRehaL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'Rehabilitationsprogramm' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRehaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3709" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRenteL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'IV, AHV oder andere Rente' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRehaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3710" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittGeschütztL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Beschäftigung vor Eintritt: Angaben zu 'Arbeit in geschütztem oder beschützendem Rahmen' für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittGeschütztL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (teilzeit erwerbstätig)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittTeilzeitL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (teilzeit erwerbstätig)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (teilzeit erwerbstätig)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-3801" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'teilzeit erwerbstätig' muss deklariert werden (Wert 1 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3802" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'teilzeit erwerbstätig' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (voll erwerbstätig)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittVollzeitL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (voll erwerbstätig)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (voll erwerbstätig)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-3901" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;2&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'voll erwerbstätig' muss deklariert werden (Wert 2 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-3902" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'voll erwerbstätig' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (nicht erwerbstätig oder arbeitslos)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittNichtErwerbstätigL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (nicht erwerbstätig oder arbeitslos)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (nicht erwerbstätig oder arbeitslos)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4001" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'nicht erwerbstätig oder arbeitslos' muss deklariert werden (Wert 3 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4002" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'nicht erwerbstätig oder arbeitslos' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Hausarbeit in eigenem Haushalt)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittHausarbeitL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Hausarbeit in eigenem Haushalt)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Hausarbeit in eigenem Haushalt)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4101" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;4&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'Hausarbeit in eigenem Haushalt' muss deklariert werden (Wert 4 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4102" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'Hausarbeit in eigenem Haushalt' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (in Ausbildung (Schule, Lehre, Studium))
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittAusbildungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (in Ausbildung (Schule, Lehre, Studium))'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (in Ausbildung (Schule, Lehre, Studium))'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4201" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;5&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'in Ausbildung (Schule, Lehre, Studium)' muss deklariert werden (Wert 5 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4202" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'in Ausbildung (Schule, Lehre, Studium)' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Rehabilitationsprogramm)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRehaL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Rehabilitationsprogramm)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Rehabilitationsprogramm)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4301" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;6&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'Rehabilitationsprogramm' muss deklariert werden (Wert 6 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4302" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'Rehabilitationsprogramm' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (IV, AHV oder andere Rente)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRenteL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (IV, AHV oder andere Rente)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (IV, AHV oder andere Rente)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4401" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;7&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'IV, AHV oder andere Rente' muss deklariert werden (Wert 7 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4402" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'IV, AHV oder andere Rente' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Arbeit in geschütztem oder beschützendem Rahmen)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittGeschütztL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Arbeit in geschütztem oder beschützendem Rahmen)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Arbeit in geschütztem oder beschützendem Rahmen)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4501" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;8&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'Arbeit in geschütztem oder beschützendem Rahmen' muss deklariert werden (Wert 8 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4502" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'Arbeit in geschütztem oder beschützendem Rahmen' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Unbekannt)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittUnbekanntL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Unbekannt)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt (Unbekannt)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4601" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt&quot; and @code=&quot;9&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe 'Unbekannt' muss deklariert werden (Wert 9 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4602" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Beschäftigung vor Eintritt: Die Angabe zu 'Unbekannt' muss enthalten sein (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zur Behandlung
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenBehandlungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Psychiatrie-Zusatzdaten: Daten zur Behandlung'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Psychiatrie-Zusatzdaten: Daten zur Behandlung'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-4701" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Daten zur Behandlung müssen als 'observation' im CDA Body (section 'Psychiatrie-Zusatzdaten') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Behandlung (Was wurde gemacht) -->
+		<assert id="entity-alisconnect-casestat-4702" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBehandlungPsychiatrie&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKBehandlungPsychiatrie&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Der Eintritt muss die Angabe zur Behandlung enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBehandlungPsychiatrie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4703" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Angabe zur Behandlung darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4704" test="cda:value[@xsi:type=&quot;INT&quot; and @value&gt;=0 and @value&lt;=9999]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zur Behandlung: Die Anzahl Tage / Konsultationen muss angegeben werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie'</xhtml:p>
+		<!-- Deklaration als Organizer -->
+		<assert id="entity-alisconnect-casestat-4801" test="self::cda:organizer">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Daten zur Behandlung müssen als 'organizer' im CDA Body (section 'Psychiatrie-Zusatzdaten') deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4802" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien&quot; and @code=&quot;2&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Die Daten zu Psychopharmakotherapie müssen deklariert werden (Wert 2 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4803" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieNeuroleptikaL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Neuroleptika' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieNeuroleptikaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4804" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieDepotneuroleptikaL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Depotneuroleptika' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieDepotneuroleptikaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4805" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntidepressivaL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Antidepressiva' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntidepressivaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4806" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieTranquilizerL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Tranquilizer' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieTranquilizerL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4807" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieHypnotikaL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Hypnotika' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieHypnotikaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4808" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiepileptikaL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Antiepileptika' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiepileptikaL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4809" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLithiumL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Lithium' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLithiumL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4810" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtsubstitutionsmittelL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Suchtsubstitutionsmittel (z.B. Methadon)' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtsubstitutionsmittelL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4811" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtaversionsmittelL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Suchtaversionsmittel (z.B. Antabus, Nemexin)' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtaversionsmittelL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4812" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiparkinsonmittelL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Antiparkinsonmittel' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiparkinsonmittelL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4813" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAndereL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Andere' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAndereL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4814" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLeidenL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Medikamente zur Behandlung körperlicher Leiden' muss für MSK müssen mit dem Template 'alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLeidenL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Neuroleptika)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieNeuroleptikaL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Neuroleptika)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Neuroleptika)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-4901" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Neuroleptika' muss deklariert werden (Wert 1 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-4902" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Neuroleptika' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Depotneuroleptika)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieDepotneuroleptikaL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Depotneuroleptika)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Depotneuroleptika)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5001" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;2&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Depotneuroleptika' muss deklariert werden (Wert 2 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5002" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Depotneuroleptika' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Antidepressiva)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntidepressivaL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Antidepressiva)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Antidepressiva)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5101" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Antidepressiva' muss deklariert werden (Wert 3 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5102" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Antidepressiva' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Tranquilizer)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieTranquilizerL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Tranquilizer)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Tranquilizer)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5201" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;4&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Tranquilizer' muss deklariert werden (Wert 4 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5202" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Tranquilizer' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Hypnotika)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieHypnotikaL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Hypnotika)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Hypnotika)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5301" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;5&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Hypnotika' muss deklariert werden (Wert 5 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5302" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Hypnotika' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Antiepileptika)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiepileptikaL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Antiepileptika)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Antiepileptika)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5401" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;6&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Antiepileptika' muss deklariert werden (Wert 6 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5402" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Antiepileptika' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Lithium)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLithiumL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Lithium)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Lithium)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5501" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;7&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Lithium' muss deklariert werden (Wert 7 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5502" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Lithium' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Suchtsubstitutionsmittel (z.B. Methadon))
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtsubstitutionsmittelL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Suchtsubstitutionsmittel (z.B. Methadon))'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Suchtsubstitutionsmittel (z.B. Methadon))'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5601" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;8&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Suchtsubstitutionsmittel (z.B. Methadon)' muss deklariert werden (Wert 8 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5602" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Suchtsubstitutionsmittel (z.B. Methadon)' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Suchtaversionsmittel (z.B. Antabus, Nemexin))
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtaversionsmittelL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Suchtaversionsmittel (z.B. Antabus, Nemexin))'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Suchtaversionsmittel (z.B. Antabus, Nemexin))'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5701" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;9&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Suchtaversionsmittel (z.B. Antabus, Nemexin)' muss deklariert werden (Wert 9 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5702" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Suchtaversionsmittel (z.B. Antabus, Nemexin)' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Antiparkinsonmittel)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiparkinsonmittelL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Antiparkinsonmittel)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Antiparkinsonmittel)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5801" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;10&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Antiparkinsonmittel' muss deklariert werden (Wert 10 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5802" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Antiparkinsonmittel' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Andere)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAndereL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Andere)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Andere)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-5901" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;11&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Andere' muss deklariert werden (Wert 11 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-5902" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Andere' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Psychopharmakotherapie (Medikamente zur Behandlung körperlicher Leiden)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLeidenL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Medikamente zur Behandlung körperlicher Leiden)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Psychiatrie-Zusatzdaten: Daten zu Psychopharmakotherapie (Medikamente zur Behandlung körperlicher Leiden)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6001" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie&quot; and @code=&quot;12&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zu Psychopharmakotherapie: Die Angabe 'Medikamente zur Behandlung körperlicher Leiden' muss deklariert werden (Wert 12 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6002" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angaben betreffend Psychopharmakotherapie müssen eine Angabe zu 'Medikamente zur Behandlung körperlicher Leiden' enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Psychiatrie-Zusatzdaten: Daten zum Austritt
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.PsychiatrieZusatzdatenAustrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Psychiatrie-Zusatzdaten: Daten zum Austritt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Psychiatrie-Zusatzdaten: Daten zum Austritt'</xhtml:p>
+		<!-- Deklaration als Observation -->
+		<assert id="entity-alisconnect-casestat-6101" test="self::cda:observation">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten: Der Austritt muss als 'observation' im CDA Body (section 'Psychiatrie-Zusatzdaten') deklariert werden</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Entscheid für Austritt (Psychiatrie) -->
+		<assert id="entity-alisconnect-casestat-6102" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEntscheidAustrittPsychiatrie&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKEntscheidAustrittPsychiatrie&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zum Austritt: Der Austritt muss die Angabe zum Entscheid für Austritt (Psychiatrie) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKEntscheidAustrittPsychiatrie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6103" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zum Austritt: Die Angabe zur Austrittsart darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Aufenthalt nach Austritt (Psychiatrie) -->
+		<assert id="entity-alisconnect-casestat-6104" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltNachAustrittPsychiatrie&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltNachAustrittPsychiatrie&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zum Austritt: Der Austritt muss die Angabe zum Aufenthalt nach Austritt (Psychiatrie) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKAufenthaltNachAustrittPsychiatrie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6105" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zum Austritt: Die Angabe zum Aufenthalt nach Austritt (Psychiatrie) darf nur einmal vorkommen</xhtml:p>
+		</assert>
+		<!-- Psychiatrie-Zusatzdaten: Behandlung nach Austritt (Psychiatrie) -->
+		<assert id="entity-alisconnect-casestat-6106" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKBehandlungNachAustrittPsychiatrie&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKBehandlungNachAustrittPsychiatrie&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zum Austritt: Der Austritt muss die Angabe zur Behandlung nach Austritt (Psychiatrie) enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKBehandlungNachAustrittPsychiatrie')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6107" test="count(cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie&quot;])&lt;2">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Psychiatrie-Zusatzdaten/Daten zum Austritt: Die Angabe zur Behandlung nach Austritt (Psychiatrie) darf nur einmal vorkommen</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Wiedereintritte
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Wiedereintritte&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Wiedereintritte'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Wiedereintritte'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6201" test="(cda:title=&quot;MD-Kennzeichnung von Wiedereintritten&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wiedereintritte müssen einen section title 'MD-Kennzeichnung von Wiedereintritten' enthalten</xhtml:p>
+		</assert>
+		<!-- Liste der Wiedereintritte -->
+		<assert id="entity-alisconnect-casestat-6202" test="cda:entry/cda:organizer/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.WiedereintrittListeL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wiedereintritte müssen mit dem Template 'alisconnect.casestat.body.WiedereintrittListeL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Wiedereintritte: WiedereintrittListeL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.WiedereintrittListeL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Wiedereintritte: Liste der Wiedereintritte'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Wiedereintritte: Liste der Wiedereintritte'</xhtml:p>
+		<!-- Deklaration als Organizer -->
+		<assert id="entity-alisconnect-casestat-6301" test="self::cda:organizer">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wiedereintritte müssen als 'organizer' im CDA Body (section 'MD-Kennzeichnung von Wiedereintritten') deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6302" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien&quot; and @code=&quot;3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wiedereintritte müssen deklariert werden (Wert 3 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6303" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.ZwischenaustrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wiedereintritte: Der Zwischenaustritt muss angegeben werden (Template 'alisconnect.casestat.body.ZwischenaustrittL3')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6304" test="cda:component/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.WiedereintrittL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wiedereintritte: Der Wiederentritt muss angegeben werden (Template 'alisconnect.casestat.body.ZwischenaustrittL3')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Wiedereintritte: ZwischenaustrittL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.ZwischenaustrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Wiedereintritte: Zwischenaustritt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Wiedereintritte: Zwischenaustritt'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6401" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKZwischenaustritte&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKZwischenaustritte&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Zwischenaustritt muss codiert werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKZwischenaustritte')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6402" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Zwischenaustritt muss das Datum enthalten</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Wiedereintritte: WiedereintrittL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.WiedereintrittL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'MSK Wiedereintritte: Wiedereintritt'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'MSK Wiedereintritte: Wiedereintritt'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6501" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKWiedereintritte&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/MSK-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKWiedereintritte&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Wiedereintritt muss codiert werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKWiedereintritte')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6502" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Wiedereintritt muss das Datum enthalten</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	DRG Daten: Information, ob ein Behandlungsfall über DRG abgerechnet worden ist (DRGStatusL3)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.DRGStatusL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'DRG Daten: Information, ob ein Behandlungsfall über DRG abgerechnet worden ist (MSK)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'DRG Daten: Information, ob ein Behandlungsfall über DRG abgerechnet worden ist (MSK)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6601" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderCaseStatDataCat&quot; and @code=&quot;I&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">DRG Daten müssen als Information, ob ein Behandlungsfall über DRG abgerechnet worden ist, deklariert werden (Wert 'I' aus der Wertetabelle '2.16.756.5.30.PlaceholderCaseStatDataCat')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6602" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">DRG Daten müssen eine Information, ob ein Behandlungsfall über DRG abgerechnet worden ist, enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	DRG Daten: Hochteure Medikamente (MediL3)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.MediL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'DRG Daten: hochteure Medikamente (MSK)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'DRG Daten: hochteure Medikamente (MSK)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6701" test="cda:templateId[@extension=&quot;CDA-CH.Body.MediL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Hochteure Medikamente müssen mit dem Template 'CDA-CH.Body.MediL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6702" test="cda:routeCode/cda:translation[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKMediINDICATION&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/medicationlist-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKMediINDICATION&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Verabreichungsart des hochteuren Medikaments muss eine Angabe gemäss Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten (mittels 'routeCode/translation' und gültigem Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKMediINDICATION' deklarieren)</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6703" test="cda:entryRelationship/cda:observation/cda:templateId[@extension=&quot;alisconnect.casestat.body.KumulierteDosisL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Hochteure Medikamente müssen die kumulierte Dosis mit dem Template 'alisconnect.casestat.body.KumulierteDosisL3' angeben</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	DRG Daten: Gültiger ATC hochteurer Medikamente
+	********************************************************
+	-->
+	<rule context="*[@codeSystem=&quot;2.16.840.1.113883.6.73&quot; and ancestor::cda:manufacturedMaterial and ancestor::cda:substanceAdministration/cda:templateId/@extension=&quot;CDA-CH.Body.MediL3&quot; and ancestor::cda:substanceAdministration/cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'DRG Daten: ATC Code hochteurer Medikamente (MSK)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'DRG Daten: ATC Code hochteurerMedikamente (MSK)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6801" test="ancestor::cda:manufacturedMaterial">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der ATC Code des hochteuren Medikaments muss unter dem CDA Body Element 'manufacturedMaterial' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6802" test="./@code=document(&quot;../../../../schematrons/BFS/MSK/v201103/medicationlist-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONLIST&quot;]/code/@value">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der ATC Code des hochteuren Medikaments muss in der Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten sein</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6803" test="(cda:translation/cda:qualifier/cda:value[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/medicationlist-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION&quot;]/code/@value]) or (cda:qualifier/cda:value[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/medicationlist-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION&quot;]/code/@value])">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der ATC Code des hochteuren Medikaments muss eine Zusatzangabe gemäss Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten (mittels 'qualifier/value' und gültigem Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION' deklarieren)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	DRG Daten: Kumulierte Dosis eines hochteuren Medikaments (KumulierteDosisL3)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.KumulierteDosisL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'DRG Daten: Kumulierte Dosis eines hochteuren Medikaments (MSK)'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'DRG Daten: Kumulierte Dosis eines hochteuren Medikaments (MSK)'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-6901" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien&quot; and @code=&quot;5&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Hochteure Medikamente: Die kumulierte Dosis muss deklariert werden (Wert 5 aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6902" test="cda:value[@xsi:type=&quot;IVL_PQ&quot;]/cda:center[@value&gt;=1 and @value&lt;=999999999999999]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Hochteure Medikamente: Die kumulierte Dosis muss angegeben werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-6903" test="cda:value/cda:center/cda:translation[@codeSystem=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONUNITS&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201103/medicationlist-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.PlaceholderMSKMediMEDICATIONUNITS&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Hochteure Medikamente: Die kumulierte Dosis muss eine Einheit gemäss Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten (mittels 'translation' und gültigem Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderMSKMediMEDICATIONUNITS' deklarieren)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	DRG Daten: Fallgruppe (DRGFallgruppeL3)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.DRGFallgruppeL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'DRG Daten: Fallgruppe'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'DRG Daten: Fallgruppe'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-7001" test="cda:code[@codeSystem=&quot;2.16.756.5.30.PlaceholderCaseStatDataCat&quot; and @code=&quot;F&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">DRG Fallgruppendaten müssen als Fallgruppe deklariert werden (Wert 'F' aus der Wertetabelle '2.16.756.5.30.PlaceholderCaseStatDataCat')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-7002" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">DRG Fallgruppendaten müssen das Datum der Codierung enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-7003" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.PlaceholderSwissDRG&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">DRG Fallgruppendaten müssen die Fallgruppe als SwissDRG Code angeben (gültiger Wert aus der Wertetabelle '2.16.756.5.30.PlaceholderSwissDRG')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-7004" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">DRG Fallgruppendaten müssen mindestens den Namen des Codierers, der die Codierung erstellt hat, angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Bemerkungen (Sammlung für MCD)
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.Bemerkungen&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Template 'Bemerkungen'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Element 'Bemerkungen'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-7101" test="(cda:title=&quot;Bemerkungen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Bemerkungen müssen einen section title 'Bemerkungen' enthalten</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-7102" test="cda:templateId[@extension=&quot;CDA-CH.Body.Rem&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Bemerkungen müssen mit dem Template 'CDA-CH.Body.Rem' deklariert werden</xhtml:p>
+		</assert>
+		<!-- Bemerkungen im Body Level 3 -->
+		<assert id="entity-alisconnect-casestat-7103" test="cda:entry/cda:observation/cda:templateId[@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and @extension=&quot;alisconnect.casestat.body.BemerkungL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Bemerkungen müssen mit dem Template 'alisconnect.casestat.body.BemerkungL3' deklariert werden</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
+	********************************************************
+	Bemerkungen (Sammlung für MCD): BemerkungL3
+	********************************************************
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.PlaceholderCaseStatV1&quot; and cda:templateId/@extension=&quot;alisconnect.casestat.body.BemerkungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ALIS-Connect Case Statistics (casestat): CDA Body Level3 Template 'Bemerkungen'</xhtml:h3>
+		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zum CDA Body Entry 'Bemerkungen'</xhtml:p>
+		<assert id="entity-alisconnect-casestat-7201" test="cda:templateId[@extension=&quot;CDA-CH.Body.RemL3&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Bemerkungen müssen mit dem Template 'CDA-CH.Body.BemerkungL3' deklariert werden</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-7202" test="cda:code[@codeSystem=&quot;2.16.756.5.30.2.1.1.9.1&quot; and @code=&quot;1&quot;]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Bemerkungen müssen codiert angeben werden (Wert 1 aus der Wertetabelle '2.16.756.5.30.2.1.1.9.1')</xhtml:p>
+		</assert>
+		<assert id="entity-alisconnect-casestat-7203" test="cda:value[@xsi:type=&quot;CE&quot; and @codeSystem=&quot;2.16.756.5.30.2.1.1.8.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.8.1&quot;]/code/@value]">
+			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Bemerkungen müssen einen gültigen Code enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.8.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>

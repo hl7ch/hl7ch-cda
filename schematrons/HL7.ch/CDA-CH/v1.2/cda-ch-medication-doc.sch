@@ -26,6 +26,7 @@ reusable templates
 
 <!-- cda-ch patterns -->
 <!ENTITY ent-hl7-cda-ch SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch.ent'>
+<!ENTITY ent-hl7-cda-ch_vitalsigns SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch_vitalsigns.ent'>
 <!ENTITY ent-hl7-cda-ch_medication-section SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch_medication-section.ent'>
 <!ENTITY ent-hl7-cda-ch_medication-doc SYSTEM '../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch_medication-doc.ent'>
 
@@ -40,7 +41,6 @@ reusable templates
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xhtml:h1 class="title" lang="de_ch">CDA-CH Medikationstemplate</xhtml:h1>
 	<xhtml:h1 class="title" lang="fr_ch">Modèle pour médication CDA-CH</xhtml:h1>
-	<!--<xhtml:h1 class="title" lang="it_ch">TODO italiano</xhtml:h1>-->
 	<ns prefix='cda' uri='urn:hl7-org:v3'/>
 	<ns prefix='sdtc' uri='urn:hl7-org:sdtc'/>
 	<ns prefix='xsi' uri='http://www.w3.org/2001/XMLSchema-instance'/>
@@ -49,6 +49,7 @@ reusable templates
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">Entities référencées</xhtml:h2>
 	<xhtml:ul id="reference">
+		<xhtml:li>ent-hl7-cda-ch_vitalsigns</xhtml:li>
 		<xhtml:li>cda-ch_medication-doc.ent</xhtml:li>
 		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
@@ -58,6 +59,7 @@ reusable templates
 	</xhtml:ul>
 
 	<!-- reusable templates -->
+	&ent-hl7-cda-ch_vitalsigns;
 	&ent-hl7-cda-ch_medication-doc;
 	&ent-hl7-cda-ch_medication-section;
 	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;

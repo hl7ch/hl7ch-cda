@@ -106,7 +106,6 @@ History:
 	<informationRecipient typeCode="PRCP">
 		<intendedRecipient>
 			<id extension="A99" root="2.16.756.5.30.1.100.1.2.3"/>
-			<!-- TODO OID SUVA/Agence -->
 			<informationRecipient>
 				<name>Agence Suva Guérison-ville</name>
 			</informationRecipient>

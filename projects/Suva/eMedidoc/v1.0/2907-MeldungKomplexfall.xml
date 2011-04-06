@@ -29,8 +29,8 @@ History:
 	<versionNumber value="1"/>
 	<recordTarget>
 		<patientRole>
-			<id extension="123.71.332.115" root="TODO"/> <!-- TODO OID AHV Nummer -->
-			<id extension="5.12006.08.3" root="TODO"/> <!-- TODO OID SUVA/Schadennummer -->
+			<id extension="123.71.332.115" root="2.16.756.5.31"/>
+			<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
 			<addr use="HP">
 				<streetName>Leidensweg</streetName>
 				<houseNumber>10</houseNumber>
