@@ -10,6 +10,7 @@ History:
 31.03.2010: Stefan Schenk, medshare GmbH (XHMTL-Dokumentation)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+06.04.2011: Tony Schaller, medshare GmbH (Reihenfolge der Entities umgestellt wegen HTML Generierung)
 
 ********************************************************
 -->
@@ -53,16 +54,16 @@ project templates
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">Entities référencées</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>vhitg-ruleset.ent</xhtml:li>
 		<xhtml:li>cda-ch.ent</xhtml:li>
 		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
+		<xhtml:li>vhitg-ruleset.ent</xhtml:li>
 		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
 	</xhtml:ul>
 
 	<!-- reusable templates -->
-	&ent-hl7-vhitg-ruleset;
 	&ent-hl7-cda-ch;
 	&ent-hl7-cda-ch_medication-section;
+	&ent-hl7-vhitg-ruleset;
 	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;
 	
 </schema>
