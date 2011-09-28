@@ -8,6 +8,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 13.09.2010: Tony Schaller, medshare GmbH (Weitere Übersetzungen)
 09.12.2010: Tony Schaller, medshare GmbH (Weitere Übersetzungen, insbesondere infolge der CDA Dokumente für Suva)
+28.09.2011: Tony Schaller, medshare GmbH (English translation)
 
 ********************************************************
 -->
@@ -15,201 +16,313 @@ History:
 	<text language="de-CH" value="Patient" displayName="Patient"/>
   <text language="fr-CH" value="Patient" displayName="Patient"/>
   <text language="it-CH" value="Patient" displayName="Paziente"/>
+  <text language='en' value='Patient' displayName='Patient'/>
 
   <text language="de-CH" value="Birthday" displayName="Geburtsdatum"/>
 	<text language="fr-CH" value="Birthday" displayName="Date de naissance"/>
   <text language="it-CH" value="Birthday" displayName="Data di nascita"/>
+  <text language="en" value="Birthday" displayName="Birthday"/>
 
   <text language="de-CH" value="IDsPatient" displayName="ID Patient"/>
   <text language="fr-CH" value="IDsPatient" displayName="ID patient"/>
   <text language="it-CH" value="IDsPatient" displayName="ID paziente"/>
+  <text language="en" value="IDsPatient" displayName="ID patient"/>
 
   <text language="de-CH" value="Creation" displayName="Erstellt am"/>
 	<text language="fr-CH" value="Creation" displayName="Création"/>
   <text language="it-CH" value="Creation" displayName="Generata"/>
+  <text language="en" value="Creation" displayName="Creation"/>
 
   <text language="de-CH" value="Sex" displayName="Geschlecht"/>
 	<text language="fr-CH" value="Sex" displayName="Sexe"/>
   <text language="it-CH" value="Sex" displayName="Genere"/>
+	<text language="en" value="Sex" displayName="Sex"/>
 
   <text language="de-CH" value="man" displayName="männlich"/>
 	<text language="fr-CH" value="man" displayName="masculin"/>
   <text language="it-CH" value="man" displayName="maschile"/>
+  <text language="en" value="man" displayName="male"/>
 
   <text language="de-CH" value="woman" displayName="weiblich"/>
 	<text language="fr-CH" value="woman" displayName="féminin"/>
   <text language="it-CH" value="woman" displayName="femminile"/>
+  <text language="en" value="woman" displayName="female"/>
 
   <text language="de-CH" value="unknown" displayName="unbekannt"/>
 	<text language="fr-CH" value="unknown" displayName="inconnue"/>
   <text language="it-CH" value="unknown" displayName="sconosciuta"/>
+  <text language="en" value="unknown" displayName="unknown"/>
 
   <text language="de-CH" value="PrimaryReceiver" displayName="Empfänger"/>
 	<text language="fr-CH" value="PrimaryReceiver" displayName="Destinataire"/>
   <text language="it-CH" value="PrimaryReceiver" displayName="Destinatario"/>
+  <text language="en" value="PrimaryReceiver" displayName="Primary receiver"/>
 
   <text language="de-CH" value="SecondaryReceiver" displayName="Kopie an"/>
 	<text language="fr-CH" value="SecondaryReceiver" displayName="Copie à"/>
   <text language="it-CH" value="SecondaryReceiver" displayName="In copia a"/>
+  <text language="en" value="SecondaryReceiver" displayName="Secondary receiver"/>
 
   <text language="de-CH" value="January" displayName="Januar"/>
 	<text language="fr-CH" value="January" displayName="Janvier"/>
   <text language="it-CH" value="January" displayName="Gennaio"/>
+  <text language="en" value="January" displayName="January"/>
 
   <text language="de-CH" value="February" displayName="Februar"/>
 	<text language="fr-CH" value="February" displayName="Février"/>
   <text language="it-CH" value="February" displayName="Febbraio"/>
+  <text language="en" value="February" displayName="February"/>
 
   <text language="de-CH" value="March" displayName="März"/>
   <text language="fr-CH" value="March" displayName="Mars"/>
   <text language="it-CH" value="March" displayName="Marzo"/>
+  <text language="en" value="March" displayName="March"/>
 
   <text language="de-CH" value="April" displayName="April"/>
   <text language="fr-CH" value="April" displayName="Avril"/>
   <text language="it-CH" value="April" displayName="Aprile"/>
+  <text language="en" value="April" displayName="April"/>
 
   <text language="de-CH" value="May" displayName="Mai"/>
   <text language="fr-CH" value="May" displayName="Mai"/>
   <text language="it-CH" value="May" displayName="Maggio"/>
+  <text language="en" value="May" displayName="May"/>
 
   <text language="de-CH" value="June" displayName="Juni"/>
   <text language="fr-CH" value="June" displayName="Juin"/>
   <text language="it-CH" value="June" displayName="Giugno"/>
+  <text language="en" value="June" displayName="June"/>
 
   <text language="de-CH" value="July" displayName="Juli"/>
   <text language="fr-CH" value="July" displayName="Juillet"/>
   <text language="it-CH" value="July" displayName="Luglio"/>
+  <text language="en" value="July" displayName="July"/>
 
   <text language="de-CH" value="August" displayName="August"/>
   <text language="fr-CH" value="August" displayName="Août"/>
   <text language="it-CH" value="August" displayName="Agosto"/>
+  <text language="en" value="August" displayName="August"/>
 
   <text language="de-CH" value="September" displayName="September"/>
   <text language="fr-CH" value="September" displayName="Septembre"/>
   <text language="it-CH" value="September" displayName="Settembre"/>
+  <text language="en" value="September" displayName="September"/>
 
   <text language="de-CH" value="October" displayName="Oktober"/>
   <text language="fr-CH" value="October" displayName="Octobre"/>
   <text language="it-CH" value="October" displayName="Ottobre"/>
+  <text language="en" value="October" displayName="October"/>
 
   <text language="de-CH" value="November" displayName="November"/>
 	<text language="fr-CH" value="November" displayName="Novembre"/>
   <text language="it-CH" value="November" displayName="Novembre"/>
+  <text language="en" value="November" displayName="November"/>
 
   <text language="de-CH" value="December" displayName="Dezember"/>
 	<text language="fr-CH" value="December" displayName="Décembre"/>
   <text language="it-CH" value="December" displayName="Dicembre"/>
+  <text language="en" value="December" displayName="December"/>
 
   <text language="de-CH" value="Holder" displayName="Versicherte/r"/>
 	<text language="fr-CH" value="Holder" displayName="Assuré"/>
   <text language="it-CH" value="Holder" displayName="Assicurati"/>
+  <text language="en" value="Holder" displayName="Holder"/>
 
   <text language="de-CH" value="Assurance" displayName="Versicherung"/>
 	<text language="fr-CH" value="Assurance" displayName="Assurance"/>
   <text language="it-CH" value="Assurance" displayName="Assicurazione"/>
+  <text language="en" value="Assurance" displayName="Assurance"/>
 
   <text language="de-CH" value="Consent" displayName="Einverständniserklärung"/>
 	<text language="fr-CH" value="Consent" displayName="Consentement éclairé"/>
   <text language="it-CH" value="Consent" displayName="Dichiarazione di consenso"/>
+  <text language="en" value="Consent" displayName="Consent"/>
 
   <text language="de-CH" value="Custodian" displayName="Verwaltende Organisation"/>
 	<text language="fr-CH" value="Custodian" displayName="Organisme de gestion"/>
   <text language="it-CH" value="Custodian" displayName="Organismo di gestione"/>
+  <text language="en" value="Custodian" displayName="Custodian"/>
 
   <text language="de-CH" value="Author" displayName="Autor"/>
 	<text language="fr-CH" value="Author" displayName="Auteur"/>
   <text language="it-CH" value="Author" displayName="Autore"/>
+  <text language="en" value="Author" displayName="Author"/>
 
   <text language="de-CH" value="EMPLOYER" displayName="Arbeitgeber"/>
 	<text language="fr-CH" value="EMPLOYER" displayName="Employeur"/>
   <text language="it-CH" value="EMPLOYER" displayName="Datore di lavoro"/>
+  <text language="en" value="EMPLOYER" displayName="Employer"/>
 
   <text language="de-CH" value="theDate" displayName="am"/>
 	<text language="fr-CH" value="theDate" displayName="le"/>
   <text language="it-CH" value="theDate" displayName="il"/>
+  <text language="en" value="theDate" displayName="on"/>
 
   <text language="de-CH" value="Informer" displayName="Informiert"/>
 	<text language="fr-CH" value="Informer" displayName="Informé"/>
   <text language="it-CH" value="Informer" displayName="Informati"/>
+  <text language="en" value="Informer" displayName="Informer"/>
 
   <text language="de-CH" value="Authenticator" displayName="Unterzeichner"/>
   <text language="fr-CH" value="Authenticator" displayName="Signé"/>
   <text language="it-CH" value="Authenticator" displayName="Firmato"/>
+  <text language="en" value="Authenticator" displayName="Authenticator"/>
 
   <text language="de-CH" value="LegalAuthenticator" displayName="Rechtsgültiger Unterzeichner"/>
   <text language="fr-CH" value="LegalAuthenticator" displayName="Légal signataires"/>
   <text language="it-CH" value="LegalAuthenticator" displayName="Efficace legge firmato"/>
+  <text language="en" value="LegalAuthenticator" displayName="Legal authenticator"/>
 
   <text language="de-CH" value="DataEnterer" displayName="Erfasst durch"/>
   <text language="fr-CH" value="DataEnterer" displayName="Saisie par"/>
   <text language="it-CH" value="DataEnterer" displayName="Registrati da"/>
+  <text language="en" value="DataEnterer" displayName="Data enterer"/>
 
   <text language="de-CH" value="Tel" displayName="Tel"/>
 	<text language="fr-CH" value="Tel" displayName="Tel"/>
   <text language="it-CH" value="Tel" displayName="Tel"/>
+  <text language="en" value="Tel" displayName="Tel"/>
 
   <text language="de-CH" value="Fax" displayName="Fax"/>
 	<text language="fr-CH" value="Fax" displayName="Fax"/>
   <text language="it-CH" value="Fax" displayName="Fax"/>
+  <text language="en" value="Fax" displayName="Fax"/>
 
   <text language="de-CH" value="Mail" displayName="Mail"/>
 	<text language="fr-CH" value="Mail" displayName="Mail"/>
   <text language="it-CH" value="Mail" displayName="Mail"/>
+  <text language="en" value="Mail" displayName="Mail"/>
 
   <text language="de-CH" value="Web" displayName="Web"/>
   <text language="fr-CH" value="Web" displayName="Web"/>
   <text language="it-CH" value="Web" displayName="Web"/>
+  <text language="en" value="Web" displayName="Web"/>
 
   <text language="de-CH" value="home" displayName="p"/>
   <text language="fr-CH" value="home" displayName="p"/>
   <text language="it-CH" value="home" displayName="C"/>
+  <text language="en" value="home" displayName="HP"/>
 
   <text language="de-CH" value="workplace" displayName="g"/>
   <text language="fr-CH" value="workplace" displayName="travail"/>
   <text language="it-CH" value="workplace" displayName="U"/>
+  <text language="en" value="workplace" displayName="WP"/>
 
   <text language="de-CH" value="Company" displayName="Betrieb"/>
   <text language="fr-CH" value="Company" displayName="Entreprise"/>
   <text language="it-CH" value="Company" displayName="Azienda"/>
+  <text language="en" value="Company" displayName="Company"/>
 
   <text language="de-CH" value="Address" displayName="Adresse"/>
   <text language="fr-CH" value="Address" displayName="Adresse"/>
   <text language="it-CH" value="Address" displayName="Indirizzo"/>
+  <text language="en" value="Address" displayName="Address"/>
 
   <text language="de-CH" value="Contact" displayName="Kontakt"/>
   <text language="fr-CH" value="Contact" displayName="Contact"/>
   <text language="it-CH" value="Contact" displayName="Contatto"/>
+  <text language="en" value="Contact" displayName="Contact"/>
 
   <text language="de-CH" value="HL7.ch" displayName="HL7 Benutzergruppe Schweiz"/>
   <text language="fr-CH" value="HL7.ch" displayName="Groupe d'utilisateurs HL7 Suisse"/>
   <text language="it-CH" value="HL7.ch" displayName="Gruppo utenti svizzeri HL7"/>
+  <text language="en" value="HL7.ch" displayName="HL7 affiliate Switzerland"/>
 
   <text language="de-CH" value="CustNo" displayName="Kundennummer"/>
   <text language="fr-CH" value="CustNo" displayName="Numéro client"/>
   <text language="it-CH" value="CustNo" displayName="Numero cliente"/>
+  <text language="en" value="CustNo" displayName="Customer No."/>
 
   <text language="de-CH" value="2.16.756.5.31" displayName="Alte AHV Nr"/>
   <text language="fr-CH" value="2.16.756.5.31" displayName="No AVS ancien"/>
   <text language="it-CH" value="2.16.756.5.31" displayName="No AVS vecchio"/>
+  <text language="en" value="2.16.756.5.31" displayName="Old Swiss SSN"/>
 
   <text language="de-CH" value="2.16.756.5.32" displayName="Neue AHV Nr"/>
   <text language="fr-CH" value="2.16.756.5.32" displayName="No AVS neuve"/>
   <text language="it-CH" value="2.16.756.5.32" displayName="No AVS nuovo"/>
+  <text language="en" value="2.16.756.5.32" displayName="New Swiss SSN"/>
 
   <text language="de-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva Schadennummer"/>
   <text language="fr-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Numéro de sinistre Suva"/>
   <text language="it-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Numero d'infortunio Suva"/>
+  <text language="en" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva claim No."/>
   
   <text language="de-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva Kundennummer"/>
   <text language="fr-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Numéro client Suva"/>
   <text language="it-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Numero cliente Suva"/>
+  <text language="en" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva customer No."/>
 
   <text language="de-CH" value="1.3.88" displayName="GS1 GLN"/>
   <text language="fr-CH" value="1.3.88" displayName="GS1 GLN"/>
   <text language="it-CH" value="1.3.88" displayName="GS1 GLN"/>
+  <text language="en" value="1.3.88" displayName="GS1 GLN"/>
 
   <text language="de-CH" value="2.16.756.5.34" displayName="Versichertenkarte"/>
 	<text language="fr-CH" value="2.16.756.5.34" displayName="Carte d’assuré"/>
   <text language="it-CH" value="2.16.756.5.34" displayName="Carta di assicurazione"/>
+  <text language="en" value="2.16.756.5.34" displayName="Insurance card"/>
 
+
+  <!-- 
+  ********************************************************************************
+  Schematron ducumentation
+  ********************************************************************************
+  -->
+
+  <text language='de_ch' value='Entity' displayName='Entity'/>
+  <text language='fr_ch' value='Entity' displayName='Entity'/>
+  <text language='it_ch' value='Entity' displayName='entity tbd it'/>
+  <text language='en' value='Entity' displayName='Entity'/>
+
+  <text language='de_ch' value='File' displayName='Dateiname'/>
+  <text language='fr_ch' value='File' displayName='Fichier'/>
+  <text language='it_ch' value='File' displayName='File tbd it'/>
+  <text language='en' value='File' displayName='File'/>
+  
+  <text language='de_ch' value='Version' displayName='Version'/>
+  <text language='fr_ch' value='Version' displayName='Version'/>
+  <text language='it_ch' value='Version' displayName='version tbd it'/>
+  <text language='en' value='Version' displayName='Version'/>
+
+  <text language='de_ch' value='Rule' displayName='Regel'/>
+  <text language='fr_ch' value='Rule' displayName='Règle'/>
+  <text language='it_ch' value='Rule' displayName='Regola'/>
+  <text language='en' value='Rule' displayName='Rule'/>
+
+  <text language='de_ch' value='Assert' displayName='Assert'/>
+  <text language='fr_ch' value='Assert' displayName='Assert'/>
+  <text language='it_ch' value='Assert' displayName='Assert'/>
+  <text language='en' value='Assert' displayName='Assert'/>
+
+  <text language='de_ch' value='Role' displayName='Kategorie'/>
+  <text language='fr_ch' value='Role' displayName='Catégorie'/>
+  <text language='it_ch' value='Role' displayName='Categoria'/>
+  <text language='en' value='Role' displayName='Role'/>
+
+  <text language='de_ch' value='Test' displayName='Test'/>
+  <text language='fr_ch' value='Test' displayName='Test'/>
+  <text language='it_ch' value='Test' displayName='Test'/>
+  <text language='en' value='Test' displayName='Test'/>
+
+  <text language='de_ch' value='Description' displayName='Beschreibung'/>
+  <text language='fr_ch' value='Description' displayName='Description'/>
+  <text language='it_ch' value='Description' displayName='descritpiton tbd it'/>
+  <text language='en' value='Description' displayName='Description'/>
+  
+  <text language='de_ch' value='error' displayName='Fehler'/>
+  <text language='fr_ch' value='error' displayName='Erreur'/>
+  <text language='it_ch' value='error' displayName='Errore'/>
+  <text language='it_ch' value='error' displayName='Error'/>
+
+  <text language='de_ch' value='warning' displayName='Warnung'/>
+  <text language='fr_ch' value='warning' displayName='Alerte'/>
+  <text language='it_ch' value='warning' displayName='Allarme'/>
+  <text language='en' value='warning' displayName='Warning'/>
+
+  <text language='de_ch' value='information' displayName='Information'/>
+  <text language='fr_ch' value='information' displayName='Information'/>
+  <text language='it_ch' value='information' displayName='Informazioni'/>
+  <text language='en' value='information' displayName='Information'/>
+  
 </localization>
