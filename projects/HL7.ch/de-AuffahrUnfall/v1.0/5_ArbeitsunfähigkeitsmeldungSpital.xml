@@ -7,7 +7,8 @@ Arbeitsunfähigkeitszeugnis zuhanden Suva durch Kant. Spital
 History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-06.01.2010: Tony Schaller, medshare GmbH (Umbenennen eMedicus -> eMedidoc)
+06.01.2010: Tony Schaller, medshare GmbH (Umbenennen eMedidoc -> eMedidoc)
+30.09.2011: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
 
 ********************************************************
 -->
@@ -336,6 +337,14 @@ History:
 						<content>
 							Keine<br/>
 						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Erwerbstatus:</td>
+									<td>Erwerbstätig</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
 					<entry>
 						<!-- CDA-CH Observation Template: Erwerbstatus -->

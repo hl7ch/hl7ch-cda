@@ -8,7 +8,8 @@ History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
-27.01.2011: Tony Schaller, medshare GmbH (eMedicus auf eMedidoc umbenannt)
+27.01.2011: Tony Schaller, medshare GmbH (eMedidoc auf eMedidoc umbenannt)
+30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
 
 ********************************************************
 -->
@@ -21,9 +22,9 @@ History:
 	********************************************************
 	-->
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
-	<templateId extension="2904" root="1.2.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
-	<id extension="E0FA0CF3-0DA0-4A49-9AD0-DE26EB78AB12" root="1.2.756.5.30.1.100.2.1"/>  <!-- OID SUVA/Formularnummer -->
-	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1"/>
+	<templateId extension="2904" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
+	<id extension="E0FA0CF3-0DA0-4A49-9AD0-DE26EB78AB12" root="2.16.756.5.30.1.100.2.1"/>  <!-- OID SUVA/Formularnummer -->
+  <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
 	<title>Déclaration de traitement</title>
 	<effectiveTime value="20100201"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
@@ -62,7 +63,7 @@ History:
 		<assignedAuthor>
 			<id extension="7605555555555" root="1.3.88"/>
 			<addr use="WP">
-				<streetName>Rue de l'hôpital</streetName>
+				<streetName>Rue de l’hôpital</streetName>
 				<houseNumber>33</houseNumber>
 				<postalCode>1234</postalCode>
 				<city>Villemodèle</city>
@@ -79,9 +80,9 @@ History:
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<name>Hôpital cantonal, Clinique de chirurgie, Notfallstation</name>
+				<name>Hôpital cantonal, Clinique de chirurgie, Service des urgences</name>
 				<addr use="WP">
-				<streetName>Rue de l'hôpital</streetName>
+				<streetName>Rue de l’hôpital</streetName>
 				<houseNumber>33</houseNumber>
 				<postalCode>1234</postalCode>
 				<city>Villemodèle</city>
@@ -93,9 +94,9 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<id extension="7605555555555" root="1.3.88"/>
-				<name>Hôpital cantonal, Clinique de chirurgie, Notfallstation</name>
+				<name>Hôpital cantonal, Clinique de chirurgie, Service des urgences</name>
 				<addr use="WP">
-					<streetName>Rue de l'hôpital</streetName>
+					<streetName>Rue de l’hôpital</streetName>
 					<houseNumber>33</houseNumber>
 					<postalCode>1234</postalCode>
 					<city>Villemodèle</city>
@@ -118,6 +119,27 @@ History:
       </receivedOrganization>
 		</intendedRecipient>
 	</informationRecipient>
+	<participant typeCode='IND'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<!-- Suva Kundennummer extern -->
+			<id extension='888-77777.6' root='2.16.756.5.30.1.100.3.7.1'/>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<scopingOrganization>
+				<name>Banque Scheffel und Co.</name>
+				<addr use="WP">
+					<streetAddressLine>Dagobertweg</streetAddressLine>
+					<postalCode>8787</postalCode>
+					<city>Entenhausen</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
 	<authorization>
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
@@ -142,57 +164,95 @@ History:
 			-->
 			<component>
 				<section>
-					<title>Motif du traitement</title>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoBehandlungsmeldung"/>
+					<title>Information sur le sinistre</title>
 					<text>
-							<table>
-								<tbody>
-									<tr>
-										<td>Date du sinistre</td>
-										<td>01.02.2010</td>
-									</tr>
-									<tr>
-										<td>Date de traitement</td>
-										<td>01.02.2010</td>
-									</tr>
-									<tr>
-										<td>Diagnostic</td>
-										<td>Entorse de la colonne cervicale</td>
-									</tr>
-								</tbody>
-							</table>						
+						<table>
+							<tbody>
+								<tr>
+									<td>Date du sinistre</td>
+									<td>01.02.2010</td>
+								</tr>
+								<tr>
+									<td>Date de traitement</td>
+									<td>01.02.2010</td>
+								</tr>
+								<tr>
+									<td>Diagnostic</td>
+									<td>Entorse de la colonne cervicale</td>
+								</tr>
+							</tbody>
+						</table>						
 					</text>
+					<entry>
+						<!-- eMedidoc Observation Template: Schadeninformationen -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoMinL3"/>
+							<!-- Schadennummer -->
+							<id nullFlavor="UNK" />
+							<!-- Anmeldeart -->
+							<code nullFlavor="UNK" />
+							<!-- Schadendatum -->
+							<effectiveTime value="20100201"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- eMedidoc Encounter Template: Behandlung -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehandlungsmeldungL3"/>
+							<!-- Wahrnehmung -->
+							<text>Entorse de la colonne cervicale</text>
+							<!-- Datum und evtl. Zeit der Erstbehandlung -->
+							<effectiveTime value="20100201"/>
+							<!-- Erstbehandlung durch ausfüllenden Arzt -->
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>E.</given>
+											<family>Mergency</family>
+											<suffix>Médecin assistant</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
 				</section>
 			</component>
 			<!-- 
 			********************************************************
-			  Employeur
+			  Remarques
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Employeur</title>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<title>Remarques</title>
 					<text>
-							<table>
-								<tbody>
-									<tr>
-										<th>Betrieb</th>
-										<th>Bank Scheffel und Co.</th>
-									</tr>
-									<tr>
-										<th>Suva Kunden-Nr.</th>
-										<th>888-77777.6</th>
-									</tr>
-									<tr>
-										<td>Adresse</td>
-										<td>Dagobertweg, 8787 Entenhausen</td>
-									</tr>
-									<tr>
-										<td>Contact</td>
-										<td></td>
-									</tr>
-								</tbody>
-							</table>						
+						<content>Néant<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Statut d'emploi:</td>
+									<td>salariées</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Erwerbstatus -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
+							<!-- Strukturierte Angabe "Erwerbstatus" -->
+							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
+						</observation>
+					</entry>
 				</section>
 			</component>
 		</structuredBody>

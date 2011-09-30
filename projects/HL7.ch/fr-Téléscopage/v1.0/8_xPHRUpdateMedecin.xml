@@ -9,6 +9,7 @@ History:
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
+30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
 
 ********************************************************
 -->
@@ -53,8 +54,8 @@ History:
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
-				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Cabinet Médical CH, Guérison-ville</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -64,7 +65,7 @@ History:
 		<assignedAuthor>
 			<id extension="7608888888888" root="1.3.88"/>
 			<addr use="WP">
-				<streetName>Rue de l'hôpital</streetName>
+				<streetName>Rue de l’hôpital</streetName>
 				<houseNumber>2</houseNumber>
 				<postalCode>8888</postalCode>
 				<city>Guérison-ville</city>
@@ -84,7 +85,7 @@ History:
 			<representedOrganization>
 				<name>Cabinet Médical CH</name>
 				<addr use="WP">
-					<streetName>Rue de l'hôpital</streetName>
+					<streetName>Rue de l’hôpital</streetName>
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Guérison-ville</city>
@@ -98,7 +99,7 @@ History:
 				<id extension="7608888888888" root="1.3.88"/>
 				<name>Cabinet Médical CH</name>
 				<addr use="WP">
-					<streetName>Rue de l'hôpital</streetName>
+					<streetName>Rue de l’hôpital</streetName>
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Guérison-ville</city>
@@ -141,7 +142,7 @@ History:
 					<representedOrganization>
 						<name>Cabinet Médical CH</name>
 						<addr use="WP">
-							<streetName>Rue de l'hôpital</streetName>
+							<streetName>Rue de l’hôpital</streetName>
 							<houseNumber>2</houseNumber>
 							<postalCode>8888</postalCode>
 							<city>Guérison-ville</city>

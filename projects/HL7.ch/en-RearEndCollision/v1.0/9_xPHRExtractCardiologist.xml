@@ -1,15 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Exemple de cas «téléscopage» CDA-CH-II
-xPHR Extract par le cardiologue
+Case study  "rear-end collision" CDA-CH-II
+xPHR Extract by cardiologist
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
-09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
-30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
+12/05/2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+17/05/2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20/05/2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+30/09/2011: Tony Schaller, medshare GmbH (English translation)
 
 ********************************************************
 -->
@@ -17,20 +16,20 @@ History:
 <ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd' xmlns:sdtc='urn:hl7-org:sdtc'>
 
 	<typeId extension='POCD_HD000040' root='2.16.840.1.113883.1.3'/>
-	<!-- Template OID pour ASTM/HL7 Continuity of Care Document (CCD) -->
+	<!-- Template OID for ASTM/HL7 Continuity of Care Document (CCD) -->
 	<templateId root='2.16.840.1.113883.10.20.1'/>
-	<!-- Template OID pour IHE Medical Documents Specification -->
+	<!-- Template OID for IHE Medical Documents Specification -->
 	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
-	<!-- Template OID pour IHE Medical Summary Specification -->
+	<!-- Template OID for IHE Medical Summary Specification -->
 	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.2'/>
-	<!-- Template OID pour IHE PHR Extract Specification  -->
+	<!-- Template OID for IHE PHR Extract Specification  -->
 	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5'/>
 	<id root='2.16.756.5.30.1.109.2' extension='0B2591ED-E106-48A1-AA1B-6675A5353A8A' />
 	<code code='34133-9' displayName='Summary of Episode Note' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
 	<title>xPHR Extract Personal Health Record</title>
 	<effectiveTime value='20100211103300'/>
 	<confidentialityCode code='N' displayName='Normal' codeSystem='2.16.840.1.113883.5.25' codeSystemName='Confidentiality' />
-	<languageCode code='fr-CH'/>
+	<languageCode code='en'/>
 	<setId root='2.16.756.5.30.1.1.1.1' extension='0B2591ED-E106-48A1-AA1B-6675A5353A8A' />
 	<versionNumber value='1'/>
 	<recordTarget>
@@ -38,24 +37,24 @@ History:
 			<id extension="123.71.332.115" root="2.16.756.5.31"/>
 			<id extension="1234567891234" root="2.16.756.5.32"/>
 			<addr use="HP">
-				<streetName>Chemin du calvaire</streetName>
+				<streetName>suffering avenue</streetName>
 				<houseNumber>10</houseNumber>
 				<postalCode>9876</postalCode>
-				<city>Hameau des malades</city>
+				<city>Specimentown</city>
 			</addr>
 			<telecom use="HP" value="tel:+41.32.685.12.34"/>
 			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
 			<patient>
 				<name>
-					<given>Jean</given>
-					<family>DUPONT</family>
+					<given>John</given>
+					<family>DOE</family>
 				</name>
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
 				<id extension="7605555555555" root="1.3.88"/>
-				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<name>Cantonal Hospital, Surgical Clinic</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -74,9 +73,9 @@ History:
 				<id extension='23421' root='2.16.756.5.30.1.434343434.1.1'/>
 				<name>Personal Health Record</name>
 				<addr use='WP'>
-					<streetAddressLine>Providergasse 88</streetAddressLine>
+					<streetAddressLine>88 provider avenue</streetAddressLine>
 					<postalCode>8888</postalCode>
-					<city>Guérison-ville</city>
+					<city>Samplecity</city>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
@@ -89,16 +88,16 @@ History:
 					<prefix>Dr. med.</prefix>
 					<given>E.</given>
 					<family>Mergency</family>
-					<suffix>Médecin assistant</suffix>
+					<suffix>Registrar</suffix>
 				</name>
 			</informationRecipient>
 			<receivedOrganization>
-				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<name>Cantonal Hospital, Surgical Clinic</name>
 				<addr use="WP">
-					<streetName>Rue de l’hôpital</streetName>
+					<streetName>Hospital street</streetName>
 					<houseNumber>33</houseNumber>
-					<postalCode>1234</postalCode>
-					<city>Villemodèle</city>
+					<postalCode>8888</postalCode>
+					<city>Samplecity</city>
 				</addr>
 			</receivedOrganization>
 		</intendedRecipient>
@@ -123,9 +122,9 @@ History:
 					<representedOrganization>
 						<name>Personal Health Record</name>
 						<addr use='WP'>
-							<streetAddressLine>Providergasse 88</streetAddressLine>
+							<streetAddressLine>88 provider avenue</streetAddressLine>
 							<postalCode>8888</postalCode>
-							<city>Guérison-ville</city>
+							<city>Samplecity</city>
 						</addr>
 					</representedOrganization>
 				</assignedEntity>
@@ -140,24 +139,24 @@ History:
 					<templateId root='2.16.840.1.113883.10.20.1.11'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
 					<code code='11450-4' displayName='PROBLEM LIST' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Liste des diagnostics</title>
+					<title>List of diagnosis</title>
 					<text>
 						<content ID='diag1'>
-							Suspicion de récidive de l’hyperthyroïdie symptomatique connue<br />
-							-	avec fibrillation auriculaire paroxystique<br />
-							-	Carbimazole 5mg/jour jusqu’en juillet 2009, depuis absence de traitement<br />
+							Suspected recurrence of previously known symptomatic hyperthyroidism<br />
+							- with paroxysmal tachycardiac atrial fibrillation<br />
+							- Carbimazole 5mg/die until Aug 2009, since then without treatment<br />
 						</content>
 						<br />
-						<content ID='diag2'>Hypertension artérielle essentielle<br /></content>
+						<content ID='diag2'>Essential hypertension</content>
 						<br />
 						<content ID='diag3'>
-							Distorsion des vertèbres cervicales due à<br />
-							- un traumatisme d’accélération crânio-cervical lors d’un accident de voiture le 1.2.2010<br />
-							- Pas d’indices radiologiques d’une lésion osseuse<br />
+							Sprain of cervical spine following<br />
+							- whiplash injury in car accident on 01/02/2010<br />
+							- no X-ray findings of bone lesions<br />
 						</content>
 						<br />
 						<content ID='diag4'>
-							Statut consécutif à l’implantation d’une endoprothèse de la hanche gauche en juillet 2009 en présence d’une coxarthrose primaire gauche<br />
+							Status post left hip replacement July 2009 for primary coxarthrosis of left hip<br />
 						</content>
 					</text>
 					<entry>
@@ -180,7 +179,7 @@ History:
 									<id nullFlavor='NA'/>
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
 									<text>
-									<reference value='#diag1'/>Suspicion de récidive de l’hyperthyroïdie symptomatique connue; -	avec fibrillation auriculaire paroxystique; -	Carbimazole 5mg/jour jusqu’en juillet 2009, depuis absence de traitement</text>
+									<reference value='#diag1'/>Suspected recurrence of previously known symptomatic hyperthyroidism, - with paroxysmal tachycardiac atrial fibrillation, - Carbimazole 5mg/die until Aug 2009, since then without treatment</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
 										<low nullFlavor='UNK' />
@@ -197,7 +196,7 @@ History:
 									<id nullFlavor='NA'/>
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
 									<text>
-									<reference value='#diag2'/>Hypertension artérielle essentielle</text>
+									<reference value='#diag2'/>Essential hypertension</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
 										<low nullFlavor='UNK' />
@@ -215,7 +214,7 @@ History:
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
 									<text>
 										<reference value='#diag3'/>
-											Distorsion des vertèbres cervicales due à, - un traumatisme d’accélération crânio-cervical lors d’un accident de voiture le 1.2.2010, - Pas d’indices radiologiques d’une lésion osseuse
+											Sprain of cervical spine following, - whiplash injury in car accident on 01/02/2010, - no X-ray findings of bone lesions
 									</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
@@ -234,7 +233,7 @@ History:
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED-CT' displayName='Diagnosis' />
 									<text>
 										<reference value='#diag4'/>
-											Statut consécutif à l’implantation d’une endoprothèse de la hanche gauche en juillet 2009 en présence d’une coxarthrose primaire gauche
+											Status post left hip replacement July 2009 for primary coxarthrosis of left hip
 									</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
@@ -255,11 +254,11 @@ History:
 					<templateId root='2.16.840.1.113883.10.20.1.2'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13'/>
 					<code code='48765-2' displayName='Allergies, adverse reactions, alerts' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Allergies et intolérances</title>
+					<title>Allergies and incompatibilities</title>
 					<text>
 						<content ID='allergy1'>
-							Allergie à la pénicilline<br />
-							- Exanthème médicamenteux généralisé après traitement à la pénicilline en 1986
+							Allergy to penicillin<br />
+							- generalised drug exanthema following penicillin treatment in 1986
 						</content>
 					</text>
 					<entry>
@@ -287,7 +286,7 @@ History:
 										</originalText>
 									</code>
 									<text>
-									<reference value='#allergy1'/>Exanthème médicamenteux généralisé après traitement à la pénicilline en 1986</text>
+									<reference value='#allergy1'/>generalised drug exanthema following penicillin treatment in 1986</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
 										<low nullFlavor='UNK' />
@@ -305,9 +304,9 @@ History:
 					<!-- Optional Clinical Tests / Blood Type Section content -->
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.28'/>
 					<code code='30954-2' displayName='STUDIES SUMMARY' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Groupe sanguin</title>
+					<title>Blood group</title>
 					<text>
-						<content ID='bloodgr'>Groupe sanguin A, Rh pos.</content>
+						<content ID='bloodgr'>Blood group A, Rh pos.</content>
 						<br />
 					</text>
 					<entry>
@@ -318,7 +317,7 @@ History:
 							<id root='2.16.756.5.30.1.109.3.1' extension='0F842BC2-2F87-4E33-A070-77B3B88AAD86' />
 							<code code='882-1' displayName='ABO+RH GROUP' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 							<text>
-							<reference value='#bloodgr'/>Groupe sanguin A, Rh pos.</text>
+							<reference value='#bloodgr'/>Blood group A, Rh pos.</text>
 							<statusCode code='completed'/>
 							<effectiveTime value='20091113012005'/>
 							<value xsi:type='CD' nullFlavor='UNK' />
@@ -339,9 +338,9 @@ History:
 					<templateId root='2.16.840.1.113883.10.20.1.6'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
 					<code code='11369-6' displayName='HISTORY OF IMMUNIZATIONS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Vaccinations</title>
+					<title>Immunizations</title>
 					<text>
-						<content ID='immu1'></content>DiTePe im Kindesalter<br />
+						<content ID='immu1'></content>DiTePe in childhood<br />
 					</text>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN' >
@@ -368,25 +367,25 @@ History:
 			</component>
 			<component>
 				<section>
-					<title>Imagerie médicale</title>
+					<title>Imaging procedures</title>
 					<text>
-						<content styleCode="Bold">Radio du bassin du 6.6.2009 (Institut de radiologie RoDiag, Dr X. Ray):</content><br />
-						Nette modification arthrosique des articulations de la hanche, bilatérale, plus importante à droite qu’à gauche; nette réduction de l’interligne articulaire et sclérose subchrondriale avec formation d’ostéophytes sur le bord de la cupule<br />
+						<content styleCode="Bold">Pelvis overview of 06/06/2009 (Institute of Radiology RoDiag, Dr. X. Ray)</content><br />
+						Significant bilateral osteoarthritic changes in the hip joints, more on the right than on the left, significant reduction in the joint space and subchondral sclerosis with formation of osteophytes at the edge of the joint socket.<br />
 						<br />
-						<content styleCode="Bold">Colonne cervicale ap/latéral, cliché transbuccal de l’apophyse odontoïde du 1.2.2010 (Hôpital cantonal):</content><br />
-						Pas de signes de lésions osseuses. Légère scoliose convexe à droite.
+						<content styleCode="Bold">Whiplash AP/lateral, dens transbuccal of 01/02/2010 (Cantonal Hospital):</content><br />
+						No indication of bone lesions. Slight right convex scoliosis.
 					</text>
 				</section>
 			</component>
 			<component>
 				<section>
-					<title>Autres procédures de diagnostic</title>
+					<title>Further instrumental diagnosis</title>
 					<text>
-						<content styleCode="Bold">ECG du 11.7.2009 (Hôpital cantonal):</content><br />
-						Rythme sinusal normo carde, axe gauche, pas de troubles de la repolarisation, quelques ESSV isolées<br />
+						<content styleCode="Bold">ECG of 11/07/2009 (Cantonal Hospital):</content><br />
+						Normal sinus rhythm, left-sided, no repolarization disorders, isolated SVES<br />
 						<br />
-						<content styleCode="Bold">ECG du 1.2.2010 (Hôpital cantonal):</content><br />
-						Rythme sinusal normo carde, axe gauche, troubles diffus de la repolarisation, quelques ESSV isolées
+						<content styleCode="Bold">ECG from 11/02/2010 (Cantonal Hospital):</content><br />
+						Normal sinus rhythm, left-sided, diffuse repolarization disorders, isolated SVES
 					</text>
 				</section>
 			</component>
@@ -396,33 +395,33 @@ History:
 					<!-- Required Medications – Prescription and Non-Prescription Section content -->
 					<templateId root='2.16.840.1.113883.10.20.1.8'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.19'/>
-					<!-- smeex Template für Médicaments -->
+					<!-- smeex Template for Medications -->
 					<code code='10160-0' displayName='HISTORY OF MEDICATION USE' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Médicaments</title>
+					<title>Medications</title>
 					<text>
 						<table>
 							<tbody>
 								<tr>
 									<th>
-										Nom du produit
+										Product name
 									</th>
 									<th>
 										Dosage
 									</th>
 									<th>
-										Forme galénique
+										Dosage form
 									</th>
 									<th>
 										ATC
 									</th>
 									<th>
-										Posologie
+										Dosing schedule
 									</th>
 									<th>
-										Début de la prescription
+										Beginning of administration
 									</th>
 									<th>
-										Fin de la prescription
+										End of administration
 									</th>
 								</tr>
 								<tr>
@@ -433,16 +432,16 @@ History:
 										100mg
 									</td>
 									<td>
-										Comprimés
+										Tab
 									</td>
 									<td>
 										B01AC06
 									</td>
 									<td>
-										1-0-1
+										twice daily in the morning and evening
 									</td>
 									<td>
-										03.02.2010
+										03/02/2010
 									</td>
 									<td>
 									</td>
@@ -455,16 +454,16 @@ History:
 										1000mg
 									</td>
 									<td>
-										Comprimés
+										Tab
 									</td>
 									<td>
 										N02BE01
 									</td>
 									<td>
-										1-1-1
+										three times a day
 									</td>
 									<td>
-										03.02.2010
+										03/02/2010
 									</td>
 									<td>
 									</td>
@@ -477,19 +476,19 @@ History:
 										500mg
 									</td>
 									<td>
-										Comprimés
+										Tab
 									</td>
 									<td>
 										N02BE01
 									</td>
 									<td>
-										2-2-2
+										2 tabs three times a day
 									</td>
 									<td>
-										01.02.2010
+										01/02/2010
 									</td>
 									<td>
-										03.02.2010
+										03/02/2010
 									</td>
 								</tr>
 								<tr>
@@ -500,16 +499,16 @@ History:
 										4mg
 									</td>
 									<td>
-										Comprimés
+										Tab
 									</td>
 									<td>
 										M03BX02
 									</td>
 									<td>
-										1-1-1-1
+										four times a day
 									</td>
 									<td>
-										01.02.2010
+										01/02/2010
 									</td>
 									<td>
 										
@@ -523,16 +522,16 @@ History:
 										10/12,5mg
 									</td>
 									<td>
-										Comprimés
+										Tab
 									</td>
 									<td>
 										C09BA03
 									</td>
 									<td>
-										1-0-0
+										daily in the morning
 									</td>
 									<td>
-										01.01.2004
+										01/01/2004
 									</td>
 									<td>
 
@@ -546,19 +545,19 @@ History:
 										5mg
 									</td>
 									<td>
-										Comprimés
+										Tab
 									</td>
 									<td>
 										H03BB01
 									</td>
 									<td>
-										1-0-0
+										daily in the morning
 									</td>
 									<td>
-										13.04.2009
+										13/04/2009
 									</td>
 									<td>
-										31.08.2009
+										31/08/2009
 									</td>
 								</tr>
 							</tbody>
@@ -573,18 +572,18 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680517950406' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='drug therapy'/>
 							<text>
 								<reference value='#m1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Active period -->
 								<low value='20100203'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-0-1 -->
+								<!-- Dosage twice daily in the morning and evening -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -593,9 +592,9 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Swallow, oral' />
 							<doseQuantity>
-								<!-- 1 Stück (z. B. Tablette) -->
+								<!-- 1 piece (e.g. tab) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -627,18 +626,18 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680475040232' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='drug therapy'/>
 							<text>
 								<reference value='#m2'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Active period -->
 								<low value='20100203'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-1-1 -->
+								<!-- Dosage three times a day -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -651,9 +650,9 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Swallow, oral' />
 							<doseQuantity>
-								<!-- 1 Stück (z. B. Tablette) -->
+								<!-- 1 piece (e.g. tab) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -685,18 +684,18 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680475040232' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='drug therapy'/>
 							<text>
 								<reference value='#m3'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Active period -->
 								<low value='20100201'/>
 								<high value='20100203'/>
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 2-2-2 -->
+								<!-- Dosage 2 tabs three times a day -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -709,7 +708,7 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Swallow, oral' />
 							<doseQuantity>
 								<!-- 2 Stück (z. B. Tablette) -->
 								<center value='2' unit='1'/>
@@ -743,18 +742,18 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680446910359' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='drug therapy'/>
 							<text>
 								<reference value='#m4'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Active period -->
 								<low value='20100211'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-1-1-1 -->
+								<!-- Dosage four times a day -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -771,9 +770,9 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Swallow, oral' />
 							<doseQuantity>
-								<!-- 1 Stück (z. B. Tablette) -->
+								<!-- 1 piece (e.g. tab) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -804,25 +803,25 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680569020119' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='drug therapy'/>
 							<text>
 								<reference value='#m5'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Active period -->
 								<low value='20040101'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-0-0 -->
+								<!-- Dosage daily in the morning -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Swallow, oral'/>
 							<doseQuantity>
-								<!-- 1 Stück (z. B. Tablette) -->
+								<!-- 1 piece (e.g. tab) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -853,25 +852,25 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680210370280' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='drug therapy'/>
 							<text>
 								<reference value='#m6'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Active period -->
 								<low value='20090413'/>
 								<high value='20090831'/>
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-0-0 -->
+								<!-- Dosage daily in the morning -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Swallow, oral'/>
 							<doseQuantity>
-								<!-- 1 Stück (z. B. Tablette) -->
+								<!-- 1 piece (e.g. tab) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -898,37 +897,38 @@ History:
 			</component>
 			<component>
 				<section>
-					<title>Résultats de laboratoire</title>
+					<title>Laboratory values</title>
 					<text>
 						<table>
 							<tbody>
 								<tr>
 									<th>
-										Date de l’analyse
+										Date of analysis
 									</th>
 									<th>
-										Analyse
+										Analysis
 									</th>
 									<th>
-										Valeurs de référence
+										Normal range
 									</th>
 									<th>
-										Unité
+										Unit
 									</th>
 									<th>
-										Résultats
+										Value
 									</th>
 								</tr>
 								<tr>
 									<td>
-										12.12.2009
+										12/12/2009
 									</td>
 									<td>
-										Quick<br />
-										Hémoglobine<br />
+										Prothrombin ratio<br />
+										Haemoglobin<br />
 										MCV<br />
 										Leucocytes<br />
-										Thrombocytes<br />
+										Platelets<br />
+
 									</td>
 									<td>
 										70-120<br />
@@ -954,14 +954,14 @@ History:
 								</tr>
 								<tr>
 									<td>
-										12.12.2009
+										12/12/2009
 									</td>
 									<td>
 										Sodium<br />
 										Potassium<br />
 										Calcium<br />
 										Phosphate<br />
-										Créatinine<br />
+										Creatinine<br />
 									</td>
 									<td>
 										136-145<br />
@@ -987,7 +987,7 @@ History:
 								</tr>
 								<tr>
 									<td>
-										02.07.2009
+										02/07/2009
 									</td>
 									<td>
 										TSH<br />
@@ -1008,7 +1008,7 @@ History:
 								</tr>
 								<tr>
 									<td>
-										12.03.2009
+										12/03/2009
 									</td>
 									<td>
 										TSH<br />
@@ -1029,7 +1029,7 @@ History:
 								</tr>
 								<tr>
 									<td>
-										09.02.2009
+										09/02/2009
 									</td>
 									<td>
 										TSH<br />

@@ -12,6 +12,7 @@ Updated by Kai U. Heitmann, Heitmann Consulting Service, NL for VHitG, Germany
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, for CDA-CH V1.2
 Updated by Nico Ehinger, ELCA SA, code refactoring
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised for CDA-CH V1.2 Body templates and language dependent rendering
+
 ********************************************************
 -->
 <xsl:stylesheet
@@ -277,7 +278,14 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				<xsl:value-of select="substring ($date, 7, 2)"/>
 			</xsl:otherwise>
 		</xsl:choose>
-		<xsl:text>. </xsl:text>
+		<xsl:choose>
+			<xsl:when test="$language='de' or $language='de-CH'">
+				<xsl:text>. </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text> </xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:variable name="month" select="substring ($date, 5, 2)"/>
 		<xsl:choose>
 			<xsl:when test="$month='01'">

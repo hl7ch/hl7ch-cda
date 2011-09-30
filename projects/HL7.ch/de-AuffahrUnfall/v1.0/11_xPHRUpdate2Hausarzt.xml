@@ -7,6 +7,7 @@ xPHR Update2 durch Hausarzt
 History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+30.09.2011: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
 
 ********************************************************
 -->
@@ -51,8 +52,8 @@ History:
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
-				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Gruppenpraxis Musterhausen</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>

@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Exemple de cas «téléscopage» CDA-CH-II
-Attestation d’incapacité de travail de l’hôpital cantonal à l’intention de la Suva 
+Case study  "rear-end collision" CDA-CH-II
+Worksunfähigkeitszeugnis zuhanden Suva by Kant. Spital
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
-27.01.2011: Tony Schaller, medshare GmbH (eMedidoc auf eMedidoc umbenannt)
-30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
+12/05/2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+17/05/2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+06.01.2010: Tony Schaller, medshare GmbH (Umbenennen eMedidoc -> eMedidoc)
+30/09/2011: Tony Schaller, medshare GmbH (English translation)
 
 ********************************************************
 -->
@@ -22,40 +21,40 @@ History:
 	********************************************************
 	-->
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
-	<templateId extension="2905" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
-	<id extension="9E2EB8E2-224C-4DF9-9D9B-9457B69A7E6B" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
-  <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
-	<title>Attestation d’incapacité de travail simple</title>
+	<templateId extension="2905" root="2.16.756.5.30.1.100.2.1"/>
+	<id extension="9E2EB8E2-224C-4DF9-9D9B-9457B69A7E6B" root="2.16.756.5.30.1.100.2.1"/>
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="simple sick note"/>
+	<title>Simple sick note</title>
 	<effectiveTime value="20100201"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
-	<languageCode code="fr-CH"/>
+	<languageCode code="en"/>
 	<setId extension="9E2EB8E2-224C-4DF9-9D9B-9457B69A7E6B" root="2.16.756.5.30.1.1.1.1"/>
 	<versionNumber value="1"/>
 	<recordTarget>
 		<patientRole>
       <id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
-      <!-- Suva OID pour Schaden-Nr -->
+      <!-- Suva OID for Claim No. -->
       <id extension="123.73.423.123" root="2.16.756.5.31"/>
-      <!-- OID pour No AVS ancien -->
+      <!-- OID for old Swiss SSN -->
 			<addr use="HP">
-				<streetName>Chemin du calvaire</streetName>
+				<streetName>suffering avenue</streetName>
 				<houseNumber>10</houseNumber>
 				<postalCode>9876</postalCode>
-				<city>Hameau des malades</city>
+				<city>Specimentown</city>
 			</addr>
 			<telecom use="HP" value="tel:+41.32.685.12.34"/>
 			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
 			<patient>
 				<name>
-					<given>Jean</given>
-					<family>DUPONT</family>
+					<given>John</given>
+					<family>DOE</family>
 				</name>
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
 				<id extension="7608888888888" root="1.3.88"/>
-				<name>Dr. med. Théodore Guéri, Cabinet Médical CH</name>
+				<name>Dr. med. Always Ready, Group practice CH</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -65,29 +64,29 @@ History:
 		<assignedAuthor>
 			<id extension="7605555555555" root="1.3.88"/>
 			<addr use="WP">
-				<streetName>Rue de l’hôpital</streetName>
+				<streetName>Hospital street</streetName>
 				<houseNumber>33</houseNumber>
-				<postalCode>1234</postalCode>
-				<city>Villemodèle</city>
+				<postalCode>8888</postalCode>
+				<city>Samplecity</city>
 			</addr>
 			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
 			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
-			<telecom use="PUB" value="http:www.hopital-cantonal.ch"/>
+			<telecom use="PUB" value="http:www.cantonal-hospital.ch"/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
 					<given>E.</given>
 					<family>Mergency</family>
-					<suffix>Médecin assistant</suffix>
+					<suffix>Registrar</suffix>
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<name>Hôpital cantonal, Clinique de chirurgie, Service des urgences</name>
+				<name>Cantonal Hospital, Surgical Clinic, Emergency department</name>
 				<addr use="WP">
-					<streetName>Rue de l’hôpital</streetName>
+					<streetName>Hospital street</streetName>
 					<houseNumber>33</houseNumber>
-					<postalCode>1234</postalCode>
-					<city>Villemodèle</city>
+					<postalCode>8888</postalCode>
+					<city>Samplecity</city>
 				</addr>
 			</representedOrganization>
 		</assignedAuthor>
@@ -96,27 +95,27 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<id extension="7605555555555" root="1.3.88"/>
-				<name>Hôpital cantonal, Clinique de chirurgie, Service des urgences</name>
+				<name>Cantonal Hospital, Surgical Clinic, Emergency department</name>
 				<addr use="WP">
-					<streetName>Rue de l’hôpital</streetName>
+					<streetName>Hospital street</streetName>
 					<houseNumber>33</houseNumber>
-					<postalCode>1234</postalCode>
-					<city>Villemodèle</city>
+					<postalCode>8888</postalCode>
+					<city>Samplecity</city>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
 	<informationRecipient typeCode="PRCP">
 		<intendedRecipient>
-			<id extension="A99" root="2.16.756.5.30.1.100.1.2.3"/>
+			<id extension="A99" root="2.16.756.5.30.1.100.1.2.3"/> 
 			<informationRecipient>
-				<name>Agence Suva Guérison-ville</name>
+				<name>Suva Agency Samplecity</name>
 			</informationRecipient>
       <receivedOrganization>
         <addr use="WP">
           <streetAddressLine>Rainweg 53</streetAddressLine>
           <postalCode>8888</postalCode>
-          <city>Guérison-ville</city>
+          <city>Samplecity</city>
         </addr>
       </receivedOrganization>
 		</intendedRecipient>
@@ -129,15 +128,15 @@ History:
 			<high nullFlavor='UNK' />
 		</time>
 		<associatedEntity classCode='CON'>
-			<!-- Suva Kundennummer extern -->
+			<!-- Suva external customer No. -->
 			<id extension='888-77777.6' root='2.16.756.5.30.1.100.3.7.1'/>
 			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
 			<scopingOrganization>
-				<name>Banque Scheffel und Co.</name>
+				<name>Bank Rake In &amp; Co.</name>
 				<addr use="WP">
-					<streetAddressLine>Dagobertweg</streetAddressLine>
+					<streetAddressLine>scroogey street</streetAddressLine>
 					<postalCode>8787</postalCode>
-					<city>Entenhausen</city>
+					<city>Duckburg</city>
 				</addr>
 			</scopingOrganization>
 		</associatedEntity>
@@ -146,7 +145,7 @@ History:
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Le patient donne son accord pour la déclaration à la Suva.
+					Patient agrees with Suva being informed.
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
@@ -161,37 +160,37 @@ History:
 		<structuredBody>
 			<!-- 
 			********************************************************
-			  Suivi d’évaluation
+			  Beurteilungsgeschichte
 			********************************************************
 			-->
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitList"/>
 					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-					<title>Capacité de travail</title>
+					<title>Capacity to work</title>
 					<text>
 						<table>
 							<tbody>
 								<tr>
-									<th>Consultation</th>
-									<th>Durée de présence</th>
-									<th>Charge de travail</th>
-									<th>Date de la prochaine évaluation</th>
-									<th>Evaluée par</th>
+									<th>Valid from</th>
+									<th>Presence</th>
+									<th>Work intensity</th>
+									<th>Valid to</th>
+									<th>Assessed by</th>
 								</tr>
 								<tr>
-									<td>Date</td>
-									<td>Nombre raisonnable d’heures en entreprise</td>
-									<td>% de l’intensité de travail habituelle</td>
-									<td>prévu le</td>
+									<td>Date of consultation</td>
+									<td>Reasonable number of hours at work</td>
+									<td>% of usual work intensity</td>
+									<td>Next assessment planned for</td>
 									<td/>
 								</tr>
 								<tr>
-									<td>01.02.2010</td>
-									<td>0 h/jour</td>
+									<td>01/02/2010</td>
+									<td>0 h/day</td>
 									<td>0%</td>
-									<td>0%</td>
-									<td>03.02.2010</td>
+									<td>03/02/2010</td>
+									<td>Dr. med. E. Mergency, Registrar</td>
 								</tr>
 							</tbody>
 						</table>
@@ -200,7 +199,7 @@ History:
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
 							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-							<text>0 h/jour avec une charge de 0% de l'intensité normal du travail à partir du 01.02.2010 au 03.02.2010</text>
+							<text>0 h/day with a load of 0% of the usual intensity of work from 01/02/2010 until 03/02/2010</text>
 							<statusCode code="completed"/>
 							<effectiveTime>
 								<low value="20100201"/>
@@ -216,7 +215,7 @@ History:
 											<prefix>Dr. med.</prefix>
 											<given>E.</given>
 											<family>Mergency</family>
-											<suffix>Médecin assistant</suffix>
+											<suffix>Registrar</suffix>
 										</name>
 									</assignedPerson>
 								</assignedEntity>
@@ -227,27 +226,27 @@ History:
 			</component>
 			<!-- 
 			********************************************************
-			  Evaluation actuelle
+			  Current assessment of the capacity to work
 			********************************************************
 			-->
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.AktuelleArbeitsfähigkeit"/>
-					<title>Evaluation actuelle de la capacité de travail</title>
+					<title>Current assessment of the capacity to work</title>
 					<text>
 							<table>
 								<tbody>
 									<tr>
-										<th>Capacité de travail global</th>
+										<th>Overall capacity to work</th>
 										<th>0%</th>
 									</tr>
 									<tr>
-										<td>Valable de / à</td>
-										<td>01.02.2010 - 03.02.2010</td>
+										<td>Valid (from/until)</td>
+										<td>01/02/2010 - 03/02/2010</td>
 									</tr>
 									<tr>
-										<td>Cas déclaré en tant que</td>
-										<td>accident/maladie professionnelle</td>
+										<td>Case filed as</td>
+										<td>Accident / occupational disease</td>
 									</tr>
 								</tbody>
 							</table>						
@@ -256,7 +255,7 @@ History:
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.AktuelleArbeitsfähigkeitL3"/>
 							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-							<text>Capacité de travail en totale: 0% (valable du 01/02/2010 au 03.02.2010)</text>
+							<text>Overall capacity to work: 0% (valid from 01/02/2010 until 03/02/2010)</text>
 							<statusCode code="completed"/>
 							<effectiveTime>
 								<low value="20100201"/>
@@ -271,7 +270,7 @@ History:
 											<prefix>Dr. med.</prefix>
 											<given>E.</given>
 											<family>Mergency</family>
-											<suffix>Médecin assistant</suffix>
+											<suffix>Registrar</suffix>
 										</name>
 									</assignedPerson>
 								</assignedEntity>
@@ -279,14 +278,14 @@ History:
 						</observation>
 					</entry>
 					<entry>
-						<!-- eMedidoc Observation Template: Schadeninformationen -->
+						<!-- eMedidoc Observation Template: Accident information -->
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoL3"/>
-							<!-- Schadennummer -->
+							<!-- Claim No. -->
 							<id extension="5.12006.08.3" root="2.16.756.5.30.1.100.3.1.1"/>
-							<!-- Anmeldeart -->
+							<!-- type of notification -->
 							<code code="U" codeSystem="2.16.756.5.30.1.100.3.2.2" displayName="Unfall"/>
-							<!-- Schadendatum -->
+							<!-- claim date -->
 							<effectiveTime nullFlavor="UNK" />
 						</observation>
 					</entry>
@@ -294,23 +293,23 @@ History:
 			</component>
 			<!-- 
 			********************************************************
-			  Bitte an Employeur
+			  Request to employer
 			********************************************************
 			-->
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2905.BitteAnArbeitgeber"/>
-					<title>Requête à l’employeur</title>
+					<title>Request to employer</title>
 					<text>
 						<content>
-							- Prendre contact avec le médecin traitant<br/>
+							- Contact the treating doctor (with the consent of the patient)<br/>
 						</content>
 					</text>
 					<entry>
 						<!-- eMedidoc Observation Template: BitteAnArbeitgeberL3 -->
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2905.BitteAnArbeitgeberL3"/>
-							<!-- Strukturierte Angabe "Bitte An Arbeitgeber" -->
+							<!-- structured declaration "Request to employer" -->
 							<code code="A" codeSystem="2.16.756.5.30.1.100.3.2.5" />
 						</observation>
 					</entry>
@@ -318,7 +317,7 @@ History:
 						<!-- eMedidoc Observation Template: BitteAnArbeitgeberL3 -->
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2905.BitteAnArbeitgeberL3"/>
-							<!-- Strukturierte Angabe "Bitte An Arbeitgeber" -->
+							<!-- structured declaration "Request to employer" -->
 							<code code="K" codeSystem="2.16.756.5.30.1.100.3.2.5" />
 						</observation>
 					</entry>
@@ -326,32 +325,24 @@ History:
 			</component>
 			<!-- 
 			********************************************************
-			  Remarques
+			  Remarks
 			********************************************************
 			-->
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
-					<title>Remarques</title>
+					<title>Remarks</title>
 					<text>
-						<content>Néant<br/>
-							<br/>
+						<content>
+							None<br/>
 						</content>
-						<table>
-							<tbody>
-								<tr>
-									<td>Statut d'emploi:</td>
-									<td>salariées</td>
-								</tr>
-							</tbody>
-						</table>
 					</text>
 					<entry>
-						<!-- CDA-CH Observation Template: Erwerbstatus -->
+						<!-- CDA-CH Observation Template: Employment status -->
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
-							<!-- Strukturierte Angabe "Erwerbstatus" -->
+							<!-- structured declaration "Employment status" -->
 							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
 						</observation>
 					</entry>
@@ -360,5 +351,3 @@ History:
 		</structuredBody>
 	</component>
 </ClinicalDocument>
-
-
