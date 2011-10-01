@@ -11,6 +11,7 @@ History:
 09.09.2010: Tony Schaller, medshare GmbH (erste Übersetzungen Französisch)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+01.10.2011: Tony Schaller, medshare GmbH (erste Übersetzungen englisch/italienisch, aber noch nicht vollständig)
 
 ********************************************************
 -->
@@ -41,6 +42,8 @@ reusable templates
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xhtml:h1 class="title" lang="de_ch">CDA-CH Medikationstemplate</xhtml:h1>
 	<xhtml:h1 class="title" lang="fr_ch">Modèle pour médication CDA-CH</xhtml:h1>
+	<xhtml:h1 class="title" lang="it_ch">CDA-CH Template medicazioni</xhtml:h1>
+	<xhtml:h1 class="title" lang="en">CDA-CH Medication Template</xhtml:h1>
 	<ns prefix='cda' uri='urn:hl7-org:v3'/>
 	<ns prefix='sdtc' uri='urn:hl7-org:sdtc'/>
 	<ns prefix='xsi' uri='http://www.w3.org/2001/XMLSchema-instance'/>
@@ -48,23 +51,25 @@ reusable templates
 	<!-- documentation of external references -->
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">Entities référencées</xhtml:h2>
+	<xhtml:h2 class="reference" lang="it_ch">Entities referenziate</xhtml:h2>
+	<xhtml:h2 class="reference" lang="en">Referenced entities</xhtml:h2>
 	<xhtml:ul id="reference">
-		<xhtml:li>ent-hl7-cda-ch_vitalsigns</xhtml:li>
-		<xhtml:li>cda-ch_medication-doc.ent</xhtml:li>
 		<xhtml:li>cda-ch_medication-section.ent</xhtml:li>
-		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
-		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</xhtml:li>
+		<xhtml:li>cda-ch_medication-doc.ent</xhtml:li>
+		<xhtml:li>ent-hl7-cda-ch_vitalsigns</xhtml:li>
 		<xhtml:li>cda-ch.ent</xhtml:li>
 		<xhtml:li>vhitg-ruleset.ent</xhtml:li>
+		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
+		<xhtml:li>1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</xhtml:li>
 	</xhtml:ul>
 
 	<!-- reusable templates -->
-	&ent-hl7-cda-ch_vitalsigns;
-	&ent-hl7-cda-ch_medication-doc;
 	&ent-hl7-cda-ch_medication-section;
-	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;
-	&ent-ihe-pcc-1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2;
+	&ent-hl7-cda-ch_medication-doc;
+	&ent-hl7-cda-ch_vitalsigns;
 	&ent-hl7-cda-ch;
 	&ent-hl7-vhitg-ruleset;
+	&ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2;
+	&ent-ihe-pcc-1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2;
 	
 </schema>

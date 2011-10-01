@@ -6,6 +6,7 @@ Schematron rules for HL7 CDA-CH, V1.2 documents containing vital signs
 History:
 13.03.2011: Tony Schaller, medshare GmbH (ausgelagert aus cda-ch_medication-doc.ent)
 06.04.2011: Tony Schaller, medshare GmbH (Erweiterungen für ALIS-Connect Casestat und Publikation in SVN Repository der HL7 Benutzergruppe Schweiz)
+01.10.2011: Tony Schaller, medshare GmbH (erste Übersetzungen englisch/italienisch, aber noch nicht vollständig)
 
 ********************************************************
 -->
@@ -29,12 +30,14 @@ History:
 		<!--
 		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
 		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+<xhtml:p lang='en'>totranslate: english</xhtml:p>
 		-->
 		<assert id="cda-ch_vitalsigns-0101" test="count(cda:administrativeGenderCode)&gt;0">
 			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Beim Patient fehlt die Angabe des Geschlechts</xhtml:p>
 			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'indication du sexe manque pour le patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+<xhtml:p lang='en'>totranslate: english</xhtml:p>
 			-->
 		</assert>
 		<assert id="cda-ch_vitalsigns-0102" test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@codeSystem=&quot;2.16.840.1.113883.5.1&quot;">
@@ -42,6 +45,7 @@ History:
 			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Codesystem non valable pour l'indication du sexe du patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+<xhtml:p lang='en'>totranslate: english</xhtml:p>
 			-->
 		</assert>
 		<assert id="cda-ch_vitalsigns-0103" test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@codeSystemName=&quot;AdministrativeGender&quot;]/code/@value">
@@ -49,6 +53,7 @@ History:
 			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Indication non valable pour le sexe du patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+<xhtml:p lang='en'>totranslate: english</xhtml:p>
 			-->
 		</assert>
 		<assert id="cda-ch_vitalsigns-0104" test="count(cda:birthTime)&gt;0">
@@ -56,6 +61,7 @@ History:
 			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'indication de la date de naissance manque pour le patient</xhtml:p>
 			<!--
 			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
+<xhtml:p lang='en'>totranslate: english</xhtml:p>
 			-->
 		</assert>
 	</rule>

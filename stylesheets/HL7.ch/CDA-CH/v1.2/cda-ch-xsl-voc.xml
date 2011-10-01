@@ -9,6 +9,7 @@ History:
 13.09.2010: Tony Schaller, medshare GmbH (Weitere Übersetzungen)
 09.12.2010: Tony Schaller, medshare GmbH (Weitere Übersetzungen, insbesondere infolge der CDA Dokumente für Suva)
 28.09.2011: Tony Schaller, medshare GmbH (English translation)
+01.10.2011: Tony Schaller, medshare GmbH (Italian translation)
 
 ********************************************************
 -->
@@ -272,17 +273,17 @@ History:
 
   <text language='de_ch' value='Entity' displayName='Entity'/>
   <text language='fr_ch' value='Entity' displayName='Entity'/>
-  <text language='it_ch' value='Entity' displayName='entity tbd it'/>
+  <text language='it_ch' value='Entity' displayName='Entity'/>
   <text language='en' value='Entity' displayName='Entity'/>
 
   <text language='de_ch' value='File' displayName='Dateiname'/>
   <text language='fr_ch' value='File' displayName='Fichier'/>
-  <text language='it_ch' value='File' displayName='File tbd it'/>
+  <text language='it_ch' value='File' displayName='File'/>
   <text language='en' value='File' displayName='File'/>
   
   <text language='de_ch' value='Version' displayName='Version'/>
   <text language='fr_ch' value='Version' displayName='Version'/>
-  <text language='it_ch' value='Version' displayName='version tbd it'/>
+  <text language='it_ch' value='Version' displayName='Versione'/>
   <text language='en' value='Version' displayName='Version'/>
 
   <text language='de_ch' value='Rule' displayName='Regel'/>
@@ -307,13 +308,13 @@ History:
 
   <text language='de_ch' value='Description' displayName='Beschreibung'/>
   <text language='fr_ch' value='Description' displayName='Description'/>
-  <text language='it_ch' value='Description' displayName='descritpiton tbd it'/>
+  <text language='it_ch' value='Description' displayName='Descrizione'/>
   <text language='en' value='Description' displayName='Description'/>
   
   <text language='de_ch' value='error' displayName='Fehler'/>
   <text language='fr_ch' value='error' displayName='Erreur'/>
   <text language='it_ch' value='error' displayName='Errore'/>
-  <text language='it_ch' value='error' displayName='Error'/>
+  <text language='en' value='error' displayName='Error'/>
 
   <text language='de_ch' value='warning' displayName='Warnung'/>
   <text language='fr_ch' value='warning' displayName='Alerte'/>
@@ -322,7 +323,7 @@ History:
 
   <text language='de_ch' value='information' displayName='Information'/>
   <text language='fr_ch' value='information' displayName='Information'/>
-  <text language='it_ch' value='information' displayName='Informazioni'/>
+  <text language='it_ch' value='information' displayName='Informazione'/>
   <text language='en' value='information' displayName='Information'/>
   
 </localization>

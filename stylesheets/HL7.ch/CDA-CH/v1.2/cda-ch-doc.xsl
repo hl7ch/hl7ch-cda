@@ -11,6 +11,7 @@ Dieser Parameter kann mittels Angabe als Xslt Argument beim XSL Transformer ange
 History:
 11.02.2010 Created by oliver egger, visionary ag
 23.01.2011 Changed by Tony Schaller, medshare GmbH (Variables xsl:template match not allowed when using .Net XslCompiledTransform.Transform -> select in template not in match)
+01.10.2011 Changed by Tony Schaller, medshare GmbH (enhancements for English and Italian translation of Schematrons)
 ********************************************************
 -->
 <xsl:stylesheet version="2.0"
@@ -34,7 +35,7 @@ History:
 			<head>
 				<xsl:if test="xhtml:h1">
 					<title>
-						<xsl:value-of select="xhtml:h1"/>
+						<xsl:value-of select="xhtml:h1[@lang=$language]"/>
 					</title>
 				</xsl:if>
 				<meta http-equiv = "content-type" content = "application/xhtml+xml; charset=UTF-8" />
@@ -103,7 +104,7 @@ History:
 						<thead>
 							<tr>
 								<th class="label1" width="10%">
-									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Entity']/@displayName"/>
 									<xsl:text>:</xsl:text>
 								</th>
 								<th class="value1">
@@ -114,7 +115,7 @@ History:
 						<tbody>
 							<tr>
 								<td class="label1">
-									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='File']/@displayName"/>
 									<xsl:text>:</xsl:text>
 								</td>
 								<td>
@@ -123,7 +124,7 @@ History:
 							</tr>
 							<tr>
 								<td class="label1">
-									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Version']/@displayName"/>
 									<xsl:text>:</xsl:text>
 								</td>
 								<td>
@@ -148,14 +149,14 @@ History:
 				<thead>
 					<tr>
 						<th class="label1" width="10%">
-							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Rule']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Rule']/@displayName"/>
 							<xsl:text>:</xsl:text>
 						</th>
 						<th class="value1">
 							<xsl:value-of select="@id" />
 						</th>
 						<th class="label2" width="10%">
-							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Role']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Role']/@displayName"/>
 							<xsl:text>:</xsl:text>
 						</th>
 						<th class="value2" width="10%">
@@ -164,10 +165,10 @@ History:
 									<xsl:variable name="role">
 										<xsl:value-of select="@role"/>
 									</xsl:variable>
-									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value=$role]/@displayName"/>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$role]/@displayName"/>
 								</xsl:when>
 								<xsl:otherwise>
-									<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='error']/@displayName"/>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='error']/@displayName"/>
 								</xsl:otherwise>
 							</xsl:choose>
 						</th>
@@ -176,7 +177,7 @@ History:
 				<tbody>
 					<tr>
 						<td class="label1">
-							<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Assert']/@displayName"/>
+							<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assert']/@displayName"/>
 							<xsl:text>:</xsl:text>
 						</td>
 						<td colspan="3">
@@ -195,7 +196,7 @@ History:
 			<xsl:when test="string(@lang)=$language or string(@lang)=''">
 				<tr>
 					<td>
-						<xsl:value-of select="document('cda-ch-xsl-doc-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/>
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/>
 					</td>
 					<td colspan="3">
 						<xsl:value-of select="."/>
