@@ -1,15 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Exemple de cas «téléscopage» CDA-CH-II
-Rapport de sortie d’hôpital (soins ambulatoires) conformément à CDA-CH plus Medication Template CDA-CH-II
+Caso pratico "Tamponamento" CDA-CH-II
+Rapporto di uscita dall'ambulatorio dell'ospedale secondo CDA-CH più template medica-zioni CDA-CH-II
 
 History:
 12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
-09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
-30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
+06.10.2011: Tony Schaller, medshare GmbH (Italienische Übersetzung)
 
 ********************************************************
 -->
@@ -23,35 +22,35 @@ History:
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
 	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
 	<id extension="69604928-C7F4-4E0F-AB13-4774F33DA938" root="2.16.756.5.30.1.1.1.1"/>
-	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1"/>
-	<title>Rapport de sortie d’hôpital </title>
+	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" displayName="Riassunto a uscita"/>
+	<title>Rapporto di uscita dell'ospedale</title>
 	<effectiveTime value="20100201"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
-	<languageCode code="fr-CH"/>
+	<languageCode code="it-CH"/>
 	<setId extension="69604928-C7F4-4E0F-AB13-4774F33DA938" root="2.16.756.5.30.1.1.1.1"/>
 	<versionNumber value="1"/>
 	<recordTarget>
 		<patientRole>
 			<id extension="123.71.332.115" root="2.16.756.5.31"/>
 			<addr use="HP">
-				<streetName>Chemin du calvaire</streetName>
+				<streetName>Leidensweg</streetName>
 				<houseNumber>10</houseNumber>
 				<postalCode>9876</postalCode>
-				<city>Hameau des malades</city>
+				<city>Specimendorf</city>
 			</addr>
 			<telecom use="HP" value="tel:+41.32.685.12.34"/>
 			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
 			<patient>
 				<name>
-					<given>Jean</given>
-					<family>DUPONT</family>
+					<given>Max</given>
+					<family>MUSTER</family>
 				</name>
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
 				<id extension="7605555555555" root="1.3.88"/>
-				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<name>Ospedale cantonale, Clinica di chirurgia e ortopedia</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -61,29 +60,29 @@ History:
 		<assignedAuthor>
 			<id extension="7605555555555" root="1.3.88"/>
 			<addr use="WP">
-				<streetName>Rue de l’hôpital</streetName>
+				<streetName>Spitalstr.</streetName>
 				<houseNumber>33</houseNumber>
 				<postalCode>1234</postalCode>
-				<city>Villemodèle</city>
+				<city>Musterstadt</city>
 			</addr>
 			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
 			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
-			<telecom use="PUB" value="http:www.hopital-cantonal.ch"/>
+			<telecom use="PUB" value="http:www.kantonales-spital.ch"/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
 					<given>E.</given>
 					<family>Mergency</family>
-					<suffix>Médecin assistant</suffix>
+					<suffix>Medico assistente</suffix>
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<name>Ospedale cantonale, Clinica di chirurgia</name>
 				<addr use="WP">
-					<streetName>Rue de l’hôpital</streetName>
+					<streetName>Spitalstr.</streetName>
 					<houseNumber>33</houseNumber>
 					<postalCode>1234</postalCode>
-					<city>Villemodèle</city>
+					<city>Musterstadt</city>
 				</addr>
 			</representedOrganization>
 		</assignedAuthor>
@@ -92,12 +91,12 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<id extension="7605555555555" root="1.3.88"/>
-				<name>Hôpital cantonal, Clinique de chirurgie</name>
+				<name>Ospedale cantonale, Clinica di chirurgia</name>
 				<addr use="WP">
-					<streetName>Rue de l’hôpital</streetName>
+					<streetName>Spitalstr.</streetName>
 					<houseNumber>33</houseNumber>
 					<postalCode>1234</postalCode>
-					<city>Villemodèle</city>
+					<city>Musterstadt</city>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
@@ -110,9 +109,9 @@ History:
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
-					<given>S.</given>
-					<family>Hiérarchique</family>
-					<suffix>Médecin-chef Chirurgie</suffix>
+					<given>V.</given>
+					<family>Orgesetzt</family>
+					<suffix>Capo-servizio chirurgia</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -127,7 +126,7 @@ History:
 					<prefix>Dr. med.</prefix>
 					<given>E.</given>
 					<family>Mergency</family>
-					<suffix>Médecin assistant</suffix>
+					<suffix>Medico assistente</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -151,41 +150,41 @@ History:
 		<structuredBody>
 			<!--
 			********************************************************
-			Préambule
+			Preambolo
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Préambule</title>
+					<title>Preambolo</title>
 					<text>
 						<content>
-							Rapport abrégé – Consultation ambulatoire<br/>
+							Rapporto breve consultazione ambulatoriale<br/>
 						</content>
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Liste des diagnostics
+			Lista delle diagnosi
 			********************************************************
 			-->
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagList"/>
 					<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
-					<title>Diagnostics</title>
+					<title>Diagnosi</title>
 					<text>
 						<table>
 							<tbody>
 								<tr>
-									<th>Diagnostic</th>
+									<th>Diagnosi</th>
 									<th>Code</th>
-									<th>System de code</th>
+									<th>Sistema di codifica</th>
 								</tr>
 								<tr>
 									<td>
 										<content ID='d1'>
-											Distorsion des vertèbres cervicales, statut consécutif à une téléscopage précédée d’un épisode de malaise et de vertige
+											Distorsione rachide cervicale, esito da tamponamento con precedente episodio di vertigini e nausea
 										</content>
 									</td>
 									<td></td>
@@ -194,7 +193,7 @@ History:
 								<tr>
 									<td>
 										<content ID='d2'>
-											Fibrillation auriculaire paroxystique avec hyperthyroïdie connue; sans traitement depuis juillet 2009
+											Dall'anamnesi risulta ipertiroidismo con fibrillazione atriale parossistica; dal luglio 09 nessuna terapia
 										</content>
 									</td>
 									<td></td>
@@ -203,7 +202,7 @@ History:
 								<tr>
 									<td>
 										<content ID='d3'>
-											Allergie à la pénicilline connue (exanthème médicamenteux généralisé après traitement à la pénicilline en 1986)
+											Dall'anamnesi risulta allergia alla penicillina (esantema generalizzato da farmaco dopo trattamento con penicillina nel 1986)
 										</content>
 									</td>
 									<td></td>
@@ -212,7 +211,7 @@ History:
 								<tr>
 									<td>
 										<content ID='d4'>
-											Statut consécutif à l’implantation d’une endoprothèse de la hanche gauche en juillet 2009 en présence d’une coxarthrose primaire gauche
+											Esito da impianto di endoprotesi dell'anca sinistra, luglio 2009, per coxartrosi primaria sinistra
 										</content>
 									</td>
 									<td></td>
@@ -226,7 +225,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK'/>
 							<text>
-								Distorsion des vertèbres cervicales, statut consécutif à une téléscopage précédée d’un épisode de malaise et de vertige
+								Distorsione rachide cervicale, esito da tamponamento con precedente episodio di vertigini e nausea
 								<reference value='#d1'/>
 							</text>
 							<effectiveTime value="20100201"/>
@@ -237,7 +236,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK'/>
 							<text>
-								Fibrillation auriculaire paroxystique avec hyperthyroïdie connue; sans traitement depuis juillet 2009
+								Dall'anamnesi risulta ipertiroidismo con fibrillazione atriale parossistica; dal luglio 09 nessuna terapia.
 								<reference value='#d2'/>
 							</text>
 							<effectiveTime value="20100201"/>
@@ -248,7 +247,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK'/>
 							<text>
-								Allergie à la pénicilline connue (exanthème médicamenteux généralisé après traitement à la pénicilline en 1986)
+								Dall'anamnesi risulta allergia alla penicillina (esantema generalizzato da farmaco dopo trattamento con penicillina nel 1986)
 								<reference value='#d3'/>
 							</text>
 							<effectiveTime value="20100201"/>
@@ -259,7 +258,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
 							<code nullFlavor='UNK'/>
 							<text>
-								Statut consécutif à l’implantation d’une endoprothèse de la hanche gauche en juillet 2009 en présence d’une coxarthrose primaire gauche
+								Esito da impianto di endoprotesi dell'anca sinistra, luglio 2009, per coxartrosi primaria sinistra
 								<reference value='#d4'/>
 							</text>
 							<effectiveTime value="20100201"/>
@@ -269,117 +268,117 @@ History:
 			</component>
 			<!--
 			********************************************************
-			Anamnèse
+			Anamnesi
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Anamnèse</title>
+					<title>Anamnesi</title>
 					<text>
 						<content>
-							Pendant un trajet sur l’autoroute entre le Hameau des malades et Villemodèle, survenue soudaine d’un malaise accompagné de vertiges et de tachycardie. Le patient tente de se garer sur le trottoir, mais le véhicule qui le suivait ne parvient pas à freiner à temps. Il se produit une téléscopage à faible vitesse.<br />
-							Pas d’amnésie, pas de perte de connaissance selon les renseignements fournis par le passager.<br />
-							Selon l’EPR, existence manifeste d’une hyperthyroïdie, traitée par Carbimazole 5mg/jour; arrêt du traitement 6 mois avant. Faits confirmés par le patient.
+							Mentre viaggiava sulla strada fra Specimendorf e Musterstadt improvvisa comparsa di nausea, vertigini e tachicardia. Il paziente ha cercato di parcheggiare sul marciapiede; il veicolo dopo di lui non è però riuscito a frenare in tempo; si è verificato un tamponamento a bassa velocità.<br />
+							Nessuna amnesia, in base alla testimonianza del passeggero nessuna perdita di coscienza.<br />
+							Dall'EPR risulta evidente un ipertiroidismo, trattato con carbimazolo 5 mg/die fino a 6 mesi fa. Interrogato in proposito, il paziente lo ha confermato.
 						</content>
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Statut lors de l’admission
+			Stato all'entrata
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Statut lors de l’admission</title>
+					<title>Stato all'entrata</title>
 					<text>
-						Bonne orientation temporelle, spatiale et autopsychique.<br />
-						Douleurs au niveau de la nuque, irradiant en direction de la tête. Mobilité de la colonne cervicale légèrement amoindrie du fait des douleurs. Absence de symptômes neurologiques, notamment de symptômes radiculaires.<br />
-						Pas de symptômes cardio-pulmonaires. Tension 135/83; pouls régulier: 86. Aucun autre signe pathologique.
+						Corretto orientamento spazio-temporale e autopsichico.<br />
+						Dolori nella regione della nuca con irradiazione nella testa. Mobilità del rachide cervicale leggermente diminuita a causa del dolore. Risultati neurologici senza note distintive, in particolare nessun sintomo radicolare. <br />
+						Nessuna particolarità cardiopolmonare. Pressione 135/83; polso 86 regolare. Nessun altro riscontro patologico.
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			ECG
+			ECD
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>ECG</title>
+					<title>ECD</title>
 					<text>
-						Rythme sinusal normo carde, 85/min.; excitation normale 
+						Ritmo sinusale normocardico, 85/min.; eccitazione senza particolarità
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Radiographie de la colonne cervicale ap/latéral, cliché transbuccal de l’apophyse odontoïde
+			Radiografia rachide cervicale ap/l, dens, transbuccal
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Radiographie de la colonne cervicale ap/latéral, cliché transbuccal de l’apophyse odontoïde</title>
+					<title>Radiografia rachide cervicale ap/l, dens, transbuccal</title>
 					<text>
-						Pas de signes de lésions osseuses. Légère scoliose convexe à droite.
+						Nessun segno di lesioni ossee. Leggera scoliosi destro convessa.
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Traitement
+			Procedura
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Traitement</title>
+					<title>Procedura</title>
 					<text>
-						Thérapie médicamenteuse (voir Médicaments lors de la sortie de l'hôpital)<br />
-						Physiothérapie<br />
-						Visite de suivi auprès du médecin de famille le 4.2.2010 avec contrôle des taux thyroïdiens, R-test avec élucidation de la question de la fibrillation auriculaire paroxystique.<br />
-						Incapacité de travail à 100% jusqu’au 4.2.2010
+						Terapia farmacologica (vedi Medicamenti all uscita dall’ospedale)<br />
+						Fisioterapia<br />
+						Follow-up dal medico di famiglia il 4.2.2010 con controllo dei valori della tiroide, R-Test e domanda circa fibrillazioni ventricolari parossistiche.<br />
+						Incapacità lavorativa 100% fino al 4.2.2010
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Médicaments lors de la sortie
+			Medicamenti all uscita dall’ospedale
 			********************************************************
 			-->
 			<component>
 				<section>
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediList' />
-					<code code='10183-2' codeSystem='2.16.840.1.113883.6.1' displayName='Médicaments lors de la sortie de l'hôpital' />
-					<title>Médicaments lors de la sortie de l'hôpital</title>
+					<code code='10183-2' codeSystem='2.16.840.1.113883.6.1' displayName='Medicamenti all uscita dall’ospedale' />
+					<title>Medicamenti all uscita dall’ospedale</title>
 					<text>
 						<table>
 							<thead>
 								<tr>
-									<th>Substance</th>
+									<th>Preparato</th>
 									<th>ATC WHO</th>
-									<th>Dosage</th>
+									<th>Dosaggio</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>
-										<content ID='m1'>Dafalgan Comprimés. 500 mg</content>
+										<content ID='m1'>Dafalgan compr. 500 mg</content>
 									</td>
-									<td>Paracétamol</td>
+									<td>Paracetamolo</td>
 									<td>2-2-2</td>
 								</tr>
 								<tr>
 									<td>
-										<content ID='m2'>Sirdalud Comprimés. 4 mg</content>
+										<content ID='m2'>Sirdalud compr. 4 mg</content>
 									</td>
-									<td>Tizanidine</td>
+									<td>Tizanidina</td>
 									<td>1-1-1</td>
 								</tr>
 								<tr>
 									<td>
-										<content ID='m3'>Lisinopril HCT Streuli Comprimés. 10/12.5 mg</content>
+										<content ID='m3'>Lisinopril HCT Streuli compr. 10/12.5 mg</content>
 									</td>
-									<td>Lisinopril et Diurétiques</td>
+									<td>Lisinopril e diuretici</td>
 									<td>1-0-0</td>
 								</tr>
 							</tbody>
@@ -394,18 +393,18 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680475040232' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Terapia farmacologica'/>
 							<text>
 								<reference value='#m1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Periodo attivo -->
 								<low nullFlavor='UNK' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 2-2-2 -->
+								<!-- Dosaggio 2-2-2 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -418,7 +417,7 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='rondine, per via orale' />
 							<doseQuantity>
 								<!-- 2 pezzo (ad esempio Compresse) -->
 								<center value='2' unit='1'/>
@@ -452,18 +451,18 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680446910359' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Terapia farmacologica'/>
 							<text>
 								<reference value='#m2'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Periodo attivo -->
 								<low value='20100201'/>
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-1-1-1 -->
+								<!-- Dosaggio 1-1-1-1 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -480,7 +479,7 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='rondine, per via orale' />
 							<doseQuantity>
 								<!-- 1 pezzo (ad esempio Compresse) -->
 								<center value='1' unit='1'/>
@@ -514,23 +513,23 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680569020096' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Terapia farmacologica'/>
 							<text>
 								<reference value='#m3'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Periodo attivo -->
 								<low nullFlavor='UNK' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-0-0 -->
+								<!-- Dosaggio 1-0-0 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='rondine, per via orale' />
 							<doseQuantity>
 								<!-- 1 pezzo (ad esempio Compresse) -->
 								<center value='1' unit='1'/>
@@ -559,15 +558,15 @@ History:
 			</component>
 			<!--
 			********************************************************
-			Remarques
+			Osservazioni
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Remarques</title>
+					<title>Osservazioni</title>
 					<text>
 						<content>
-							En présence d’une hyperthyroïdie avec fibrillation auriculaire connue, une nouvelle fibrillation auriculaire pourrait être la cause de l’épisode de malaise, de vertiges et de tachycardie. Nous recommandons en conséquence la mesure des paramètres thyroïdiens ainsi que la réalisation d’un R-test.
+							Dato che dall'anamnesi risulta un ipertiroidismo con fibrillazione ventricolare, una nuova fibrillazione ventricolare potrebbe essere la causa dell'episodio di nausea, vertigini e tachicardia. Consigliamo perciò la determinazione dei parametri tiroidei e l'esecuzione di un R-Test.
 						</content>
 					</text>
 				</section>

@@ -31,12 +31,12 @@ History:
 
   <text language="de-CH" value="Creation" displayName="Erstellt am"/>
 	<text language="fr-CH" value="Creation" displayName="Création"/>
-  <text language="it-CH" value="Creation" displayName="Generata"/>
+  <text language="it-CH" value="Creation" displayName="Redatto"/>
   <text language="en" value="Creation" displayName="Creation"/>
 
   <text language="de-CH" value="Sex" displayName="Geschlecht"/>
 	<text language="fr-CH" value="Sex" displayName="Sexe"/>
-  <text language="it-CH" value="Sex" displayName="Genere"/>
+  <text language="it-CH" value="Sex" displayName="Sesso"/>
 	<text language="en" value="Sex" displayName="Sex"/>
 
   <text language="de-CH" value="man" displayName="männlich"/>
@@ -201,12 +201,12 @@ History:
 
   <text language="de-CH" value="home" displayName="p"/>
   <text language="fr-CH" value="home" displayName="p"/>
-  <text language="it-CH" value="home" displayName="C"/>
+  <text language="it-CH" value="home" displayName="casa"/>
   <text language="en" value="home" displayName="HP"/>
 
   <text language="de-CH" value="workplace" displayName="g"/>
   <text language="fr-CH" value="workplace" displayName="travail"/>
-  <text language="it-CH" value="workplace" displayName="U"/>
+  <text language="it-CH" value="workplace" displayName="ufficio"/>
   <text language="en" value="workplace" displayName="WP"/>
 
   <text language="de-CH" value="Company" displayName="Betrieb"/>
@@ -229,27 +229,27 @@ History:
   <text language="it-CH" value="HL7.ch" displayName="Gruppo utenti svizzeri HL7"/>
   <text language="en" value="HL7.ch" displayName="HL7 affiliate Switzerland"/>
 
-  <text language="de-CH" value="CustNo" displayName="Kundennummer"/>
+  <text language="de-CH" value="CustNo" displayName="Numero cliente"/>
   <text language="fr-CH" value="CustNo" displayName="Numéro client"/>
   <text language="it-CH" value="CustNo" displayName="Numero cliente"/>
   <text language="en" value="CustNo" displayName="Customer No."/>
 
   <text language="de-CH" value="2.16.756.5.31" displayName="Alte AHV Nr"/>
   <text language="fr-CH" value="2.16.756.5.31" displayName="No AVS ancien"/>
-  <text language="it-CH" value="2.16.756.5.31" displayName="No AVS vecchio"/>
+  <text language="it-CH" value="2.16.756.5.31" displayName="Vecchio n. AVS"/>
   <text language="en" value="2.16.756.5.31" displayName="Old Swiss SSN"/>
 
   <text language="de-CH" value="2.16.756.5.32" displayName="Neue AHV Nr"/>
   <text language="fr-CH" value="2.16.756.5.32" displayName="No AVS neuve"/>
-  <text language="it-CH" value="2.16.756.5.32" displayName="No AVS nuovo"/>
+  <text language="it-CH" value="2.16.756.5.32" displayName="Nuovo n. AVS"/>
   <text language="en" value="2.16.756.5.32" displayName="New Swiss SSN"/>
 
-  <text language="de-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva Schadennummer"/>
+  <text language="de-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva numero claim"/>
   <text language="fr-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Numéro de sinistre Suva"/>
-  <text language="it-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Numero d'infortunio Suva"/>
+  <text language="it-CH" value="2.16.756.5.30.1.100.3.1.1" displayName="Numero claim Suva"/>
   <text language="en" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva claim No."/>
   
-  <text language="de-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva Kundennummer"/>
+  <text language="de-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva Numero cliente"/>
   <text language="fr-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Numéro client Suva"/>
   <text language="it-CH" value="2.16.756.5.30.1.100.3.7.1" displayName="Numero cliente Suva"/>
   <text language="en" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva customer No."/>

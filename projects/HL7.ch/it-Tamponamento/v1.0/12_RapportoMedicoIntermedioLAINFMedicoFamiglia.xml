@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+Caso pratico "Tamponamento" CDA-CH-II
+Rapporto medico intermedio LAINF per la SUVA
+
+History:
+12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+06.10.2011: Tony Schaller, medshare GmbH (Italienische Übersetzung)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../projects/Suva/eMedidoc/v2.0/suva.css'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId extension="2928" root="2.16.756.5.30.1.100.2.1"/>
+	<id root="2.16.756.5.30.1.100.2" extension="4304ED8F-14BF-459E-B3BE-7F5EF626C470" />
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
+	<!-- Regel CDLN: Als Sistema di codifica für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
+	<title>Rapporto medico intermedio</title>
+	<effectiveTime value="20100215103249"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="it-CH"/>
+	<setId root="2.16.756.5.30.1.1.1.1" extension="4304ED8F-14BF-459E-B3BE-7F5EF626C470" />
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+			<!-- Suva OID per numero claim -->
+			<id extension="123.73.423.123" root="2.16.756.5.31"/>
+			<!-- OID per vecchio n. AVS -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>Muster</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19480611"/>
+				<maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Dr. med. Allzeit Bereit, Studio collettivo CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code="PCP" codeSystem="2.16.756.5.30.2.1.1.1"/>
+		<time value="20100215103249"/>
+		<assignedAuthor>
+			<id extension="7608888888888" root="1.3.88"/>
+			<addr use="WP">
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.234.55.66"/>
+			<telecom use="PUB" value="fax:+41.32.234.66.77"/>
+			<telecom use="PUB" value="mailto:bereit@gruppenpraxis.ch"/>
+			<telecom use="PUB" value="http://www.gruppenpraxis.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Specialista in medicina generale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Studio collettivo CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7608888888888" root="1.3.88"/>
+				<name>Studio collettivo CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<id extension="A05" root="2.16.756.5.30.1.100.1.1"/>
+			<informationRecipient>
+				<name>Agenzia Suva Aarau</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<addr use="WP">
+					<streetAddressLine>Rain 35</streetAddressLine>
+					<postalCode>5001</postalCode>
+					<city>Aarau</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20100215103249"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="2099988871229" root="1.3.88"/>
+			<id extension="7608888888888" root="1.3.88"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode='IND'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Empl"/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<id extension='987654321' root='2.16.756.5.30.1.100.9999999'/>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<associatedPerson>
+				<name nullFlavor='UNK' />
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Brötligeber AG</name>
+				<telecom nullFlavor='UNK' />
+				<addr use="WP">
+					<streetAddressLine>Lohnbüro</streetAddressLine>
+					<streetAddressLine>Postfach</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Zürich</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfo"/>
+					<title>Informazioni relative al sinistro</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>Data del sinistro</td>
+									<td>01.02.2010</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedidoc Observation Template: Motivo del trattamento -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoL3"/>
+							<!-- numero claim -->
+							<id extension="8.79462.08.1" root="2.16.756.5.30.1.100.3.1.1"/>
+							<!-- Tipo di registrazione -->
+							<code code="U" codeSystem="2.16.756.5.30.1.100.3.2.2" displayName="Infortunio"/>
+							<!-- Data del sinistro -->
+							<effectiveTime value="20100201"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagList"/>
+					<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
+					<title>Diagnosi</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Diagnosi</th>
+									<th>Code</th>
+									<th>Sistema di codifica</th>
+									<th>Data</th>
+									<th>Giudicato da</th>
+								</tr>
+								<tr>
+									<td>Distorsione del rachide cervicale dopo tamponamento</td>
+									<td>S13.4</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+								<tr>
+									<td>Ipertiroidismo</td>
+									<td>E05.9</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+								<tr>
+									<td>Fibrillazione atriale parossistica</td>
+									<td>I48.10</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+								<tr>
+									<td>Ipertonia arteriosa</td>
+									<td>I10.0</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+								<tr>
+									<td>Coxartrosi primaria</td>
+									<td>M16.0</td>
+									<td>ICD-10</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+								<tr>
+									<td>Esito da impianto di endoprotesi dell'anca sinistra, luglio 2009</td>
+									<td></td>
+									<td></td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Musterhausen</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="S13.4" codeSystem="1.2.276.0.76.5.388" />
+							<text>Ipertiroidismo</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="E05.9" codeSystem="1.2.276.0.76.5.388" />
+							<text>Distorsione del rachide cervicale dopo tamponamento</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="I48.10" codeSystem="1.2.276.0.76.5.388" />
+							<text>Fibrillazione atriale parossistica</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="I10.0" codeSystem="1.2.276.0.76.5.388" />
+							<text>Ipertonia arteriosa</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL3"/>
+							<!-- icd10gm2011 DIMDI -->
+							<code code="M16.0" codeSystem="1.2.276.0.76.5.388" />
+							<text>Coxartrosi primaria</text>
+							<effectiveTime value='20080603'/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagL1"/>
+							<code nullFlavor='UNK'/>
+							<text>Esito da impianto di endoprotesi dell'anca sinistra, luglio 2009</text>
+							<effectiveTime value='20080603'/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Verlauf"/>
+					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
+					<title>Decorso</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Decorso passata e condizione attuale (soggettivamente e oggettivamente)</th>
+									<th>Influenzare sul decorso della guarigione da di fattori estranei a l'incidente</th>
+									<th>Data</th>
+									<th>Giudicato da</th>
+								</tr>
+								<tr>
+									<td>
+										Tamponamento il 1.2.2010 ore 14:30 circa sulla strada fra Specimendorf e Musterstadt: Il paziente ha dovuto fermare il veicolo a causa di un malessere, dovuto probabilmente a un nuovo episodio di fibrillazione atriale tachicardica. Trattamento ambulatoriale all'ospedale cantonale. Dall'esame radiologico convenzionale non è risultato nessun indizio di una frattura nella regione del rachide cervicale.<br />
+										Soggettivamente il paziente lamenta ancora qualche disturbo, i dolori alla cervicale si manifestano in funzione del movimento (soprattutto alla fine della rotazione verso destra) come pure se sta seduto per lungo tempo.<br />
+										Oggettivamente mobilità del rachide cervicale leggermente diminuita. Per il resto stato somatico senza particolarità patologiche.<br />
+									</td>
+									<td>Sì, comorbidità cardiaca, ipertiroidismo</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Specialista in medicina generale</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlauf"/>
+							<code code='47519-4' codeSystem='2.16.840.1.113883.6.1'/>
+							<statusCode code='completed'/>
+							<effectiveTime value="20100215"/>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+							<component typeCode='COMP'>
+								<!-- Bisheriger Verlauf und gegenwärtiger Zustand (subjektiv und objektiv) -->
+								<procedure moodCode="EVN" classCode="PROC">
+									<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlaufProc"/>
+									<code nullFlavor="UNK" />
+									<text>
+										Tamponamento il 1.2.2010 ore 14:30 circa sulla strada fra Specimendorf e Musterstadt: Il paziente ha dovuto fermare il veicolo a causa di un malessere, dovuto probabilmente a un nuovo episodio di fibrillazione atriale tachicardica. Trattamento ambulatoriale all'ospedale cantonale. Dall'esame radiologico convenzionale non è risultato nessun indizio di una frattura nella regione del rachide cervicale.
+										Soggettivamente il paziente lamenta ancora qualche disturbo, i dolori alla cervicale si manifestano in funzione del movimento (soprattutto alla fine della rotazione verso destra) come pure se sta seduto per lungo tempo.
+										Oggettivamente mobilità del rachide cervicale leggermente diminuita. Per il resto stato somatico senza particolarità patologiche.
+									</text>
+								</procedure>
+							</component>
+							<component typeCode='COMP'>
+								<!-- Beeinflussung Heilungsverlauf durch unfallfremde Faktoren -->
+								<observation moodCode="EVN" classCode="OBS">
+									<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BishVerlaufExtFaktoren"/>
+									<!-- Specifiche strutturato -->
+									<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+									<text>Sì, comorbidità cardiaca, ipertiroidismo</text>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2" extension="Suva.2928.Therapie"/>
+					<title>Terapia</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>Trattamento attuale:</td>
+									<td>
+										Tizanidina 4mg 3 volte al giorno; paracetamolo 1000 mg se necessario fino a 3 volte al giorno<br />
+										Fisioterapia di sostegno: analgesica, miglioramento della mobilità, sviluppo muscolare
+									</td>
+								</tr>
+								<tr>
+									<td>Proposte (ulteriore trattamento, esami radiologici, esame del medico di circondario):</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Con quali intervalli hanno luogo le consulenze:</td>
+									<td>2-10 giorni</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- Trattamento attuale -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.AktBehandlung"/>
+							<!-- Specifiche strutturato -->
+							<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>
+								Tizanidina 4mg 3 mal tägl.; Paracetamolo 1000 mg bei Bedarf bis 3 mal tägl, Fisioterapia di sostegno: analgesica, miglioramento della mobilità, sviluppo muscolare
+							</text>
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Terapia Vorschläge -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.Vorschläge"/>
+							<!-- Specifiche strutturato -->
+							<code code="U" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Con quali intervalli hanno luogo le consulenze -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.Beratungsintervall"/>
+							<!-- Specifiche strutturato -->
+							<code code="Y" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+							<text>2-10 giorni</text>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitList"/>
+					<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Capacità lavorativa</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Consultazione</th>
+									<th>Durata presenza</th>
+									<th>Carico di lavoro</th>
+									<th>Prossima valutazione</th>
+									<th>Giudicato da</th>
+								</tr>
+								<tr>
+									<td>Data</td>
+									<td>Orari ragionevoli al giorno nella gestione</td>
+									<td>% der üblichen Arbeitszeit</td>
+									<td>prevista am</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>01.02.2010</td>
+									<td>0 Ore al giorno</td>
+									<td>0%</td>
+									<td>03.02.2010</td>
+									<td>Dr. med. E. Mergency, Pronto soccorso Ospedale cantonale</td>
+								</tr>
+								<tr>
+									<td>03.02.2010</td>
+									<td>4 Ore al giorno</td>
+									<td>100%</td>
+									<td>15.02.2010</td>
+									<td>Dr. med. Allzeit Bereit, Specialista in medicina generale</td>
+								</tr>
+								<tr>
+									<td>15.02.2010</td>
+									<td>6 Ore al giorno</td>
+									<td>100%</td>
+									<td></td>
+									<td>Dr. med. Allzeit Bereit, Specialista in medicina generale</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>arbeitsunfähig</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20100201"/>
+								<high value="20100203"/>
+							</effectiveTime>
+							<value xsi:type='CE' code="0" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="0" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>E.</given>
+											<family>Mergency</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<name>Ospedale cantonale, Clinica di chirurgia</name>
+										<addr use="WP">
+											<streetName>Spitalstr.</streetName>
+											<houseNumber>33</houseNumber>
+											<postalCode>1234</postalCode>
+											<city>Musterstadt</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>mezza giornata</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20100203"/>
+								<high value="20100215"/>
+							</effectiveTime>
+							<value xsi:type='CE' code="4" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="100" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.ArbeitsfähigkeitL3"/>
+							<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+							<text>75%</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20100215"/>
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<value xsi:type='CE' code="6" codeSystem="2.16.756.5.30.2.1.1.6.1" />
+							<interpretationCode code="100" codeSystem="2.16.756.5.30.2.1.1.7.1" />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Specialista in medicina generale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschluss"/>
+					<title>Conclusione del trattamento</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>Conclusione del trattamento:</td>
+									<td>15.03.2010</td>
+									<td>prevista</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Altri informazioni:
+						<table>
+							<tbody>
+								<tr>
+									<td>Assegnazione di un lavoro adeguato in azienda:</td>
+									<td>No</td>
+								</tr>
+								<tr>
+									<td>Menomazione permanente, in caso affermativo, quale:</td>
+									<td>No</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- eMedidoc Encounter Template: Conclusione del trattamento (moodCode="EVN": definitiv, moodCode="INT": prevista) -->
+						<encounter classCode="ENC" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.BehAbschlussL3"/>
+							<code code="8649-6" codeSystem="2.16.840.1.113883.6.1" />
+							<effectiveTime>
+								<low nullFlavor='NA'/>
+								<high value='20100315'/>
+							</effectiveTime>
+							<performer>
+								<assignedEntity>
+									<id nullFlavor="UNK" />
+									<representedOrganization>
+										<name>Musterspital</name>
+										<addr use="WP">
+											<streetName>Hospitalgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<postalCode>8888</postalCode>
+											<city>Musterhausen</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+					<entry>
+						<!-- Zuweisung Arbeit -->
+						<procedure moodCode="EVN" classCode="PROC">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.ZuweisungArbeit"/>
+							<!-- Specifiche strutturato -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</procedure>
+					</entry>
+					<entry>
+						<!-- Bleibende Nachteile -->
+						<observation moodCode="EVN" classCode="OBS">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="Suva.2928.BleibendeNachteile"/>
+							<!-- Specifiche strutturato -->
+							<code code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<title>Osservazioni</title>
+					<text>
+						<content>Nessuna<br/>
+							<br/>
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<td>Occupazione di stato:</td>
+									<td>Lavoro</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- CDA-CH Observation Template: Occupazione di stato -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Erwerbstatus"/>
+							<!-- Specifiche strutturato "Occupazione di stato" -->
+							<code code="E" codeSystem="2.16.756.5.30.1.100.3.2.4" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
