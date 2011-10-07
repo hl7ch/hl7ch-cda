@@ -7,12 +7,13 @@ History:
 13.03.2011: Tony Schaller, medshare GmbH (ausgelagert aus cda-ch_medication-doc.ent)
 06.04.2011: Tony Schaller, medshare GmbH (Erweiterungen für ALIS-Connect Casestat und Publikation in SVN Repository der HL7 Benutzergruppe Schweiz)
 01.10.2011: Tony Schaller, medshare GmbH (erste Übersetzungen englisch/italienisch, aber noch nicht vollständig)
+06.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
 -->
 <pattern name="CDA CH medication document template">
 	<!-- Entity Information -->
-	<xhtml:ul id="cda-ch_vitalsigns" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<xhtml:ul id="cda-ch_vitalsigns">
 		<xhtml:li class="filename">cda-ch_vitalsigns.ent</xhtml:li>
 		<xhtml:li class="version">1.2</xhtml:li>
 	</xhtml:ul>
@@ -23,46 +24,41 @@ History:
 	-->
 	<rule context="cda:patientRole/cda:patient">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">CDA-CH Vitalzeichen Header Templates</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Vitalzeichen Templates</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">CDA-CH Signes vitaux Header Templates</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Signes vitaux Header Templates</xhtml:p>
-		<!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">CDA-CH Vitalzeichen Header Templates</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Vitalzeichen)</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">CDA-CH Signes vitaux Header Templates</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (Signes vitaux)</xhtml:p>
+
+		<xhtml:h3 lang='it_ch'>CDA-CH Segni vitali Header Templates</xhtml:h3>
+		<xhtml:p lang='it_ch'>Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Segni vitali)</xhtml:p>
+
+		<xhtml:h3 lang='en'>CDA-CH Header Templates</xhtml:h3>
+		<xhtml:p lang='en'>The following rules describe the tests on the CDA-CH Header Templates (Vital signs)</xhtml:p>
+
 		<assert id="cda-ch_vitalsigns-0101" test="count(cda:administrativeGenderCode)&gt;0">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Beim Patient fehlt die Angabe des Geschlechts</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'indication du sexe manque pour le patient</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Beim Patient fehlt die Angabe des Geschlechts</xhtml:p>
+			<xhtml:p lang="fr_ch">L'indication du sexe manque pour le patient</xhtml:p>
+			<xhtml:p lang='it_ch'>Manca l'indicazione del sesso del paziente</xhtml:p>
+			<xhtml:p lang='en'>The patient’s sex entry is missing</xhtml:p>
 		</assert>
 		<assert id="cda-ch_vitalsigns-0102" test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@codeSystem=&quot;2.16.840.1.113883.5.1&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Ungültiges Codesystem bei der Angabe des Geschlechts des Patienten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Codesystem non valable pour l'indication du sexe du patient</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Ungültiges Codesystem bei der Angabe des Geschlechts des Patienten</xhtml:p>
+			<xhtml:p lang="fr_ch">Codesystem non valable pour l'indication du sexe du patient</xhtml:p>
+			<xhtml:p lang='it_ch'>Code System non valido per l'indicazione del sesso del paziente</xhtml:p>
+			<xhtml:p lang='en'>Invalid code system for patient’s sex entry</xhtml:p>
 		</assert>
 		<assert id="cda-ch_vitalsigns-0103" test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@codeSystemName=&quot;AdministrativeGender&quot;]/code/@value">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Ungültige Angabe beim Geschlecht des Patienten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Indication non valable pour le sexe du patient</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Ungültige Angabe beim Geschlecht des Patienten</xhtml:p>
+			<xhtml:p lang="fr_ch">Indication non valable pour le sexe du patient</xhtml:p>
+			<xhtml:p lang='it_ch'>Indicazione non valida per il sesso del paziente</xhtml:p>
+			<xhtml:p lang='en'>Invalid entry for the patient’s sex</xhtml:p>
 		</assert>
 		<assert id="cda-ch_vitalsigns-0104" test="count(cda:birthTime)&gt;0">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Beim Patient fehlt die Angabe des Geburtsdatums</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'indication de la date de naissance manque pour le patient</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Beim Patient fehlt die Angabe des Geburtsdatums</xhtml:p>
+			<xhtml:p lang="fr_ch">L'indication de la date de naissance manque pour le patient</xhtml:p>
+			<xhtml:p lang='it_ch'>Manca l'indicazione della data di nascita del paziente</xhtml:p>
+			<xhtml:p lang='en'>The patient’s date of birth entry is missing</xhtml:p>
 		</assert>
 	</rule>
 </pattern>

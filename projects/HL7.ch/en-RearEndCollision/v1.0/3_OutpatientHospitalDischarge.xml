@@ -9,6 +9,7 @@ History:
 17/05/2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 20/05/2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 30/09/2011: Tony Schaller, medshare GmbH (English translation)
+06/10/2011: Tony Schaller, medshare GmbH (Changes according to the translated Schematron rules)
 
 ********************************************************
 -->
@@ -172,7 +173,7 @@ History:
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagList"/>
 					<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
-					<title>Diagnosis</title>
+					<title>Diagnoses</title>
 					<text>
 						<table>
 							<tbody>

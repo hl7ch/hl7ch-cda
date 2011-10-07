@@ -11,12 +11,13 @@ History:
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 01.10.2011: Tony Schaller, medshare GmbH (erste Übersetzungen englisch/italienisch, aber noch nicht vollständig)
+06.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
 -->
 <pattern name="CDA CH medication document template">
 	<!-- Entity Information -->
-	<xhtml:ul id="cda-ch_medication-doc" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<xhtml:ul id="cda-ch_medication-doc">
 		<xhtml:li class="filename">cda-ch_medication-doc.ent</xhtml:li>
 		<xhtml:li class="version">1.2</xhtml:li>
 	</xhtml:ul>
@@ -35,70 +36,60 @@ History:
 	-->
 	<rule context="cda:ClinicalDocument">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">CDA-CH Medication Body Templates</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Body Templates</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">CDA-CH Medication Body Templates</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Body Templates</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
+		<xhtml:h3 lang="de_ch">CDA-CH Medication Body Templates</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Body Templates</xhtml:p>
+		
+		<xhtml:h3 lang="fr_ch">CDA-CH Medication Body Templates</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Body Templates</xhtml:p>
+		
+		<xhtml:h3 lang='it_ch'>CDA-CH Medication Body Templates</xhtml:h3>
+		<xhtml:p lang='it_ch'>Le regole seguenti descrivono i controlli per i CDA-CH Medication Body Templates</xhtml:p>
+		
+		<xhtml:h3 lang='en'>CDA-CH Medication Body Templates</xhtml:h3>
+		<xhtml:p lang='en'>The following rules describe the tests on the CDA-CH Medication Body Templates</xhtml:p>
 
 		<!-- Existenz der Sections prüfen -->
 		<assert id="cda-ch_medication-doc-0201" test="descendant::cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.MediList&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument muss eine Section 'Medikation' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir une section 'Médication'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument muss eine Section 'Medikation' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir une section 'Médication'</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA deve contenere una sezione 'Medicazione'</xhtml:p>
+			<xhtml:p lang='en'>The CDA document must contain a 'Medication' section</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-doc-0202" test="descendant::cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.VitalSignList&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument sollte eine Section 'Vitalzeichen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir une section 'Signes vitaux'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument sollte eine Section 'Vitalzeichen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir une section 'Signes vitaux'</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA dovrebbe contenere una sezione 'Segni vitali'</xhtml:p>
+			<xhtml:p lang='en'>The CDA document should contain a 'Vital sign' section</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-doc-0203" test="descendant::cda:templateId[(@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.DiagList&quot;) or (@root=&quot;1.3.6.1.4.1.19376.1.5.3.1.3.6&quot;)]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument sollte eine Section 'Diagnosenliste' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir une section 'Liste de diagnostics' afin que d'éventuelles interactions puissent être interprétées correctement par le destinataire</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument sollte eine Section 'Diagnosenliste' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir une section 'Liste de diagnostics' afin que d'éventuelles interactions puissent être interprétées correctement par le destinataire</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA dovrebbe contenere una sezione 'Lista diagnosi', in modo che le eventuali interazioni possano essere interpretate correttamente dal destinatario</xhtml:p>
+			<xhtml:p lang='en'>The CDA document should contain a 'List of diagnoses' section so that the recipient can interpret any interactions correctly</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-doc-0204" test="descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3137-7&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument sollte das 'Vitalzeichen' Gewicht enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir le 'signe vital' Poids</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument sollte das 'Vitalzeichen' Gewicht enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir le 'signe vital' Poids</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA dovrebbe contenere il 'Segno vitale' peso</xhtml:p>
+			<xhtml:p lang='en'>The CDA document should contain the 'Vital sign' weight</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-doc-0205" test="descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3141-9&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument sollte das 'Vitalzeichen' Grösse enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir le 'signe vital' Taille</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument sollte das 'Vitalzeichen' Grösse enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir le 'signe vital' Taille</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA dovrebbe contenere il 'Segno vitale' altezza</xhtml:p>
+			<xhtml:p lang='en'>The CDA document should contain the 'Vital sign' height</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-doc-0206" test="cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=&quot;M&quot; or cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=&quot;UN&quot; or (cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode/@code=&quot;F&quot; and descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;11449-6&quot;])">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument sollte das 'Vitalzeichen' Schwangerschaft/Trimenon enthalten (nur bei Frauen)</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir le 'signe vital' Grossesse/Trimestre (uniquement pour les femmes)</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument sollte das 'Vitalzeichen' Schwangerschaft/Trimenon enthalten (nur bei Frauen)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir le 'signe vital' Grossesse/Trimestre (uniquement pour les femmes)</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA dovrebbe contenere il 'Segno vitale' gravidanza/trimestre (solo per le donne)</xhtml:p>
+			<xhtml:p lang='en'>The CDA document should contain the 'Vital sign' pregnancy/trimester (for women only)</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-doc-0207" test="descendant::cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Body.IntoleranceList&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das CDA Dokument sollte eine Section 'Allergien und Unverträglichkeiten' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le document CDA doit contenir une section 'Allergies et intolérances' afin que d'éventuelles interactions puissent être interprétées correctement par le destinataire</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-<xhtml:p lang='en'>totranslate: english</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Das CDA Dokument sollte eine Section 'Allergien und Unverträglichkeiten' enthalten, damit allfällige Interaktionen vom Empfänger richtig interpretiert werden können</xhtml:p>
+			<xhtml:p lang="fr_ch">Le document CDA doit contenir une section 'Allergies et intolérances' afin que d'éventuelles interactions puissent être interprétées correctement par le destinataire</xhtml:p>
+			<xhtml:p lang='it_ch'>Il documento CDA dovrebbe contenere una sezione 'Allergie e intolleranze', in modo che le eventuali interazioni possano essere interpretate correttamente dal destinatario</xhtml:p>
+			<xhtml:p lang='en'>The CDA document should contain an 'Allergies and intolerances' section so that the recipient can interpret any interactions correctly</xhtml:p>
 		</assert>
 	</rule>
 </pattern>
