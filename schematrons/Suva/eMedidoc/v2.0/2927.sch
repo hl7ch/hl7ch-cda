@@ -12,6 +12,7 @@ History:
 31.08.2010: Tony Schaller, medshare GmbH (emedidoc in eMedidoc umbenannt)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+07.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
 -->
@@ -44,6 +45,8 @@ project templates
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xhtml:h1 class="title" lang="de_ch">Suva eMedidoc Arztzeugnis UVG</xhtml:h1>
 	<xhtml:h1 class="title" lang="fr_ch">Suva eMedidoc certificat de médecin UVG</xhtml:h1>
+	<xhtml:h1 class="title" lang="it_ch">Suva eMedidoc Certificato medico LAINF</xhtml:h1>
+	<xhtml:h1 class="title" lang="en">Suva eMedidoc LAA medical certificate</xhtml:h1>
 	<ns prefix='cda' uri='urn:hl7-org:v3'/>
 	<ns prefix='sdtc' uri='urn:hl7-org:sdtc'/>
 	<ns prefix='xsi' uri='http://www.w3.org/2001/XMLSchema-instance'/>
@@ -51,6 +54,8 @@ project templates
 	<!-- documentation of external references -->
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">Entities référencées</xhtml:h2>
+	<xhtml:h2 class="reference" lang="it_ch">Entities referenziate</xhtml:h2>
+	<xhtml:h2 class="reference" lang="en">Referenced entities</xhtml:h2>
 	<xhtml:ul id="reference">
 		<xhtml:li>2927.ent</xhtml:li>
 		<xhtml:li>eMedidoc.ent</xhtml:li>

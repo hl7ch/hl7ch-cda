@@ -13,319 +13,924 @@ History:
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 30.09.2011: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
+07.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
---><pattern><!-- Entity Information --><xhtml:ul id="suva_eMedidoc" xmlns:xhtml="http://www.w3.org/1999/xhtml"><xhtml:li class="filename">eMedidoc.ent</xhtml:li><xhtml:li class="version">1.0</xhtml:li></xhtml:ul><!--
+-->
+<pattern>
+	<!-- Entity Information -->
+	<xhtml:ul id="suva_eMedidoc">
+		<xhtml:li class="filename">eMedidoc.ent</xhtml:li>
+		<xhtml:li class="version">1.0</xhtml:li>
+	</xhtml:ul>
+	<!--
 	********************************************************
 	Headerinformationen (section)
 	********************************************************
-	--><rule context="cda:ClinicalDocument"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: CDA Header</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für Suva eMedidoc</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: CDA Header</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles 'CDA Header' pour Suva eMedidoc</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0101" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die OID Domain für Suva Formularnummern muss lauten: 2.16.756.5.30.1.100.2.1</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'OID Domain pour numéros de formulaire de la Suva doit être: 2.16.756.5.30.1.100.2.1</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0102" test="//cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die OID Domain für die Codierung von CDA Dokumenten muss lauten: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'OID Domain pour le codage de documents CDA doit être: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="cda:ClinicalDocument">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: CDA Header</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für Suva eMedidoc</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: CDA Header</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles 'CDA Header' pour Suva eMedidoc</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: CDA Header</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Header' per Suva eMedidoc</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: CDA Header</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Header tests on Suva eMedidoc</xhtml:p>
+		<assert id="suva_eMedidoc-0101" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.1&quot;">
+			<xhtml:p lang="de_ch">Die OID Domain für Suva Formularnummern muss lauten: 2.16.756.5.30.1.100.2.1</xhtml:p>
+			<xhtml:p lang="fr_ch">L'OID Domain pour numéros de formulaire de la Suva doit être: 2.16.756.5.30.1.100.2.1</xhtml:p>
+			<xhtml:p lang="it_ch">L'OID Domain per i numeri form. Suva deve essere: 2.16.756.5.30.1.100.2.1</xhtml:p>
+			<xhtml:p lang="en">The OID domain for the Suva form number must read: 2.16.756.5.30.1.100.2.1</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0102" test="//cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
+			<xhtml:p lang="de_ch">Die OID Domain für die Codierung von CDA Dokumenten muss lauten: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
+			<xhtml:p lang="fr_ch">L'OID Domain pour le codage de documents CDA doit être: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
+			<xhtml:p lang="it_ch">L'OID Domain per la codificazione dei documenti CDA deve essere: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
+			<xhtml:p lang="en">The OID domain for the coding of CDA documents must read: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation (section)
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfo&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Schadeninformationen</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Schadeninformationen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Information sur le sinistre</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0201" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent être déclarées comme 'section' dans le CDA Body</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0202" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0203" test="(cda:title=&quot;Schadeninformationen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0204" test="(cda:title=&quot;Information sur le sinistre&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen section title 'Information sur le sinistre' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un section title 'Information sur le sinistre'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0205" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen das Schadendatum enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir la date de l'accident</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfo&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Schadeninformationen</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Schadeninformationen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Information sur le sinistre</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: Informazioni relative al sinistro</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Informazioni relative al sinistro'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Claim information</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information'</xhtml:p>
+		<assert id="suva_eMedidoc-0201" test="self::cda:section">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono essere dichiarate come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">Claim information must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0202" test="cda:text">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0203" test="(cda:title=&quot;Schadeninformationen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: Le informazioni relative al sinistro devono contenere un section title 'Schadeninformationen'</xhtml:p>
+			<xhtml:p lang="en">German: Claim information must contain a 'Schadeninformationen' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0204" test="(cda:title=&quot;Information sur le sinistre&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: Schadeninformationen müssen einen section title 'Information sur le sinistre' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: Les informations sur le sinistre doivent contenir un section title 'Information sur le sinistre'</xhtml:p>
+			<xhtml:p lang="it_ch">Francese: Le informazioni relative al sinistro devono contenere un section title 'Information sur le sinistre'</xhtml:p>
+			<xhtml:p lang="en">French: Claim information must contain a 'Information sur le sinistre' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0205" test="(cda:title=&quot;Informazioni relative al sinistro&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Schadeninformationen müssen einen section title 'Informazioni relative al sinistro' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: Les informations sur le sinistre doivent contenir un section title 'Informazioni relative al sinistro'</xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: Le informazioni relative al sinistro devono contenere un section title 'Informazioni relative al sinistro'</xhtml:p>
+			<xhtml:p lang="en">Italian: Claim information must contain a 'Informazioni relative al sinistro' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0206" test="(cda:title=&quot;Claim information&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Schadeninformationen müssen einen section title 'Claim information' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: Les informations sur le sinistre doivent contenir un section title 'Claim information'</xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: Le informazioni relative al sinistro devono contenere un section title 'Claim information'</xhtml:p>
+			<xhtml:p lang="en">English: Claim information must contain a 'Claim information' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0207" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen das Schadendatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir la date de l'accident</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono includere la data del sinistro</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a claim date</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation Behandlungsmeldung (section)
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoBehandlungsmeldung&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Schadeninformationen Minimum</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den minimal geforderten 'Schadeninformationen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Informations minimales sur le sinistre</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre' (minimum requis)</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0301" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent être déclarées comme 'section' dans le CDA Body</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0302" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0303" test="(cda:title=&quot;Schadeninformationen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0304" test="(cda:title=&quot;Information sur le sinistre&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen section title 'Information sur le sinistre' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un section title 'Information sur le sinistre'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0305" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and (cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot; or cda:templateId/@extension=&quot;eMedidoc.SchadenInfoMinL3&quot;)]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen das Schadendatum enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir la date de l'accident</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0306" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehandlungsmeldungL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Information sur le sinistre' eMedidoc doivent contenir des informations sur le traitement initial</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoBehandlungsmeldung&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Schadeninformationen Minimum</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den minimal geforderten 'Schadeninformationen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Informations minimales sur le sinistre</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre' (minimum requis)</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: informazioni minime sul sinistro</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro' (requisiti minimi)</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Minimal claim information</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on the minimally required 'Claim information'</xhtml:p>
+		<assert id="suva_eMedidoc-0301" test="self::cda:section">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono essere dichiarate come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">Claim information must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0302" test="cda:text">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">Claim informatoin must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0303" test="(cda:title=&quot;Schadeninformationen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: Le informazioni relative al sinistro devono contenere un section title 'Schadeninformationen'</xhtml:p>
+			<xhtml:p lang="en">German: Claim information must contain a 'Schadeninformationen' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0304" test="(cda:title=&quot;Information sur le sinistre&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: Schadeninformationen müssen einen section title 'Information sur le sinistre' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: Les informations sur le sinistre doivent contenir un section title 'Information sur le sinistre'</xhtml:p>
+			<xhtml:p lang="it_ch">Francese: Le informazioni relative al sinistro devono contenere un section title 'Information sur le sinistre'</xhtml:p>
+			<xhtml:p lang="en">French: Claim information must contain a 'Information sur le sinistre' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0305" test="(cda:title=&quot;Informazioni relative al sinistro&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Schadeninformationen müssen einen section title 'Informazioni relative al sinistro' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: Les informations sur le sinistre doivent contenir un section title 'Informazioni relative al sinistro'</xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: Le informazioni relative al sinistro devono contenere un section title 'Informazioni relative al sinistro'</xhtml:p>
+			<xhtml:p lang="en">Italian: Claim information must contain a 'Informazioni relative al sinistro' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0306" test="(cda:title=&quot;Claim information&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Schadeninformationen müssen einen section title 'Claim information' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: Les informations sur le sinistre doivent contenir un section title 'Claim information'</xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: Le informazioni relative al sinistro devono contenere un section title 'Claim information'</xhtml:p>
+			<xhtml:p lang="en">English: Claim information must contain a 'Claim information' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0307" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and (cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot; or cda:templateId/@extension=&quot;eMedidoc.SchadenInfoMinL3&quot;)]">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen das Schadendatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir la date de l'accident</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono includere la data del sinistro</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain the claim date</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0308" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehandlungsmeldungL3&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Information sur le sinistre' eMedidoc doivent contenir des informations sur le traitement initial</xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Informazioni relative al sinistro' eMedidoc devono contenere informazioni sul trattamento iniziale</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Claim information' must contain information about the initial treatment</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation: SchadenDatum, Anmeldeart (Rückfall als Anmeldeart)
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Schadeninformationen L3</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den 'Schadeninformationen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Informations minimales sur le sinistre L3</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0401" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das eMedidoc 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Date de l'accident' eMedidoc doit être déclarée comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0402" test="cda:id/@root=&quot;2.16.756.5.30.1.100.3.1.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen die externe Schadennummer der Suva enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir le numéro de sinistre externe de la Suva</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0403" test="cda:effectiveTime"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen ein 'Schadendatum' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir une 'Date de l'accident'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0404" test="cda:code/@codeSystem=&quot;2.16.756.5.30.1.100.3.2.2&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen eine Anmeldeart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.2')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un type de déclaration (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.2')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0405" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.2&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen eine Anmeldeart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.2')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un type de déclaration (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.2')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Schadeninformationen L3</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den 'Schadeninformationen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Informations minimales sur le sinistre L3</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: Informazioni relative al sinistro L3</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: L3 claim information</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information'</xhtml:p>
+		<assert id="suva_eMedidoc-0401" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Das eMedidoc 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Date de l'accident' eMedidoc doit être déclarée comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Data del sinistro' eMedidoc deve essere dichiarata come 'procedure' nel CDA Body (section 'Informazioni relative al sinistro')</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Claim date' must be declared as an 'Observation' in the CDA Body ('Claim information' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0402" test="cda:id/@root=&quot;2.16.756.5.30.1.100.3.1.1&quot;">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen die externe Schadennummer der Suva enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir le numéro de sinistre externe de la Suva</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono includere il numero di sinistro esterno della Suva</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain the Suva external claim number</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0403" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen ein 'Schadendatum' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir une 'Date de l'accident'</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono includere una 'Data del sinistro'</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a 'Claim date'</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0404" test="cda:code/@codeSystem=&quot;2.16.756.5.30.1.100.3.2.2&quot;">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen eine Anmeldeart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir un type de déclaration (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono contenere un tipo di annuncio (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a type of notification (valid value from the table of values '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0405" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.2&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen eine Anmeldeart enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir un type de déclaration (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono contenere un tipo di annuncio (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a type of notification (valid value from the table of values '2.16.756.5.30.1.100.3.2.2')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation: Minimal SchadenDatum
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoMinL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Schadeninformationen Minimum L3</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den minimal geforderten 'Schadeninformationen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Informations minimales sur le sinistre L3</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre' (minimum requis)</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0501" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das eMedidoc 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Date de l'accident' eMedidoc doit être déclarée comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0502" test="cda:effectiveTime"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen ein 'Schadendatum' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir une 'Date de l'accident'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoMinL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Schadeninformationen Minimum L3</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den minimal geforderten 'Schadeninformationen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Informations minimales sur le sinistre L3</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre' (minimum requis)</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: Informazioni minime relative al sinistro L3</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro' (requisiti minimi)</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: L3 minimal claim information</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on the minimally required 'Claim information'</xhtml:p>
+		<assert id="suva_eMedidoc-0501" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Das eMedidoc 'Schadendatum' muss als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Date de l'accident' eMedidoc doit être déclarée comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Data del sinistro' eMedidoc deve essere dichiarata come 'procedure' nel CDA Body (section 'Informazioni relative al sinistro')</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Claim date' must be declared as an 'Observation' in the CDA Body ('Claim information' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0502" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch">Schadeninformationen müssen ein 'Schadendatum' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir une 'Date de l'accident'</xhtml:p>
+			<xhtml:p lang="it_ch">Le informazioni relative al sinistro devono includere una 'Data del sinistro'</xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a 'Claim date'</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation: Erstbehandlung durch ausfüllenden Arzt
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.ErstbehandlungL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Schadeninformationen (Erstbehandlung)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den 'Schadeninformationen, Erstbehandlung'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Informations minimales sur le sinistre (traitement initial)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre, traitement initial'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0601" test="self::cda:encounter"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement initial doit être déclaré comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0602" test="cda:effectiveTime"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss ein Konsultationsdatum enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement initial doit contenir une date de consultation</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0603" test="cda:code/@codeSystem=&quot;2.16.756.5.30.1.100.3.2.3&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss die Angabe zur Inkonvenienz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.3')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement initial doit contenir une indication sur les inconvénients (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.3')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0604" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.3&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss die Angabe zur Inkonvenienz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.3')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement initial doit contenir une indication sur les inconvénients (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.3')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0605" test="count(cda:code)&lt;2"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Angabe zur Inkonvenienz bei der eMedidoc Erstbehandlung darf nur einmal vorkommen</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'indication des inconvénients dans le traitement initial eMedidoc ne doit être faite qu'une seule fois</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0606" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Traitement initial par le médecin qui remplit le formulaire: il faut indiquer au moins le nom du médecin ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.ErstbehandlungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Schadeninformationen (Erstbehandlung)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den 'Schadeninformationen, Erstbehandlung'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Informations minimales sur le sinistre (traitement initial)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre, traitement initial'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: informazioni relative al sinistro (trattamento iniziale)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro, trattamento iniziale'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Claim information (initial treatment)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information, initial treatment'</xhtml:p>
+		<assert id="suva_eMedidoc-0601" test="self::cda:encounter">
+			<xhtml:p lang="de_ch">Erstbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement initial doit être déclaré comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve essere dichiarato come 'encounter' nel CDA Body (section 'Informazioni relative al sinistro')</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must be declaired as an 'Encounter' in the CDA Body ('Claim information' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0602" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch">Erstbehandlung muss ein Konsultationsdatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement initial doit contenir une date de consultation</xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve includere una data di consultazione</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain a consultation date</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0603" test="cda:code/@codeSystem=&quot;2.16.756.5.30.1.100.3.2.3&quot;">
+			<xhtml:p lang="de_ch">Erstbehandlung muss die Angabe zur Inkonvenienz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement initial doit contenir une indication sur les inconvénients (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve contenere un'indicazione sugli inconvenienti (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain information about inconvenience (valid value from the table of values '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0604" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.3&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Erstbehandlung muss die Angabe zur Inkonvenienz enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement initial doit contenir une indication sur les inconvénients (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve contenere un'indicazione sugli inconvenienti (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain information about inconvenience (valid value from the table of values '2.16.756.5.30.1.100.3.2.3')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0605" test="count(cda:code)&lt;2">
+			<xhtml:p lang="de_ch">Die Angabe zur Inkonvenienz bei der eMedidoc Erstbehandlung darf nur einmal vorkommen</xhtml:p>
+			<xhtml:p lang="fr_ch">L'indication des inconvénients dans le traitement initial eMedidoc ne doit être faite qu'une seule fois</xhtml:p>
+			<xhtml:p lang="it_ch">L'indicazione degli inconvenienti nel trattamento iniziale eMedidoc può esserci una sola volta</xhtml:p>
+			<xhtml:p lang="en">Information about inconvenience during eMedidoc initial treatment must only appear once</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0606" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch">Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="fr_ch">Traitement initial par le médecin qui remplit le formulaire: il faut indiquer au moins le nom du médecin ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="it_ch">Trattamento iniziale da parte del medico che compila il formulario: si deve indicare almeno il nome del medico ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="en">Initial treatment by doctor completing the form: At least the doctor’s name must be entered ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation: Behandlungsmeldung durch ausfüllenden Arzt
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehandlungsmeldungL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Schadeninformationen (Behandlungsmeldung)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den 'Schadeninformationen, Behandlungsmeldung'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Informations minimales sur le sinistre (rapport de traitement)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre, rapport de traitement'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0701" test="self::cda:encounter"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsmeldung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport de traitement doit être déclaré comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0702" test="cda:effectiveTime"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsmeldung muss ein Konsultationsdatum enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport de traitement doit contenir une date de consultation</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0703" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsmeldung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Rapport de traitement par le médecin qui remplit le formulaire: il faut indiquer au moins le nom du médecin ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0704" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsmeldung muss einen narrativen Text enthalten (Wahrnehmung)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport de traitement doit contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehandlungsmeldungL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Schadeninformationen (Behandlungsmeldung)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den 'Schadeninformationen, Behandlungsmeldung'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Informations minimales sur le sinistre (rapport de traitement)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Information sur le sinistre, rapport de traitement'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: informazioni relative al sinistro (rapporto di trattamento)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro, rapporto di trattamento'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Claim information (notification of treatment)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information, notification of treatment'</xhtml:p>
+		<assert id="suva_eMedidoc-0701" test="self::cda:encounter">
+			<xhtml:p lang="de_ch">Behandlungsmeldung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport de traitement doit être déclaré comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto di trattamento deve essere dichiarato come 'encounter' nel CDA Body (section 'Informazioni relative al sinistro')</xhtml:p>
+			<xhtml:p lang="en">Notification of treatment has to be declared as an 'Encounter' in the CDA Body ('Claim information' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0702" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch">Behandlungsmeldung muss ein Konsultationsdatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport de traitement doit contenir une date de consultation</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto di trattamento deve includere una data di consultazione</xhtml:p>
+			<xhtml:p lang="en">Notification of treatment must contain a consultation date</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0703" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch">Behandlungsmeldung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="fr_ch">Rapport de traitement par le médecin qui remplit le formulaire: il faut indiquer au moins le nom du médecin ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="it_ch">Rapporto di trattamento a cura del medico che compila il formulario: si deve indicare almeno il nome del medico ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="en">Notification of treatment by doctor completing the form: At least the doctor’s name must be entered ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0704" test="cda:text">
+			<xhtml:p lang="de_ch">Behandlungsmeldung muss einen narrativen Text enthalten (Wahrnehmung)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport de traitement doit contenir un texte narratif (observation)</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto di trattamento deve contenere un testo narrativo (osservazioni)</xhtml:p>
+			<xhtml:p lang="en">Notification of treatment must contain a narrative text (Observation)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Allgemeinzustand: Besondere Wahrnehmungen
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BesoWahrn&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Allgemeinzustand (Besondere Wahrnehmungen)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Allgemeinzustand, Besondere Wahrnehmungen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Etat général (observations particulières)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Etat général, observations particulières'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0801" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Wahrnehmungen als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Observations particulières' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0802" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Wahrnehmungen müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Observations particulières' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0803" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Wahrnehmungen müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Observations particulières' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0804" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Wahrnehmungen müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Observations particulières' doivent contenir un texte narratif si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BesoWahrn&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Allgemeinzustand (Besondere Wahrnehmungen)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Allgemeinzustand, Besondere Wahrnehmungen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Etat général (observations particulières)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Etat général, observations particulières'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: stato generale (osservazioni particolari)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Stato generale, osservazioni particolari'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: General condition (Special observations)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'General condition, special observations'</xhtml:p>
+		<assert id="suva_eMedidoc-0801" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Besondere Wahrnehmungen als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Observations particulières' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p>
+			<xhtml:p lang="it_ch">Le osservazioni particolari devono essere dichiarate come 'observation' nel CDA Body (section 'Stato generale')</xhtml:p>
+			<xhtml:p lang="en">Special observations must be declared as an 'Observation' in the CDA Body ('General condition' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0802" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">Besondere Wahrnehmungen müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Observations particulières' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Le osservazioni particolari devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Special observations must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0803" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Besondere Wahrnehmungen müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Observations particulières' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Le osservazioni particolari devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Special observations must contain a structured entry (valid values from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0804" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">Besondere Wahrnehmungen müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Observations particulières' doivent contenir un texte narratif si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">Le osservazioni particolari devono contenere un testo narrativo, se code="Y"</xhtml:p>
+			<xhtml:p lang="en">Special observations must contain a narrative text if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Allgemeinzustand: Folgen von
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.FolgenVon&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Allgemeinzustand (Folgen von)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Allgemeinzustand, Folgen von'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Etat général (suites de)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Etat général, suites de'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-0901" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Folgen von als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Suites de' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0902" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Folgen von müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Suites de' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0903" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Folgen von müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Suites de' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-0904" test="(cda:code/@code=&quot;Y&quot; and cda:value/@xsi:type=&quot;ST&quot;) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Folgen von müssen einen narrativen Text im Element value enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Suites de' doivent contenir un texte narratif dans la Element value si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.FolgenVon&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Allgemeinzustand (Folgen von)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Allgemeinzustand, Folgen von'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Etat général (suites de)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Etat général, suites de'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: stato generale (conseguenze di)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Stato generale, conseguenze di'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: General condition (Sequelae of)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'General condition, sequelae of'</xhtml:p>
+		<assert id="suva_eMedidoc-0901" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Folgen von als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Suites de' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p>
+			<xhtml:p lang="it_ch">Le 'conseguenze di' devono essere dichiarate come 'observation' nel CDA Body (section 'Stato generale')</xhtml:p>
+			<xhtml:p lang="en">Sequelae of must be declared as an 'Observation' in the CDA Body ('General condition' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0902" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">Folgen von müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Suites de' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Le 'conseguenze di' devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Sequelae of must contain a structured entry (valid value from table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0903" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Folgen von müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Suites de' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Le 'conseguenze di' devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Sequelae of must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-0904" test="(cda:code/@code=&quot;Y&quot; and cda:value/@xsi:type=&quot;ST&quot;) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">Folgen von müssen einen narrativen Text im Element value enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Suites de' doivent contenir un texte narratif dans la Element value si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">Le 'conseguenze di' devono contenere un testo narrativo nell'elemento value se code="Y"</xhtml:p>
+			<xhtml:p lang="en">Sequelae of must contain a narrative text in the Value element if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Befund: Lokalbefund
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Lokalbefund&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Befund (Lokalbefund)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Befund, Lokalbefund'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Constations (constations locales)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Constations, constations locales'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1001" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Lokalbefund muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constations locales' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1002" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Lokalbefund muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constations locales' doivent contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Lokalbefund&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Befund (Lokalbefund)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Befund, Lokalbefund'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Constations (constations locales)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Constations, constations locales'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: referto (referto locale)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Referto, referto locale'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Findings (Local findings)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Findings, local findings'</xhtml:p>
+		<assert id="suva_eMedidoc-1001" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Lokalbefund muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Constations locales' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p>
+			<xhtml:p lang="it_ch">Il referto locale deve essere dichiarato come 'observation' nel CDA Body (section 'Stato generale')</xhtml:p>
+			<xhtml:p lang="en">Local findings must be declared as an 'Observation' in the CDA Body ('General condition' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1002" test="cda:text">
+			<xhtml:p lang="de_ch">Lokalbefund muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Constations locales' doivent contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">Il referto locale deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">Local findings must contain a narrative text</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Befund: Röntgenbefund
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Röntgenbefund&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Befund (Röntgenbefund)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Befund, Röntgenbefund'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Constations (constations radiologiques)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Constations, constations radiologiques'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1101" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Röntgenbefund muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constations radiologiques' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1102" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Röntgenbefund muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constations radiologiques' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- Verwende code="N" wenn kein Röntgen gemacht wurde--><assert id="suva_eMedidoc-1103" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Röntgenbefund muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Constations radiologiques' doivent contenir un texte narratif si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Röntgenbefund&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Befund (Röntgenbefund)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Befund, Röntgenbefund'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Constations (constations radiologiques)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Constations, constations radiologiques'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: referto (referto radiologico)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Referto, referto radiologico'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Findings (X-ray results)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Findings, X-ray results'</xhtml:p>
+		<assert id="suva_eMedidoc-1101" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Röntgenbefund muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Constations radiologiques' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p>
+			<xhtml:p lang="it_ch">Il referto radiologico deve essere dichiarato come 'observation' nel CDA Body (section 'Stato generale')</xhtml:p>
+			<xhtml:p lang="en">X-ray results must be declared as an 'Observation' in the CDA Body ('General condition' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1102" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Röntgenbefund muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Constations radiologiques' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Il referto radiologico deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">X-ray results must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<!-- Verwende code="N" wenn kein Röntgen gemacht wurde-->
+		<assert id="suva_eMedidoc-1103" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">Röntgenbefund muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Constations radiologiques' doivent contenir un texte narratif si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">Il referto radiologico deve contenere un testo narrativo, se code="Y"</xhtml:p>
+			<xhtml:p lang="en">X-ray results must contain a narrative text if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Diagnosen: siehe CDA-CH.Body.DiagList
 	********************************************************
-	--><!--
+	-->
+	<!--
 	********************************************************
 	Kausalität: Ausschliesslich Unfallfolgen
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Unfallfolgen&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Kausalität (Ausschliesslich Unfallfolgen)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Kausalität, Ausschliesslich Unfallfolgen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Causalité (exclusivement des suites d'accident)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Causalité, exclusivement des suites d'accident'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1201" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Unfallfolgen muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'suites d'accident' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1202" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Unfallfolgen muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'suites d'accident' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- Verwende code="Y" wenn ausschliesslich Unfallfolgen vorliegen--><assert id="suva_eMedidoc-1203" test="(cda:code/@code=&quot;N&quot; and cda:text) or (cda:code/@code!=&quot;N&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wenn nicht ausschliesslich Unfallfolgen vorliegen, muss die observation einen narrativen Text mit der Begründung enthalten (wenn der code="N" ist)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">S'il n'y a pas seulement des suites d'accident, l'observation doit contenir un texte narratif avec les explications (si le code ="N")</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Unfallfolgen&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Kausalität (Ausschliesslich Unfallfolgen)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Kausalität, Ausschliesslich Unfallfolgen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Causalité (exclusivement des suites d'accident)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Causalité, exclusivement des suites d'accident'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: causalità (esclusivamente conseguenze dell'infortunio)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Causalità, esclusivamente conseguenze dell'infortunio'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Causality (Sequelae of accident only)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Causality, sequelae of accident only'</xhtml:p>
+		<assert id="suva_eMedidoc-1201" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Unfallfolgen muss als 'observation' im CDA Body (section 'Allgemeinzustand') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'suites d'accident' doivent être déclarées comme 'observation' dans le CDA Body (section 'Etat général')</xhtml:p>
+			<xhtml:p lang="it_ch">Le conseguenze dell'infortunio devono essere dichiarate come 'observation' nel CDA Body (section 'Stato generale')</xhtml:p>
+			<xhtml:p lang="en">Sequelae of accident must be declared as an 'Observation' in the CDA Body ('General condition' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1202" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Unfallfolgen muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'suites d'accident' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Il referto radiologico deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Sequelae of accident must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<!-- Verwende code="Y" wenn ausschliesslich Unfallfolgen vorliegen-->
+		<assert id="suva_eMedidoc-1203" test="(cda:code/@code=&quot;N&quot; and cda:text) or (cda:code/@code!=&quot;N&quot;)">
+			<xhtml:p lang="de_ch">Wenn nicht ausschliesslich Unfallfolgen vorliegen, muss die observation einen narrativen Text mit der Begründung enthalten (wenn der code="N" ist)</xhtml:p>
+			<xhtml:p lang="fr_ch">S'il n'y a pas seulement des suites d'accident, l'observation doit contenir un texte narratif avec les explications (si le code ="N")</xhtml:p>
+			<xhtml:p lang="it_ch">Se non vi sono esclusivamente conseguenze dell'infortunio, l'observation deve contenere un testo narrativo con la motivazione (se code="N")</xhtml:p>
+			<xhtml:p lang="en">If not sequelae of accident only, the observation must contain a narrative text with an explanation (if code="N")</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Therapie: Massnahmen
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.TherapieMassnahme&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Therapie (Massnahmen)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie, Massnahmen'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Thérapie (mesures thérapeutiques)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Thérapie, mesures thérapeutiques'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1301" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Therapie Massnahme muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'mesures thérapeutiques' doivent être déclarées comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1302" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Therapie Massnahme muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'mesures thérapeutiques' doivent contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.TherapieMassnahme&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Therapie (Massnahmen)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie, Massnahmen'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Thérapie (mesures thérapeutiques)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Thérapie, mesures thérapeutiques'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: terapia (misure)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Terapia, misure'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Therapy (Measures)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Therapy, measures'</xhtml:p>
+		<assert id="suva_eMedidoc-1301" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">Therapie Massnahme muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'mesures thérapeutiques' doivent être déclarées comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">Le misure terapeutiche devono essere dichiarate come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">Therapy measures must be declared as a 'Course' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1302" test="cda:text">
+			<xhtml:p lang="de_ch">Therapie Massnahme muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'mesures thérapeutiques' doivent contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">Le misure terapeutiche devono contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">Therapy measures must contain a narrative text</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Therapie: Besondere Umstände
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BesoUmstände&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Therapie (Besondere Umstände)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie, Besondere Umstände'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Thérapie (facteurs particuliers)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Thérapie, facteurs particuliers'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1401" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Umstände müssen als 'observation' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'facteurs particuliers' doivent être déclarés comme 'observation' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1402" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Umstände müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'facteurs particuliers' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1403" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Umstände müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'facteurs particuliers' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1404" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Besondere Umstände müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'facteurs particuliers' doivent contenir un texte narratif si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BesoUmstände&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Therapie (Besondere Umstände)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie, Besondere Umstände'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Thérapie (facteurs particuliers)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Thérapie, facteurs particuliers'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: terapia (circostanze particolari)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Terapia, circostanze particolari'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Therapy (Special circumstances)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Therapy, special circumstances'</xhtml:p>
+		<assert id="suva_eMedidoc-1401" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Besondere Umstände müssen als 'observation' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'facteurs particuliers' doivent être déclarés comme 'observation' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">Le circostanze particolari devono essere dichiarate come 'observation' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">Special circumstances must be declared as an 'Observation' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1402" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">Besondere Umstände müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'facteurs particuliers' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Le circostanze particolari devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Special circumstances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1403" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Besondere Umstände müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'facteurs particuliers' doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">Le circostanze particolari devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Special circumstances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1404" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">Besondere Umstände müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'facteurs particuliers' doivent contenir un texte narratif si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">Le circostanze particolari devono contenere un testo narrativo, se code="Y"</xhtml:p>
+			<xhtml:p lang="en">Special circumstances must contain a narrative text if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Arbeitsfähigkeit: siehe CDA-CH.Body.Arbeitsfähigkeit
 	********************************************************
-	--><!--
+	-->
+	<!--
 	********************************************************
 	Behandlungsabschluss
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehAbschluss&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Behandlungsabschluss</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Behandlungsabschluss'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Traitement terminé</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Traitement terminé'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1501" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Behandlungsabschluss' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le 'Traitement terminé' CDA-CH doit être déclaré comme 'section' dans le CDA Body</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1502" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Behandlungsabschluss' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le 'Traitement terminé' CDA-CH doit contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1503" test="(cda:title=&quot;Behandlungsabschluss&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Behandlungsabschluss' muss einen section title 'Behandlungsabschluss' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le 'Traitement terminé' CDA-CH doit contenir un section title 'Behandlungsabschluss'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1504" test="(cda:title=&quot;Traitement terminé&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Behandlungsabschluss' muss einen section title 'Traitement terminé' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le 'Traitement terminé' CDA-CH doit contenir un section title 'Traitement terminé'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1505" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehAbschlussL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Behandlungsabschluss' muss einen encounter mit Template 'BehAbschlussL3' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le 'Traitement terminé' CDA-CH doit contenir un encounter avec le template 'BehAbschlussL3'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehAbschluss&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Behandlungsabschluss</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Behandlungsabschluss'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Traitement terminé</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Traitement terminé'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: conclusione del trattamento</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la 'Conclusione del trattamento'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: End of treatment</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'End of treatment'</xhtml:p>
+		<assert id="suva_eMedidoc-1501" test="self::cda:section">
+			<xhtml:p lang="de_ch">'Behandlungsabschluss' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Le 'Traitement terminé' CDA-CH doit être déclaré comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Conclusione del trattamento' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">'End of treatment' must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1502" test="cda:text">
+			<xhtml:p lang="de_ch">'Behandlungsabschluss' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le 'Traitement terminé' CDA-CH doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Conclusione del trattamento' deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">'End of treatment' must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1503" test="(cda:title=&quot;Behandlungsabschluss&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: 'Behandlungsabschluss' muss einen section title 'Behandlungsabschluss' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: Le 'Traitement terminé' CDA-CH doit contenir un section title 'Behandlungsabschluss'</xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: La 'Conclusione del trattamento' deve contenere un section title 'Behandlungsabschluss'</xhtml:p>
+			<xhtml:p lang="en">German: 'End of treatment' must contain an 'Behandlungsabschluss' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1504" test="(cda:title=&quot;Traitement terminé&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: 'Behandlungsabschluss' muss einen section title 'Traitement terminé' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: Le 'Traitement terminé' CDA-CH doit contenir un section title 'Traitement terminé'</xhtml:p>
+			<xhtml:p lang="it_ch">Francese: La 'Conclusione del trattamento' deve contenere un section title 'Traitement terminé'</xhtml:p>
+			<xhtml:p lang="en">French: 'End of treatment' must contain an 'Traitement terminé' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1505" test="(cda:title=&quot;Conclusione del trattamento&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: 'Behandlungsabschluss' muss einen section title 'Conclusione del trattamento' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: Le 'Traitement terminé' CDA-CH doit contenir un section title 'Conclusione del trattamento'</xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: La 'Conclusione del trattamento' deve contenere un section title 'Conclusione del trattamento'</xhtml:p>
+			<xhtml:p lang="en">Italian: 'End of treatment' must contain an 'Conclusione del trattamento' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1506" test="(cda:title=&quot;End of treatment&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: 'Behandlungsabschluss' muss einen section title 'End of treatment' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: Le 'Traitement terminé' CDA-CH doit contenir un section title 'End of treatment'</xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: La 'Conclusione del trattamento' deve contenere un section title 'End of treatment'</xhtml:p>
+			<xhtml:p lang="en">English: 'End of treatment' must contain an 'End of treatment' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1507" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehAbschlussL3&quot;]">
+			<xhtml:p lang="de_ch">'Behandlungsabschluss' muss einen encounter mit Template 'BehAbschlussL3' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le 'Traitement terminé' CDA-CH doit contenir un encounter avec le template 'BehAbschlussL3'</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Conclusione del trattamento' deve contenere un encounter con Template 'BehAbschlussL3'</xhtml:p>
+			<xhtml:p lang="en">'End of treatment' must contain an encounter with 'BehAbschlussL3' template</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Behandlungsabschluss L3
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehAbschlussL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Behandlungsabschluss L3</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Behandlungsabschluss'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Traitement terminé L3</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Traitement terminé'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1601" test="self::cda:encounter"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsabschluss muss als 'encounter' im CDA Body (section 'Behandlungsabschluss') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement terminé doit être déclaré comme 'encounter' dans le CDA Body (section 'Traitement terminé')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1602" test="cda:effectiveTime/cda:high"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsabschluss Datum muss im high element von effectiveTime angegeben werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La date du traitement terminé doit être indiquée dans le high element d'effectiveTime</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1603" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and cda:code/@code=&quot;8649-6&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsabschluss muss als LOINC Code deklariert sein (8649-6; Hospital discharge date)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement terminé doit être déclaré comme code LOINC (8649-6; Hospital discharge date)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1604" test="descendant::*[cda:assignedEntity/cda:representedOrganization/cda:name]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Behandlungsabschluss muss die Letzbehandelnde Organisation angeben ('performer/assignedEntity/representedOrganization', min. Namen angeben)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le traitement terminé doit mentionner la dernière organisation traitante ('performer/assignedEntity/representedOrganization', entrer au moins le nom)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.BehAbschlussL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Behandlungsabschluss L3</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Behandlungsabschluss'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Traitement terminé L3</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Traitement terminé'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: conclusione del trattamento L3</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la 'Conclusione del trattamento'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: L3 end of treatment</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'End of treatment'</xhtml:p>
+		<assert id="suva_eMedidoc-1601" test="self::cda:encounter">
+			<xhtml:p lang="de_ch">Behandlungsabschluss muss als 'encounter' im CDA Body (section 'Behandlungsabschluss') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement terminé doit être déclaré comme 'encounter' dans le CDA Body (section 'Traitement terminé')</xhtml:p>
+			<xhtml:p lang="it_ch">La conclusione del trattamento deve essere dichiarata come 'encounter' nel CDA Body (section 'Conclusione del trattamento')</xhtml:p>
+			<xhtml:p lang="en">End of treatment must be declared as an 'Encounter' in the CDA Body ('End of treatment' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1602" test="cda:effectiveTime/cda:high">
+			<xhtml:p lang="de_ch">Behandlungsabschluss Datum muss im high element von effectiveTime angegeben werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La date du traitement terminé doit être indiquée dans le high element d'effectiveTime</xhtml:p>
+			<xhtml:p lang="it_ch">La data della conclusione del trattamento deve essere indicata nell'high element di effectiveTime</xhtml:p>
+			<xhtml:p lang="en">The end of treatment date must be entered in the high element of effectiveTime</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1603" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and cda:code/@code=&quot;8649-6&quot;">
+			<xhtml:p lang="de_ch">Behandlungsabschluss muss als LOINC Code deklariert sein (8649-6; Hospital discharge date)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement terminé doit être déclaré comme code LOINC (8649-6; Hospital discharge date)</xhtml:p>
+			<xhtml:p lang="it_ch">La conclusione del trattamento deve essere dichiarata come codice LOINC (8649-6; Hospital discharge date)</xhtml:p>
+			<xhtml:p lang="en">End of treatment must be declared as a LOINC Code (8649-6; Hospital discharge date)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1604" test="descendant::*[cda:assignedEntity/cda:representedOrganization/cda:name]">
+			<xhtml:p lang="de_ch">Behandlungsabschluss muss die Letzbehandelnde Organisation angeben ('performer/assignedEntity/representedOrganization', min. Namen angeben)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le traitement terminé doit mentionner la dernière organisation traitante ('performer/assignedEntity/representedOrganization', entrer au moins le nom)</xhtml:p>
+			<xhtml:p lang="it_ch">La conclusione del trattamento deve indicare l'ultima organizzazione curante ('performer/assignedEntity/representedOrganization', indicare almeno il nome)</xhtml:p>
+			<xhtml:p lang="en">End of treatment must contain the last treating organisation ('performer/assignedEntity/representedOrganization', enter at least the name)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Therapie: Patient hospitalisiert
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.PatHospitalisiert&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Therapie (Patient hospitalisiert)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie, Patient hospitalisiert'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Thérapie (Patient hospitalisé)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Thérapie, patient hospitalisé'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1701" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Patient hospitalisiert muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Patient hospitalisé' doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1702" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Patient hospitalisiert muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Patient hospitalisé' doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1703" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Patient hospitalisiert muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Patient hospitalisé' doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1704" test="(cda:code/@code=&quot;Y&quot; and count(cda:performer/cda:assignedEntity/cda:representedOrganization/cda:name)=1) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Patient hospitalisiert muss über 'performer/assignedEntity/representedOrganization' das behandelnde Spital angeben (min. Namen angeben), wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Patient hospitalisé' doit mentionner l'hôpital traitant via 'performer/assignedEntity/representedOrganization' (entrer au moins le nom), si le code ="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.PatHospitalisiert&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Therapie (Patient hospitalisiert)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Therapie, Patient hospitalisiert'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Thérapie (Patient hospitalisé)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Thérapie, patient hospitalisé'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: terapia (paziente ospedalizzato)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Terapia, paziente ospedalizzato'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Therapy (Patient hospitalized)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Therapy, patient hospitalized'</xhtml:p>
+		<assert id="suva_eMedidoc-1701" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">Patient hospitalisiert muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Patient hospitalisé' doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">'Paziente ospedalizzato' deve essere dichiarato come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">Patient hospitalized must be declared as a 'Course' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1702" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">Patient hospitalisiert muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Patient hospitalisé' doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Paziente ospedalizzato' deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Patient hospitalized must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1703" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Patient hospitalisiert muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Patient hospitalisé' doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Paziente ospedalizzato' deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">Patient hospitalized must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1704" test="(cda:code/@code=&quot;Y&quot; and count(cda:performer/cda:assignedEntity/cda:representedOrganization/cda:name)=1) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">Patient hospitalisiert muss über 'performer/assignedEntity/representedOrganization' das behandelnde Spital angeben (min. Namen angeben), wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">'Patient hospitalisé' doit mentionner l'hôpital traitant via 'performer/assignedEntity/representedOrganization' (entrer au moins le nom), si le code ="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">Paziente ospedalizzato deve indicare l'ospedale curante tramite 'performer/assignedEntity/representedOrganization' (indicare almeno il nome), se code="Y"</xhtml:p>
+			<xhtml:p lang="en">Patient hospitalized must contain the treating hospital (enter at least the name) via 'performer/assignedEntity/representedOrganization' if code="Y"</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Bemerkungen: siehe auch CDA-CH.Body.Rem für zusätzliche Regeln
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Rem&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Bemerkungen</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Bemerkungen'. Siehe auch CDA-CH.Body.Rem für zusätzliche Regeln</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Remarques</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Remarques'. Voir aussi CDA-CH.Body.Rem pour des règles supplémentaires</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1801" test="cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.Rem&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Bemerkungen' müssen mit dem Template CDA-CH.Body.Rem deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Remarques' eMedidoc doivent être déclarées avec la modèle CDA-CH.Body.Rem </xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1802" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Erwerbstatus&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Bemerkungen' müssen eine observation 'Erwerbstatus' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Remarques' eMedidoc doivent contenir une observation 'Situation d'emploi'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Rem&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Bemerkungen</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Bemerkungen'. Siehe auch CDA-CH.Body.Rem für zusätzliche Regeln</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Remarques</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Remarques'. Voir aussi CDA-CH.Body.Rem pour des règles supplémentaires</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: osservazioni</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per 'Osservazioni'. Si veda anche CDA-CH.Body.Rem per ulteriori regole</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Remarks</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Remarks'. See also CDA-CH.Body.Rem for further rules</xhtml:p>
+		<assert id="suva_eMedidoc-1801" test="cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.Rem&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Bemerkungen' müssen mit dem Template CDA-CH.Body.Rem deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Remarques' eMedidoc doivent être déclarées avec la modèle CDA-CH.Body.Rem </xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Osservazioni' eMedidoc devono essere dichiarate con il Template CDA-CH.Body.Rem</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Remarks' must be declared together with the template CDA-CH.Body.Rem</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1802" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Erwerbstatus&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Bemerkungen' müssen eine observation 'Erwerbstatus' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Remarques' eMedidoc doivent contenir une observation 'Situation d'emploi'</xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Osservazioni' eMedidoc devono contenere un'observation 'Situazione lavorativa'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Remarks' must contain an 'Employment status' observation</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Erwerbsstatus: Erwerbsfähig oder Arbeitslos
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Erwerbstatus&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Erwerbstatus (Erwerbsfähig oder Arbeitslos)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Erwerbstatus (Erwerbsfähig oder Arbeitslos)'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Situation d'emploi (capable à travailler ou chômeurs)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Situation d'emploi (capable à travailler ou chômeurs)'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-1901" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erwerbstatus muss als 'observation' im CDA Body (section 'Bemerkungen') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Situation d'emploi' eMedidoc doit être déclarées dans la section 'Remarques' dans le CDA Body </xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-1902" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.4&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erwerbstatus muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.4')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Situation d'emploi' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.4')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.Erwerbstatus&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Erwerbstatus (Erwerbsfähig oder Arbeitslos)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Erwerbstatus (Erwerbsfähig oder Arbeitslos)'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Situation d'emploi (capable à travailler ou chômeurs)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Situation d'emploi (capable à travailler ou chômeurs)'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: situazione lavorativa (capace di guadagno o disoccupato)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la 'Situazione lavorativa (capace di guadagno o disoccupato)'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Employment status (Does earning or unemployed)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Employment status (Does earning or unemployed)'</xhtml:p>
+		<assert id="suva_eMedidoc-1901" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Erwerbstatus muss als 'observation' im CDA Body (section 'Bemerkungen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Situation d'emploi' eMedidoc doit être déclarées dans la section 'Remarques' dans le CDA Body </xhtml:p>
+			<xhtml:p lang="it_ch">Employment status must be declared as an 'Observation' in the CDA Body ('Remarks' section)</xhtml:p>
+			<xhtml:p lang="en">La situazione lavorativa deve essere dichiarata come 'observation' nel CDA Body (section 'Osservazioni')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-1902" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.4&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Erwerbstatus muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.4')</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Situation d'emploi' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.1.100.3.2.4')</xhtml:p>
+			<xhtml:p lang="it_ch">La situazione lavorativa deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.4')</xhtml:p>
+			<xhtml:p lang="en">Employment status must contain a structured entry (valid value from the table of values '2.16.756.5.30.1.100.3.2.4')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Aktuelle Beurteilung der Arbeitsfähigkeit
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.AktuelleArbeitsfähigkeit&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Aktuelle Beurteilung der Arbeitsfähigkeit</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Aktuelle Beurteilung der Arbeitsfähigkeit'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Evaluation actuelle de la capacité de travail</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Evaluation actuelle de la capacité de travail'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-2001" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent être déclarée comme 'section' dans le CDA Body</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2002" test="(cda:title=&quot;Aktuelle Beurteilung der Arbeitsfähigkeit&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Aktuelle Beurteilung der Arbeitsfähigkeit' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un section title 'Aktuelle Beurteilung der Arbeitsfähigkeit'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2003" test="(cda:title=&quot;Evaluation actuelle de la capacité de travail&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Evaluation actuelle de la capacité de travail' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un section title 'Evaluation actuelle de la capacité de travail'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2004" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.AktuelleArbeitsfähigkeitL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss ein observation mit Template 'eMedidoc.AktuelleArbeitsfähigkeitL3' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une observation de la modèle 'eMedidoc.AktuelleArbeitsfähigkeitL3'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2005" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss ein observation mit Template 'eMedidoc.SchadenInfoL3' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une observation de la modèle 'eMedidoc.SchadenInfoL3'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.AktuelleArbeitsfähigkeit&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Aktuelle Beurteilung der Arbeitsfähigkeit</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Aktuelle Beurteilung der Arbeitsfähigkeit'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Evaluation actuelle de la capacité de travail</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Evaluation actuelle de la capacité de travail'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: valutazione attuale della capacità lavorativa</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la 'valutazione attuale della capacità lavorativa'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Current assessment of Capacity to work</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Current assessment of capacity to work'</xhtml:p>
+		<assert id="suva_eMedidoc-2001" test="self::cda:section">
+			<xhtml:p lang="de_ch">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Valutazione attuale della capacità lavorativa' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">'Current assessment of Capacity to work' must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2002" test="(cda:title=&quot;Aktuelle Beurteilung der Arbeitsfähigkeit&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: 'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Aktuelle Beurteilung der Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un section title 'Aktuelle Beurteilung der Arbeitsfähigkeit'</xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: La 'Valutazione attuale della capacità lavorativa' deve contenere un section title 'Aktuelle Beurteilung der Arbeitsfähigkeit'</xhtml:p>
+			<xhtml:p lang="en">German: 'Current assessment of Capacity to work' must contain a 'Aktuelle Beurteilung der Arbeitsfähigkeit' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2003" test="(cda:title=&quot;Evaluation actuelle de la capacité de travail&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: 'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Evaluation actuelle de la capacité de travail' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un section title 'Evaluation actuelle de la capacité de travail'</xhtml:p>
+			<xhtml:p lang="it_ch">Francese: La 'Valutazione attuale della capacità lavorativa' deve contenere un section title 'Evaluation actuelle de la capacité de travail'</xhtml:p>
+			<xhtml:p lang="en">French: 'Current assessment of Capacity to work' must contain a 'Evaluation actuelle de la capacité de travail' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2004" test="(cda:title=&quot;Valutazione attuale della capacità lavorativa&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: 'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Valutazione attuale della capacità lavorativa' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un section title 'Valutazione attuale della capacità lavorativa'</xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: La 'Valutazione attuale della capacità lavorativa' deve contenere un section title 'Valutazione attuale della capacità lavorativa'</xhtml:p>
+			<xhtml:p lang="en">Italian: 'Current assessment of Capacity to work' must contain a 'Valutazione attuale della capacità lavorativa' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2005" test="(cda:title=&quot;Current assessment for capacity to work&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: 'Aktuelle Beurteilung der Arbeitsfähigkeit' muss einen section title 'Current assessment for capacity to work' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un section title 'Current assessment for capacity to work'</xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: La 'Valutazione attuale della capacità lavorativa' deve contenere un section title 'Current assessment for capacity to work'</xhtml:p>
+			<xhtml:p lang="en">English: 'Current assessment of Capacity to work' must contain a 'Current assessment for capacity to work' section title</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2006" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.AktuelleArbeitsfähigkeitL3&quot;]">
+			<xhtml:p lang="de_ch">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss ein observation mit Template 'eMedidoc.AktuelleArbeitsfähigkeitL3' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une observation de la modèle 'eMedidoc.AktuelleArbeitsfähigkeitL3'</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Valutazione attuale della capacità lavorativa' deve contenere un'observation con Template 'eMedidoc.AktuelleArbeitsfähigkeitL3'</xhtml:p>
+			<xhtml:p lang="en">'Current assessment of Capacity to work' must contain an observation from the 'eMedidoc.AktuelleArbeitsfähigkeitL3' template</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2007" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]">
+			<xhtml:p lang="de_ch">'Aktuelle Beurteilung der Arbeitsfähigkeit' muss ein observation mit Template 'eMedidoc.SchadenInfoL3' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une observation de la modèle 'eMedidoc.SchadenInfoL3'</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Valutazione attuale della capacità lavorativa' deve contenere un'observation con Template 'eMedidoc.SchadenInfoL3'</xhtml:p>
+			<xhtml:p lang="en">'Current assessment of Capacity to work' must contain an observation from the 'eMedidoc.SchadenInfoL3' template</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	AktuelleArbeitsfähigkeitL3
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.AktuelleArbeitsfähigkeitL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Aktuelle Arbeitsfähigkeit (Aktuelle Beurteilung)</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Aktuelle Arbeitsfähigkeit, aktuelle Beurteilung)'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva eMedidoc: Evaluation actuelle de la capacité de travail (évaluation actuelle)</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles sur 'Evaluation actuelle de la capacité de travail, évaluation actuelle'</xhtml:p><!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva_eMedidoc-2101" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss als 'observation' im CDA Body (section 'Aktuelle Beurteilung der Arbeitsfähigkeit') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent être déclarées comme 'observation' dans le CDA Body (section 'Evaluation actuelle de la capacité de travail')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2102" test="cda:code/@code=&quot;X-ATWRK&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss muss als LOINC Code deklariert sein (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent être déclaré comme code LOINC (LOINC Code X-ATWRK comme VHitG REHA Kurzbrief)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2103" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2104" test="cda:effectiveTime/cda:low"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss ein 'Gültig ab Datum' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une date 'Valable à partir de'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva_eMedidoc-2105" test="cda:value/@xsi:type=&quot;INT&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss einen ganzzahligen Wert (value=%) enthalten. Berechnung: % Arbeitsintensität * % Anwesenheitsdauer (wobei 8 h/Tag=100%)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une valeur entière (value=%). Calculation: % Intensité du travail * % Durée de présence (avec 8 h/jour=100%)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern>
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.AktuelleArbeitsfähigkeitL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva eMedidoc: Aktuelle Arbeitsfähigkeit (Aktuelle Beurteilung)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu 'Aktuelle Arbeitsfähigkeit, aktuelle Beurteilung)'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva eMedidoc: Evaluation actuelle de la capacité de travail (évaluation actuelle)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Evaluation actuelle de la capacité de travail, évaluation actuelle'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva eMedidoc: capacità lavorativa attuale (valutazione attuale)</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la 'Capacità lavorativa attuale, valutazione attuale'</xhtml:p>
+		<xhtml:h3 lang="en">Suva eMedidoc: Current Capacity to work (Current assessment)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Current capacity to work, current assessment)'</xhtml:p>
+		<assert id="suva_eMedidoc-2101" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss als 'observation' im CDA Body (section 'Aktuelle Beurteilung der Arbeitsfähigkeit') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent être déclarées comme 'observation' dans le CDA Body (section 'Evaluation actuelle de la capacité de travail')</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Capacità lavorativa attuale' eMedidoc deve essere dichiarata come 'observation' nel CDA Body (section 'Valutazione attuale della capacità lavorativa')</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Current capacity to work' must be declared as an 'Observation' in the CDA Body ('Current assessment of capacity to work')</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2102" test="cda:code/@code=&quot;X-ATWRK&quot;">
+			<xhtml:p lang="de_ch">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss muss als LOINC Code deklariert sein (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent être déclaré comme code LOINC (LOINC Code X-ATWRK comme VHitG REHA Kurzbrief)</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Capacità lavorativa attuale' deve essere dichiarata come LOINC Code (LOINC Code X-ATWRK secondo VHitG REHA Kurzbrief)</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Current Capacity to work' must be declared as a LOINC Code (LOINC Code X-ATWRK according to VHitG REHA Kurzbrief)</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2103" test="cda:text">
+			<xhtml:p lang="de_ch">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Capacità lavorativa attuale' eMedidoc deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Current Capacity to work' must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2104" test="cda:effectiveTime/cda:low">
+			<xhtml:p lang="de_ch">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss ein 'Gültig ab Datum' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une date 'Valable à partir de'</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Capacità lavorativa attuale' eMedidoc deve contenere una data 'Valido da'</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Current capacity to work' must contain a 'Valid from date'</xhtml:p>
+		</assert>
+		<assert id="suva_eMedidoc-2105" test="cda:value/@xsi:type=&quot;INT&quot;">
+			<xhtml:p lang="de_ch">Die eMedidoc 'Aktuelle Arbeitsfähigkeit' muss einen ganzzahligen Wert (value=%) enthalten. Berechnung: % Arbeitsintensität * % Anwesenheitsdauer (wobei 8 h/Tag=100%)</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Evaluation actuelle de la capacité de travail' eMedidoc doivent contenir une valeur entière (value=%). Calculation: % Intensité du travail * % Durée de présence (avec 8 h/jour=100%)</xhtml:p>
+			<xhtml:p lang="it_ch">La 'Capacità lavorativa attuale' eMedidoc deve contenere un numero intero (value=%). Calcolo: % Intensità lavorativa * % Durata presenza (dove 8 h/giorno=100%)</xhtml:p>
+			<xhtml:p lang="en">The eMedidoc 'Current Capacity to work' must contain a whole number value (value=%). Calculation: % work intensity * % time present (where 8 h/day=100%)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>

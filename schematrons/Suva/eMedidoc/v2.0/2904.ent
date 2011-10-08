@@ -7,33 +7,88 @@ History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
 09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
+07.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
---><pattern><!-- Entity Information --><xhtml:ul id="suva-form-2904" xmlns:xhtml="http://www.w3.org/1999/xhtml"><xhtml:li class="filename">2904.ent</xhtml:li><xhtml:li class="version">1.0</xhtml:li></xhtml:ul><rule context="cda:ClinicalDocument"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Behandlungsmeldung: CDA Header</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für die Suva Behandlungsmeldung</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
-		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><!-- Formularnummer prüfen --><assert id="suva-form-2904-0101" test="//cda:templateId/@extension=&quot;2904&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Formularnummer für Suva Behandlungsmeldung muss lauten: 2904</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- code prüfen --><assert id="suva-form-2904-0102" test="//cda:code/@code=&quot;51848-0&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der LOINC Code für die Suva Behandlungsmeldung muss lauten: 51848-0 (Assessment note)</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- title prüfen --><assert id="suva-form-2904-0103" test="(//cda:title=&quot;Behandlungsmeldung&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Behandlungsmeldung'</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- Arbeitgeber prüfen --><assert id="suva-form-2904-0104" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva Behandlungsmeldung muss einen Arbeitgeber enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!--
+-->
+<pattern>
+	<!-- Entity Information -->
+	<xhtml:ul id="suva-form-2904">
+		<xhtml:li class="filename">2904.ent</xhtml:li>
+		<xhtml:li class="version">1.0</xhtml:li>
+	</xhtml:ul>
+	<rule context="cda:ClinicalDocument">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Behandlungsmeldung: CDA Header</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für die Suva Behandlungsmeldung</xhtml:p>
+		<xhtml:h3 lang="fr_ch"></xhtml:h3>
+		<xhtml:p lang="fr_ch"></xhtml:p>
+		<xhtml:h3 lang="it_ch">Rapporto di trattamento Suva: CDA Header</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Header' per il rapporto di trattamento Suva</xhtml:p>
+		<xhtml:h3 lang="en">Suva notification of treatment: CDA Header</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Header tests on the Suva notification of treatment</xhtml:p>
+		<!-- Formularnummer prüfen -->
+		<assert id="suva-form-2904-0101" test="//cda:templateId/@extension=&quot;2904&quot;">
+			<xhtml:p lang="de_ch">Die Formularnummer für Suva Behandlungsmeldung muss lauten: 2904</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il numero form. del rapporto di trattamento Suva deve essere: 2904</xhtml:p>
+			<xhtml:p lang="en">The form number for the Suva notification of treatment must read: 2904</xhtml:p>
+		</assert>
+		<!-- code prüfen -->
+		<assert id="suva-form-2904-0102" test="//cda:code/@code=&quot;51848-0&quot;">
+			<xhtml:p lang="de_ch">Der LOINC Code für die Suva Behandlungsmeldung muss lauten: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il codice LOINC del rapporto di trattamento Suva deve essere: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="en">The LOINC code for the Suva notification of treatment must read: 51848-0 (assessment note)</xhtml:p>
+		</assert>
+		<!-- title prüfen -->
+		<assert id="suva-form-2904-0103" test="(//cda:title=&quot;Behandlungsmeldung&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Der deutsche Titel muss lauten 'Behandlungsmeldung'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo tedesco deve essere 'Behandlungsmeldung'</xhtml:p>
+			<xhtml:p lang="en">The German title must read 'Behandlungsmeldung'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2904-0104" test="(//cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Der französische Titel muss lauten 'tbd'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo francese deve essere 'tbd'</xhtml:p>
+			<xhtml:p lang="en">The French title must read 'tbd'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2904-0105" test="(//cda:title=&quot;Rapporto di trattamento&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Der italienische Titel muss lauten 'Rapporto di trattamento'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo italiano deve essere 'Rapporto di trattamento'</xhtml:p>
+			<xhtml:p lang="en">The Italian title must read 'Rapporto di trattamento'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2904-0106" test="(//cda:title=&quot;Notification of treatment&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Der englische Titel muss lauten 'Notification of treatment'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo inglese deve essere 'Notification of treatment'</xhtml:p>
+			<xhtml:p lang="en">The English title must read 'Notification of treatment'</xhtml:p>
+		</assert>
+		<!-- Arbeitgeber prüfen -->
+		<assert id="suva-form-2904-0107" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]">
+			<xhtml:p lang="de_ch">Die Suva Behandlungsmeldung muss einen Arbeitgeber enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Nel rapporto di trattamento Suva deve essere indicato un datore di lavoro</xhtml:p>
+			<xhtml:p lang="en">The Suva notification of treatment must contain an employer</xhtml:p>
+		</assert>
+		<!--
 		********************************************************
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
-		--><assert id="suva-form-2904-0105" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.SchadenInfoBehandlungsmeldung&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva Behandlungsmeldung muss eine Section 'Schadeninformationen' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2904-0106" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern>
+		-->
+		<assert id="suva-form-2904-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.SchadenInfoBehandlungsmeldung&quot;">
+			<xhtml:p lang="de_ch">Die Suva Behandlungsmeldung muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto di trattamento Suva deve contenere una sezione 'Informazioni sul sinistro'</xhtml:p>
+			<xhtml:p lang="en">The Suva notification of treatment must contain a 'Claim information' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2904-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;">
+			<xhtml:p lang="de_ch">Die Suva Behandlungsmeldung muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto di trattamento Suva deve contenere una sezione 'Osservazioni' (con situazione lavorativa. Se non ci sono osservazioni, scrivere 'Nessuna')</xhtml:p>
+			<xhtml:p lang="en">The Suva notification of treatment must contain a 'Remarks' section (including employment status. If no remarks, then enter 'None'.</xhtml:p>
+		</assert>
+	</rule>
+</pattern>

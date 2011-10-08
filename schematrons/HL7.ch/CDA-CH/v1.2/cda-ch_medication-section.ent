@@ -32,33 +32,29 @@ Medikamentenliste
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">CDA-CH Medication Section</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Section Templates</xhtml:p>
-
 		<xhtml:h3 lang="fr_ch">CDA-CH Medication Section</xhtml:h3>
 		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Section Templates</xhtml:p>
-
-		<xhtml:h3 lang='it_ch'>CDA-CH Medication Section</xhtml:h3>
-		<xhtml:p lang='it_ch'>Le regole seguenti descrivono i controlli per i CDA-CH Medication Section Templates</xhtml:p>
-
-		<xhtml:h3 lang='en'>CDA-CH Medication Section</xhtml:h3>
-		<xhtml:p lang='en'>The following rules describe the tests on the CDA-CH Medication Section Templates</xhtml:p>
-
+		<xhtml:h3 lang="it_ch">CDA-CH Medication Section</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Medication Section Templates</xhtml:p>
+		<xhtml:h3 lang="en">CDA-CH Medication Section</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Medication Section Templates</xhtml:p>
 		<assert id="cda-ch_medication-section-0101" test="self::cda:section">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen als 'section' im CDA Body deklariert werden</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono essere dichiarati come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang='en'>Medication data must be declared as 'section' in the CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono essere dichiarati come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">Medication data must be declared as 'section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="cda-ch_medication-section-0102" test="cda:text">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen einen narrativen Text enthalten</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang='en'>Medication data must contain a narrative text</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">Medication data must contain a narrative text</xhtml:p>
 		</assert>
 		<assert id="cda-ch_medication-section-0103" test="cda:title">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen einen narrativen Titel enthalten</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un titre narratif</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un titolo narrativo</xhtml:p>
-			<xhtml:p lang='en'>Medication data must contain a narrative title</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un titolo narrativo</xhtml:p>
+			<xhtml:p lang="en">Medication data must contain a narrative title</xhtml:p>
 		</assert>
 	</rule>
 </pattern>
@@ -73,101 +69,97 @@ Medikamentenliste
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">CDA-CH Medication Entry</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Entry Templates</xhtml:p>
-
 		<xhtml:h3 lang="fr_ch">CDA-CH Medication Entry</xhtml:h3>
 		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Entry Templates</xhtml:p>
-
-		<xhtml:h3 lang='it_ch'>CDA-CH Medication Entry</xhtml:h3>
-		<xhtml:p lang='it_ch'>Le regole seguenti descrivono i controlli per i CDA-CH Medication Entry Templates</xhtml:p>
-
-		<xhtml:h3 lang='en'>CDA-CH medication entry</xhtml:h3>
-		<xhtml:p lang='en'>The following rules describe the tests on the CDA-CH Medication Entry Templates</xhtml:p>
-		
+		<xhtml:h3 lang="it_ch">CDA-CH Medication Entry</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Medication Entry Templates</xhtml:p>
+		<xhtml:h3 lang="en">CDA-CH medication entry</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Medication Entry Templates</xhtml:p>
 		<!--	Template Identifikation 	-->
 		<assert id="cda-ch_medication-section-0201" test="cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.MediL3&quot;">
 			<xhtml:p lang="de_ch">Medikationseinträge müssen mit der templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3" angegeben werden</xhtml:p>
 			<xhtml:p lang="fr_ch">Les entrées de médication doivent être saisies avec le templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3"</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono essere indicati con la templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3"</xhtml:p>
-			<xhtml:p lang='en'>Medication entries must be entered with the templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3"</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono essere indicati con la templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3"</xhtml:p>
+			<xhtml:p lang="en">Medication entries must be entered with the templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3"</xhtml:p>
 		</assert>
 		<!--	Med. Therapie oder Impfung 	-->
 		<assert id="cda-ch_medication-section-0202" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.5.4&quot;">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen eine Verordnungsart beinhalten (gültiger Wert aus der Wertetabelle 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un type de prescription (valeur valable du tableau de valeurs 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un tipo di prescrizione (valore valido della tabella di valori 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
-			<xhtml:p lang='en'>Medication data must contain a type of prescription (valid value from the table of values 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un tipo di prescrizione (valore valido della tabella di valori 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
+			<xhtml:p lang="en">Medication data must contain a type of prescription (valid value from the table of values 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
 		</assert>
 		<assert id="cda-ch_medication-section-0203" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.840.1.113883.5.4&quot;]/code/@value">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen eine Verordnungsart beinhalten (gültiger Wert aus der Wertetabelle 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un type de prescription (valeur valable du tableau de valeurs 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un tipo di prescrizione (valore valido della tabella di valori 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
-			<xhtml:p lang='en'>Medication data must contain a type of prescription (valid value from the table of values 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un tipo di prescrizione (valore valido della tabella di valori 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
+			<xhtml:p lang="en">Medication data must contain a type of prescription (valid value from the table of values 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)')</xhtml:p>
 		</assert>
 		<!--	Identifikation mit GTIN oder Pharmacode 	-->
 		<assert id="cda-ch_medication-section-0204" test="cda:id/@root=&quot;2.16.756.5.30.2.6.1&quot; or cda:id/@root=&quot;1.3.88&quot; or cda:id/@root=&quot;1.3.160&quot;">
 			<xhtml:p lang="de_ch">Medikationseinträge müssen mindestens mit der Packungs-GTIN oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 			<xhtml:p lang="fr_ch">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
-			<xhtml:p lang='it_ch'>Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
-			<xhtml:p lang='en'>Medication entries must be identified at least with the packaging GTIN or the identification from the SwissIndex (barcode or pharmacode)</xhtml:p>
+			<xhtml:p lang="it_ch">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
+			<xhtml:p lang="en">Medication entries must be identified at least with the packaging GTIN or the identification from the SwissIndex (barcode or pharmacode)</xhtml:p>
 		</assert>
 		<!-- Klassifizierung erforderlich -->
 		<assert id="cda-ch_medication-section-0205" test="cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code[@codeSystem=&quot;2.16.756.5.30.2.6.2&quot; or @codeSystem=&quot;2.16.840.1.113883.6.73&quot;]">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen mit dem WHO ATC Code oder mit dem Generic Group Code klassifiziert werden</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent être classifiées avec le WHO ATC Code ou avec le Generic Group Code</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono essere classificati con il WHO ATC Code o il Generic Group Code</xhtml:p>
-			<xhtml:p lang='en'>Medication data must be classified with the WHO ATC Code or the Generic Group Code</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono essere classificati con il WHO ATC Code o il Generic Group Code</xhtml:p>
+			<xhtml:p lang="en">Medication data must be classified with the WHO ATC Code or the Generic Group Code</xhtml:p>
 		</assert>
 		<assert id="cda-ch_medication-section-0206" test="cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code/@codeSystem!=&quot;2.16.756.5.30.2.6.2&quot; or cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code/cda:translation/@codeSystem=&quot;2.16.840.1.113883.6.73&quot;">
 			<xhtml:p lang="de_ch">Medikationsdaten, welche mit dem Generic Group Code klassifiziert werden, müssen eine translation nach WHO ATC code enthalten</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication qui sont classifiées avec le Generic Group Code doivent contenir une translation selon le WHO ATC code</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni classificati con il Generic Group Code devono contenere una translation secondo il WHO ATC Code</xhtml:p>
-			<xhtml:p lang='en'>Medication data which have been classified with the Generic Group Code must contain a translation following the WHO ATC code</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni classificati con il Generic Group Code devono contenere una translation secondo il WHO ATC Code</xhtml:p>
+			<xhtml:p lang="en">Medication data which have been classified with the Generic Group Code must contain a translation following the WHO ATC code</xhtml:p>
 		</assert>
 		<!-- Dringlichkeitsangaben -->
 		<assert id="cda-ch_medication-section-0207" test="cda:priorityCode/@codeSystem=&quot;2.16.840.1.113883.5.7&quot;">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen eine Dringlichkeitsangabe beinhalten (gültiger Wert aus der Wertetabelle 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir une indication d'urgence (valeur valable du tableau de valeurs 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un'indicazione di urgenza (valore valido della tabella di valori 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
-			<xhtml:p lang='en'>Medication dates must contain an indication of urgency (valid value from the table of values 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un'indicazione di urgenza (valore valido della tabella di valori 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
+			<xhtml:p lang="en">Medication dates must contain an indication of urgency (valid value from the table of values 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
 		</assert>
 		<assert role="warning" id="cda-ch_medication-section-0208" test="cda:priorityCode/@codeSystem=&quot;2.16.840.1.113883.5.7&quot; and (cda:priorityCode/@code=&quot;R&quot; or cda:priorityCode/@code=&quot;UR&quot; or cda:priorityCode/@code=&quot;PRN&quot;)">
 			<xhtml:p lang="de_ch">Dringlichkeitsangabe entspricht nicht den Empfehlungen im VHitG Arztbrief V1.0</xhtml:p>
 			<xhtml:p lang="fr_ch">L'indication d'urgence ne correspond pas aux recommandations dans le rapport médical VHitG V1.0</xhtml:p>
-			<xhtml:p lang='it_ch'>L'indicazione di urgenza non corrisponde alle raccomandazioni della VHitG Arztbrief V1.0</xhtml:p>
-			<xhtml:p lang='en'>Indication of urgency does not conform to the recommendations in the VHitG Arztbrief V1.0</xhtml:p>
+			<xhtml:p lang="it_ch">L'indicazione di urgenza non corrisponde alle raccomandazioni della VHitG Arztbrief V1.0</xhtml:p>
+			<xhtml:p lang="en">Indication of urgency does not conform to the recommendations in the VHitG Arztbrief V1.0</xhtml:p>
 		</assert>
 		<assert id="cda-ch_medication-section-0209" test="cda:priorityCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.840.1.113883.5.7&quot;]/code/@value">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen eine Dringlichkeitsangabe beinhalten (gültiger Wert aus der Wertetabelle 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir une indication d'urgence (valeur valable du tableau de valeurs 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un'indicazione di urgenza (valore valido della tabella di valori 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
-			<xhtml:p lang='en'>Medication dates must contain an indication of urgency (valid value from the table of values 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un'indicazione di urgenza (valore valido della tabella di valori 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
+			<xhtml:p lang="en">Medication dates must contain an indication of urgency (valid value from the table of values 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
 		</assert>
 		<!--	Einnahmeart	-->
 		<assert id="cda-ch_medication-section-0210" test="cda:routeCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.840.1.113883.5.112&quot;]/code/@value">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen eine Einnahmeart beinhalten (gültiger Wert aus der Wertetabelle 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un mode d'administration (valeur valable du tableau de valeurs 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere un modo di somministrazione (valore valido della tabella di valori 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
-			<xhtml:p lang='en'>Medication data must contain a route of administration (valid value from the table of values 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un modo di somministrazione (valore valido della tabella di valori 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
+			<xhtml:p lang="en">Medication data must contain a route of administration (valid value from the table of values 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
 		</assert>
 		<!--	Dosierung	-->
 		<assert id="cda-ch_medication-section-0211" test="cda:doseQuantity">
 			<xhtml:p lang="de_ch">Die Dosierung muss gemäss Addendum zum VHitG Arztbrief, Kapitel 1.2.5 spezifiziert werden</xhtml:p>
 			<xhtml:p lang="fr_ch">Le dosage doit être spécifié selon l'addenda au VHitG Arztbrief, chapitre 1.2.5</xhtml:p>
-			<xhtml:p lang='it_ch'>Il dosaggio deve essere specificato secondo l'Addendum della VHitG Arztbrief, capitolo 1.2.5</xhtml:p>
-			<xhtml:p lang='en'>The dosage must be specified according to the Addendum to the VHitG Arztbrief, chapter 1.2.5</xhtml:p>
+			<xhtml:p lang="it_ch">Il dosaggio deve essere specificato secondo l'Addendum della VHitG Arztbrief, capitolo 1.2.5</xhtml:p>
+			<xhtml:p lang="en">The dosage must be specified according to the Addendum to the VHitG Arztbrief, chapter 1.2.5</xhtml:p>
 		</assert>
 		<!--	Einnahmeplan	-->
 		<assert id="cda-ch_medication-section-0212" test="cda:effectiveTime">
 			<xhtml:p lang="de_ch">Der Einnahmeplan muss gemäss Addendum zum VHitG Arztbrief, Kapitel 1.2.6 spezifiziert werden</xhtml:p>
 			<xhtml:p lang="fr_ch">Le plan d'administration doit être spécifié selon l'addenda au VHitG Arztbrief, chapitre 1.2.6</xhtml:p>
-			<xhtml:p lang='it_ch'>Il piano di somministrazione deve essere specificato secondo l'Addendum della VHitG Arztbrief, capitolo 1.2.6</xhtml:p>
-			<xhtml:p lang='en'>The administration schedule must be specified according to the Addendum to the VHitG Arztbrief, chapter 1.2.6</xhtml:p>
+			<xhtml:p lang="it_ch">Il piano di somministrazione deve essere specificato secondo l'Addendum della VHitG Arztbrief, capitolo 1.2.6</xhtml:p>
+			<xhtml:p lang="en">The administration schedule must be specified according to the Addendum to the VHitG Arztbrief, chapter 1.2.6</xhtml:p>
 		</assert>
 		<assert id="cda-ch_medication-section-0213" test="count(cda:doseQuantity/cda:center)=0 or cda:doseQuantity/cda:center/@value!=&quot;0&quot;">
 			<xhtml:p lang="de_ch">Die Dosierung darf nicht 0 oder leer sein</xhtml:p>
 			<xhtml:p lang="fr_ch">Le dosage ne doit pas être 0 ou vide</xhtml:p>
-			<xhtml:p lang='it_ch'>Il dosaggio non può essere 0 o in bianco</xhtml:p>
-			<xhtml:p lang='en'>The dosage must not be 0 or empty</xhtml:p>
+			<xhtml:p lang="it_ch">Il dosaggio non può essere 0 o in bianco</xhtml:p>
+			<xhtml:p lang="en">The dosage must not be 0 or empty</xhtml:p>
 		</assert>
 	</rule>
 </pattern>
@@ -177,36 +169,32 @@ Medikamentenliste
 		<!-- Rule Documentation -->
 		<xhtml:h3 lang="de_ch">CDA-CH Medication Entry L3</xhtml:h3>
 		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Medication Entry Templates</xhtml:p>
-
 		<xhtml:h3 lang="fr_ch">CDA-CH Medication Section Entry L3</xhtml:h3>
 		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Medication Entry Templates</xhtml:p>
-
-		<xhtml:h3 lang='it_ch'>CDA-CH Medication Entry L3</xhtml:h3>
-		<xhtml:p lang='it_ch'>Le regole seguenti descrivono i controlli per i CDA-CH Medication Entry Templates</xhtml:p>
-
-		<xhtml:h3 lang='en'>CDA-CH L3 medication entry</xhtml:h3>
-		<xhtml:p lang='en'>The following rules describe the tests on the CDA-CH Medication Entry Templates</xhtml:p>
-
+		<xhtml:h3 lang="it_ch">CDA-CH Medication Entry L3</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Medication Entry Templates</xhtml:p>
+		<xhtml:h3 lang="en">CDA-CH L3 medication entry</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Medication Entry Templates</xhtml:p>
 		<!--	Korrekte RIM Klasse 	-->
 		<assert id="cda-ch_medication-section-0301" test="self::cda:substanceAdministration">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen als 'substanceAdministration' im CDA Body deklariert werden</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent être déclarées comme 'substanceAdministration' dans le CDA Body</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono essere dichiarati come 'substanceAdministration' nel CDA Body</xhtml:p>
-			<xhtml:p lang='en'>Medication data should be declared as a'SubstanceAdministration' in the CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono essere dichiarati come 'substanceAdministration' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">Medication data should be declared as a'SubstanceAdministration' in the CDA Body</xhtml:p>
 		</assert>
 		<!--	Bezeichnung 	-->
 		<assert id="cda-ch_medication-section-0302" test="cda:text">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen auch im entry einen narrativen Text enthalten (Bezeichnung des Artikels)</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un texte narratif également dans l'entry (désignation de l'article)</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni devono contenere anche nell'entry un testo narrativo (designazione dell'articolo)</xhtml:p>
-			<xhtml:p lang='en'>Medication data must also contain a narrative text in the entry (Name of the article)</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere anche nell'entry un testo narrativo (designazione dell'articolo)</xhtml:p>
+			<xhtml:p lang="en">Medication data must also contain a narrative text in the entry (Name of the article)</xhtml:p>
 		</assert>
 		<!--	IHE PCC Templates (für xPHR Extract und xPHR Update) -->
 		<assert role="warning" id="cda-ch_medication-section-0303" test="cda:templateId/@root=&quot;1.3.6.1.4.1.19376.1.5.3.1.4.7&quot;">
 			<xhtml:p lang="de_ch">Medikationsdaten sollten das IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7) implementieren</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent implémenter l'IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
-			<xhtml:p lang='it_ch'>I dati delle medicazioni dovrebbero implementare l'IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
-			<xhtml:p lang='en'>Medication data should implement the 'Medications' IHE PCC Template (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
+			<xhtml:p lang="it_ch">I dati delle medicazioni dovrebbero implementare l'IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
+			<xhtml:p lang="en">Medication data should implement the 'Medications' IHE PCC Template (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
 		</assert>
 	</rule>
 </pattern>

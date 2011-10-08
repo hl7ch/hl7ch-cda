@@ -7,129 +7,316 @@ History:
 31.08.2010: Tony Schaller, medshare GmbH (Draft)
 09.12.2010: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
+07.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
---><pattern><!-- Entity Information --><xhtml:ul id="suva-form-2907" xmlns:xhtml="http://www.w3.org/1999/xhtml"><xhtml:li class="filename">2907.ent</xhtml:li><xhtml:li class="version">1.0</xhtml:li></xhtml:ul><rule context="cda:ClinicalDocument"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Meldung möglicher komplexer Fall: CDA Header</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für die Suva Meldung möglicher komplexer Fall</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
-		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><!-- Formularnummer prüfen --><assert id="suva-form-2907-0101" test="//cda:templateId/@extension=&quot;2907&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Formularnummer für Suva 'Meldung möglicher komplexer Fall' muss lauten: 2907</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- code prüfen --><assert id="suva-form-2907-0102" test="//cda:code/@code=&quot;51848-0&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der LOINC Code für Die Suva 'Meldung möglicher komplexer Fall' muss lauten: 51848-0 (Assessment note)</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- title prüfen --><assert id="suva-form-2907-0103" test="(//cda:title=&quot;Meldung möglicher komplexer Fall&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Meldung möglicher komplexer Fall'</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- Arbeitgeber prüfen --><assert id="suva-form-2907-0104" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva 'Meldung möglicher komplexer Fall' muss einen Arbeitgeber enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!--
+-->
+<pattern>
+	<!-- Entity Information -->
+	<xhtml:ul id="suva-form-2907">
+		<xhtml:li class="filename">2907.ent</xhtml:li>
+		<xhtml:li class="version">1.0</xhtml:li>
+	</xhtml:ul>
+	<rule context="cda:ClinicalDocument">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Meldung möglicher komplexer Fall: CDA Header</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für die Suva Meldung möglicher komplexer Fall</xhtml:p>
+		<xhtml:h3 lang="fr_ch"></xhtml:h3>
+		<xhtml:p lang="fr_ch"></xhtml:p>
+		<xhtml:h3 lang="it_ch">Rapporto Suva di caso possibilmente complesso: CDA Header</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Header' per il rapporto Suva di caso possibilmente complesso</xhtml:p>
+		<xhtml:h3 lang="en">Suva notification of possible complex case: CDA Header</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Header tests on the Suva notification of possible complex case</xhtml:p>
+		<!-- Formularnummer prüfen -->
+		<assert id="suva-form-2907-0101" test="//cda:templateId/@extension=&quot;2907&quot;">
+			<xhtml:p lang="de_ch">Die Formularnummer für Suva 'Meldung möglicher komplexer Fall' muss lauten: 2907</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il numero form. del rapporto Suva di caso possibilmente complesso deve essere: 2907</xhtml:p>
+			<xhtml:p lang="en">The form number for the Suva 'Notification of possible complex case' must read: 2907</xhtml:p>
+		</assert>
+		<!-- code prüfen -->
+		<assert id="suva-form-2907-0102" test="//cda:code/@code=&quot;51848-0&quot;">
+			<xhtml:p lang="de_ch">Der LOINC Code für Die Suva 'Meldung möglicher komplexer Fall' muss lauten: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il codice LOINC del rapporto Suva di caso possibilmente complesso deve essere: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="en">The LOINC Code for the Suva 'notification of possible complex case' must read: 51848-0 (Assessment note)</xhtml:p>
+		</assert>
+		<!-- title prüfen -->
+		<assert id="suva-form-2907-0103" test="(//cda:title=&quot;Meldung möglicher komplexer Fall&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Der deutsche Titel muss lauten 'Meldung möglicher komplexer Fall'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo tedesco deve essere 'Meldung möglicher komplexer Fall'</xhtml:p>
+			<xhtml:p lang="en">The German title must read 'Meldung möglicher komplexer Fall'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0104" test="(//cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Der französische Titel muss lauten 'tbd'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo francese deve essere 'tbd'</xhtml:p>
+			<xhtml:p lang="en">The French title must read 'tbd'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0105" test="(//cda:title=&quot;Rapporto di caso possibilmente complesso&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Der italienische Titel muss lauten 'Rapporto di caso possibilmente complesso'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo italiano deve essere 'Rapporto di caso possibilmente complesso'</xhtml:p>
+			<xhtml:p lang="en">The Italian title must read 'Rapporto di caso possibilmente complesso'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0106" test="(//cda:title=&quot;Notification of possible complex case&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Der englische Titel muss lauten 'Notification of possible complex case'</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo inglese deve essere 'Notification of possible complex case'</xhtml:p>
+			<xhtml:p lang="en">The English title must read 'Notification of possible complex case'</xhtml:p>
+		</assert>
+		<!-- Arbeitgeber prüfen -->
+		<assert id="suva-form-2907-0107" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]">
+			<xhtml:p lang="de_ch">Die Suva 'Meldung möglicher komplexer Fall' muss einen Arbeitgeber enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Nel rapporto Suva di caso possibilmente complesso deve essere indicato un datore di lavoro</xhtml:p>
+			<xhtml:p lang="en">The Suva 'Notification of possible complex case' must contain an employer</xhtml:p>
+		</assert>
+		<!--
 		********************************************************
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
-		--><assert id="suva-form-2907-0105" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;2907.SchadenInfoKomplexfall&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Beurteilung komplexer Fall' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0106" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Diagnosen' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0107" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfall&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Wahrnehmungen' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+		-->
+		<assert id="suva-form-2907-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;2907.SchadenInfoKomplexfall&quot;">
+			<xhtml:p lang="de_ch">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Beurteilung komplexer Fall' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto Suva di caso possibilmente complesso deve contenere una sezione 'Valutazione caso complesso'</xhtml:p>
+			<xhtml:p lang="en">The Suva 'Notification of possible complex case' must contain an 'Assessment of complex case' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;">
+			<xhtml:p lang="de_ch">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Diagnosen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto Suva di caso possibilmente complesso deve contenere una sezione 'Diagnosi'</xhtml:p>
+			<xhtml:p lang="en">The Suva 'Notification of possible complex case' must contain a 'Diagnoses' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0110" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfall&quot;">
+			<xhtml:p lang="de_ch">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Wahrnehmungen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto Suva di caso possibilmente complesso deve contenere una sezione 'Osservazioni particolari'</xhtml:p>
+			<xhtml:p lang="en">The Suva 'Notification of possible complex case' must contain a 'Observations' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0111" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;">
+			<xhtml:p lang="de_ch">Die Suva 'Meldung möglicher komplexer Fall' muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto Suva di caso possibilmente complesso deve contenere una sezione 'Osservazioni' (con situazione lavorativa. Se non ci sono osservazioni, scrivere 'Nessuna')</xhtml:p>
+			<xhtml:p lang="en">The Suva 'Notification of possible complex case' must contain a 'Remarks' section (with employment status. If no remarks, then enter 'None')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation Komplexfall (section)
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.SchadenInfoKomplexfall&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc Schadeninformationen Komplexfall</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
-		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2907-0201" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Schadeninformationen Komplexfall' müssen als 'section' im CDA Body deklariert werden</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0202" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Schadeninformationen Komplexfall' müssen einen narrativen Text enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0203" test="(cda:title=&quot;Beurteilung komplexer Fall&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Schadeninformationen Komplexfall' müssen einen section title 'Beurteilung komplexer Fall' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0204" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Schadeninformationen Komplexfall' müssen das Schadendatum enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0205" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.ErstbehandlungKomplexfallL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Schadeninformationen Komplexfall' müssen das Datm der Konsultation, die nächste Beurteilung und Meldungsart/Vorgehen enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.SchadenInfoKomplexfall&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">eMedidoc Schadeninformationen Komplexfall</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen</xhtml:p>
+		<xhtml:h3 lang="fr_ch"></xhtml:h3>
+		<xhtml:p lang="fr_ch"></xhtml:p>
+		<xhtml:h3 lang="it_ch">Informazioni eMedidoc relative a caso complesso</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro'</xhtml:p>
+		<xhtml:h3 lang="en">eMedidoc Claim information complex case</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on the claim information</xhtml:p>
+		<assert id="suva-form-2907-0201" test="self::cda:section">
+			<xhtml:p lang="de_ch">'Schadeninformationen Komplexfall' müssen als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Informazioni relative al caso complesso' devono essere dichiarate come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">'Claim information complex case' must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0202" test="cda:text">
+			<xhtml:p lang="de_ch">'Schadeninformationen Komplexfall' müssen einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Informazioni relative al caso complesso' devono contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">'Claim information complex case' must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0203" test="(cda:title=&quot;Beurteilung komplexer Fall&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: 'Schadeninformationen Komplexfall' müssen einen section title 'Beurteilung komplexer Fall' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: Le 'Informazioni relative al caso complesso' devono contenere un section title 'Beurteilung komplexer Fall'</xhtml:p>
+			<xhtml:p lang="en">German: 'Claim information complex case' must contain an 'Beurteilung komplexer Fall' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0204" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: 'Schadeninformationen Komplexfall' müssen einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Francese: Le 'Informazioni relative al caso complesso' devono contenere un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="en">French: 'Claim information complex case' must contain an 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0205" test="(cda:title=&quot;Valutazione caso complesso&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: 'Schadeninformationen Komplexfall' müssen einen section title 'Valutazione caso complesso' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: Le 'Informazioni relative al caso complesso' devono contenere un section title 'Valutazione caso complesso'</xhtml:p>
+			<xhtml:p lang="en">Italien: 'Claim information complex case' must contain an 'Valutazione caso complesso' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0206" test="(cda:title=&quot;Assessment of complex case&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: 'Schadeninformationen Komplexfall' müssen einen section title 'Assessment of complex case' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: Le 'Informazioni relative al caso complesso' devono contenere un section title 'Assessment of complex case'</xhtml:p>
+			<xhtml:p lang="en">English: 'Claim information complex case' must contain an 'Assessment of complex case' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0207" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;eMedidoc.SchadenInfoL3&quot;]">
+			<xhtml:p lang="de_ch">'Schadeninformationen Komplexfall' müssen das Schadendatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Informazioni relative al caso complesso' devono includere la data del sinistro</xhtml:p>
+			<xhtml:p lang="en">'Claim information complex case' must contain the claim date</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0208" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.ErstbehandlungKomplexfallL3&quot;]">
+			<xhtml:p lang="de_ch">'Schadeninformationen Komplexfall' müssen das Datm der Konsultation, die nächste Beurteilung und Meldungsart/Vorgehen enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Informazioni relative al caso complesso' devono contenere la data della consultazione, la prossima valutazione e il tipo di rapporto/procedura</xhtml:p>
+			<xhtml:p lang="en">'Claim information complex case' must contain the date of the consultation, the next assessment and type of notification/procedure</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Schadeninformation Komplexfall L3
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.ErstbehandlungKomplexfallL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc Schadeninformation: Komplexfall</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen der Meldung möglicher Komplexfall</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
-		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2907-0301" test="self::cda:encounter"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss als 'encounter' im CDA Body (section 'Beurteilung komplexer Fall') deklariert werden</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0302" test="cda:effectiveTime/cda:low"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss ein Konsultationsdatum enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0303" test="cda:effectiveTime/cda:high"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss ein Datum der nächsten Beurteilung enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0304" test="cda:code/@codeSystem=&quot;2.16.756.5.30.1.100.3.2.9&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss die Angabe Meldungsart/Vorgehen enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.9')</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0305" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.9&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung muss die Angabe Meldungsart/Vorgehen enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.9')</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0306" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.ErstbehandlungKomplexfallL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">eMedidoc Schadeninformation: Komplexfall</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den Schadeninformationen der Meldung möglicher Komplexfall</xhtml:p>
+		<xhtml:h3 lang="fr_ch"></xhtml:h3>
+		<xhtml:p lang="fr_ch"></xhtml:p>
+		<xhtml:h3 lang="it_ch">Informazione eMedidoc relativa al sinistro: caso complesso</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Informazioni relative al sinistro' del rapporto di caso possibilmente complesso</xhtml:p>
+		<xhtml:h3 lang="en">eMedidoc claim information: Complex case</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on claim information for the notification of possible complex case</xhtml:p>
+		<assert id="suva-form-2907-0301" test="self::cda:encounter">
+			<xhtml:p lang="de_ch">Erstbehandlung muss als 'encounter' im CDA Body (section 'Beurteilung komplexer Fall') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve essere dichiarato come 'encounter' nel CDA Body (section 'Valutazione caso complesso')</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must be declared as an 'Encounter' in the CDA Body ('Assessment of complex case' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0302" test="cda:effectiveTime/cda:low">
+			<xhtml:p lang="de_ch">Erstbehandlung muss ein Konsultationsdatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve includere una data di consultazione</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain a consultation date</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0303" test="cda:effectiveTime/cda:high">
+			<xhtml:p lang="de_ch">Erstbehandlung muss ein Datum der nächsten Beurteilung enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve contenere la data della valutazione successiva</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain the date of the next assessment</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0304" test="cda:code/@codeSystem=&quot;2.16.756.5.30.1.100.3.2.9&quot;">
+			<xhtml:p lang="de_ch">Erstbehandlung muss die Angabe Meldungsart/Vorgehen enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.9')</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve contenere l'indicazione del tipo di rapporto/procedura (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.9')</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain the information type of notification/procedure (valid value from the table of values '2.16.756.5.30.1.100.3.2.9')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0305" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.9&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Erstbehandlung muss die Angabe Meldungsart/Vorgehen enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.1.100.3.2.9')</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Il trattamento iniziale deve contenere l'indicazione del tipo di rapporto/procedura (valore valido della tabella di valori '2.16.756.5.30.1.100.3.2.9')</xhtml:p>
+			<xhtml:p lang="en">Initial treatment must contain the information type of notification/procedure (valid value from the table of values '2.16.756.5.30.1.100.3.2.9')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0306" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch">Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Trattamento iniziale da parte del medico che compila il formulario: si deve indicare almeno il nome del medico ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="en">Initial treatment by doctor completing the form: At least the doctor’s name must be entered ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Wahrnehmungen Komplexfall (section)
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfall&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc Wahrnehmungen Komplexfall</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen zu den Wahrnehmungen Komplexfall</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
-		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2907-0401" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Wahrnehmungen Komplexfall' müssen als 'section' im CDA Body deklariert werden</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0402" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Wahrnehmungen Komplexfall' müssen einen narrativen Text enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0403" test="(cda:title=&quot;Wahrnehmungen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Wahrnehmungen Komplexfall' müssen einen section title 'Wahrnehmungen' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0404" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfallL3&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Wahrnehmungen Komplexfall' müssen strukturierte Angaben zu Somatisches, Psychosoziales, Berufliches und Patient enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern><pattern><!--
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfall&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">eMedidoc Wahrnehmungen Komplexfall</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den Wahrnehmungen Komplexfall</xhtml:p>
+		<xhtml:h3 lang="fr_ch"></xhtml:h3>
+		<xhtml:p lang="fr_ch"></xhtml:p>
+		<xhtml:h3 lang="it_ch">Osservazioni particolari eMedidoc caso complesso</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le 'Osservazioni particolari caso complesso'</xhtml:p>
+		<xhtml:h3 lang="en">eMedidoc observations complex case</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on observations complex case</xhtml:p>
+		<assert id="suva-form-2907-0401" test="self::cda:section">
+			<xhtml:p lang="de_ch">'Wahrnehmungen Komplexfall' müssen als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Osservazioni particolari caso complesso' devono essere dichiarate come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">'Observations complex case' must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0402" test="cda:text">
+			<xhtml:p lang="de_ch">'Wahrnehmungen Komplexfall' müssen einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Osservazioni particolari caso complesso' devono contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">'Observations complex case' must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0403" test="(cda:title=&quot;Wahrnehmungen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: 'Wahrnehmungen Komplexfall' müssen einen section title 'Wahrnehmungen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: Le 'Osservazioni caso complesso' devono contenere un section title 'Wahrnehmungen'</xhtml:p>
+			<xhtml:p lang="en">German: 'Observations complex case' must contain an 'Wahrnehmungen' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0404" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: 'Wahrnehmungen Komplexfall' müssen einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Francese: Le 'Osservazioni caso complesso' devono contenere un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="en">French: 'Observations complex case' must contain an 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0405" test="(cda:title=&quot;Osservazioni particolari&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: 'Wahrnehmungen Komplexfall' müssen einen section title 'Osservazioni particolari' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: Le 'Osservazioni caso complesso' devono contenere un section title 'Osservazioni particolari'</xhtml:p>
+			<xhtml:p lang="en">Italian: 'Observations complex case' must contain an 'Osservazioni particolari' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0406" test="(cda:title=&quot;Observations&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: 'Wahrnehmungen Komplexfall' müssen einen section title 'Observations' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: Le 'Osservazioni caso complesso' devono contenere un section title 'Observations'</xhtml:p>
+			<xhtml:p lang="en">English: 'Observations complex case' must contain an 'Observations' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0407" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfallL3&quot;]">
+			<xhtml:p lang="de_ch">'Wahrnehmungen Komplexfall' müssen strukturierte Angaben zu Somatisches, Psychosoziales, Berufliches und Patient enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Osservazioni caso complesso' devono contenere indicazioni strutturate su quadro somatico, psicosociale, professionale e paziente</xhtml:p>
+			<xhtml:p lang="en">'Observations complex case' must contain structured entries on somatic, psychosocial and occupational aspects and on the patient</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
+<pattern>
+	<!--
 	********************************************************
 	Wahrnehmungen Komplexfall (Einzeleintrag)
 	********************************************************
-	--><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfallL3&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Wahrnehmungen Komplexfall: Einzelne Wahrnehmung</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben eine Wahrnehmung Komplexfall</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: francaise</xhtml:h3>
-		<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2907-0501" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eine 'Wahrnehmung Komplexfall' muss als 'observation' im CDA Body deklariert werden</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0502" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.10&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Eine 'Wahrnehmung Komplexfall' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.10' enthalten</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2907-0503" role="information" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Wahrnehmung Komplexfall' enthalten keinen Text</xhtml:p><!--
-			<xhtml:p lang='fr_ch'>totranslate: francaise</xhtml:p>
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern>
+	-->
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;2907.WahrnehmungenKomplexfallL3&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Wahrnehmungen Komplexfall: Einzelne Wahrnehmung</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben eine Wahrnehmung Komplexfall</xhtml:p>
+		<xhtml:h3 lang="fr_ch"></xhtml:h3>
+		<xhtml:p lang="fr_ch"></xhtml:p>
+		<xhtml:h3 lang="it_ch">Osservazioni particolari caso complesso: singola osservazione</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono un'osservazione caso complesso</xhtml:p>
+		<xhtml:h3 lang="en">Observations complex case: Individual observation</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe an observation complex case</xhtml:p>
+		<assert id="suva-form-2907-0501" test="self::cda:observation">
+			<xhtml:p lang="de_ch">Eine 'Wahrnehmung Komplexfall' muss als 'observation' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Una 'Osservazione caso complesso' deve essere dichiarata come 'observation' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">The 'Observation complex case' must be declared as an 'Observation' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0502" test="cda:code/@code=document(&quot;eMedidoc-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.100.3.2.10&quot;]/code/@value">
+			<xhtml:p lang="de_ch">Eine 'Wahrnehmung Komplexfall' muss eine strukturierte Angabe aus der Wertetabelle '2.16.756.5.30.1.100.3.2.10' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Una 'Osservazione caso complesso' deve contenere un'indicazione strutturata della tabella di valori '2.16.756.5.30.1.100.3.2.10'</xhtml:p>
+			<xhtml:p lang="en">The 'Observation complex case' must contain a structured entry from the table of values '2.16.756.5.30.1.100.3.2.10'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2907-0503" role="information" test="cda:text">
+			<xhtml:p lang="de_ch">'Wahrnehmung Komplexfall' enthalten keinen Text</xhtml:p>
+			<xhtml:p lang="fr_ch"></xhtml:p>
+			<xhtml:p lang="it_ch">Le 'Osservazioni caso complesso' non contengono nessun testo</xhtml:p>
+			<xhtml:p lang="en">'Observation complex case' does not contain a text</xhtml:p>
+		</assert>
+	</rule>
+</pattern>

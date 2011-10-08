@@ -13,153 +13,510 @@ History:
 09.12.2010: Tony Schaller, medshare GmbH (Erwerbstatus hinzugefügt auf Antrag Thomas Lanz, Suva)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 26.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+07.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
---><pattern><!-- Entity Information --><xhtml:ul id="suva-form-2928" xmlns:xhtml="http://www.w3.org/1999/xhtml"><xhtml:li class="filename">2928.ent</xhtml:li><xhtml:li class="version">1.0</xhtml:li></xhtml:ul><rule context="cda:ClinicalDocument"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Header</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für den Ärztlicher Zwischenbericht</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Header</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles 'CDA Header' pour le rapport médical intermédiaire</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><!-- Formularnummer prüfen --><assert id="suva-form-2928-0101" test="//cda:templateId/@extension=&quot;2928&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Formularnummer für Suva Ärztlicher Zwischenbericht muss lauten: 2928</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le numéro de formulaire pour le rapport médical intermédiaire de la Suva doit être: 2928</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- code prüfen --><assert id="suva-form-2928-0102" test="//cda:code/@code=&quot;51848-0&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der LOINC Code für Der Suva Ärztliche Zwischenbericht muss lauten: 51848-0 (Assessment note)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le code LOINC pour le rapport médical intermédiaire de la Suva doit être: 51848-0 (Assessment note)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- title prüfen --><assert id="suva-form-2928-0103" test="(//cda:title=&quot;Ärztlicher Zwischenbericht&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Ärztlicher Zwischenbericht'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le titre français doit être 'Ärztlicher Zwischenbericht'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0104" test="(//cda:title=&quot;Rapport médical intermédiaire&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Rapport médical intermédiaire'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le titre français doit être 'Rapport médical intermédiaire'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!-- Arbeitgeber prüfen --><assert id="suva-form-2928-0105" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss einen Arbeitgeber enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir un employeur</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><!--
+-->
+<pattern>
+	<!-- Entity Information -->
+	<xhtml:ul id="suva-form-2928">
+		<xhtml:li class="filename">2928.ent</xhtml:li>
+		<xhtml:li class="version">1.0</xhtml:li>
+	</xhtml:ul>
+	<rule context="cda:ClinicalDocument">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Header</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für den Ärztlicher Zwischenbericht</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Header</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles 'CDA Header' pour le rapport médical intermédiaire</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Header</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Header' per il rapporto medico intermedio</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report CDA Header</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Header tests on the interim medical report</xhtml:p>
+		<!-- Formularnummer prüfen -->
+		<assert id="suva-form-2928-0101" test="//cda:templateId/@extension=&quot;2928&quot;">
+			<xhtml:p lang="de_ch">Die Formularnummer für Suva Ärztlicher Zwischenbericht muss lauten: 2928</xhtml:p>
+			<xhtml:p lang="fr_ch">Le numéro de formulaire pour le rapport médical intermédiaire de la Suva doit être: 2928</xhtml:p>
+			<xhtml:p lang="it_ch">Il numero form. del rapporto medico intermedio Suva deve essere: 2928</xhtml:p>
+			<xhtml:p lang="en">The form number for the Suva interim medical report must read: 2928</xhtml:p>
+		</assert>
+		<!-- code prüfen -->
+		<assert id="suva-form-2928-0102" test="//cda:code/@code=&quot;51848-0&quot;">
+			<xhtml:p lang="de_ch">Der LOINC Code für Der Suva Ärztliche Zwischenbericht muss lauten: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le code LOINC pour le rapport médical intermédiaire de la Suva doit être: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="it_ch">Il codice LOINC del rapporto medico intermedio Suva deve essere: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="en">The LOINC Code for the Suva interim medical report must read: 51848-0 (Assessment note)</xhtml:p>
+		</assert>
+		<!-- title prüfen -->
+		<assert id="suva-form-2928-0103" test="(//cda:title=&quot;Ärztlicher Zwischenbericht&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Der deutsche Titel muss lauten 'Ärztlicher Zwischenbericht'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre allemand doit être 'Ärztlicher Zwischenbericht'</xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo tedesco deve essere 'Ärztlicher Zwischenbericht'</xhtml:p>
+			<xhtml:p lang="en">The German title must read 'Ärztlicher Zwischenbericht'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0104" test="(//cda:title=&quot;Rapport médical intermédiaire&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Der französische Titel muss lauten 'Rapport médical intermédiaire'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre français doit être 'Rapport médical intermédiaire'</xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo francese deve essere 'Rapport médical intermédiaire'</xhtml:p>
+			<xhtml:p lang="en">The French title must read 'Rapport médical intermédiaire'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0105" test="(//cda:title=&quot;Rapporto medico intermedio&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Der italienische Titel muss lauten 'Rapporto medico intermedio'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre italien doit être 'Rapporto medico intermedio'</xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo italiano deve essere 'Rapporto medico intermedio'</xhtml:p>
+			<xhtml:p lang="en">The Italian title must read 'Rapporto medico intermedio'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0106" test="(//cda:title=&quot;Interim medical report&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Der englische Titel muss lauten 'Interim medical report'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre anglais doit être 'Interim medical report'</xhtml:p>
+			<xhtml:p lang="it_ch">Il titolo inglese deve essere 'Interim medical report'</xhtml:p>
+			<xhtml:p lang="en">The English title must read 'Interim medical report'</xhtml:p>
+		</assert>
+		<!-- Arbeitgeber prüfen -->
+		<assert id="suva-form-2928-0107" test="//cda:participant/cda:templateId[@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and @extension=&quot;CDA-CH.Head.Empl&quot;]">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss einen Arbeitgeber enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir un employeur</xhtml:p>
+			<xhtml:p lang="it_ch">Nel rapporto medico intermedio Suva deve essere indicato un datore di lavoro</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain an employer</xhtml:p>
+		</assert>
+		<!--
 		********************************************************
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
-		--><assert id="suva-form-2928-0106" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.SchadenInfo&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss eine Section 'Schadeninformationen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir une section 'Informations sur le sinistre'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0107" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss eine Section 'Diagnosen' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir une section 'Diagnostics'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2928.Verlauf&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss eine Section 'Verlauf' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir une section 'Evolution'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2928.Therapie&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss eine Section 'Therapie' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir une section 'Thérapie'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0110" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir une section 'Capacité de travail'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0111" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.BehAbschluss&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva ne contient pas de section 'Traitement terminé'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0112" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;Suva.2928.ZuweisungArbeit&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss, Zuweisung Arbeit'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva ne contient pas de section 'Traitement terminé, Procurer un travail'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0113" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;Suva.2928.BleibendeNachteile&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss, Zuweisung Arbeit'</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva ne contient pas de section 'Traitement terminé, Procurer un travail'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0114" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Suva Ärztliche Zwischenbericht muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical intermédiaire de la Suva doit contenir une section 'Remarques' (même s'il n'y a pas de remarques – indiquer alors 'Aucune')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2928.Verlauf&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Evolution'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0201" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0202" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0203" test="(cda:title=&quot;Verlauf&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss einen section title 'Verlauf' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir un section title 'Verlauf'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0204" test="(cda:title=&quot;Evolution&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss einen section title 'Evolution' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir un section title 'Evolution'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0205" test="cda:code/@code=&quot;47519-4&quot; and cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit être codée avec le code LOINC 47519-4 (History of Procedures)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0206" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlauf&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss eine min. 1 organizer 'Bisheriger Verlauf' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir au moins 1 organizer 'Evolution précédente'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlauf&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Organizer'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Organizer'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Organizer'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Organizer'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0301" test="self::cda:organizer"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss als 'organizer' im CDA Body (section 'Verlauf') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit être déclarée comme 'organizer' dans le CDA Body (section 'Evolution')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0302" test="cda:code/@code=&quot;47519-4&quot; and cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit être codée avec le code 47519-4 (History of Procedures)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0303" test="cda:effectiveTime"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss ein Beurteilungsdatum enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir une date d'évaluation</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0304" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0305" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufProc&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss eine min. 1 procedure 'Bisheriger Verlauf' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir au moins 1 procedure 'Evolution précédente'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0306" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufExtFaktoren&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf' muss eine min. 1 observation 'Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution' eMedidoc doit contenir au moins 1 observation 'Influence de circonstances sans rapport avec l'accident sur l'évolution du cas'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufProc&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Bisheriger Verlauf'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Bisheriger Verlauf'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Evolution précédente'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Evolution précédente'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0401" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf, Bisheriger Verlauf' muss als 'procedure' im CDA Body (im organizer der section 'Verlauf') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution, Evolution précédente' eMedidoc doit être déclarée comme 'procedure' dans le CDA Body (dans l'organizer de la section 'Evolution')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0402" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf, Bisheriger Verlauf' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution, Evolution précédente' eMedidoc doit contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufExtFaktoren&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Beeinflussung/unfallfremde Faktoren'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Beeinflussung/unfallfremde Faktoren'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Influence de circonstances sans rapport avec l'accident sur l'évolution du cas'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Influence de circonstances sans rapport avec l'accident sur l'évolution du cas'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0501" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss als 'observation' im CDA Body (im organizer der section 'Verlauf') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Evolution, Influence de circonstances sans rapport avec l'accident sur l'évolution du cas' eMedidoc doit être déclaré comme 'observation' dans le CDA Body (dans l'organizer de la section 'Evolution')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0502" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Evolution, Influence de circonstances sans rapport avec l'accident sur l'évolution du cas' eMedidoc doit contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2928.Therapie&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Therapie'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Therapie'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Thérapie'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Thérapie'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0601" test="self::cda:section"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0602" test="cda:text"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss einen narrativen Text enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir un texte narratif</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0603" test="(cda:title=&quot;Therapie&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir un section title 'Therapie'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0604" test="(cda:title=&quot;Thérapie&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss einen section title 'Thérapie' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir un section title 'Thérapie'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0605" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.AktBehandlung&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss eine procedure 'Gegenwärtige Behandlung' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir une procedure 'Traitement en cours'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0606" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Vorschläge&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss eine procedure 'Vorschläge' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir une procedure 'Propositions'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0607" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Beratungsintervall&quot;]"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie' muss eine procedure 'Beratungsintervall' enthalten</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La 'Thérapie' eMedidoc doit contenir une procedure 'Intervalles de consultation'</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.AktBehandlung&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Therapie - Gegenwärtige Behandlung'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Therapie - Gegenwärtige Behandlung'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Thérapie - Traitement en cours'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Thérapie - Traitement en cours'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0701" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Traitement en cours' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0702" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Traitement en cours' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0703" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Traitement en cours' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0704" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Traitement en cours' eMedidoc doit contenir un texte narratif si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Vorschläge&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Therapie - Vorschläge'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Therapie - Vorschläge'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Thérapie - Propositions'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Thérapie - Propositions'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0801" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Vorschläge' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Propositions' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0802" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Propositions' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0803" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Propositions' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0804" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Vorschläge' muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Propositions' eMedidoc doit contenir un texte narratif si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Beratungsintervall&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Therapie - Beratungsintervall'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Therapie - Beratungsintervall'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Thérapie - Intervalles de consultation'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Thérapie - Intervalles de consultation'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-0901" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Beratungsintervall' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Intervalles de consultation' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0902" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Intervalles de consultation' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0903" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Intervalles de consultation' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-0904" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Therapie, Beratungsintervall' muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Thérapie, Intervalles de consultation' eMedidoc doit contenir un texte narratif si le code="Y"</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.ZuweisungArbeit&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Behandlungsabschluss - Zuweisung Arbeit'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Behandlungsabschluss - Zuweisung Arbeit'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Traitement terminé - Procurer un travail'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Traitement terminé - Procurer un travail'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-1001" test="self::cda:procedure"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Traitement terminé, Procurer un travail' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-1002" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Traitement terminé, Procurer un travail' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-1003" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Traitement terminé, Procurer un travail' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule><rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BleibendeNachteile&quot;]"><!-- Rule Documentation --><xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Behandlungsabschluss - Bleibende Nachteile'</xhtml:h3><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Behandlungsabschluss - Bleibende Nachteile'</xhtml:p><xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Suva rapport médical intermédiaire: CDA Body Section 'Traitement terminé - Dommage permanent'</xhtml:h3><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles CDA Body pour 'Traitement terminé - Dommage permanent'</xhtml:p><!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		--><assert id="suva-form-2928-1101" test="self::cda:observation"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss als 'observation' im CDA Body (section 'Therapie') deklariert werden</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Traitement terminé, Dommage permanent' eMedidoc doit être déclaré comme 'observation' dans le CDA Body (section 'Thérapie')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-1102" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Traitement terminé, Dommage permanent' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert><assert id="suva-form-2928-1103" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value"><xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p><xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">'Traitement terminé, Dommage permanent' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p><!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			--></assert></rule></pattern>
+		-->
+		<assert id="suva-form-2928-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.SchadenInfo&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir une section 'Informations sur le sinistre'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio Suva deve contenere una sezione 'Informazioni sul sinistro'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain a 'Claim information' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Diagnosen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir une section 'Diagnostics'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio Suva deve contenere una sezione 'Diagnosi'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain a 'Diagnoses' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0110" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2928.Verlauf&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir une section 'Evolution'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio Suva deve contenere una sezione 'Decorso'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain a 'Course' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0111" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and //cda:templateId/@extension=&quot;Suva.2928.Therapie&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Therapie' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir une section 'Thérapie'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio Suva deve contenere una sezione 'Terapia'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain a 'Therapy' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0112" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir une section 'Capacité de travail'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio Suva deve contenere una sezione 'Capacità lavorativa'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain a 'Capacity to work' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0113" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.BehAbschluss&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva ne contient pas de section 'Traitement terminé'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio non contiene una sezione 'Conclusione del trattamento'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report does not contain an 'End of treatment' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0114" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;Suva.2928.ZuweisungArbeit&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss, Zuweisung Arbeit'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva ne contient pas de section 'Traitement terminé, Procurer un travail'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio non contiene una sezione 'Conclusione del trattamento, assegnazione lavoro'</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report does not contain an 'End of treatment, allocation of work' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0115" role="information" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and //cda:templateId/@extension=&quot;Suva.2928.BleibendeNachteile&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht enthält keine Section 'Behandlungsabschluss, Zuweisung Arbeit'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva ne contient pas de section 'Traitement terminé, Procurer un travail'</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio non contiene una sezione 'Conclusione del trattamento, assegnazione lavoro'</xhtml:p>
+			<xhtml:p lang="en">T The Suva interim medical report does not contain an 'End of treatment, allocation of work' section</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0116" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;eMedidoc.Rem&quot;">
+			<xhtml:p lang="de_ch">Der Suva Ärztliche Zwischenbericht muss eine Section 'Bemerkungen' enthalten (mit Erwerbstatus. Wenn keine Bemerkungen, dann 'Keine' angeben)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical intermédiaire de la Suva doit contenir une section 'Remarques' (même s'il n'y a pas de remarques – indiquer alors 'Aucune')</xhtml:p>
+			<xhtml:p lang="it_ch">Il rapporto medico intermedio Suva deve contenere una sezione 'Osservazioni' (con situazione lavorativa. Se non ci sono osservazioni, scrivere 'Nessuna')</xhtml:p>
+			<xhtml:p lang="en">The Suva interim medical report must contain a 'Remarks' section (with employment status. If no remarks, then enter 'None')</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2928.Verlauf&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Evolution'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Decorso'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Decorso'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body Section 'Course'</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Course'</xhtml:p>
+		<assert id="suva-form-2928-0201" test="self::cda:section">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve essere dichiarato come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0202" test="cda:text">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0203" test="(cda:title=&quot;Verlauf&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: eMedidoc 'Verlauf' muss einen section title 'Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: 'Evolution' eMedidoc doit contenir un section title 'Verlauf'</xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: 'Decorso' eMedidoc deve contenere un section title 'Verlauf'</xhtml:p>
+			<xhtml:p lang="en">German: eMedidoc 'Course' must contain a 'Verlauf' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0204" test="(cda:title=&quot;Evolution&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: eMedidoc 'Verlauf' muss einen section title 'Evolution' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: 'Evolution' eMedidoc doit contenir un section title 'Evolution'</xhtml:p>
+			<xhtml:p lang="it_ch">Francese: 'Decorso' eMedidoc deve contenere un section title 'Evolution'</xhtml:p>
+			<xhtml:p lang="en">French: eMedidoc 'Course' must contain a 'Evolution' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0205" test="(cda:title=&quot;Decorso&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: eMedidoc 'Verlauf' muss einen section title 'Decorso' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: 'Evolution' eMedidoc doit contenir un section title 'Decorso'</xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: 'Decorso' eMedidoc deve contenere un section title 'Decorso'</xhtml:p>
+			<xhtml:p lang="en">Italian: eMedidoc 'Course' must contain a 'Decorso' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0206" test="(cda:title=&quot;Course&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: eMedidoc 'Verlauf' muss einen section title 'Course' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: 'Evolution' eMedidoc doit contenir un section title 'Course'</xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: 'Decorso' eMedidoc deve contenere un section title 'Course'</xhtml:p>
+			<xhtml:p lang="en">English: eMedidoc 'Course' must contain a 'Course' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0207" test="cda:code/@code=&quot;47519-4&quot; and cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit être codée avec le code LOINC 47519-4 (History of Procedures)</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve essere codificato con il codice LOINC 47519-4 (History of Procedures)</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must be coded with the LOINC Code 47519-4 (History of Procedures)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0208" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlauf&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss eine min. 1 organizer 'Bisheriger Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit contenir au moins 1 organizer 'Evolution précédente'</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve contenere almeno 1 organizer 'Decorso precedente'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must contain at least 1 'Previous course' organizer</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlauf&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Organizer'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Organizer'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Organizer'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Organizer'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Decorso - Organizer'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Decorso - Organizer'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body Section 'Course - Organizer'</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Course - Organizer'</xhtml:p>
+		<assert id="suva-form-2928-0301" test="self::cda:organizer">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss als 'organizer' im CDA Body (section 'Verlauf') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit être déclarée comme 'organizer' dans le CDA Body (section 'Evolution')</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve essere dichiarato come 'organizer' nel CDA Body (section 'Decorso')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must be declared as an 'Organizer' in the CDA Body (section 'Course')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0302" test="cda:code/@code=&quot;47519-4&quot; and cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss mit dem LOINC Code 47519-4 (History of Procedures) codiert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit être codée avec le code 47519-4 (History of Procedures)</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve essere codificato con il codice LOINC 47519-4 (History of Procedures)</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must be coded with the LOINC Code 47519-4 (History of Procedures)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0303" test="cda:effectiveTime">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss ein Beurteilungsdatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit contenir une date d'évaluation</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve contenere una data di valutazione</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must contain an assessment date</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0304" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve indicare almeno il nome del medico che ha formulato la diagnosi ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must mention at least the name of the assessing doctor ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0305" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufProc&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss eine min. 1 procedure 'Bisheriger Verlauf' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit contenir au moins 1 procedure 'Evolution précédente'</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve contenere almeno 1 procedure 'Decorso precedente'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must contain at least 1 procedure 'Prior Course'</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0306" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufExtFaktoren&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf' muss eine min. 1 observation 'Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution' eMedidoc doit contenir au moins 1 observation 'Influence de circonstances sans rapport avec l'accident sur l'évolution du cas'</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso' eMedidoc deve contenere almeno 1 observation 'Influsso di fattori estranei all'infortunio sul processo di guarigione'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course' must contain at least 1 'Factors unrelated to the accident influencing the healing process' observation</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufProc&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Bisheriger Verlauf'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Bisheriger Verlauf'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Evolution précédente'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Evolution précédente'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Decorso - Decorso precedente'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Decorso - Decorso precedente'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body section 'Course – Prior Course'</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Course – Prior Course'</xhtml:p>
+		<assert id="suva-form-2928-0401" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Bisheriger Verlauf' muss als 'procedure' im CDA Body (im organizer der section 'Verlauf') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution, Evolution précédente' eMedidoc doit être déclarée comme 'procedure' dans le CDA Body (dans l'organizer de la section 'Evolution')</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso, decorso precedente' eMedidoc deve essere dichiarato come 'procedure' nel CDA Body (nell'organizer della section 'Decorso')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course, prior Course' must be declared as a 'Course' in the CDA Body (in the organizer in the 'Course' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0402" test="cda:text">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Bisheriger Verlauf' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution, Evolution précédente' eMedidoc doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso, decorso precedente' eMedidoc deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course, prior course' must contain a narrative text</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BishVerlaufExtFaktoren&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Beeinflussung/unfallfremde Faktoren'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Beeinflussung/unfallfremde Faktoren'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Influence de circonstances sans rapport avec l'accident sur l'évolution du cas'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Influence de circonstances sans rapport avec l'accident sur l'évolution du cas'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Decorso - Influsso/Fattori estranei all'infortunio'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Decorso - Influsso/Fattori estranei all'infortunio'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body section 'Course - influence/factors unrelated to the accident'</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Course - influence/factors unrelated to the accident'</xhtml:p>
+		<assert id="suva-form-2928-0501" test="self::cda:observation">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss als 'observation' im CDA Body (im organizer der section 'Verlauf') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Evolution, Influence de circonstances sans rapport avec l'accident sur l'évolution du cas' eMedidoc doit être déclaré comme 'observation' dans le CDA Body (dans l'organizer de la section 'Evolution')</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso, influsso di fattori estranei all'infortunio sul processo di guarigione' eMedidoc deve essere dichiarato come 'observation' nel CDA Body (nell'organizer della section 'Decorso')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course, factors unrelated to the accident influencing the healing process' must be declared as an 'Observation' in the CDA Body (in the 'Course' section organizer)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0502" test="cda:text">
+			<xhtml:p lang="de_ch">eMedidoc 'Verlauf, Beeinflussung Heilungsverkauf durch unfallfremde Faktoren' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Evolution, Influence de circonstances sans rapport avec l'accident sur l'évolution du cas' eMedidoc doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">'Decorso, influsso di fattori estranei all'infortunio sul processo di guarigione' eMedidoc deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Course, factors unrelated to the accident influencing the healing process' must contain a narrative text</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2&quot; and cda:templateId/@extension=&quot;Suva.2928.Therapie&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Verlauf - Therapie'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Verlauf - Therapie'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Evolution - Thérapie'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Evolution - Thérapie'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Decorso - Terapia'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Decorso - Terapia'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body Section 'Course - Therapy'</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Course - Therapy'</xhtml:p>
+		<assert id="suva-form-2928-0601" test="self::cda:section">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Thérapie' eMedidoc doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia' eMedidoc deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy' must be declared as a 'Section' in the CDA Body</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0602" test="cda:text">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Thérapie' eMedidoc doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia' eMedidoc deve contenere un testo narrativo</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy' must contain a narrative text</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0603" test="(cda:title=&quot;Therapie&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+			<xhtml:p lang="de_ch">Deutsch: eMedidoc 'Therapie' muss einen section title 'Therapie' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La 'Thérapie' eMedidoc doit contenir un section title 'Therapie'</xhtml:p>
+			<xhtml:p lang="it_ch">Tedesco: 'Terapia' eMedidoc deve contenere un section title 'Therapie'</xhtml:p>
+			<xhtml:p lang="en">German: eMedidoc 'Therapy' must cotain a 'Therapie' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0604" test="(cda:title=&quot;Thérapie&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+			<xhtml:p lang="de_ch">Französisch: eMedidoc 'Therapie' muss einen section title 'Thérapie' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La 'Thérapie' eMedidoc doit contenir un section title 'Thérapie'</xhtml:p>
+			<xhtml:p lang="it_ch">Francese: 'Terapia' eMedidoc deve contenere un section title 'Thérapie'</xhtml:p>
+			<xhtml:p lang="en">French: eMedidoc 'Therapy' must cotain a 'Thérapie' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0605" test="(cda:title=&quot;Terapia&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: eMedidoc 'Therapie' muss einen section title 'Terapia' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La 'Thérapie' eMedidoc doit contenir un section title 'Terapia'</xhtml:p>
+			<xhtml:p lang="it_ch">Italiano: 'Terapia' eMedidoc deve contenere un section title 'Terapia'</xhtml:p>
+			<xhtml:p lang="en">Italian: eMedidoc 'Therapy' must cotain a 'Terapia' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0606" test="(cda:title=&quot;Therapy&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: eMedidoc 'Therapie' muss einen section title 'Therapy' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La 'Thérapie' eMedidoc doit contenir un section title 'Therapy'</xhtml:p>
+			<xhtml:p lang="it_ch">Inglese: 'Terapia' eMedidoc deve contenere un section title 'Therapy'</xhtml:p>
+			<xhtml:p lang="en">English: eMedidoc 'Therapy' must cotain a 'Therapy' section title</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0607" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.AktBehandlung&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine procedure 'Gegenwärtige Behandlung' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Thérapie' eMedidoc doit contenir une procedure 'Traitement en cours'</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia' eMedidoc deve contenere una procedure 'Trattamento attuale'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy' must contain a 'Current treatment' procedure</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0608" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Vorschläge&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine procedure 'Vorschläge' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Thérapie' eMedidoc doit contenir une procedure 'Propositions'</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia' eMedidoc deve contenere una procedure 'Proposte'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy' must contain a 'Suggestions' procedure</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0609" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Beratungsintervall&quot;]">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie' muss eine procedure 'Beratungsintervall' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La 'Thérapie' eMedidoc doit contenir une procedure 'Intervalles de consultation'</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia' eMedidoc deve contenere una procedure 'Intervallo consultazioni'</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy' must contain a 'Consultation interval' procedure</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.AktBehandlung&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Therapie - Gegenwärtige Behandlung'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Therapie - Gegenwärtige Behandlung'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Thérapie - Traitement en cours'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Thérapie - Traitement en cours'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Terapia - Trattamento attuale'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Terapia - Trattamento attuale'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body 'Therapy – Current treatment' section</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Therapy – Current treatment'</xhtml:p>
+		<assert id="suva-form-2928-0701" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Traitement en cours' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Trattamento attuale' eMedidoc deve essere dichiarato come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, current treatment' must be declared as a 'Course' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0702" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Traitement en cours' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Trattamento attuale' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, current treatment' must contain a structured information (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0703" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Traitement en cours' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Trattamento attuale' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, current treatment' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0704" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Gegenwärtige Behandlung' muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Traitement en cours' eMedidoc doit contenir un texte narratif si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Trattamento attuale' eMedidoc deve contenere un testo narrativo, se code="Y"</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, current treatment' must contain a narrative text if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Vorschläge&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Therapie - Vorschläge'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Therapie - Vorschläge'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Thérapie - Propositions'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Thérapie - Propositions'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Terapia - Proposte'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Terapia - Proposte'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body 'Therapy - Suggestions' section</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA tests on 'Therapy - Suggestions'</xhtml:p>
+		<assert id="suva-form-2928-0801" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Propositions' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Proposte' eMedidoc deve essere dichiarato come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, suggestions' must be declared as a 'Course' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0802" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Propositions' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Proposte' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, suggestions' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0803" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Propositions' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Proposte' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, suggestions' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0804" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Vorschläge' muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Propositions' eMedidoc doit contenir un texte narratif si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Proposte' eMedidoc deve contenere un testo narrativo, se code="Y"</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, suggestions' must contain a narrative text if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.Beratungsintervall&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Therapie - Beratungsintervall'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Therapie - Beratungsintervall'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Thérapie - Intervalles de consultation'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Thérapie - Intervalles de consultation'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Terapia - Intervallo consultazioni'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Terapia - Intervallo consultazioni'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body section 'Therapy – consultation interval'</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'Therapy – consultation interval'</xhtml:p>
+		<assert id="suva-form-2928-0901" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Intervalles de consultation' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Intervallo consultazioni' eMedidoc deve essere dichiarato come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, consultation interval' must be declared as a 'Course' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0902" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Intervalles de consultation' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Intervallo consultazioni' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, consultation interval' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0903" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Intervalles de consultation' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Intervallo consultazioni' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, consultation interval' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-0904" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+			<xhtml:p lang="de_ch">eMedidoc 'Therapie, Beratungsintervall' muss einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+			<xhtml:p lang="fr_ch">'Thérapie, Intervalles de consultation' eMedidoc doit contenir un texte narratif si le code="Y"</xhtml:p>
+			<xhtml:p lang="it_ch">'Terapia - Intervallo consultazioni' eMedidoc deve contenere un testo narrativo, se code="Y"</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'Therapy, consultation interval' must contain a narrative text if the code="Y"</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.ZuweisungArbeit&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Behandlungsabschluss - Zuweisung Arbeit'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Behandlungsabschluss - Zuweisung Arbeit'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Traitement terminé - Procurer un travail'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Traitement terminé - Procurer un travail'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Conclusione del trattamento - assegnazione lavoro'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Conclusione del trattamento - Assegnazione lavoro'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body 'End of treatment – allocation of work' section</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'End of treatment – allocation of work'</xhtml:p>
+		<assert id="suva-form-2928-1001" test="self::cda:procedure">
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss als 'procedure' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Traitement terminé, Procurer un travail' eMedidoc doit être déclaré comme 'procedure' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">'Conclusione del trattamento - Assegnazione lavoro' eMedidoc deve essere dichiarato come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'End of treatment, allocation of work' must be declared as a 'Course' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-1002" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Traitement terminé, Procurer un travail' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Conclusione del trattamento - Assegnazione lavoro' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'End of treatment, allocation of work' must contain a strucutred entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-1003" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, Zuweisung Arbeit' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Traitement terminé, Procurer un travail' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Conclusione del trattamento - Assegnazione lavoro' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'End of treatment, allocation of work' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.100.2.2.1&quot; and cda:templateId/@extension=&quot;Suva.2928.BleibendeNachteile&quot;]">
+		<!-- Rule Documentation -->
+		<xhtml:h3 lang="de_ch">Suva Ärztlicher Zwischenbericht: CDA Body Section 'Behandlungsabschluss - Bleibende Nachteile'</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Body Prüfungen für 'Behandlungsabschluss - Bleibende Nachteile'</xhtml:p>
+		<xhtml:h3 lang="fr_ch">Suva rapport médical intermédiaire: CDA Body Section 'Traitement terminé - Dommage permanent'</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles CDA Body pour 'Traitement terminé - Dommage permanent'</xhtml:p>
+		<xhtml:h3 lang="it_ch">Suva rapporto medico intermedio: CDA Body Section 'Conclusione del trattamento - Menomazioni permanenti'</xhtml:h3>
+		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli 'CDA Body' per 'Conclusione del trattamento - Menomazioni permanenti'</xhtml:p>
+		<xhtml:h3 lang="en">Suva interim medical report: CDA Body 'End of treatment – permanent impairment' section</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Body tests on 'End of treatment – permanent impairment'</xhtml:p>
+		<assert id="suva-form-2928-1101" test="self::cda:observation">
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss als 'observation' im CDA Body (section 'Therapie') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">'Traitement terminé, Dommage permanent' eMedidoc doit être déclaré comme 'observation' dans le CDA Body (section 'Thérapie')</xhtml:p>
+			<xhtml:p lang="it_ch">'Conclusione del trattamento - Menomazioni permanenti' eMedidoc deve essere dichiarato come 'procedure' nel CDA Body (section 'Terapia')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'End of treatment, permanent impairment' must be declared as an 'Observation' in the CDA Body ('Therapy' section)</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-1102" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Traitement terminé, Dommage permanent' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Conclusione del trattamento - Menomazioni permanenti' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'End of treatment, permanent impairment' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+		<assert id="suva-form-2928-1103" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+			<xhtml:p lang="de_ch">eMedidoc 'Behandlungsabschluss, bleibende Nachteile' muss eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">'Traitement terminé, Dommage permanent' eMedidoc doit contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch">'Conclusione del trattamento - Menomazioni permanenti' eMedidoc deve contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="en">eMedidoc 'End of treatment, permanent impairment' must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+		</assert>
+	</rule>
+</pattern>
