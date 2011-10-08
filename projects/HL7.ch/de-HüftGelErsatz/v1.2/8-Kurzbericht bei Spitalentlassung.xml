@@ -77,6 +77,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>33</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

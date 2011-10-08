@@ -77,6 +77,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Radiologieinstitut RoDiag</name>
+				<addr use="WP">
+					<streetName>Röntgenstr</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

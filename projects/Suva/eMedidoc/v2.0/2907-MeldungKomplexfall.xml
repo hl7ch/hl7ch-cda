@@ -499,6 +499,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Somatisches: Polytrauma/Schädelhirntrauma" -->
 							<code code="STRA" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -507,6 +508,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Somatisches: Craniocervicales Beschleunigungstrauma" -->
 							<code code="SHWS" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -515,6 +517,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Somatisches: CRPS/Sudeck" -->
 							<code code="SCRP" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -523,6 +526,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Somatisches: vorbestehende körperliche Schädigungen" -->
 							<code code="SVKS" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -531,6 +535,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Somatisches: Anderes" -->
 							<code code="SOTH" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -539,6 +544,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Psychosoziales: familiär" -->
 							<code code="PFAM" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -547,6 +553,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Psychosoziales: finanziell" -->
 							<code code="PFIN" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -555,6 +562,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Psychosoziales: kulturell" -->
 							<code code="PCUL" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -563,6 +571,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Psychosoziales: psychisch" -->
 							<code code="PPSY" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -571,6 +580,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Psychosoziales: Anderes" -->
 							<code code="POTH" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -579,6 +589,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Berufliches: durch Diagnose gefährdeter Arbeitsplatz" -->
 							<code code="BDIA" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -587,6 +598,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Berufliches: drohender Arbeitsplatzverlust" -->
 							<code code="BVER" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -595,6 +607,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Berufliches: Arbeitsplatzbedingungen" -->
 							<code code="BJOB" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -603,6 +616,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Berufliches: stellenlos" -->
 							<code code="BNJB" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -611,6 +625,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Berufliches: Anderes" -->
 							<code code="BOTH" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -619,6 +634,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Patient: Diskrepanz subjektiv - objektiv" -->
 							<code code="PSVO" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -627,6 +643,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Patient: Verdacht auf Abhängigkeit" -->
 							<code code="PVAA" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -635,6 +652,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Patient: schlechte Selbstprognose" -->
 							<code code="PSSP" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -643,6 +661,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Patient: sekundäre Symptomausweitung" -->
 							<code code="PSSA" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 					<entry>
@@ -651,6 +670,7 @@ History:
 							<templateId root="2.16.756.5.30.1.100.2.2.1" extension="2907.WahrnehmungenKomplexfallL3"/>
 							<!-- Strukturierte Angabe "Patient: Anderes" -->
 							<code code="POTH" codeSystem="2.16.756.5.30.1.100.3.2.10" />
+							<text></text>
 						</observation>
 					</entry>
 				</section>

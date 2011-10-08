@@ -19,7 +19,7 @@ History:
 	<id extension="fbca3d60-a20d-406f-81fe-6ca45b887254" root="2.16.756.5.30.1.100.2"/>
 	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Doctor’s note in accordance with AIL"/>
 	<!-- Regel CDLN: Als Codesystem für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
-	<title>Doctor’s note in accordance with AIL</title>
+	<title>LAA medical certificate</title>
 	<effectiveTime value="20100203"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
 	<languageCode code="en"/>
@@ -161,7 +161,7 @@ History:
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfo"/>
-					<title>Accident information</title>
+					<title>Claim information</title>
 					<text>
 						<table>
 							<tbody>
@@ -318,7 +318,7 @@ History:
 			<section>
 				<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.DiagList"/>
 				<code codeSystem="2.16.840.1.113883.6.1" code="29548-5" />
-				<title>Diagnosis</title>
+				<title>Diagnoses</title>
 				<text>
 					<table>
 						<tbody>

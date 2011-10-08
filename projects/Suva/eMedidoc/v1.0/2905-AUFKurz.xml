@@ -20,7 +20,7 @@ History:
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
 	<templateId extension="2905" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
 	<id extension="807563C2-5146-11D5-A672-00B0D022E945" root="2.16.756.5.30.1.100.2.1"/> <!-- OID SUVA/Formularnummer -->
-	<code code="2905" codeSystem="2.16.756.5.30.1.100.2.1" displayName="Arbeitsunfähigkeitszeugnis kurz"/> <!-- OID SUVA/Formularnummer -->
+	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Arbeitsunfähigkeitszeugnis einfach"/>
 	<title>Arbeitsunfähigkeitszeugnis ab 3. Tag</title>
 	<effectiveTime value="20081017"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
@@ -78,6 +78,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Gruppenpraxis CH</name>
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

@@ -76,6 +76,9 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Casa di cura Blumenalp, Centro di riabilitzione ortopedica</name>
+				<addr use="WP">
+					<city>Blumenalp</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

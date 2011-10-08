@@ -349,7 +349,7 @@ History:
 			<component>
 				<section>
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediList' />
-					<code code='10183-2' codeSystem='2.16.840.1.113883.6.1' displayName='Médicaments lors de la sortie de l'hôpital' />
+					<code code='10183-2' codeSystem='2.16.840.1.113883.6.1' displayName='Médicaments lors de la sortie de l’hôpital'/>
 					<title>Médicaments lors de la sortie de l'hôpital</title>
 					<text>
 						<table>

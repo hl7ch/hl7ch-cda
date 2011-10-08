@@ -24,7 +24,7 @@ History:
 	<templateId extension="2904" root="2.16.756.5.30.1.100.2.1"/>
 	<id extension="E0FA0CF3-0DA0-4A49-9AD0-DE26EB78AB12" root="2.16.756.5.30.1.100.2.1"/> 
 	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Treatment note"/>
-	<title>Treatment note</title>
+	<title>Notification of treatment</title>
 	<effectiveTime value="20100201"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
 	<languageCode code="en"/>
@@ -164,7 +164,7 @@ History:
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.SchadenInfoBehandlungsmeldung"/>
-					<title>Accident information</title>
+					<title>Claim information</title>
 					<text>
 							<table>
 								<tbody>

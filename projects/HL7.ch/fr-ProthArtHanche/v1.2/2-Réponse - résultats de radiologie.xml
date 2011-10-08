@@ -77,6 +77,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Institut de Radiologie RoDiag</name>
+				<addr use="WP">
+					<streetName>Rue de la radio</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

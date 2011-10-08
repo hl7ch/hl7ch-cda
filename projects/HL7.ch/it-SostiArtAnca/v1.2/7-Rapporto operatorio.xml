@@ -77,6 +77,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. Theo Klug, primario</name>
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

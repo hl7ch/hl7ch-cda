@@ -77,6 +77,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Cabinet Médical CH</name>
+				<addr use="WP">
+					<streetName>Allée du docteur</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>
@@ -230,7 +236,7 @@ History:
 					</text>
 					<entry>
 						<observationMedia classCode="OBS" moodCode="EVN" ID="MM1">
-							<value mediaType="image/jpeg">
+							<value xsi:type='ED' mediaType="image/jpeg">
 								<reference value="mustermaxhuefte1.jpg"/>
 							</value>
 						</observationMedia>

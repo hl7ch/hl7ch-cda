@@ -78,6 +78,12 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Hôpital cantonal, Clinique chirurgicale et orthopédique, Dr. Theo Klug, Médecin chef</name>
+				<addr use="WP">
+					<streetName>Rue de l'Hôpital</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Quelquepart</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>

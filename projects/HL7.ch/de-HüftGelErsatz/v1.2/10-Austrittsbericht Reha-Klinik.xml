@@ -76,6 +76,10 @@ History:
 			</assignedPerson>
 			<representedOrganization>
 				<name>Kurhaus Blumenalp, Zentrum für Orthopädische Rehabilitation</name>
+				<addr use="WP">
+					<postalCode>9876</postalCode>
+					<city>Blumenalp</city>
+				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>
