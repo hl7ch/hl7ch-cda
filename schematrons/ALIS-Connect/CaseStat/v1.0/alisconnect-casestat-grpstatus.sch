@@ -48,6 +48,9 @@ project templates
 
 	<!-- documentation of external references -->
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
+	<xhtml:h2 class="reference" lang="fr_ch">Entities référencées</xhtml:h2>
+	<xhtml:h2 class="reference" lang="it_ch">Entities referenziate</xhtml:h2>
+	<xhtml:h2 class="reference" lang="en">Referenced entities</xhtml:h2>
 	<xhtml:ul id="reference">
 		<xhtml:li>alisconnect-casestat-grpstatus.ent</xhtml:li>
 		<xhtml:li>alisconnect-casestat.ent</xhtml:li>
