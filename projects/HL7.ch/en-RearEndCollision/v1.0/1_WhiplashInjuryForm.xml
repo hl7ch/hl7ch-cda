@@ -20,7 +20,7 @@ History:
   <templateId extension="erstdokubogen-kzbt" root="2.16.756.5.30.1.110.2.1.1" />
   <id extension="A9BFE245-FA3E-40B1-BFBC-E1406205C56E" root="2.16.756.5.30.1.1.1.1"/>
   <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
-  <title>Document sheet first consultation following whiplash injury</title>
+  <title>Documentation sheet for initial consultation following a whiplash injury</title>
   <effectiveTime value="20100201173000"/>
   <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
   <languageCode code="en"/>
@@ -137,7 +137,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchadenInfo"/>
-          <title>Accident information</title>
+          <title>Claim information</title>
           <text>
             <table>
               <tbody>
@@ -161,7 +161,7 @@ History:
             </table>
           </text>
 					<entry>
-						<!-- SVV Observation Template: Accident information -->
+						<!-- SVV Observation Template: Claim information -->
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchadenInfoL3"/>
 							<!-- Claim No. -->
@@ -234,7 +234,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.SchilderungUnfallhergang"/>
-          <title>Freie Schilderung des Unfallherganges in chronologischer Abfolge by den Patienten</title>
+          <title>Patient’s free description of the chronological sequence of events of the accident</title>
           <text>
 						Ich war mit meinem Personenwagen unterwegs von Specimentown nach Samplecity, als ein plötzlich aufgetretenes Unwohlsein, Schwindel and Herzrasen mich veranlassten, meinen Wagen anzuhalten. Ich hatte etwas abrupt gebremst, and das nachfolgende Fahrzeug ist in das Heck meines Wagens geprallt.
           </text>
@@ -243,7 +243,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Unfallhergang"/>
-          <title>Unfallhergang</title>
+          <title>Sequence of events of the accident</title>
           <text>
             <table>
               <tbody>
@@ -261,7 +261,7 @@ History:
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Kopfanprall</content></td>
-                  <td>ja, an Kopfstütze</td>
+                  <td>Yes, an Kopfstütze</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Auf Kollision gefasst</content></td>
@@ -295,7 +295,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.BefragungUnfallablauf"/>
-          <title>Befragung zum Unfallablauf ergibt Anhaltspunkte für</title>
+          <title>Indications resulting from questioning about the sequence of events of the accident</title>
           <text>
             <table>
               <tbody>
@@ -308,7 +308,7 @@ History:
                   <td>No</td>
                 </tr>
                 <tr>
-                  <td><content styleCode="Bold">Angst- and / oder Schreckreaktion</content></td>
+                  <td><content styleCode="Bold">Angst- and / or Schreckreaktion</content></td>
                   <td>Yes</td>
                 </tr>
               </tbody>
@@ -319,7 +319,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.TätigkeitNachUnfall"/>
-          <title>Tätigkeiten nach dem Unfallereignis</title>
+          <title>Activities after the accident</title>
           <text>
             <table>
               <tbody>
@@ -343,45 +343,45 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Beschwerdeverlauf"/>
-          <title>Information from the patient zum BeschwerdeCourse of events seit dem Accident data</title>
+          <title>Patient’s information regarding the course of symptoms since the time of the accident</title>
           <text>
             <table>
               <tbody>
                 <tr>
                   <td><content styleCode="Bold">Kopfschmerzen</content></td>
-                  <td>ja, nach 1 Std.<br />spontan erzählt<br />Schmerzintensität: 3<br />Schmerzausstrahlung: blank</td>
+                  <td>yes, nach 1 Std.<br />spontan erzählt<br />Schmerzintensität: 3<br />Schmerzausstrahlung: blank</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Nackenschmerzen</content></td>
-                  <td>ja, sofort<br />spontan erzählt<br />Schmerzintensität: 5<br />Schmerzausstrahlung: Hinterkopf</td>
+                  <td>yes, sofort<br />spontan erzählt<br />Schmerzintensität: 5<br />Schmerzausstrahlung: Hinterkopf</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Schwindel</content></td>
-                  <td>ja, nach 1 Std.<br />erfragt</td>
+                  <td>yes, nach 1 Std.<br />erfragt</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Übelkeit</content></td>
-                  <td>ja, nach 1 Std.<br />erfragt</td>
+                  <td>yes, nach 1 Std.<br />erfragt</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Erbrechen</content></td>
-                  <td>nein<br />erfragt</td>
+                  <td>no<br />erfragt</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Hörstörungen</content></td>
-                  <td>nein<br />erfragt</td>
+                  <td>no<br />erfragt</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Sehstörungen</content></td>
-                  <td>nein<br />erfragt</td>
+                  <td>no<br />erfragt</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Schlafstörungen</content></td>
-                  <td>nein<br />erfragt</td>
+                  <td>no<br />erfragt</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Andere Symptome</content></td>
-                  <td>nein<br />erfragt</td>
+                  <td>no<br />erfragt</td>
                 </tr>
               </tbody>
             </table>
@@ -391,7 +391,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.FrühereAnamnese"/>
-          <title>Frühere History of presenting complaint</title>
+          <title>Previous medical history</title>
           <text>
             <table>
               <tbody>
@@ -410,7 +410,7 @@ History:
               </tbody>
             </table>
             <br />
-            <content styleCode="Bold">treatmentsbedürftige Beschwerden vor dem Unfall / Medications vor dem Unfall</content>
+            <content styleCode="Bold">Behandlungsbedürftige Beschwerden vor dem Unfall / Medikamente vor dem Unfall</content>
             <br />
             <table>
               <tbody>
@@ -454,7 +454,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Untersuchungsbefunde"/>
-          <title>UntersuchungsBefunde</title>
+          <title>Examination findings</title>
           <text>
             <table>
               <tbody>
@@ -469,7 +469,7 @@ History:
               </tbody>
             </table>
             <br />
-            <content styleCode="Bold">Schmerzen/Beweglichkeit der HWS (aktive, by den Patienten ausgeführte Bewegungen)</content>
+            <content styleCode="Bold">Schmerzen/Beweglichkeit der HWS (aktive, durch den Patienten ausgeführte Bewegungen)</content>
             <br />
             <table>
               <tbody>
@@ -510,7 +510,7 @@ History:
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Druckschmerz</content></td>
-                  <td>Ja, siehe Lokalisationsgrafik</td>
+                  <td>Yes, siehe Lokalisationsgrafik</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Ruheschmerzen</content></td>
@@ -597,11 +597,11 @@ History:
               <tbody>
                 <tr>
                   <td><content styleCode="Bold">HWS ap / seitlich</content></td>
-                  <td>ja, Findings: leichte rechtskonvexe Skoliose, None Fraktur</td>
+                  <td>Yes, Findings: leichte rechtskonvexe Skoliose, None Fraktur</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Densaufnahme transbuccal</content></td>
-                  <td>ja, Findings: Kein Hinweis auf Densfraktur</td>
+                  <td>Yes, Findings: Kein Hinweis auf Densfraktur</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">Andere bildgebende Untersuchungen</content></td>
@@ -664,7 +664,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.VorläufigeDiagnose"/>
-          <title>Vorläufige Diagnosis | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation</title>
+          <title>Provisional diagnosis | following the Quebec Task Force (QTF) classification</title>
           <text>
             <table>
               <tbody>
@@ -684,9 +684,9 @@ History:
               </tbody>
             </table>
             <br />
-            DifferentialDiagnosis(n)*: blank<br />
-						zusätzliche Diagnosis(n): Verdacht auf intermittierende Herzrhythmusstörung, Zustand nach Hyperthyroidism, Arterial hypertension<br />
-						weitere Abklärung(en): ECG, Schilddrüsenfunktion by den family doctor<br />
+            Differentialdiagnose(n)*: blank<br />
+						zusätzliche Diagnosen(n): Verdacht auf intermittierende Herzrhythmusstörung, Zustand nach Hyperthyroidism, Arterial hypertension<br />
+						weitere Abklärung(en): EKG, Schilddrüsenfunktion durch den Hausarzt<br />
 						<br />
             * entspricht den Forderungen/Ausführungen im Sinne des Bundesgerichtsentscheides BGE 134 V 109
           </text>
@@ -695,7 +695,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.Therapie"/>
-          <title>Therapy / angeordnete Measures</title>
+          <title>Therapy / Measures</title>
           <text>
             <table>
               <tbody>
@@ -703,7 +703,7 @@ History:
                   <td><content styleCode="Bold">Therapy / Measures</content></td>
                   <td>Analgetika (Paracetamol u.ä.)<br />
                   	Physiotherapy aktiv<br />
-                  	Andere Measures: muskelrelaxierende Medications
+                  	Andere Massnahmen: muskelrelaxierende Medications
                   	</td>
                 </tr>
               </tbody>
@@ -723,7 +723,7 @@ History:
                 <tr>
                   <td><content styleCode="Bold">aktuelle berufliche Tätigkeit</content></td>
                   <td>Bankfachmann</td>
-                  <td>ohne körperliche Belastung (BüroWork)</td>
+                  <td>ohne körperliche Belastung (Büroarbeit)</td>
                 </tr>
                 <tr>
                   <td><content styleCode="Bold">aktuelles Workspensum in %</content></td>

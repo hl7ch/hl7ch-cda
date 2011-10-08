@@ -20,6 +20,8 @@ History:  30.03.2010: Oliver Egger, visionary ag
 	
 	<xhtml:h2 class="reference" lang="de_ch">Referenzierte Entities</xhtml:h2>
 	<xhtml:h2 class="reference" lang="fr_ch">referenced entities</xhtml:h2>
+	<xhtml:h2 class="reference" lang="it_ch">Entities referenziate</xhtml:h2>
+	<xhtml:h2 class="reference" lang="en">Referenced entities</xhtml:h2>
 	<xhtml:ul id="reference">
 		<xhtml:li>minimal_docu.ent</xhtml:li>
 	</xhtml:ul>

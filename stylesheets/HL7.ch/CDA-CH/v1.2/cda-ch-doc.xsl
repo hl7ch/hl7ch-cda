@@ -197,6 +197,7 @@ History:
 				<tr>
 					<td>
 						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Description']/@displayName"/>
+						<xsl:text>:</xsl:text>
 					</td>
 					<td colspan="3">
 						<xsl:value-of select="."/>

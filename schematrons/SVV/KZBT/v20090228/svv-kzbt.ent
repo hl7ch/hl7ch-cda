@@ -11,25 +11,26 @@ History:
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
 24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 30.09.2011: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
+07.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
 
 ********************************************************
 -->
 <pattern>
 	<!-- Entity Information -->
-	<xhtml:ul id="svv-kzbt" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<xhtml:ul id="svv-kzbt">
 		<xhtml:li class="filename">svv-kzbt.ent</xhtml:li>
 		<xhtml:li class="version">1.0</xhtml:li>
 	</xhtml:ul>
 	<rule context="cda:ClinicalDocument">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: CDA Header</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für SVV KZBT</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: CDA Header</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles 'CDA Header' pour ASA TACC</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: CDA Header</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die CDA Header Prüfungen für SVV KZBT</xhtml:p>
+		<xhtml:h3 lang="fr_ch">ASA TACC: CDA Header</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles 'CDA Header' pour ASA TACC</xhtml:p>
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+		<xhtml:h3 lang="en">SIA WI: CDA Header</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the CDA Header tests on SIA WI</xhtml:p>
 		<!--
 		********************************************************
 		Headerinformationen prüfen (Template check)
@@ -37,137 +38,131 @@ History:
 		-->
 		<!-- Formularnummer prüfen -->
 		<assert id="svv-kzbt-0101" test="cda:templateId[@extension=&quot;erstdokubogen-kzbt&quot; and @root=&quot;2.16.756.5.30.1.110.2.1.1&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die Formularnummer für den Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss lauten: erstdokubogen-kzbt (OID Domain für SVV Dokumente: 2.16.756.5.30.1.110.2.1.1)</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le numéro de formulaire pour la fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être: erstdokubogen-kzbt (OID Domain pour documents SVV: 2.16.756.5.30.1.110.2.1.1)</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Die Formularnummer für den Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss lauten: erstdokubogen-kzbt (OID Domain für SVV Dokumente: 2.16.756.5.30.1.110.2.1.1)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le numéro de formulaire pour la fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être: erstdokubogen-kzbt (OID Domain pour documents SVV: 2.16.756.5.30.1.110.2.1.1)</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The form number for the documentation sheet for the initial consultation following a whiplash injury must read: erstdokubogen-kzbt (OID Domain for SIA documents: 2.16.756.5.30.1.110.2.1.1)</xhtml:p>
 		</assert>
 		<!-- code prüfen -->
 		<assert id="svv-kzbt-0102" test="//cda:code/@code=&quot;51848-0&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der LOINC Code für den Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss lauten: 51848-0 (Assessment note)</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le code LOINC pour la fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être: 51848-0 (Assessment note)</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der LOINC Code für den Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss lauten: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le code LOINC pour la fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être: 51848-0 (Assessment note)</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The LOINC code for the documentation sheet for the initial consultation following a whiplash injury must read: 51848-0 (assessment note)</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0103" test="//cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die OID Domain für die Codierung von CDA Dokumenten muss lauten: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">L'OID Domain pour le codage de documents CDA doit être: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Die OID Domain für die Codierung von CDA Dokumenten muss lauten: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
+			<xhtml:p lang="fr_ch">L'OID Domain pour le codage de documents CDA doit être: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The OID domain for the coding of CDA documents must read: 2.16.840.1.113883.6.1 (LOINC)</xhtml:p>
 		</assert>
 		<!-- title prüfen -->
 		<assert id="svv-kzbt-0104" test="(//cda:title=&quot;Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der deutsche Titel muss lauten 'Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma'</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le titre allemand doit être 'Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der deutsche Titel muss lauten 'Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre allemand doit être 'Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The German title must read 'Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0105" test="(//cda:title=&quot;Fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der französische Titel muss lauten 'Fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical’</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le titre français doit être 'Fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der französische Titel muss lauten 'Fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre français doit être 'Fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The French title must read 'Fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0106" test="(//cda:title=&quot;Modulo di documentazione per prima consultazione successiva a trauma cranico-cervicale da accelerazione&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Der italienische Titel muss lauten 'Modulo di documentazione per prima consultazione successiva a trauma cranico-cervicale da accelerazione'</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre italien doit être 'Modulo di documentazione per prima consultazione successiva a trauma cranico-cervicale da accelerazione'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The Italian title must read 'Modulo di documentazione per prima consultazione successiva a trauma cranico-cervicale da accelerazione'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0107" test="(//cda:title=&quot;Documentation sheet for initial consultation following a whiplash injury&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Der englische Titel muss lauten 'Documentation sheet for initial consultation following a whiplash injury’</xhtml:p>
+			<xhtml:p lang="fr_ch">Le titre anglais doit être 'Documentation sheet for initial consultation following a whiplash injury’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The English title must read 'Documentation sheet for initial consultation following a whiplash injury'</xhtml:p>
 		</assert>
 		<!--
 		********************************************************
 		Aufbau des Dokuments (Existenz der Sections prüfen)
 		********************************************************
 		-->
-		<assert id="svv-kzbt-0106" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.SchadenInfo&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Information sur le sinistre'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.SchadenInfo&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Information sur le sinistre'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a 'Claim information' section</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0107" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.SchilderungUnfallhergang&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Description libre par le patient du déroulement chronologique de l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.SchilderungUnfallhergang&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Description libre par le patient du déroulement chronologique de l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a section 'Patient’s free description of the chronological sequence of events of the accident'</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0108" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Unfallhergang&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Unfallhergang' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Circonstances de l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0110" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Unfallhergang&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Unfallhergang' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Circonstances de l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a 'Circumstances of the accident' section</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0109" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.BefragungUnfallablauf&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Befragung zum Unfallablauf ergibt Anhaltspunkte für' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Indications résultant de la prise de renseignements sur le déroulement chronologique'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0111" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.BefragungUnfallablauf&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Befragung zum Unfallablauf ergibt Anhaltspunkte für' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Indications résultant de la prise de renseignements sur le déroulement chronologique'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a section 'Indications resulting from questioning about the sequence of events of the accident'</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0110" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.TätigkeitNachUnfall&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Tätigkeiten nach dem Unfallereignis' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Activités après l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0112" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.TätigkeitNachUnfall&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Tätigkeiten nach dem Unfallereignis' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Activités après l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a section 'Activities following the accident'</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0111" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Beschwerdeverlauf&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Indications du patient sur l’évolution des symptômes depuis l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0113" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Beschwerdeverlauf&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Indications du patient sur l’évolution des symptômes depuis l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a section 'Information from the patient about the course of symptoms since the time of the accident'</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0112" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.FrühereAnamnese&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Frühere Anamnese' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Anamnèse antérieure'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0114" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.FrühereAnamnese&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Frühere Anamnese' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Anamnèse antérieure'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a 'Previous medical history' section</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0113" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Untersuchungsbefunde&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Untersuchungsbefunde' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Examen médical’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0115" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Untersuchungsbefunde&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Untersuchungsbefunde' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Examen médical’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a section 'Examination findings'</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0114" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.VorläufigeDiagnose&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0116" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.VorläufigeDiagnose&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a section 'Provisional diagnosis | in accordance with the Quebec Task Force (QTF) classification'</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0115" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Therapie&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Therapie / angeordnete Massnahmen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Traitement / mesures prescrites'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0117" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Therapie&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Therapie / angeordnete Massnahmen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Traitement / mesures prescrites'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a 'Therapy / Prescribed measures' section</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0116" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Arbeitsfähigkeit&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Capacité de travail’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0118" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and //cda:templateId/@extension=&quot;SVV.KZBT.Arbeitsfähigkeit&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Capacité de travail’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a 'Fitness for work' section</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0117" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Capacité de travail’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0119" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;">
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss eine Section 'Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir une section 'Capacité de travail’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a 'Fitness for work' section</xhtml:p>
 		</assert>
-		<assert id="svv-kzbt-0118" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.Rem&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Das Suva Arztzeugnis UVG muss eine Section 'Bemerkungen' enthalten (auch wenn keine Bemerkungen - dann 'Keine' angeben)</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Le rapport médical initial LAA de la Suva doit contenir une section 'Remarques' (même s'il n'y a pas de remarques – indiquer alors 'Aucune')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+		<assert id="svv-kzbt-0120" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.Rem&quot;">
+			<xhtml:p lang="de_ch">Das Suva Arztzeugnis UVG muss eine Section 'Bemerkungen' enthalten (auch wenn keine Bemerkungen - dann 'Keine' angeben)</xhtml:p>
+			<xhtml:p lang="fr_ch">Le rapport médical initial LAA de la Suva doit contenir une section 'Remarques' (même s'il n'y a pas de remarques – indiquer alors 'Aucune')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The Suva LAA medical certificate must contain a 'Remarks' section (if no remarks – then enter 'None')</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -177,69 +172,77 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.SchadenInfo&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Schadeninformationen</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: information sur le sinistre</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'information sur le sinistre' </xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Schadeninformationen</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: information sur le sinistre</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'information sur le sinistre' </xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Claim information</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information'</xhtml:p>
+
 		<assert id="svv-kzbt-0201" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Schadeninformationen müssen als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Claim information must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0202" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Schadeninformationen müssen einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a narrative text</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0203" test="(cda:title=&quot;Schadeninformationen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Schadeninformationen müssen einen section title 'Schadeninformationen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: Les informations sur le sinistre doivent contenir un section title 'Schadeninformationen'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: Claim information must contain a 'Schadeninformationen' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0204" test="(cda:title=&quot;Information sur le sinistre&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen einen section title 'Information sur le sinistre' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir un section title 'Information sur le sinistre'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Schadeninformationen müssen einen section title 'Information sur le sinistre' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: Les informations sur le sinistre doivent contenir un section title 'Information sur le sinistre'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: Claim information must contain a 'Claim information' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0204" test="(cda:title=&quot;Informazioni relative al sinistro&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Schadeninformationen müssen einen section title 'Informazioni relative al sinistro' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: Les informations sur le sinistre doivent contenir un section title 'Informazioni relative al sinistro'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: Claim information must contain a 'Informazioni relative al sinistro' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0204" test="(cda:title=&quot;Claim information&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Schadeninformationen müssen einen section title 'Claim information' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: Les informations sur le sinistre doivent contenir un section title 'Claim information'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: Claim information must contain a 'Claim information' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0205" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.SchadenInfoL3&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Schadeninformationen müssen das Schadendatum enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre doivent contenir la date de l’accident</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Schadeninformationen müssen das Schadendatum enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre doivent contenir la date de l’accident</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Claim information must contain a claim date</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0206" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.ErstbehandlungL3&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Information sur le sinistre' ASA TACC doivent contenir des indications sur le traitement initial</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT 'Schadeninformationen' müssen Angaben zur Erstbehandlung enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Information sur le sinistre' ASA TACC doivent contenir des indications sur le traitement initial</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI 'Claim information' must contain information about the intial treatment</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0207" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.AmbulanzL3&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT 'Schadeninformationen' müssen Angaben zur Ambulanz enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Information sur le sinistre' ASA TACC doivent contenir des indications sur l’ambulance</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT 'Schadeninformationen' müssen Angaben zur Ambulanz enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Information sur le sinistre' ASA TACC doivent contenir des indications sur l’ambulance</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI 'Claim information' must contain information on ambulance</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0208" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.WeiterbehandlungL3&quot;]">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT 'Schadeninformationen' müssen Angaben zur Weiterbehandlung enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les 'Information sur le sinistre' ASA TACC doivent contenir des indications sur la poursuite du traitement</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT 'Schadeninformationen' müssen Angaben zur Weiterbehandlung enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Les 'Information sur le sinistre' ASA TACC doivent contenir des indications sur la poursuite du traitement</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI 'Claim information' must contain information about further treatment</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -249,34 +252,35 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.SchadenInfoL3&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Schadeninformationen (Unfallzeitpunkt)</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Unfallzeitpunkt'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: informations sur le sinistre (date d’accident)</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, date d’accident' </xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Schadeninformationen (Unfallzeitpunkt)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Unfallzeitpunkt'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: informations sur le sinistre (date d’accident)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, date d’accident' </xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Claim information (time of accident)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information, time of accident'</xhtml:p>
+
 		<assert id="svv-kzbt-0301" test="self::cda:observation">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur le sinistre ASA TACC doivent être déclarées comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur le sinistre ASA TACC doivent être déclarées comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information must be desclared as an 'Observation' in the CDA Body ('Claim information' section)</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0302" test="cda:id">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Eine Schadennummer muss angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: il faut indiquer un numéro de sinistre</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Eine Schadennummer muss angegeben werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: il faut indiquer un numéro de sinistre</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: A claim number must be entered</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0303" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Unfallzeitpunkt muss angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: il faut indiquer une date d’accident</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Unfallzeitpunkt muss angegeben werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: il faut indiquer une date d’accident</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: Time of accident must be entered</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -286,41 +290,41 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.ErstbehandlungL3&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Schadeninformationen (Erstbehandlung)</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Erstbehandlung'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: informations sur le sinistre (traitement initial)</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, traitement initial’</xhtml:p>
-		<!--
-		<xhtml:h3 lang='it_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Schadeninformationen (Erstbehandlung)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Erstbehandlung'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: informations sur le sinistre (traitement initial)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, traitement initial’</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Claim information (initial treatment)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information, initial treatment'</xhtml:p>
+
 		<assert id="svv-kzbt-0401" test="self::cda:encounter">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Erstbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: le traitement initial doit être déclaré comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Erstbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: le traitement initial doit être déclaré comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: Initial treatment must be declared as an 'Encounter' in the CDA Body ('Claim information' section)</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0402" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Unfallzeitpunkt muss angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: il faut indiquer une date d’accident</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Unfallzeitpunkt muss angegeben werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: il faut indiquer une date d’accident</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: Time of accident must be entered</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0403" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: traitement initial par le médecin qui remplit le formulaire: il faut indiquer au moins le nom du médecin ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Erstbehandlung durch ausfüllenden Arzt: Es muss mindestens der Namen des Arztes angeben werden ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: traitement initial par le médecin qui remplit le formulaire: il faut indiquer au moins le nom du médecin ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: Initial treatment by doctor compelting the form: At least the doctor’s name must be entered ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0404" test="cda:code">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Inkonvenienz bei Erstbehandlung muss codiert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: les inconvénients dans le traitement initial doivent être codés</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Inkonvenienz bei Erstbehandlung muss codiert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: les inconvénients dans le traitement initial doivent être codés</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: Inconvenience during initial treatment must be coded</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -330,34 +334,35 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.WeiterbehandlungL3&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Schadeninformationen (Weiterbehandlung bei)</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Weiterbehandlung bei'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: informations sur le sinistre (poursuite du traitement)</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, poursuite du traitement'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Schadeninformationen (Weiterbehandlung bei)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Weiterbehandlung bei'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: informations sur le sinistre (poursuite du traitement)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, poursuite du traitement'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Claim information (further treatment with)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Claim information, further treatment with'</xhtml:p>
+
 		<assert id="svv-kzbt-0501" test="self::cda:encounter">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: Weiterbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: la poursuite du traitement doit être déclarée comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: Weiterbehandlung muss als 'encounter' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: la poursuite du traitement doit être déclarée comme 'encounter' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: Further treatment must be declared as an 'Encounter' in the CDA Body ('Claim information' section)</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0502" test="cda:code/@code=&quot;185389009&quot; and cda:code/@codeSystem=&quot;2.16.840.1.113883.6.96&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: 'Weiterbehandlung bei' muss als Follow-up visit nach SNOMED-CT angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: 'Poursuite du traitement auprès de' doit être indiqué comme Follow-up visit selon SNOMED-CT</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: 'Weiterbehandlung bei' muss als Follow-up visit nach SNOMED-CT angegeben werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: 'Poursuite du traitement auprès de' doit être indiqué comme Follow-up visit selon SNOMED-CT</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: 'Further treatment with' must be entered as follow-up visit after SNOMED-CT</xhtml:p>
 		</assert>
 		<assert role="information" id="svv-kzbt-0503" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name or cda:performer/cda:assignedEntity/cda:representedOrganization/cda:name">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Schadeninformationen: 'Weiterbehandlung bei' enthält keine Angaben zu Arzt/Institution</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Information sur le sinistre ASA TACC: 'Poursuite du traitement auprès de' ne contient aucune indication sur le médecin/l’établissement</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Schadeninformationen: 'Weiterbehandlung bei' enthält keine Angaben zu Arzt/Institution</xhtml:p>
+			<xhtml:p lang="fr_ch">Information sur le sinistre ASA TACC: 'Poursuite du traitement auprès de' ne contient aucune indication sur le médecin/l’établissement</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI claim information: 'Further treatment with' does not contain information on doctor/institution</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -367,55 +372,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.AmbulanzL3&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Schadeninformationen (Angaben zur Ambulanz)</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Angaben zur Ambulanz'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: informations sur le sinistre (informations sur l’ambulance)</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, informations sur l’ambulance'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Schadeninformationen (Angaben zur Ambulanz)</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schadeninformationen, Angaben zur Ambulanz'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: informations sur le sinistre (informations sur l’ambulance)</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'informations sur le sinistre, informations sur l’ambulance'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Claim information (information on ambulance)</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'claim information, information on ambulance'</xhtml:p>
+
 		<assert id="svv-kzbt-0601" test="self::cda:observation">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Ambulanzinformationen müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les informations sur l’ambulance ASA TACC doivent être déclarées comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Ambulanzinformationen müssen als 'observation' im CDA Body (section 'Schadeninformationen') deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Les informations sur l’ambulance ASA TACC doivent être déclarées comme 'observation' dans le CDA Body (section 'Information sur le sinistre')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI ambulance information must be declared as an 'Observation' in the CDA Body ('Claim information' section)</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0602" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Ambulanzinformationen: Einweisung per Ambulanz muss strukturiert angegeben werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Informations sur l’ambulance ASA TACC: l’admission en ambulance doit être indiquée de manière structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Ambulanzinformationen: Einweisung per Ambulanz muss strukturiert angegeben werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Informations sur l’ambulance ASA TACC: l’admission en ambulance doit être indiquée de manière structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI ambulance information: Admission by ambulance must be entered in a structured way (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0603" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Ambulanzinformationen: Einweisung per Ambulanz muss strukturiert angegeben werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Informations sur l’ambulance ASA TACC: l’admission en ambulance doit être indiquée de manière structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Ambulanzinformationen: Einweisung per Ambulanz muss strukturiert angegeben werden (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="fr_ch">Informations sur l’ambulance ASA TACC: l’admission en ambulance doit être indiquée de manière structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI ambulance information: Admission by ambluance must be entered in a structured way (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0604" test="count(cda:value)=0 or (cda:value/@xsi:type=&quot;CD&quot; and cda:value/@code=&quot;52019-7&quot; and cda:value/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;)">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Ambulanzinformationen: Wenn ein Ambulanzprotokoll mitgeliefert wird, muss dies im value als LOINC code 52019-7 deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Informations sur l’ambulance ASA TACC: si un compte rendu d’ambulance est fourni, il doit être déclaré dans value comme code LOINC 52019-7</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Ambulanzinformationen: Wenn ein Ambulanzprotokoll mitgeliefert wird, muss dies im value als LOINC code 52019-7 deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Informations sur l’ambulance ASA TACC: si un compte rendu d’ambulance est fourni, il doit être déclaré dans value comme code LOINC 52019-7</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI ambulance information: If ambulance log is included, it must be declared as LOINC code 52019-7 in the value</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0605" test="count(cda:value)=0 or (cda:value/cda:originalText/cda:reference/@value)">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Ambulanzinformationen: Die Beilage des Ambulanzprotokolls muss im element 'originalText' als 'reference' deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Informations sur l’ambulance ASA TACC: la pièce jointe du compte rendu d’ambulance doit être déclarée comme 'reference' dans l’element 'originalText'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Ambulanzinformationen: Die Beilage des Ambulanzprotokolls muss im element 'originalText' als 'reference' deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">Informations sur l’ambulance ASA TACC: la pièce jointe du compte rendu d’ambulance doit être déclarée comme 'reference' dans l’element 'originalText'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI ambulance information: The attachment to the ambulance log must be declared as a 'Reference' in the 'originalText' element</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0606" test="count(cda:value)=0 or (cda:reference/cda:externalDocument/cda:text/cda:reference/@value and cda:reference/cda:externalDocument/cda:text/@mediaType=&quot;application/pdf&quot; or cda:reference/cda:externalDocument/cda:text/@mediaType=&quot;multipart/related&quot;)">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT Ambulanzinformationen: Die Beilage des Ambulanzprotokolls muss mit einer Referenz auf die entsprechende Datei angegeben werden. Unterstützt sind PDF und CDA Dokumente</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Informations sur l’ambulance ASA TACC: la pièce jointe du compte rendu d’ambulance doit être indiquée avec une référence au fichier correspondant. Sont pris en charge les documents PDF et CDA</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">SVV KZBT Ambulanzinformationen: Die Beilage des Ambulanzprotokolls muss mit einer Referenz auf die entsprechende Datei angegeben werden. Unterstützt sind PDF und CDA Dokumente</xhtml:p>
+			<xhtml:p lang="fr_ch">Informations sur l’ambulance ASA TACC: la pièce jointe du compte rendu d’ambulance doit être indiquée avec une référence au fichier correspondant. Sont pris en charge les documents PDF et CDA</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">SIA WI ambulance information: The attachment to the ambulance log must be entered with a reference to the corresponding file. PDF and CDA documents are supported</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -425,41 +428,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.SchilderungUnfallhergang&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Schilderung des Unfallherganges</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schilderung des Unfallherganges'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Description libre du déroulement de l’accident</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Description libre du déroulement de l’accident'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Schilderung des Unfallherganges</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Schilderung des Unfallherganges'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Description libre du déroulement de l’accident</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Description libre du déroulement de l’accident'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+		
+		<xhtml:h3 lang="en">SIA WI: Description of the sequence of events of the accident</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Description of sequence of events of the accident'</xhtml:p>
+
 		<assert id="svv-kzbt-0701" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0702" test="(cda:title=&quot;Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Freie Schilderung des Unfallherganges in chronologischer Abfolge durch den Patienten'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0703" test="(cda:title=&quot;Description libre par le patient du déroulement chronologique de l’accident&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Description libre par le patient du déroulement chronologique de l’accident' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Description libre par le patient du déroulement chronologique de l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Description libre par le patient du déroulement chronologique de l’accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Description libre par le patient du déroulement chronologique de l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Description libre par le patient du déroulement chronologique de l’accident'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0703" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'tbd'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0703" test="(cda:title=&quot;Patient’s free description of the chronological sequence of events of the accident&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Patient’s free description of the chronological sequence of events of the accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Patient’s free description of the chronological sequence of events of the accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Patient’s free description of the chronological sequence of events of the accident'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0704" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -469,41 +484,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.Unfallhergang&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Unfallhergang</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Unfallhergang'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Déroulement de l’accident</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Déroulement de l’accident'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Unfallhergang</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Unfallhergang'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Déroulement de l’accident</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Déroulement de l’accident'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Sequence of events of the accident</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Sequence of events of the accident'</xhtml:p>
+
 		<assert id="svv-kzbt-0801" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0802" test="(cda:title=&quot;Unfallhergang&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Unfallhergang' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Unfallhergang'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Unfallhergang' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Unfallhergang'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a 'Unfallhergang' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0803" test="(cda:title=&quot;Circonstances de l’accident&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Circonstances de l’accident' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Circonstances de l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Circonstances de l’accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Circonstances de l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a 'Circonstances de l’accident' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0803" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0803" test="(cda:title=&quot;Sequence of events of the accident&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Sequence of events of the accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Sequence of events of the accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a 'Sequence of events of the accident' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0804" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -513,41 +540,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.BefragungUnfallablauf&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Befragung zum Unfallablauf</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Befragung zum Unfallablauf'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Indications résultant de la prise de renseignements sur le déroulement</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Indications résultant de la prise de renseignements sur le déroulement'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Befragung zum Unfallablauf</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Befragung zum Unfallablauf'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Indications résultant de la prise de renseignements sur le déroulement</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Indications résultant de la prise de renseignements sur le déroulement'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Questions regarding the sequence of events of the accident</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Questions regarding the sequence of events of the accident'</xhtml:p>
+
 		<assert id="svv-kzbt-0901" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0902" test="(cda:title=&quot;Befragung zum Unfallablauf ergibt Anhaltspunkte für&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Befragung zum Unfallablauf ergibt Anhaltspunkte für' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Befragung zum Unfallablauf ergibt Anhaltspunkte für'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Befragung zum Unfallablauf ergibt Anhaltspunkte für' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Befragung zum Unfallablauf ergibt Anhaltspunkte für'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Befragung zum Unfallablauf ergibt Anhaltspunkte für'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0903" test="(cda:title=&quot;Indications résultant de la prise de renseignements sur le déroulement chronologique&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Indications résultant de la prise de renseignements sur le déroulement chronologique' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Indications résultant de la prise de renseignements sur le déroulement chronologique'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Indications résultant de la prise de renseignements sur le déroulement chronologique' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Indications résultant de la prise de renseignements sur le déroulement chronologique'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Indications résultant de la prise de renseignements sur le déroulement chronologique'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0903" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'tbd'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-0903" test="(cda:title=&quot;Indications resulting from questioning about the sequence of events of the accident&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Indications resulting from questioning about the sequence of events of the accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Indications resulting from questioning about the sequence of events of the accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Indications resulting from questioning about the sequence of events of the accident'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-0904" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -557,41 +596,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.TätigkeitNachUnfall&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Tätigkeiten nach dem Unfallereignis</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Tätigkeiten nach dem Unfallereignis'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Activités après l’accident</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Activités après l’accident'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Tätigkeiten nach dem Unfallereignis</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Tätigkeiten nach dem Unfallereignis'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Activités après l’accident</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Activités après l’accident'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Activities after the accident</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Activities after the accident'</xhtml:p>
+
 		<assert id="svv-kzbt-1001" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1002" test="(cda:title=&quot;Tätigkeiten nach dem Unfallereignis&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Tätigkeiten nach dem Unfallereignis' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Tätigkeiten nach dem Unfallereignis'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Tätigkeiten nach dem Unfallereignis' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Tätigkeiten nach dem Unfallereignis'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain an 'Tätigkeiten nach dem Unfallereignis' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1003" test="(cda:title=&quot;Activités après l’accident&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Activités après l’accident' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Activités après l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Activités après l’accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Activités après l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain an 'Activités après l’accident' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1003" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain an 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1003" test="(cda:title=&quot;Activities after the accident&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Activities after the accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Activities after the accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain an 'Activities after the accident' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1004" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text.</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -601,41 +652,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.Beschwerdeverlauf&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Beschwerdeverlauf seit dem Unfallzeitpunkt</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Beschwerdeverlauf seit dem Unfallzeitpunkt'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Evolution des symptômes depuis l’accident</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Evolution des symptômes depuis l’accident'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Beschwerdeverlauf seit dem Unfallzeitpunkt</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Beschwerdeverlauf seit dem Unfallzeitpunkt'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Evolution des symptômes depuis l’accident</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Evolution des symptômes depuis l’accident'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Course of symptoms since the time of the accident</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Course of symptoms since the time of the accident'</xhtml:p>
+
 		<assert id="svv-kzbt-1101" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1102" test="(cda:title=&quot;Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Angaben des Patienten zum Beschwerdeverlauf seit dem Unfallzeitpunkt'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1103" test="(cda:title=&quot;Indications du patient sur l’évolution des symptômes depuis l’accident&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Indications du patient sur l’évolution des symptômes depuis l’accident' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Indications du patient sur l’évolution des symptômes depuis l’accident'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Indications du patient sur l’évolution des symptômes depuis l’accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Indications du patient sur l’évolution des symptômes depuis l’accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Indications du patient sur l’évolution des symptômes depuis l’accident'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1103" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'tbd'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1103" test="(cda:title=&quot;Patient’s information regarding the course of symptoms since the time of the accident&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Patient’s information regarding the course of symptoms since the time of the accident' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Patient’s information regarding the course of symptoms since the time of the accident'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Patient’s information regarding the course of symptoms since the time of the accident'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1104" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -645,41 +708,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.FrühereAnamnese&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Frühere Anamnese</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Frühere Anamnese'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Anamnèse antérieure</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Anamnèse antérieure'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Frühere Anamnese</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Frühere Anamnese'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Anamnèse antérieure</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Anamnèse antérieure'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Previous medical history</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests for 'Previous medical history'</xhtml:p>
+
 		<assert id="svv-kzbt-1201" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1202" test="(cda:title=&quot;Frühere Anamnese&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Frühere Anamnese' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Frühere Anamnese'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Frühere Anamnese' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Frühere Anamnese'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a 'Frühere Anamnese' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1203" test="(cda:title=&quot;Anamnèse antérieure&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Anamnèse antérieure' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Anamnèse antérieure'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Anamnèse antérieure' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Anamnèse antérieure'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a 'Anamnèse antérieure' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1203" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1203" test="(cda:title=&quot;Previous medical history&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Previous medical history' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Previous medical history'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a 'Previous medical history' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1204" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -689,55 +764,65 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.Untersuchungsbefunde&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Untersuchungsbefunde</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Untersuchungsbefunde'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Examen médical</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Examen médical’</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Untersuchungsbefunde</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Untersuchungsbefunde'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Examen médical</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Examen médical’</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Examination findings</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Examination findings'</xhtml:p>
+
 		<assert id="svv-kzbt-1301" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1302" test="(cda:title=&quot;Untersuchungsbefunde&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Untersuchungsbefunde' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Untersuchungsbefunde'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Untersuchungsbefunde' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Untersuchungsbefunde'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain an 'Untersuchungsbefunde' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1303" test="(cda:title=&quot;Examen médical&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Examen médical' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Examen médical’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Examen médical' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Examen médical’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain an 'Examen médical' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1303" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Ialien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain an 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1303" test="(cda:title=&quot;Examination findings&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Examination findings' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Examination findings’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain an 'Examination findings' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1304" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1305" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and //cda:code/@code=&quot;3137-7&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss das 'Vitalzeichen' Gewicht im Kapitel 'Untersuchungsbefunde' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir le 'signe vital' Poids dans la section 'Examen médical’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss das 'Vitalzeichen' Gewicht im Kapitel 'Untersuchungsbefunde' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir le 'signe vital' Poids dans la section 'Examen médical’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain the 'Vital signs' weight in the 'Examination findings' chapter</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1306" test="//cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and //cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and //cda:code/@code=&quot;3141-9&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss das 'Vitalzeichen' Grösse im Kapitel 'Untersuchungsbefunde' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir le 'signe vital' Taille dans la section 'Examen médical’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss das 'Vitalzeichen' Grösse im Kapitel 'Untersuchungsbefunde' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir le 'signe vital' Taille dans la section 'Examen médical’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain the 'Vital signs' height in the 'Examination findings' chapter</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -747,41 +832,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.VorläufigeDiagnose&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Vorläufige Diagnose</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Vorläufige Diagnose'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Diagnostic provisoire</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Diagnostic provisoire'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Vorläufige Diagnose</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Vorläufige Diagnose'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Diagnostic provisoire</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Diagnostic provisoire'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Provisional diagnosis</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests for 'Provisional diagnosis'</xhtml:p>
+
 		<assert id="svv-kzbt-1401" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1402" test="(cda:title=&quot;Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Vorläufige Diagnose | In Anlehnung an die Quebec Task Force (QTF)-Klassifikation'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1403" test="(cda:title=&quot;Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Diagnostic provisoire | Conformément à la classification Quebec Task Force (QTF)'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1403" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'tbd'</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1403" test="(cda:title=&quot;Provisional diagnosis | following the Quebec Task Force (QTF) classification&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Provisional diagnosis | following the Quebec Task Force (QTF) classification' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Provisional diagnosis | following the Quebec Task Force (QTF) classification'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a section title 'Provisional diagnosis | following the Quebec Task Force (QTF) classification'</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1404" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -791,41 +888,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.Therapie&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Therapie / Massnahmen</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Therapie / Massnahmen'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Thérapie / mesures</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Thérapie / mesures'</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Therapie / Massnahmen</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Therapie / Massnahmen'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Thérapie / mesures</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Thérapie / mesures'</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Therapy / Measures</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests for 'Therapy / Measures'</xhtml:p>
+
 		<assert id="svv-kzbt-1501" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1502" test="(cda:title=&quot;Therapie / angeordnete Massnahmen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Therapie / angeordnete Massnahmen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Therapie / angeordnete Massnahmen'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Therapie / angeordnete Massnahmen' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Therapie / angeordnete Massnahmen'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a 'Therapie / angeordnete Massnahmen' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1503" test="(cda:title=&quot;Traitement / mesures prescrites&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Traitement / mesures prescrites' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Traitement / mesures prescrites'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Traitement / mesures prescrites' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Traitement / mesures prescrites'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a 'Traitement / mesures prescrites' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1503" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1503" test="(cda:title=&quot;Therapy / Measures&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Therapy / Measures' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Therapy / Measures'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a 'Therapy / Measures' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1504" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 	<!--
@@ -835,41 +944,53 @@ History:
 	-->
 	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.110.2.1.1&quot; and cda:templateId/@extension=&quot;SVV.KZBT.Arbeitsfähigkeit&quot;]">
 		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">SVV KZBT: Arbeitsfähigkeit</xhtml:h3>
-		<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Arbeitsfähigkeit'</xhtml:p>
-		<xhtml:h3 lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">ASA TACC: Capacité de travail</xhtml:h3>
-		<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Les règles suivantes décrivent les contrôles pour 'Capacité de travail’</xhtml:p>
-		<!--
-		<xhtml:h3 lang='fr_ch'>totranslate: italiano</xhtml:h3>
-		<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-		-->
+		<xhtml:h3 lang="de_ch">SVV KZBT: Arbeitsfähigkeit</xhtml:h3>
+		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen für 'Arbeitsfähigkeit'</xhtml:p>
+
+		<xhtml:h3 lang="fr_ch">ASA TACC: Capacité de travail</xhtml:h3>
+		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles pour 'Capacité de travail’</xhtml:p>
+
+		<xhtml:h3 lang="it_ch"></xhtml:h3>
+		<xhtml:p lang="it_ch"></xhtml:p>
+
+		<xhtml:h3 lang="en">SIA WI: Capacity to work</xhtml:h3>
+		<xhtml:p lang="en">The following rules describe the tests on 'Capacity to work'</xhtml:p>
+
 		<assert id="svv-kzbt-1601" test="self::cda:section">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss als 'section' im CDA Body deklariert werden</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation following a whiplash injury must be declared as a 'Section' in the CDA Body</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1602" test="(cda:title=&quot;Arbeitsfähigkeit&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Arbeitsfähigkeit' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Arbeitsfähigkeit'</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Deutsch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Arbeitsfähigkeit' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Allemand: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Arbeitsfähigkeit'</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">German: The documentation sheet for initial consultation following a whiplash injury must contain a 'Arbeitsfähigkeit' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1603" test="(cda:title=&quot;Capacité de travail&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Capacité de travail' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Capacité de travail’</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Französisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Capacité de travail' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Français: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Capacité de travail’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">French: The documentation sheet for initial consultation following a whiplash injury must contain a 'Capacité de travail' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1603" test="(cda:title=&quot;tbd&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+			<xhtml:p lang="de_ch">Italienisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'tbd' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Italien: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'tbd’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">Italian: The documentation sheet for initial consultation following a whiplash injury must contain a 'tbd' section title</xhtml:p>
+		</assert>
+		<assert id="svv-kzbt-1603" test="(cda:title=&quot;Capacity to work&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+			<xhtml:p lang="de_ch">Englisch: Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen section title 'Capacity to work' enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">Anglais: La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un section title 'Capacity to work’</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">English: The documentation sheet for initial consultation following a whiplash injury must contain a 'Capacity to work' section title</xhtml:p>
 		</assert>
 		<assert id="svv-kzbt-1604" test="cda:text">
-			<xhtml:p lang="de_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch" xmlns:xhtml="http://www.w3.org/1999/xhtml">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
-			<!--
-			<xhtml:p lang='it_ch'>totranslate: italiano</xhtml:p>
-			-->
+			<xhtml:p lang="de_ch">Der Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma muss einen narrativen Text enthalten</xhtml:p>
+			<xhtml:p lang="fr_ch">La fiche documentaire pour première consultation après un traumatisme d’accélération cranio-cervical doit contenir un texte narratif</xhtml:p>
+			<xhtml:p lang="it_ch"></xhtml:p>
+			<xhtml:p lang="en">The documentation sheet for initial consultation after ainjury must contain a narrative text</xhtml:p>
 		</assert>
 	</rule>
 </pattern>
