@@ -70,7 +70,7 @@ ul {
   Table Generics
 *********************************************************/
 table { 
-	font-size: 10pt;
+	font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;
 	background-repeat: no-repeat; 
 	line-height: 10pt; 
 	border-spacing: 1px;
@@ -99,6 +99,9 @@ table.head th {
 }
 table.head th, table.head td {
 	padding: 5px;
+}
+table.head th {
+	font-size: 11pt;
 }
 table.head tr {
 	background-color: #ccccff;	
