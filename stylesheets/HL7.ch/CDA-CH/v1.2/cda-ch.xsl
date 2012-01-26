@@ -811,6 +811,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 	<!--  Bottomline  -->
 	<xsl:template name="bottomline">
 		<table class="foot">
+			<xsl:if test="/n1:ClinicalDocument/n1:authorization/n1:consent">
 			<tr>
 				<th>
 					<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Consent']/@displayName"/>
@@ -820,6 +821,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					<xsl:value-of select="/n1:ClinicalDocument/n1:authorization/n1:consent/n1:code/n1:originalText"/>
 				</td>
 			</tr>
+			</xsl:if>
 			<tr>
 				<th>
 					<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Custodian']/@displayName"/>
