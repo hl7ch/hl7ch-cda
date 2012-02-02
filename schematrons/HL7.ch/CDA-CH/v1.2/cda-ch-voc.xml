@@ -109,6 +109,8 @@ History:
 		<code value='8651-2' displayName='Diagnose bei Entlassung aus dem Krankenhaus (Code)/Diagnostic lors de la sortie de l’hôpital (code)'/>
 		<!-- HOSPITAL ADMISSION DX (für alle Diagnosensections, die codierte Diagnosen enthalten und die Bedeutung der Diagnosen-section als "Eintrittsdiagnose" definiert ist) -->
 		<code value='8646-2' displayName='Diagnose bei Aufnahme ins Krankenhaus (Code)/Diagnostic lors de l’admission à l’hôpital (code)'/>
+		<!-- ED DIAGNOSIS (ED=Emergency Department; für Diagnosen im Notfallaustrittsbericht) -->
+		<code value='11301-9' displayName='ED DIAGNOSIS'/>
 	</system>
 
 	<!--
