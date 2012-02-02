@@ -135,7 +135,7 @@ Medikamentenliste
 			<xhtml:p lang="en">Medication dates must contain an indication of urgency (valid value from the table of values 'ActPriority (2.16.840.1.113883.5.7)')</xhtml:p>
 		</assert>
 		<!--	Einnahmeart	-->
-		<assert id="cda-ch_medication-section-0210" test="cda:routeCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.840.1.113883.5.112&quot;]/code/@value">
+		<assert id="cda-ch_medication-section-0210" test="cda:routeCode/@nullFlavor or cda:routeCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.840.1.113883.5.112&quot;]/code/@value">
 			<xhtml:p lang="de_ch">Medikationsdaten müssen eine Einnahmeart beinhalten (gültiger Wert aus der Wertetabelle 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
 			<xhtml:p lang="fr_ch">Les données de médication doivent contenir un mode d'administration (valeur valable du tableau de valeurs 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
 			<xhtml:p lang="it_ch">I dati delle medicazioni devono contenere un modo di somministrazione (valore valido della tabella di valori 'RouteOfAdministration (2.16.840.1.113883.5.112)')</xhtml:p>
