@@ -12,6 +12,7 @@ History:
 24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
 01.10.2011: Tony Schaller, medshare GmbH (erste Übersetzungen englisch/italienisch, aber noch nicht vollständig)
 06.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
+15.04.2012: Tony Schaller, medshare GmbH (Korrekturen LOINC Codes Gewicht/Grösse waren vertauscht; Dank an Oliver Egger, der das gemeldet hat)
 
 ********************************************************
 -->
@@ -63,13 +64,13 @@ History:
 			<xhtml:p lang="it_ch">Il documento CDA dovrebbe contenere una sezione 'Lista diagnosi', in modo che le eventuali interazioni possano essere interpretate correttamente dal destinatario</xhtml:p>
 			<xhtml:p lang="en">The CDA document should contain a 'List of diagnoses' section so that the recipient can interpret any interactions correctly</xhtml:p>
 		</assert>
-		<assert role="warning" id="cda-ch_medication-doc-0104" test="descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3137-7&quot;]">
+		<assert role="warning" id="cda-ch_medication-doc-0104" test="descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3141-9&quot;]">
 			<xhtml:p lang="de_ch">Das CDA Dokument sollte das 'Vitalzeichen' Gewicht enthalten</xhtml:p>
 			<xhtml:p lang="fr_ch">Le document CDA doit contenir le 'signe vital' Poids</xhtml:p>
 			<xhtml:p lang="it_ch">Il documento CDA dovrebbe contenere il 'Segno vitale' peso</xhtml:p>
 			<xhtml:p lang="en">The CDA document should contain the 'Vital sign' weight</xhtml:p>
 		</assert>
-		<assert role="warning" id="cda-ch_medication-doc-0105" test="descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3141-9&quot;]">
+		<assert role="warning" id="cda-ch_medication-doc-0105" test="descendant::cda:observation[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot; and cda:code/@code=&quot;3137-7&quot;]">
 			<xhtml:p lang="de_ch">Das CDA Dokument sollte das 'Vitalzeichen' Grösse enthalten</xhtml:p>
 			<xhtml:p lang="fr_ch">Le document CDA doit contenir le 'signe vital' Taille</xhtml:p>
 			<xhtml:p lang="it_ch">Il documento CDA dovrebbe contenere il 'Segno vitale' altezza</xhtml:p>
