@@ -719,6 +719,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					<xsl:when test="$classCode='CAREGIVER'">
 						<!-- no header -->
 					</xsl:when>
+					<xsl:when test="$classCode='ECON'">
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='EmergencyContacts']/@displayName"/>
+					</xsl:when>
 					<xsl:when test="$participantCode='EMPLOYER'">
 						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$participantCode]/@displayName"/>
 					</xsl:when>
@@ -742,24 +745,41 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 										</th>
 									</tr>
 								</xsl:when>
+								<xsl:when test="$classCode='ECON'">
+									<tr>
+										<th>
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Organisation']/@displayName"/>
+										</th>
+										<th>
+											<xsl:call-template name="getContactInfo">
+												<xsl:with-param name="contact" select="n1:scopingOrganization"/>
+											</xsl:call-template>
+										</th>
+									</tr>
+								</xsl:when>
 							</xsl:choose>
-							<tr>
-								<th>
-									<xsl:variable name="oid"
-									select="n1:id/@root"/>
-									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
-								</th>
-								<th>
-									<xsl:value-of select="n1:id/@extension"/>
-								</th>
-							</tr>
+							<xsl:variable name="oid" select="n1:id/@root"/>
+							<xsl:variable name="oidText" select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
+							<xsl:variable name="oidExt" select="n1:id/@extension"/>
+							<xsl:choose>
+								<xsl:when test="$oidText or $oidExt">
+									<tr>
+										<th>
+											<xsl:value-of select="$oidText"/>
+										</th>
+										<th>
+											<xsl:value-of select="$oidExt"/>
+										</th>
+									</tr>
+								</xsl:when>
+							</xsl:choose>
 							<tr>
 								<td>
 									<xsl:choose>
 										<xsl:when test="$typeCode='HLD'">
 											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Holder']/@displayName"/>
 										</xsl:when>
-										<xsl:when test="$participantCode='EMPLOYER'">
+										<xsl:when test="$participantCode='EMPLOYER' or $classCode='ECON'">
 											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
 										</xsl:when>
 										<xsl:otherwise>

@@ -264,6 +264,15 @@ History:
   <text language="it-CH" value="2.16.756.5.34" displayName="Carta di assicurazione"/>
   <text language="en" value="2.16.756.5.34" displayName="Insurance card"/>
 
+  <text language="de-CH" value="EmergencyContacts" displayName="Kontaktadressen für den Notfall"/>
+  <text language="fr-CH" value="EmergencyContacts" displayName="tbd fr 'EmergencyContacts'"/>
+  <text language="it-CH" value="EmergencyContacts" displayName="tbd it 'EmergencyContacts'"/>
+  <text language="en" value="EmergencyContacts" displayName="Emergency contacts"/>
+
+  <text language="de-CH" value="Organisation" displayName="Organisation"/>
+  <text language="fr-CH" value="Organisation" displayName="tbd fr 'Organisation'"/>
+  <text language="it-CH" value="Organisation" displayName="tbd it 'Organisation'"/>
+  <text language="en" value="Organisation" displayName="Organisation"/>
 
   <!-- 
   ********************************************************************************
