@@ -1,0 +1,2034 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- ********************************************************
+Medizinische Notfalldaten V1
+
+History:
+24.10.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
+
+******************************************************** -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!-- ********************************************************
+	CDA Header
+	******************************************************** -->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+	<!-- Parent Templates -->
+	<!-- IHE PCC Medical Documents Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
+	<!-- IHE Medical Summary (XDS-MS) Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.2'/>
+	<!-- epSOS Patient Summary -->
+	<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.1.3'/>
+	<!-- CDA-CH -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH' />
+	<!-- Medical summary for emergency treatment (MSET) V1 -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.2.1'/>
+	<id extension='69604928-C7F4-4E0F-AB13-4774F33DA938' root='2.16.756.5.30.1.1.1.1.3.2.1'/>
+	<code codeSystemName='LOINC' codeSystem='2.16.840.1.113883.6.1' code='60591-5' displayName='Patient Summary'/>
+	<title>VVK-EDI Notfalldatenset</title>
+	<effectiveTime value='20121024'/>
+	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
+	<languageCode code='de-CH'/>
+	<setId extension='BEA2C0CC-CC66-447C-AFF4-461B815261B3' root='2.16.756.5.30.1.1.1.1.3.2.1'/>
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<id extension='123.71.332.115' root='2.16.756.5.31'/>
+			<addr use='HP'>
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Specimendorf</city>
+				<country>CHE</country>
+			</addr>
+			<telecom use='HP' value='tel:+41.32.685.12.34'/>
+			<telecom use='PUB' value='tel:+41.32.123.77.88'/>
+			<patient>
+				<name>
+					<given>Franz</given>
+					<family>Muster</family>
+				</name>
+				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
+				<birthTime value='19670520'/>
+			</patient>
+			<providerOrganization>
+				<id extension='7608888888888' root='1.3.88'/>
+				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value='20100203'/>
+		<assignedAuthor>
+			<id extension='dummy' root='1.9999999'/>
+			<assignedAuthoringDevice>
+				<softwareName>Dummy Middleware</softwareName>
+			</assignedAuthoringDevice>
+		</assignedAuthor>
+		
+	</author>
+	<!--
+	<author>
+		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
+		<time value='20100203'/>
+		<assignedAuthor>
+			<id extension='7608888888888' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+				<country>CHE</country>
+			</addr>
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<!-/- this fails with epSOS Patient Summary Schematron Validation...
+			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
+			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
+			-/->
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CHE</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	-->
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor='NA' />
+				<name>Versichertenkarte</name>
+				<addr use='WP'>
+					<country>CHE</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value='20111110'/>
+		<signatureCode code='S'/>
+		<assignedEntity>
+			<id extension='7608888888888' root='1.3.88'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CHE</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode='IND'>
+		<!-- VVK-EDI: 2.8.1 Art der Kontaktadresse (optional) -->
+		<functionCode code='2' displayName='Kontaktadresse im medizinischen Umfeld' codeSystem='2.16.756.5.30.1.21012101.3.1.1.12'/>
+		<!-- VVK-EDI: 2.8.2	Angaben zur Kontaktadresse im Format gemäss dem Standard eCH-0010:2006 -->
+		<associatedEntity classCode='ECON'>
+			<addr use='WP'>
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+				<country>CHE</country>
+			</addr>
+			<telecom value='mailto:g@g.com' use='EC'/>
+			<associatedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CHE</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<authorization>
+		<consent>
+			<code nullFlavor='OTH' codeSystem='2.16.756.5.30.2.1.1.2'>
+				<originalText>
+					Keine Angabe
+				</originalText>
+			</code>
+			<statusCode code='completed'/>
+		</consent>
+	</authorization>
+	<!--
+	********************************************************
+	CDA Body
+	******************************************************** -->
+	<component>
+		<structuredBody>
+			<!-- Krankheiten und Unfallfolgen -->
+			<component>
+				<!--epSOS/IHE: Active problems section 1.3.6.1.4.1.19376.1.5.3.1.3.6-->
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.11'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
+					<code code='11450-4' displayName='PROBLEM LIST' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Krankheiten und Unfallfolgen</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Bezeichnung</th>
+									<th>Bemerkung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='ku11'>
+											Herzrhythmusstörungen
+										</content>
+									</td>
+									<td>
+										<content ID='ku12'>
+											Seit 2005
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID='ku21'>
+											Diabetes mellitus
+										</content>
+									</td>
+									<td>
+										<content ID='ku22'>
+											Typ 2, seit 2004
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!--Problem Concern Entry -->
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='25D5534A-49FA-47E3-A140-35E9D3B20D02'/>
+							<code nullFlavor='NA' />
+							<text nullFlavor='NA' />
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low nullFlavor='NA' />
+								<high nullFlavor='NA' />
+							</effectiveTime>
+							<entryRelationship typeCode='SUBJ' inversionInd='false'>
+								<!-- Problem Entry - Krankheiten und Unfallfolgen / Herzrhythmusstörungen -->
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='FE6A33B8-0867-4A18-A1F0-C5B340A5AE35'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#ku11'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK'/>
+										<high nullFlavor='UNK'/>
+									</effectiveTime>
+									<!-- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -->
+									<value xsi:type='CD' code='05' displayName='Herzrhythmusstörungen' codeSystem='2.16.756.5.30.1.21012101.3.1.1.1' />
+									<author>
+										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
+										<time value='20120121' />
+										<assignedAuthor>
+											<!-- VVK-EDI: 2.1.3	EAN-Nummer (European Article Numbering) der eintragenden Person (obligatorisch) -->
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<entryRelationship typeCode='SUBJ' inversionInd='true'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.40'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<!-- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -->
+											<text>
+												<reference value='#ku12'/>
+											</text>
+											<statusCode code='completed'/>
+										</act>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode='SUBJ' inversionInd='false'>
+								<!-- Problem Entry - Krankheiten und Unfallfolgen / Diabetes mellitus -->
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='72FABD7E-931B-4A02-B8AC-9F7FFAFB5645'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#ku21'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK'/>
+										<high nullFlavor='UNK'/>
+									</effectiveTime>
+									<!-- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -->
+									<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.21012101.3.1.1.1'/>
+									<author>
+										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
+										<time value='20120121' />
+										<assignedAuthor>
+											<!-- VVK-EDI: 2.1.3	EAN-Nummer (European Article Numbering) der eintragenden Person (obligatorisch) -->
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<entryRelationship typeCode='SUBJ' inversionInd='true'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.40'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<!-- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -->
+											<text>
+												<reference value='#ku22'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime value='20120121' />
+										</act>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!-- Transplantationsdaten -->
+			<component>
+				<!-- VVK-EDI: Transplantationsdaten Section (2.16.756.5.30.1.1.1.1.3.2.1;extension='CDA-CH.MSET.Body.TransplantsL2' -->
+				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.TransplantsL2' />
+					<code nullFlavor='NA'>
+						<translation code='Z94.9' displayName='Zustand nach Organ- oder Gewebetransplantation, nicht näher bezeichnet' codeSystem='2.16.756.5.30.1.126.3.2.2012' codeSystemName='ICD-10-GM 2010'/>
+					</code>
+					<title>Transplantationsdaten</title>
+					<text>
+						Zur Transplantation angemeldet:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Bemerkung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='tr11'>
+											Herztransplantation angemeldet
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<br/>Bereits durchgeführte Transplantationen:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Name Organ, Gewebe oder Zellen</th>
+									<th>Schweizerische Transplantationsnummer</th>
+									<th>Datum der Transplantation</th>
+									<th>Bemerkung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='tr21'>
+											Niere
+										</content>
+									</td>
+									<td>
+										RS-2001-4645
+									</td>
+									<td>
+										21.01.1983
+									</td>
+									<td>
+										<content ID='tr22'>
+											Keine Komplikationen
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!--Problem Concern Entry -->
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='7A121CE4-86B0-4ED7-856B-62E1441A0841'/>
+							<code nullFlavor='NA' />
+							<text nullFlavor='NA' />
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low nullFlavor='UNK'/>
+								<high nullFlavor='UNK'/>
+							</effectiveTime>
+							<entryRelationship typeCode='SUBJ' inversionInd='false'>
+								<!-- Problem Entry - Transplantationsdaten / Herztransplantation angemeldet -->
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='D28C3F06-FCA9-49A9-AD95-900B55D68B1E'/>
+									<code code='64572001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Condition' />
+									<text nullFlavor='NA' />
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='NA'/>
+										<high nullFlavor='NA'/>
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='NA'/>
+									<author>
+										<!-- VVK-EDI: 2.2.1.3	Datum der Eintragung (obligatorisch) -->
+										<time value='20120121' />
+										<assignedAuthor>
+											<!-- VVK-EDI: 2.2.1.2	EAN-Nummer der eintragenden Person (obligatorisch) -->
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<entryRelationship typeCode='SUBJ' inversionInd='true'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.40'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<!-- VVK-EDI: 2.2.1.1	Bemerkung zu «Zur Transplantation angemeldet» (optional) -->
+											<text>
+												<reference value='#tr11'/>
+											</text>
+											<statusCode code='completed'/>
+										</act>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode='SUBJ' inversionInd='false'>
+								<!-- Problem Entry - Transplantationsdaten / Niere -->
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='55F6933A-7DE7-4E51-9C7F-1ED0410ADA3C'/>
+									<!-- VVK-EDI: 2.2.2.2 Schweizerische Transplantationsnummer (optional) -->
+									<id root='2.16.756.5.30.19831983.1' extension='RS-2001-4645'/>
+									<code code='404684003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Finding' />
+									<!-- VVK-EDI: 2.2.2.1 Name des transplantierten Organs oder der transplantierten Gewebe und Zellen (optional, mehrfach) -->
+									<text>
+										<reference value='#tr21'/>
+									</text>
+									<statusCode code='completed'/>
+									<!-- VVK-EDI: 2.2.2.3 Datum der Transplantation (optional) -->
+									<effectiveTime>
+										<low value='19830121' />
+										<high nullFlavor='NA' />
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='NA'/>
+									<author>
+										<!-- VVK-EDI: 2.2.2.6 Datum der Eintragung (obligatorisch) -->
+										<time value='20120121' />
+										<assignedAuthor>
+											<!-- VVK-EDI: 2.2.2.5 EAN-Nummer der eintragenden Person (obligatorisch) -->
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<entryRelationship typeCode='SUBJ' inversionInd='true'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.40'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<!-- VVK-EDI: 2.2.2.4 Bemerkung zur Transplantation (optional) -->
+											<text>
+												<reference value='#tr22'/>
+											</text>
+											<statusCode code='completed'/>
+										</act>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!-- Allergien -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.2' />
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13' />
+					<code code='48765-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='Allergies, adverse reactions, alerts' />
+					<title>Allergien und Unverträglichkeiten</title>
+					<text>
+						Soforttypreaktionen:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Auslöser der Allergie (Allgemeine Bezeichnung)</th>
+									<th>Auslöser der Allergie (Spezielle Bezeichnung)</th>
+									<th>Klinische Reaktion</th>
+									<th>Datum der klinischen Reaktion</th>
+									<th>Bemerkung zur klinischen Reaktion</th>
+									<th>Nachweismethode</th>
+									<th>Datum des Nachweises</th>
+									<th>Bemerkung zum Nachweis</th>
+									<th>Bezeichnung Ersatzmedikament</th>
+									<th>Generischer Name Ersatzmedikament</th>
+									<th>Sicherheit Ersatzmedikament</th>
+									<th>Testdatum Ersatzmedikament</th>
+									<th>Bemerkung zum Ersatzmedikament</th>
+									<th>Bezeichnung Notfallmedikament</th>
+									<th>Bemerkung zum Notfallmedikament</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='allergy-1'>
+											Dummy Soforttypreaktion1
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-participant'>
+											Dummy Soforttypreaktion2
+										</content>
+									</td>
+									<td>Andere klinische Reaktion</td>
+									<td>24.08.2001</td>
+									<td>
+										<content ID='allergy-1-comment'>
+											Dummy Soforttypreaktion5
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-method'>
+											Anamnese
+										</content>
+									</td>
+									<td>30.08.2001</td>
+									<td>
+										<content ID='allergy-1-method-comment'>
+											Dummy Soforttypreaktion8
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-med-1'>
+											Dummy Soforttypreaktion9
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-med-1-generic'>
+											Dummy Soforttypreaktion10
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-med-1-method'>
+											Dummy Soforttypreaktion11
+										</content>
+									</td>
+									<td>31.08.2001</td>
+									<td>
+										<content ID='allergy-1-med-1-comment'>
+											Dummy Soforttypreaktion13
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-med-2'>
+											Adrenalin injizierbar
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-1-med-2-comment'>
+											Dummy Soforttypreaktion15
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<br/>Spättypreaktionen:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Auslöser der Allergie (Allgemeine Bezeichnung)</th>
+									<th>Auslöser der Allergie (Spezielle Bezeichnung)</th>
+									<th>Klinische Reaktion</th>
+									<th>Datum der klinischen Reaktion</th>
+									<th>Bemerkung zur klinischen Reaktion</th>
+									<th>Nachweismethode</th>
+									<th>Datum des Nachweises</th>
+									<th>Bemerkung zum Nachweis</th>
+									<th>Bezeichnung Ersatzmedikament</th>
+									<th>Generischer Name Ersatzmedikament</th>
+									<th>Sicherheit Ersatzmedikament</th>
+									<th>Testdatum Ersatzmedikament</th>
+									<th>Bemerkung zum Ersatzmedikament</th>
+									<th>Bezeichnung Notfallmedikament</th>
+									<th>Bemerkung zum Notfallmedikament</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='allergy-2'>
+											Dummy Spättypreaktion1
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-participant'>
+											Dummy Spättypreaktion2
+										</content>
+									</td>
+									<td>Andere klinische Reaktion</td>
+									<td>24.08.2001</td>
+									<td>
+										<content ID='allergy-2-comment'>
+											Dummy Spättypreaktion5
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-method'>
+											Anamnese
+										</content>
+									</td>
+									<td>30.08.2001</td>
+									<td>
+										<content ID='allergy-2-method-comment'>
+											Dummy Spättypreaktion8
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-med-1'>
+											Dummy Spättypreaktion9
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-med-1-generic'>
+											Dummy Spättypreaktion10
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-med-1-method'>
+											Dummy Spättypreaktion11
+										</content>
+									</td>
+									<td>31.08.2001</td>
+									<td>
+										<content ID='allergy-2-med-1-comment'>
+											Dummy Spättypreaktion13
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-med-2'>
+											Adrenalin injizierbar
+										</content>
+									</td>
+									<td>
+										<content ID='allergy-2-med-2-comment'>
+											Dummy Spättypreaktion15
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- Soforttypreaktion -->
+					<entry typeCode='DRIV'>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3' />
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='E3A5348A-870B-40DF-83F1-07D06B7C634D'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low nullFlavor='UNK'/>
+								<high nullFlavor='UNK'/>
+							</effectiveTime>
+							<author>
+								<!-- VVK-EDI: 2.3.1.7	Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.3.1.6	EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<entryRelationship inversionInd='false' typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.6'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<templateId root='2.16.840.1.113883.10.20.1.28' />
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C18C3277-FBCA-46DB-8069-7C66B791977D'/>
+									<code code='OINT' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType'/>
+									<!-- VVK-EDI: 2.3.1.1.1	Allgemeine Bezeichnung (optional) -->
+									<text>
+										<reference value='#allergy-1'/>
+									</text>
+									<statusCode code='completed'/>
+									<!-- VVK-EDI: 2.3.1.2.2	Datum der klinischen Reaktion (optional) -->
+									<effectiveTime>
+										<low value='20010824'/>
+									</effectiveTime>
+									<!-- VVK-EDI: 2.3.1.2.1	Art der klinischen Reaktion (optional) -->
+									<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.1.21012101.3.1.1.2' displayName='Andere klinische Reaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Soforttypreaktionen'/>
+									<!-- VVK-EDI: 2.3.1/2.3.2 Unterscheidung Soforttyp-/Spättypreaktion -->
+									<interpretationCode code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.14' displayName='Soforttypreaktion' codeSystemName='VVK-EDI Reaktionstyp'/>
+									<participant typeCode='CSM'>
+										<participantRole classCode='MANU'>
+											<playingEntity classCode='MMAT'>
+												<code nullFlavor='NA' >
+													<!-- VVK-EDI: 2.3.1.1.2	Spezielle Bezeichnung (optional) -->
+													<originalText>
+														<reference value='#allergy-1-participant' />
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode='REFR' inversionInd='false'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
+											<!-- VVK-EDI: 2.3.1.3.1	Nachweismethode (optional) -->
+											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.21012101.3.1.1.3' codeSystemName='VVK-EDI Nachweismethode' />
+											<statusCode code='completed'/>
+											<!-- VVK-EDI: 2.3.1.3.2	Datum des Nachweises (optional) -->
+											<effectiveTime>
+												<low value='20010830'/>
+											</effectiveTime>
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<!-- VVK-EDI: 2.3.1.3.3	Bemerkung zum Nachweis (optional) -->
+													<text>
+														<reference value='#allergy-1-method-comment'/>
+													</text>
+													<statusCode code='completed'/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode='REFR' inversionInd='false'>
+										<substanceAdministration classCode='SBADM' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
+											<code code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Ersatzmedikament' codeSystemName='VVK-EDI Typ des Medikaments zur klinischen Reaktion' />
+											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
+											<text>
+												<reference value='#allergy-1-med-1' />
+											</text>
+											<consumable>
+												<manufacturedProduct>
+													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<manufacturedMaterial>
+														<code nullFlavor='NA' >
+															<!-- VVK-EDI: 2.3.1.4.2	Generischer Name des Ersatzmedikaments (optional) -->
+															<originalText>
+																<reference value='#allergy-1-med-1-generic' />
+															</originalText>
+														</code>
+													</manufacturedMaterial>
+												</manufacturedProduct>
+											</consumable>
+											<entryRelationship typeCode='REFR' inversionInd='false'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.MedicationSafety' />
+													<!-- VVK-EDI: 2.3.1.4.3		 (optional) -->
+													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.21012101.3.1.1.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
+													<!-- VVK-EDI: 2.3.1.4.4	Testdatum des Ersatzmedikaments (optional) -->
+													<effectiveTime>
+														<low value='20010831'/>
+													</effectiveTime>
+												</observation>
+											</entryRelationship>
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<!-- VVK-EDI: 2.3.1.4.5	Bemerkung zum Ersatzmedikament (optional) -->
+													<text>
+														<reference value='#allergy-1-med-1-comment'/>
+													</text>
+													<statusCode code='completed'/>
+												</observation>
+											</entryRelationship>
+										</substanceAdministration>
+									</entryRelationship>
+									<entryRelationship typeCode='REFR' inversionInd='false'>
+										<substanceAdministration classCode='SBADM' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
+											<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Notfallmedikament'/>
+											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
+											<text>
+												<reference value='#allergy-1-med-2' />
+											</text>
+											<consumable>
+												<manufacturedProduct>
+													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<manufacturedMaterial>
+														<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.5' displayName='Adrenalin injizierbar' >
+															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
+															<originalText>
+																<reference value='#allergy-1-med-2' />
+															</originalText>
+														</code>
+													</manufacturedMaterial>
+												</manufacturedProduct>
+											</consumable>
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<!-- VVK-EDI: 2.3.1.5.2	Bemerkung zum Notfallmedikament (optional) -->
+													<text>
+														<reference value='#allergy-1-med-2-comment'/>
+													</text>
+													<statusCode code='completed'/>
+												</observation>
+											</entryRelationship>
+										</substanceAdministration>
+									</entryRelationship>
+									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<entryRelationship typeCode='SUBJ' inversionInd='true'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.40'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<!-- VVK-EDI: 2.3.1.2.3	Bemerkung zur klinischen Reaktion (optional) -->
+											<text>
+												<reference value='#allergy-1-comment'/>
+											</text>
+											<statusCode code='completed'/>
+										</act>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Spättypreaktion -->
+					<entry typeCode='DRIV'>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3' />
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='E3A5348A-870B-40DF-83F1-07D06B7C634D'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low nullFlavor='UNK'/>
+								<high nullFlavor='UNK'/>
+							</effectiveTime>
+							<author>
+								<!-- VVK-EDI: 2.3.1.7	Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.3.1.6	EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<entryRelationship inversionInd='false' typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.18'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.6'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<templateId root='2.16.840.1.113883.10.20.1.28' />
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C18C3277-FBCA-46DB-8069-7C66B791977D'/>
+									<code code='OINT' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType'/>
+									<!-- VVK-EDI: 2.3.1.1.1	Allgemeine Bezeichnung (optional) -->
+									<text>
+										<reference value='#allergy-2'/>
+									</text>
+									<statusCode code='completed'/>
+									<!-- VVK-EDI: 2.3.1.2.2	Datum der klinischen Reaktion (optional) -->
+									<effectiveTime>
+										<low value='20010824'/>
+									</effectiveTime>
+									<!-- VVK-EDI: 2.3.2.1.1	Art der klinischen Reaktion (optional) -->
+									<value xsi:type='CD' code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.6' displayName='Lokalreaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Spättypreaktionen'/>
+									<!-- VVK-EDI: 2.3.1/2.3.2 Unterscheidung Soforttyp-/Spättypreaktion -->
+									<interpretationCode code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.14' displayName='Spättypreaktion' codeSystemName='VVK-EDI Reaktionstyp für Soforttypreaktionen'/>
+									<participant typeCode='CSM'>
+										<participantRole classCode='MANU'>
+											<playingEntity classCode='MMAT'>
+												<code nullFlavor='NA' >
+													<!-- VVK-EDI: 2.3.1.1.2	Spezielle Bezeichnung (optional) -->
+													<originalText>
+														<reference value='#allergy-2-participant' />
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<entryRelationship typeCode='SUBJ' inversionInd='true'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.40'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<!-- VVK-EDI: 2.3.1.2.3	Bemerkung zur klinischen Reaktion (optional) -->
+											<text>
+												<reference value='#allergy-2-comment'/>
+											</text>
+											<statusCode code='completed'/>
+										</act>
+									</entryRelationship>
+									<entryRelationship typeCode='REFR' inversionInd='false'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
+											<!-- VVK-EDI: 2.3.1.3.1	Nachweismethode (optional) -->
+											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.21012101.3.1.1.3' codeSystemName='VVK-EDI Nachweismethode' />
+											<text>
+												<reference value='#allergy-2-method'/>
+											</text>
+											<statusCode code='completed'/>
+											<!-- VVK-EDI: 2.3.1.3.2	Datum des Nachweises (optional) -->
+											<effectiveTime>
+												<low value='20010830'/>
+											</effectiveTime>
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<!-- VVK-EDI: 2.3.1.3.3	Bemerkung zum Nachweis (optional) -->
+													<text>
+														<reference value='#allergy-2-method-comment'/>
+													</text>
+													<statusCode code='completed'/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode='REFR' inversionInd='false'>
+										<substanceAdministration classCode='SBADM' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
+											<code code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Ersatzmedikament'/>
+											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
+											<text>
+												<reference value='#allergy-2-med-1' />
+											</text>
+											<consumable>
+												<manufacturedProduct>
+													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<manufacturedMaterial>
+														<code nullFlavor='NA' >
+															<!-- VVK-EDI: 2.3.1.4.2	Generischer Name des Ersatzmedikaments (optional) -->
+															<originalText>
+																<reference value='#allergy-2-med-1-generic' />
+															</originalText>
+														</code>
+													</manufacturedMaterial>
+												</manufacturedProduct>
+											</consumable>
+											<entryRelationship typeCode='REFR' inversionInd='false'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
+													<!-- VVK-EDI: 2.3.1.4.3	Sicherheit des Ersatzmedikaments (optional) -->
+													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.21012101.3.1.1.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
+													<text>
+														<reference value='#allergy-2-med-1-method'/>
+													</text>
+													<statusCode code='completed'/>
+													<!-- VVK-EDI: 2.3.1.4.4	Testdatum des Ersatzmedikaments (optional) -->
+													<effectiveTime>
+														<low value='20010831'/>
+													</effectiveTime>
+												</observation>
+											</entryRelationship>
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<!-- VVK-EDI: 2.3.1.4.5	Bemerkung zum Ersatzmedikament (optional) -->
+													<text>
+														<reference value='#allergy-2-med-1-comment'/>
+													</text>
+													<statusCode code='completed'/>
+												</observation>
+											</entryRelationship>
+										</substanceAdministration>
+									</entryRelationship>
+									<entryRelationship typeCode='REFR' inversionInd='false'>
+										<substanceAdministration classCode='SBADM' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
+											<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Notfallmedikament'/>
+											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
+											<text>
+												<reference value='#allergy-2-med-2' />
+											</text>
+											<consumable>
+												<manufacturedProduct>
+													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<manufacturedMaterial>
+														<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.5' displayName='Adrenalin injizierbar' >
+															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
+															<originalText>
+																<reference value='#allergy-2-med-2' />
+															</originalText>
+														</code>
+													</manufacturedMaterial>
+												</manufacturedProduct>
+											</consumable>
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<!-- VVK-EDI: 2.3.1.5.2	Bemerkung zum Notfallmedikament (optional) -->
+													<text>
+														<reference value='#allergy-2-med-2-comment'/>
+													</text>
+													<statusCode code='completed'/>
+												</observation>
+											</entryRelationship>
+										</substanceAdministration>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!-- Medikation -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.19' />
+					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediList' />
+					<templateId root='2.16.840.1.113883.10.20.1.8' />
+					<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.2.3' />
+					<code code='10160-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of medication use' />
+					<title>Medikamente</title>
+					<text>
+						<table border='1'>
+							<tbody>
+								<tr>
+									<th>Bezeichnung</th>
+									<th>Bemerkung zur Indikation</th>
+									<th>GLN</th>
+									<th>ATC</th>
+									<th>Angaben zur Medikation</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='med-1'>
+											ACE-Hemmer
+										</content>
+									</td>
+									<td>
+										<content ID='med-1-indication'>
+											Dummy Indikation
+										</content>
+									</td>
+									<td>
+										<content ID='med-1-gln'>
+											7601001002593
+										</content>
+									</td>
+									<td>
+										<content ID='med-1-atc'>
+											B01AC06
+										</content>
+									</td>
+									<td>
+										<content ID='med-1-comment'>
+											Aspirin cardio 100mg 1-0-1
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<substanceAdministration classCode='SBADM' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.3.4' />
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='2.16.840.1.113883.10.20.1.24' />
+							<!-- VVK-EDI: 2.4.3 EAN-Nummer der Medikation (optional) -->
+							<id extension='7601001002593' root='1.3.88' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
+							<text>
+								<reference value='#med-1'/>
+							</text>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='NA'/>
+								<high nullFlavor='NA' />
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
+								<phase nullFlavor='NA' />
+								<period nullFlavor='NA' />
+							</effectiveTime>
+							<priorityCode nullFlavor='UNK' />
+							<routeCode nullFlavor='NA' />
+							<doseQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- VVK-EDI: 2.4.4 ATC-Nummer (Anatomical Therapeutical Chemical) der Medikation (optional) -->
+										<code code='B01AC06' codeSystem='2.16.840.1.113883.6.73' />
+										<name>Aspirin cardio 100mg</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<!-- VVK-EDI: 2.4.7 Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.4.6 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode='RSON' inversionInd='false'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<!-- VVK-EDI: 2.4.1 Bezeichnung der Medikation (optional) -->
+									<code code='09' codeSystem='2.16.756.5.30.1.21012101.3.1.1.7' displayName='ACE-Hemmer' codeSystemName='VVK-EDI Bezeichnung der Medikation'/>
+									<!-- VVK-EDI: 2.4.2 Bemerkung zur Indikation der Medikation -->
+									<text>
+										<reference value='#med-1-indication'/>
+									</text>
+								</observation>
+							</entryRelationship>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.4.5 Angaben zur Medikation (optional) -->
+									<text>
+										<reference value='#med-1-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+			<component>
+				<section>
+					<!-- Required Immunizations Section content -->
+					<templateId root='2.16.840.1.113883.10.20.1.6' />
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23' />
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='8A9F953E-7F2A-4CCC-AE87-8A3D68DB7305'/>
+					<code code='11369-6' displayName='HISTORY OF IMMUNIZATIONS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Impfungen</title>
+					<text>
+						<table border='1'>
+							<tbody>
+								<tr>
+									<th>Bezeichnung</th>
+									<th>Bemerkung zur Impfung</th>
+									<th>Handelsname des Wirkstoffs</th>
+									<th>Hersteller des Impfstoffs</th>
+									<th>Lot-Nummer</th>
+									<th>Datum der Impfung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='vacc-1'>
+											Hepatitis A
+										</content>
+									</td>
+									<td>
+										<content ID='vacc-1-comment'>
+											Dummy Impfung1
+										</content>
+									</td>
+									<td>
+										Dummy Impfung2
+									</td>
+									<td>
+										Dummy Impfung3
+									</td>
+									<td>
+										8927364
+									</td>
+									<td>
+										31.10.2011
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- Required Immunization element -->
+						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
+							<id nullFlavor='NA' />
+							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+							<text>
+								<reference value='#vacc-1' />
+							</text>
+							<statusCode code='completed'/>
+							<!-- VVK-EDI: 2.5.6	Datum der Impfung (optional) -->
+							<effectiveTime value='20113110' />
+							<priorityCode nullFlavor='UNK' />
+							<routeCode nullFlavor='NA' />
+							<doseQuantity nullFlavor='UNK'  />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<code nullFlavor='NA' />
+										<!-- VVK-EDI: 2.5.3 Handelsname des Impfstoffes (optional) -->
+										<name>Dummy Impfung2</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<!-- VVK-EDI: 2.5.4 Hersteller des Impfstoffes (optional) -->
+										<name>Dummy Impfung3</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<!-- VVK-EDI: 2.5.8 Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.5.7 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<!-- An optional entry relationship that identifies the targeted illness -->
+							<entryRelationship typeCode='RSON' inversionInd='false'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.ImmunizationL3.Target' />
+									<!-- VVK-EDI: 2.5.1 Bezeichnung der Impfung (optional) -->
+									<code code='07' codeSystem='2.16.756.5.30.1.21012101.3.1.1.8' displayName='Hepatitis A' codeSystemName='VVK-EDI Bezeichnung der Impfung'/>
+									<statusCode code='completed'/>
+								</observation>
+							</entryRelationship>
+							<!-- An optional entry relationship that identifies the immunization series number -->
+							<entryRelationship typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.46'/>
+									<code code='30973-2' displayName='Dose Number' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+									<statusCode code='completed'/>
+									<!-- VVK-EDI: 2.5.5 Lot-Nummer des Impfstoffes (optional) -->
+									<value xsi:type='INT' value='8927364'/>
+								</observation>
+							</entryRelationship>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.5.2 Bemerkung zur Impfung (optional) -->
+									<text>
+										<reference value='#vacc-1-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+			<component>
+				<section>
+					<!-- Optional Clinical Tests / Blood Type Section content -->
+					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.StudiesSummaryL2' />
+					<code code='30954-2' displayName='Relevant diagnostic tests/laboratory data' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Blutgruppe und Transfusionen</title>
+					<text>
+						Daten zur Blutgruppe:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Blutgruppe</th>
+									<th>Rhesusfaktor</th>
+									<th>Datum des Blutgruppentests</th>
+									<th>Bemerkung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='bloodgr-1'>
+											A
+										</content>
+									</td>
+									<td>
+										<content ID='bloodgr-1-rhesus'>
+											pos.
+										</content>
+									</td>
+									<td>24.08.2001</td>
+									<td>
+										<content ID='bloodgr-1-comment'>
+											Dummy Blutgruppe1
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<br/>Daten zu Transfusionen:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Indikator Transfusionen</th>
+									<th>Datum letzte Bluttransfusion</th>
+									<th>Bemerkung letzte Bluttransfusion</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='transfusion-1'>
+											1
+										</content>
+									</td>
+									<td>
+										10.02.2008
+									</td>
+									<td>
+										<content ID='transfusion-1-comment'>
+											Dummy Transfusion2
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.StudiesSummaryL3.Bloodgroup' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.6'/>
+							<templateId root='2.16.840.1.113883.10.20.1.31'/>
+							<id root='2.16.756.5.30.1.109.3.1' extension='6E9DD4C7-7401-46D8-A9CC-02421F750569' />
+							<code code='882-1' displayName='ABO+RH GROUP' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<text>
+								<reference value='#bloodgr-1' />
+							</text>
+							<statusCode code='completed' />
+							<!-- VVK-EDI: 2.6.1.3 Datum des Blutgruppentests (optional)  -->
+							<effectiveTime value='20010824'/>
+							<!-- VVK-EDI: 2.6.1.1 Bezeichnung der Blutgruppe (optional) -->
+							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.9' displayName='A' codeSystemName='VVK-EDI Bezeichnung der Blutgruppe'/>
+							<author>
+								<!-- VVK-EDI: 2.6.1.6 Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.6.1.5	EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<!-- An optional entry relationship that identifies the rhesus factor -->
+							<entryRelationship typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.StudiesSummaryL3.Bloodgroup.Rhesusfactor' />
+									<code code='882-1' displayName='ABO+RH GROUP' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<text>
+										<reference value='#bloodgr-1-rhesus' />
+									</text>
+									<statusCode code='completed'/>
+									<!-- VVK-EDI: 2.6.1.2 Bezeichnung des Rhesusfaktors (optional) -->
+									<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.1.21012101.3.1.1.10' displayName='+ve Vorzeichen positiv' codeSystemName='VVK-EDI Bezeichnung der Rhesusfaktors'/>
+								</observation>
+							</entryRelationship>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.6.1.4 Bemerkung zur Blutgruppe (optional) -->
+									<text>
+										<reference value='#bloodgr-1-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.StudiesSummaryL3.Transfusions' />
+							<id root='2.16.756.5.30.1.109.3.1' extension='D425C40A-5FBB-42DE-9628-0695CC2992B6' />
+							<code code='45851-3' displayName='Transfusions' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<text>
+								<reference value='#transfusion-1'/>
+							</text>
+							<statusCode code='completed' />
+							<!-- VVK-EDI: 2.6.2.2 Datum der letzten Bluttransfusion (optional) -->
+							<effectiveTime>
+								<low nullFlavor='NA' />
+								<high value='20080210' />
+							</effectiveTime>
+							<!-- VVK-EDI: 2.6.2.1 Indikator für die Anzahl der Bluttransfusionen (optional) -->
+							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.11' displayName='Einmal' codeSystemName='VVK-EDI Indikator für die Anzahl der Bluttransfusionen'/>
+							<author>
+								<!-- VVK-EDI: 2.6.2.5 Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.6.2.4 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.6.2.3 Bemerkung zur letzten Bluttransfusion (optional) -->
+									<text>
+										<reference value='#transfusion-1-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<component>
+				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MedicalRecordsL2' />
+					<code code='11503-0' displayName='Medical records' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Zusätzlicher Eintrag in medizinisch Begründeten Fällen</title>
+					<text>
+						Hinweise auf verfügbare medizinische oder pharmazeutische Dossiers:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Verwahrer</th>
+									<th>Bemerkung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='healthrecord-1'>
+											Radiologieinstitut Rodiag,
+											Spitalgasse,
+											8888 Musterhausen
+										</content>
+									</td>
+									<td>
+										<content ID='healthrecord-1-comment'>
+											Dummy Dossier1
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<br/>Weitere medizinische oder pharmazeutische Einträge:<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<th>Bezeichnung</th>
+									<th>Bemerkung</th>
+									<th>Eintragende Person</th>
+									<th>Datum der Eintragung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='healthrecord-2'>
+											Dummy Eintrag1
+										</content>
+									</td>
+									<td>
+										<content ID='healthrecord-2-comment'>
+											Dummy Eintrag2
+										</content>
+									</td>
+									<td>
+										Dr. med. Allzeit Bereit, Musterhausen
+									</td>
+									<td>
+										21.01.2012
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MedicalRecordL3' />
+							<id root='2.16.756.5.30.1.109.3.1' extension='10EC2DB9-BDC9-4E83-AFBA-3712CFA6B49D' />
+							<code code='46106-1' displayName='Medical record no.' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<text>
+								<reference value='#healthrecord-1' />
+							</text>
+							<statusCode code='completed' />
+							<!-- VVK-EDI: 2.7.1.1 Angaben zur Adresse des Verwahrers -->
+							<performer>
+								<assignedEntity>
+									<id extension='7608888888888' root='1.3.88'/>
+									<addr use='HP'>
+										<streetName>Spitalgasse</streetName>
+										<postalCode>8888</postalCode>
+										<city>Musterhausen</city>
+										<country>CHE</country>
+									</addr>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Radio</given>
+											<family>Loge</family>
+											<suffix>Facharzt für Radiologie</suffix>
+										</name>
+									</assignedPerson>
+									<!--
+									<representedOrganization>
+									<id nullFlavor='NA'/>
+									<name>Radiologieinstitut Rodiag</name>
+									<addr use='HP'>
+									<streetName>Spitalgasse</streetName>
+									<postalCode>8888</postalCode>
+									<city>Musterhausen</city>
+									<country>CHE</country>
+									</addr>
+									</representedOrganization>
+									-->
+								</assignedEntity>
+							</performer>
+							<author>
+								<!-- VVK-EDI: 2.7.1.4 Datum der Eintragung (obligatorisch) -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.7.1.3 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.7.1.2 Bemerkung zum medizinischen oder pharmazeutischen Dossier -->
+									<text>
+										<reference value='#healthrecord-1-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MedicalRecordL3' />
+							<id root='2.16.756.5.30.1.109.3.1' extension='10EC2DB9-BDC9-4E83-AFBA-3712CFA6B49D' />
+							<code code='46106-1' displayName='Medical record no.' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<!-- VVK-EDI: 2.7.2.1	Bezeichnung des weiteren medizinischen oder pharmazeutischen Eintrags (optional) -->
+							<text>
+								<reference value='#healthrecord-2' />
+							</text>
+							<statusCode code='completed' />
+							<author>
+								<!-- VVK-EDI: 2.7.2.4 Datum der Eintragung (obligatorisch)  -->
+								<time value='20120121' />
+								<assignedAuthor>
+									<!-- VVK-EDI: 2.7.2.3 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.7.2.2	Bemerkung zum weiteren medizinischen oder pharmazeutischen Eintrag (optional) -->
+									<text>
+										<reference value='#healthrecord-2-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<component>
+				<section>
+					<!-- Advanced Directives Section content -->
+					<templateId root='2.16.840.1.113883.10.20.1.1'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.34'/>
+					<id root='2.16.756.5.30.1.9999999999' />
+					<code code='42348-3' displayName='ADVANCE DIRECTIVES' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Patientenverfügungen</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Art des Verwahrers</th>
+									<th>Verwahrer</th>
+									<th>Bemerkung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='consent-1-type'>
+											Kontaktadresse im privaten Umfeld
+										</content>
+									</td>
+									<td>
+										<content ID='consent-1'>
+											Muster Heidi,
+											Specimengasse,
+											8888 Musterhausen
+										</content>
+									</td>
+									<td>
+										<content ID='consent-1-comment'>
+											Dummy Consent1
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.ConsentL3' />
+							<id root='2.16.756.5.30.1.109.3.1' extension='10EC2DB9-BDC9-4E83-AFBA-3712CFA6B49D' />
+							<code code='42348-3' displayName='ADVANCE DIRECTIVES' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+							<text>
+								<reference value='#consent-1' />
+							</text>
+							<statusCode code='completed' />
+							<informant>
+								<!-- VVK-EDI: 2.9.2 Angaben zur Adresse des Verwahrers im Format gemäss dem Standard eCH-0010:2006 -->
+								<assignedEntity>
+									<id root='2.16.756.5.30.1.109.3.1' extension='4FE509D0-8BFA-4360-AD00-F98F6D9046A7' />
+									<!-- VVK-EDI: 2.9.1 Art des Verwahrers des Dokuments (optional) -->
+									<code code='1' displayName='Kontaktadresse im privaten Umfeld' codeSystem='2.16.756.5.30.1.21012101.3.1.1.13'/>
+									<addr use='HP'>
+										<streetName>Specimengasse</streetName>
+										<postalCode>8888</postalCode>
+										<city>Musterhausen</city>
+										<country>CHE</country>
+									</addr>
+									<assignedPerson>
+										<name>
+											<given>Heidi</given>
+											<family>Muster</family>
+										</name>
+									</assignedPerson>
+									<!--
+									<representedOrganization>
+									<id nullFlavor='NA'/>
+									<name>Radiologieinstitut Rodiag</name>
+									<addr use='WP'>
+									<streetName>Spitalgasse</streetName>
+									<postalCode>8888</postalCode>
+									<city>Musterhausen</city>
+									<country>CHE</country>
+									</addr>
+									</representedOrganization>
+									-->
+								</assignedEntity>
+							</informant>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<!-- VVK-EDI: 2.9.3	Bemerkung zur Beschreibung der Verfügung oder des Ausweises (optional) -->
+									<text>
+										<reference value='#consent-1-comment'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- The components below are just to succeed validation for epSOS PatientSummary (on gazelle EVS Client; http://gazelle.ihe.net/EVSClient/cda/validator.seam?extension=epSOS ) -->
+			<!-- Required epSOS PatientSummary sections (see chapter 13.1) -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.11' />
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.12' />
+					<templateId root='2.16.840.1.113883.10.20.1.12' />
+					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='HISTORY OF PROCEDURES' />
+					<title>Frühere Operationen</title>
+					<text>
+						Keine Angaben
+					</text>
+					<entry typeCode='DRIV'>
+						<procedure classCode='PROC' moodCode='INT' nullFlavor='NA' >
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19' />
+							<templateId root='2.16.840.1.113883.10.20.1.25' />
+						</procedure>
+					</entry>
+				</section>
+			</component>
+
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.7' />
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.5' />
+					<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.2.4' />
+					<code code='46264-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of medical device use' />
+					<title>Implantate</title>
+					<text>
+						Keine Angaben
+					</text>
+					<entry typeCode='DRIV'>
+						<supply classCode='SPLY' moodCode='EVN' nullFlavor='NA' >
+							<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.3.5' />
+						</supply>
+					</entry>
+				</section>
+			</component>
+
+			<!-- Optional epSOS PatientSummary sections -/->
+			<!-/-
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8' />
+			<code code='11348-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of past illness' />
+			<title>Bisherige Krankheiten</title>
+			<text>
+			Keine Angaben
+			</text>
+			<entry typeCode='DRIV'>
+			<act classCode='ACT' moodCode='EVN'>
+			<templateId root='2.16.840.1.113883.10.20.1.27' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2' />
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='497E45CF-E8EA-4CCE-90A6-8249C06809EB'/>
+			<code nullFlavor='NA' />
+			<statusCode code='completed' />
+			<effectiveTime xsi:type='IVL_TS'>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+			</effectiveTime>
+			<entryRelationship inversionInd='false' typeCode='SUBJ'>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='2.16.840.1.113883.10.20.1.28' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
+			<templateId root='2.16.840.1.113883.10.20.1.54' />
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='B3DC860A-D59C-42E2-9527-BE21A0D0334F'/>
+			<code code='396782006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Past Medical History unknown' />
+			<text />
+			<statusCode code='completed' />
+			<effectiveTime>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+			</effectiveTime>
+			<value xsi:type='CD' nullFlavor='UNK' />
+			</observation>
+			</entryRelationship>
+			</act>
+			</entry>
+			</section>
+			</component>
+
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.25' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2' />
+			<templateId root='2.16.840.1.113883.10.20.1.16' />
+			<code code='8716-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='VITAL SIGNS' />
+			<title>Codierte Vitalzeichenliste</title>
+			<text>
+			Keine Angaben
+			</text>
+			<entry typeCode='DRIV'>
+			<organizer classCode='CLUSTER' moodCode='EVN'>
+			<templateId root='2.16.840.1.113883.10.20.1.32' />
+			<templateId root='2.16.840.1.113883.10.20.1.35' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.1' />
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='2B19BB51-9171-44A9-9C7B-E81CB216A82C'/>
+			<code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital signs' />
+			<statusCode code='completed' />
+			<effectiveTime nullFlavor='NA' />
+			<component typeCode='COMP'>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13' />
+			<templateId root='2.16.840.1.113883.10.20.1.31' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2' />
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='61A195FD-DD33-4895-848F-EFE8779E3ED6'/>
+			<code nullFlavor='NA' />
+			<text>
+			<reference nullFlavor='NA' />
+			</text>
+			<statusCode code='completed' />
+			<effectiveTime nullFlavor='NA' />
+			<value xsi:type='PQ' nullFlavor='UNK' />
+			</observation>
+			</component>
+			</organizer>
+			</entry>
+			</section>
+			</component>
+
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.28' />
+			<code code='30954-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='STUDIES SUMMARY' />
+			<title>Diagnostische Zusammenfassung</title>
+			<text>
+			Keine Angaben
+			</text>
+			<entry typeCode='DRIV'>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13' />
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='147C50C8-23AB-44B6-A4D1-62F4E962441E'/>
+			<code nullFlavor='NA' />
+			<text>
+			<reference nullFlavor='NA' />
+			</text>
+			<statusCode code='completed' />
+			<effectiveTime nullFlavor='NA' />
+			<value xsi:type='CD' nullFlavor='UNK' />
+			</observation>
+			</entry>
+			</section>
+			</component>
+
+			<component>
+			<section>
+			<templateId root='2.16.840.1.113883.10.20.1.15' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.16' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.16.1' />
+			<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='SOCIAL HISTORY' />
+			<title>Sozial Anamnese</title>
+			<text>
+			Keine Angaben
+			</text>
+			<entry typeCode='DRIV'>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='2.16.840.1.113883.10.20.1.33' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13' />
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4' />
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='E2753124-FB3D-4BB8-AB27-0AAFD140489A'/>
+			<code nullFlavor='NA' />
+			<text>
+			<reference nullFlavor='NA' />
+			</text>
+			<statusCode code='completed' />
+			<effectiveTime nullFlavor='NA' />
+			<value xsi:type='PQ' nullFlavor='UNK' />
+			</observation>
+			</entry>
+			</section>
+			</component>
+			-->
+
+		</structuredBody>
+	</component>
+</ClinicalDocument>
