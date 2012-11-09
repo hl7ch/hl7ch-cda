@@ -4,6 +4,7 @@ Medizinische Notfalldaten V1
 
 History:
 24.10.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
+10.11.2012: Tony Schaller, medshare GmbH (Abschluss Implementierungsleitfaden)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -39,10 +40,9 @@ History:
 				<houseNumber>10</houseNumber>
 				<postalCode>9876</postalCode>
 				<city>Specimendorf</city>
-				<country>CHE</country>
+				<country>CH</country>
 			</addr>
 			<telecom use='HP' value='tel:+41.32.685.12.34'/>
-			<telecom use='PUB' value='tel:+41.32.123.77.88'/>
 			<patient>
 				<name>
 					<given>Franz</given>
@@ -65,47 +65,47 @@ History:
 				<softwareName>Dummy Middleware</softwareName>
 			</assignedAuthoringDevice>
 		</assignedAuthor>
-		
+
 	</author>
 	<!--
 	<author>
-		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
-		<time value='20100203'/>
-		<assignedAuthor>
-			<id extension='7608888888888' root='1.3.88'/>
-			<addr use='WP'>
-				<streetName>Doktorgasse</streetName>
-				<houseNumber>2</houseNumber>
-				<postalCode>8888</postalCode>
-				<city>Musterhausen</city>
-				<country>CHE</country>
-			</addr>
-			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
-			<!-/- this fails with epSOS Patient Summary Schematron Validation...
-			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
-			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
-			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
-			-/->
-			<assignedPerson>
-				<name>
-					<prefix>Dr. med.</prefix>
-					<given>Allzeit</given>
-					<family>Bereit</family>
-					<suffix>Facharzt für Allgemeine Medizin</suffix>
-				</name>
-			</assignedPerson>
-			<representedOrganization>
-				<id nullFlavor='NA'/>
-				<name>Gruppenpraxis CH</name>
-				<addr use='WP'>
-					<streetName>Doktorgasse</streetName>
-					<houseNumber>2</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CHE</country>
-				</addr>
-			</representedOrganization>
-		</assignedAuthor>
+	<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
+	<time value='20100203'/>
+	<assignedAuthor>
+	<id extension='7608888888888' root='1.3.88'/>
+	<addr use='WP'>
+	<streetName>Doktorgasse</streetName>
+	<houseNumber>2</houseNumber>
+	<postalCode>8888</postalCode>
+	<city>Musterhausen</city>
+	<country>CH</country>
+	</addr>
+	<!-/- this fails with epSOS Patient Summary Schematron Validation...
+	<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+	<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+	<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
+	<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
+	-/->
+	<assignedPerson>
+	<name>
+	<prefix>Dr. med.</prefix>
+	<given>Allzeit</given>
+	<family>Bereit</family>
+	<suffix>Facharzt für Allgemeine Medizin</suffix>
+	</name>
+	</assignedPerson>
+	<representedOrganization>
+	<id nullFlavor='NA'/>
+	<name>Gruppenpraxis CH</name>
+	<addr use='WP'>
+	<streetName>Doktorgasse</streetName>
+	<houseNumber>2</houseNumber>
+	<postalCode>8888</postalCode>
+	<city>Musterhausen</city>
+	<country>CH</country>
+	</addr>
+	</representedOrganization>
+	</assignedAuthor>
 	</author>
 	-->
 	<custodian>
@@ -114,7 +114,7 @@ History:
 				<id nullFlavor='NA' />
 				<name>Versichertenkarte</name>
 				<addr use='WP'>
-					<country>CHE</country>
+					<country>CH</country>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
@@ -140,7 +140,7 @@ History:
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
-					<country>CHE</country>
+					<country>CH</country>
 				</addr>
 			</representedOrganization>
 		</assignedEntity>
@@ -155,7 +155,7 @@ History:
 				<houseNumber>2</houseNumber>
 				<postalCode>8888</postalCode>
 				<city>Musterhausen</city>
-				<country>CHE</country>
+				<country>CH</country>
 			</addr>
 			<telecom value='mailto:g@g.com' use='EC'/>
 			<associatedPerson>
@@ -174,11 +174,16 @@ History:
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
-					<country>CHE</country>
+					<country>CH</country>
 				</addr>
 			</scopingOrganization>
 		</associatedEntity>
 	</participant>
+	<relatedDocument typeCode="XFRM" > 
+    <parentDocument>
+    	<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='3CD57BA0-5FB0-45E9-A206-4C617A89C4B2'/>
+    </parentDocument> 
+  </relatedDocument> 	
 	<authorization>
 		<consent>
 			<code nullFlavor='OTH' codeSystem='2.16.756.5.30.2.1.1.2'>
@@ -353,6 +358,7 @@ History:
 
 			<!-- Transplantationsdaten -->
 			<component>
+				<!--epSOS/IHE: [N/A] -->
 				<!-- VVK-EDI: Transplantationsdaten Section (2.16.756.5.30.1.1.1.1.3.2.1;extension='CDA-CH.MSET.Body.TransplantsL2' -->
 				<section>
 					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.TransplantsL2' />
@@ -526,6 +532,7 @@ History:
 
 			<!-- Allergien -->
 			<component>
+				<!--epSOS/IHE: Allergies and Other Adverse Reactions Section 1.3.6.1.4.1.19376.1.5.3.1.3.13 -->
 				<section>
 					<templateId root='2.16.840.1.113883.10.20.1.2' />
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13' />
@@ -807,14 +814,20 @@ History:
 									<entryRelationship typeCode='REFR' inversionInd='false'>
 										<substanceAdministration classCode='SBADM' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<templateId root='2.16.840.1.113883.10.20.1.24' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
+											<id extension='7601001002593x' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Ersatzmedikament' codeSystemName='VVK-EDI Typ des Medikaments zur klinischen Reaktion' />
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-1-med-1' />
 											</text>
+											<statusCode code='completed'/>
 											<consumable>
 												<manufacturedProduct>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
 														<code nullFlavor='NA' >
@@ -855,14 +868,20 @@ History:
 									<entryRelationship typeCode='REFR' inversionInd='false'>
 										<substanceAdministration classCode='SBADM' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<templateId root='2.16.840.1.113883.10.20.1.24' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
+											<id extension='7601001002593x' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Notfallmedikament'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-1-med-2' />
 											</text>
+											<statusCode code='completed'/>
 											<consumable>
 												<manufacturedProduct>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
 														<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.5' displayName='Adrenalin injizierbar' >
@@ -1012,14 +1031,20 @@ History:
 									<entryRelationship typeCode='REFR' inversionInd='false'>
 										<substanceAdministration classCode='SBADM' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<templateId root='2.16.840.1.113883.10.20.1.24' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
+											<id extension='7601001002593x' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Ersatzmedikament'/>
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-2-med-1' />
 											</text>
+											<statusCode code='completed'/>
 											<consumable>
 												<manufacturedProduct>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
 														<code nullFlavor='NA' >
@@ -1064,14 +1089,20 @@ History:
 									<entryRelationship typeCode='REFR' inversionInd='false'>
 										<substanceAdministration classCode='SBADM' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Medication' />
+											<templateId root='2.16.840.1.113883.10.20.1.24' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
+											<id extension='7601001002593x' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Notfallmedikament'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-2-med-2' />
 											</text>
+											<statusCode code='completed'/>
 											<consumable>
 												<manufacturedProduct>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
 														<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.5' displayName='Adrenalin injizierbar' >
@@ -1107,6 +1138,7 @@ History:
 
 			<!-- Medikation -->
 			<component>
+				<!--epSOS/IHE: Medication Summary Section 1.3.6.1.4.1.12559.11.10.1.3.1.2.3  -->
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.19' />
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediList' />
@@ -1167,12 +1199,16 @@ History:
 							<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.3.4' />
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='2.16.840.1.113883.10.20.1.24' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 							<!-- VVK-EDI: 2.4.3 EAN-Nummer der Medikation (optional) -->
 							<id extension='7601001002593' root='1.3.88' />
+							<!-- 2.16.840.1.113883.6.96 -->
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#med-1'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
 								<!-- Wirkzeitraum -->
 								<low nullFlavor='NA'/>
@@ -1242,7 +1278,9 @@ History:
 				</section>
 			</component>
 
+			<!-- Impfungen -->
 			<component>
+				<!--epSOS/IHE: Immunizations Section 1.3.6.1.4.1.19376.1.5.3.1.3.23 -->
 				<section>
 					<!-- Required Immunizations Section content -->
 					<templateId root='2.16.840.1.113883.10.20.1.6' />
@@ -1301,6 +1339,8 @@ History:
 						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
 							<id nullFlavor='NA' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
@@ -1381,7 +1421,9 @@ History:
 				</section>
 			</component>
 
+			<!-- Blutgruppe und Transfusionen -->
 			<component>
+				<!--epSOS/IHE: N/A  -->
 				<section>
 					<!-- Optional Clinical Tests / Blood Type Section content -->
 					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.StudiesSummaryL2' />
@@ -1572,11 +1614,13 @@ History:
 				</section>
 			</component>
 
+			<!-- Zusätzlicher Eintrag in medizinisch begründeten Fällen -->
 			<component>
+				<!--epSOS/IHE: N/A  -->
 				<section>
 					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MedicalRecordsL2' />
 					<code code='11503-0' displayName='Medical records' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Zusätzlicher Eintrag in medizinisch Begründeten Fällen</title>
+					<title>Zusätzlicher Eintrag in medizinisch begründeten Fällen</title>
 					<text>
 						Hinweise auf verfügbare medizinische oder pharmazeutische Dossiers:<br/>
 						<br/>
@@ -1659,7 +1703,7 @@ History:
 										<streetName>Spitalgasse</streetName>
 										<postalCode>8888</postalCode>
 										<city>Musterhausen</city>
-										<country>CHE</country>
+										<country>CH</country>
 									</addr>
 									<assignedPerson>
 										<name>
@@ -1677,7 +1721,7 @@ History:
 									<streetName>Spitalgasse</streetName>
 									<postalCode>8888</postalCode>
 									<city>Musterhausen</city>
-									<country>CHE</country>
+									<country>CH</country>
 									</addr>
 									</representedOrganization>
 									-->
@@ -1758,9 +1802,10 @@ History:
 				</section>
 			</component>
 
+			<!-- Patientenverfügungen -->
 			<component>
+				<!--epSOS/IHE: Advanced Directives Section content 1.3.6.1.4.1.19376.1.5.3.1.3.34 -->
 				<section>
-					<!-- Advanced Directives Section content -->
 					<templateId root='2.16.840.1.113883.10.20.1.1'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.34'/>
 					<id root='2.16.756.5.30.1.9999999999' />
@@ -1815,7 +1860,7 @@ History:
 										<streetName>Specimengasse</streetName>
 										<postalCode>8888</postalCode>
 										<city>Musterhausen</city>
-										<country>CHE</country>
+										<country>CH</country>
 									</addr>
 									<assignedPerson>
 										<name>
@@ -1831,7 +1876,7 @@ History:
 									<streetName>Spitalgasse</streetName>
 									<postalCode>8888</postalCode>
 									<city>Musterhausen</city>
-									<country>CHE</country>
+									<country>CH</country>
 									</addr>
 									</representedOrganization>
 									-->
@@ -1858,11 +1903,12 @@ History:
 			<!-- The components below are just to succeed validation for epSOS PatientSummary (on gazelle EVS Client; http://gazelle.ihe.net/EVSClient/cda/validator.seam?extension=epSOS ) -->
 			<!-- Required epSOS PatientSummary sections (see chapter 13.1) -->
 			<component>
+				<!--epSOS/IHE: Coded List of Surgeries Section 1.3.6.1.4.1.19376.1.5.3.1.3.12 -->
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.11' />
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.12' />
 					<templateId root='2.16.840.1.113883.10.20.1.12' />
-					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='HISTORY OF PROCEDURES' />
+					<code code='47519-4' codeSystem='2.16.840.1.113883.6.1' />
 					<title>Frühere Operationen</title>
 					<text>
 						Keine Angaben
@@ -1877,11 +1923,12 @@ History:
 			</component>
 
 			<component>
+				<!--epSOS/IHE: Medical Devices Coded Section 1.3.6.1.4.1.12559.11.10.1.3.1.2.4 -->
 				<section>
 					<templateId root='2.16.840.1.113883.10.20.1.7' />
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.5' />
 					<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.2.4' />
-					<code code='46264-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of medical device use' />
+					<code code='46264-8' codeSystem='2.16.840.1.113883.6.1' />
 					<title>Implantate</title>
 					<text>
 						Keine Angaben
