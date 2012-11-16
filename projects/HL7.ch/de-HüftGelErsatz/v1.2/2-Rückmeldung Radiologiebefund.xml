@@ -5,7 +5,8 @@ CDA-CH V1.2 Sample
 
 History:
 27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
-22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository)
+16.11.2012: Tony Schaller, medshare GmbH (Korrektur URL RoDiag Webaccess)
 
 ********************************************************
 -->
@@ -167,7 +168,7 @@ History:
 					<title>Präambel</title>
 					<text>
 						<content>
-							Besten Dank für die freundliche Zuweisung vom 3.10.2007 zur Radiologischen Untersuchung des oben genannten Patienten. Das erstellte Röntgenbild finden sie hier: <linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/mustermaxhuefte1.jpg ">RoDiag Webaccess</linkHtml><br/>
+							Besten Dank für die freundliche Zuweisung vom 3.10.2007 zur Radiologischen Untersuchung des oben genannten Patienten. Das erstellte Röntgenbild finden sie hier: <linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/mustermaxhuefte1.jpg">RoDiag Webaccess</linkHtml><br/>
 							<br/>
 						</content>
 						<content styleCode="Italics">
