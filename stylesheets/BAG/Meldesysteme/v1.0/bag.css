@@ -1,0 +1,34 @@
+/*********************************************************
+  Project specific CSS for "Meldewesen" HL7 CDA Templates for Federal Office of Public Health FOPH
+  Date: 25.01.2012
+*********************************************************/
+/* Logo */
+h1 { 
+	font-size: 24px;
+	background: transparent url(logo_suisse.jpg) no-repeat top right; 
+	margin: 0.83em 0.83em;
+}
+/* Header */
+table.head thead tr {
+	background-color: #888888;
+}
+table.head tr {
+	background-color: #EEEEEE;	
+}
+/* Body Tables */
+table.body tr th {
+	background-color: #AAAAAA;
+}
+table.body tr td {
+	background-color: #EEEEEE;	
+}
+/* Footer */
+table.foot tr th {
+	background-color: #AAAAAA;
+}
+table.foot tr td {
+	background-color: #EEEEEE;
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}
