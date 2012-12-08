@@ -134,6 +134,16 @@ History:
   <text language="it-CH" value="Assurance" displayName="Assicurazione"/>
   <text language="en" value="Assurance" displayName="Assurance"/>
 
+  <text language="de-CH" value="Referrer" displayName="Einweisende Instanz"/>
+	<text language="fr-CH" value="Referrer" displayName="tbd Referrer"/>
+  <text language="it-CH" value="Referrer" displayName="tbd Referrer"/>
+  <text language="en" value="Referrer" displayName="Referrer"/>
+
+  <text language="de-CH" value="OrderPlacer" displayName="Auftraggeber"/>
+	<text language="fr-CH" value="OrderPlacer" displayName="tbd Order placer"/>
+  <text language="it-CH" value="OrderPlacer" displayName="tbd Order placer"/>
+  <text language="en" value="OrderPlacer" displayName="Order placer"/>
+
   <text language="de-CH" value="Consent" displayName="Einverständniserklärung"/>
 	<text language="fr-CH" value="Consent" displayName="Consentement éclairé"/>
   <text language="it-CH" value="Consent" displayName="Dichiarazione di consenso"/>

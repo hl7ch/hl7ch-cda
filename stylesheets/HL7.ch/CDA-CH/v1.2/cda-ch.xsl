@@ -713,6 +713,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 					<xsl:when test="$typeCode='COV'">
 						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
 					</xsl:when>
+					<xsl:when test="$typeCode='REF'">
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Referrer']/@displayName"/>
+					</xsl:when>
 					<xsl:when test="$typeCode='HLD'">
 						<!-- no header -->
 					</xsl:when>
@@ -781,6 +784,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 										</xsl:when>
 										<xsl:when test="$participantCode='EMPLOYER' or $classCode='ECON'">
 											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$typeCode='REF' and $classCode='PROV'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='OrderPlacer']/@displayName"/>
 										</xsl:when>
 										<xsl:otherwise>
 											Unknown Type
@@ -892,8 +898,8 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								<xsl:with-param name="name" select="n1:assignedAuthor/n1:assignedPerson/n1:name"/>
 							</xsl:call-template>
 						</xsl:if>
-						<xsl:if test="n1:assignedAuthoringDevice">
-							<xsl:value-of select="n1:assignedAuthoringDevice/n1:softwareName"/>
+						<xsl:if test="n1:assignedAuthor/n1:assignedAuthoringDevice">
+							<xsl:value-of select="n1:assignedAuthor/n1:assignedAuthoringDevice/n1:softwareName"/>
 						</xsl:if>
 						<xsl:text> </xsl:text>
 						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='theDate']/@displayName"/>
@@ -906,9 +912,16 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				<tr>
 					<th class="empty"/>
 					<td>
-						<xsl:call-template name="getContactInfo">
-							<xsl:with-param name="contact" select="n1:assignedAuthor"/>
-						</xsl:call-template>
+						<xsl:if test="n1:assignedAuthor/n1:addr">
+							<xsl:call-template name="getContactInfo">
+								<xsl:with-param name="contact" select="n1:assignedAuthor"/>
+							</xsl:call-template>
+						</xsl:if>
+						<xsl:if test="n1:assignedAuthor/n1:representedOrganization">
+							<xsl:call-template name="getContactInfo">
+								<xsl:with-param name="contact" select="n1:assignedAuthor/n1:representedOrganization"/>
+							</xsl:call-template>
+						</xsl:if>
 					</td>
 				</tr>
 			</xsl:for-each>
@@ -1028,10 +1041,11 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							<xsl:call-template name="getName">
 								<xsl:with-param name="name" select="n1:intendedRecipient/n1:informationRecipient/n1:name"/>
 							</xsl:call-template>
-							<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
-								<br/>
-								<xsl:value-of select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
-							</xsl:if>
+						</xsl:if>
+						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
+							<xsl:call-template name="getName">
+								<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
+							</xsl:call-template>
 						</xsl:if>
 					</td>
 				</tr>
