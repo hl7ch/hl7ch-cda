@@ -6,6 +6,7 @@ Schematron rules for VHitG Arztbrief
 History:
 30.12.2009: Tony Schaller, medshare GmbH (Übernahme von supporting documents des VHitG und ein paar Anpassungen - alle kommentiert)
 11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
+08.12.2010: Tony Schaller, medshare GmbH (Test wegen realmCode entfernt, da genau dieser für IHE XD-LAB erforderlich ist...)
 
 ********************************************************
 -->
@@ -263,9 +264,11 @@ component               CDA Body 1..1 SCHEMA
 -->
 <pattern name="HEAD General Header constraints">
 	<rule context="cda:ClinicalDocument">
+		<!--
 		<assert test="not(cda:realmCode)">
 			vhitg-ruleset.ent: The <emph>realmCode</emph> element is not allowed.
 		</assert>
+		-->
 		<!-- 29.11.2009 ts: auskommentiert, da z.B. IHE PHR Extract mehrere Template IDs erfordert
 		<assert test="count(cda:templateId)&lt;2">
 		vhitg-ruleset.ent: The <emph>templateId</emph> element may only appear once.
