@@ -291,7 +291,7 @@ History:
 										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
 										<assignedAuthor>
-											<!-- VVK-EDI: 2.1.3	EAN-Nummer (European Article Numbering) der eintragenden Person (obligatorisch) -->
+											<!-- VVK-EDI: 2.1.3 GLN der eintragenden Person (obligatorisch) -->
 											<id extension='7608888888888' root='1.3.88'/>
 										</assignedAuthor>
 									</author>
@@ -331,7 +331,7 @@ History:
 										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
 										<assignedAuthor>
-											<!-- VVK-EDI: 2.1.3	EAN-Nummer (European Article Numbering) der eintragenden Person (obligatorisch) -->
+											<!-- VVK-EDI: 2.1.3 GLN der eintragenden Person (obligatorisch) -->
 											<id extension='7608888888888' root='1.3.88'/>
 										</assignedAuthor>
 									</author>
@@ -463,7 +463,7 @@ History:
 										<!-- VVK-EDI: 2.2.1.3	Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
 										<assignedAuthor>
-											<!-- VVK-EDI: 2.2.1.2	EAN-Nummer der eintragenden Person (obligatorisch) -->
+											<!-- VVK-EDI: 2.2.1.2 GLN der eintragenden Person (obligatorisch) -->
 											<id extension='7608888888888' root='1.3.88'/>
 										</assignedAuthor>
 									</author>
@@ -506,7 +506,7 @@ History:
 										<!-- VVK-EDI: 2.2.2.6 Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
 										<assignedAuthor>
-											<!-- VVK-EDI: 2.2.2.5 EAN-Nummer der eintragenden Person (obligatorisch) -->
+											<!-- VVK-EDI: 2.2.2.5 GLN der eintragenden Person (obligatorisch) -->
 											<id extension='7608888888888' root='1.3.88'/>
 										</assignedAuthor>
 									</author>
@@ -742,7 +742,7 @@ History:
 								<!-- VVK-EDI: 2.3.1.7	Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.3.1.6	EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.3.1.6 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -942,7 +942,7 @@ History:
 								<!-- VVK-EDI: 2.3.1.7	Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.3.1.6	EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.3.1.6 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -1201,7 +1201,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.24' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
-							<!-- VVK-EDI: 2.4.3 EAN-Nummer der Medikation (optional) -->
+							<!-- VVK-EDI: 2.4.3 GLN der Medikation (optional) -->
 							<id extension='7601001002593' root='1.3.88' />
 							<!-- 2.16.840.1.113883.6.96 -->
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
@@ -1236,7 +1236,7 @@ History:
 								<!-- VVK-EDI: 2.4.7 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.4.6 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.4.6 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -1372,7 +1372,7 @@ History:
 								<!-- VVK-EDI: 2.5.8 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.5.7 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.5.7 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -1524,7 +1524,7 @@ History:
 								<!-- VVK-EDI: 2.6.1.6 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.6.1.5	EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.6.1.5 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -1584,7 +1584,7 @@ History:
 								<!-- VVK-EDI: 2.6.2.5 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.6.2.4 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.6.2.4 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -1731,7 +1731,7 @@ History:
 								<!-- VVK-EDI: 2.7.1.4 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.7.1.3 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.7.1.3 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
@@ -1772,7 +1772,7 @@ History:
 								<!-- VVK-EDI: 2.7.2.4 Datum der Eintragung (obligatorisch)  -->
 								<time value='20120121' />
 								<assignedAuthor>
-									<!-- VVK-EDI: 2.7.2.3 EAN-Nummer der eintragenden Person (obligatorisch) -->
+									<!-- VVK-EDI: 2.7.2.3 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
 										<name>
