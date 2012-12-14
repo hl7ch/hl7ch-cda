@@ -8,6 +8,7 @@ History:
 23.11.2012: Tony Schaller, medshare GmbH (Einbau Konformität zu IHE XD-LAB)
 30.11.2012: Tony Schaller, medshare GmbH (Korrektur Specimen Received; Dokument erstmals korrekt gegen IHE XD-LAB validiert)
 08.12.2012: Tony Schaller, medshare GmbH (Div. Korrekturen im Zusammenhang mit der Fertigstellung von CDA-CH-LRPH V1.0)
+14.12.2012: Tony Schaller, medshare GmbH (Korrekturen nach Entscheiden der Sitzung vom 12.12.12)
 
 ********************************************************
 -->
@@ -165,14 +166,6 @@ History:
 									<th>Codesystem</th>
 								</tr>
 								<tr>
-									<td>Labormeldung:</td>
-									<td>
-										Campylobacter
-									</td>
-									<td>tbd</td>
-									<td>BAG</td>
-								</tr>
-								<tr>
 									<td>Typ:</td>
 									<td>
 										Bakterien mit Kultur in Stuhl identifiziert
@@ -256,34 +249,6 @@ History:
 								</procedure>
 							</entryRelationship>
 
-							<!-- IHE XD-LAB: Notification Organizer -->
-							<entryRelationship typeCode='COMP'>
-								<organizer classCode='CLUSTER' moodCode='EVN'>
-									<templateId root='1.3.6.1.4.1.19376.1.3.1.1' />
-									<statusCode code='completed' />
-									<component>
-										<!-- IHE XD-LAB: Notifiable Condition -->
-										<observation classCode='COND' moodCode='EVN'>
-											<templateId root='1.3.6.1.4.1.19376.1.3.1.1.1' />
-											<code code='170516003' codeSystem='2.16.840.1.113883.6.96' 
-												codeSystemName='SNOMED CT' displayName='Notification of Disease'> 
-												<qualifier> 
-													<name code='246087005' codeSystem='2.16.840.1.113883.6.96' 
-														codeSystemName='SNOMED CT' displayName='Source of Specimen'/> 
-													<value code='116154003' codeSystem='2.16.840.1.113883.6.96'  
-														codeSystemName='SNOMED CT' displayName='Patient'/> 
-												</qualifier> 
-											</code> 
-											<statusCode code='completed'/> 
-											<!-- Codesystem zur Verordnung des EDI über Arzt- und Labormeldungen (SR 818.141.11, Anhang 3, Tabelle Labormeldungen)
-												 Zum Zeitpunkt des Nachweises gültiges LOINC Subset. -->
-											<value xsi:type='CE' code='tbd_by_FAMH_Commission_LSI' codeSystem='2.16.756.5.30.1.127.3.2.20121101.1' 
-												displayName='Campylobacter' codeSystemName='labReportList' /> 
-										</observation>
-									</component>
-								</organizer>
-							</entryRelationship>
-
 							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
 							<entryRelationship typeCode='COMP'>
 								<organizer classCode='BATTERY' moodCode='EVN'>
@@ -296,8 +261,6 @@ History:
 											<code code='625-4' displayName='Bacteria identified in Stool by Culture' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
 												<!-- Translation auf BAG labObsList -->
 												<translation code='625-4' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' displayName='Campylobacter' codeSystemName='labObsList'/>
-												<!-- Beispiel Mapping zu proprietärem Code des Labors -->
-												<translation code='CAJE' codeSystem='2.16.756.5.30.999999.2' displayName='Campylobacter species' codeSystemName='MLD_Code' />
 											</code>
 											<statusCode code='completed'/>
 											<effectiveTime value='201211240907+0100'/>
@@ -309,7 +272,10 @@ History:
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='40614002' codeSystem='2.16.840.1.113883.6.96' displayName='Campylobacter coli' codeSystemName='SNOMED CT' />
+											<code code='40614002' codeSystem='2.16.840.1.113883.6.96' displayName='Campylobacter coli' codeSystemName='SNOMED CT' >
+												<!-- Beispiel Mapping zu proprietärem Code des Labors -->
+												<translation code='CAJE' codeSystem='2.16.756.5.30.999999.2' displayName='Campylobacter species' codeSystemName='MLD_Code' />
+											</code>
 											<statusCode code='completed'/>
 											<effectiveTime value='201211240907+0100'/>
 											<!-- Erreger in Probe nachgewiesen -->
