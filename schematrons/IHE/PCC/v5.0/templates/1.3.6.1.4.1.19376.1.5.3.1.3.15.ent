@@ -29,8 +29,8 @@ History:
 			The section type code must come from the LOINC code
 			system (2.16.840.1.113883.6.1).
 		</assert>
+		<!-- Verify that all required data elements are present -->
 		<assert role='error' test='.//cda:templateId[@root = "1.3.6.1.4.1.19376.1.5.3.1.4.15"]'>
-			<!-- Verify that all required data elements are present -->
 			The Coded Family Medical History Section must contain a(n) Family History Organizer Entry.
 			See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.3.15
 		</assert>
