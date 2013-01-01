@@ -1,0 +1,2178 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ms="http://medshare.net/XSLBase">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/doc.css">
+      <title>Schematron Documentation</title><script src="js/jquery.js"></script><script type="text/javascript">
+          var defaultLanguage = "en";
+          var title = {
+          
+en: "Schematron documentation of 'vhitg-ruleset-sch.xml'",
+de: "Schematron Dokumentation von 'vhitg-ruleset-sch.xml'",
+fr: "Documentation Schematron de 'vhitg-ruleset-sch.xml'",
+it: "SchDocumentation tbd it'vhitg-ruleset-sch.xml'",
+          };
+        </script></head>
+   <body><script type="text/javascript">
+      
+      $(document).ready(function() {
+        var lang = getPreferredLanguage();
+        if (lang == undefined) lang = defaultLanguage;
+        $('#languageSelector').bind('change',function(event) {
+          $('[lang]:not(.multi)').addClass('hidden');
+          lang=event.target.value;
+          $('[lang='+lang+']:not(.multi)').removeClass('hidden');
+          document.title=title[lang];
+        });
+        $('#languageSelector option[value='+lang+']').attr('selected','');
+        $('#languageSelector').change();
+      });
+
+      // Determines the user's preferred language
+      function getPreferredLanguage() {
+        var params=document.location.search;
+        if (params.match(/[\?&]lang=\w+/)) {
+          return params.replace(/.*[\?&]lang=(\w+).*/,'$1');
+        } else if (navigator.language) {
+          return navigator.language.substring(0,2);
+        } else if (navigator.userLanguage) {
+          return navigator.userLanguage.substring(0,2);
+        }
+      }
+      
+    </script><div class="header">
+         <h1 lang="en" class="title hidden">CDA Schematron Rule Definitions Document Structure</h1>
+         <form name="languageSelection" class="language-selector"><span lang="en" class="hidden">Display language: </span><span lang="de" class="hidden">Anzeigesprache: </span><span lang="fr" class="hidden">Langue d'affichage: </span><span lang="it" class="hidden">display.language [it]: </span><select name="selectedLanguage" id="languageSelector">
+               <option value="en">en</option>
+               <option value="de">de</option>
+               <option value="fr">fr</option>
+               <option value="it">it</option></select></form>
+      </div>
+      <div class="content">
+         <h2><span lang="en" class="hidden">Referenced entities</span><span lang="de" class="hidden">Referenzierte Entities</span><span lang="fr" class="hidden">Entitées référencées</span><span lang="it" class="hidden">Entities referenziate</span></h2>
+         <ul>
+            <li><a href="#vhitg-ruleset">vhitg-ruleset</a></li>
+            <li><a href="#vhitg-ruleset.ent">vhitg-ruleset.ent</a></li>
+         </ul>
+         <table class="entity" id="vhitg-ruleset">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00001</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules
+                     in vhitg-ruleset.ent)
+                  </td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2">1.5</td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_general-addr_ru00001</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00001</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_null-or-no-content_as00001</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">normalize-space(.) = ''</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00002</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_general-addr-1_ru00002</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00002</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_empty-implies-null_as00002</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(string(@nullFlavor)='')</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00003</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_general-time-req_ru00003</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00003</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00003</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value)
+                        &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z'))
+                        &gt; 7
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00004</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_cda-id-oid_ru00004</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00004</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00004</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">translate(@root, '0123456789.', '') = ''</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00005</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(substring(@root, 1, 1) = '.') and not(substring(@root, string-length(@root), 1)
+                        = '.')
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00006</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(contains(@root,'..'))</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00007</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">string-length(@root) &lt; 65</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00005</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_cda-id_ru00005</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00005</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00008</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">false()</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00006</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_general-id_ru00006</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00006</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_null-or-no-root-attribute_as00009</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">./@nullFlavor or ./@root</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00007</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_cda-root_ru00007</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00007</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00010</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">self::cda:ClinicalDocument</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00008</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_nameTest_ru00008</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00008</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00011</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:name</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00009</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00009</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00009</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00010</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00010</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00010</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00011</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00011</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00011</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00012</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_addresTestPersonOrRole_ru00012</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00012</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00012</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00013</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00013</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00013</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00014</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00014</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00014</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00015</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_nameTestOrg_ru00015</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00015</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00013</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:name</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00016</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_addresTestOrg_ru00016</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00016</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00014</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:addr/*</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00017</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00017</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00017</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00018</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00018</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00018</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00015</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:'
+                        or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_telcom-regex_as00016</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+0123456789()-.',''),translate(substring(@value,6),'0123456789()-.','')))
+                        = 0
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_telcom-has-digit_as00017</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+()-.',''),translate(substring(@value,6),'()-.','')))
+                        &gt; 0
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00019</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00019</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00019</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00018</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(cda:realmCode)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00019</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(cda:copyTime)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00020</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(cda:informant)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00021</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(cda:inFulfillmentOf)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00020</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00020</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00020</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00022</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00021</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00021</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00021</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00023</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">@root or @nullFlavor</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00022</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00022</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00022</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00024</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">@code and @codeSystem</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00025</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">normalize-space(@codeSystem)='2.16.840.1.113883.6.1'</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00023</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00023</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00023</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00026</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">string-length(@value)&gt;7</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00024</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_cda-languageCode_ru00024</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00024</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00027</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:languageCode</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00025</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_cda-languageCode-format_ru00025</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00025</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00028</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code)
+                        = 2
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00029</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">substring(@code,1,2) = $vhitg-codeSystem[@codeSystemName='ISO639-1']/code/@value</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00030</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">string-length(@code) = 2 or substring(@code,4,2) = $vhitg-codeSystem[@codeSystemName='ISO3166-1']/code/@value</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00026</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00026</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00026</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00031</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00027</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00027</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00027</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00032</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:city or cda:country</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00028</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00028</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00028</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00033</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK')
+                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK'
+                        and cda:associatedentity/cda:associatedPerson)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00034</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON')
+                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON'
+                        and cda:associatedentity/cda:associatedPerson)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00035</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD')
+                        or (normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD'
+                        and cda:associatedentity/cda:scopingOrganization)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00036</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS')
+                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS'
+                        and cda:associatedentity/cda:associatedPerson)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00029</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00029</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00029</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00037</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument[@typeCode='APND'])&lt;2</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00038</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument[@typeCode='RPLC'])&lt;2</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00039</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument[@typeCode='XFRM'])&lt;2</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00040</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument)&lt;3</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00030</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00030</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00030</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00041</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(/cda:component/cda:section)&lt;1</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00031</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00031</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00031</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00042</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:text)=1 and string-length(normalize-space(cda:text))=0</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00032</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00032</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00032</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00043</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0
+                        and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00033</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00033</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00033</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00044</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:value/@xsi:type='ED'</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00034</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00034</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00034</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00045</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">vhitg-ruleset_vhitg-ruleset_pa00035</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2013-01-01T18:15:05.514+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">vhitg-ruleset_ru00035</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">vhitg-ruleset_vhitg-ruleset_pa00035</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00046</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(./cda:name) and (./cda:value)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00047</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(./cda:name/@code and ./cda:name/@codeSystem)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">vhitg-ruleset_as00048</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(./cda:value/@code and ./cda:value/@codeSystem)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

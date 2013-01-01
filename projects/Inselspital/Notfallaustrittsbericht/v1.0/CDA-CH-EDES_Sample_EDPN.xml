@@ -165,7 +165,7 @@ History:
 				<section>
 					<title>Präambel</title>
 					<text>
-						Dieses Dokument zeigt beispielhaft auf, wie ein Notfallaustrittsbericht aus ärztlicher Sicht gemäss CDA-CH-EDES aufgebaut wird.<br/>
+						Dieses Dokument zeigt beispielhaft auf, wie ein Notfallaustrittsbericht aus ärztlicher Sicht gemäss CDA-CH-EDES aufgebaut wird.<br />
 						Die Beispiele in den einzelnen Sections sind nicht aufeinander abgestimmt und auch nicht medizinisch nicht validiert!
 					</text>
 				</section>
@@ -197,8 +197,8 @@ History:
 					<title>Angaben zum Eintritt</title>
 					<text>
 						<content ID='a1'>
-							Selbsteinweisung, Ankunft mit privatem Verkehrsmittel<br/>
-							Abfahrt: 16.07.2012 21:00<br/>
+							Selbsteinweisung, Ankunft mit privatem Verkehrsmittel<br />
+							Abfahrt: 16.07.2012 21:00<br />
 							Ankunft: 16.07.2012 21:21
 						</content>
 					</text>
@@ -274,8 +274,8 @@ History:
 					<code code='42348-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ADVANCE DIRECTIVES' />
 					<title>Patientenverfügungen</title>
 					<text>
-						keine Reanimation<br/>
-						keine Beatmung<br/>
+						keine Reanimation<br />
+						keine Beatmung<br />
 						keine Lebensverlängernden Massnahmen
 					</text>
 				</section>
@@ -293,8 +293,8 @@ History:
 					<title>Problemliste</title>
 					<text>
 						<content ID='p1'>
-							Unklare Monoarthritis im rechten Knie<br/>
-							- DD infektiös, Kristall-Arthropathie, Hämarthros<br/>
+							Unklare Monoarthritis im rechten Knie<br />
+							- DD infektiös, Kristall-Arthropathie, Hämarthros<br />
 							- Rx Knie rechts 5.8.12: keine ossäre Läsionen
 						</content>
 					</text>
@@ -367,8 +367,8 @@ History:
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnosis'/>
 									<text>
-										Unklare Monoarthritis (Knie rechts)<br/>
-										- DD infektiös, Kristall-Arthropathie, entzündlich, DD Hämarthros<br/>
+										Unklare Monoarthritis (Knie rechts)
+										- DD infektiös, Kristall-Arthropathie, entzündlich, DD Hämarthros
 										- Rx Knie rechts 5.8.12: keine ossäre Läsionen
 									</text>
 									<statusCode code='completed'/>
@@ -736,7 +736,7 @@ History:
 					<title>Codierte Vitalzeichenliste</title>
 					<text>
 						<content ID='o1'>
-							Vitalzeichen:<br/>
+							Vitalzeichen:<br />
 							- Grösse: 178 cm
 						</content>
 					</text>
@@ -792,7 +792,7 @@ History:
 						Knie rechts: Deutliche Schwellung und Überwärmung, keine Rötung, 
 						passive Knieflexion und maximale Extension nur unter starken 
 						Schmerzen, keine aktive Flexion. Palpabler Kniegelenkserguss. 
-						Distale Sensorik, Motorik und Durchblutung intakt.<br/>
+						Distale Sensorik, Motorik und Durchblutung intakt.<br />
 						Allgemeinstatus: Reine Herztöne...
 					</text>
 				</section>
@@ -809,7 +809,7 @@ History:
 					<code code='51848-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ASSESSMENT' />
 					<title>Beurteilung</title>
 					<text>
-						Unklare Monoarthritis im rechten Knie<br/>
+						Unklare Monoarthritis im rechten Knie<br />
 						Differentialdiagnostisch kommen eine infektiöse Ursache, eine Kristall-Arthropathie oder ein Hämarthros in Betracht.
 					</text>
 				</section>
@@ -828,8 +828,8 @@ History:
 					<code code='18776-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PATIENT PLAN OF CARE' />
 					<title>Behandlungsplan</title>
 					<text> 
-						- stationäre Aufnahme<br/>
-						- Aufhebung der OAK mit anschliessender Kniegelenkspunktion (Konakion 10mg iv. im UNZ verabreicht)<br/>
+						- stationäre Aufnahme<br />
+						- Aufhebung der OAK mit anschliessender Kniegelenkspunktion (Konakion 10mg iv. im UNZ verabreicht)<br />
 						- Analgesie nach Massgabe der Beschwerden
 					</text>
 				</section>
@@ -846,13 +846,13 @@ History:
 					<code code='51847-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ASSESSMENT AND PLAN' />
 					<title>Beurteilung und Behandlungsplan</title>
 					<text> 
-						Beurteilung:<br/>
-						Unklare Monoarthritis im rechten Knie<br/>
-						Differentialdiagnostisch kommen eine infektiöse Ursache, eine Kristall-Arthropathie oder ein Hämarthros in Betracht.<br/>
-						<br/>
-						Behandlungsplan:<br/>
-						- stationäre Aufnahme<br/>
-						- Aufhebung der OAK mit anschliessender Kniegelenkspunktion (Konakion 10mg iv. im UNZ verabreicht)<br/>
+						Beurteilung:<br />
+						Unklare Monoarthritis im rechten Knie<br />
+						Differentialdiagnostisch kommen eine infektiöse Ursache, eine Kristall-Arthropathie oder ein Hämarthros in Betracht.<br />
+						<br />
+						Behandlungsplan:<br />
+						- stationäre Aufnahme<br />
+						- Aufhebung der OAK mit anschliessender Kniegelenkspunktion (Konakion 10mg iv. im UNZ verabreicht)<br />
 						- Analgesie nach Massgaben der Beschwerden
 					</text>   
 				</section> 
@@ -988,10 +988,10 @@ History:
 					<title>Prozedere</title>
 					<text> 
 						<content ID='proc1'>
-							- Überwachung GCS 2-stündlich<br/>
+							- Überwachung GCS 2-stündlich<br />
 						</content>
 						<content ID='proc2'>
-							- EKG<br/>
+							- EKG<br />
 						</content>
 						<content ID='proc3'>
 							- Hoher Einlauf
@@ -1042,9 +1042,9 @@ History:
 					<code code='18693-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ED CONSULTANT PRACTITIONER' />
 					<title>Konsultationen in der Notfallstation</title>
 					<text>
-						Konsilium Orthopädie AA Assi/AA Stenz/OA Ober/OA Arzt:<br/>
-						Befunde: Knieluxation links. Pulse palpierbar....<br/>
-						Therapie: Reposition Knie links in Narkose. Gipstutor unter BV kontrolle...<br/>
+						Konsilium Orthopädie AA Assi/AA Stenz/OA Ober/OA Arzt:<br />
+						Befunde: Knieluxation links. Pulse palpierbar....<br />
+						Therapie: Reposition Knie links in Narkose. Gipstutor unter BV kontrolle...<br />
 						Proc: Gemäss Gefässchirurgen keine operative Indikation für die kurzstreckige Poplitealdissektion...
 					</text>
 				</section>
@@ -1076,9 +1076,9 @@ History:
 					<title>Notfalldiagnosen</title>
 					<text>
 						<content ID='d1'>
-							1. Unklare Monoarthritis im rechten Knie<br/>
-							- DD infektiös, Kristall-Arthropathie, Hämarthros<br/>
-							- Rx Knie rechts 5.8.12: keine ossäre Läsionen<br/>
+							1. Unklare Monoarthritis im rechten Knie<br />
+							- DD infektiös, Kristall-Arthropathie, Hämarthros<br />
+							- Rx Knie rechts 5.8.12: keine ossäre Läsionen<br />
 						</content>
 						<content ID='d2'>
 							2. Schwere pulmonal-arterielle Hypertonie...
@@ -1179,8 +1179,8 @@ History:
 					<title>Angaben zum Austritt</title>
 					<text>
 						<content ID='a2'>
-							Austritt am: 20.07.2012 15:00 Uhr<br/>
-							Austritt nach: Allgemeine Innere Medizin - Geriatrie (Haus A)<br/>
+							Austritt am: 20.07.2012 15:00 Uhr<br />
+							Austritt nach: Allgemeine Innere Medizin - Geriatrie (Haus A)<br />
 							Rezept: mitgegeben
 						</content>
 					</text>
@@ -1307,8 +1307,8 @@ History:
 					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ANNOTATION COMMENT'/>
 					<title>Kommentar</title>
 					<text>
-						<content>Keine<br/>
-							<br/>
+						<content>Keine<br />
+							<br />
 						</content>
 						<table>
 							<tbody>

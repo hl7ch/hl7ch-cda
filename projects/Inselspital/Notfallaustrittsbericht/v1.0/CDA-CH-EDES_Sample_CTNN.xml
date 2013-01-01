@@ -163,7 +163,7 @@ History:
 				<section>
 					<title>Präambel</title>
 					<text>
-						Dieses Dokument zeigt beispielhaft auf, wie ein Notfallaustrittsbericht aus pflegerischer Sicht gemäss CDA-CH-EDES aufgebaut wird.<br/>
+						Dieses Dokument zeigt beispielhaft auf, wie ein Notfallaustrittsbericht aus pflegerischer Sicht gemäss CDA-CH-EDES aufgebaut wird.<br />
 						Die Beispiele in den einzelnen Sections sind nicht aufeinander abgestimmt und auch nicht medizinisch nicht validiert!
 					</text>
 				</section>
@@ -197,8 +197,8 @@ History:
 					<title>Angaben zum Eintritt</title>
 					<text>
 						<content ID='a1'>
-							Selbsteinweisung, Ankunft mit privatem Verkehrsmittel<br/>
-							Abfahrt: 16.07.2012 21:00<br/>
+							Selbsteinweisung, Ankunft mit privatem Verkehrsmittel<br />
+							Abfahrt: 16.07.2012 21:00<br />
 							Ankunft: 16.07.2012 21:21
 						</content>
 					</text>
@@ -308,8 +308,8 @@ History:
 									</effectiveTime>
 									<value xsi:type='CD'>
 										<originalText>
-											Unklare Monoarthritis (Knie rechts)<br/>
-											- DD infektiös, Kristall-Arthropathie, entzündlich, DD Hämarthros<br/>
+											Unklare Monoarthritis (Knie rechts)
+											- DD infektiös, Kristall-Arthropathie, entzündlich, DD Hämarthros
 											- Rx Knie rechts 5.8.12: keine ossäre Läsionen
 										</originalText>
 									</value>
@@ -455,7 +455,7 @@ History:
 					<title>Codierte Vitalzeichenliste</title>
 					<text>
 						<content ID='o1'>
-							Vitalzeichen:<br/>
+							Vitalzeichen:<br />
 							- Grösse: 178 cm
 						</content>
 					</text>
@@ -508,10 +508,10 @@ History:
 					<title>Prozedere</title>
 					<text> 
 						<content ID='proc1'>
-							- Überwachung GCS 2-stündlich<br/>
+							- Überwachung GCS 2-stündlich<br />
 						</content>
 						<content ID='proc2'>
-							- EKG<br/>
+							- EKG<br />
 						</content>
 						<content ID='proc3'>
 							- Hoher Einlauf
@@ -548,8 +548,8 @@ History:
 					<title>Angaben zum Austritt</title>
 					<text>
 						<content ID='a2'>
-							Austritt am: 20.07.2012 15:00 Uhr<br/>
-							Austritt nach: Allgemeine Innere Medizin - Geriatrie (Haus A)<br/>
+							Austritt am: 20.07.2012 15:00 Uhr<br />
+							Austritt nach: Allgemeine Innere Medizin - Geriatrie (Haus A)<br />
 							Rezept: mitgegeben
 						</content>
 					</text>
@@ -613,7 +613,7 @@ History:
 					<title>Triage Beurteilung</title>
 					<text>
 						<content styleCode="Bold">
-						Akuter Notfall, sofortige Behandlung<br/>
+						Akuter Notfall, sofortige Behandlung<br />
 						</content>
 						<content>
 							Gesundheitliche Störung, die bei nicht sofortiger Behandlung zum Tod des Patienten oder zum Verlust einer Gliedmasse oder eines Organs führen kann. Die Pflegefachperson bringt den Patienten direkt in den Schockraum. Auf dem Triage-Protokoll notiert sie die Identität des Patienten, die Dringlichkeitsstufe und den Eintrittsgrund.

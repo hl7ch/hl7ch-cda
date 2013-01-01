@@ -9,6 +9,7 @@ History:
 31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
 17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+24.12.2012: Tony Schaller, medshare GmbH (Div. Tabellen hinzugefügt für CDA-CH-EDES)
 
 ********************************************************
 -->
@@ -48,8 +49,21 @@ History:
 		<code value='3141-9' displayName='Gewicht/Poids'/>
 		<code value='11449-6' displayName='Schwangerschaftstatus/Etat de la grossesse'/>
 		<code value='9845-9' displayName='Kopfumfang Kinder/périmètre crânien des enfants'/>
+
+		<!-- Table in IHE PCC TF-2, Kapitel 6.3.4.22.3 -->
+		<code value='9279-1' displayName='RESPIRATION RATE'/>
+		<code value='8867-4' displayName='HEART BEAT'/>
+		<code value='2710-2' displayName='OXYGEN SATURATION'/>
+		<code value='8480-6' displayName='INTRAVASCULAR SYSTOLIC'/>
+		<code value='8462-4' displayName='INTRAVASCULAR DIASTOLIC'/>
+		<code value='8310-5' displayName='BODY TEMPERATURE'/>
+		<code value='8302-2' displayName='BODY HEIGHT (MEASURED)'/>
+		<code value='8306-3' displayName='BODY HEIGHT^LYING'/>
+		<code value='8287-5' displayName='CIRCUMFRENCE.OCCIPITAL-FRONTAL (TAPE MEASURE)'/>
+		<code value='3141-9' displayName='BODY WEIGHT (MEASURED)'/>
+
 	</system>
-	
+
 	<!--
 	********************************************************
 	CDA-CH: Arbeitsfähigkeit: Kategorisierung zumutbare Anzahl Arbeitsstunden pro Tag
@@ -68,7 +82,7 @@ History:
 	CDA-CH: Arbeitsfähigkeit: Kategorisierung zumutbare Arbeitsintensität
 	********************************************************
 	-->
-	<system codeSystemName='ArbeitsfähigkeitIntensität' root='2.16.756.5.30.2.1.1.7.1'> 
+	<system codeSystemName='ArbeitsfähigkeitIntensität' root='2.16.756.5.30.2.1.1.7.1'>
 		<code value='0' displayName='Arbeitsunfähig/Incapable de travailler'/>
 		<code value='50' displayName='reduzierte Arbeitsintensität/Degré réduit d’intensité du travail'/>
 		<code value='100' displayName='volle Arbeitsintensität/Degré complet d’intensité du travail'/>
@@ -162,7 +176,7 @@ History:
 		<code value='F' displayName='weiblich/Femme'/>
 		<code value='UN' displayName='Undifferenziert/Non différencié'/>
 	</system>
-	
+
 	<!--
 	********************************************************
 	HL7: Zivilstand
@@ -185,10 +199,10 @@ History:
 		<code value='S' displayName='Ledig/Célibataire'/>
 		<!-- Polygamous: More than 1 current spouse -->
 		<code value='P' displayName='Polygam/Polygame'/>
-		<!-- Widowed: The spouse has died --> 
+		<!-- Widowed: The spouse has died -->
 		<code value='W' displayName='Verwitwet/Veuf'/>
 	</system>
-	
+
 	<!--
 	********************************************************
 	HL7: Medikationskategorie (Therapie oder Impfung)
@@ -198,7 +212,16 @@ History:
 		<code value='DRUG' displayName='Medikamentöse Therapie/Thérapie médicamenteuse'/>
 		<code value='IMMUNIZ' displayName='Impfung/Vaccin'/>
 	</system>
-	
+
+	<!--
+	********************************************************
+	IHE: Medikationskategorie (Infusion) - LOINC Subset
+	********************************************************
+	-->
+	<system codeSystemName='ActSubstanceAdministrationCode' root='2.16.840.1.113883.6.1'>
+		<code value='8984-7' displayName='Fluid intake (Estimated Vol Pt)'/>
+	</system>
+
 	<!--
 	********************************************************
 	HL7: Dringlichkeitsangaben
@@ -244,7 +267,7 @@ History:
 		<!-- urgent; Calls for prompt action.-->
 		<code value='UR' displayName='Dringend/Urgent'/>
 	</system>
-	
+
 	<!--
 	********************************************************
 	HL7: Applikation von Medikamenten (Einnahmeart)
@@ -706,51 +729,184 @@ History:
 		<!-- Inhalation, ventimask -->
 		<code value='VENTMASK' />
 	</system>
-	
+
+	<!--
+	********************************************************
+	HL7: Anatomische Lage
+	********************************************************
+	-->
+	<system codeSystemName='ActSite' root='2.16.840.1.113883.5.1052'>
+		<code value='BE' displayName='bilateral ears/Ohren beidseits'/>
+		<code value='BN' displayName='bilateral nares/Nasenlöcher beidseits'/>
+		<code value='BU' displayName='buttock/Gesässbacke'/>
+		<code value='LA' displayName='left arm/Linker Arm'/>
+		<code value='LAC' displayName='left anterior chest/Linker vorderer Thorax'/>
+		<code value='LACF' displayName='left antecubital fossa/Linke Fossa antecubitalis'/>
+		<code value='LD' displayName='left deltoid/Linker Deltoideus'/>
+		<code value='LE' displayName='left ear/Linkes Ohr'/>
+		<code value='LEJ' displayName='left external jugular/Linke Jugularis externa'/>
+		<code value='LF' displayName='left foot/Linker Fuss'/>
+		<code value='LG' displayName='left gluteus medius/Linker Glutaeus medius'/>
+		<code value='LH' displayName='left hand/Linke Hand'/>
+		<code value='LIJ' displayName='left internal jugular/Linke Jugularis interna'/>
+		<code value='LLAQ' displayName='left lower abd quadrant/Linker unterer Abdominal-Quadrant'/>
+		<code value='LLFA' displayName='left lower forearm/Linker distaler Unterarm'/>
+		<code value='LMFA' displayName='left mid forearm/Linker mittlerer Unterarm'/>
+		<code value='LN' displayName='left naris/Linkes Nasenloch'/>
+		<code value='LPC' displayName='left posterior chest/Linke hinterer Thorax'/>
+		<code value='LSC' displayName='left subclavian/Linke Subclavia'/>
+		<code value='LT' displayName='left thigh/Linker Oberschenkel'/>
+		<code value='LUA' displayName='left upper arm/Linker Obararm'/>
+		<code value='LUAQ' displayName='left upper abd quadrant/Linker oberer Abdominal-Quadrant'/>
+		<code value='LUFA' displayName='left upper forearm/Linker proximaler Unterarm'/>
+		<code value='LVG' displayName='left ventragluteal/Links ventragluteal'/>
+		<code value='LVL' displayName='left vastus lateralis/Linker Vastus lateralis'/>
+		<code value='OD' displayName='right eye/Rechtes Auge'/>
+		<code value='OS' displayName='left eye/Linkes Auge'/>
+		<code value='OU' displayName='bilateral eyes/Augen beidseits'/>
+		<code value='PA' displayName='perianal/perianal'/>
+		<code value='PERIN' displayName='perineal/perineal'/>
+		<code value='RA' displayName='right arm/rechter Arm'/>
+		<code value='RAC' displayName='right anterior chest/Rechter vorderer Thorax'/>
+		<code value='RACF' displayName='right antecubital fossa/Rechte Fossa antecubitalis'/>
+		<code value='RD' displayName='right deltoid/Rechter Deltoideus'/>
+		<code value='RE' displayName='right ear/Rechtes Ohr'/>
+		<code value='REJ' displayName='right external jugular/Rechte Jugularis externa'/>
+		<code value='RF' displayName='right foot/Rechter Fuss'/>
+		<code value='RG' displayName='right gluteus medius/Rechter Gluaeus medius'/>
+		<code value='RH' displayName='right hand/Rechte Hand'/>
+		<code value='RIJ' displayName='right internal jugular/Rechte Jugularis interna'/>
+		<code value='RLAQ' displayName='right lower abd quadrant/Rechter unterer Abdominal-Quadrant'/>
+		<code value='RLFA' displayName='right lower forearm/Rechter distaler Unterarm'/>
+		<code value='RMFA' displayName='right mid forearm/Rechter mittlerer Unterarm'/>
+		<code value='RN' displayName='right naris/Rechtes Nasenloch'/>
+		<code value='RPC' displayName='right posterior chest/Rechter hinterer Thorax'/>
+		<code value='RSC' displayName='right subclavian/Rechte Subclavia'/>
+		<code value='RT' displayName='right thigh/Rechter Oberschenkel'/>
+		<code value='RUA' displayName='right upper arm/Rechter Oberarm'/>
+		<code value='RUAQ' displayName='right upper abd quadrant/Rechter oberer Abdominal-Quadrant'/>
+		<code value='RUFA' displayName='right upper forearm/Rechter proximaler Unterarm'/>
+		<code value='RVG' displayName='right ventragluteal/Rechts ventragluteal'/>
+		<code value='RVL' displayName='right vastus lateralis/Rechter Vastus lateralis'/>
+	</system>
+
 	<!--
 	********************************************************
 	HL7: Intoleranzen bei Medikation (Kategorisierung Allergien und Kontraindikationen)
 	********************************************************
 	-->
 	<system codeSystemName='ObservationIntoleranceType' root='2.16.840.1.113883.5.4'>
-		<!--intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to an agent.-->
-		<code value='OINT' displayName=''/>	
-		<!--Allergy; Hypersensitivity to an agent caused by an immunologic response to an initial exposure.-->
-		<code value='ALG' displayName=''/>	
-		<!--Drug Allergy; An allergy to a pharmaceutical product.-->
-		<code value='DALG' displayName=''/>	
-		<!--Environmental Allergy; An allergy to a substance other than a drug or a food. E.g. Latex, pollen, etc.-->
-		<code value='EALG' displayName=''/>	
-		<!--Food Allergy; An allergy to a substance generally consumed for nutritional purposes.-->
-		<code value='FALG' displayName=''/>	
-		<!--Drug Intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to a drug.-->
-		<code value='DINT' displayName=''/>	
-		<!--Drug Allergy; An allergy to a pharmaceutical product.-->
-		<code value='DALG' displayName=''/>	
-		<!--Drug Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='DNAINT' displayName=''/>	
-		<!--Environmental Intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to environmental conditions.-->
-		<code value='EINT' displayName=''/>
-		<!--Environmental Allergy; An allergy to a substance other than a drug or a food. E.g. Latex, pollen, etc.-->	
-		<code value='EALG' displayName=''/>	
-		<!--Environmental Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='ENAINT' displayName=''/>	
-		<!--Food Intolerance; Hypersensitivity resulting in an adverse reaction upon exposure to food.-->
-		<code value='FINT' displayName=''/>	
-		<!--Food Allergy; An allergy to a substance generally consumed for nutritional purposes.-->
-		<code value='FALG' displayName=''/>	
-		<!--Food Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='FNAINT' displayName=''/>	
-		<!--Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='NAINT' displayName=''/>	
-		<!--Drug Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='DNAINT' displayName=''/>	
-		<!--Environmental Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='ENAINT' displayName=''/>	
-		<!--Food Non-Allergy Intolerance; Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure-->
-		<code value='FNAINT' displayName=''/>	
+		<code value='ALG' displayName='Allergy'/>
+		<code value='DALG' displayName='Drug Allergy'/>
+		<code value='DINT' displayName='Drug Intolerance'/>
+		<code value='DNAINT' displayName='Drug Non-Allergy Intolerance'/>
+		<code value='EALG' displayName='Environmental Allergy'/>
+		<code value='EINT' displayName='Environmental Intolerance'/>
+		<code value='ENAINT' displayName='Environmental Non-Allergy Intolerance'/>
+		<code value='FALG' displayName='Food Allergy'/>
+		<code value='FINT' displayName='Food Intolerance'/>
+		<code value='FNAINT' displayName='Food Non-Allergy Intolerance'/>
+		<code value='OINT' displayName='intolerance'/>
 	</system>
-	
+
+	<!--
+	********************************************************
+	CDA-CH-EDES: Mode of transport to ED
+	********************************************************
+	-->
+	<system codeSystemName='ModeOfTransport' root='2.16.840.1.113883.6.102.4.2'>
+		<code value='10' displayName='Ground ambulance' />
+		<code value='20' displayName='Helicopter ambulance' />
+		<code value='30' displayName='Fixed-wing air ambulance' />
+		<code value='40' displayName='Ambulance, not otherwise specified' />
+		<code value='50' displayName='Walk-in following transport via private transportation' />
+		<code value='60' displayName='Walk-in following transport via public transportation' />
+		<code value='70' displayName='Walk-in following nonambulance, law enforcement transport' />
+		<code value='80' displayName='Walk-in, not otherwise specified' />
+		<code value='88' displayName='Other mode of transport' />
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH-EDES: Problem Entry Code (SNOMED CT)
+	********************************************************
+	-->
+
+	<system codeSystemName='ProblemEntryCode' root='2.16.840.1.113883.6.96'>
+		<code value='55607006'  displayName='Problem' />
+		<code value='64572001'  displayName='Condition' />
+		<code value='248536006' displayName='Functional limitation' />
+		<code value='282291009' displayName='Diagnosis' />
+		<code value='404684003' displayName='Finding' />
+		<code value='409586006' displayName='Complaint' />
+		<code value='418799008' displayName='Symptom' />
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH-EDES: Schwangerschaften
+	********************************************************
+	-->
+	<system codeSystemName='PregnancyObservationCode' root='2.16.840.1.113883.6.1'>
+		<code value='11612-9' displayName='ABORTIONS (REPORTED)' />
+		<code value='11613-7' displayName='ABORTIONS INDUCED (REPORTED)' />
+		<code value='11614-5' displayName='ABORTIONS SPONTANEOUS (REPORTED)' />
+		<code value='11636-8' displayName='BIRTHS LIVE (REPORTED)' />
+		<code value='11637-6' displayName='BIRTHS PRETERM (REPORTED)' />
+		<code value='11638-4' displayName='BIRTHS STILL LIVING (REPORTED)' />
+		<code value='11639-2' displayName='BIRTHS TERM (REPORTED)' />
+		<code value='11640-0' displayName='BIRTHS TOTAL (REPORTED)' />
+		<code value='11996-6' displayName='Pregnancies' />
+		<code value='33065-4' displayName='ECTOPIC PREGNANCY (REPORTED)' />
+		<code value='57062-2' displayName='Births.stillborn' />
+		<code value='11449-6' displayName='PREGNANCY STATUS' />
+		<code value='11637-6' displayName='Births.Preterm' />
+		<code value='11639-2' displayName='Births.Term' />
+		<code value='11778-8' displayName='DELIVERY DATE (CLINICAL ESTIMATE)' />
+		<code value='11779-6' displayName='DELIVERY DATE (ESTIMATED FROM LAST MENSTRUAL PERIOD)' />
+		<code value='11780-4' displayName='DELIVERY DATE (ESTIMATED FROM OVULATION DATE)' />
+		<code value='11884-4' displayName='FETUS, GESTATIONAL AGE (CLINICAL ESTIMATE)' />
+		<code value='11885-1' displayName='FETUS, GESTATIONAL AGE (ESTIMATED FROM LAST MENSTRUAL PERIOD)' />
+		<code value='11886-9' displayName='FETUS, GESTATIONAL AGE (ESTIMATED FROM OVULATION DATE)' />
+		<code value='11887-7' displayName='FETUS, GESTATIONAL AGE (ESTIMATED FROM SELECTED DELIVERY DATE)' />
+		<code value='29300-1' displayName='Procedure ' />
+		<code value='32396-4' displayName='Labor duration' />
+		<code value='42839-1' displayName='Labor risk ' />
+		<code value='42840-9' displayName='Delivery risk' />
+		<code value='45371-2' displayName='Multiple pregnancy' />
+		<code value='49051-6' displayName='Gestational age' />
+		<code value='52829-9' displayName='Place of service' />
+		<code value='8339-4' displayName='Body weight at birth' />
+		<code value='8665-2' displayName='DATE LAST MENSTRUAL PERIOD' />
+		<code value='8678-5' displayName='MENSTRUAL STATUS' />
+		<code value='8722-1' displayName='Surgical operation note anesthesia' />
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH-EDES: Beurteilung von Resultaten
+	********************************************************
+	-->
+	<system codeSystemName='ObservationInterpretation' root='2.16.840.1.113883.5.83'>
+		<code value='A' displayName='Abnormal' />
+		<code value='AA' displayName='Abnormal alert' />
+		<code value='H' displayName='High' />
+		<code value='HH' displayName='High alert' />
+		<code value='L' displayName='Low' />
+		<code value='LL' displayName='Low alert' />
+		<code value='N' displayName='Normal' />
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH-EDES: Triage
+	********************************************************
+	-->
+	<system codeSystemName='EST' root='2.16.756.5.30.1.128.3.1'>
+		<code value='1' displayName='Acute emergency, immediate treatment' />
+		<code value='2' displayName='Emergency treatment within 20 minutes' />
+		<code value='3' displayName='Moderately urgent emergency treatment within 120 minutes' />
+		<code value='4' displayName='Non-urgent situation' />
+	</system>
+
 </systems>
-
-

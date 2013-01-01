@@ -1,0 +1,196 @@
+/*****************************************************************************
+ * Default CSS for Schematron documentation and report.
+ *
+ * History:
+ * 19.12.2012: Laurent Millet, medshare GmbH (initial version)
+ ****************************************************************************/
+
+/**************************************
+ * Pager header and content sections
+ *************************************/
+.header {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  right: 10px;
+  height: 120px;
+  border: solid black 2px;
+  background-color: #AAA;
+  padding: 5px;
+}
+.language-selector {
+  text-align: right;
+}
+.content {
+  position: fixed;
+  top: 145px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  overflow: auto;
+  padding: 5px;
+}
+
+/**************************************
+ * Generics
+ *************************************/
+
+/*********************************************************
+  Generics
+*********************************************************/
+body, a, h2, h3, .input, td, th {
+  color: #000000;
+}
+body {
+            background-color: Window;
+  font-size: 12px;
+  line-height: normal;
+  font-family: Verdana, Arial, sans-serif;
+  margin: 10px; 
+  scrollbar-3dlight-color: #EEEEEE; 
+  scrollbar-arrow-color: #003366; 
+  scrollbar-darkshadow-color: #EEEEEE;
+  scrollbar-face-color: #EEEEEE; 
+  scrollbar-highlight-color: #003366; 
+  scrollbar-shadow-color: #003366;
+  scrollbar-track-color: #EEEEEE 
+}
+/* links */
+a { 
+  text-decoration: none 
+}
+/* paragraph */
+p {
+  display: block;
+  padding: 5px;
+  background-color: #ffff66;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+/* Logo */
+h1 { 
+  background: transparent url(../images/hl7ch.gif) no-repeat top right; 
+  height:58px
+}
+/* headers */
+h1 { 
+  font-size: 20px;
+  font-weight: bold;
+/*   display: block; */
+/*   margin: 0.83em 0; */
+}
+h2 { 
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin: 0.83em 0;
+}
+h3 {
+  font-weight: bold;
+  background-color: #ffd700;
+  padding: 5px;
+}
+/* lists */
+ul {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  list-style-type: disc;
+}
+li {
+  list-style-type: disc;
+  margin-top: 0.5em;
+}
+/* controls */
+.input { 
+  font-size: 10pt; 
+  font-family: Verdana, Arial, sans-serif; 
+  background-color: #ffffff; 
+  border: solid 1px 
+} 
+.hidden {
+  display: none;
+}
+
+/*********************************************************
+  Table Generics
+*********************************************************/
+table { 
+  font-size: 10pt;
+  background-repeat: no-repeat; 
+  line-height: 10pt; 
+  border-spacing: 1px;
+  border-collapse: separate;	
+  border-width: 1px; 
+  border-color: #eeeeee;
+  margin: 0px;
+} 
+td, th {
+  vertical-align: top;
+  text-align: left;
+  font-weight: normal;
+  padding: 5px;
+}
+
+th.label1, td.label1 {
+  text-align: left;
+}
+th.label2, td.label2 {
+  text-align: right;
+}
+th.value2, td.value2 {
+  font-weight: bold;
+}
+
+/*********************************************************
+  Entity Table
+*********************************************************/
+table.entity {
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+table.entity th {
+  color: white;	
+}
+table.entity thead tr {
+  background-color: #3399ff;
+}
+table.entity tr {
+  background-color: #ccccff;	
+}
+
+/*********************************************************
+  Rule Table
+*********************************************************/
+table.rule {
+  width: 95%;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+table.rule th {
+  color:black;	
+}
+table.rule thead tr {
+  background-color: #ffd700;
+}
+table.rule tr {
+  background-color: #ffff66;	
+}
+
+/*********************************************************
+  Body Tables
+*********************************************************/
+table.body {
+  width: 90%;
+  margin-left: 4em;
+  margin-bottom: 1em;
+}
+
+table.body tr th {
+  background-color: #dddddd;
+}
+table.body tr td {
+  background-color: #eeeeee;
+}

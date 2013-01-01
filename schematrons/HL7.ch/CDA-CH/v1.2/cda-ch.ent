@@ -15,1022 +15,1116 @@ History:
 06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz)
 01.10.2011: Tony Schaller, medshare GmbH (erste Übersetzungen englisch/italienisch, aber noch nicht vollständig)
 06.10.2011: Tony Schaller, medshare GmbH (Übersetzungen englisch/italienisch)
+22.03.2012: Tony Schaller, medshare GmbH (Migration zu XInclude)
+23.12.2012: Tony Schaller, medshare GmbH (Zeitzone muss bei Timestamps angegeben werden, sobald genauer als Datum (Regel: <CH-TZON>))
+31.12.2012: Tony Schaller, medshare GmbH (Lot Nr ergänzt)
 
 ********************************************************
 -->
-<!--
-********************************************************
-Header Templates
-********************************************************
--->
-<pattern>
-	<!-- Entity Information -->
-	<xhtml:ul id="entity_HL7-cda-ch">
-		<xhtml:li class="filename">cda-ch.ent</xhtml:li>
-		<xhtml:li class="version">1.0</xhtml:li>
-	</xhtml:ul>
+<xs:schema
+	xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	queryBinding="xslt2"
+	>
 	<!--
 	********************************************************
 	Header Templates
 	********************************************************
 	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Head.Empl&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Arbeitgeber)</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (employeur)</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Datori di lavoro)</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Employer)</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0101" test="self::cda:participant/@typeCode=&quot;IND&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitgeber' müssen als 'participant' mit typeCode 'IND' im CDA Header deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">L''Employeur' CDA-CH doit être déclaré comme 'participant' avec le typeCode 'IND' dans le CDA Header</xhtml:p>
-			<xhtml:p lang="it_ch">I 'Datori di lavoro' CDA-CH devono essere dichiarati come 'participant' con typeCode 'IND' nel CDA Header</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Employer' must be declared as a 'Participant' with typeCode 'IND' in the CDA Header</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0102" test="cda:templateId/@root=&quot;1.3.6.1.4.1.19376.1.5.3.1.2.2&quot;">
-			<xhtml:p lang="de_ch">CDA-CH Arbeitgeber müssen mit der IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2) deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">L''Employeur' CDA-CH doit être déclaré avec l'IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
-			<xhtml:p lang="it_ch">I 'Datori di lavoro' CDA-CH devono essere dichiarati con la IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH employers must be declared with the IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Head.Insurance&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Versicherungen)</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (assurances)</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Assicurazioni)</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Insurances)</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0201" test="self::cda:participant/@typeCode=&quot;COV&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Versicherungen' müssen als 'participant' mit typeCode 'COV' im CDA Header deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">'Assurances' CDA-CH doivent être déclaré comme 'participant' avec le typeCode 'COV' dans le CDA Header</xhtml:p>
-			<xhtml:p lang="it_ch">Le 'Assicurazioni' CDA-CH devono essere dichiarati come 'participant' con typeCode 'COV' nel CDA Header</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurances' must be declared as a 'Participant' with typeCode 'COV' in the CDA Header</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0202" test="self::cda:participant">
-			<xhtml:p lang="de_ch">CDA-CH 'Versicherungen' müssen als 'participant' im CDA Header deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Assurances' CDA-CH doivent être déclarées comme 'participant' dans le CDA Header</xhtml:p>
-			<xhtml:p lang="it_ch">Le 'Assicurazioni' CDA-CH devono essere dichiarati come 'participant' nel CDA Header</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurances' must be declared as a 'Participant' in the CDA Header</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0203" test="cda:associatedEntity[@classCode=&quot;COVPTY&quot;]/cda:scopingOrganization">
-			<xhtml:p lang="de_ch">CDA-CH 'Versicherungen' müssen mit einer 'associatedEntity/scopingOrganization' und dem associatedEntity Attribut classCode="COVPTY" deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Assurances' CDA-CH doivent contenir une 'associatedEntity/scopingOrganization' avec l'attribut classCode="COVPTY" pour associatedEntity</xhtml:p>
-			<xhtml:p lang="it_ch">Le 'Assicurazioni' CDA-CH devono contenere un 'associatedEntity/scopingOrganization' con attributo classCode="COVPTY" per associatedEntity</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurances' must be declared using a 'associatedEntity/scopingOrganization' and an associatedEntity attribute classCode="COVPTY"</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0204" test="cda:associatedEntity[@classCode=&quot;COVPTY&quot;]/cda:id[@root=&quot;1.3.88&quot;]">
-			<xhtml:p lang="de_ch">CDA-CH 'Versicherungen' müssen mit der GLN identifiziert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Assurances' CDA-CH doivent êtres identifies avec le GLN</xhtml:p>
-			<xhtml:p lang="it_ch">Le 'Assicurazioni' CDA-CH devono essere identificati con GLN</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurances' must be identified using a GLN</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Head.InsuranceCard&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Versichertenkarte)</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (carte d’assuré)</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Carta di assicurazione)</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Insurancecard)</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0301" test="self::cda:participant/@typeCode=&quot;HLD&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Versichertenkarte' muss als 'participant' mit typeCode 'HLD' im CDA Header deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'carte d’assuré' CDA-CH doit être déclaré comme 'participant' avec le typeCode 'HLD' dans le CDA Header</xhtml:p>
-			<xhtml:p lang="it_ch">Il 'carta di assicurazione' CDA-CH devono essere dichiarati come 'participant' con typeCode 'HLD' nel CDA Header</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurancecard' must be declared as a 'Participant' with typeCode 'HLD' in the CDA Header</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0302" test="self::cda:participant">
-			<xhtml:p lang="de_ch">CDA-CH 'Versicherungskarte' muss als 'participant' im CDA Header deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'carte d’assuré' CDA-CH doit être déclarées comme 'participant' dans le CDA Header</xhtml:p>
-			<xhtml:p lang="it_ch">Il 'carta di assicurazione' CDA-CH devono essere dichiarati come 'participant' nel CDA Header</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurancecard' must be declared as a 'Participant' in the CDA Header</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0303" test="cda:associatedEntity[@classCode=&quot;POLHOLD&quot;]/cda:id[@root=&quot;2.16.756.5.34&quot;]">
-			<xhtml:p lang="de_ch">CDA-CH 'Versichertenkarte' die Nummer der Karte als id enthalten (OID für die Versichertenkarte: 2.16.756.5.34)</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'carte d’assuré' CDA-CH doit contenir le numero de la carte comme id (OID pour la carte d’assuré: 2.16.756.5.34)</xhtml:p>
-			<xhtml:p lang="it_ch">Il 'carta di assicurazione' CDA-CH deve contenere il numero della carta come id (OID per la carta di assicurazione: 2.16.756.5.34)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Insurancecard' must contain the cardnumber as id (OID for the insurance card: 2.16.756.5.34)</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Body Templates
-	********************************************************
-	-->
-	<!--
-	********************************************************
-	Bemerkungen
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.Rem&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Bemerkungen</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Bemerkungen</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Remarques</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur 'Remarques'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Osservazioni</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per le CDA-CH Osservazioni</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH remarks</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH remarks</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0401" test="self::cda:section">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono essere dichiarate come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must be declared as a 'Section' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0402" test="(cda:title=&quot;Bemerkungen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' in Deutsch müssen einen section title 'Bemerkungen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH en allemand doivent contenir un section title 'Bemerkungen'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' in tedesco devono contenere un section title 'Bemerkungen'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' in German must contain a 'Bemerkungen' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0403" test="(cda:title=&quot;Remarques&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' in Französisch müssen einen section title 'Remarques' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH en français doivent contenir un section title 'Remarques'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' in francese devono contenere un section title 'Remarques'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' in French must contain a 'Remarques' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0404" test="(cda:title=&quot;Osservazioni&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' in Italienisch müssen einen section title 'Osservazioni' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH en italien doivent contenir un section title 'Osservazioni'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' in italiano devono contenere un section title 'Osservazioni'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' in Italian must contain a 'Osservazioni' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0405" test="(cda:title=&quot;Remarks&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' in Englisch müssen einen section title 'Remarks' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH en anglais doivent contenir un section title 'Remarks'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' in inglese devono contenere un section title 'Remarks'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' in English must contain a 'Remarks' section title</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Diagnosenliste
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Diagnosenliste</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Diagnosenliste</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste de diagnostics</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste de diagnostics'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista diagnosi</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la CDA-CH Lista diagnosi</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH list of diagnoses</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of diagnoses</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0501" test="self::cda:section">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' must be declared as a 'Section' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0502" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH doit contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' deve contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0503" test="(cda:title=&quot;Diagnosen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' in Deutsch muss einen section title 'Diagnosen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH en allemand doit contenir un section title 'Diagnosen'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' in tedesco deve contenere un section title 'Diagnosen'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' in German must contain a 'Diagnosen' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0504" test="(cda:title=&quot;Diagnostics&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' in Französisch muss einen section title 'Diagnostics' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH en français doit contenir un section title 'Diagnostics'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' in francese deve contenere un section title 'Diagnostics'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' in French must contain a 'Diagnostics' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0505" test="(cda:title=&quot;Diagnosi&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' in Italienisch muss einen section title 'Diagnosi' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH en italien doit contenir un section title 'Diagnosi'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' in italiano deve contenere un section title 'Diagnosi'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' in Italian must contain a 'Diagnosi' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0506" test="(cda:title=&quot;Diagnoses&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' in Englisch muss einen section title 'Diagnoses' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH en anglais doit contenir un section title 'Diagnoses'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' in inglese deve contenere un section title 'Diagnoses'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' in English must contain a 'Diagnoses' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0507" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' deve contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0508" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@codeSystemName=&quot;DiagnosisSectionCode&quot;]/code/@value">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' deve contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0509" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and (cda:templateId/@extension=&quot;CDA-CH.Body.DiagL1&quot; or cda:templateId/@extension=&quot;CDA-CH.Body.DiagL3&quot;)]">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosenliste' muss mindestens eine observation 'Diagnose' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de diagnostics' CDA-CH doit contenir au moins une observation 'Diagnostic'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista diagnosi' deve contenere almeno una observation 'Diagnosi'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain at least a 'diagnosis' observation</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelne Diagnose im Level 1
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.DiagL1&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Diagnosenliste L1</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Diagnosenliste</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste de diagnostics L1</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste de diagnostics'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista diagnosi L1</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la CDA-CH Lista diagnosi</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L1 list of diagnoses</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on CDA-CH list of diagnoses</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0601" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body (section 'Diagnosen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Diagnostics')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono essere dichiarate come 'observation' nel CDA Body (section 'Diagnosi')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must be declared as an 'Observation' in the CDA Body ('Diagnoses' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0602" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent contenir une date de constatation</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono contenere una data di constatazione</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a date of detection</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0603" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a narrative text</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelne Diagnose im Level 3
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.DiagL3&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelne Diagnose L3</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Diagnose im Level 3</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH diagnostic individuel L3</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une diagnostic individuel en Level 3</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Diagnosi individuale L3</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per una diagnosi Level 3</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L3 single diagnosis</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on a diagnosis in level 3</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0701" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body deklariert werden (section 'Diagnosen')</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Diagnostics')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono essere dichiarate come 'observation' nel CDA Body (section 'Diagnosi')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must be declared as an 'Observation' in the CDA Body ('Diagnoses' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0702" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent contenir une date de constatation</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono contenere una data di constatazione</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a date of detection</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0703" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0704" test="cda:code/@codeSystem">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono contenere un codice e indicare il Code System (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0705" test="cda:code/@code">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen einen Code enthalten (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent contenir un code (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono contenere un codice (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a code (CDA Body Level 3)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0706" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
-			<xhtml:p lang="de_ch">CDA-CH 'Diagnosen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Diagnostics' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Diagnosi' devono indicare almeno il nome del medico che ha formulato la diagnosi ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Vitalzeichenliste
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignList&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Vitalzeichenliste</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Vitalzeichenliste</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste des signes vitaux</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste des signes vitaux'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista dei segni vitali</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per i CDA-CH Segni vitali</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH list of vital signs</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on CDA-CH vital signs</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0801" test="self::cda:section">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must be declared as a 'Section' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0802" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH doit contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' deve contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0803" test="(cda:title=&quot;Vitalzeichen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' in Deutsch muss einen section title 'Vitalzeichen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH en allemand doit contenir un section title 'Vitalzeichen'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' in tedesco deve contenere un section title 'Vitalzeichen'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' in German must contain a 'Vitalzeichen' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0804" test="(cda:title=&quot;Signes vitaux&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' in Französisch muss einen section title 'Signes vitaux' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH en français doit contenir un section title 'Signes vitaux'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' in francese deve contenere un section title 'Signes vitaux'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' in French must contain a 'Signes vitaux' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0805" test="(cda:title=&quot;Segni vitali&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' in Italienisch muss einen section title 'Segni vitali' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH en italien doit contenir un section title 'Segni vitali'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' in italiano deve contenere un section title 'Segni vitali'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' in Italian must contain a 'Segni vitali' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0806" test="(cda:title=&quot;Vital signs&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' in Englisch muss einen section title 'Vital signs' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH en anglais doit contenir un section title 'Vital signs'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' in inglese deve contenere un section title 'Vital signs'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' in English must contain a 'Vital signs' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0807" test="cda:code[@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and @code=&quot;8716-3&quot;]">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (LOINC Code 8716-3 "Vital signs"; OID für LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH doit contenir un codage de la signification de la section selon LOINC (LOINC Code 8716-3 "Vital signs"; OID pour LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' deve contenere un codice del significato della section secondo LOINC (LOINC Code 8716-3 "Vital signs"; OID per LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of vital signs' must contain a coding of the significance of the section according to LOINC (LOINC Code 8716-3 "Vital signs"; OID for LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-		</assert>
+	<iso:pattern>
+		<!-- Entity Information -->
+		<xhtml:ul id="entity_HL7-cda-ch">
+			<xhtml:li class="filename">cda-ch.ent</xhtml:li>
+			<xhtml:li class="version">1.0</xhtml:li>
+		</xhtml:ul>
 		<!--
-		entity_HL7-cda-ch-1305 in entity_HL7-cda-ch-1304 integriert
+		********************************************************
+		Header Templates
+		********************************************************
 		-->
-		<assert id="entity_HL7-cda-ch-0808" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and (cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL1&quot; or cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot;)]">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichenliste' muss mindestens eine observation 'Vitalzeichen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste des signes vitaux' CDA-CH doit contenir au moins une observation 'Signes vitaux'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista dei segni vitali' deve contenere almeno una observation 'Segni vitali'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain at least a 'Vital signs' observation</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelnes Vizalzeichen im Level 3
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelnes Vitalzeichen L3</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einem Vitalzeichen im Level 3</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH signes vitaux L3</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une signe vitaux</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Segno vitale singolo L3</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per un segno vitale Level 3</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L3 single vital sign</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the test on a vital sign in level 3</xhtml:p>
-		<assert id="entity_HL7-cda-ch-0901" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Signes vitaux')</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono essere dichiarati come 'observation' nel CDA Body (section 'Segni vitali')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must be declared as an 'Observation' in theCDA Body ('Vital signs' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0902" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen ein Datum der Feststellung enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent contenir une date de constatation</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono contenere una data di constatazione</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a date of detection</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0903" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0904" test="cda:code/@codeSystem">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen einen Code enthalten und das Code System angeben)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent contenir un code et mentionner le Code System</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono contenere un codice e indicare il Code System</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code and state the coding system)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0905" test="cda:code/@code">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen einen Code enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent contenir un code</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono contenere un codice</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0906" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent être indiqués avec un code LOINC</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono essere indicati con un LOINC Code</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must be declared using a LOINC code</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0907" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.5.1&quot; and @codeSystemName=&quot;VitalSignCodes&quot;]/code/@value">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code aus der Wertetabelle 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1' angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent être indiqués avec un code LOINC du tableau de valeurs 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono essere indicati con un LOINC Code della tabella di valori 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must be entered with a LOINC code from the table of values 'VitalSignsCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0908" test="cda:code/@code!=&quot;11449-6&quot; or (cda:code/@code=&quot;11449-6&quot; and cda:value/@codeSystem=&quot;2.16.756.5.30.2.1.1.4.1&quot;)">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' Schwangerschaftstatus muss als CE mit codeSystem 2.16.756.5.30.2.1.1.4.1 angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Le 'signe vital' CDA-CH Etat de la grossesse doit être indiqué comme CE avec le codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' Stato gravidanza devono essere indicati come CE con codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' pregnancy status must be entered as a CE with the codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0909" test="cda:code/@code!=&quot;11449-6&quot; or (cda:code/@code=&quot;11449-6&quot; and cda:value/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.4.1&quot;]/code/@value)">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' für 'Schwangerschaftstatus' müssen mit einem LOINC Code aus der Wertetabelle 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1' angegeben werden)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH pour 'Etat de la grossesse' doivent être indiqués avec un code LOINC du tableau de valeurs 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1'</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' per 'Stato gravidanza' devono essere indicati con un LOINC Code della tabella di valori 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' for 'Pregnancy status' must be entered with a LOINC code from the table of values 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-0910" test="cda:value">
-			<xhtml:p lang="de_ch">CDA-CH 'Vitalzeichen' müssen ein Wert enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'signes vitaux' CDA-CH doivent contenir une valeur</xhtml:p>
-			<xhtml:p lang="it_ch">I CDA-CH 'Segni vitali' devono contenere un valore</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a value</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Intoleranzliste (Allergien / Unverträglichkeiten)
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.IntoleranceList&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Intoleranzliste (Allergien / Unverträglichkeiten)</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Intoleranzliste (Allergien / Unverträglichkeiten)</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste d'intolérances</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste d'intolérances'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista intolleranze (allergie / intolleranze)</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la CDA-CH Lista intolleranze (allergie / intolleranze)</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH list of intolerances (Allergies / Intolerances)</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of intolerances (Allergies / Intolerances)</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1001" test="self::cda:section">
-			<xhtml:p lang="de_ch">CDA-CH 'Intoleranzliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste d'intolérances' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista intolleranze' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of intolerances' must be declared as a 'Section' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1002" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Intoleranzliste' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste d'intolérances' CDA-CH doit contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista intolleranze' deve contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of intolerances' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1003" test="(cda:title=&quot;Allergien und Unverträglichkeiten&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Intoleranzliste' in Deutsch muss einen section title 'Allergien und Unverträglichkeiten' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste d'intolérances' CDA-CH en allemand doit contenir un section title 'Allergien und Unverträglichkeiten'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista intolleranze' in tedesco deve contenere un section title 'Allergie e intolleranze'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of intolerances' in German must contain an 'Allergies and intolerances' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1004" test="(cda:title=&quot;Allergies et intolérances&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Intoleranzliste' in Französisch muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste d'intolérances' CDA-CH en français doit contenir un section title 'Allergies et intolérances'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista intolleranze' in francese deve contenere un section title 'Allergies et intolérances'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of intolerances' in French must contain an 'Allergies et intolérances' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1005" test="(cda:title=&quot;Allergie e intolleranze&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Intoleranzliste' in Italienisch muss einen section title 'Allergie e intolleranze' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste d'intolérances' CDA-CH en italien doit contenir un section title 'Allergie e intolleranze'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista intolleranze' in italiano deve contenere un section title 'Allergie e intolleranze'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of intolerances' in Italian must contain an 'Allergie e intolleranze' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1006" test="(cda:title=&quot;Allergies et intolérances&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Intoleranzliste' in Englisch muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste d'intolérances' CDA-CH en anglais doit contenir un section title 'Allergies et intolérances'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista intolleranze' in inglese deve contenere un section title 'Allergie e intolleranze'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of intolerances' in English must contain an 'Allergies and intolerances' section title</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelne Allergie oder Unverträglichkeit
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.IntoleranceL2&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelne Allergie oder Unverträglichkeit L3</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Allergie oder Unverträglichkeit im Level 3</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Allergies et intolérances L3</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une allergie ou intolérance</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Singola allergia o intolleranza L3</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per un'allergia o un'intolleranza Level 3</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L3 single allergy or intolerance</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on an allergy or intolerance on level 3</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1101" test="self::cda:observation">
-			<xhtml:p lang="de_ch">Allergien und Unverträglichkeiten müssen als 'observation' im CDA Body (section 'Allergien und Unverträglichkeiten') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Allergies et intolérances doivent être déclarées comme 'observation' dans le CDA Body (section 'Allergies et intolérances')</xhtml:p>
-			<xhtml:p lang="it_ch">Le allergie e intolleranze devono essere dichiarate come 'observation' nel CDA Body (section 'Allergie e intolleranze')</xhtml:p>
-			<xhtml:p lang="en">Allergies and intolerances must be declared as an 'Observation' in the CDA Body ('Allergies and intolerances' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1102" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
-			<xhtml:p lang="de_ch">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="fr_ch">Allergies et intolérances doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="it_ch">Le allergie e intolleranze devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="en">Allergies and intolerances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1103" test="cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
-			<xhtml:p lang="de_ch">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="fr_ch">Allergies et intolérances doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="it_ch">Le allergie e intolleranze devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-			<xhtml:p lang="en">Allergies and intolerances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1104" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
-			<xhtml:p lang="de_ch">Allergien und Unverträglichkeiten müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
-			<xhtml:p lang="fr_ch">Allergies et intolérances doivent contenir un texte narratif si le code="Y"</xhtml:p>
-			<xhtml:p lang="it_ch">Le allergie e intolleranze devono contenere un testo narrativo, se code="Y"</xhtml:p>
-			<xhtml:p lang="en">Allergies and intolerances must contain a narrative text if the code="Y"</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Liste mit Arbeitsfähigkeitseinträgen
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Liste mit Arbeitsfähigkeitseinträgen</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Liste mit Arbeitsfähigkeitseinträgen</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste des capacités de travail</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste des capacités de travail'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista con indicazioni capacità lavorativa</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la CDA-CH Lista con indicazioni capacità lavorativa</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH list with capacity to work entries</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list with capacity to work entries</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1201" test="self::cda:section">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' must be declared as a 'Section' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1202" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH doit contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' deve contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1203" test="(cda:title=&quot;Arbeitsfähigkeit&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' in Deutsch muss einen section title 'Arbeitsfähigkeit' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH en allemand doit contenir un section title 'Arbeitsfähigkeit'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' in tedesco deve contenere un section title 'Arbeitsfähigkeit'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' in German must contain a 'Arbeitsfähigkeit' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1204" test="(cda:title=&quot;Capacité de travail&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' in Französisch muss einen section title 'Capacité de travail' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH en français doit contenir un section title 'Capacité de travail'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' in francese deve contenere un section title 'Capacité de travail'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' in English must contain a 'Capacité de travail' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1205" test="(cda:title=&quot;Capacità lavorativa&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' in Italienisch muss einen section title 'Capacità lavorativa' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' en italien CDA-CH doit contenir un section title 'Capacità lavorativa'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' in italiano deve contenere un section title 'Capacità lavorativa'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' in Italian must contain a 'Capacità lavorativa' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1206" test="(cda:title=&quot;Capacity to work&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' in Englisch muss einen section title 'Capacity to work' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH en anglais doit contenir un section title 'Capacity to work'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' in inglese deve contenere un section title 'Capacity to work'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' in English must contain a 'Capacity to work' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1207" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (OID für LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH doit contenir un codage de la signification de la section selon LOINC (OID pour LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' deve contenere un codice del significato della section secondo LOINC (OID per LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a coding of the significance of the section according to LOINC (OID for LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1208" test="cda:code/@code=&quot;X-ATWRK&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH doit contenir un codage de la signification de la section (code LOINC X-ATWRK selon la lettre abrégée de rééducation VHitG)</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' deve contenere un codice del significato della section (LOINC Code X-ATWRK secondo VHitG REHA Kurzbrief)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a coding of the significance of the section (LOINC Code X-ATWRK according to VHitG REHA short letter)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1209" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitL3&quot;]">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit' muss mindestens eine observation 'Beurteilung Arbeitsfähigkeit' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Capacité de travail' CDA-CH doit contenir au moins une observation 'Evaluation de la capacité de travail'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Capacità lavorativa' deve contenere almeno una observation 'Valutazione della capacità lavorativa'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain at least an observation 'Assessment of capacity to work'</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Beurteilung Arbeitsfähigkeit im Level 3
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitL3&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelne Arbeitsfähigkeit L3</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Arbeitsfähigkeit im Level 3</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Evaluation de la capacité de travail L3</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une évaluation de la capacité de travail</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Singola capacità lavorativa L3</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per una capacità lavorativa Level 3</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L3 individual capacity to work</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on a capacity to work in level 3</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1301" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent être déclarées comme 'observation' dans le CDA Body (section 'Signes vitaux')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono essere dichiarate come 'observation' nel CDA Body (section 'Segni vitali')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must be declared as an 'Observation' in the CDA Body ('Vital signs' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1302" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1303" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and cda:code/@code=&quot;X-ATWRK&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mit LOINC klassifiziert werden (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent être classifiées avec LOINC (code LOINC X-ATWRK selon la lettre abrégée de rééducation VHitG)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono essere classificate con LOINC (LOINC Code X-ATWRK secondo VHitG REHA Kurzbrief)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must be classified with LOINC (LOINC Code X-ATWRK according to VHitG REHA short letter)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1304" test="cda:effectiveTime/cda:low">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen ein 'Gültig ab Datum' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir une 'date valable à partir de'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere una 'Data Valido dal'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments for fitness of work' must contain a 'Valid from date'</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1305" role="warning" test="cda:effectiveTime/cda:high">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' sollten ein 'Gültig bis Datum / Datum der geplanten, nächsten Beurteilung' enthalten (letzte Beurteulung kann nullFlavor='NA' enthalten)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir une 'date valable jusqu'à / date de la prochaine évaluation prévue' (la dernière évaluation peut contenir nullFlavor='NA')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere una 'Data Valido fino al / Data delle prossima valutazione' (l'ultima valutazione può contenere nullFlavor='NA')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain a 'Valid until date/ date of scheduled next assessment' (last assessment can contain nullFlavor='NA')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1306" test="cda:value/@codeSystem=&quot;2.16.756.5.30.2.1.1.6.1&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Anzahl Stunden/Tag enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir la présence raisonnable en heures/jour</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere le ore/giorno ritenute ragionevoli</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain the reasonable number of hours/days</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1307" test="cda:value/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.6.1&quot;]/code/@value">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Anzahl Stunden/Tag) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitStunden', 2.16.756.5.30.2.1.1.6.1 angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH (présence raisonnable en heures/jour) doivent être indiquées avec une valeur valable du tableau de valeurs 'Capacité de travail en heures', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' (ore/giorno ritenute ragionevoli) devono essere indicate con un valore valido della tabella di valori 'Capacità lavorativa ore', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' (reasonable number of hours/days) must be entered with a valid value from the table of values 'Capacity to work hours', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1308" test="cda:interpretationCode/@codeSystem=&quot;2.16.756.5.30.2.1.1.7.1&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Arbeitsintensität enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir le degré raisonnable d'intensité du travail</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere l'intensità lavorativa ritenuta ragionevole</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain the reasonable degree of work intensity</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1309" test="cda:interpretationCode/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.2.1.1.7.1&quot;]/code/@value">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Arbeitsintensität) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitIntensität', 2.16.756.5.30.2.1.1.7.1 angegeben werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH (degré raisonnable d'intensité du travail) doivent être indiquées avec une valeur valable du tableau de valeurs 'Capacité de travail en intensité', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' (intensità lavorativa ritenuta ragionevole) devono essere indicate con un valore valido della tabella di valori 'Intensità lavorativa', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' (reasonable degree of work intensity) must be entered with a valid value from the table of values 'Capacity to work intensity', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1310" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
-			<xhtml:p lang="de_ch">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Evaluations de la capacité de travail' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Valutazioni capacità lavorativa' devono indicare almeno il nome del medico che ha formulato la valutazione ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain at least the assessing doctor’s name ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Impfungsstatus
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ImpfungStatusL2&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Impfungsstatus</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Impfungsstatus</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Vaccinations</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur les vaccinations</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Stato vaccinazioni</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per il CDA-CH Stato vaccinazioni</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH immunization status</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests for the CDA-CH immunization status</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1401" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Impfung' müssen als 'observation' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Vaccinations' CDA-CH doivent être déclarées comme 'observation' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Vaccinazioni' devono essere dichiarate come 'observation' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'immunization' must be declared as 'observation' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1402" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and cda:code/@code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@codeSystemName=&quot;Immunization&quot;]/code/@value">
-			<xhtml:p lang="de_ch">CDA-CH 'Impfung' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1', Teilmenge Immunization)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Vaccinations' CDA-CH doivent contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1', sous-ensemble immunization)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Vaccinazioni' devono contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1', sottoinsieme 'Immunizzazione')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'immunization' must contain a coding with the meaning of section (valid value from the value table '2.16.840.1.113883.6.1', subset immunization)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1403" test="cda:effectiveTime/cda:low or cda:effectiveTime/@value">
-			<xhtml:p lang="de_ch">CDA-CH 'Impfungen' müssen ein Datum enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Vaccinations' CDA-CH doivent contenir une date</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Vaccinazioni' devono contenere una data</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'immunizations' must contain a date</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Nationalität
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.NationalityL3&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Nationalität</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu CDA-CH Nationalität</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Nationalité</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la nationalité</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Nazionalità</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per il CDA-CH nazionalità</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH citizenship</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests for the CDA-CH citizenship</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1501" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Nationalität' muss als 'observation' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Nationalité' CDA-CH doit être déclarée comme 'observation' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Nazionalità' devono essere dichiarate come 'observation' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'citizenship' must be declared as 'observation' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1502" test="cda:code[@codeSystem=&quot;2.16.756.5.30.1.106.1.10.10&quot; and @code=&quot;103.101.10&quot;]">
-			<xhtml:p lang="de_ch">CDA-CH 'Nationalität' muss eine Codierung der Bedeutung der Observation nach SMEEX enthalten (SMEEX Code 103.101.10 "nationality"; OID für SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Nationalité' CDA-CH doit contenir un codage de la signification de l'observation selon SMEEX (SMEEX Code 103.101.10 "nationality"; OID pour SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Nazionalità' deve contenere un codice del significato della section secondo SMEEX (SMEEX Code 103.101.10 "nationality"; OID per SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'citizenship' must contain a coding of the significance of the section according to SMEEX (SMEEX Code 103.101.10 "nationality"; OID of SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1503" test="cda:value[@xsi:type=&quot;II&quot; and @root=&quot;1.0.3166&quot; and @extension=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/iso_3166-1_list_en.xml&quot;)/ISO_3166-1_List_en/ISO_3166-1_Entry/ISO_3166-1_Alpha-2_Code_element]">
-			<xhtml:p lang="de_ch">CDA-CH 'Nationalität' muss einen gültigen alpha-2 code der ISO 3166 Tabelle enthalten (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'Nationalité' CDA-CH doit contenir un code alpha-2 de ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Nazionalità' deve contenere un codice alpha-2 secondo ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'citizenship' must contain an alpha-2 code from ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Behandlungsliste
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ProcList&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Behandlungsliste</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Behandlungsliste</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste de treatments</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste de treatments'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista trattamenti</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la CDA-CH Lista trattamenti</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH list of treatments</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of treatments</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1601" test="self::cda:section">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista trattamenti' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' must be declared as a 'Section' in the CDA Body</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1602" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' muss einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH doit contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista trattamenti' deve contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1603" test="(cda:title=&quot;Behandlungen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' in Deutsch muss einen section title 'Behandlungen' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH en allemand doit contenir un section title 'Behandlungen'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Lista trattamenti' in tedesco devono contenere un section title 'Behandlungen'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' in German must contain a 'Behandlungen' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1604" test="(cda:title=&quot;Treatments&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' in Französisch muss einen section title 'Treatments' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH en français doit contenir un section title 'Treatments'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Lista trattamenti' in francese devono contenere un section title 'Treatments'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' in French must contain a 'Treatments' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1605" test="(cda:title=&quot;Trattamenti&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' in Italienisch muss einen section title 'Trattamenti' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH en italien doit contenir un section title 'Trattamenti'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Lista trattamenti' in italiano devono contenere un section title 'Trattamenti'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' in Italian must contain a 'Trattamenti' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1606" test="(cda:title=&quot;Treatments&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' in Englisch muss einen section title 'Treatments' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH en anglais doit contenir un section title 'Treatments'</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Lista trattamenti' in inglese devono contenere un section title 'Treatments'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' in English must contain a 'Treatments' section title</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1607" test="cda:code[@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and @code=document(&quot;../../../../schematrons/HL7.ch/CDA-CH/v1.2/cda-ch-voc.xml&quot;)/systems/system[@codeSystemName=&quot;TreatmentSectionCode&quot;]/code/@value]">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista trattamenti' deve contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1608" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and (cda:templateId/@extension=&quot;CDA-CH.Body.ProcL1&quot; or cda:templateId/@extension=&quot;CDA-CH.Body.ProcL3&quot;)]">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungsliste' muss mindestens eine procedure 'Behandlung' enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">La 'liste de treatments' CDA-CH doit contenir au moins une procedure 'Treatment'</xhtml:p>
-			<xhtml:p lang="it_ch">La CDA-CH 'Lista trattamenti' deve contenere almeno una procedure 'Trattamento'</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'List of treatments' must contain at least a 'Treatment' procedure</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelne Behandlung im Level 1
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ProcL1&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Behandlungsliste L1</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Behandlungsliste</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH liste de treatments L1</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur la 'liste de treatments'</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Lista trattamenti L1</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per la CDA-CH Lista trattamenti</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L1 list of treatments</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on CDA-CH list of treatments</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1701" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen als 'procedure' im CDA Body deklariert werden (section 'Behandlungen')</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent être déclarés comme 'procedure' dans le CDA Body (section 'Treatments')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono essere dichiarate come 'observation' nel CDA Body (section 'Trattamenti')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must be declared as an 'Observation' in the CDA Body ('Treatments' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1702" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen ein den Durchführungszeitpunkt resp. -zeitraum enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent contenir le point de temps ou la période d'exécution</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono contenere un punto del tempo o il periodo di attuazione</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must contain a point of time or the period of the execution</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1703" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must contain a narrative text</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelne Behandlung im Level 3
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ProcL3&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelne Behandlung L3</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Behandlung im Level 3</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH treatment individuel L3</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une treatment individuel</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Trattamenti individuale L3</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per una Trattamento Level 3</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L3 single Treatment</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on a treatment in level 3</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1801" test="self::cda:procedure">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen als 'procedure' im CDA Body deklariert werden (section 'Behandlungen')</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent être déclarés comme 'procedure' dans le CDA Body (section 'Treatments')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono essere dichiarate come 'observation' nel CDA Body (section 'Trattamenti')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must be declared as an 'Observation' in the CDA Body ('Treatments' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1802" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen ein den Durchführungszeitpunkt resp. -zeitraum enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent contenir le point de temps ou la période d'exécution</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono contenere un punto del tempo o il periodo di attuazione</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must contain a point of time or the period of the execution</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1803" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1804" test="cda:code[@codeSystem and @code]">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono contenere un codice e indicare il Code System (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1805" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
-			<xhtml:p lang="de_ch">CDA-CH 'Behandlungen' müssen mindestens den Namen des verantwortlichen Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'treatments' CDA-CH doivent indiquer au moins le nom du médecin qui est responsable pur le treatment ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Trattamenti' devono indicare almeno il nome del medico che ha formulato la Trattamenti ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Treatments' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Einzelne Bemerkung im Level 3
-	********************************************************
-	-->
-	<rule context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.RemL3&quot;]">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelne Bemerkung L3</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Bemerkung im Level 3</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH remarque individuel L3</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une remarque individuel</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Osservazione individuale L3</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per una Osservazioni Level 3</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH L3 single remark</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on a remark in level 3</xhtml:p>
-		<assert id="entity_HL7-cda-ch-1901" test="self::cda:observation">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen als 'observation' im CDA Body deklariert werden (section 'Bemerkungen')</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Remarques')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono essere dichiarate come 'observation' nel CDA Body (section 'Osservazioni')</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must be declared as an 'Observation' in the CDA Body ('Remarks' section)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1902" test="cda:effectiveTime">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen ein Datum der Feststellung enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent contenir une date de constatation</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono contenere una data di constatazione</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must contain a date of detection</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1903" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must contain a narrative text</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1904" test="cda:code[@codeSystem and @code]">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono contenere un codice e indicare il Code System (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1905" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le Remarque ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono indicare almeno il nome del medico che ha formulato la Osservazioni ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
-		</assert>
-		<assert id="entity_HL7-cda-ch-1906" test="cda:value[@xsi:type=&quot;CE&quot;]">
-			<xhtml:p lang="de_ch">CDA-CH 'Bemerkungen' müssen einen codierten Wert enthalten (mögliche Werteliste: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
-			<xhtml:p lang="fr_ch">Les 'Remarques' CDA-CH doivent contenir un valeur codée (valeurs possible: '2.16.756.5.30.2.1.1.8.1')</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH 'Osservazioni' devono deve contenere un valore codificato (lista dei valori possibile: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
-			<xhtml:p lang="en">CDA-CH 'Remarks' must contain a coded value (possible list of values: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
-<pattern>
-	<!--
-	********************************************************
-	Sections brauchen immer Freitext!
-	********************************************************
-	-->
-	<rule context="cda:section">
-		<!-- Rule Documentation -->
-		<xhtml:h3 lang="de_ch">CDA-CH Einzelne CDA Body Section</xhtml:h3>
-		<xhtml:p lang="de_ch">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer einzelnen CDA Body Section</xhtml:p>
-		<xhtml:h3 lang="fr_ch">CDA-CH Body Section individuel</xhtml:h3>
-		<xhtml:p lang="fr_ch">Les règles suivantes décrivent les contrôles sur une section CDA Body individuel</xhtml:p>
-		<xhtml:h3 lang="it_ch">CDA-CH Body Section individuale</xhtml:h3>
-		<xhtml:p lang="it_ch">Le regole seguenti descrivono i controlli per un Body Section individuale</xhtml:p>
-		<xhtml:h3 lang="en">CDA-CH individual Body Section</xhtml:h3>
-		<xhtml:p lang="en">The following rules describe the tests on individual Body Section</xhtml:p>
-		<assert id="entity_HL7-cda-ch-2001" test="cda:text">
-			<xhtml:p lang="de_ch">CDA-CH Body Sections müssen einen narrativen Text enthalten</xhtml:p>
-			<xhtml:p lang="fr_ch">Les sections CDA-CH Body doivent contenir un texte narratif</xhtml:p>
-			<xhtml:p lang="it_ch">Le CDA-CH Body Sections devono contenere un testo narrativo</xhtml:p>
-			<xhtml:p lang="en">CDA-CH Body Sections must contain a narrative text</xhtml:p>
-		</assert>
-	</rule>
-</pattern>
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Head.Empl&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Arbeitgeber)</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (employeur)</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Datori di lavoro)</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Employer)</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0101" test="self::cda:participant/@typeCode=&quot;IND&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitgeber' müssen als 'participant' mit typeCode 'IND' im CDA Header deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">L''Employeur' CDA-CH doit être déclaré comme 'participant' avec le typeCode 'IND' dans le CDA Header</xhtml:p>
+				<xhtml:p lang="it-CH">I 'Datori di lavoro' CDA-CH devono essere dichiarati come 'participant' con typeCode 'IND' nel CDA Header</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Employer' must be declared as a 'Participant' with typeCode 'IND' in the CDA Header</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0102" test="cda:templateId/@root=&quot;1.3.6.1.4.1.19376.1.5.3.1.2.2&quot;">
+				<xhtml:p lang="de-CH">CDA-CH Arbeitgeber müssen mit der IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2) deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">L''Employeur' CDA-CH doit être déclaré avec l'IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
+				<xhtml:p lang="it-CH">I 'Datori di lavoro' CDA-CH devono essere dichiarati con la IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH employers must be declared with the IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Head.Insurance&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Versicherungen)</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (assurances)</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Assicurazioni)</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Insurances)</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0201" test="self::cda:participant/@typeCode=&quot;COV&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Versicherungen' müssen als 'participant' mit typeCode 'COV' im CDA Header deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">'Assurances' CDA-CH doivent être déclaré comme 'participant' avec le typeCode 'COV' dans le CDA Header</xhtml:p>
+				<xhtml:p lang="it-CH">Le 'Assicurazioni' CDA-CH devono essere dichiarati come 'participant' con typeCode 'COV' nel CDA Header</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurances' must be declared as a 'Participant' with typeCode 'COV' in the CDA Header</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0202" test="self::cda:participant">
+				<xhtml:p lang="de-CH">CDA-CH 'Versicherungen' müssen als 'participant' im CDA Header deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Assurances' CDA-CH doivent être déclarées comme 'participant' dans le CDA Header</xhtml:p>
+				<xhtml:p lang="it-CH">Le 'Assicurazioni' CDA-CH devono essere dichiarati come 'participant' nel CDA Header</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurances' must be declared as a 'Participant' in the CDA Header</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0203" test="cda:associatedEntity[@classCode=&quot;COVPTY&quot;]/cda:scopingOrganization">
+				<xhtml:p lang="de-CH">CDA-CH 'Versicherungen' müssen mit einer 'associatedEntity/scopingOrganization' und dem associatedEntity Attribut classCode="COVPTY" deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Assurances' CDA-CH doivent contenir une 'associatedEntity/scopingOrganization' avec l'attribut classCode="COVPTY" pour associatedEntity</xhtml:p>
+				<xhtml:p lang="it-CH">Le 'Assicurazioni' CDA-CH devono contenere un 'associatedEntity/scopingOrganization' con attributo classCode="COVPTY" per associatedEntity</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurances' must be declared using a 'associatedEntity/scopingOrganization' and an associatedEntity attribute classCode="COVPTY"</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0204" test="cda:associatedEntity[@classCode=&quot;COVPTY&quot;]/cda:id[@root=&quot;1.3.88&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH 'Versicherungen' müssen mit der GLN identifiziert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Assurances' CDA-CH doivent êtres identifies avec le GLN</xhtml:p>
+				<xhtml:p lang="it-CH">Le 'Assicurazioni' CDA-CH devono essere identificati con GLN</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurances' must be identified using a GLN</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Head.InsuranceCard&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Header Templates (Versichertenkarte)</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles effectués sur les CDA-CH Header Templates (carte d’assuré)</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per i CDA-CH Header Templates (Carta di assicurazione)</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Insurancecard)</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0301" test="self::cda:participant/@typeCode=&quot;HLD&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Versichertenkarte' muss als 'participant' mit typeCode 'HLD' im CDA Header deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'carte d’assuré' CDA-CH doit être déclaré comme 'participant' avec le typeCode 'HLD' dans le CDA Header</xhtml:p>
+				<xhtml:p lang="it-CH">Il 'carta di assicurazione' CDA-CH devono essere dichiarati come 'participant' con typeCode 'HLD' nel CDA Header</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurancecard' must be declared as a 'Participant' with typeCode 'HLD' in the CDA Header</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0302" test="self::cda:participant">
+				<xhtml:p lang="de-CH">CDA-CH 'Versicherungskarte' muss als 'participant' im CDA Header deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'carte d’assuré' CDA-CH doit être déclarées comme 'participant' dans le CDA Header</xhtml:p>
+				<xhtml:p lang="it-CH">Il 'carta di assicurazione' CDA-CH devono essere dichiarati come 'participant' nel CDA Header</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurancecard' must be declared as a 'Participant' in the CDA Header</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0303" test="cda:associatedEntity[@classCode=&quot;POLHOLD&quot;]/cda:id[@root=&quot;2.16.756.5.34&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH 'Versichertenkarte' die Nummer der Karte als id enthalten (OID für die Versichertenkarte: 2.16.756.5.34)</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'carte d’assuré' CDA-CH doit contenir le numero de la carte comme id (OID pour la carte d’assuré: 2.16.756.5.34)</xhtml:p>
+				<xhtml:p lang="it-CH">Il 'carta di assicurazione' CDA-CH deve contenere il numero della carta come id (OID per la carta di assicurazione: 2.16.756.5.34)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Insurancecard' must contain the cardnumber as id (OID for the insurance card: 2.16.756.5.34)</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Body Templates
+		********************************************************
+		-->
+		<!--
+		********************************************************
+		Bemerkungen
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.Rem&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Bemerkungen</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Bemerkungen</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Remarques</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur 'Remarques'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Osservazioni</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per le CDA-CH Osservazioni</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH remarks</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH remarks</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0401" test="self::cda:section">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen als 'section' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono essere dichiarate come 'section' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must be declared as a 'Section' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0402" test="((cda:title=&quot;Bemerkungen&quot; or cda:title=&quot;Kommentar&quot;) and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' in Deutsch müssen einen section title 'Bemerkungen' oder 'Kommentar' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH en allemand doivent contenir un section title 'Bemerkungen' ou 'Kommentar'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' in tedesco devono contenere un section title 'Bemerkungen' o 'Kommentar'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' in German must contain a 'Bemerkungen' or 'Kommentar' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0403" test="((cda:title=&quot;Remarques&quot; or cda:title=&quot;Commentaire&quot;) and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' in Französisch müssen einen section title 'Remarques' oder 'Commentaire' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH en français doivent contenir un section title 'Remarques' ou 'Commentaire'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' in francese devono contenere un section title 'Remarques' o 'Commentaire'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' in French must contain a 'Remarques' or 'Commentaire' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0404" test="((cda:title=&quot;Osservazioni&quot; or cda:title=&quot;Osservazione&quot;) and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' in Italienisch müssen einen section title 'Osservazioni' oder 'Osservazione' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH en italien doivent contenir un section title 'Osservazioni' ou 'Osservazione'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' in italiano devono contenere un section title 'Osservazioni' o 'Osservazione'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' in Italian must contain a 'Osservazioni' or 'Osservazione' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0405" test="((cda:title=&quot;Remarks&quot; or cda:title=&quot;Comment&quot;) and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' in Englisch müssen einen section title 'Remarks' oder 'Comment' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH en anglais doivent contenir un section title 'Remarks' ou 'Comment'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' in inglese devono contenere un section title 'Remarks' o 'Comment'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' in English must contain a 'Remarks' o 'Comment' section title</xhtml:p>
+			</iso:assert>
+      <!-- Verify the section type code -->
+      <iso:assert id="entity_HL7-cda-ch-0406" test="cda:code[@code=&quot;48767-8&quot; and @codeSystem=&quot;2.16.840.1.113883.6.1&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH  müssen den folgenden Section Code aus LOINC aufweisen: 48767-8</xhtml:p>
+	      <xhtml:p lang="en">For CDA-CH Comments, the section type code must come from LOINC: 48767-8</xhtml:p>
+      </iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Diagnosenliste
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.DiagList&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Diagnosenliste</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Diagnosenliste</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste de diagnostics</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste de diagnostics'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista diagnosi</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per la CDA-CH Lista diagnosi</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH list of diagnoses</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of diagnoses</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0501" test="self::cda:section">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' must be declared as a 'Section' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0502" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' muss einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH doit contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' deve contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0503" test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&quot;Diagnosen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' in Deutsch muss einen section title 'Diagnosen' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH en allemand doit contenir un section title 'Diagnosen'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' in tedesco deve contenere un section title 'Diagnosen'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' in German must contain a 'Diagnosen' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0504" test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&quot;Diagnostics&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' in Französisch muss einen section title 'Diagnostics' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH en français doit contenir un section title 'Diagnostics'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' in francese deve contenere un section title 'Diagnostics'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' in French must contain a 'Diagnostics' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0505" test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&quot;Diagnosi&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' in Italienisch muss einen section title 'Diagnosi' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH en italien doit contenir un section title 'Diagnosi'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' in italiano deve contenere un section title 'Diagnosi'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' in Italian must contain a 'Diagnosi' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0506" test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&quot;Diagnoses&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' in Englisch muss einen section title 'Diagnoses' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH en anglais doit contenir un section title 'Diagnoses'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' in inglese deve contenere un section title 'Diagnoses'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' in English must contain a 'Diagnoses' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0507" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' deve contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0508" test="cda:code/@code=$cda-ch-codeSystem[@codeSystemName=&quot;DiagnosisSectionCode&quot;]/code/@value">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' deve contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0509" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and (cda:templateId/@extension=&quot;CDA-CH.Body.DiagL1&quot; or cda:templateId/@extension=&quot;CDA-CH.Body.DiagL3&quot;)]">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosenliste' muss mindestens eine observation 'Diagnose' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de diagnostics' CDA-CH doit contenir au moins une observation 'Diagnostic'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista diagnosi' deve contenere almeno una observation 'Diagnosi'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain at least a 'diagnosis' observation</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelne Diagnose im Level 1
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.DiagL1&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Diagnosenliste L1</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Diagnosenliste</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste de diagnostics L1</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste de diagnostics'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista diagnosi L1</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per la CDA-CH Lista diagnosi</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L1 list of diagnoses</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on CDA-CH list of diagnoses</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0601" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body (section 'Diagnosen') deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Diagnostics')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono essere dichiarate come 'observation' nel CDA Body (section 'Diagnosi')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must be declared as an 'Observation' in the CDA Body ('Diagnoses' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0602" test="cda:effectiveTime">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent contenir une date de constatation</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono contenere una data di constatazione</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a date of detection</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0603" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a narrative text</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelne Diagnose im Level 3
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.DiagL3&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelne Diagnose L3</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Diagnose im Level 3</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH diagnostic individuel L3</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une diagnostic individuel en Level 3</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Diagnosi individuale L3</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per una diagnosi Level 3</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L3 single diagnosis</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on a diagnosis in level 3</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0701" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body deklariert werden (section 'Diagnosen')</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Diagnostics')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono essere dichiarate come 'observation' nel CDA Body (section 'Diagnosi')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must be declared as an 'Observation' in the CDA Body ('Diagnoses' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0702" test="cda:effectiveTime">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent contenir une date de constatation</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono contenere una data di constatazione</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a date of detection</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0703" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0704" test="cda:code/@codeSystem">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono contenere un codice e indicare il Code System (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0705" test="cda:code/@code">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen einen Code enthalten (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent contenir un code (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono contenere un codice (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a code (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0706" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+				<xhtml:p lang="de-CH">CDA-CH 'Diagnosen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Diagnostics' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Diagnosi' devono indicare almeno il nome del medico che ha formulato la diagnosi ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Diagnoses' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Vitalzeichenliste
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignList&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Vitalzeichenliste</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Vitalzeichenliste</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste des signes vitaux</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste des signes vitaux'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista dei segni vitali</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per i CDA-CH Segni vitali</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH list of vital signs</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on CDA-CH vital signs</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0801" test="self::cda:section">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must be declared as a 'Section' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0802" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' muss einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH doit contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' deve contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0803" test="(cda:title=&quot;Vitalzeichen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' in Deutsch muss einen section title 'Vitalzeichen' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH en allemand doit contenir un section title 'Vitalzeichen'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' in tedesco deve contenere un section title 'Vitalzeichen'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' in German must contain a 'Vitalzeichen' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0804" test="(cda:title=&quot;Signes vitaux&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' in Französisch muss einen section title 'Signes vitaux' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH en français doit contenir un section title 'Signes vitaux'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' in francese deve contenere un section title 'Signes vitaux'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' in French must contain a 'Signes vitaux' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0805" test="(cda:title=&quot;Segni vitali&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' in Italienisch muss einen section title 'Segni vitali' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH en italien doit contenir un section title 'Segni vitali'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' in italiano deve contenere un section title 'Segni vitali'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' in Italian must contain a 'Segni vitali' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0806" test="(cda:title=&quot;Vital signs&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' in Englisch muss einen section title 'Vital signs' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH en anglais doit contenir un section title 'Vital signs'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' in inglese deve contenere un section title 'Vital signs'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' in English must contain a 'Vital signs' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0807" test="cda:code[@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and @code=&quot;8716-3&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (LOINC Code 8716-3 "Vital signs"; OID für LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH doit contenir un codage de la signification de la section selon LOINC (LOINC Code 8716-3 "Vital signs"; OID pour LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' deve contenere un codice del significato della section secondo LOINC (LOINC Code 8716-3 "Vital signs"; OID per LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of vital signs' must contain a coding of the significance of the section according to LOINC (LOINC Code 8716-3 "Vital signs"; OID for LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+			</iso:assert>
+			<!--
+			entity_HL7-cda-ch-1305 in entity_HL7-cda-ch-1304 integriert
+			-->
+			<iso:assert id="entity_HL7-cda-ch-0808" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and (cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL1&quot; or cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot;)]">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichenliste' muss mindestens eine observation 'Vitalzeichen' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste des signes vitaux' CDA-CH doit contenir au moins une observation 'Signes vitaux'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista dei segni vitali' deve contenere almeno una observation 'Segni vitali'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain at least a 'Vital signs' observation</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelnes Vizalzeichen im Level 3
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.VitalSignL3&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelnes Vitalzeichen L3</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einem Vitalzeichen im Level 3</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH signes vitaux L3</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une signe vitaux</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Segno vitale singolo L3</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per un segno vitale Level 3</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L3 single vital sign</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the test on a vital sign in level 3</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-0901" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Signes vitaux')</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono essere dichiarati come 'observation' nel CDA Body (section 'Segni vitali')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must be declared as an 'Observation' in theCDA Body ('Vital signs' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0902" test="cda:effectiveTime">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen ein Datum der Feststellung enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent contenir une date de constatation</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono contenere una data di constatazione</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a date of detection</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0903" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0904" test="cda:code/@codeSystem">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen einen Code enthalten und das Code System angeben)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent contenir un code et mentionner le Code System</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono contenere un codice e indicare il Code System</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code and state the coding system)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0905" test="cda:code/@code">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen einen Code enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent contenir un code</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono contenere un codice</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0906" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code angegeben werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent être indiqués avec un code LOINC</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono essere indicati con un LOINC Code</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must be declared using a LOINC code</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0907" test="cda:code/@code=$cda-ch-codeSystem[@root=&quot;2.16.756.5.30.2.1.1.5.1&quot; and @codeSystemName=&quot;VitalSignCodes&quot;]/code/@value">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code aus der Wertetabelle 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1' angegeben werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent être indiqués avec un code LOINC du tableau de valeurs 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono essere indicati con un LOINC Code della tabella di valori 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must be entered with a LOINC code from the table of values 'VitalSignsCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0908" test="cda:code/@code!=&quot;11449-6&quot; or (cda:code/@code=&quot;11449-6&quot; and cda:value/@codeSystem=&quot;2.16.756.5.30.2.1.1.4.1&quot;)">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' Schwangerschaftstatus muss als CE mit codeSystem 2.16.756.5.30.2.1.1.4.1 angegeben werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Le 'signe vital' CDA-CH Etat de la grossesse doit être indiqué comme CE avec le codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' Stato gravidanza devono essere indicati come CE con codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' pregnancy status must be entered as a CE with the codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0909" test="cda:code/@code!=&quot;11449-6&quot; or (cda:code/@code=&quot;11449-6&quot; and cda:value/@code=$cda-ch-codeSystem[@root=&quot;2.16.756.5.30.2.1.1.4.1&quot;]/code/@value)">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' für 'Schwangerschaftstatus' müssen mit einem LOINC Code aus der Wertetabelle 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1' angegeben werden)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH pour 'Etat de la grossesse' doivent être indiqués avec un code LOINC du tableau de valeurs 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1'</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' per 'Stato gravidanza' devono essere indicati con un LOINC Code della tabella di valori 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' for 'Pregnancy status' must be entered with a LOINC code from the table of values 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-0910" test="cda:value">
+				<xhtml:p lang="de-CH">CDA-CH 'Vitalzeichen' müssen ein Wert enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'signes vitaux' CDA-CH doivent contenir une valeur</xhtml:p>
+				<xhtml:p lang="it-CH">I CDA-CH 'Segni vitali' devono contenere un valore</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Vital signs' must contain a value</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Intoleranzliste (Allergien / Unverträglichkeiten)
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.IntoleranceList&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Intoleranzliste (Allergien / Unverträglichkeiten)</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Intoleranzliste (Allergien / Unverträglichkeiten)</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste d'intolérances</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste d'intolérances'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista intolleranze (allergie / intolleranze)</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per la CDA-CH Lista intolleranze (allergie / intolleranze)</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH list of intolerances (Allergies / Intolerances)</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of intolerances (Allergies / Intolerances)</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1001" test="self::cda:section">
+				<xhtml:p lang="de-CH">CDA-CH 'Intoleranzliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste d'intolérances' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista intolleranze' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of intolerances' must be declared as a 'Section' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1002" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Intoleranzliste' muss einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste d'intolérances' CDA-CH doit contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista intolleranze' deve contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of intolerances' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1003" test="(cda:title=&quot;Allergien und Unverträglichkeiten&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Intoleranzliste' in Deutsch muss einen section title 'Allergien und Unverträglichkeiten' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste d'intolérances' CDA-CH en allemand doit contenir un section title 'Allergien und Unverträglichkeiten'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista intolleranze' in tedesco deve contenere un section title 'Allergie e intolleranze'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of intolerances' in German must contain an 'Allergies and intolerances' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1004" test="(cda:title=&quot;Allergies et intolérances&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Intoleranzliste' in Französisch muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste d'intolérances' CDA-CH en français doit contenir un section title 'Allergies et intolérances'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista intolleranze' in francese deve contenere un section title 'Allergies et intolérances'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of intolerances' in French must contain an 'Allergies et intolérances' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1005" test="(cda:title=&quot;Allergie e intolleranze&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Intoleranzliste' in Italienisch muss einen section title 'Allergie e intolleranze' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste d'intolérances' CDA-CH en italien doit contenir un section title 'Allergie e intolleranze'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista intolleranze' in italiano deve contenere un section title 'Allergie e intolleranze'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of intolerances' in Italian must contain an 'Allergie e intolleranze' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1006" test="(cda:title=&quot;Allergies et intolérances&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Intoleranzliste' in Englisch muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste d'intolérances' CDA-CH en anglais doit contenir un section title 'Allergies et intolérances'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista intolleranze' in inglese deve contenere un section title 'Allergie e intolleranze'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of intolerances' in English must contain an 'Allergies and intolerances' section title</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelne Allergie oder Unverträglichkeit
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.IntoleranceL2&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelne Allergie oder Unverträglichkeit L3</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Allergie oder Unverträglichkeit im Level 3</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Allergies et intolérances L3</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une allergie ou intolérance</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Singola allergia o intolleranza L3</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per un'allergia o un'intolleranza Level 3</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L3 single allergy or intolerance</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on an allergy or intolerance on level 3</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1101" test="self::cda:observation">
+				<xhtml:p lang="de-CH">Allergien und Unverträglichkeiten müssen als 'observation' im CDA Body (section 'Allergien und Unverträglichkeiten') deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Allergies et intolérances doivent être déclarées comme 'observation' dans le CDA Body (section 'Allergies et intolérances')</xhtml:p>
+				<xhtml:p lang="it-CH">Le allergie e intolleranze devono essere dichiarate come 'observation' nel CDA Body (section 'Allergie e intolleranze')</xhtml:p>
+				<xhtml:p lang="en">Allergies and intolerances must be declared as an 'Observation' in the CDA Body ('Allergies and intolerances' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1102" test="cda:code/@codeSystem=&quot;2.16.756.5.30.2.1.1.3.1&quot;">
+				<xhtml:p lang="de-CH">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+				<xhtml:p lang="fr-CH">Allergies et intolérances doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+				<xhtml:p lang="it-CH">Le allergie e intolleranze devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+				<xhtml:p lang="en">Allergies and intolerances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1103" test="cda:code/@code=$cda-ch-codeSystem[@root=&quot;2.16.756.5.30.2.1.1.3.1&quot;]/code/@value">
+				<xhtml:p lang="de-CH">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+				<xhtml:p lang="fr-CH">Allergies et intolérances doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+				<xhtml:p lang="it-CH">Le allergie e intolleranze devono contenere un'indicazione strutturata (valore valido della tabella di valori '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+				<xhtml:p lang="en">Allergies and intolerances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1104" test="(cda:code/@code=&quot;Y&quot; and cda:text) or (cda:code/@code!=&quot;Y&quot;)">
+				<xhtml:p lang="de-CH">Allergien und Unverträglichkeiten müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
+				<xhtml:p lang="fr-CH">Allergies et intolérances doivent contenir un texte narratif si le code="Y"</xhtml:p>
+				<xhtml:p lang="it-CH">Le allergie e intolleranze devono contenere un testo narrativo, se code="Y"</xhtml:p>
+				<xhtml:p lang="en">Allergies and intolerances must contain a narrative text if the code="Y"</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Liste mit Arbeitsfähigkeitseinträgen
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitList&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Liste mit Arbeitsfähigkeitseinträgen</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Liste mit Arbeitsfähigkeitseinträgen</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste des capacités de travail</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste des capacités de travail'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista con indicazioni capacità lavorativa</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per la CDA-CH Lista con indicazioni capacità lavorativa</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH list with capacity to work entries</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list with capacity to work entries</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1201" test="self::cda:section">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' must be declared as a 'Section' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1202" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' muss einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH doit contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' deve contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1203" test="(cda:title=&quot;Arbeitsfähigkeit&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' in Deutsch muss einen section title 'Arbeitsfähigkeit' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH en allemand doit contenir un section title 'Arbeitsfähigkeit'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' in tedesco deve contenere un section title 'Arbeitsfähigkeit'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' in German must contain a 'Arbeitsfähigkeit' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1204" test="(cda:title=&quot;Capacité de travail&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' in Französisch muss einen section title 'Capacité de travail' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH en français doit contenir un section title 'Capacité de travail'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' in francese deve contenere un section title 'Capacité de travail'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' in English must contain a 'Capacité de travail' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1205" test="(cda:title=&quot;Capacità lavorativa&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' in Italienisch muss einen section title 'Capacità lavorativa' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' en italien CDA-CH doit contenir un section title 'Capacità lavorativa'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' in italiano deve contenere un section title 'Capacità lavorativa'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' in Italian must contain a 'Capacità lavorativa' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1206" test="(cda:title=&quot;Capacity to work&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' in Englisch muss einen section title 'Capacity to work' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH en anglais doit contenir un section title 'Capacity to work'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' in inglese deve contenere un section title 'Capacity to work'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' in English must contain a 'Capacity to work' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1207" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (OID für LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH doit contenir un codage de la signification de la section selon LOINC (OID pour LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' deve contenere un codice del significato della section secondo LOINC (OID per LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a coding of the significance of the section according to LOINC (OID for LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1208" test="cda:code/@code=&quot;X-ATWRK&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH doit contenir un codage de la signification de la section (code LOINC X-ATWRK selon la lettre abrégée de rééducation VHitG)</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' deve contenere un codice del significato della section (LOINC Code X-ATWRK secondo VHitG REHA Kurzbrief)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a coding of the significance of the section (LOINC Code X-ATWRK according to VHitG REHA short letter)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1209" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitL3&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit' muss mindestens eine observation 'Beurteilung Arbeitsfähigkeit' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Capacité de travail' CDA-CH doit contenir au moins une observation 'Evaluation de la capacité de travail'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Capacità lavorativa' deve contenere almeno una observation 'Valutazione della capacità lavorativa'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Capacity to work' must contain at least an observation 'Assessment of capacity to work'</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Beurteilung Arbeitsfähigkeit im Level 3
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ArbeitsfähigkeitL3&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelne Arbeitsfähigkeit L3</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Arbeitsfähigkeit im Level 3</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Evaluation de la capacité de travail L3</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une évaluation de la capacité de travail</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Singola capacità lavorativa L3</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per una capacità lavorativa Level 3</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L3 individual capacity to work</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on a capacity to work in level 3</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1301" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent être déclarées comme 'observation' dans le CDA Body (section 'Signes vitaux')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono essere dichiarate come 'observation' nel CDA Body (section 'Segni vitali')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must be declared as an 'Observation' in the CDA Body ('Vital signs' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1302" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1303" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and cda:code/@code=&quot;X-ATWRK&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mit LOINC klassifiziert werden (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent être classifiées avec LOINC (code LOINC X-ATWRK selon la lettre abrégée de rééducation VHitG)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono essere classificate con LOINC (LOINC Code X-ATWRK secondo VHitG REHA Kurzbrief)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must be classified with LOINC (LOINC Code X-ATWRK according to VHitG REHA short letter)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1304" test="cda:effectiveTime/cda:low">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen ein 'Gültig ab Datum' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir une 'date valable à partir de'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere una 'Data Valido dal'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments for fitness of work' must contain a 'Valid from date'</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1305" role="warning" test="cda:effectiveTime/cda:high">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' sollten ein 'Gültig bis Datum / Datum der geplanten, nächsten Beurteilung' enthalten (letzte Beurteulung kann nullFlavor='NA' enthalten)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir une 'date valable jusqu'à / date de la prochaine évaluation prévue' (la dernière évaluation peut contenir nullFlavor='NA')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere una 'Data Valido fino al / Data delle prossima valutazione' (l'ultima valutazione può contenere nullFlavor='NA')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain a 'Valid until date/ date of scheduled next assessment' (last assessment can contain nullFlavor='NA')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1306" test="cda:value/@codeSystem=&quot;2.16.756.5.30.2.1.1.6.1&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Anzahl Stunden/Tag enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir la présence raisonnable en heures/jour</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere le ore/giorno ritenute ragionevoli</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain the reasonable number of hours/days</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1307" test="cda:value/@code=$cda-ch-codeSystem[@root=&quot;2.16.756.5.30.2.1.1.6.1&quot;]/code/@value">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Anzahl Stunden/Tag) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitStunden', 2.16.756.5.30.2.1.1.6.1 angegeben werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH (présence raisonnable en heures/jour) doivent être indiquées avec une valeur valable du tableau de valeurs 'Capacité de travail en heures', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' (ore/giorno ritenute ragionevoli) devono essere indicate con un valore valido della tabella di valori 'Capacità lavorativa ore', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' (reasonable number of hours/days) must be entered with a valid value from the table of values 'Capacity to work hours', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1308" test="cda:interpretationCode/@codeSystem=&quot;2.16.756.5.30.2.1.1.7.1&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Arbeitsintensität enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir le degré raisonnable d'intensité du travail</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono contenere l'intensità lavorativa ritenuta ragionevole</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain the reasonable degree of work intensity</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1309" test="cda:interpretationCode/@code=$cda-ch-codeSystem[@root=&quot;2.16.756.5.30.2.1.1.7.1&quot;]/code/@value">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Arbeitsintensität) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitIntensität', 2.16.756.5.30.2.1.1.7.1 angegeben werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH (degré raisonnable d'intensité du travail) doivent être indiquées avec une valeur valable du tableau de valeurs 'Capacité de travail en intensité', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' (intensità lavorativa ritenuta ragionevole) devono essere indicate con un valore valido della tabella di valori 'Intensità lavorativa', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' (reasonable degree of work intensity) must be entered with a valid value from the table of values 'Capacity to work intensity', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1310" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+				<xhtml:p lang="de-CH">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Evaluations de la capacité de travail' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Valutazioni capacità lavorativa' devono indicare almeno il nome del medico che ha formulato la valutazione ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain at least the assessing doctor’s name ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Impfungsstatus
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ImpfungStatusL2&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Impfungsstatus</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu der CDA-CH Impfungsstatus</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Vaccinations</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur les vaccinations</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Stato vaccinazioni</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per il CDA-CH Stato vaccinazioni</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH immunization status</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests for the CDA-CH immunization status</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1401" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Impfung' müssen als 'observation' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Vaccinations' CDA-CH doivent être déclarées comme 'observation' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Vaccinazioni' devono essere dichiarate come 'observation' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'immunization' must be declared as 'observation' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1402" test="cda:code/@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and cda:code/@code=$cda-ch-codeSystem[@codeSystemName=&quot;Immunization&quot;]/code/@value">
+				<xhtml:p lang="de-CH">CDA-CH 'Impfung' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1', Teilmenge Immunization)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Vaccinations' CDA-CH doivent contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1', sous-ensemble immunization)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Vaccinazioni' devono contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1', sottoinsieme 'Immunizzazione')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'immunization' must contain a coding with the meaning of section (valid value from the value table '2.16.840.1.113883.6.1', subset immunization)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1403" test="cda:effectiveTime/cda:low or cda:effectiveTime/@value">
+				<xhtml:p lang="de-CH">CDA-CH 'Impfungen' müssen ein Datum enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Vaccinations' CDA-CH doivent contenir une date</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Vaccinazioni' devono contenere una data</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'immunizations' must contain a date</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Nationalität
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.NationalityL3&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Nationalität</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu CDA-CH Nationalität</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Nationalité</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la nationalité</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Nazionalità</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per il CDA-CH nazionalità</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH citizenship</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests for the CDA-CH citizenship</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1501" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Nationalität' muss als 'observation' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Nationalité' CDA-CH doit être déclarée comme 'observation' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Nazionalità' devono essere dichiarate come 'observation' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'citizenship' must be declared as 'observation' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1502" test="cda:code[@codeSystem=&quot;2.16.756.5.30.1.106.1.10.10&quot; and @code=&quot;103.101.10&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH 'Nationalität' muss eine Codierung der Bedeutung der Observation nach SMEEX enthalten (SMEEX Code 103.101.10 "nationality"; OID für SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Nationalité' CDA-CH doit contenir un codage de la signification de l'observation selon SMEEX (SMEEX Code 103.101.10 "nationality"; OID pour SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Nazionalità' deve contenere un codice del significato della section secondo SMEEX (SMEEX Code 103.101.10 "nationality"; OID per SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'citizenship' must contain a coding of the significance of the section according to SMEEX (SMEEX Code 103.101.10 "nationality"; OID of SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1503" test="cda:value[@xsi:type=&quot;II&quot; and @root=&quot;1.0.3166&quot; and @extension=$ISO_3166-1_Entry/ISO_3166-1_Alpha-2_Code_element]">
+				<xhtml:p lang="de-CH">CDA-CH 'Nationalität' muss einen gültigen alpha-2 code der ISO 3166 Tabelle enthalten (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'Nationalité' CDA-CH doit contenir un code alpha-2 de ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Nazionalità' deve contenere un codice alpha-2 secondo ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'citizenship' must contain an alpha-2 code from ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Behandlungsliste
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ProcList&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Behandlungsliste</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Behandlungsliste</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste de treatments</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste de treatments'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista trattamenti</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per la CDA-CH Lista trattamenti</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH list of treatments</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of treatments</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1601" test="self::cda:section">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista trattamenti' deve essere dichiarata come 'section' nel CDA Body</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' must be declared as a 'Section' in the CDA Body</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1602" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' muss einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH doit contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista trattamenti' deve contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1603" test="(cda:title=&quot;Behandlungen&quot; and //cda:languageCode/@code=&quot;de-CH&quot;) or //cda:languageCode/@code!=&quot;de-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' in Deutsch muss einen section title 'Behandlungen' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH en allemand doit contenir un section title 'Behandlungen'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Lista trattamenti' in tedesco devono contenere un section title 'Behandlungen'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' in German must contain a 'Behandlungen' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1604" test="(cda:title=&quot;Treatments&quot; and //cda:languageCode/@code=&quot;fr-CH&quot;) or //cda:languageCode/@code!=&quot;fr-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' in Französisch muss einen section title 'Treatments' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH en français doit contenir un section title 'Treatments'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Lista trattamenti' in francese devono contenere un section title 'Treatments'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' in French must contain a 'Treatments' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1605" test="(cda:title=&quot;Trattamenti&quot; and //cda:languageCode/@code=&quot;it-CH&quot;) or //cda:languageCode/@code!=&quot;it-CH&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' in Italienisch muss einen section title 'Trattamenti' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH en italien doit contenir un section title 'Trattamenti'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Lista trattamenti' in italiano devono contenere un section title 'Trattamenti'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' in Italian must contain a 'Trattamenti' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1606" test="(cda:title=&quot;Treatments&quot; and //cda:languageCode/@code=&quot;en&quot;) or //cda:languageCode/@code!=&quot;en&quot;">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' in Englisch muss einen section title 'Treatments' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH en anglais doit contenir un section title 'Treatments'</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Lista trattamenti' in inglese devono contenere un section title 'Treatments'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' in English must contain a 'Treatments' section title</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1607" test="cda:code[@codeSystem=&quot;2.16.840.1.113883.6.1&quot; and @code=$cda-ch-codeSystem[@codeSystemName=&quot;TreatmentSectionCode&quot;]/code/@value]">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista trattamenti' deve contenere un codice del significato della section (valore valido della tabella di valori '2.16.840.1.113883.6.1')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1608" test="descendant::*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and (cda:templateId/@extension=&quot;CDA-CH.Body.ProcL1&quot; or cda:templateId/@extension=&quot;CDA-CH.Body.ProcL3&quot;)]">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungsliste' muss mindestens eine procedure 'Behandlung' enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">La 'liste de treatments' CDA-CH doit contenir au moins une procedure 'Treatment'</xhtml:p>
+				<xhtml:p lang="it-CH">La CDA-CH 'Lista trattamenti' deve contenere almeno una procedure 'Trattamento'</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'List of treatments' must contain at least a 'Treatment' procedure</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelne Behandlung im Level 1
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ProcL1&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Behandlungsliste L1</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu den CDA-CH Behandlungsliste</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH liste de treatments L1</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur la 'liste de treatments'</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Lista trattamenti L1</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per la CDA-CH Lista trattamenti</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L1 list of treatments</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on CDA-CH list of treatments</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1701" test="self::cda:procedure">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen als 'procedure' im CDA Body deklariert werden (section 'Behandlungen')</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent être déclarés comme 'procedure' dans le CDA Body (section 'Treatments')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono essere dichiarate come 'observation' nel CDA Body (section 'Trattamenti')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must be declared as an 'Observation' in the CDA Body ('Treatments' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1702" test="cda:effectiveTime">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen ein den Durchführungszeitpunkt resp. -zeitraum enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent contenir le point de temps ou la période d'exécution</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono contenere un punto del tempo o il periodo di attuazione</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must contain a point of time or the period of the execution</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1703" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must contain a narrative text</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelne Behandlung im Level 3
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.ProcL3&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelne Behandlung L3</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Behandlung im Level 3</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH treatment individuel L3</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une treatment individuel</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Trattamenti individuale L3</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per una Trattamento Level 3</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L3 single Treatment</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on a treatment in level 3</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1801" test="self::cda:procedure">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen als 'procedure' im CDA Body deklariert werden (section 'Behandlungen')</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent être déclarés comme 'procedure' dans le CDA Body (section 'Treatments')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono essere dichiarate come 'observation' nel CDA Body (section 'Trattamenti')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must be declared as an 'Observation' in the CDA Body ('Treatments' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1802" test="cda:effectiveTime">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen ein den Durchführungszeitpunkt resp. -zeitraum enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent contenir le point de temps ou la période d'exécution</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono contenere un punto del tempo o il periodo di attuazione</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must contain a point of time or the period of the execution</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1803" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1804" test="cda:code[@codeSystem and @code]">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono contenere un codice e indicare il Code System (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1805" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+				<xhtml:p lang="de-CH">CDA-CH 'Behandlungen' müssen mindestens den Namen des verantwortlichen Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'treatments' CDA-CH doivent indiquer au moins le nom du médecin qui est responsable pur le treatment ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Trattamenti' devono indicare almeno il nome del medico che ha formulato la Trattamenti ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Treatments' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Einzelne Bemerkung im Level 3
+		********************************************************
+		-->
+		<iso:rule  context="*[cda:templateId/@root=&quot;2.16.756.5.30.1.1.1.1.1&quot; and cda:templateId/@extension=&quot;CDA-CH.Body.RemL3&quot;]">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelne Bemerkung L3</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer Bemerkung im Level 3</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH remarque individuel L3</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une remarque individuel</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Osservazione individuale L3</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per una Osservazioni Level 3</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH L3 single remark</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on a remark in level 3</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-1901" test="self::cda:observation">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen als 'observation' im CDA Body deklariert werden (section 'Bemerkungen')</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Remarques')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono essere dichiarate come 'observation' nel CDA Body (section 'Osservazioni')</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must be declared as an 'Observation' in the CDA Body ('Remarks' section)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1902" test="cda:effectiveTime">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen ein Datum der Feststellung enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent contenir une date de constatation</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono contenere una data di constatazione</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must contain a date of detection</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1903" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must contain a narrative text</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1904" test="cda:code[@codeSystem and @code]">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono contenere un codice e indicare il Code System (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1905" test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le Remarque ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono indicare almeno il nome del medico che ha formulato la Osservazioni ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
+			</iso:assert>
+			<iso:assert id="entity_HL7-cda-ch-1906" test="cda:value[@xsi:type=&quot;CE&quot;]">
+				<xhtml:p lang="de-CH">CDA-CH 'Bemerkungen' müssen einen codierten Wert enthalten (mögliche Werteliste: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
+				<xhtml:p lang="fr-CH">Les 'Remarques' CDA-CH doivent contenir un valeur codée (valeurs possible: '2.16.756.5.30.2.1.1.8.1')</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH 'Osservazioni' devono deve contenere un valore codificato (lista dei valori possibile: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
+				<xhtml:p lang="en">CDA-CH 'Remarks' must contain a coded value (possible list of values: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+	<iso:pattern>
+		<!--
+		********************************************************
+		Sections brauchen immer Freitext!
+		********************************************************
+		-->
+		<iso:rule  context="cda:section">
+			<!-- Rule Documentation -->
+			<xhtml:h3 lang="de-CH">CDA-CH Einzelne CDA Body Section</xhtml:h3>
+			<xhtml:p lang="de-CH">Die nachfolgenden Regeln beschreiben die Prüfungen zu einer einzelnen CDA Body Section</xhtml:p>
+			<xhtml:h3 lang="fr-CH">CDA-CH Body Section individuel</xhtml:h3>
+			<xhtml:p lang="fr-CH">Les règles suivantes décrivent les contrôles sur une section CDA Body individuel</xhtml:p>
+			<xhtml:h3 lang="it-CH">CDA-CH Body Section individuale</xhtml:h3>
+			<xhtml:p lang="it-CH">Le regole seguenti descrivono i controlli per un Body Section individuale</xhtml:p>
+			<xhtml:h3 lang="en">CDA-CH individual Body Section</xhtml:h3>
+			<xhtml:p lang="en">The following rules describe the tests on individual Body Section</xhtml:p>
+			<iso:assert id="entity_HL7-cda-ch-2001" test="cda:text">
+				<xhtml:p lang="de-CH">CDA-CH Body Sections müssen einen narrativen Text enthalten</xhtml:p>
+				<xhtml:p lang="fr-CH">Les sections CDA-CH Body doivent contenir un texte narratif</xhtml:p>
+				<xhtml:p lang="it-CH">Le CDA-CH Body Sections devono contenere un testo narrativo</xhtml:p>
+				<xhtml:p lang="en">CDA-CH Body Sections must contain a narrative text</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+
+	<iso:pattern>
+		<!--
+		********************************************************
+		Zeitzone muss bei Timestamps angegeben werden, sobald genauer als Datum (Regel: <CH-TZON>)
+		********************************************************
+		-->
+		<iso:rule context="cda:effectiveTime">
+			<iso:assert test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12}[+-]\d{4}$')">
+				<xhtml:p lang="de-CH">Das Datum muss also dem folgenden Muster entsprechen: YYYYMMDDHHMM+HHMM</xhtml:p>
+				<xhtml:p lang="fr-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="it-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM+HHMM</xhtml:p>
+			</iso:assert>
+			<iso:assert test="not(@value) or @nullFlavor or matches(@value,'^\d{4}\d+') or matches(@value,'^\d{4}$')" >
+				<xhtml:p lang="de-CH">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</xhtml:p>
+				<xhtml:p lang="fr-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="it-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="en">The date must match the following pattern: YYYY[MM[DD]]</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+		<iso:rule context="cda:effectiveTime/cda:low">
+			<iso:assert test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12}[+-]\d{4}$')">
+				<xhtml:p lang="de-CH">Das Datum muss also dem folgenden Muster entsprechen: YYYYMMDDHHMM+HHMM</xhtml:p>
+				<xhtml:p lang="fr-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="it-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM+HHMM</xhtml:p>
+			</iso:assert>
+			<iso:assert test="not(@value) or @nullFlavor or matches(@value,'^\d{4}\d+') or matches(@value,'^\d{4}$')" >
+				<xhtml:p lang="de-CH">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</xhtml:p>
+				<xhtml:p lang="fr-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="it-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="en">The date must match the following pattern: YYYY[MM[DD]]</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+		<iso:rule context="cda:effectiveTime/cda:high">
+			<iso:assert test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12}[+-]\d{4}$')">
+				<xhtml:p lang="de-CH">Das Datum muss also dem folgenden Muster entsprechen: YYYYMMDDHHMM+HHMM</xhtml:p>
+				<xhtml:p lang="fr-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="it-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM+HHMM</xhtml:p>
+			</iso:assert>
+			<iso:assert test="not(@value) or @nullFlavor or matches(@value,'^\d{4}\d+') or matches(@value,'^\d{4}$')" >
+				<xhtml:p lang="de-CH">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</xhtml:p>
+				<xhtml:p lang="fr-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="it-CH">TOTRANSLATE</xhtml:p>
+				<xhtml:p lang="en">The date must match the following pattern: YYYY[MM[DD]]</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+
+	<iso:pattern>
+		<!--
+		********************************************************
+		Lot-Nummer
+		********************************************************
+		-->
+		<iso:rule context="*[cda:templateId/@root=&quot;2.16.840.1.113883.10.20.1.46&quot;]">
+			<iso:assert role="error" test="@classCode='OBS' and @moodCode='EVN'">
+				<xhtml:p lang="en">Dose numbers must be declared by an observation containing classCode='OBS' and moodCode='EVN'</xhtml:p>
+				<xhtml:p lang="de">Lot-Nummern müssen mit einer observation und folgenden Attributen deklariert werden: classCode='OBS' und moodCode='EVN'</xhtml:p>
+			</iso:assert>
+			<iso:assert role="error" test="cda:code[@codeSystem='2.16.840.1.113883.6.1' and @code='30973-2']">
+				<xhtml:p lang="en">Dose numbers must be declared using the LOINC code 30973-2</xhtml:p>
+				<xhtml:p lang="de">Lot-Nummern müssen mit dem LOINC Code 30973-2 deklariert werden</xhtml:p>
+			</iso:assert>
+			<iso:assert role="error" test="cda:statusCode[@code='completed']">
+				<xhtml:p lang="en">Dose numbers must be declared using a completed statusCode</xhtml:p>
+				<xhtml:p lang="de">Lot-Nummern müssen mit statusCode completed angegeben werden</xhtml:p>
+			</iso:assert>
+			<iso:assert role="error" test="cda:value[@xsi:type='INT' and @value]">
+				<xhtml:p lang="en">Dose numbers must be declared in the value element using xsi:type='INT'</xhtml:p>
+				<xhtml:p lang="de">Lot-Nummern müssen im value Element mit xsi:type='INT' angegeben werden</xhtml:p>
+			</iso:assert>
+		</iso:rule>
+	</iso:pattern>
+
+</xs:schema>
+<!-- EOF -->
