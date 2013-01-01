@@ -1,0 +1,32 @@
+/*********************************************************
+  Project specific CSS for Inselspital HL7 CDA Templates
+  Date: 23.01.2012
+*********************************************************/
+/* Logo */
+h1 { 
+	background: transparent url(inselspital.jpg) no-repeat bottom right; 
+}
+/* Header */
+table.head thead tr {
+	background-color: #01A278;
+}
+table.head tr {
+	background-color: #CCEDE4;	
+}
+/* Body Tables */
+table.body tr th {
+	background-color: #AAB2B4;
+}
+table.body tr td {
+	background-color: #EEEEEE;	
+}
+/* Footer */
+table.foot tr th {
+	background-color: #01A278;
+}
+table.foot tr td {
+	background-color: #CCEDE4;
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}
