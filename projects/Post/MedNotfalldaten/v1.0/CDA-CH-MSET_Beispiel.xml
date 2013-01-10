@@ -5,6 +5,7 @@ Medizinische Notfalldaten V1
 History:
 24.10.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
 10.11.2012: Tony Schaller, medshare GmbH (Abschluss Implementierungsleitfaden)
+12.01.2013: Tony Schaller, medshare GmbH (Abgabe an Kunden)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -65,7 +66,6 @@ History:
 				<softwareName>Dummy Middleware</softwareName>
 			</assignedAuthoringDevice>
 		</assignedAuthor>
-
 	</author>
 	<!--
 	<author>
@@ -147,7 +147,7 @@ History:
 	</legalAuthenticator>
 	<participant typeCode='IND'>
 		<!-- VVK-EDI: 2.8.1 Art der Kontaktadresse (optional) -->
-		<functionCode code='2' displayName='Kontaktadresse im medizinischen Umfeld' codeSystem='2.16.756.5.30.1.21012101.3.1.1.12'/>
+		<functionCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.12' displayName='Kontaktadresse im medizinischen Umfeld' />
 		<!-- VVK-EDI: 2.8.2	Angaben zur Kontaktadresse im Format gemäss dem Standard eCH-0010:2006 -->
 		<associatedEntity classCode='ECON'>
 			<addr use='WP'>
@@ -180,10 +180,10 @@ History:
 		</associatedEntity>
 	</participant>
 	<relatedDocument typeCode="XFRM" > 
-    <parentDocument>
-    	<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='3CD57BA0-5FB0-45E9-A206-4C617A89C4B2'/>
-    </parentDocument> 
-  </relatedDocument> 	
+		<parentDocument>
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='3CD57BA0-5FB0-45E9-A206-4C617A89C4B2'/>
+		</parentDocument> 
+	</relatedDocument> 	
 	<authorization>
 		<consent>
 			<code nullFlavor='OTH' codeSystem='2.16.756.5.30.2.1.1.2'>
@@ -286,7 +286,7 @@ History:
 										<high nullFlavor='UNK'/>
 									</effectiveTime>
 									<!-- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -->
-									<value xsi:type='CD' code='05' displayName='Herzrhythmusstörungen' codeSystem='2.16.756.5.30.1.21012101.3.1.1.1' />
+									<value xsi:type='CD' code='05' displayName='Herzrhythmusstörungen' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1' />
 									<author>
 										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
@@ -326,7 +326,7 @@ History:
 										<high nullFlavor='UNK'/>
 									</effectiveTime>
 									<!-- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -->
-									<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.21012101.3.1.1.1'/>
+									<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1'/>
 									<author>
 										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
@@ -771,9 +771,9 @@ History:
 										<low value='20010824'/>
 									</effectiveTime>
 									<!-- VVK-EDI: 2.3.1.2.1	Art der klinischen Reaktion (optional) -->
-									<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.1.21012101.3.1.1.2' displayName='Andere klinische Reaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Soforttypreaktionen'/>
+									<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.1.127.3.1.20080401.2' displayName='Andere klinische Reaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Soforttypreaktionen'/>
 									<!-- VVK-EDI: 2.3.1/2.3.2 Unterscheidung Soforttyp-/Spättypreaktion -->
-									<interpretationCode code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.14' displayName='Soforttypreaktion' codeSystemName='VVK-EDI Reaktionstyp'/>
+									<interpretationCode code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.14' displayName='Soforttypreaktion' codeSystemName='VVK-EDI Reaktionstyp'/>
 									<participant typeCode='CSM'>
 										<participantRole classCode='MANU'>
 											<playingEntity classCode='MMAT'>
@@ -790,7 +790,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
 											<!-- VVK-EDI: 2.3.1.3.1	Nachweismethode (optional) -->
-											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.21012101.3.1.1.3' codeSystemName='VVK-EDI Nachweismethode' />
+											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.127.3.1.20080401.3' codeSystemName='VVK-EDI Nachweismethode' />
 											<statusCode code='completed'/>
 											<!-- VVK-EDI: 2.3.1.3.2	Datum des Nachweises (optional) -->
 											<effectiveTime>
@@ -819,7 +819,7 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Ersatzmedikament' codeSystemName='VVK-EDI Typ des Medikaments zur klinischen Reaktion' />
+											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament' codeSystemName='VVK-EDI Typ des Medikaments zur klinischen Reaktion' />
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-1-med-1' />
@@ -843,7 +843,7 @@ History:
 												<observation classCode='OBS' moodCode='EVN'>
 													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.MedicationSafety' />
 													<!-- VVK-EDI: 2.3.1.4.3		 (optional) -->
-													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.21012101.3.1.1.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
+													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.127.3.1.20080401.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
 													<!-- VVK-EDI: 2.3.1.4.4	Testdatum des Ersatzmedikaments (optional) -->
 													<effectiveTime>
 														<low value='20010831'/>
@@ -873,7 +873,7 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Notfallmedikament'/>
+											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-1-med-2' />
@@ -884,7 +884,7 @@ History:
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
-														<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.5' displayName='Adrenalin injizierbar' >
+														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar' >
 															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
 															<originalText>
 																<reference value='#allergy-1-med-2' />
@@ -972,9 +972,9 @@ History:
 										<low value='20010824'/>
 									</effectiveTime>
 									<!-- VVK-EDI: 2.3.2.1.1	Art der klinischen Reaktion (optional) -->
-									<value xsi:type='CD' code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.6' displayName='Lokalreaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Spättypreaktionen'/>
+									<value xsi:type='CD' code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.6' displayName='Lokalreaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Spättypreaktionen'/>
 									<!-- VVK-EDI: 2.3.1/2.3.2 Unterscheidung Soforttyp-/Spättypreaktion -->
-									<interpretationCode code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.14' displayName='Spättypreaktion' codeSystemName='VVK-EDI Reaktionstyp für Soforttypreaktionen'/>
+									<interpretationCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.14' displayName='Spättypreaktion' codeSystemName='VVK-EDI Reaktionstyp für Soforttypreaktionen'/>
 									<participant typeCode='CSM'>
 										<participantRole classCode='MANU'>
 											<playingEntity classCode='MMAT'>
@@ -1004,7 +1004,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
 											<!-- VVK-EDI: 2.3.1.3.1	Nachweismethode (optional) -->
-											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.21012101.3.1.1.3' codeSystemName='VVK-EDI Nachweismethode' />
+											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.127.3.1.20080401.3' codeSystemName='VVK-EDI Nachweismethode' />
 											<text>
 												<reference value='#allergy-2-method'/>
 											</text>
@@ -1036,7 +1036,7 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Ersatzmedikament'/>
+											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament'/>
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-2-med-1' />
@@ -1060,7 +1060,7 @@ History:
 												<observation classCode='OBS' moodCode='EVN'>
 													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
 													<!-- VVK-EDI: 2.3.1.4.3	Sicherheit des Ersatzmedikaments (optional) -->
-													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.21012101.3.1.1.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
+													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.127.3.1.20080401.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
 													<text>
 														<reference value='#allergy-2-med-1-method'/>
 													</text>
@@ -1094,7 +1094,7 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.15' displayName='Notfallmedikament'/>
+											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-2-med-2' />
@@ -1105,7 +1105,7 @@ History:
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
-														<code code='2' codeSystem='2.16.756.5.30.1.21012101.3.1.1.5' displayName='Adrenalin injizierbar' >
+														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar' >
 															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
 															<originalText>
 																<reference value='#allergy-2-med-2' />
@@ -1253,7 +1253,7 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<!-- VVK-EDI: 2.4.1 Bezeichnung der Medikation (optional) -->
-									<code code='09' codeSystem='2.16.756.5.30.1.21012101.3.1.1.7' displayName='ACE-Hemmer' codeSystemName='VVK-EDI Bezeichnung der Medikation'/>
+									<code code='09' codeSystem='2.16.756.5.30.1.127.3.1.20080401.7' displayName='ACE-Hemmer' codeSystemName='VVK-EDI Bezeichnung der Medikation'/>
 									<!-- VVK-EDI: 2.4.2 Bemerkung zur Indikation der Medikation -->
 									<text>
 										<reference value='#med-1-indication'/>
@@ -1389,7 +1389,7 @@ History:
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.ImmunizationL3.Target' />
 									<!-- VVK-EDI: 2.5.1 Bezeichnung der Impfung (optional) -->
-									<code code='07' codeSystem='2.16.756.5.30.1.21012101.3.1.1.8' displayName='Hepatitis A' codeSystemName='VVK-EDI Bezeichnung der Impfung'/>
+									<code code='07' codeSystem='2.16.756.5.30.1.127.3.1.20080401.8' displayName='Hepatitis A' codeSystemName='VVK-EDI Bezeichnung der Impfung'/>
 									<statusCode code='completed'/>
 								</observation>
 							</entryRelationship>
@@ -1519,7 +1519,7 @@ History:
 							<!-- VVK-EDI: 2.6.1.3 Datum des Blutgruppentests (optional)  -->
 							<effectiveTime value='20010824'/>
 							<!-- VVK-EDI: 2.6.1.1 Bezeichnung der Blutgruppe (optional) -->
-							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.9' displayName='A' codeSystemName='VVK-EDI Bezeichnung der Blutgruppe'/>
+							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.9' displayName='A' codeSystemName='VVK-EDI Bezeichnung der Blutgruppe'/>
 							<author>
 								<!-- VVK-EDI: 2.6.1.6 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
@@ -1546,7 +1546,7 @@ History:
 									</text>
 									<statusCode code='completed'/>
 									<!-- VVK-EDI: 2.6.1.2 Bezeichnung des Rhesusfaktors (optional) -->
-									<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.1.21012101.3.1.1.10' displayName='+ve Vorzeichen positiv' codeSystemName='VVK-EDI Bezeichnung der Rhesusfaktors'/>
+									<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.1.127.3.1.20080401.10' displayName='+ve Vorzeichen positiv' codeSystemName='VVK-EDI Bezeichnung der Rhesusfaktors'/>
 								</observation>
 							</entryRelationship>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
@@ -1579,7 +1579,7 @@ History:
 								<high value='20080210' />
 							</effectiveTime>
 							<!-- VVK-EDI: 2.6.2.1 Indikator für die Anzahl der Bluttransfusionen (optional) -->
-							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.21012101.3.1.1.11' displayName='Einmal' codeSystemName='VVK-EDI Indikator für die Anzahl der Bluttransfusionen'/>
+							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.11' displayName='Einmal' codeSystemName='VVK-EDI Indikator für die Anzahl der Bluttransfusionen'/>
 							<author>
 								<!-- VVK-EDI: 2.6.2.5 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
@@ -1855,7 +1855,7 @@ History:
 								<assignedEntity>
 									<id root='2.16.756.5.30.1.109.3.1' extension='4FE509D0-8BFA-4360-AD00-F98F6D9046A7' />
 									<!-- VVK-EDI: 2.9.1 Art des Verwahrers des Dokuments (optional) -->
-									<code code='1' displayName='Kontaktadresse im privaten Umfeld' codeSystem='2.16.756.5.30.1.21012101.3.1.1.13'/>
+									<code code='1' displayName='Kontaktadresse im privaten Umfeld' codeSystem='2.16.756.5.30.1.127.3.1.20080401.13'/>
 									<addr use='HP'>
 										<streetName>Specimengasse</streetName>
 										<postalCode>8888</postalCode>
