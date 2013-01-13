@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary zu VVK-EDI
+
+History:
+06.01.2013: Tony Schaller, medshare GmbH (Draft)
+13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
+
+********************************************************
+-->
+<systems>
+
+	<!--
+	********************************************************
+	Krankheiten und Unfallfolgen (VVK-EDI, Kapitel 2.1.1; OID: 2.16.756.5.30.1.127.3.1.20080401.1)
+	********************************************************
+	-->
+	<system codeSystemName='disease' root='2.16.756.5.30.1.127.3.1.20080401.1'>
+		<code value='01' displayName='Bronchial asthma'/>
+		<code value='02' displayName='COPD (chronic obstructive pulmonary disease)'/>
+		<code value='03' displayName='CHD (coronary heart disease)'/>
+		<code value='04' displayName='Heart failure'/>
+		<code value='05' displayName='Cardiac arrhythmias'/>
+		<code value='06' displayName='Peripheral arterial occlusive diseases'/>
+		<code value='07' displayName='Abdominal aortic aneurysm'/>
+		<code value='08' displayName='Cerebral seizures'/>
+		<code value='09' displayName='Congenital bleeding disorder'/>
+		<code value='10' displayName='Acquired bleeding disorder'/>
+		<code value='11' displayName='Medication-induced bleeding disorder'/>
+		<code value='12' displayName='Diabetes mellitus'/>
+		<code value='13' displayName='Addisons disease'/>
+		<code value='14' displayName='Glaucoma'/>
+		<code value='15' displayName='Kidney failure/dialysis'/>
+		<code value='16' displayName='Slow acetylation'/>
+		<code value='17' displayName='Chronic liver disease'/>
+		<code value='18' displayName='Hyperthyroidism'/>
+		<code value='19' displayName='Infectious diseases'/>
+		<code value='20' displayName='Missing organ'/>
+		<code value='21' displayName='Vascular implant'/>
+		<code value='22' displayName='Artificial heart valve'/>
+		<code value='23' displayName='Vascular insert (stents, clips)'/>
+		<code value='24' displayName='Joint prosthesis'/>
+		<code value='25' displayName='In situ pacemaker / defibrillator'/>
+		<code value='26' displayName='Osteosynthesis material'/>
+		<code value='27' displayName='Glass eye'/>
+		<code value='28' displayName='Contact Lenses'/>
+		<code value='29' displayName='Removable prostheses'/>
+		<code value='30' displayName='Other illness or injury'/>
+	</system>
+
+	<!--
+	********************************************************
+	Klinische Reaktion (VVK-EDI, Kapitel 2.3.1.2.1; OID: 2.16.756.5.30.1.127.3.1.20080401.2)
+	********************************************************
+	-->
+	<system codeSystemName='imReaction' root='2.16.756.5.30.1.127.3.1.20080401.2'>
+		<code value='1' displayName='Angioedema'/>
+		<code value='2' displayName='Urticaria'/>
+		<code value='3' displayName='Asthma, bronchospasm'/>
+		<code value='4' displayName='Colics, diarrhoea'/>
+		<code value='5' displayName='Anaphylactic shock'/>
+		<code value='6' displayName='Other clinical reaction'/>
+	</system>
+
+	<!--
+	********************************************************
+	Nachweismethode (VVK-EDI, Kapitel 2.3.1.3.1; OID: 2.16.756.5.30.1.127.3.1.20080401.3)
+	********************************************************
+	-->
+	<system codeSystemName='testMethod' root='2.16.756.5.30.1.127.3.1.20080401.3'>
+		<code value='1' displayName='Medical history'/>
+		<code value='2' displayName='Clinical manifestation'/>
+		<code value='3' displayName='Skin test (prick, intradermal)'/>
+		<code value='4' displayName='Patch test (epicutaneous test)'/>
+		<code value='5' displayName='Specific antibodies'/>
+		<code value='6' displayName='Provocation test'/>
+		<code value='7' displayName='Cellular test'/>
+		<code value='8' displayName='Other evidence of hypersensitivity'/>
+	</system>
+
+	<!--
+	********************************************************
+	Sicherheit des Ersatzmedikaments (VVK-EDI, Kapitel 2.3.1.4.3; OID: 2.16.756.5.30.1.127.3.1.20080401.4)
+	********************************************************
+	-->
+	<system codeSystemName='subsReliability' root='2.16.756.5.30.1.127.3.1.20080401.4'>
+		<code value='1' displayName='provoked'/>
+		<code value='2' displayName='tested'/>
+		<code value='3' displayName='recommended'/>
+	</system>
+
+	<!--
+	********************************************************
+	Bezeichnung des Notfallmedikaments (VVK-EDI, Kapitel 2.3.1.5.1; OID: 2.16.756.5.30.1.127.3.1.20080401.5)
+	********************************************************
+	-->
+	<system codeSystemName='emMedicine' root='2.16.756.5.30.1.127.3.1.20080401.5'>
+		<code value='1' displayName='Antihistamine and corticosteroid tablets'/>
+		<code value='2' displayName='Injectable adrenaline'/>
+		<code value='3' displayName='Inhaled medication'/>
+		<code value='4' displayName='Other medications'/>
+	</system>
+
+	<!--
+	********************************************************
+	Art der klinischen Reaktion (VVK-EDI, Kapitel 2.3.2.1.1; OID: 2.16.756.5.30.1.127.3.1.20080401.6)
+	********************************************************
+	-->
+	<system codeSystemName='deReaction' root='2.16.756.5.30.1.127.3.1.20080401.6'>
+		<code value='1' displayName='Eczema'/>
+		<code value='2' displayName='Localised reaction'/>
+		<code value='3' displayName='Blistering, vasculitis'/>
+		<code value='4' displayName='Other clinical reaction'/>
+	</system>
+
+	<!--
+	********************************************************
+	Bezeichnung der Medikation (VVK-EDI, Kapitel 2.4.1; OID: 2.16.756.5.30.1.127.3.1.20080401.7)
+	********************************************************
+	-->
+	<system codeSystemName='medication' root='2.16.756.5.30.1.127.3.1.20080401.7'>
+		<code value='01' displayName='Antiepileptic'/>
+		<code value='02' displayName='Antidepressant'/>
+		<code value='03' displayName='Antipsychotic'/>
+		<code value='04' displayName='Antidementia agent'/>
+		<code value='05' displayName='Opiates'/>
+		<code value='06' displayName='NSAR'/>
+		<code value='07' displayName='Tranquiliser'/>
+		<code value='08' displayName='Beta blocker'/>
+		<code value='09' displayName='ACE inhibitor'/>
+		<code value='10' displayName='Diuretics'/>
+		<code value='11' displayName='Calcium antagonist'/>
+		<code value='12' displayName='Nitrate preparation'/>
+		<code value='13' displayName='Antiarrhythmic agent'/>
+		<code value='14' displayName='Digitalis'/>
+		<code value='15' displayName='Aldosterone antagonist'/>
+		<code value='16' displayName='Betamimetic agent  /antiasthmatic agent'/>
+		<code value='17' displayName='Immunosuppressant'/>
+		<code value='18' displayName='Platelet aggregation inhibitor'/>
+		<code value='19' displayName='Anticoagulant, e.g. Marcumar or heparin'/>
+		<code value='20' displayName='Antihistamines'/>
+		<code value='21' displayName='Factor VIII/IX'/>
+		<code value='22' displayName='Desmopressin, e.g. Minirin'/>
+		<code value='23' displayName='Antidiabetic agents, insulin'/>
+		<code value='24' displayName='Cortisone/corticosteroids'/>
+		<code value='25' displayName='Other medications'/>
+	</system>
+
+	<!--
+	********************************************************
+	Bezeichnung der Impfung (VVK-EDI, Kapitel 2.5.1; OID: 2.16.756.5.30.1.127.3.1.20080401.8)
+	********************************************************
+	-->
+	<system codeSystemName='vaccination' root='2.16.756.5.30.1.127.3.1.20080401.8'>
+		<code value='01' displayName='Diphtheria'/>
+		<code value='02' displayName='Tetanus – lockjaw'/>
+		<code value='03' displayName='Pertussis – whooping cough'/>
+		<code value='04' displayName='Poliomyelitis – infantile paralysis'/>
+		<code value='05' displayName='Haemophilus influenzae type b (Hib)'/>
+		<code value='06' displayName='Hepatitis B'/>
+		<code value='07' displayName='Hepatitis A'/>
+		<code value='08' displayName='Measles'/>
+		<code value='09' displayName='Mumps'/>
+		<code value='10' displayName='Rubella'/>
+		<code value='11' displayName='Human papilloma viruses (HPV)'/>
+		<code value='12' displayName='Chickenpox'/>
+		<code value='13' displayName='Pneumococci'/>
+		<code value='14' displayName='Meningococci'/>
+		<code value='15' displayName='Tick-borne encephalitis (FSME, TBE)'/>
+		<code value='16' displayName='Tuberculosis (BCG)'/>
+		<code value='17' displayName='Influenza'/>
+		<code value='18' displayName='Rabies'/>
+		<code value='19' displayName='Yellow fever'/>
+		<code value='20' displayName='Japanese encephalitis'/>
+		<code value='21' displayName='Typhoid fever'/>
+		<code value='22' displayName='Cholera'/>
+		<code value='23' displayName='Anthrax – splenic fever'/>
+		<code value='24' displayName='Other vaccines'/>
+	</system>
+
+
+	<!--
+	********************************************************
+	Bezeichnung der Blutgruppe (VVK-EDI, Kapitel 2.6.1.1; OID: 2.16.756.5.30.1.127.3.1.20080401.9)
+	********************************************************
+	-->
+	<system codeSystemName='Bloodgroup' root='2.16.756.5.30.1.127.3.1.20080401.9'>
+		<code value='0' displayName='O' />
+		<code value='1' displayName='A' />
+		<code value='2' displayName='B' />
+		<code value='3' displayName='AB' />
+	</system>
+
+	<!--
+	********************************************************
+	Bezeichnung des Rhesusfaktors (VVK-EDI, Kapitel 2.6.1.2; OID: 2.16.756.5.30.1.127.3.1.20080401.10)
+	********************************************************
+	-->
+	<system codeSystemName='Rhesusfactor' root='2.16.756.5.30.1.127.3.1.20080401.10'>
+		<code value='0' displayName='+ve Vorzeichen positiv' />
+		<code value='1' displayName='-ve Vorzeichen negativ' />
+	</system>
+
+	<!--
+	********************************************************
+	Indikator für die Anzahl der Bluttransfusionen (VVK-EDI, Kapitel 2.6.2.1; OID: 2.16.756.5.30.1.127.3.1.20080401.11)
+	********************************************************
+	-->
+	<system codeSystemName='transfusions' root='2.16.756.5.30.1.127.3.1.20080401.11'>
+		<code value='0' displayName='Never' />
+		<code value='1' displayName='Once' />
+		<code value='2' displayName='More than once' />
+	</system>
+
+	<!--
+	********************************************************
+	Art der Kontaktadresse (VVK-EDI, Kapitel 2.8.1; OID: 2.16.756.5.30.1.127.3.1.20080401.12)
+	********************************************************
+	-->
+	<system codeSystemName='contactType' root='2.16.756.5.30.1.127.3.1.20080401.12'>
+		<code value='1' displayName='Private contact address'/>
+		<code value='2' displayName='Medical field contact address'/>
+	</system>
+
+	<!--
+	********************************************************
+	Art des Verwahrers des Dokuments (VVK-EDI, Kapitel 2.9.1; OID: 2.16.756.5.30.1.127.3.1.20080401.13)
+	********************************************************
+	-->
+	<system codeSystemName='docKeeper' root='2.16.756.5.30.1.127.3.1.20080401.13'>
+		<code value='0' displayName='Never' />
+		<code value='1' displayName='Once' />
+		<code value='2' displayName='More than once' />
+	</system>
+
+	<!--
+	********************************************************
+	Reaktionstypen der klinischen Reaktion (VVK-EDI, Kapitel 2.3.1/2.3.2; OID: 2.16.756.5.30.1.127.3.1.20080401.14)
+	********************************************************
+	-->
+	<system codeSystemName='reactionType' root='2.16.756.5.30.1.127.3.1.20080401.14'>
+		<code value='1' displayName='immediateResponseType' />
+		<code value='2' displayName='delayedResponseType' />
+	</system>
+
+	<!--
+	********************************************************
+	Typ des Medikaments zur klinischen Reaktion (VVK-EDI, Kapitel 2.3.1.4/2.3.1.5; OID: 2.16.756.5.30.1.127.3.1.20080401.15)
+	********************************************************
+	-->
+	<system codeSystemName='reactionMedType' root='2.16.756.5.30.1.127.3.1.20080401.15'>
+		<code value='1' displayName='SubstituteMedicine' />
+		<code value='2' displayName='EmergencyMedicine' />
+	</system>
+
+</systems>
