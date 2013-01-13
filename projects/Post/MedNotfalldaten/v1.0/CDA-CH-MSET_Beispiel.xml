@@ -5,7 +5,7 @@ Medizinische Notfalldaten V1
 History:
 24.10.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
 10.11.2012: Tony Schaller, medshare GmbH (Abschluss Implementierungsleitfaden)
-12.01.2013: Tony Schaller, medshare GmbH (Abgabe an Kunden)
+13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -147,7 +147,7 @@ History:
 	</legalAuthenticator>
 	<participant typeCode='IND'>
 		<!-- VVK-EDI: 2.8.1 Art der Kontaktadresse (optional) -->
-		<functionCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.12' displayName='Kontaktadresse im medizinischen Umfeld' />
+		<functionCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.12' displayName='Kontaktadresse im medizinischen Umfeld'  codeSystemName='kindOfAddressee (ICR-DHA, chapter 2.8.1)'/>
 		<!-- VVK-EDI: 2.8.2	Angaben zur Kontaktadresse im Format gemäss dem Standard eCH-0010:2006 -->
 		<associatedEntity classCode='ECON'>
 			<addr use='WP'>
@@ -200,7 +200,11 @@ History:
 	******************************************************** -->
 	<component>
 		<structuredBody>
-			<!-- Krankheiten und Unfallfolgen -->
+
+			<!--
+			********************************************************
+			Krankheiten und Unfallfolgen
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: Active problems section 1.3.6.1.4.1.19376.1.5.3.1.3.6-->
 				<section>
@@ -264,29 +268,25 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='25D5534A-49FA-47E3-A140-35E9D3B20D02'/>
 							<code nullFlavor='NA' />
-							<text nullFlavor='NA' />
 							<statusCode code='active'/>
 							<effectiveTime>
-								<low nullFlavor='NA' />
-								<high nullFlavor='NA' />
+								<low nullFlavor='UNK' />
 							</effectiveTime>
 							<entryRelationship typeCode='SUBJ' inversionInd='false'>
 								<!-- Problem Entry - Krankheiten und Unfallfolgen / Herzrhythmusstörungen -->
-								<observation classCode='OBS' moodCode='EVN'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='FE6A33B8-0867-4A18-A1F0-C5B340A5AE35'/>
 									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
-									<text>
-										<reference value='#ku11'/>
-									</text>
+									<text nullFlavor='NA' />
 									<statusCode code='completed'/>
 									<effectiveTime>
 										<low nullFlavor='UNK'/>
 										<high nullFlavor='UNK'/>
 									</effectiveTime>
 									<!-- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -->
-									<value xsi:type='CD' code='05' displayName='Herzrhythmusstörungen' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1' />
+									<value xsi:type='CD' code='05' displayName='Herzrhythmusstörungen' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1' codeSystemName='diseaseName (ICR-DHA, chapter 2.1.1)' />
 									<author>
 										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
 										<time value='20120121' />
@@ -310,38 +310,37 @@ History:
 									</entryRelationship>
 								</observation>
 							</entryRelationship>
+							<!--
 							<entryRelationship typeCode='SUBJ' inversionInd='false'>
-								<!-- Problem Entry - Krankheiten und Unfallfolgen / Diabetes mellitus -->
-								<observation classCode='OBS' moodCode='EVN'>
+								<!-/- Problem Entry - Krankheiten und Unfallfolgen / Diabetes mellitus -/->
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='72FABD7E-931B-4A02-B8AC-9F7FFAFB5645'/>
 									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
-									<text>
-										<reference value='#ku21'/>
-									</text>
+									<text nullFlavor='NA' />
 									<statusCode code='completed'/>
 									<effectiveTime>
 										<low nullFlavor='UNK'/>
 										<high nullFlavor='UNK'/>
 									</effectiveTime>
-									<!-- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -->
-									<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1'/>
+									<!-/- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -/->
+									<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1' codeSystemName='diseaseName (ICR-DHA, chapter 2.1.1)'/>
 									<author>
-										<!-- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -->
+										<!-/- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -/->
 										<time value='20120121' />
 										<assignedAuthor>
-											<!-- VVK-EDI: 2.1.3 GLN der eintragenden Person (obligatorisch) -->
+											<!-/- VVK-EDI: 2.1.3 GLN der eintragenden Person (obligatorisch) -/->
 											<id extension='7608888888888' root='1.3.88'/>
 										</assignedAuthor>
 									</author>
-									<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+									<!-/- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -/->
 									<entryRelationship typeCode='SUBJ' inversionInd='true'>
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
-											<!-- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -->
+											<!-/- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -/->
 											<text>
 												<reference value='#ku22'/>
 											</text>
@@ -351,12 +350,16 @@ History:
 									</entryRelationship>
 								</observation>
 							</entryRelationship>
+							-->
 						</act>
 					</entry>
 				</section>
 			</component>
 
-			<!-- Transplantationsdaten -->
+			<!--
+			********************************************************
+			Transplantationsdaten
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: [N/A] -->
 				<!-- VVK-EDI: Transplantationsdaten Section (2.16.756.5.30.1.1.1.1.3.2.1;extension='CDA-CH.MSET.Body.TransplantsL2' -->
@@ -443,20 +446,21 @@ History:
 							<statusCode code='active'/>
 							<effectiveTime>
 								<low nullFlavor='UNK'/>
-								<high nullFlavor='UNK'/>
 							</effectiveTime>
 							<entryRelationship typeCode='SUBJ' inversionInd='false'>
 								<!-- Problem Entry - Transplantationsdaten / Herztransplantation angemeldet -->
-								<observation classCode='OBS' moodCode='EVN'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='D28C3F06-FCA9-49A9-AD95-900B55D68B1E'/>
 									<code code='64572001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Condition' />
-									<text nullFlavor='NA' />
+									<text>
+										<reference value='#tr11'></reference>
+									</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
-										<low nullFlavor='NA'/>
-										<high nullFlavor='NA'/>
+										<low nullFlavor='UNK'/>
+										<high nullFlavor='UNK'/>
 									</effectiveTime>
 									<value xsi:type='CD' nullFlavor='NA'/>
 									<author>
@@ -484,22 +488,22 @@ History:
 							</entryRelationship>
 							<entryRelationship typeCode='SUBJ' inversionInd='false'>
 								<!-- Problem Entry - Transplantationsdaten / Niere -->
-								<observation classCode='OBS' moodCode='EVN'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false' >
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='55F6933A-7DE7-4E51-9C7F-1ED0410ADA3C'/>
 									<!-- VVK-EDI: 2.2.2.2 Schweizerische Transplantationsnummer (optional) -->
-									<id root='2.16.756.5.30.19831983.1' extension='RS-2001-4645'/>
+									<id root='2.16.756.5.30.1.129.1.1.1' extension='RS-2001-4645'/>
 									<code code='404684003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Finding' />
 									<!-- VVK-EDI: 2.2.2.1 Name des transplantierten Organs oder der transplantierten Gewebe und Zellen (optional, mehrfach) -->
 									<text>
-										<reference value='#tr21'/>
+										<reference value='#tr21'></reference>
 									</text>
 									<statusCode code='completed'/>
 									<!-- VVK-EDI: 2.2.2.3 Datum der Transplantation (optional) -->
 									<effectiveTime>
 										<low value='19830121' />
-										<high nullFlavor='NA' />
+										<high nullFlavor='UNK' />
 									</effectiveTime>
 									<value xsi:type='CD' nullFlavor='NA'/>
 									<author>
@@ -530,7 +534,10 @@ History:
 				</section>
 			</component>
 
-			<!-- Allergien -->
+			<!--
+			********************************************************
+			Allergien
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: Allergies and Other Adverse Reactions Section 1.3.6.1.4.1.19376.1.5.3.1.3.13 -->
 				<section>
@@ -736,7 +743,6 @@ History:
 							<statusCode code='active'/>
 							<effectiveTime>
 								<low nullFlavor='UNK'/>
-								<high nullFlavor='UNK'/>
 							</effectiveTime>
 							<author>
 								<!-- VVK-EDI: 2.3.1.7	Datum der Eintragung (obligatorisch) -->
@@ -760,7 +766,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<templateId root='2.16.840.1.113883.10.20.1.28' />
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C18C3277-FBCA-46DB-8069-7C66B791977D'/>
-									<code code='OINT' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType'/>
+									<code code='OINT' codeSystem='2.16.840.1.113883.5.4' displayName='other intolerance' codeSystemName='ObservationIntoleranceType'/>
 									<!-- VVK-EDI: 2.3.1.1.1	Allgemeine Bezeichnung (optional) -->
 									<text>
 										<reference value='#allergy-1'/>
@@ -769,11 +775,12 @@ History:
 									<!-- VVK-EDI: 2.3.1.2.2	Datum der klinischen Reaktion (optional) -->
 									<effectiveTime>
 										<low value='20010824'/>
+										<high nullFlavor='UNK' />
 									</effectiveTime>
 									<!-- VVK-EDI: 2.3.1.2.1	Art der klinischen Reaktion (optional) -->
-									<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.1.127.3.1.20080401.2' displayName='Andere klinische Reaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Soforttypreaktionen'/>
+									<value xsi:type='CD' code='5' codeSystem='2.16.756.5.30.1.127.3.1.20080401.2' displayName='Andere klinische Reaktion' codeSystemName='immediateResponseTypeOfClinicalReaction (ICR-DHA, chapter 2.3.1.2.1)'/>
 									<!-- VVK-EDI: 2.3.1/2.3.2 Unterscheidung Soforttyp-/Spättypreaktion -->
-									<interpretationCode code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.14' displayName='Soforttypreaktion' codeSystemName='VVK-EDI Reaktionstyp'/>
+									<interpretationCode code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.14' displayName='Soforttypreaktion' codeSystemName='ResponseTypes for ClinicalReactions (ICR-DHA, chapter 2.3)'/>
 									<participant typeCode='CSM'>
 										<participantRole classCode='MANU'>
 											<playingEntity classCode='MMAT'>
@@ -790,15 +797,16 @@ History:
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
 											<!-- VVK-EDI: 2.3.1.3.1	Nachweismethode (optional) -->
-											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.127.3.1.20080401.3' codeSystemName='VVK-EDI Nachweismethode' />
+											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.127.3.1.20080401.3' codeSystemName='typeOfAllergyTest (ICR-DHA, chapter 2.3.1.3.1)' />
 											<statusCode code='completed'/>
 											<!-- VVK-EDI: 2.3.1.3.2	Datum des Nachweises (optional) -->
 											<effectiveTime>
 												<low value='20010830'/>
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
+												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -807,7 +815,7 @@ History:
 														<reference value='#allergy-1-method-comment'/>
 													</text>
 													<statusCode code='completed'/>
-												</observation>
+												</act>
 											</entryRelationship>
 										</observation>
 									</entryRelationship>
@@ -819,12 +827,26 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament' codeSystemName='VVK-EDI Typ des Medikaments zur klinischen Reaktion' />
+											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament' codeSystemName='ClinicalReactionMedicationType (ICR-DHA)' />
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-1-med-1' />
 											</text>
 											<statusCode code='completed'/>
+											<effectiveTime xsi:type='IVL_TS'>
+												<!-- Wirkzeitraum -->
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
+											</effectiveTime>
+											<effectiveTime xsi:type='PIVL_TS' operator='A'>
+												<!-- Dosierung -->
+												<phase nullFlavor='UNK' />
+												<period nullFlavor='UNK' />
+											</effectiveTime>
+											<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+											<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
+											<doseQuantity nullFlavor='UNK' />
+											<rateQuantity nullFlavor='UNK' />
 											<consumable>
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
@@ -836,23 +858,25 @@ History:
 																<reference value='#allergy-1-med-1-generic' />
 															</originalText>
 														</code>
+														<name>Dummy Soforttypreaktion10</name>
 													</manufacturedMaterial>
 												</manufacturedProduct>
 											</consumable>
 											<entryRelationship typeCode='REFR' inversionInd='false'>
 												<observation classCode='OBS' moodCode='EVN'>
 													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.MedicationSafety' />
-													<!-- VVK-EDI: 2.3.1.4.3		 (optional) -->
-													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.127.3.1.20080401.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
+													<!-- VVK-EDI: 2.3.1.4.3 Sicherheit des Ersatzmedikaments (optional) -->
+													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.127.3.1.20080401.4' codeSystemName='reliabilityOfSubstituteMedicine (ICR-DHA, chapter 2.3.1.4.3)' />
 													<!-- VVK-EDI: 2.3.1.4.4	Testdatum des Ersatzmedikaments (optional) -->
 													<effectiveTime>
 														<low value='20010831'/>
+														<high nullFlavor='UNK' />
 													</effectiveTime>
 												</observation>
 											</entryRelationship>
 											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
+												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -861,7 +885,7 @@ History:
 														<reference value='#allergy-1-med-1-comment'/>
 													</text>
 													<statusCode code='completed'/>
-												</observation>
+												</act>
 											</entryRelationship>
 										</substanceAdministration>
 									</entryRelationship>
@@ -873,23 +897,38 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament'/>
+											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament'  codeSystemName='ClinicalReactionMedicationType (ICR-DHA)'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-1-med-2' />
 											</text>
 											<statusCode code='completed'/>
+											<effectiveTime xsi:type='IVL_TS'>
+												<!-- Wirkzeitraum -->
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
+											</effectiveTime>
+											<effectiveTime xsi:type='PIVL_TS' operator='A'>
+												<!-- Dosierung -->
+												<phase nullFlavor='UNK' />
+												<period nullFlavor='UNK' />
+											</effectiveTime>
+											<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+											<routeCode code='IMD' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Injektion, tief intramuskulär' />
+											<doseQuantity nullFlavor='UNK' />
+											<rateQuantity nullFlavor='UNK' />
 											<consumable>
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
-														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar' >
+														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar'  codeSystemName='nameOfEmergencyMedicine (ICR-DHA, chapter 2.3.1.5.1)'>
 															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
 															<originalText>
 																<reference value='#allergy-1-med-2' />
 															</originalText>
 														</code>
+														<name>Adrenalin injizierbar</name>
 													</manufacturedMaterial>
 												</manufacturedProduct>
 											</consumable>
@@ -936,7 +975,6 @@ History:
 							<statusCode code='active'/>
 							<effectiveTime>
 								<low nullFlavor='UNK'/>
-								<high nullFlavor='UNK'/>
 							</effectiveTime>
 							<author>
 								<!-- VVK-EDI: 2.3.1.7	Datum der Eintragung (obligatorisch) -->
@@ -961,7 +999,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<templateId root='2.16.840.1.113883.10.20.1.28' />
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C18C3277-FBCA-46DB-8069-7C66B791977D'/>
-									<code code='OINT' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType'/>
+									<code code='OINT' codeSystem='2.16.840.1.113883.5.4' displayName='other intolerance' codeSystemName='ObservationIntoleranceType'/>
 									<!-- VVK-EDI: 2.3.1.1.1	Allgemeine Bezeichnung (optional) -->
 									<text>
 										<reference value='#allergy-2'/>
@@ -970,11 +1008,12 @@ History:
 									<!-- VVK-EDI: 2.3.1.2.2	Datum der klinischen Reaktion (optional) -->
 									<effectiveTime>
 										<low value='20010824'/>
+										<high nullFlavor='UNK' />
 									</effectiveTime>
 									<!-- VVK-EDI: 2.3.2.1.1	Art der klinischen Reaktion (optional) -->
-									<value xsi:type='CD' code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.6' displayName='Lokalreaktion' codeSystemName='VVK-EDI Art der klinischen Reaktion für Spättypreaktionen'/>
+									<value xsi:type='CD' code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.6' displayName='Lokalreaktion' codeSystemName='delayedResponseTypeOfClinicalReaction (ICR-DHA, chapter 2.3.2.1.1)'/>
 									<!-- VVK-EDI: 2.3.1/2.3.2 Unterscheidung Soforttyp-/Spättypreaktion -->
-									<interpretationCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.14' displayName='Spättypreaktion' codeSystemName='VVK-EDI Reaktionstyp für Soforttypreaktionen'/>
+									<interpretationCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.14' displayName='Spättypreaktion' codeSystemName='ResponseTypes for ClinicalReactions (ICR-DHA, chapter 2.3)'/>
 									<participant typeCode='CSM'>
 										<participantRole classCode='MANU'>
 											<playingEntity classCode='MMAT'>
@@ -1004,7 +1043,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
 											<!-- VVK-EDI: 2.3.1.3.1	Nachweismethode (optional) -->
-											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.127.3.1.20080401.3' codeSystemName='VVK-EDI Nachweismethode' />
+											<code code='1' displayName='Anamnese' codeSystem='2.16.756.5.30.1.127.3.1.20080401.3' codeSystemName='typeOfAllergyTest (ICR-DHA, chapter 2.3.1.3.1)' />
 											<text>
 												<reference value='#allergy-2-method'/>
 											</text>
@@ -1012,10 +1051,11 @@ History:
 											<!-- VVK-EDI: 2.3.1.3.2	Datum des Nachweises (optional) -->
 											<effectiveTime>
 												<low value='20010830'/>
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
+												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -1024,7 +1064,7 @@ History:
 														<reference value='#allergy-2-method-comment'/>
 													</text>
 													<statusCode code='completed'/>
-												</observation>
+												</act>
 											</entryRelationship>
 										</observation>
 									</entryRelationship>
@@ -1036,12 +1076,26 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament'/>
+											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament' codeSystemName='ClinicalReactionMedicationType (ICR-DHA)'/>
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-2-med-1' />
 											</text>
 											<statusCode code='completed'/>
+											<effectiveTime xsi:type='IVL_TS'>
+												<!-- Wirkzeitraum -->
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
+											</effectiveTime>
+											<effectiveTime xsi:type='PIVL_TS' operator='A'>
+												<!-- Dosierung -->
+												<phase nullFlavor='UNK' />
+												<period nullFlavor='UNK' />
+											</effectiveTime>
+											<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+											<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
+											<doseQuantity nullFlavor='UNK' />
+											<rateQuantity nullFlavor='UNK' />
 											<consumable>
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
@@ -1053,14 +1107,15 @@ History:
 																<reference value='#allergy-2-med-1-generic' />
 															</originalText>
 														</code>
+														<name>Dummy Spättypreaktion10</name>
 													</manufacturedMaterial>
 												</manufacturedProduct>
 											</consumable>
 											<entryRelationship typeCode='REFR' inversionInd='false'>
 												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.Method' />
+													<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.AllergyL3.MedicationSafety' />
 													<!-- VVK-EDI: 2.3.1.4.3	Sicherheit des Ersatzmedikaments (optional) -->
-													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.127.3.1.20080401.4' codeSystemName='VVK-EDI Sicherheit des Ersatzmedikaments' />
+													<code code='1' displayName='provoziert' codeSystem='2.16.756.5.30.1.127.3.1.20080401.4' codeSystemName='reliabilityOfSubstituteMedicine (ICR-DHA, chapter 2.3.1.4.3)' />
 													<text>
 														<reference value='#allergy-2-med-1-method'/>
 													</text>
@@ -1068,12 +1123,13 @@ History:
 													<!-- VVK-EDI: 2.3.1.4.4	Testdatum des Ersatzmedikaments (optional) -->
 													<effectiveTime>
 														<low value='20010831'/>
+														<high nullFlavor='UNK' />
 													</effectiveTime>
 												</observation>
 											</entryRelationship>
 											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
+												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -1082,7 +1138,7 @@ History:
 														<reference value='#allergy-2-med-1-comment'/>
 													</text>
 													<statusCode code='completed'/>
-												</observation>
+												</act>
 											</entryRelationship>
 										</substanceAdministration>
 									</entryRelationship>
@@ -1094,23 +1150,38 @@ History:
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 											<id extension='7601001002593' root='1.3.88' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
-											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament'/>
+											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament' codeSystemName='ClinicalReactionMedicationType (ICR-DHA)'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
 											<text>
 												<reference value='#allergy-2-med-2' />
 											</text>
 											<statusCode code='completed'/>
+											<effectiveTime xsi:type='IVL_TS'>
+												<!-- Wirkzeitraum -->
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
+											</effectiveTime>
+											<effectiveTime xsi:type='PIVL_TS' operator='A'>
+												<!-- Dosierung -->
+												<phase nullFlavor='UNK' />
+												<period nullFlavor='UNK' />
+											</effectiveTime>
+											<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+											<routeCode code='IMD' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Injektion, tief intramuskulär' />
+											<doseQuantity nullFlavor='UNK' />
+											<rateQuantity nullFlavor='UNK' />
 											<consumable>
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
 													<manufacturedMaterial>
-														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar' >
+														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar' codeSystemName='nameOfEmergencyMedicine (ICR-DHA, chapter 2.3.1.5.1)'>
 															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
 															<originalText>
 																<reference value='#allergy-2-med-2' />
 															</originalText>
 														</code>
+														<name>Adrenalin injizierbar</name>
 													</manufacturedMaterial>
 												</manufacturedProduct>
 											</consumable>
@@ -1136,7 +1207,10 @@ History:
 				</section>
 			</component>
 
-			<!-- Medikation -->
+			<!--
+			********************************************************
+			Medikation
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: Medication Summary Section 1.3.6.1.4.1.12559.11.10.1.3.1.2.3  -->
 				<section>
@@ -1145,7 +1219,7 @@ History:
 					<templateId root='2.16.840.1.113883.10.20.1.8' />
 					<templateId root='1.3.6.1.4.1.12559.11.10.1.3.1.2.3' />
 					<code code='10160-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of medication use' />
-					<title>Medikamente</title>
+					<title>Aktuelle Medikation</title>
 					<text>
 						<table border='1'>
 							<tbody>
@@ -1211,23 +1285,28 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
 								<!-- Wirkzeitraum -->
-								<low nullFlavor='NA'/>
-								<high nullFlavor='NA' />
+								<low nullFlavor='UNK'/>
+								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<phase nullFlavor='NA' />
-								<period nullFlavor='NA' />
+								<phase nullFlavor='UNK' />
+								<period nullFlavor='UNK' />
 							</effectiveTime>
 							<priorityCode nullFlavor='UNK' />
-							<routeCode nullFlavor='NA' />
+							<routeCode nullFlavor='UNK' displayName='Unknown' />
 							<doseQuantity nullFlavor='UNK' />
+							<rateQuantity nullFlavor='UNK' />
 							<consumable>
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
 									<manufacturedMaterial>
 										<!-- VVK-EDI: 2.4.4 ATC-Nummer (Anatomical Therapeutical Chemical) der Medikation (optional) -->
-										<code code='B01AC06' codeSystem='2.16.840.1.113883.6.73' />
+										<code code='B01AC06' codeSystem='2.16.840.1.113883.6.73'>
+											<originalText>
+												<reference value='#med-1' />
+											</originalText>
+										</code>
 										<name>Aspirin cardio 100mg</name>
 									</manufacturedMaterial>
 								</manufacturedProduct>
@@ -1253,7 +1332,7 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<!-- VVK-EDI: 2.4.1 Bezeichnung der Medikation (optional) -->
-									<code code='09' codeSystem='2.16.756.5.30.1.127.3.1.20080401.7' displayName='ACE-Hemmer' codeSystemName='VVK-EDI Bezeichnung der Medikation'/>
+									<code code='25' displayName='Other medications' codeSystem='2.16.756.5.30.1.127.3.1.20080401.7' codeSystemName='medicationName (ICR-DHA, chapter 2.4.1)' />
 									<!-- VVK-EDI: 2.4.2 Bemerkung zur Indikation der Medikation -->
 									<text>
 										<reference value='#med-1-indication'/>
@@ -1262,7 +1341,7 @@ History:
 							</entryRelationship>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<observation classCode='OBS' moodCode='EVN'>
+								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -1271,14 +1350,17 @@ History:
 										<reference value='#med-1-comment'/>
 									</text>
 									<statusCode code='completed'/>
-								</observation>
+								</act>
 							</entryRelationship>
 						</substanceAdministration>
 					</entry>
 				</section>
 			</component>
 
-			<!-- Impfungen -->
+			<!--
+			********************************************************
+			Impfungen
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: Immunizations Section 1.3.6.1.4.1.19376.1.5.3.1.3.23 -->
 				<section>
@@ -1289,46 +1371,32 @@ History:
 					<code code='11369-6' displayName='HISTORY OF IMMUNIZATIONS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
 					<title>Impfungen</title>
 					<text>
-						<table border='1'>
+						<table>
 							<tbody>
 								<tr>
-									<th>Bezeichnung</th>
-									<th>Bemerkung zur Impfung</th>
-									<th>Handelsname des Wirkstoffs</th>
-									<th>Hersteller des Impfstoffs</th>
-									<th>Lot-Nummer</th>
-									<th>Datum der Impfung</th>
-									<th>Eintragende Person</th>
-									<th>Datum der Eintragung</th>
+									<th>Impfstoff Handelsname</th>
+									<th>Hersteller</th>
+									<th>Lot-Nr</th>
+									<th>Datum</th>
+									<th>Impfung gegen</th>
+									<th>Impfung erfolgt durch</th>
+									<th>Bemerkung</th>
 								</tr>
 								<tr>
 									<td>
-										<content ID='vacc-1'>
-											Hepatitis A
+										<content ID='i1'>
+											POLIORIX Inj Lös
 										</content>
 									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td>ABC123</td>
+									<td>15.06.1983</td>
+									<td>Poliomyelitis (Kinderlähmung)</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
 									<td>
-										<content ID='vacc-1-comment'>
-											Dummy Impfung1
+										<content ID='i1-comment'>
+											Demo-Eintrag
 										</content>
-									</td>
-									<td>
-										Dummy Impfung2
-									</td>
-									<td>
-										Dummy Impfung3
-									</td>
-									<td>
-										8927364
-									</td>
-									<td>
-										31.10.2011
-									</td>
-									<td>
-										Dr. med. Allzeit Bereit, Musterhausen
-									</td>
-									<td>
-										21.01.2012
 									</td>
 								</tr>
 							</tbody>
@@ -1342,25 +1410,50 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id nullFlavor='NA' />
+							<id extension='7680006690011' root='1.3.160' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
-								<reference value='#vacc-1' />
+								<reference value='#i1'/>
 							</text>
 							<statusCode code='completed'/>
 							<!-- VVK-EDI: 2.5.6	Datum der Impfung (optional) -->
+							<effectiveTime xsi:type='IVL_TS' nullFlavor='UNK' >
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' operator='A' nullFlavor='UNK' >
+								<!-- Dosierung -->
+								<phase nullFlavor='UNK' />
+								<period nullFlavor='UNK' />
+							</effectiveTime>
 							<effectiveTime value='20113110' />
 							<priorityCode nullFlavor='UNK' />
-							<routeCode nullFlavor='NA' />
-							<doseQuantity nullFlavor='UNK'  />
+							<routeCode code='IMD' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Injektion, tief intramuskulär' />
+							<approachSiteCode code='LD' codeSystem='2.16.840.1.113883.5.1052' codeSystemName='HumanSubstanceAdministrationSite' displayName='left deltoid'>
+								<originalText>
+									<reference value='#i1'/>
+								</originalText>
+							</approachSiteCode>
+							<doseQuantity nullFlavor='UNK' />
+							<rateQuantity nullFlavor='UNK' />
 							<consumable>
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
 									<manufacturedMaterial>
-										<code nullFlavor='NA' />
+										<!-- epSOSVaccine Pivot Code -->
+										<code code='111164008' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Poliomyelitis vaccine'>
+											<originalText>
+												<reference value='#i1'/>
+											</originalText>
+											<!-- GTIN -->
+											<translation code='7680006690011' codeSystem='1.3.160' />
+											<!-- ATC WHO Code -->
+											<translation code='J07BF03' codeSystem='2.16.840.1.113883.6.73'/>
+										</code>
 										<!-- VVK-EDI: 2.5.3 Handelsname des Impfstoffes (optional) -->
-										<name>Dummy Impfung2</name>
+										<name>POLIORIX Inj Lös Durchstf 0.5 ml</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
 										<!-- VVK-EDI: 2.5.4 Hersteller des Impfstoffes (optional) -->
@@ -1389,39 +1482,42 @@ History:
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.ImmunizationL3.Target' />
 									<!-- VVK-EDI: 2.5.1 Bezeichnung der Impfung (optional) -->
-									<code code='07' codeSystem='2.16.756.5.30.1.127.3.1.20080401.8' displayName='Hepatitis A' codeSystemName='VVK-EDI Bezeichnung der Impfung'/>
+									<code code='04' codeSystem='2.16.756.5.30.1.127.3.1.20080401.8' displayName='Poliomyelitis – infantile paralysis' codeSystemName='vaccinationTaxonomy (ICR-DHA, chapter 2.5.1)'/>
 									<statusCode code='completed'/>
 								</observation>
 							</entryRelationship>
-							<!-- An optional entry relationship that identifies the immunization series number -->
+							<!-- An optional entry relationship that identifies the vaccination series number -->
 							<entryRelationship typeCode='SUBJ'>
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.46'/>
 									<code code='30973-2' displayName='Dose Number' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
 									<statusCode code='completed'/>
 									<!-- VVK-EDI: 2.5.5 Lot-Nummer des Impfstoffes (optional) -->
-									<value xsi:type='INT' value='8927364'/>
+									<value xsi:type='ST'>ABC123</value>
 								</observation>
 							</entryRelationship>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<observation classCode='OBS' moodCode='EVN'>
+								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 									<!-- VVK-EDI: 2.5.2 Bemerkung zur Impfung (optional) -->
 									<text>
-										<reference value='#vacc-1-comment'/>
+										<reference value='#i1-comment'/>
 									</text>
 									<statusCode code='completed'/>
-								</observation>
+								</act>
 							</entryRelationship>
 						</substanceAdministration>
 					</entry>
 				</section>
 			</component>
 
-			<!-- Blutgruppe und Transfusionen -->
+			<!--
+			********************************************************
+			Blutgruppe und Transfusionen
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: N/A  -->
 				<section>
@@ -1546,12 +1642,12 @@ History:
 									</text>
 									<statusCode code='completed'/>
 									<!-- VVK-EDI: 2.6.1.2 Bezeichnung des Rhesusfaktors (optional) -->
-									<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.1.127.3.1.20080401.10' displayName='+ve Vorzeichen positiv' codeSystemName='VVK-EDI Bezeichnung der Rhesusfaktors'/>
+									<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.1.127.3.1.20080401.10' displayName='+ve Vorzeichen positiv' codeSystemName='rhesusFactor (ICR-DHA, chapter 2.6.1.2)'/>
 								</observation>
 							</entryRelationship>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<observation classCode='OBS' moodCode='EVN'>
+								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -1560,7 +1656,7 @@ History:
 										<reference value='#bloodgr-1-comment'/>
 									</text>
 									<statusCode code='completed'/>
-								</observation>
+								</act>
 							</entryRelationship>
 						</observation>
 					</entry>
@@ -1575,11 +1671,11 @@ History:
 							<statusCode code='completed' />
 							<!-- VVK-EDI: 2.6.2.2 Datum der letzten Bluttransfusion (optional) -->
 							<effectiveTime>
-								<low nullFlavor='NA' />
+								<low nullFlavor='UNK' />
 								<high value='20080210' />
 							</effectiveTime>
 							<!-- VVK-EDI: 2.6.2.1 Indikator für die Anzahl der Bluttransfusionen (optional) -->
-							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.11' displayName='Einmal' codeSystemName='VVK-EDI Indikator für die Anzahl der Bluttransfusionen'/>
+							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.11' displayName='Einmal' codeSystemName='numberOfBloodTransfusions (ICR-DHA, chapter 2.6.2.1)'/>
 							<author>
 								<!-- VVK-EDI: 2.6.2.5 Datum der Eintragung (obligatorisch) -->
 								<time value='20120121' />
@@ -1598,7 +1694,7 @@ History:
 							</author>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<observation classCode='OBS' moodCode='EVN'>
+								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -1607,20 +1703,23 @@ History:
 										<reference value='#transfusion-1-comment'/>
 									</text>
 									<statusCode code='completed'/>
-								</observation>
+								</act>
 							</entryRelationship>
 						</observation>
 					</entry>
 				</section>
 			</component>
 
-			<!-- Zusätzlicher Eintrag in medizinisch begründeten Fällen -->
+			<!--
+			********************************************************
+			Zusätzlicher Eintrag in medizinisch begründeten Fällen
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: N/A  -->
 				<section>
 					<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MedicalRecordsL2' />
 					<code code='11503-0' displayName='Medical records' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
-					<title>Zusätzlicher Eintrag in medizinisch begründeten Fällen</title>
+					<title>Zusätzliche Einträge in medizinisch begründeten Fällen</title>
 					<text>
 						Hinweise auf verfügbare medizinische oder pharmazeutische Dossiers:<br/>
 						<br/>
@@ -1802,7 +1901,10 @@ History:
 				</section>
 			</component>
 
-			<!-- Patientenverfügungen -->
+			<!--
+			********************************************************
+			Patientenverfügungen
+			******************************************************** -->
 			<component>
 				<!--epSOS/IHE: Advanced Directives Section content 1.3.6.1.4.1.19376.1.5.3.1.3.34 -->
 				<section>
@@ -1855,7 +1957,7 @@ History:
 								<assignedEntity>
 									<id root='2.16.756.5.30.1.109.3.1' extension='4FE509D0-8BFA-4360-AD00-F98F6D9046A7' />
 									<!-- VVK-EDI: 2.9.1 Art des Verwahrers des Dokuments (optional) -->
-									<code code='1' displayName='Kontaktadresse im privaten Umfeld' codeSystem='2.16.756.5.30.1.127.3.1.20080401.13'/>
+									<code code='1' displayName='Kontaktadresse im privaten Umfeld' codeSystem='2.16.756.5.30.1.127.3.1.20080401.13' codeSystemName='keeperOfDocuments (ICR-DHA, chapter 2.9.1)'/>
 									<addr use='HP'>
 										<streetName>Specimengasse</streetName>
 										<postalCode>8888</postalCode>

@@ -7,6 +7,7 @@ History:
 14.12.2012: Laurent Millet, remove referenced entites info and phases
 12.12.2012: Laurent Millet, replace path specification with entity reference
 28.11.2012: Laurent Millet, medshare GmbH (Draft)
+31.12.2012: Tony Schaller, medshare GmbH (Abgabe CDA-CH-EDES)
 
 *******************************************************************************
 --><schema xmlns="http://purl.oclc.org/dsdl/schematron"
