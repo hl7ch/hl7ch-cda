@@ -300,7 +300,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 											<!-- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -->
 											<text>
 												<reference value='#ku12'/>
@@ -339,7 +339,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 											<!-/- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -/->
 											<text>
 												<reference value='#ku22'/>
@@ -476,7 +476,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 											<!-- VVK-EDI: 2.2.1.1	Bemerkung zu «Zur Transplantation angemeldet» (optional) -->
 											<text>
 												<reference value='#tr11'/>
@@ -519,7 +519,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 											<!-- VVK-EDI: 2.2.2.4 Bemerkung zur Transplantation (optional) -->
 											<text>
 												<reference value='#tr22'/>
@@ -809,7 +809,7 @@ History:
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 													<!-- VVK-EDI: 2.3.1.3.3	Bemerkung zum Nachweis (optional) -->
 													<text>
 														<reference value='#allergy-1-method-comment'/>
@@ -879,7 +879,7 @@ History:
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 													<!-- VVK-EDI: 2.3.1.4.5	Bemerkung zum Ersatzmedikament (optional) -->
 													<text>
 														<reference value='#allergy-1-med-1-comment'/>
@@ -937,7 +937,7 @@ History:
 												<observation classCode='OBS' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 													<!-- VVK-EDI: 2.3.1.5.2	Bemerkung zum Notfallmedikament (optional) -->
 													<text>
 														<reference value='#allergy-1-med-2-comment'/>
@@ -952,7 +952,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 											<!-- VVK-EDI: 2.3.1.2.3	Bemerkung zur klinischen Reaktion (optional) -->
 											<text>
 												<reference value='#allergy-1-comment'/>
@@ -1031,7 +1031,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='2.16.840.1.113883.10.20.1.40'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 											<!-- VVK-EDI: 2.3.1.2.3	Bemerkung zur klinischen Reaktion (optional) -->
 											<text>
 												<reference value='#allergy-2-comment'/>
@@ -1058,7 +1058,7 @@ History:
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 													<!-- VVK-EDI: 2.3.1.3.3	Bemerkung zum Nachweis (optional) -->
 													<text>
 														<reference value='#allergy-2-method-comment'/>
@@ -1132,7 +1132,7 @@ History:
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 													<!-- VVK-EDI: 2.3.1.4.5	Bemerkung zum Ersatzmedikament (optional) -->
 													<text>
 														<reference value='#allergy-2-med-1-comment'/>
@@ -1190,7 +1190,7 @@ History:
 												<observation classCode='OBS' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-													<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 													<!-- VVK-EDI: 2.3.1.5.2	Bemerkung zum Notfallmedikament (optional) -->
 													<text>
 														<reference value='#allergy-2-med-2-comment'/>
@@ -1344,7 +1344,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.4.5 Angaben zur Medikation (optional) -->
 									<text>
 										<reference value='#med-1-comment'/>
@@ -1501,7 +1501,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.5.2 Bemerkung zur Impfung (optional) -->
 									<text>
 										<reference value='#i1-comment'/>
@@ -1650,7 +1650,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.6.1.4 Bemerkung zur Blutgruppe (optional) -->
 									<text>
 										<reference value='#bloodgr-1-comment'/>
@@ -1697,7 +1697,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.6.2.3 Bemerkung zur letzten Bluttransfusion (optional) -->
 									<text>
 										<reference value='#transfusion-1-comment'/>
@@ -1847,7 +1847,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.7.1.2 Bemerkung zum medizinischen oder pharmazeutischen Dossier -->
 									<text>
 										<reference value='#healthrecord-1-comment'/>
@@ -1888,7 +1888,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.7.2.2	Bemerkung zum weiteren medizinischen oder pharmazeutischen Eintrag (optional) -->
 									<text>
 										<reference value='#healthrecord-2-comment'/>
@@ -1989,7 +1989,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='2.16.840.1.113883.10.20.1.40'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' displayName='Annotation comment' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<!-- VVK-EDI: 2.9.3	Bemerkung zur Beschreibung der Verfügung oder des Ausweises (optional) -->
 									<text>
 										<reference value='#consent-1-comment'/>
