@@ -625,8 +625,10 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		<xsl:value-of select="n1:postalCode"/>
 		<xsl:text> </xsl:text>
 		<xsl:value-of select="n1:city"/>
-		<xsl:if test="n1:state">
+		<xsl:if test="n1:state and n1:city">
 			<xsl:text>, </xsl:text>
+		</xsl:if>
+		<xsl:if test="n1:state">
 			<xsl:value-of select="n1:state"/>
 		</xsl:if>
 		<br/>

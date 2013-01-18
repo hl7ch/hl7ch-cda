@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+********************************************************
+Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - HIV Nachweis 
+
+History:
+18.01.2013: Tony Schaller, medshare GmbH (Erster Entwurf)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../stylesheets/BAG/Meldesysteme/v1.0/bag.css'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!--
+	********************************************************
+	CDA Header
+	********************************************************
+	-->
+	<realmCode code='CHE'/>
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+	<!-- Parent Templates -->
+	<!-- IHE Laboratory Report Summary Specification (IHE XD-LAB) -->
+	<templateId root='1.3.6.1.4.1.19376.1.3.3'/>
+	<!-- CDA-CH -->
+	<templateId root='2.16.756.5.30.1.1.1.1' />
+	<!-- Laboratory Reports for Public Health V1 - (CDA-CH-LRPH) -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<id extension='9DF2F81F-A879-4E7B-B6E1-3BE2EB29A8F8' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+	<title>Meldepflichtiger Laborbefund</title>
+	<effectiveTime value='20121203'/>
+	<confidentialityCode code='R' codeSystem='2.16.840.1.113883.5.25'/>
+	<languageCode code='de-CH'/>
+	<setId extension='5EF64ADC-37D0-4DCC-88C1-4B6FEC19E702' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<id nullFlavor='MSK' />
+			<addr use='HP'>
+				<state>ZH</state>
+			</addr>
+			<telecom nullFlavor="MSK"/>
+			<patient>
+				<name>
+					<family nullFlavor="MSK" />
+					<given>H4</given>
+				</name>
+				<administrativeGenderCode code='F' codeSystem='2.16.840.1.113883.5.1'/>
+				<birthTime value='19910101'/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value='20121203'/>
+		<assignedAuthor>
+			<id extension='7606666666666' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Bernstrasse</streetName>
+				<houseNumber>162</houseNumber>
+				<postalCode>3052</postalCode>
+				<city>Zollikofen</city>
+			</addr>
+			<telecom use='PUB' value='tel:+41.31.919.09.09'/>
+			<assignedAuthoringDevice> 
+				<softwareName>SRK LIS</softwareName> 
+			</assignedAuthoringDevice> 
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor='NASK' />
+				<name nullFlavor='NASK' />
+				<telecom nullFlavor='NASK' />
+				<addr nullFlavor='NASK' >
+					<streetName nullFlavor='NASK' />
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode='PRCP'> 
+		<!-- IHE XD-LAB: Intended Recipient -->
+		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.4'/> 
+		<!-- Beabsichtigter Empfänger PRCP=Primary recipient-->
+		<intendedRecipient> 
+			<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/> 
+			<addr use='WP'>
+				<streetAddressLine>Ärztlicher Dienst Meldesystem</streetAddressLine>
+				<postalCode>3003</postalCode>
+				<city>Bern</city>
+			</addr>
+			<telecom use='PUB' value='tel:+41.31.322.21.11'/>
+			<receivedOrganization> 
+				<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/> 
+				<name>Bundesamt für Gesundheit</name>
+				<telecom use='PUB' value='tel:+41.31.322.21.11'/>
+				<addr use='WP'>
+					<streetAddressLine>Ärztlicher Dienst Meldesystem</streetAddressLine>
+					<postalCode>3003</postalCode>
+					<city>Bern</city>
+				</addr>
+			</receivedOrganization> 
+		</intendedRecipient> 
+	</informationRecipient>
+	<participant typeCode='REF'>
+		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.6'/>
+		<time nullFlavor='NASK' />
+		<associatedEntity classCode='PROV'>
+			<id extension='7608888888888' root='1.3.88'/>
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
+			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
+			<associatedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			Mikrobiologiebefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+					<title>Mikrobiologiebefund</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th></th>
+									<th>Beobachtung</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+								</tr>
+								<tr>
+									<td>Typ:</td>
+									<td>
+										HIV 1 RNA
+									</td>
+									<td>24013-5</td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Viral Load:</td>
+									<td>
+										121365 [copies/ml]
+									</td>
+									<td></td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Recency:</td>
+									<td>
+										No
+									</td>
+									<td>N</td>
+									<td>HL7.ch StandardCDABodySelektion</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande sgp120:</td>
+									<td>
+										3
+									</td>
+									<td></td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande sgp105:</td>
+									<td>
+										0
+									</td>
+									<td></td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande p17:</td>
+									<td>
+										1
+									</td>
+									<td>9663-6</td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande p24:</td>
+									<td>
+										2
+									</td>
+									<td>9664-4</td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande p31:</td>
+									<td>
+										3
+									</td>
+									<td>9666-9</td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande gp36:</td>
+									<td>
+										0
+									</td>
+									<td></td>
+									<td>LOINC</td>
+								</tr>
+								<tr>
+									<td>Inno-Lia Bande gp41:</td>
+									<td>
+										4
+									</td>
+									<td>9662-8</td>
+									<td>LOINC</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Weitere Angaben:
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										ID:
+									</td>
+									<td>
+										12-3456
+									</td>
+									<td>
+										(Laborinterne ID)
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Zeitpunkt der Entnahme:
+									</td>
+									<td>
+										01.12.2012
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Zeitpunkt Auftragseingang:
+									</td>
+									<td>
+										01.12.2012
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Zeitpunkt des Nachweises:
+									</td>
+									<td>
+										01.12.2012 16:34
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Bemerkungen: Keine
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+
+							<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+							<statusCode code='completed' />
+
+							<!-- IHE XD-LAB: Specimen Collection -->
+							<entryRelationship typeCode='COMP'>
+								<procedure classCode='PROC' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
+									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1'
+										codeSystemName='LOINC' displayName='Collection date'/>
+									<effectiveTime value='20121201'/>
+									<participant typeCode='PRD'>
+										<participantRole classCode='SPEC'>
+											<id extension='0F55642B-E3DB-48B2-92FA-B05E44D28C23' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+											<playingEntity>
+												<code code='LOINC' codeSystem='2.16.756.5.30.2.1.1.10'/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- IHE XD-LAB: Specimen Received -->
+									<entryRelationship typeCode='COMP'>
+										<procedure classCode='PROC' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
+											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
+												codeSystemName='IHEActCode' displayName='Receive Time'/>
+											<effectiveTime value='20121201'/>
+										</procedure>
+									</entryRelationship>
+								</procedure>
+							</entryRelationship>
+
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<id root='2.16.756.5.30.987987987987' extension='12-3456' />
+									<statusCode code='completed'/>
+									
+									<!-- Typ: HIV-1, Viral load: 121365 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='24013-5' displayName='HIV 1 RNA' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='24013-5' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' displayName='HIV-1' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='121365' unit='{Log_copies}/mL' />
+											<!-- Erreger in Probe nachgewiesen -->
+											<interpretationCode code='POS' codeSystem='2.16.840.1.113883.5.83' displayName='POSITIVE' codeSystemName='ObservationInterpretation'/>
+										</observation>
+									</component>
+									
+									<!-- Recency: No -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='TODO' displayName='TODO' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='CD' code='N' displayName='No' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' />
+										</observation>
+									</component>
+									
+									<!-- Inno-Lia Banden -->									
+									
+									<!-- sgp120 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='TODO' displayName='TODO' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='3' unit='1' />
+										</observation>
+									</component>
+
+									<!-- sgp105 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='TODO' displayName='TODO' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='0' unit='1' />
+										</observation>
+									</component>
+
+									<!-- p17 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='9663-6' displayName='HIV 1 p17 Ab' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='9663-6' displayName='HIV 1 p17 Ab' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='1' unit='1' />
+										</observation>
+									</component>
+
+									<!-- p24 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='9664-4' displayName='HIV 1 p24 Ab' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='9664-4' displayName='HIV 1 p24 Ab' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='2' unit='1' />
+										</observation>
+									</component>
+
+									<!-- p31 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='9666-9' displayName='HIV 1 p31 Ab' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='9666-9' displayName='HIV 1 p31 Ab' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='3' unit='1' />
+										</observation>
+									</component>
+
+									<!-- gp36 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='TODO' displayName='TODO' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='0' unit='1' />
+										</observation>
+									</component>
+
+									<!-- gp41 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='9662-8' displayName='HIV 1 gp41 Ab' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='9662-8' displayName='HIV 1 gp41 Ab' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201212011634+0100'/>
+											<value xsi:type='PQ' value='4' unit='1' />
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
