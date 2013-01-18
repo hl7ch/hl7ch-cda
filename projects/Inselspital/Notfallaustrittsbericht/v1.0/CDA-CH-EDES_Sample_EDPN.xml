@@ -1101,6 +1101,23 @@ History:
 							</value>
 						</observation>
 					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.840.1.113883.10.20.1.28'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='20F5CA4D-EC02-4746-8DD4-823A43D5C518'/>
+							<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnosis' />
+							<text><reference value='#d2'/></text>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high value='20120826'/>
+							</effectiveTime>
+							<value xsi:type='CD'>
+								<originalText><reference value='#d2'/></originalText>
+							</value>
+						</observation>
+					</entry>
 				</section> 
 			</component>
 
