@@ -188,23 +188,26 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 	<xsl:template match="n1:id">
 		<tr>
 			<td width="50%" align="left">
-				<xsl:variable name="domain"
-				select="./@root"/>
+				<xsl:variable name="domain" select="./@root"/>
 				<xsl:choose>
-					<xsl:when test="$domain='2.16.756.5.31'">
-						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.31']/@displayName"/>
+					<xsl:when test="$domain!=''">
+						<xsl:choose>
+							<xsl:when test="$domain='2.16.756.5.31'">
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.31']/@displayName"/>
+							</xsl:when>
+							<xsl:when test="$domain='2.16.756.5.32'">
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.32']/@displayName"/>
+							</xsl:when>
+							<xsl:when test="$domain='2.16.756.5.30.1.100.3.1.1'">
+								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.30.1.100.3.1.1']/@displayName"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="./@root"/>
+							</xsl:otherwise>
+						</xsl:choose>
+						<xsl:text>:</xsl:text>
 					</xsl:when>
-					<xsl:when test="$domain='2.16.756.5.32'">
-						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.32']/@displayName"/>
-					</xsl:when>
-					<xsl:when test="$domain='2.16.756.5.30.1.100.3.1.1'">
-						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.30.1.100.3.1.1']/@displayName"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="./@root"/>
-					</xsl:otherwise>
 				</xsl:choose>
-				<xsl:text>:</xsl:text>
 			</td>
 			<td width="50%" align="left">
 				<xsl:value-of select="./@extension"/>
@@ -798,6 +801,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								<td>
 									<xsl:call-template name="getName">
 										<xsl:with-param name="name" select="n1:associatedPerson/n1:name"/>
+									</xsl:call-template>
+									<xsl:call-template name="getName">
+										<xsl:with-param name="name" select="n1:scopingOrganization/n1:name"/>
 									</xsl:call-template>
 									<br />
 									<xsl:call-template name="getContactInfo">
