@@ -163,7 +163,7 @@ History:
 									<td>
 										Hepatitis B virus surface Ag
 									</td>
-									<td>4386.35</td>
+									<td>Index=4386.35 (Signal Probe / Signal Cutoff)</td>
 									<td>5195-3</td>
 									<td>LOINC</td>
 									<td>
@@ -271,7 +271,7 @@ History:
 											</code>
 											<statusCode code='completed'/>
 											<effectiveTime value='201211240907+0100'/>
-											<value xsi:type='PQ' value='4386.35' unit='TODO' />
+											<value xsi:type='PQ' value='4386.35' unit='{s_co_ratio}' />
 											<!-- Erreger in Probe nachgewiesen -->
 											<interpretationCode code='POS' codeSystem='2.16.840.1.113883.5.83' displayName='POSITIVE' codeSystemName='ObservationInterpretation'/>
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
