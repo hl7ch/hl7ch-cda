@@ -64,6 +64,7 @@ History:
 				<city>Bern</city>
 			</addr>
 			<telecom use='PUB' value='tel:+41.31.919.09.09'/>
+			<telecom use='PUB' value='fax:+41.31.919.09.10'/>
 			<assignedAuthoringDevice> 
 				<softwareName>IFIK LIS</softwareName> 
 			</assignedAuthoringDevice> 
@@ -111,8 +112,12 @@ History:
 		<associatedEntity classCode='PROV'>
 			<id extension='7601001383647' root='1.3.88'/>
 			<telecom use='PUB' value='tel:+41.31.372.20.02'/>
+			<telecom use='PUB' value='fax:+41.31.371.40.44'/>
 			<telecom use='PUB' value='mailto:info@medics-labor.ch'/>
 			<telecom use='PUB' value='http://www.medics-labor.ch'/>
+			<associatedPerson>
+				<name>Dr. med. A. Uftraggeber</name>
+			</associatedPerson>
 			<scopingOrganization>
 				<name>Medics Labor AG</name>
 				<addr use='WP'>
@@ -147,7 +152,7 @@ History:
 					<!-- IHE XD-LAB: Laboratory Speciality Section -->
 					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
 					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
-					<title>Mikrobiologiebefund</title>
+					<title>Laborbefund</title>
 					<text>
 						<table>
 							<tbody>
@@ -286,7 +291,7 @@ History:
 										Zeitpunkt Auftragseingang:
 									</td>
 									<td>
-										14.01.2010
+										14.01.2010 15:34
 									</td>
 								</tr>
 								<tr>
@@ -333,12 +338,12 @@ History:
 									</participant>
 									<!-- IHE XD-LAB: Specimen Received -->
 									<entryRelationship typeCode='COMP'>
-										<procedure classCode='PROC' moodCode='EVN'>
+										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
 											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
 												codeSystemName='IHEActCode' displayName='Receive Time'/>
-											<effectiveTime value='20100114'/>
-										</procedure>
+											<effectiveTime value='201001141534+0100'/>
+										</act>
 									</entryRelationship>
 								</procedure>
 							</entryRelationship>
@@ -411,7 +416,7 @@ History:
 											<statusCode code='completed'/>
 											<effectiveTime value='201001151037+0100'/>
 											<!-- Ergebnis -->
-											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.5.83' codeSystemName='ObservationInterpretationSusceptibility'/>
+											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.1.11.10219' codeSystemName='ObservationInterpretationSusceptibility'/>
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
@@ -434,7 +439,7 @@ History:
 											<statusCode code='completed'/>
 											<effectiveTime value='201001151037+0100'/>
 											<!-- Ergebnis -->
-											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.5.83' codeSystemName='ObservationInterpretationSusceptibility'/>
+											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.1.11.10219' codeSystemName='ObservationInterpretationSusceptibility'/>
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
@@ -457,7 +462,7 @@ History:
 											<statusCode code='completed'/>
 											<effectiveTime value='201001151037+0100'/>
 											<!-- Ergebnis -->
-											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.5.83' codeSystemName='ObservationInterpretationSusceptibility'/>
+											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.1.11.10219' codeSystemName='ObservationInterpretationSusceptibility'/>
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
@@ -480,7 +485,7 @@ History:
 											<statusCode code='completed'/>
 											<effectiveTime value='201001151037+0100'/>
 											<!-- Ergebnis -->
-											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.5.83' codeSystemName='ObservationInterpretationSusceptibility'/>
+											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.1.11.10219' codeSystemName='ObservationInterpretationSusceptibility'/>
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
 												<act classCode='ACT' moodCode='EVN'>
 													<templateId root='2.16.840.1.113883.10.20.1.40'/>
@@ -503,7 +508,7 @@ History:
 											<statusCode code='completed'/>
 											<effectiveTime value='201001151037+0100'/>
 											<!-- Ergebnis -->
-											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.5.83' codeSystemName='ObservationInterpretationSusceptibility'/>
+											<interpretationCode code='S' displayName='susceptible' codeSystem='2.16.840.1.113883.1.11.10219' codeSystemName='ObservationInterpretationSusceptibility'/>
 											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
 											<entryRelationship typeCode='SUBJ' inversionInd='true'>
 												<act classCode='ACT' moodCode='EVN'>

@@ -1,15 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - Kulturnachweis Campylobacter coli 
+Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - NachweisHäufigesEreignis
 
 History:
-26.01.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
-23.11.2012: Tony Schaller, medshare GmbH (Einbau Konformität zu IHE XD-LAB)
-30.11.2012: Tony Schaller, medshare GmbH (Korrektur Specimen Received; Dokument erstmals korrekt gegen IHE XD-LAB validiert)
-08.12.2012: Tony Schaller, medshare GmbH (Div. Korrekturen im Zusammenhang mit der Fertigstellung von CDA-CH-LRPH V1.0)
-14.12.2012: Tony Schaller, medshare GmbH (Korrekturen nach Entscheiden der Sitzung vom 12.12.12)
-20.01.2013: Tony Schaller, medshare GmbH (Korrekturen im Zusammenhang mit den weiteren Beispielen für Meldepflichtige Erregernachweise)
+26.01.2013: Tony Schaller, medshare GmbH (Erster Entwurf)
 
 ********************************************************
 -->
@@ -30,13 +25,13 @@ History:
 	<templateId root='2.16.756.5.30.1.1.1.1' />
 	<!-- Laboratory Reports for Public Health V1 - (CDA-CH-LRPH) -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.3.1'/>
-	<id extension='9DF2F81F-A879-4E7B-B6E1-3BE2EB29A8F8' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<id extension='D0C4FEE0-1C7B-4192-8817-CA488ED8A75F' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
 	<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
 	<title>Meldepflichtiger Laborbefund</title>
 	<effectiveTime value='20121123'/>
 	<confidentialityCode code='R' codeSystem='2.16.840.1.113883.5.25'/>
 	<languageCode code='de-CH'/>
-	<setId extension='9DF2F81F-A879-4E7B-B6E1-3BE2EB29A8F8' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<setId extension='D0C4FEE0-1C7B-4192-8817-CA488ED8A75F' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
 	<versionNumber value='1'/>
 	<recordTarget>
 		<patientRole>
@@ -174,16 +169,11 @@ History:
 									<td>pos</td>
 									<td>625-4</td>
 									<td>LOINC</td>
-									<td></td>
-								</tr>
-								<tr>
 									<td>
-										Campylobacter coli (organism)
+										<content ID='c1'>
+											Beispiel für die Meldung einer Häufung von Beobachtungen oder besonderes Ereignis
+										</content>
 									</td>
-									<td>pos</td>
-									<td>40614002</td>
-									<td>SNOMED CT</td>
-									<td></td>
 								</tr>
 							</tbody>
 						</table>
@@ -239,9 +229,9 @@ History:
 						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
 						<act classCode='ACT' moodCode='EVN'>
 
-							<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+							<code code='18769-0' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIAL SUSCEPTIBILITY TESTS'/>
 							<statusCode code='completed' />
-
+							
 							<!-- IHE XD-LAB: Specimen Collection -->
 							<entryRelationship typeCode='COMP'>
 								<procedure classCode='PROC' moodCode='EVN'>
@@ -269,6 +259,36 @@ History:
 								</procedure>
 							</entryRelationship>
 
+							<!-- Gehäufte oder besondere Ereignisse - Outbreak Identification -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='CLUSTER' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.1' />
+									<statusCode code='completed' />
+									<component>
+										<observation classCode='OUTB' moodCode='EVN'> 
+              				<templateId root='1.3.6.1.4.1.19376.1.3.1.1.3'/> 
+											<code code='416534008' codeSystem='2.16.840.1.113883.6.96'
+												codeSystemName='SNOMED CT' displayName='Outbreak'/>
+											<statusCode code='completed' />
+											<value xsi:type='CE' nullFlavor='NA' />
+											<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<act classCode='ACT' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+													<!-- Beschreibung zur Häufung von Beobachtungen oder zum besonderen Ereignis -->
+													<text>
+														<reference value='#c1'/>
+													</text>
+													<statusCode code='completed'/>
+												</act>
+											</entryRelationship>
+				            </observation> 
+									</component>
+								</organizer>
+							</entryRelationship>
+
 							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
 							<entryRelationship typeCode='COMP'>
 								<organizer classCode='BATTERY' moodCode='EVN'>
@@ -285,22 +305,9 @@ History:
 											<interpretationCode code='POS' codeSystem='2.16.840.1.113883.5.83' displayName='POSITIVE' codeSystemName='ObservationInterpretation'/>
 										</observation>
 									</component>
-									<component typeCode='COMP'>
-										<!-- IHE XD-LAB: Laboratory Observation -->
-										<observation classCode='OBS' moodCode='EVN'>
-											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='40614002' displayName='Campylobacter coli' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' >
-												<!-- Beispiel Mapping zu proprietärem Code des Labors -->
-												<translation code='CAJE' displayName='Campylobacter species' codeSystem='2.16.756.5.30.999999.2' codeSystemName='MLD_Code' />
-											</code>
-											<statusCode code='completed'/>
-											<effectiveTime value='201211240907+0100'/>
-											<!-- Erreger in Probe nachgewiesen -->
-											<interpretationCode code='POS' codeSystem='2.16.840.1.113883.5.83' displayName='POSITIVE' codeSystemName='ObservationInterpretation'/>
-										</observation>
-									</component>
 								</organizer>
 							</entryRelationship>
+
 						</act>
 					</entry>
 				</section>

@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary zu meldepflichtigen Erregernachweisen des BAG (CDA-CH-LRPH)
+
+History:
+2013.01.24 Tony Schaller, medshare GmbH (First draft)
+2013.01.26 Tony Schaller, medshare GmbH (Abgabe CDA-CH-LRPH)
+
+********************************************************
+-->
+<systems>
+
+	<!--
+	********************************************************
+	LOINC Valueset für meldepflichtige Erregernachweise
+	********************************************************
+	-->
+	<!-- todo: OID anpassen (Versionierung einbauen) -->
+	<system codeSystemName='lrph-v1-LOINC' root='2.16.756.5.30.1.1.1.1.3.3.1'>
+
+		<code value='606-4' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+		<code value='600-7' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+		<code value='625-4' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+		<code value='6460-0' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+		<code value='630-4' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+		<code value='6462-6' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+		<code value='626-2' displayName='Bacteria identified' patientPrivacyFilter='conditional'/>
+
+		<code value='11469-4' displayName='Bacillus anthracis' patientPrivacyFilter='none'/>
+		<code value='22859-3' displayName='Bacillus anthracis Ab' patientPrivacyFilter='none'/>
+		<code value='31726-3' displayName='Bacillus anthracis Ag' patientPrivacyFilter='none'/>
+		<code value='41622-2' displayName='Bacillus anthracis DNA' patientPrivacyFilter='none'/>
+		<code value='10349-9' displayName='Brucella sp Ab' patientPrivacyFilter='initials'/>
+		<code value='19053-8' displayName='Brucella sp Ab' patientPrivacyFilter='initials'/>
+		<code value='22159-8' displayName='Brucella sp Ab' patientPrivacyFilter='initials'/>
+		<code value='24387-3' displayName='Brucella sp Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='24388-1' displayName='Brucella sp Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='30202-6' displayName='Brucella sp Ab' patientPrivacyFilter='initials'/>
+		<code value='40613-2' displayName='Brucella sp Ab' patientPrivacyFilter='initials'/>
+		<code value='40614-0' displayName='Brucella sp Ab' patientPrivacyFilter='initials'/>
+		<code value='41624-8' displayName='Brucella sp Ag' patientPrivacyFilter='initials'/>
+		<code value='41625-5' displayName='Brucella sp DNA' patientPrivacyFilter='initials'/>
+		<code value='41626-3' displayName='Brucella sp DNA' patientPrivacyFilter='initials'/>
+		<code value='44271-5' displayName='Brucella sp Ag' patientPrivacyFilter='initials'/>
+		<code value='44797-9' displayName='Brucella sp' patientPrivacyFilter='initials'/>
+		<code value='47001-3' displayName='Brucella sp Ag' patientPrivacyFilter='initials'/>
+		<code value='5070-8' displayName='Brucella sp Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='552-0' displayName='Brucella sp identified' patientPrivacyFilter='initials'/>
+		<code value='20738-1' displayName='Campylobacter sp identified' patientPrivacyFilter='initials'/>
+		<code value='6330-5' displayName='Campylobacter sp identified' patientPrivacyFilter='initials'/>
+		<code value='6331-3' displayName='Campylobacter sp identified' patientPrivacyFilter='initials'/>
+		<code value='6332-1' displayName='Campylobacter sp identified' patientPrivacyFilter='initials'/>
+		<code value='26623-9' displayName='Chikungunya virus Ab' patientPrivacyFilter='initials'/>
+		<code value='40505-0' displayName='Chikungunya virus Ab' patientPrivacyFilter='initials'/>
+		<code value='43064-5' displayName='Chikungunya virus Ab' patientPrivacyFilter='initials'/>
+		<code value='51664-1' displayName='Chikungunya virus RNA' patientPrivacyFilter='initials'/>
+		<code value='56128-2' displayName='Chikungunya virus Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='56129-0' displayName='Chikungunya virus Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='56130-8' displayName='Chikungunya virus Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='56131-6' displayName='Chikungunya virus Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='57934-2' displayName='Chikungunya virus Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='60260-7' displayName='Chikungunya virus RNA' patientPrivacyFilter='initials'/>
+		<code value='21613-5' displayName='Chlamydia trachomatis DNA' patientPrivacyFilter='initials'/>
+		<code value='43304-5' displayName='Chlamydia trachomatis rRNA' patientPrivacyFilter='initials'/>
+		<code value='43404-3' displayName='Chlamydia trachomatis DNA' patientPrivacyFilter='initials'/>
+		<code value='6349-5' displayName='Chlamydia trachomatis' patientPrivacyFilter='initials'/>
+		<code value='6354-5' displayName='Chlamydia trachomatis Ag' patientPrivacyFilter='initials'/>
+		<code value='6355-2' displayName='Chlamydia trachomatis Ag' patientPrivacyFilter='initials'/>
+		<code value='33694-1' displayName='Clostridium botulinum' patientPrivacyFilter='none'/>
+		<code value='33695-8' displayName='Clostridium botulinum' patientPrivacyFilter='none'/>
+		<code value='41631-3' displayName='Clostridium botulinum toxin A gene' patientPrivacyFilter='none'/>
+		<code value='41633-9' displayName='Clostridium botulinum toxin B gene' patientPrivacyFilter='none'/>
+		<code value='46705-0' displayName='Clostridium botulinum toxin gene' patientPrivacyFilter='none'/>
+		<code value='16676-9' displayName='Corynebacterium diphtheriae' patientPrivacyFilter='none'/>
+		<code value='67561-1' displayName='Corynebacterium diphtheriae DNA' patientPrivacyFilter='none'/>
+		<code value='16835-1' displayName='Escherichia coli shiga-like identified' patientPrivacyFilter='initials'/>
+		<code value='51939-7' displayName='Escherichia coli shiga toxin 2 Ag' patientPrivacyFilter='initials'/>
+		<code value='51940-5' displayName='Escherichia coli shiga toxin 1 Ag' patientPrivacyFilter='initials'/>
+		<code value='53946-0' displayName='Escherichia coli shiga toxin Ag' patientPrivacyFilter='initials'/>
+		<code value='53947-8' displayName='Escherichia coli shiga-like toxin (stx1+stx2)+H7 flagellar (fliC) genes' patientPrivacyFilter='initials'/>
+		<code value='63427-9' displayName='Bacterial shiga-like toxin 1 (STX1) gene' patientPrivacyFilter='initials'/>
+		<code value='63428-7' displayName='Bacterial shiga-like toxin 2 (STX2) gene' patientPrivacyFilter='initials'/>
+		<code value='14209-1' displayName='Francisella tularensis Ab.IgA' patientPrivacyFilter='none'/>
+		<code value='16875-7' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='16876-5' displayName='Francisella tularensis Ab.IgA' patientPrivacyFilter='none'/>
+		<code value='23125-8' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='23741-2' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='33465-6' displayName='Francisella tularensis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='33466-4' displayName='Francisella tularensis Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='33576-0' displayName='Francisella tularensis Ab.IgA' patientPrivacyFilter='none'/>
+		<code value='33676-8' displayName='Francisella tularensis' patientPrivacyFilter='none'/>
+		<code value='33677-6' displayName='Francisella tularensis' patientPrivacyFilter='none'/>
+		<code value='33679-2' displayName='Francisella tularensis DNA' patientPrivacyFilter='none'/>
+		<code value='33680-0' displayName='Francisella tularensis DNA' patientPrivacyFilter='none'/>
+		<code value='45040-3' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='5166-4' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='5167-2' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='6407-1' displayName='Francisella tularensis Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='70121-9' displayName='Francisella tularensis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7888-1' displayName='Francisella tularensis Ab' patientPrivacyFilter='none'/>
+		<code value='7889-9' displayName='Francisella tularensis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7890-7' displayName='Francisella tularensis Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='22618-3' displayName='Yellow fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='41246-0' displayName='Yellow fever virus Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='41247-8' displayName='Yellow fever virus Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='41249-4' displayName='Yellow fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='41217-1' displayName='Yellow fever virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='41216-3' displayName='Yellow fever virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='6589-6' displayName='Yellow fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='6591-2' displayName='Yellow fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='6592-0' displayName='Yellow fever virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='6593-8' displayName='Yellow fever virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='8054-9' displayName='Yellow fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='8055-6' displayName='Yellow fever virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='8056-4' displayName='Yellow fever virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='8057-2' displayName='Yellow fever virus RNA' patientPrivacyFilter='none'/>
+		<code value='69410-9' displayName='Haemophilus influenzae' patientPrivacyFilter='initials'/>
+		<code value='11581-6' displayName='Ebola virus Ab' patientPrivacyFilter='none'/>
+		<code value='22263-8' displayName='Ebola virus Ab' patientPrivacyFilter='none'/>
+		<code value='41636-2' displayName='Ebola virus RNA' patientPrivacyFilter='none'/>
+		<code value='41637-0' displayName='Ebola virus Ag' patientPrivacyFilter='none'/>
+		<code value='71711-6' displayName='Ebola virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='71712-4' displayName='Ebola virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='71767-8' displayName='Ebola virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='71768-6' displayName='Ebola virus Ag' patientPrivacyFilter='none'/>
+		<code value='71770-2' displayName='Ebola virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7862-6' displayName='Ebola virus Ab' patientPrivacyFilter='none'/>
+		<code value='41638-8' displayName='Marburg virus RNA' patientPrivacyFilter='none'/>
+		<code value='71706-6' displayName='Marburg virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='71707-4' displayName='Marburg virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='71708-2' displayName='Marburg virus Ag' patientPrivacyFilter='none'/>
+		<code value='71769-4' displayName='Marburg virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='71771-0' displayName='Marburg virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='22377-6' displayName='Lassa virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='22378-4' displayName='Lassa virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='22379-2' displayName='Lassa virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='22380-0' displayName='Lassa virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='31452-6' displayName='Lassa virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='31453-4' displayName='Lassa virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='31867-5' displayName='Lassa virus Ag' patientPrivacyFilter='none'/>
+		<code value='71709-0' displayName='Lassa virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='71710-8' displayName='Lassa virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7942-6' displayName='Lassa virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7943-4' displayName='Lassa virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7944-2' displayName='Lassa virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='7945-9' displayName='Lassa virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='7946-7' displayName='Lassa virus Ag' patientPrivacyFilter='none'/>
+		<code value='41621-4' displayName='Arenavirus RNA' patientPrivacyFilter='none'/>
+		<code value='33606-5' displayName='Dengue virus Ab' patientPrivacyFilter='none'/>
+		<code value='40515-9' displayName='Dengue virus Ab' patientPrivacyFilter='none'/>
+		<code value='40748-6' displayName='Dengue virus Ab' patientPrivacyFilter='none'/>
+		<code value='51785-4' displayName='Dengue virus Ab.IgG &amp; IgM' patientPrivacyFilter='none'/>
+		<code value='55369-3' displayName='Dengue virus Ab' patientPrivacyFilter='none'/>
+		<code value='55438-6' displayName='Dengue virus Ab' patientPrivacyFilter='none'/>
+		<code value='7855-0' displayName='Dengue virus 1+2+3+4 RNA' patientPrivacyFilter='none'/>
+		<code value='13289-4' displayName='Hantavirus hantaan Ab' patientPrivacyFilter='none'/>
+		<code value='26620-5' displayName='Hantavirus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='32131-5' displayName='Hantavirus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='35392-0' displayName='Hantavirus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='35393-8' displayName='Hantavirus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='42503-3' displayName='Hantavirus Ab' patientPrivacyFilter='none'/>
+		<code value='5046-8' displayName='Hantavirus Ab' patientPrivacyFilter='none'/>
+		<code value='60264-9' displayName='Hantavirus Ab' patientPrivacyFilter='none'/>
+		<code value='7899-8' displayName='Hantavirus RNA' patientPrivacyFilter='none'/>
+		<code value='23396-5' displayName='Rift valley fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='23397-3' displayName='Rift valley fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='23399-9' displayName='Rift valley fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='23400-5' displayName='Rift valley fever virus Ab' patientPrivacyFilter='none'/>
+		<code value='71779-3' displayName='Rift valley fever virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='71780-1' displayName='Rift valley fever virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='71781-9' displayName='Rift valley fever virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='71784-3' displayName='Rift valley fever virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='13950-1' displayName='Hepatitis A virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='22314-9' displayName='Hepatitis A virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='22315-6' displayName='Hepatitis A virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='5181-3' displayName='Hepatitis A virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='7904-6' displayName='Hepatitis A virus RNA' patientPrivacyFilter='none'/>
+		<code value='11258-1' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='13954-3' displayName='Hepatitis B virus little e Ag' patientPrivacyFilter='none'/>
+		<code value='16934-2' displayName='Hepatitis B virus polymerase DNA' patientPrivacyFilter='none'/>
+		<code value='20442-0' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='22319-8' displayName='Hepatitis B virus core Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='23869-1' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='24113-3' displayName='Hepatitis B virus core Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='29610-3' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='29615-2' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='29900-8' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='31204-1' displayName='Hepatitis B virus core Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='31844-4' displayName='Hepatitis B virus little e Ag' patientPrivacyFilter='none'/>
+		<code value='31845-1' displayName='Hepatitis B virus little e Ag' patientPrivacyFilter='none'/>
+		<code value='32178-6' displayName='Hepatitis B virus little e Ag' patientPrivacyFilter='none'/>
+		<code value='32686-8' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='42595-9' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='48398-2' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='48650-6' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='5007-0' displayName='Hepatitis B virus DNA' patientPrivacyFilter='none'/>
+		<code value='5191-2' displayName='Hepatitis B virus little e Ag' patientPrivacyFilter='none'/>
+		<code value='5185-4' displayName='Hepatitis B virus core Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='5195-3' displayName='Hepatitis B virus surface Ag' patientPrivacyFilter='none'/>
+		<code value='5196-1' displayName='Hepatitis B virus surface Ag' patientPrivacyFilter='none'/>
+		<code value='58452-4' displayName='Hepatitis B virus surface Ag' patientPrivacyFilter='none'/>
+		<code value='63557-3' displayName='Hepatitis B virus surface Ag' patientPrivacyFilter='none'/>
+		<code value='65633-0' displayName='Hepatitis B virus surface Ag' patientPrivacyFilter='none'/>
+		<code value='70154-0' displayName='Hepatitis B virus surface Ag' patientPrivacyFilter='none'/>
+		<code value='10676-5' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='11011-4' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='11259-9' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='13955-0' displayName='Hepatitis C virus Ab' patientPrivacyFilter='none'/>
+		<code value='16128-1' displayName='Hepatitis C virus Ab' patientPrivacyFilter='none'/>
+		<code value='20416-4' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='20571-6' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='22327-1' displayName='Hepatitis C virus Ab' patientPrivacyFilter='none'/>
+		<code value='24011-9' displayName='Hepatitis C virus Ab band pattern' patientPrivacyFilter='none'/>
+		<code value='29609-5' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='34162-8' displayName='Hepatitis C virus Ab.IgG band pattern' patientPrivacyFilter='none'/>
+		<code value='34703-9' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='34704-7' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='38180-6' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='42003-4' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='42617-1' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='47252-2' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='5010-4' displayName='Hepatitis C virus RNA' patientPrivacyFilter='none'/>
+		<code value='5199-5' displayName='Hepatitis C virus Ab' patientPrivacyFilter='none'/>
+		<code value='54914-7' displayName='Hepatitis C virus Ag' patientPrivacyFilter='none'/>
+		<code value='12858-7' displayName='HIV 1 p32 Ab' patientPrivacyFilter='hiv'/>
+		<code value='5017-9' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='23876-6' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='29539-4' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='29541-0' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='70241-5' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='24013-5' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='10351-5' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='20447-9' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='21008-8' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='25835-0' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='41514-1' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='41515-8' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='41516-6' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='48510-2' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='48511-0' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='48551-6' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='48552-4' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='51780-5' displayName='HIV 1 RNA' patientPrivacyFilter='hiv'/>
+		<code value='22357-8' displayName='HIV 1+2 Ab' patientPrivacyFilter='hiv'/>
+		<code value='5223-3' displayName='HIV 1+2 Ab' patientPrivacyFilter='hiv'/>
+		<code value='7918-6' displayName='HIV 1+2 Ab' patientPrivacyFilter='hiv'/>
+		<code value='56888-1' displayName='HIV 1+2 Ab+HIV1 p24 Ag' patientPrivacyFilter='hiv'/>
+		<code value='58900-2' displayName='HIV 1+2 Ab+HIV1 p24 Ag' patientPrivacyFilter='hiv'/>
+		<code value='31073-0' displayName='HIV 2 Ab band pattern' patientPrivacyFilter='hiv'/>
+		<code value='57977-1' displayName='HIV 2 p16 Ab' patientPrivacyFilter='hiv'/>
+		<code value='57978-9' displayName='HIV 2 p34 Ab' patientPrivacyFilter='hiv'/>
+		<code value='13920-4' displayName='HIV 2 p41 Ab' patientPrivacyFilter='hiv'/>
+		<code value='69353-1' displayName='HIV 2 RNA' patientPrivacyFilter='hiv'/>
+		<code value='69354-9' displayName='HIV 2 RNA' patientPrivacyFilter='hiv'/>
+		<code value='20862-9' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='22096-2' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='22365-1' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='22822-1' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='22823-9' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='22824-7' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='24215-6' displayName='Influenza virus A Ab^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='24216-4' displayName='Influenza virus A Ab^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='24289-1' displayName='Influenza virus A Ab^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='24290-9' displayName='Influenza virus A Ab^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='31437-7' displayName='Influenza virus A Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='31438-5' displayName='Influenza virus A Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='31858-4' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='31859-2' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='39536-8' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='43874-7' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44556-9' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='44558-5' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44559-3' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44560-1' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44561-9' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44562-7' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44563-5' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='44564-3' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='46082-4' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='47313-2' displayName='Influenza virus A Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='47232-4' displayName='Influenza virus A Ab^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='47233-2' displayName='Influenza virus A Ab^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='47312-4' displayName='Influenza virus A Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='49529-1' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='49531-7' displayName='Influenza virus A RNA' patientPrivacyFilter='initials'/>
+		<code value='50696-4' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='50697-2' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='53381-0' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='54242-3' displayName='Influenza virus identified' patientPrivacyFilter='initials'/>
+		<code value='54243-1' displayName='Influenza virus RNA' patientPrivacyFilter='initials'/>
+		<code value='54244-9' displayName='Influenza virus identified' patientPrivacyFilter='initials'/>
+		<code value='57324-6' displayName='Influenza virus A Ab.IgG^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='57325-3' displayName='Influenza virus A Ab.IgG^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='57326-1' displayName='Influenza virus A Ab.IgM^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='57327-9' displayName='Influenza virus A Ab.IgM^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='5862-8' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='5860-2' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='5861-0' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='5863-6' displayName='Influenza virus A Ag' patientPrivacyFilter='initials'/>
+		<code value='6601-9' displayName='Influenza virus identified' patientPrivacyFilter='initials'/>
+		<code value='6602-7' displayName='Influenza virus identified' patientPrivacyFilter='initials'/>
+		<code value='6603-5' displayName='Influenza virus identified' patientPrivacyFilter='initials'/>
+		<code value='6604-3' displayName='Influenza virus identified' patientPrivacyFilter='initials'/>
+		<code value='7920-2' displayName='Influenza virus A Ab' patientPrivacyFilter='initials'/>
+		<code value='9532-3' displayName='Influenza virus A Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='9533-1' displayName='Influenza virus A Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='17057-1' displayName='Legionella pneumophila Ag' patientPrivacyFilter='none'/>
+		<code value='17058-9' displayName='Legionella pneumophila Ag' patientPrivacyFilter='none'/>
+		<code value='17059-7' displayName='Legionella pneumophila Ag' patientPrivacyFilter='none'/>
+		<code value='17060-5' displayName='Legionella pneumophila 1 Ab' patientPrivacyFilter='none'/>
+		<code value='17061-3' displayName='Legionella pneumophila 1 Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='21363-7' displayName='Legionella pneumophila DNA' patientPrivacyFilter='none'/>
+		<code value='24277-6' displayName='Legionella pneumophila Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24278-4' displayName='Legionella pneumophila Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24203-2' displayName='Legionella pneumophila Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24204-0' displayName='Legionella pneumophila Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='30143-2' displayName='Legionella sp Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='30144-0' displayName='Legionella sp Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='31868-3' displayName='Legionella pneumophila 1 Ag' patientPrivacyFilter='none'/>
+		<code value='31870-9' displayName='Legionella pneumophila Ag' patientPrivacyFilter='none'/>
+		<code value='32781-7' displayName='Legionella sp Ag' patientPrivacyFilter='none'/>
+		<code value='38463-6' displayName='Legionella sp Ag' patientPrivacyFilter='none'/>
+		<code value='49616-6' displayName='Legionella sp DNA' patientPrivacyFilter='none'/>
+		<code value='51920-7' displayName='Legionella sp Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='56950-9' displayName='Legionella pneumophila Ab.IgG^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='57008-5' displayName='Legionella pneumophila Ab.IgG^1st specimen' patientPrivacyFilter='none'/>
+		<code value='590-0' displayName='Legionella sp identified' patientPrivacyFilter='none'/>
+		<code value='6447-7' displayName='Legionella pneumophila Ag' patientPrivacyFilter='none'/>
+		<code value='9543-0' displayName='Legionella pneumophila 1 Ag' patientPrivacyFilter='none'/>
+		<code value='61369-5' displayName='Listeria monocytogenes DNA' patientPrivacyFilter='initials'/>
+		<code value='6609-2' displayName='Listeria sp identified' patientPrivacyFilter='initials'/>
+		<code value='12232-5' displayName='Measles virus Ag' patientPrivacyFilter='none'/>
+		<code value='14305-7' displayName='Measles virus Ab.IgG^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='14304-0' displayName='Measles virus Ab.IgG^1st specimen' patientPrivacyFilter='none'/>
+		<code value='17555-4' displayName='Measles virus Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='17556-2' displayName='Measles virus Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='22503-7' displayName='Measles virus Ab.IgG^1st specimen' patientPrivacyFilter='none'/>
+		<code value='22504-5' displayName='Measles virus Ab.IgG^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='25299-9' displayName='Measles virus Ab.IgG^1st specimen/2nd specimen' patientPrivacyFilter='none'/>
+		<code value='25421-9' displayName='Measles virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='31887-3' displayName='Measles virus Ag' patientPrivacyFilter='none'/>
+		<code value='35275-7' displayName='Measles virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='35276-5' displayName='Measles virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='48508-6' displayName='Measles virus RNA' patientPrivacyFilter='none'/>
+		<code value='5244-9' displayName='Measles virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='5245-6' displayName='Measles virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='67806-0' displayName='Measles virus Ag' patientPrivacyFilter='none'/>
+		<code value='7962-4' displayName='Measles virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='7963-2' displayName='Measles virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='7964-0' displayName='Measles virus RNA' patientPrivacyFilter='none'/>
+		<code value='13956-8' displayName='Mycobacterium tuberculosis DNA' patientPrivacyFilter='none'/>
+		<code value='17296-5' displayName='Mycobacterium tuberculosis complex rRNA' patientPrivacyFilter='none'/>
+		<code value='38379-4' displayName='Mycobacterium tuberculosis complex DNA' patientPrivacyFilter='none'/>
+		<code value='48174-7' displayName='Mycobacterium tuberculosis complex rRNA' patientPrivacyFilter='none'/>
+		<code value='5027-8' displayName='Mycobacterium tuberculosis rRNA' patientPrivacyFilter='none'/>
+		<code value='53257-2' displayName='Mycobacterium tuberculosis DNA' patientPrivacyFilter='none'/>
+		<code value='58931-7' displayName='Mycobacterium tuberculosis DNA' patientPrivacyFilter='none'/>
+		<code value='24111-7' displayName='Neisseria gonorrhoeae DNA' patientPrivacyFilter='initials'/>
+		<code value='43305-2' displayName='Neisseria gonorrhoeae rRNA' patientPrivacyFilter='initials'/>
+		<code value='43403-5' displayName='Neisseria gonorrhoeae DNA' patientPrivacyFilter='initials'/>
+		<code value='47387-6' displayName='Neisseria gonorrhoeae DNA' patientPrivacyFilter='initials'/>
+		<code value='5028-6' displayName='Neisseria gonorrhoeae rRNA' patientPrivacyFilter='initials'/>
+		<code value='60256-5' displayName='Neisseria gonorrhoeae rRNA' patientPrivacyFilter='initials'/>
+		<code value='692-4' displayName='Neisseria gonorrhoeae' patientPrivacyFilter='initials'/>
+		<code value='691-6' displayName='Neisseria gonorrhoeae' patientPrivacyFilter='initials'/>
+		<code value='698-1' displayName='Neisseria gonorrhoeae' patientPrivacyFilter='initials'/>
+		<code value='16134-9' displayName='Neisseria meningitidis' patientPrivacyFilter='none'/>
+		<code value='24017-6' displayName='Neisseria meningitidis B Ag' patientPrivacyFilter='none'/>
+		<code value='31911-1' displayName='Neisseria meningitidis Ag' patientPrivacyFilter='none'/>
+		<code value='31912-9' displayName='Neisseria meningitidis Ag' patientPrivacyFilter='none'/>
+		<code value='44093-3' displayName='Neisseria meningitidis' patientPrivacyFilter='none'/>
+		<code value='45183-1' displayName='Neisseria meningitidis' patientPrivacyFilter='none'/>
+		<code value='49671-1' displayName='Neisseria meningitidis DNA' patientPrivacyFilter='none'/>
+		<code value='5029-4' displayName='Neisseria meningitidis rRNA' patientPrivacyFilter='none'/>
+		<code value='10709-4' displayName='Plasmodium falciparum Ag' patientPrivacyFilter='initials'/>
+		<code value='10710-2' displayName='Plasmodium sp identified' patientPrivacyFilter='initials'/>
+		<code value='10711-0' displayName='Plasmodium vivax Ag' patientPrivacyFilter='initials'/>
+		<code value='31931-9' displayName='Plasmodium vivax Ag' patientPrivacyFilter='initials'/>
+		<code value='32206-5' displayName='Plasmodium sp identified' patientPrivacyFilter='initials'/>
+		<code value='41447-4' displayName='Plasmodium falciparum DNA' patientPrivacyFilter='initials'/>
+		<code value='41448-2' displayName='Plasmodium malariae DNA' patientPrivacyFilter='initials'/>
+		<code value='41449-0' displayName='Plasmodium ovale DNA' patientPrivacyFilter='initials'/>
+		<code value='41450-8' displayName='Plasmodium vivax DNA' patientPrivacyFilter='initials'/>
+		<code value='46094-9' displayName='Plasmodium sp Ag' patientPrivacyFilter='initials'/>
+		<code value='47085-6' displayName='Plasmodium sp DNA' patientPrivacyFilter='initials'/>
+		<code value='47260-5' displayName='Plasmodium sp DNA' patientPrivacyFilter='initials'/>
+		<code value='50687-3' displayName='Plasmodium sp Ag' patientPrivacyFilter='initials'/>
+		<code value='51587-4' displayName='Plasmodium sp' patientPrivacyFilter='initials'/>
+		<code value='51865-4' displayName='Plasmodium sp Ag' patientPrivacyFilter='initials'/>
+		<code value='70569-9' displayName='Plasmodium sp Ag' patientPrivacyFilter='initials'/>
+		<code value='41856-6' displayName='Variola virus DNA' patientPrivacyFilter='none'/>
+		<code value='5400-7' displayName='Vaccinia virus Ab' patientPrivacyFilter='none'/>
+		<code value='35390-4' displayName='Vaccinia virus DNA' patientPrivacyFilter='none'/>
+		<code value='18397-0' displayName='Polio virus 1 Ab' patientPrivacyFilter='none'/>
+		<code value='18398-8' displayName='Polio virus 2 Ab' patientPrivacyFilter='none'/>
+		<code value='18399-6' displayName='Polio virus 3 Ab' patientPrivacyFilter='none'/>
+		<code value='24169-5' displayName='Polio virus 1 Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24170-3' displayName='Polio virus 1 Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24171-1' displayName='Polio virus 2 Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24172-9' displayName='Polio virus 2 Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24173-7' displayName='Polio virus 3 Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24174-5' displayName='Polio virus 3 Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24243-8' displayName='Polio virus 1 Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24244-6' displayName='Polio virus 1 Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24245-3' displayName='Polio virus 2 Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24246-1' displayName='Polio virus 2 Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24247-9' displayName='Polio virus 3 Ab^1st specimen' patientPrivacyFilter='none'/>
+		<code value='24248-7' displayName='Polio virus 3 Ab^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='27261-7' displayName='Polio virus Ab' patientPrivacyFilter='none'/>
+		<code value='40781-7' displayName='Polio virus Ab.IgM^1st specimen' patientPrivacyFilter='none'/>
+		<code value='40782-5' displayName='Polio virus Ab.IgM^1st specimen' patientPrivacyFilter='none'/>
+		<code value='5282-9' displayName='Polio virus 1 Ab' patientPrivacyFilter='none'/>
+		<code value='5281-1' displayName='Polio virus 1 Ab' patientPrivacyFilter='none'/>
+		<code value='5283-7' displayName='Polio virus 2 Ab' patientPrivacyFilter='none'/>
+		<code value='5284-5' displayName='Polio virus 2 Ab' patientPrivacyFilter='none'/>
+		<code value='5285-2' displayName='Polio virus 3 Ab' patientPrivacyFilter='none'/>
+		<code value='5286-0' displayName='Polio virus 3 Ab' patientPrivacyFilter='none'/>
+		<code value='53645-8' displayName='Polio virus identified' patientPrivacyFilter='none'/>
+		<code value='60546-9' displayName='Polio virus identified' patientPrivacyFilter='none'/>
+		<code value='23379-1' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='23380-9' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='23381-7' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='37425-6' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='38275-4' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='39020-3' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='39021-1' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='39320-7' displayName='Prion protein.abnormal' patientPrivacyFilter='none'/>
+		<code value='12251-5' displayName='Rubella virus Ag' patientPrivacyFilter='none'/>
+		<code value='13279-5' displayName='Rubella virus Ab.IgG^1st specimen' patientPrivacyFilter='none'/>
+		<code value='13280-3' displayName='Rubella virus Ab.IgG^2nd specimen' patientPrivacyFilter='none'/>
+		<code value='25298-1' displayName='Rubella virus Ab.IgG^1st specimen/2nd specimen' patientPrivacyFilter='none'/>
+		<code value='24116-6' displayName='Rubella virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='25420-1' displayName='Rubella virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='31616-6' displayName='Rubella virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='54091-4' displayName='Rubella virus RNA' patientPrivacyFilter='none'/>
+		<code value='5335-5' displayName='Rubella virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='6548-2' displayName='Rubella virus identified' patientPrivacyFilter='none'/>
+		<code value='8015-0' displayName='Rubella virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='17563-8' displayName='Salmonella sp identified' patientPrivacyFilter='none'/>
+		<code value='23602-6' displayName='Salmonella enteritidis' patientPrivacyFilter='none'/>
+		<code value='34891-2' displayName='Salmonella enteritidis' patientPrivacyFilter='none'/>
+		<code value='59846-6' displayName='Salmonella sp identified' patientPrivacyFilter='none'/>
+		<code value='41458-1' displayName='SARS coronavirus RNA' patientPrivacyFilter='none'/>
+		<code value='41459-9' displayName='SARS coronavirus identified' patientPrivacyFilter='none'/>
+		<code value='41460-7' displayName='SARS coronavirus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='41991-1' displayName='SARS coronavirus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='42956-3' displayName='SARS coronavirus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='42957-1' displayName='SARS coronavirus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='60275-5' displayName='SARS coronavirus RNA' patientPrivacyFilter='none'/>
+		<code value='60426-4' displayName='SARS coronavirus Ab' patientPrivacyFilter='none'/>
+		<code value='60534-5' displayName='SARS coronavirus RNA' patientPrivacyFilter='none'/>
+		<code value='17576-0' displayName='Shigella sp identified' patientPrivacyFilter='initials'/>
+		<code value='42190-9' displayName='Shigella sp DNA' patientPrivacyFilter='initials'/>
+		<code value='46455-2' displayName='Shigella sp DNA' patientPrivacyFilter='initials'/>
+		<code value='49056-5' displayName='Shigella sp serotype' patientPrivacyFilter='initials'/>
+		<code value='14322-2' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='17652-9' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='20489-1' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='24027-5' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='31969-9' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='49611-7' displayName='Streptococcus pneumoniae DNA' patientPrivacyFilter='initials'/>
+		<code value='49672-9' displayName='Streptococcus pneumoniae DNA' patientPrivacyFilter='initials'/>
+		<code value='5035-1' displayName='Streptococcus pneumoniae rRNA' patientPrivacyFilter='initials'/>
+		<code value='53917-1' displayName='Streptococcus pneumoniae DNA' patientPrivacyFilter='initials'/>
+		<code value='6553-2' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='6555-7' displayName='Streptococcus pneumoniae Ag' patientPrivacyFilter='initials'/>
+		<code value='23391-6' displayName='Rabies virus Ag' patientPrivacyFilter='none'/>
+		<code value='51646-8' displayName='Rabies virus RNA' patientPrivacyFilter='none'/>
+		<code value='51647-6' displayName='Rabies virus RNA' patientPrivacyFilter='none'/>
+		<code value='60270-6' displayName='Rabies virus RNA' patientPrivacyFilter='none'/>
+		<code value='6528-4' displayName='Rabies virus Ag' patientPrivacyFilter='none'/>
+		<code value='6539-1' displayName='Rabies virus identified' patientPrivacyFilter='none'/>
+		<code value='6536-7' displayName='Rabies virus identified' patientPrivacyFilter='none'/>
+		<code value='70866-9' displayName='Rabies virus strain identified' patientPrivacyFilter='none'/>
+		<code value='70867-7' displayName='Rabies virus strain identified' patientPrivacyFilter='none'/>
+		<code value='24110-9' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='24312-1' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='26009-1' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='41163-7' displayName='Treponema pallidum DNA' patientPrivacyFilter='initials'/>
+		<code value='40679-3' displayName='Treponema pallidum Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='40680-1' displayName='Treponema pallidum Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='41122-3' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='47237-3' displayName='Treponema pallidum Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='47238-1' displayName='Treponema pallidum Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='51838-1' displayName='Treponema pallidum Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='51839-9' displayName='Treponema pallidum Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='53605-2' displayName='Treponema pallidum DNA' patientPrivacyFilter='initials'/>
+		<code value='57032-5' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='63464-2' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='6561-5' displayName='Treponema pallidum Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='6562-3' displayName='Treponema pallidum Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='8041-6' displayName='Treponema pallidum Ab' patientPrivacyFilter='initials'/>
+		<code value='13922-0' displayName='Trichinella spiralis Ab.IgA' patientPrivacyFilter='none'/>
+		<code value='13923-8' displayName='Trichinella spiralis Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='19253-4' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='17732-9' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='17733-7' displayName='Trichinella spiralis Ab.IgA' patientPrivacyFilter='none'/>
+		<code value='17734-5' displayName='Trichinella spiralis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='17735-2' displayName='Trichinella spiralis Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='22595-3' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='22596-1' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='23499-7' displayName='Trichinella spiralis' patientPrivacyFilter='none'/>
+		<code value='25423-5' displayName='Trichinella spiralis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='25993-7' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='26661-9' displayName='Trichinella sp Ab' patientPrivacyFilter='none'/>
+		<code value='27426-6' displayName='Trichinella sp Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='31687-7' displayName='Trichinella sp Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='32768-4' displayName='Trichinella sp Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='32723-9' displayName='Trichinella sp Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='33587-7' displayName='Trichinella sp Ab.IgA' patientPrivacyFilter='none'/>
+		<code value='41426-8' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='52979-2' displayName='Trichinella spiralis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='5395-9' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='53387-7' displayName='Trichinella spiralis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='56992-1' displayName='Trichinella sp Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='6563-1' displayName='Trichinella spiralis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='8042-4' displayName='Trichinella spiralis Ab' patientPrivacyFilter='none'/>
+		<code value='8043-2' displayName='Trichinella spiralis Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='6579-7' displayName='Vibrio sp identified' patientPrivacyFilter='initials'/>
+		<code value='6581-3' displayName='Vibrio sp identified' patientPrivacyFilter='initials'/>
+		<code value='31704-0' displayName='West Nile virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='32361-8' displayName='West Nile virus RNA' patientPrivacyFilter='none'/>
+		<code value='32370-9' displayName='West Nile virus RNA' patientPrivacyFilter='none'/>
+		<code value='33329-4' displayName='West Nile virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='33331-0' displayName='West Nile virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='34460-6' displayName='West Nile virus RNA' patientPrivacyFilter='none'/>
+		<code value='34461-4' displayName='West Nile virus RNA' patientPrivacyFilter='none'/>
+		<code value='34892-0' displayName='West Nile virus RNA' patientPrivacyFilter='none'/>
+		<code value='38166-5' displayName='West Nile virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='38997-3' displayName='West Nile virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='39555-8' displayName='West Nile virus Ab' patientPrivacyFilter='none'/>
+		<code value='41232-0' displayName='West Nile virus Ab' patientPrivacyFilter='none'/>
+		<code value='41225-4' displayName='West Nile virus Ab' patientPrivacyFilter='none'/>
+		<code value='41194-2' displayName='West Nile virus Ab' patientPrivacyFilter='none'/>
+		<code value='43343-3' displayName='West Nile virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='55380-0' displayName='West Nile virus Ab' patientPrivacyFilter='none'/>
+		<code value='60030-4' displayName='West Nile virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='33685-9' displayName='Yersinia pestis' patientPrivacyFilter='none'/>
+		<code value='33686-7' displayName='Yersinia pestis' patientPrivacyFilter='none'/>
+		<code value='33687-5' displayName='Yersinia pestis Ag' patientPrivacyFilter='none'/>
+		<code value='33688-3' displayName='Yersinia pestis Ag' patientPrivacyFilter='none'/>
+		<code value='33689-1' displayName='Yersinia pestis Ab' patientPrivacyFilter='none'/>
+		<code value='33690-9' displayName='Yersinia pestis Ab' patientPrivacyFilter='none'/>
+		<code value='33691-7' displayName='Yersinia pestis DNA' patientPrivacyFilter='none'/>
+		<code value='33692-5' displayName='Yersinia pestis DNA' patientPrivacyFilter='none'/>
+		<code value='33706-3' displayName='Yersinia pestis Ab' patientPrivacyFilter='none'/>
+		<code value='33707-1' displayName='Yersinia pestis Ab' patientPrivacyFilter='none'/>
+		<code value='45045-2' displayName='Yersinia pestis Ab' patientPrivacyFilter='none'/>
+		<code value='47518-6' displayName='Yersinia pestis Ab' patientPrivacyFilter='none'/>
+		<code value='26058-8' displayName='European tick borne encephalitis virus Ab' patientPrivacyFilter='none'/>
+		<code value='26059-6' displayName='European tick borne encephalitis virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='26060-4' displayName='European tick borne encephalitis virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='26062-0' displayName='European tick borne encephalitis virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='26063-8' displayName='European tick borne encephalitis virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='69923-1' displayName='European tick borne encephalitis virus Ab.IgM' patientPrivacyFilter='none'/>
+		<code value='69926-4' displayName='European tick borne encephalitis virus Ab.IgG' patientPrivacyFilter='none'/>
+		<code value='16677-7' displayName='Coxiella burnetii Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='16678-5' displayName='Coxiella burnetii Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='22211-7' displayName='Coxiella burnetii Ab' patientPrivacyFilter='initials'/>
+		<code value='23017-7' displayName='Coxiella burnetii Ab' patientPrivacyFilter='initials'/>
+		<code value='23018-5' displayName='Coxiella burnetii Ab' patientPrivacyFilter='initials'/>
+		<code value='23019-3' displayName='Coxiella burnetii Ab' patientPrivacyFilter='initials'/>
+		<code value='23020-1' displayName='Coxiella burnetii Ab' patientPrivacyFilter='initials'/>
+		<code value='23024-3' displayName='Coxiella burnetii DNA' patientPrivacyFilter='initials'/>
+		<code value='25335-1' displayName='Coxiella burnetii Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='25336-9' displayName='Coxiella burnetii Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='25384-9' displayName='Coxiella burnetii Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='25385-6' displayName='Coxiella burnetii Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='27945-5' displayName='Coxiella burnetii phase 2 Ab' patientPrivacyFilter='initials'/>
+		<code value='27951-3' displayName='Coxiella burnetii phase 1 Ab' patientPrivacyFilter='initials'/>
+		<code value='29772-1' displayName='Coxiella burnetii phase 2 Ab' patientPrivacyFilter='initials'/>
+		<code value='29773-9' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='29774-7' displayName='Coxiella burnetii phase 1 Ab' patientPrivacyFilter='initials'/>
+		<code value='29777-0' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='30212-5' displayName='Coxiella burnetii Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='30213-3' displayName='Coxiella burnetii Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='31311-4' displayName='Coxiella burnetii phase 1 Ab' patientPrivacyFilter='initials'/>
+		<code value='31312-2' displayName='Coxiella burnetii phase 1 Ab.IgA' patientPrivacyFilter='initials'/>
+		<code value='31313-0' displayName='Coxiella burnetii phase 2 Ab' patientPrivacyFilter='initials'/>
+		<code value='31314-8' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='31315-5' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='31316-3' displayName='Coxiella burnetii phase 2 Ab.IgA' patientPrivacyFilter='initials'/>
+		<code value='32644-7' displayName='Coxiella burnetii phase 1 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='32645-4' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='34716-1' displayName='Coxiella burnetii phase 1 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='34717-9' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='38389-3' displayName='Coxiella burnetii phase 2 Ab' patientPrivacyFilter='initials'/>
+		<code value='42897-9' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='43050-4' displayName='Coxiella burnetii phase 1 Ab' patientPrivacyFilter='initials'/>
+		<code value='43928-1' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='44799-5' displayName='Coxiella burnetii' patientPrivacyFilter='initials'/>
+		<code value='44814-2' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='47075-7' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='48719-9' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='48720-7' displayName='Coxiella burnetii phase 1 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='49124-1' displayName='Coxiella burnetii identified' patientPrivacyFilter='initials'/>
+		<code value='51810-0' displayName='Coxiella burnetii phase 1 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='51811-8' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='51812-6' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='51813-4' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='56915-2' displayName='Coxiella burnetii Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='56916-0' displayName='Coxiella burnetii Ab.IgM^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='56917-8' displayName='Coxiella burnetii Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='56918-6' displayName='Coxiella burnetii Ab.IgM^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='56919-4' displayName='Coxiella burnetii Ab.IgG^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='56920-2' displayName='Coxiella burnetii Ab.IgG^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='57673-6' displayName='Coxiella burnetii Ab.IgM^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='57674-4' displayName='Coxiella burnetii Ab.IgM^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='57681-9' displayName='Coxiella burnetii Ab.IgG^1st specimen' patientPrivacyFilter='initials'/>
+		<code value='57682-7' displayName='Coxiella burnetii Ab.IgG^2nd specimen' patientPrivacyFilter='initials'/>
+		<code value='60261-5' displayName='Coxiella burnetii DNA' patientPrivacyFilter='initials'/>
+		<code value='63455-0' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='7828-7' displayName='Coxiella burnetii Ab' patientPrivacyFilter='initials'/>
+		<code value='7829-5' displayName='Coxiella burnetii phase 1 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='7830-3' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='7831-1' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='7832-9' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='9706-3' displayName='Coxiella burnetii phase 1 Ab.IgA' patientPrivacyFilter='initials'/>
+		<code value='9707-1' displayName='Coxiella burnetii phase 2 Ab.IgA' patientPrivacyFilter='initials'/>
+		<code value='9708-9' displayName='Coxiella burnetii phase 1 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='9709-7' displayName='Coxiella burnetii phase 2 Ab.IgG' patientPrivacyFilter='initials'/>
+		<code value='9710-5' displayName='Coxiella burnetii phase 1 Ab.IgM' patientPrivacyFilter='initials'/>
+		<code value='9711-3' displayName='Coxiella burnetii phase 2 Ab.IgM' patientPrivacyFilter='initials'/>
+	</system>
+
+	<system codeSystemName='lrph-v1-SNOMEDCT' root='2.16.756.5.30.1.1.1.1.3.3.1'>
+		<code value='26250004' displayName='Brucella' patientPrivacyFilter='initials'/>
+		<code value='24224000' displayName='Brucella abortus' patientPrivacyFilter='initials'/>
+		<code value='115638007' displayName='Brucella abortus, biovar 1' patientPrivacyFilter='initials'/>
+		<code value='115639004' displayName='Brucella abortus, biovar 2' patientPrivacyFilter='initials'/>
+		<code value='115640002' displayName='Brucella abortus, biovar 3' patientPrivacyFilter='initials'/>
+		<code value='115641003' displayName='Brucella abortus, biovar 4' patientPrivacyFilter='initials'/>
+		<code value='115642005' displayName='Brucella abortus, biovar 5' patientPrivacyFilter='initials'/>
+		<code value='115643000' displayName='Brucella abortus, biovar 6' patientPrivacyFilter='initials'/>
+		<code value='115644006' displayName='Brucella abortus, biovar 9' patientPrivacyFilter='initials'/>
+		<code value='38025008' displayName='Brucella canis' patientPrivacyFilter='initials'/>
+		<code value='72829003' displayName='Brucella melitensis' patientPrivacyFilter='initials'/>
+		<code value='116505000' displayName='Brucella species' patientPrivacyFilter='initials'/>
+		<code value='48317004' displayName='Brucella suis' patientPrivacyFilter='initials'/>
+		<code value='35408001' displayName='Campylobacter' patientPrivacyFilter='initials'/>
+		<code value='40614002' displayName='Campylobacter coli' patientPrivacyFilter='initials'/>
+		<code value='116037008' displayName='Campylobacter curvus' patientPrivacyFilter='initials'/>
+		<code value='84210007' displayName='Campylobacter fetus' patientPrivacyFilter='initials'/>
+		<code value='9041007' displayName='Campylobacter hyointestinalis' patientPrivacyFilter='initials'/>
+		<code value='66543000' displayName='Campylobacter jejuni' patientPrivacyFilter='initials'/>
+		<code value='116386003' displayName='Campylobacter lari' patientPrivacyFilter='initials'/>
+		<code value='113525005' displayName='Campylobacter rectus' patientPrivacyFilter='initials'/>
+		<code value='116457002' displayName='Campylobacter species' patientPrivacyFilter='initials'/>
+		<code value='91524009' displayName='Campylobacter sputorum' patientPrivacyFilter='initials'/>
+		<code value='103427005' displayName='Campylobacter upsaliensis' patientPrivacyFilter='initials'/>
+		<code value='63938009' displayName='Chlamydia trachomatis' patientPrivacyFilter='initials'/>
+		<code value='115293007' displayName='Chlamydia trachomatis, serotype D' patientPrivacyFilter='initials'/>
+		<code value='115294001' displayName='Chlamydia trachomatis, serotype E' patientPrivacyFilter='initials'/>
+		<code value='115295000' displayName='Chlamydia trachomatis, serotype F' patientPrivacyFilter='initials'/>
+		<code value='115319008' displayName='Chlamydia trachomatis, serotype G' patientPrivacyFilter='initials'/>
+		<code value='115328009' displayName='Chlamydia trachomatis, serotype H' patientPrivacyFilter='initials'/>
+		<code value='115296004' displayName='Chlamydia trachomatis, serotype I' patientPrivacyFilter='initials'/>
+		<code value='115297008' displayName='Chlamydia trachomatis, serotype J' patientPrivacyFilter='initials'/>
+		<code value='115298003' displayName='Chlamydia trachomatis, serotype K' patientPrivacyFilter='initials'/>
+		<code value='5851001' displayName='Corynebacterium diphtheriae' patientPrivacyFilter='none'/>
+		<code value='83675005' displayName='Corynebacterium diphtheriae type gravis' patientPrivacyFilter='none'/>
+		<code value='70876001' displayName='Corynebacterium diphtheriae type intermedius' patientPrivacyFilter='none'/>
+		<code value='13755001' displayName='Corynebacterium diphtheriae type mitis' patientPrivacyFilter='none'/>
+		<code value='243255007' displayName='Corynebacterium diphtheriae var belfanti' patientPrivacyFilter='none'/>
+		<code value='34348001' displayName='Dengue virus' patientPrivacyFilter='none'/>
+		<code value='243604005' displayName='Dengue virus subgroup' patientPrivacyFilter='none'/>
+		<code value='60588009' displayName='Dengue virus, type 1' patientPrivacyFilter='none'/>
+		<code value='41328007' displayName='Dengue virus, type 2' patientPrivacyFilter='none'/>
+		<code value='8467002' displayName='Dengue virus, type 3' patientPrivacyFilter='none'/>
+		<code value='36700002' displayName='Dengue virus, type 4' patientPrivacyFilter='none'/>
+		<code value='51526001' displayName='Francisella tularensis' patientPrivacyFilter='none'/>
+		<code value='60502008' displayName='Francisella tularensis ss. holarctica' patientPrivacyFilter='none'/>
+		<code value='23930001' displayName='Francisella tularensis ss. mediasiatica' patientPrivacyFilter='none'/>
+		<code value='91508008' displayName='Francisella tularensis ss. tularensis' patientPrivacyFilter='none'/>
+		<code value='103442008' displayName='Haemophilus influenzae type B' patientPrivacyFilter='initials'/>
+		<code value='127505006' displayName='Haemophilus influenzae, biotype I' patientPrivacyFilter='initials'/>
+		<code value='44470000' displayName='Haemophilus influenzae' patientPrivacyFilter='initials'/>
+		<code value='103441001' displayName='Haemophilus influenzae type A' patientPrivacyFilter='initials'/>
+		<code value='103442008' displayName='Haemophilus influenzae type B' patientPrivacyFilter='initials'/>
+		<code value='103443003' displayName='Haemophilus influenzae type C' patientPrivacyFilter='initials'/>
+		<code value='103444009' displayName='Haemophilus influenzae type D' patientPrivacyFilter='initials'/>
+		<code value='103445005' displayName='Haemophilus influenzae type E' patientPrivacyFilter='initials'/>
+		<code value='103446006' displayName='Haemophilus influenzae type F' patientPrivacyFilter='initials'/>
+		<code value='127505006' displayName='Haemophilus influenzae, biotype I' patientPrivacyFilter='initials'/>
+		<code value='127506007' displayName='Haemophilus influenzae, biotype II' patientPrivacyFilter='initials'/>
+		<code value='127507003' displayName='Haemophilus influenzae, biotype III' patientPrivacyFilter='initials'/>
+		<code value='127508008' displayName='Haemophilus influenzae, biotype IV' patientPrivacyFilter='initials'/>
+		<code value='127509000' displayName='Haemophilus influenzae, biotype V' patientPrivacyFilter='initials'/>
+		<code value='127510005' displayName='Haemophilus influenzae, biotype VI' patientPrivacyFilter='initials'/>
+		<code value='127511009' displayName='Haemophilus influenzae, biotype VII' patientPrivacyFilter='initials'/>
+		<code value='127512002' displayName='Haemophilus influenzae, biotype VIII' patientPrivacyFilter='initials'/>
+		<code value='115407004' displayName='Haemophilus influenzae, not B' patientPrivacyFilter='initials'/>
+		<code value='103442008' displayName='Haemophilus influenzae type B' patientPrivacyFilter='initials'/>
+		<code value='23566007' displayName='Listeria' patientPrivacyFilter='initials'/>
+		<code value='36094007' displayName='Listeria monocytogenes' patientPrivacyFilter='initials'/>
+		<code value='131330005' displayName='Listeria species' patientPrivacyFilter='initials'/>
+		<code value='37835001' displayName='Legionella bozemanii' patientPrivacyFilter='none'/>
+		<code value='89605004' displayName='Legionella longbeachae' patientPrivacyFilter='none'/>
+		<code value='115515003' displayName='Legionella longbeachae, serogroup 1' patientPrivacyFilter='none'/>
+		<code value='115516002' displayName='Legionella longbeachae, serogroup 2' patientPrivacyFilter='none'/>
+		<code value='80897008' displayName='Legionella pneumophila' patientPrivacyFilter='none'/>
+		<code value='103463005' displayName='Legionella pneumophila serogroup 1' patientPrivacyFilter='none'/>
+		<code value='103466002' displayName='Legionella pneumophila serogroup 4' patientPrivacyFilter='none'/>
+		<code value='103468001' displayName='Legionella pneumophila serogroup 6' patientPrivacyFilter='none'/>
+		<code value='103458006' displayName='Legionella pneumophila ss. pneumophila' patientPrivacyFilter='none'/>
+		<code value='113861009' displayName='Mycobacterium tuberculosis' patientPrivacyFilter='none'/>
+		<code value='27142009' displayName='Mycobacterium bovis' patientPrivacyFilter='none'/>
+		<code value='51320008' displayName='Mycobacterium africanum' patientPrivacyFilter='none'/>
+		<code value='113858008' displayName='Mycobacterium tuberculosis complex' patientPrivacyFilter='none'/>
+		<code value='430579009' displayName='Mycobacterium caprae' patientPrivacyFilter='none'/>
+		<code value='68704007' displayName='Neisseria gonorrhoeae' patientPrivacyFilter='initials'/>
+		<code value='17872004' displayName='Neisseria meningitidis' patientPrivacyFilter='none'/>
+		<code value='103479006' displayName='Neisseria meningitidis group A' patientPrivacyFilter='none'/>
+		<code value='103480009' displayName='Neisseria meningitidis group B' patientPrivacyFilter='none'/>
+		<code value='103481008' displayName='Neisseria meningitidis group C' patientPrivacyFilter='none'/>
+		<code value='125041003' displayName='Neisseria meningitidis group X' patientPrivacyFilter='none'/>
+		<code value='103482001' displayName='Neisseria meningitidis group Y' patientPrivacyFilter='none'/>
+		<code value='125042005' displayName='Neisseria meningitidis group Z' patientPrivacyFilter='none'/>
+		<code value='103483006' displayName='Neisseria meningitidis W135' patientPrivacyFilter='none'/>
+		<code value='30020004' displayName='Plasmodium falciparum' patientPrivacyFilter='initials'/>
+		<code value='56395006' displayName='Plasmodium malariae' patientPrivacyFilter='initials'/>
+		<code value='18508006' displayName='Plasmodium ovale' patientPrivacyFilter='initials'/>
+		<code value='74746009' displayName='Plasmodium vivax' patientPrivacyFilter='initials'/>
+		<code value='27268008' displayName='Salmonella' patientPrivacyFilter='none'/>
+		<code value='73525009' displayName='Salmonella enteritidis' patientPrivacyFilter='none'/>
+		<code value='79128009' displayName='Salmonella paratyphi A' patientPrivacyFilter='none'/>
+		<code value='85908006' displayName='Salmonella paratyphi B' patientPrivacyFilter='none'/>
+		<code value='32488009' displayName='Salmonella paratyphi C' patientPrivacyFilter='none'/>
+		<code value='372342007' displayName='Salmonella species' patientPrivacyFilter='none'/>
+		<code value='50136005' displayName='Salmonella typhimurium' patientPrivacyFilter='none'/>
+		<code value='5595000' displayName='Salmonella typhi' patientPrivacyFilter='none'/>
+		<code value='55462008' displayName='Shigella boydii' patientPrivacyFilter='initials'/>
+		<code value='406493007' displayName='Shigella boydii serotype undetermined (Subgroup C)' patientPrivacyFilter='initials'/>
+		<code value='43612004' displayName='Shigella dysenteriae' patientPrivacyFilter='initials'/>
+		<code value='406499006' displayName='Shigella dysenteriae serotype undetermined (Subgroup A)' patientPrivacyFilter='initials'/>
+		<code value='85729005' displayName='Shigella flexneri' patientPrivacyFilter='initials'/>
+		<code value='406503000' displayName='Shigella flexneri serotype undetermined (Subgroup B)' patientPrivacyFilter='initials'/>
+		<code value='4298009' displayName='Shigella sonnei' patientPrivacyFilter='initials'/>
+		<code value='406504006' displayName='Shigella sonnei (Subgroup D)' patientPrivacyFilter='initials'/>
+		<code value='116498009' displayName='Shigella species' patientPrivacyFilter='initials'/>
+		<code value='103497003' displayName='Streptococcus penumoniae 3' patientPrivacyFilter='initials'/>
+		<code value='131363003' displayName='Streptococcus penumoniae, serotype 29' patientPrivacyFilter='initials'/>
+		<code value='9861002' displayName='Streptococcus pneumoniae' patientPrivacyFilter='initials'/>
+		<code value='103498008' displayName='Streptococcus pneumoniae 14' patientPrivacyFilter='initials'/>
+		<code value='103499000' displayName='Streptococcus pneumoniae 7F' patientPrivacyFilter='initials'/>
+		<code value='103500009' displayName='Streptococcus pneumoniae 9N' patientPrivacyFilter='initials'/>
+		<code value='363768008' displayName='Streptococcus pneumoniae, serotype 11' patientPrivacyFilter='initials'/>
+		<code value='116500005' displayName='Streptococcus pneumoniae, serotype 12' patientPrivacyFilter='initials'/>
+		<code value='131362008' displayName='Streptococcus pneumoniae, serotype 16' patientPrivacyFilter='initials'/>
+		<code value='131361001' displayName='Streptococcus pneumoniae, serotype 17' patientPrivacyFilter='initials'/>
+		<code value='127541006' displayName='Streptococcus pneumoniae, serotype 19' patientPrivacyFilter='initials'/>
+		<code value='363767003' displayName='Streptococcus pneumoniae, serotype 22' patientPrivacyFilter='initials'/>
+		<code value='72904005' displayName='Treponema pallidum' patientPrivacyFilter='initials'/>
+		<code value='75953000' displayName='Vibrio cholerae' patientPrivacyFilter='initials'/>
+		<code value='58735003' displayName='Vibrio cholerae, El Tor biotype' patientPrivacyFilter='initials'/>
+		<code value='398506000' displayName='Vibrio cholerae, non-01' patientPrivacyFilter='initials'/>
+	</system>
+	
+	<!-- Interpretationcode of the lab result -->
+	<system codeSystemName='interpretation' root='2.16.756.5.30.1.127.3.2.20121101.3'>
+		<code value='POS' displayName='pathogen found in specimen' />
+		<code value='NEG' displayName='pathogen couldn&apos;t be determined in specimen' />
+	</system>
+	
+</systems>
