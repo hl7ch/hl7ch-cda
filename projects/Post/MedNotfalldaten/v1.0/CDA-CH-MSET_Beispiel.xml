@@ -6,6 +6,7 @@ History:
 24.10.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
 10.11.2012: Tony Schaller, medshare GmbH (Abschluss Implementierungsleitfaden)
 13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
+18.03.2013: Tony Schaller, medshare GmbH (Anpassungen bezüglich CDA-CH-MSET Implementierungsleitfaden V1.1)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -31,11 +32,12 @@ History:
 	<effectiveTime value='20121024'/>
 	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
 	<languageCode code='de-CH'/>
-	<setId extension='BEA2C0CC-CC66-447C-AFF4-461B815261B3' root='2.16.756.5.30.1.1.1.1.3.2.1'/>
+	<setId extension='BEA2C0CC-CC66-447C-AFF4-461B815261B3' root='2.16.756.5.30.1.1.1.1'/>
 	<versionNumber value='1'/>
 	<recordTarget>
 		<patientRole>
-			<id extension='123.71.332.115' root='2.16.756.5.31'/>
+			<id extension='756.1234.5678.90' root='2.16.756.5.32'/>
+			<id extension='80756123450123456789' root='2.16.756.5.30.1.123.100.1.1.1'/>
 			<addr use='HP'>
 				<streetName>Leidensweg</streetName>
 				<houseNumber>10</houseNumber>
@@ -52,10 +54,6 @@ History:
 				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
 				<birthTime value='19670520'/>
 			</patient>
-			<providerOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
-				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
-			</providerOrganization>
 		</patientRole>
 	</recordTarget>
 	<author>
@@ -63,7 +61,12 @@ History:
 		<assignedAuthor>
 			<id extension='dummy' root='1.9999999'/>
 			<assignedAuthoringDevice>
-				<softwareName>Dummy Middleware</softwareName>
+				<manufacturerModelName>
+					Software
+				</manufacturerModelName>
+				<softwareName>
+					VK-Modul v1.0
+				</softwareName>
 			</assignedAuthoringDevice>
 		</assignedAuthor>
 	</author>
@@ -112,39 +115,16 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<id nullFlavor='NA' />
-				<name>Versichertenkarte</name>
+				<name>
+					<prefix>Swiss Insurance Card</prefix>
+					<suffix>Swiss Post</suffix>
+				</name>
 				<addr use='WP'>
-					<country>CH</country>
+					<country>CHE</country>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
-	<legalAuthenticator>
-		<time value='20111110'/>
-		<signatureCode code='S'/>
-		<assignedEntity>
-			<id extension='7608888888888' root='1.3.88'/>
-			<assignedPerson>
-				<name>
-					<prefix>Dr. med.</prefix>
-					<given>Allzeit</given>
-					<family>Bereit</family>
-					<suffix>Facharzt für Allgemeine Medizin</suffix>
-				</name>
-			</assignedPerson>
-			<representedOrganization>
-				<id nullFlavor='NA'/>
-				<name>Gruppenpraxis CH</name>
-				<addr use='WP'>
-					<streetName>Doktorgasse</streetName>
-					<houseNumber>2</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</representedOrganization>
-		</assignedEntity>
-	</legalAuthenticator>
 	<participant typeCode='IND'>
 		<!-- VVK-EDI: 2.8.1 Art der Kontaktadresse (optional) -->
 		<functionCode code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.12' displayName='Kontaktadresse im medizinischen Umfeld'  codeSystemName='kindOfAddressee (ICR-DHA, chapter 2.8.1)'/>
@@ -179,11 +159,11 @@ History:
 			</scopingOrganization>
 		</associatedEntity>
 	</participant>
-	<relatedDocument typeCode="XFRM" > 
+	<relatedDocument typeCode="XFRM" >
 		<parentDocument>
 			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='3CD57BA0-5FB0-45E9-A206-4C617A89C4B2'/>
-		</parentDocument> 
-	</relatedDocument> 	
+		</parentDocument>
+	</relatedDocument>
 	<!--
 	********************************************************
 	CDA Body
@@ -302,43 +282,43 @@ History:
 							</entryRelationship>
 							<!--
 							<entryRelationship typeCode='SUBJ' inversionInd='false'>
-								<!-/- Problem Entry - Krankheiten und Unfallfolgen / Diabetes mellitus -/->
-								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
-									<templateId root='2.16.840.1.113883.10.20.1.28'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='72FABD7E-931B-4A02-B8AC-9F7FFAFB5645'/>
-									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
-									<text nullFlavor='NA' />
-									<statusCode code='completed'/>
-									<effectiveTime>
-										<low nullFlavor='UNK'/>
-										<high nullFlavor='UNK'/>
-									</effectiveTime>
-									<!-/- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -/->
-									<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1' codeSystemName='diseaseName (ICR-DHA, chapter 2.1.1)'/>
-									<author>
-										<!-/- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -/->
-										<time value='20120121' />
-										<assignedAuthor>
-											<!-/- VVK-EDI: 2.1.3 GLN der eintragenden Person (obligatorisch) -/->
-											<id extension='7608888888888' root='1.3.88'/>
-										</assignedAuthor>
-									</author>
-									<!-/- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -/->
-									<entryRelationship typeCode='SUBJ' inversionInd='true'>
-										<act classCode='ACT' moodCode='EVN'>
-											<templateId root='2.16.840.1.113883.10.20.1.40'/>
-											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-											<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
-											<!-/- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -/->
-											<text>
-												<reference value='#ku22'/>
-											</text>
-											<statusCode code='completed'/>
-											<effectiveTime value='20120121' />
-										</act>
-									</entryRelationship>
-								</observation>
+							<!-/- Problem Entry - Krankheiten und Unfallfolgen / Diabetes mellitus -/->
+							<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.840.1.113883.10.20.1.28'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='72FABD7E-931B-4A02-B8AC-9F7FFAFB5645'/>
+							<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+							<text nullFlavor='NA' />
+							<statusCode code='completed'/>
+							<effectiveTime>
+							<low nullFlavor='UNK'/>
+							<high nullFlavor='UNK'/>
+							</effectiveTime>
+							<!-/- VVK-EDI: 2.1.1	Bezeichnung der Krankheit oder Unfallfolge (optional) -/->
+							<value xsi:type='CD' code='12' displayName='Diabetes mellitus' codeSystem='2.16.756.5.30.1.127.3.1.20080401.1' codeSystemName='diseaseName (ICR-DHA, chapter 2.1.1)'/>
+							<author>
+							<!-/- VVK-EDI: 2.1.4	Datum der Eintragung (obligatorisch) -/->
+							<time value='20120121' />
+							<assignedAuthor>
+							<!-/- VVK-EDI: 2.1.3 GLN der eintragenden Person (obligatorisch) -/->
+							<id extension='7608888888888' root='1.3.88'/>
+							</assignedAuthor>
+							</author>
+							<!-/- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -/->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+							<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.40'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+							<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+							<!-/- VVK-EDI: 2.1.2	Bemerkung zur Krankheit oder Unfallfolge (optional) -/->
+							<text>
+							<reference value='#ku22'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='20120121' />
+							</act>
+							</entryRelationship>
+							</observation>
 							</entryRelationship>
 							-->
 						</act>
@@ -740,14 +720,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.3.1.6 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<entryRelationship inversionInd='false' typeCode='SUBJ'>
@@ -972,14 +944,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.3.1.6 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<entryRelationship inversionInd='false' typeCode='SUBJ'>
@@ -1307,14 +1271,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.4.6 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -1457,14 +1413,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.5.7 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<!-- An optional entry relationship that identifies the targeted illness -->
@@ -1612,14 +1560,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.6.1.5 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<!-- An optional entry relationship that identifies the rhesus factor -->
@@ -1672,14 +1612,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.6.2.4 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2-->
@@ -1822,14 +1754,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.7.1.3 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
@@ -1863,14 +1787,6 @@ History:
 								<assignedAuthor>
 									<!-- VVK-EDI: 2.7.2.3 GLN der eintragenden Person (obligatorisch) -->
 									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
 								</assignedAuthor>
 							</author>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
