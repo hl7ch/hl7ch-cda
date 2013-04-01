@@ -7,6 +7,7 @@ History:
 10.11.2012: Tony Schaller, medshare GmbH (Abschluss Implementierungsleitfaden)
 13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
 18.03.2013: Tony Schaller, medshare GmbH (Anpassungen bezüglich CDA-CH-MSET Implementierungsleitfaden V1.1)
+01.04.2013: Tony Schaller, medshare GmbH (Anpassungen bezüglich CDA-CH-MSET Implementierungsleitfaden V1.1a)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -57,6 +58,45 @@ History:
 		</patientRole>
 	</recordTarget>
 	<author>
+		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
+		<time value='20100203'/>
+		<assignedAuthor>
+			<id extension='7608888888888' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+				<country>CH</country>
+			</addr>
+			<!-- this fails with epSOS Patient Summary Schematron Validation...
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
+			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
+			-->
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<author>
 		<time value='20100203'/>
 		<assignedAuthor>
 			<id extension='dummy' root='1.9999999'/>
@@ -70,47 +110,6 @@ History:
 			</assignedAuthoringDevice>
 		</assignedAuthor>
 	</author>
-	<!--
-	<author>
-	<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
-	<time value='20100203'/>
-	<assignedAuthor>
-	<id extension='7608888888888' root='1.3.88'/>
-	<addr use='WP'>
-	<streetName>Doktorgasse</streetName>
-	<houseNumber>2</houseNumber>
-	<postalCode>8888</postalCode>
-	<city>Musterhausen</city>
-	<country>CH</country>
-	</addr>
-	<!-/- this fails with epSOS Patient Summary Schematron Validation...
-	<telecom use='PUB' value='tel:+41.32.234.55.66'/>
-	<telecom use='PUB' value='fax:+41.32.234.66.77'/>
-	<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
-	<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
-	-/->
-	<assignedPerson>
-	<name>
-	<prefix>Dr. med.</prefix>
-	<given>Allzeit</given>
-	<family>Bereit</family>
-	<suffix>Facharzt für Allgemeine Medizin</suffix>
-	</name>
-	</assignedPerson>
-	<representedOrganization>
-	<id nullFlavor='NA'/>
-	<name>Gruppenpraxis CH</name>
-	<addr use='WP'>
-	<streetName>Doktorgasse</streetName>
-	<houseNumber>2</houseNumber>
-	<postalCode>8888</postalCode>
-	<city>Musterhausen</city>
-	<country>CH</country>
-	</addr>
-	</representedOrganization>
-	</assignedAuthor>
-	</author>
-	-->
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
