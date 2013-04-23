@@ -2034,7 +2034,7 @@ History:
 			<section>
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.28' />
 			<code code='30954-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='STUDIES SUMMARY' />
-			<title>Diagnostische Zusammenfassung</title>
+			<title>Codierte Resultate</title>
 			<text>
 			Keine Angaben
 			</text>
