@@ -1,0 +1,1214 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- ********************************************************
+eImmunoDoc
+
+History:
+2012.01.07: Tony Schaller, medshare GmbH (Erster Entwurf)
+2012.01.10: Tony Schaller, medshare GmbH (Blutgruppe hinzugefügt)
+2013.04.23: Tony Schaller, medshare GmbH (Entwurf passend zu v0.5 von CDA-CH-EIMD)
+2013.05.06: Tony Schaller, medshare GmbH (Entwurf passend zu v0.7 von CDA-CH-EIMD)
+2013.05.13: Tony Schaller, medshare GmbH (Abgabe CDA-CH-EIMD v1.0)
+
+******************************************************** -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!-- ********************************************************
+	CDA Header
+	******************************************************** -->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+	<!-- Parent Templates -->
+	<!-- IHE PCC Medical Documents Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
+	<!-- IHE Immunization Detail Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'/>
+	<!-- CDA-CH -->
+	<templateId root='2.16.756.5.30.1.1.1.1' extension='CDA-CH' />
+	<!-- eImmunoDoc (EIMD) V1 -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH-EIMD' />
+
+	<id extension='D2C32126-C0A3-42DA-9E0F-62BF7C965538' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
+	<code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF IMMUNIZATIONS'/>
+	<title>eImmunoDoc</title>
+	<effectiveTime value='20130423'/>
+	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
+	<languageCode code='de-CH'/>
+	<setId extension='D2C32126-C0A3-42DA-9E0F-62BF7C965538' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<id extension='123.71.332.115' root='2.16.756.5.31'/>
+			<addr use='HP'>
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Specimendorf</city>
+				<country>CH</country>
+			</addr>
+			<telecom use='HP' value='tel:+41.32.685.12.34'/>
+			<patient>
+				<name>
+					<given>Franz</given>
+					<family>Muster</family>
+				</name>
+				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
+				<birthTime value='19670520'/>
+			</patient>
+			<providerOrganization>
+				<id extension='7608888888888' root='1.3.88'/>
+				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
+		<time value='20100203'/>
+		<assignedAuthor>
+			<id extension='7608888888888' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+				<country>CH</country>
+			</addr>
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
+			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value='20111110'/>
+		<signatureCode code='S'/>
+		<assignedEntity>
+			<id extension='7608888888888' root='1.3.88'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id nullFlavor='NA'/>
+				<name>Gruppenpraxis CH</name>
+				<addr use='WP'>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode='COV'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Insurance"/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high nullFlavor='NASK' />
+		</time>
+		<associatedEntity classCode='COVPTY'>
+			<!-- EAN der Versicherung -->
+			<id extension='7607777777777' root='1.3.88'/>
+			<associatedPerson>
+				<name>
+					<given>Kontakt</given>
+					<family>Person</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<name>WirZahlenAlles Versicherungen</name>
+				<telecom nullFlavor='NASK' />
+				<addr use='WP'>
+					<streetName>Zahlgasse</streetName>
+					<houseNumber>89</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='HLD'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.InsuranceCard"/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high value='20141231' />
+		</time>
+		<associatedEntity classCode='POLHOLD'>
+			<!-- Nummer der Versichertenkarte -->
+			<id extension='8077560000000000000000' root='2.16.756.5.30.1.123.100.1.1.1'/>
+			<associatedPerson>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<!--
+	********************************************************
+	CDA Body
+	******************************************************** -->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			Required History of Immunizations Section content (1.3.6.1.4.1.19376.1.5.3.1.3.23)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.6'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
+					<code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF IMMUNIZATIONS' />
+					<title>Impfungen</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Impfstoff Handelsname</th>
+									<th>Hersteller</th>
+									<th>Lot-Nr</th>
+									<th>Datum</th>
+									<th>Impfung gegen</th>
+									<th>Impfung erfolgt durch</th>
+									<th>Impfung dokumentiert durch</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='i1'>
+											POLIORIX Inj Lös
+										</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td>123456</td>
+									<td>15.06.1983</td>
+									<td>Poliomyelitis (Kinderlähmung)</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<content ID='i2'>
+											BOOSTRIX Inj Susp
+										</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td>12155D9</td>
+									<td>13.04.2004</td>
+									<td>DiTePer - Diphtherie, Tetanus, Pertussis (Keuchhusten)</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<content ID='i3'>
+											Dukoral
+										</content>
+									</td>
+									<td></td>
+									<td></td>
+									<td>28.02.2001</td>
+									<td>Cholera</td>
+									<td></td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- Impfung mit Angabe des Produkts (POLIORIX) gemäss CDA-CH Medikationtemplate -->
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
+							<id root='1.3.160' extension='7680006690011'/>
+							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+							<text>
+								<reference value='#i1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime operator='A' value='19830615' />
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='IMD' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Injection, intramuscular, deep' />
+							<approachSiteCode code='LD' codeSystem='2.16.840.1.113883.5.1052' codeSystemName='HumanSubstanceAdministrationSite' displayName='left deltoid' />
+							<doseQuantity value='0.5' unit='ml'/>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- epSOSVaccine Pivot Code -->
+										<code code='111164008' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Poliomyelitis vaccine'>
+											<originalText>
+												<reference value='#i1'/>
+											</originalText>
+											<!-- GTIN -->
+											<translation code='7680006690011' codeSystem='1.3.160' />
+											<!-- ATC WHO Code -->
+											<translation code='J07BF03' codeSystem='2.16.840.1.113883.6.73'/>
+										</code>
+										<name>POLIORIX Inj Lös Durchstf 0.5 ml</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<time value='19830615' />
+								<assignedEntity>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+							<!-- An optional entry relationship that identifies the immunization series number -->
+							<entryRelationship typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.46'/>
+									<code code='30973-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Dose Number' />
+									<statusCode code='completed'/>
+									<value xsi:type='ST'>123456</value>
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<!-- Impfung mit Angabe des Produkts (BOOSTRIX) gemäss CDA-CH Medikationtemplate -->
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
+							<id root='1.3.160' extension='7680006690011'/>
+							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+							<text>
+								<reference value='#i1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime operator='A' value='20040413' />
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='IMD' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Injection, intramuscular, deep' />
+							<approachSiteCode code='LD' codeSystem='2.16.840.1.113883.5.1052' codeSystemName='HumanSubstanceAdministrationSite' displayName='left deltoid' />
+							<doseQuantity value='0.5' unit='ml'/>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- epSOSVaccine Pivot Code -->
+										<code code='421245007' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='DTP - Diphtheria + tetanus + pertussis vaccine'>
+											<originalText>
+												<reference value='#i2'/>
+											</originalText>
+											<!-- GTIN -->
+											<translation code='7680006370012' codeSystem='1.3.160' />
+											<!-- ATC WHO Code -->
+											<translation code='J07AJ52' codeSystem='2.16.840.1.113883.6.73'/>
+										</code>
+										<name>BOOSTRIX Inj Susp</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<time value='20040413' />
+								<assignedEntity>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+							<!-- An optional entry relationship that identifies the immunization series number -->
+							<entryRelationship typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.46'/>
+									<code code='30973-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Dose Number' />
+									<statusCode code='completed'/>
+									<value xsi:type='ST'>12155D9</value>
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<!-- Impfung mit Angabe des Antigens (BOOSTRIX) ohne dass ein Produkt bekannt ist (gemäss CDA-CH-EIMD)-->
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
+							<id nullFlavor='UNK' />
+							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+							<text>
+								<reference value='#i3'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime operator='A' value='20010228' />
+							<priorityCode nullFlavor='UNK' />
+							<routeCode nullFlavor='UNK' />
+							<doseQuantity nullFlavor='UNK' />
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- ATC WHO Code -->
+										<code code='J07AE01' codeSystem='2.16.840.1.113883.6.73'>
+											<originalText>
+												<reference value='#i3'/>
+											</originalText>
+										</code>
+										<name>Dukoral</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<time value='20130411' />
+								<assignedAuthor>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Problem List Section content (1.3.6.1.4.1.19376.1.5.3.1.3.6)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.11'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='7ABD05C9-D11C-4239-B3B6-8C25AC7E43D6'/>
+					<code code='11450-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROBLEM LIST' />
+					<title>Problemliste</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Risikokategorie</th>
+									<th>Risikofaktor</th>
+								</tr>
+								<tr>
+									<td>Komplikationsrisiko</td>
+									<td>
+										<content ID='p1'>
+											Niereninsuffizienz
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>Expositionsrisiko</td>
+									<td>
+										<content ID='p2'>
+											Fledermausforscher und -schützer
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='98BD0CBE-01BB-44C2-AFB6-33BE0FA01EB1'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying problems of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#p1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20120801'/>
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='23' codeSystem='2.16.756.5.30.1.127.3.3.2013.1' codeSystemName='compl-risks' displayName='Niereninsuffizienz' >
+										<originalText>
+											<reference value='#p1'/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='98BD0CBE-01BB-44C2-AFB6-33BE0FA01EB1'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying problems of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#p2'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20120801'/>
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='06' codeSystem='2.16.756.5.30.1.127.3.3.2013.2' codeSystemName='exp-risks' displayName='Fledermausforscher und -schützer' >
+										<originalText>
+											<reference value='#p2'/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known History of Past Illness Section content (1.3.6.1.4.1.19376.1.5.3.1.3.8)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8' />
+					<code code='11348-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of past illness' />
+					<title>Bisherige Krankheiten</title>
+					<text>
+						Keine Angaben
+					</text>
+					<entry typeCode='DRIV'>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2' />
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='497E45CF-E8EA-4CCE-90A6-8249C06809EB'/>
+							<code nullFlavor='NA' />
+							<statusCode code='completed' />
+							<effectiveTime xsi:type='IVL_TS'>
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<entryRelationship inversionInd='false' typeCode='SUBJ'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.28' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
+									<templateId root='2.16.840.1.113883.10.20.1.54' />
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='B3DC860A-D59C-42E2-9527-BE21A0D0334F'/>
+									<code code='396782006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Past Medical History unknown' />
+									<text />
+									<statusCode code='completed' />
+									<effectiveTime>
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='UNK' />
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Allergies and Intolerances Section content (1.3.6.1.4.1.19376.1.5.3.1.3.13)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.2'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='4AF7D846-5329-41BE-8F38-C45444689512'/>
+					<code code='48765-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Allergies, adverse reactions, alerts' />
+					<title>Allergien und Unverträglichkeiten</title>
+					<text>
+						<content ID='al1'>
+							Hühnereiweiss-Allergie
+						</content>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='E3A5348A-870B-40DF-83F1-07D06B7C634D'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low value='20010824'/>
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying allergies of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='692CB59D-6A89-4ED4-9CC1-7CCB8663133A'/>
+									<code code='FALG' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType' displayName='Food Allergy' />
+									<text>
+										<reference value='#al1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20010824'/>
+									</effectiveTime>
+									<value xsi:type='CD' code='303300008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Egg protein (substance)' />
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Medications Section content (1.3.6.1.4.1.19376.1.5.3.1.3.19)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.8'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.19'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C26420A8-87B0-4F1F-8796-360374552319'/>
+					<code code='10160-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF MEDICATION USE' />
+					<title>Aktuelle Medikation</title>
+					<text>
+						<content ID='m1'>Lisinopril HCT Streuli Tbl. 10/12.5 mg: 1-0-0</content>
+					</text>
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<!-- GTIN -->
+							<id extension='7680569020096' root='1.3.160' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
+							<text>
+								<reference value='#m1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
+								<!-- Dosierung 1-0-0 -->
+								<phase value='190001010800+0100'/>
+								<period value='24' unit='h'/>
+							</effectiveTime>
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
+							<doseQuantity>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
+							</doseQuantity>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- Generic GroupCode -->
+										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+											<originalText>
+												<reference nullFlavor='UNK' />
+											</originalText>
+											<!-- ATC WHO Code -->
+											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+										</code>
+										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+
+			<!--
+			********************************************************
+			Required if known Coded Results Section content (1.3.6.1.4.1.19376.1.5.3.1.3.28)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.28' />
+					<code code='30954-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='STUDIES SUMMARY' />
+					<title>Codierte Resultate</title>
+					<text>
+						Keine Angaben
+					</text>
+					<entry typeCode='DRIV'>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13' />
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='147C50C8-23AB-44B6-A4D1-62F4E962441E'/>
+							<code nullFlavor='NA' />
+							<text>
+								<reference nullFlavor='NA' />
+							</text>
+							<statusCode code='completed' />
+							<effectiveTime nullFlavor='NA' />
+							<value xsi:type='CD' nullFlavor='UNK' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Coded Vital Signs Section content (1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.16' />
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.25'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='0D42D3DB-67BB-43AD-99DE-10D248040821'/>
+					<code code='8716-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='VITAL SIGNS' />
+					<title>Codierte Vitalzeichenliste</title>
+					<text>
+						<content ID='o1'>
+							Vitalzeichen:<br />
+							- Grösse: 178 cm
+						</content>
+					</text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.32'/>
+							<templateId root='2.16.840.1.113883.10.20.1.35'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.1'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='7586A249-889D-4F09-843A-9C3399ECFCB6'/>
+							<code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital signs' />
+							<statusCode code='completed'/>
+							<effectiveTime value="20081118"/>
+							<author typeCode='AUT'>
+								<time value='20081118' />
+								<assignedAuthor>
+									<id extension='7608888888888' root='1.3.88'/>
+								</assignedAuthor>
+							</author>
+							<!-- one or more vital signs observations -->
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='3B9A88CF-E868-490B-B0BF-DA25E7D2F9FA'/>
+									<code code='8302-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<text>
+										<reference value='#o1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime value="20081118"/>
+									<value xsi:type='PQ' value='178' unit='cm'/>
+									<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Lab Results Section content (1.3.6.1.4.1.19376.1.3.3.2.1)
+			******************************************************** -->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18727-8' codeSystem='2.16.840.1.113883.6.1' displayName='SEROLOGY STUDIES'/>
+					<title>Laborbefund</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Erregernachweis</th>
+									<th>Resultat</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Datum</th>
+									<th>Ausführendes Labor</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>
+										Hepatitis B virus surface Ag
+									</td>
+									<td>Positiv</td>
+									<td>Index=4386.35 (Signal Probe / Signal Cutoff)</td>
+									<td>5195-3</td>
+									<td>LOINC</td>
+									<td>
+										<content ID='c1'>
+											Vorwert: kein(e)
+										</content>
+									</td>
+									<td>06.05.1983</td>
+									<td>Labor Reagenzia, Musterhausen</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+							<code code='18727-8' codeSystem='2.16.840.1.113883.6.1' displayName='SEROLOGY STUDIES'/>
+							<statusCode code='completed' />
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<statusCode code='completed'/>
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='5195-3' displayName='Hepatitis B virus surface Ag' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+												<!-- Translation auf BAG labObsList -->
+												<translation code='5195-3' displayName='Hepatitis B virus surface Ag' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
+											</code>
+											<statusCode code='completed'/>
+											<effectiveTime value='201211240907+0100'/>
+											<value xsi:type='PQ' value='4386.35' unit='{s_co_ratio}' />
+											<!-- Erreger in Probe nachgewiesen -->
+											<interpretationCode code='POS' codeSystem='2.16.840.1.113883.5.83' displayName='POSITIVE' codeSystemName='ObservationInterpretation'/>
+											<performer>
+												<time value='19830506' />
+												<assignedEntity>
+													<id extension='7605555555555' root='1.3.88'/>
+													<representedOrganization>
+														<name>Labor Reagenzia, Musterhausen</name>
+													</representedOrganization>
+												</assignedEntity>
+											</performer>
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<act classCode='ACT' moodCode='EVN'>
+													<templateId root='2.16.840.1.113883.10.20.1.40'/>
+													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+													<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+													<text>
+														<reference value='#c1'/>
+													</text>
+													<statusCode code='completed'/>
+												</act>
+											</entryRelationship>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Pregnancy History Section content (1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4)
+			******************************************************** -->
+			<!--
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4'/>
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='DACF9F6B-7542-42DF-93B5-B23AA8545ACA'/>
+			<code code='10162-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF PREGNANCIES' />
+			<title>Schwangerschaften</title>
+			<text>
+			<content ID='preg1'>
+			Keine bisherigen Schwangerschaften
+			</content>
+			</text>
+			<entry>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.5'/>
+			<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='99F39D63-1995-41A1-AE5E-050F7B625029'/>
+			<code code='11996-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PREGNANCIES' />
+			<text>
+			<reference value='#preg1'/>
+			</text>
+			<statusCode code='completed'/>
+			<effectiveTime nullFlavor='UNK'/>
+			<value xsi:type='INT' value='0'/>
+			</observation>
+			</entry>
+			</section>
+			</component>
+			<!-/- oder -/->
+			-->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='DACF9F6B-7542-42DF-93B5-B23AA8545ACA'/>
+					<code code='10162-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF PREGNANCIES' />
+					<title>Schwangerschaften</title>
+					<text>
+						<content ID='preg1'>
+							Keine bisherigen Schwangerschaften
+						</content>
+					</text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.5.1'/>
+							<id root='1.3.6.1.4.1.19376.1.9999999.4.2'/>
+							<code code='118185001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pregnancy Finding' />
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='UNK'>
+							</effectiveTime>
+							<author>
+								<time value='20120121' />
+								<assignedAuthor>
+									<id extension='7608888888888' root='1.3.88'/>
+								</assignedAuthor>
+							</author>
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='99F39D63-1995-41A1-AE5E-050F7B625029'/>
+									<code code='11996-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PREGNANCIES' />
+									<text>
+										<reference value='#preg1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='UNK'/>
+									<value xsi:type='INT' value='0'/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Coded Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.35)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.1'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.34'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.35'/>
+					<code code='42348-3' displayName='ADVANCE DIRECTIVES' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Patientenverfügungen</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Bereich</th>
+									<th>Patientenverfügung</th>
+									<th>Datum der Patientenverfügung</th>
+								</tr>
+								<tr>
+									<td>Reanimation</td>
+									<td>
+										<content ID='pv1'>
+											Erlaubt
+										</content>
+									</td>
+									<td>23.04.2013</td>
+								</tr>
+								<tr>
+									<td>Intubation</td>
+									<td>
+										<content ID='pv2'>
+											Nicht erlaubt
+										</content>
+									</td>
+									<td>23.04.2013</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<content>
+							<linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf">Gescannte Patientenverfügung</linkHtml>
+							<br/>
+							<br/>
+						</content>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.17'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
+							<id extension='C1F50407-5340-4D23-97D3-B4C2B7B65F39' root='2.16.756.5.30.1.1.1.1.3.5.1' />
+							<code code='304251008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Resuscitation' />
+							<text>
+								<reference value='#pv1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='20130423'/>
+							<value xsi:type='BL' value='true'/>
+							<reference typeCode='REFR'>
+								<templateId root='2.16.840.1.113883.10.20.1.36'/>
+								<externalDocument classCode='DOC' moodCode='EVN'>
+									<id extension='7CB57913-5E01-4113-B04B-21254C207404' root='2.16.756.5.30.1.1.1.1.3.5.1' />
+									<text>
+										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.17'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
+							<id extension='C1F50407-5340-4D23-97D3-B4C2B7B65F39' root='2.16.756.5.30.1.1.1.1.3.5.1' />
+							<code code='52765003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Intubation' />
+							<text>
+								<reference value='#pv2'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='20130423'/>
+							<value xsi:type='BL' value='false'/>
+							<reference typeCode='REFR'>
+								<templateId root='2.16.840.1.113883.10.20.1.36'/>
+								<externalDocument classCode='DOC' moodCode='EVN'>
+									<id extension='7CB57913-5E01-4113-B04B-21254C207404' root='2.16.756.5.30.1.1.1.1.3.5.1' />
+									<text>
+										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Conditional Immunization Recommendations Section content (1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1'/>
+					<code code='18776-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TREATMENT PLAN' />
+					<title>Impfplan</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Impfstoff Handelsname</th>
+									<th>Hersteller</th>
+									<th>Lot-Nr</th>
+									<th>Zeitraum</th>
+									<th>Impfung gegen</th>
+									<th>Impfempfehlung vom</th>
+									<th>Impfempfehlung durch</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='ip1'>
+											BOOSTRIX Inj Susp
+										</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td></td>
+									<td>23.04.2013 - 30.06.2013</td>
+									<td>Diphterie, Tetanus und Pertussis</td>
+									<td>23.04.2013</td>
+									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- Impfempfehlung -->
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='INT' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12.2'/>
+
+							<id root='1.3.160' extension='7680006370012'/>
+							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+							<text>
+								<reference value='#ip1'/>
+							</text>
+							<statusCode code='active'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Zeitraum, in welchem die empfohlene Impfung verabreicht werden soll -->
+								<low value='20130423' />
+								<high value='20130630' />
+							</effectiveTime>
+							<priorityCode nullFlavor='NASK' />
+							<routeCode nullFlavor='NASK' />
+							<doseQuantity nullFlavor='NASK' />
+							<rateQuantity nullFlavor='NASK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- epSOSVaccine Pivot Code -->
+										<code code='350327004' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Diphtheria + Tetanus vaccine'>
+											<originalText>
+												<reference value='#ip1'/>
+											</originalText>
+											<!-- GTIN -->
+											<translation code='7680006370012' codeSystem='1.3.160' />
+											<!-- ATC WHO Code -->
+											<translation code='J07AJ52' codeSystem='2.16.840.1.113883.6.73'/>
+										</code>
+										<name>BOOSTRIX Inj Susp</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<time value='20130423' />
+								<assignedAuthor>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode='RSON' inversionInd='false'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.MSET.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<code code='01' displayName='Diphtheria' codeSystem='2.16.756.5.30.1.127.3.1.20080401.8' codeSystemName='vaccination (ICR-DHA, chapter 2.5.1)' />
+								</observation>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Comments Section content (1.3.6.1.4.1.19376.1.5.3.1.4.2)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem" />
+					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ANNOTATION COMMENT'/>
+					<title>Kommentar</title>
+					<text>
+						<content ID='comment1'>
+							Es handelt sich beim vorliegenden Dokument um ein Muster zur Illustration.
+						</content>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.40'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+							<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+							<text>
+								<reference value='#comment1'/>
+							</text>
+							<statusCode code='completed'/>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+		</structuredBody>
+	</component>
+</ClinicalDocument>
