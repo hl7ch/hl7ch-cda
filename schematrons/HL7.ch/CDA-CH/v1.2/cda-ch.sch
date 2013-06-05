@@ -33,14 +33,6 @@ reusable templates
 <!-- Arbeitgeber -->
 <!ENTITY ent-ihe-1.3.6.1.4.1.19376.1.5.3.1.2.2 SYSTEM '../../../../schematrons/IHE/PCC/v5.0/templates/1.3.6.1.4.1.19376.1.5.3.1.2.2.ent'>
 
-<!--
-********************************************************
-project templates
-********************************************************
--->
-<!-- reusable emedidoc templates -->
-<!ENTITY ent-project-emedidoc SYSTEM 'emedidoc.ent'>
-
 ]
 >
 <schema xmlns='http://purl.oclc.org/dsdl/schematron' xmlns:xhtml="http://www.w3.org/1999/xhtml">
