@@ -5,10 +5,11 @@ Medizinische Statistik der Krankenhäuser und Minimal Clinical Data Set im Spita
 Beispiel eines GrpStatus Dokuments
 
 History:
-20.03.2011: Tony Schaller, medshare GmbH (Initial draft)
-20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
-25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
-06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2011.03.02: Tony Schaller, medshare GmbH (Initial draft)
+2011.03.20: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+2011.03.25: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+2011.04.06: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2013.06.05: Tony Schaller, medshare GmbH (V1.1; OIDs nachgeführt)
 
 ********************************************************
 -->
@@ -21,7 +22,7 @@ History:
 	-->
 	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
 	<templateId extension='CDA-CH' root='2.16.756.5.30.1.1.1.1'/>
-	<templateId extension='alisconnect.casestat-grpstatus.doc' root='2.16.756.5.30.PlaceholderCaseStatV1'/>
+	<templateId extension='alisconnect.casestat-grpstatus.doc' root='2.16.756.5.30.1.114.2.1.1'/>
 	<id extension='E8BB6F1A-965B-4A03-866C-4E3667850B6E' root='2.16.756.5.30.1.1.1.1'/>
 	<code code='34106-5' codeSystem='2.16.840.1.113883.6.1' displayName='Zusammenfassung bei Entlassung'/>
 	<title>Gruppierstatus der Codierabteilung</title>
@@ -50,7 +51,7 @@ History:
 				<birthTime value='19381212'/>
 				<maritalStatusCode code='M' codeSystem='2.16.840.1.113883.5.2'>
 					<!-- Mapping auf MSK Code für Psychiatrie-Zusatzdaten -->
-					<translation code='2' codeSystem='2.16.756.5.30.PlaceholderMSKZivilstand' />
+					<translation code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.18' />
 				</maritalStatusCode>
 			</patient>
 			<providerOrganization>
@@ -193,7 +194,7 @@ History:
 		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.InsuranceCard"/>
 		<time>
 			<low nullFlavor='NASK' />
-			<high nullFlavor='20141231' />
+			<high value='20141231' />
 		</time>
 		<associatedEntity classCode='POLHOLD'>
 			<!-- Nummer der Versichertenkarte -->
@@ -230,7 +231,7 @@ History:
 			-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGData'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGData'/>
 					<title>DRG Daten</title>
 					<text>
 						<table>
@@ -266,24 +267,24 @@ History:
 					</entry>
 					<entry>
 						<organizer classCode='CLUSTER' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGDataStatusL3' />
-							<code code='4' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Nein' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGDataStatusL3' />
+							<code code='4' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Nein' />
 							<statusCode code='completed'/>
 							<component typeCode='COMP'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGStatusL3' />
-									<code code='I' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist' />
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGStatusL3' />
+									<code code='I' codeSystem='2.16.756.5.30.1.114.3.1.1.1' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist' />
 									<statusCode code='completed'/>
 									<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 								</observation>
 							</component>
 							<component typeCode='COMP'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGFallgruppeL3' />
-									<code code='F' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Fallgruppe' />
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGFallgruppeL3' />
+									<code code='F' codeSystem='2.16.756.5.30.1.114.3.1.1.1' displayName='Fallgruppe' />
 									<statusCode code='completed'/>
 									<effectiveTime value='20110115'/>
-									<value xsi:type='CE' code='I47B' codeSystem='2.16.756.5.30.PlaceholderSwissDRG' displayName='Revision oder Ersatz des Hüftgelenkes ohne komplizierende Diagnose. ohne Arthrodese. ohne äußerst schwere CC. Alter > 15 Jahre. ohne komplizierenden Eingriff'/>
+									<value xsi:type='CE' code='I47B' codeSystem='2.16.756.5.30.1.116' displayName='Revision oder Ersatz des Hüftgelenkes ohne komplizierende Diagnose. ohne Arthrodese. ohne äußerst schwere CC. Alter > 15 Jahre. ohne komplizierenden Eingriff'/>
 									<performer>
 										<assignedEntity>
 											<id nullFlavor='NASK' />
@@ -299,10 +300,10 @@ History:
 							</component>
 							<component typeCode='COMP'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGCodierStatusL3' />
-									<code code='S' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Codierstatus' />
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGCodierStatusL3' />
+									<code code='S' codeSystem='2.16.756.5.30.1.114.3.1.1.1' displayName='Codierstatus' />
 									<statusCode code='completed'/>
-									<value xsi:type='CE' code='P' codeSystem='2.16.756.5.30.PlaceholderCaseStatCodingStatus' displayName='Pending'/>
+									<value xsi:type='CE' code='P' codeSystem='2.16.756.5.30.1.114.3.1.1.2' displayName='Pending'/>
 									<value xsi:type='INT' value='0' />
 								</observation>
 							</component>

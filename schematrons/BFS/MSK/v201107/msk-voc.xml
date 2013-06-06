@@ -2,18 +2,22 @@
 <!--
 ********************************************************
 
-Vocabulary for "Medizinische Statistik der Krankenhäuser" V201103 schematrons: "Variablen der Medizinischen Statistik"
+Vocabulary for "Medizinische Statistik der Krankenhäuser" schematrons
+V201107
 
-Juni 2008 (Stand 05/2010)
-Spezifikationen gültig ab 2009
-("Schnittstellenkonzept", Version 1.0) / Letzte Aktualisierung: Mai 2010
-
+Grundlage:
+Variablen der Medizinischen Statistik  
+Spezifikationen gültig ab 1.1.2012 
+("Schnittstellenkonzept") 
+Letzte Aktualisierung: Juli 2011 
+ 
 History:
-13.03.2011: Tony Schaller, medshare GmbH (Initial draft)
-18.03.2011: Tony Schaller, medshare GmbH (Draft sent to BFS)
-20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
-25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
-06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2011.03.13: Tony Schaller, medshare GmbH (Initial draft)
+2011.03.18: Tony Schaller, medshare GmbH (Draft sent to BFS)
+2011.03.20: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+2011.03.25: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+2011.04.06: Tony Schaller, medshare GmbH (V201103; Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2013.06.05: Tony Schaller, medshare GmbH (V201107; Wertetabellen und OIDs nachgeführt)
 
 ********************************************************
 -->
@@ -22,15 +26,16 @@ History:
 	<!--
 	********************************************************
 	Aufenthaltsort vor dem Eintritt (Standard)
+	Va. Nr: 1.2.V02
 	********************************************************
 	-->
-	<system codeSystemName='AufenthaltsortVorEintritt' root='2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt'>
+	<system codeSystemName='AufenthaltsortVorEintritt' root='2.16.756.5.30.1.126.3.3.2012.1'>
 		<code value='1' displayName='Zuhause'/>
 		<code value='2' displayName='Zuhause mit SPITEX Versorgung'/>
 		<code value='3' displayName='Krankenheim, Pflegeheim'/>
 		<code value='4' displayName='Altersheim, andere sozialmed. Institutionen'/>
 		<code value='5' displayName='Psychiatrische Klinik'/>
-		<code value='6' displayName='anderes Krankenhaus (Akutspital) oder Geburtshaus'/>
+		<code value='6' displayName=' anderes Krankenhaus (Akutspital) oder Geburtshaus'/>
 		<code value='7' displayName='Strafvollzugsanstalt'/>
 		<code value='8' displayName='andere'/>
 		<code value='9' displayName='unbekannt'/>
@@ -39,9 +44,10 @@ History:
 	<!--
 	********************************************************
 	Aufenthaltsort vor dem Eintritt (Psychiatrie)
+	Va. Nr: 3.2.V02
 	********************************************************
 	-->
-	<system codeSystemName='AufenthaltsortVorEintrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie'>
+	<system codeSystemName='AufenthaltsortVorEintrittPsychiatrie' root='2.16.756.5.30.1.126.3.3.2012.2'>
 		<code value='11' displayName='Zuhause, alleine'/>
 		<code value='12' displayName='Zuhause, mit anderen'/>
 		<code value='21' displayName='Zuhause, alleine, mit Spitex'/>
@@ -60,9 +66,10 @@ History:
 	<!--
 	********************************************************
 	Eintrittsart
+	Va. Nr: 1.2.V03
 	********************************************************
 	-->
-	<system codeSystemName='Eintrittsart' root='2.16.756.5.30.PlaceholderMSKEintrittsart'>
+	<system codeSystemName='Eintrittsart' root='2.16.756.5.30.1.126.3.3.2012.3'>
 		<code value='1' displayName='Notfall (Behandlung innerhalb von 12 Std. unabdingbar)'/>
 		<code value='2' displayName='angemeldet, geplant'/>
 		<code value='3' displayName='Geburt (Kind in dieser Klinik geboren)'/>
@@ -75,9 +82,10 @@ History:
 	<!--
 	********************************************************
 	Einweisende Instanz
+	Va. Nr: 1.2.V04
 	********************************************************
 	-->
-	<system codeSystemName='EinweisendeInstanz' root='2.16.756.5.30.PlaceholderMSKEinweisendeInstanz'>
+	<system codeSystemName='EinweisendeInstanz' root='2.16.756.5.30.1.126.3.3.2012.4'>
 		<code value='1' displayName='selbst, Angehörige'/>
 		<code value='2' displayName='Rettungsdienst (Ambulanz, Polizei)'/>
 		<code value='3' displayName='Arzt'/>
@@ -91,9 +99,10 @@ History:
 	<!--
 	********************************************************
 	Einweisende Instanz (Psychiatrie)
+	Va. Nr: 3.3.V01
 	********************************************************
 	-->
-	<system codeSystemName='EinweisendeInstanzPsychiatrie' root='2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie'>
+	<system codeSystemName='EinweisendeInstanzPsychiatrie' root='2.16.756.5.30.1.126.3.3.2012.5'>
 		<code value='11' displayName='Patient kommt auf eigene Initiative'/>
 		<code value='12' displayName='Angehörige, Bezugsperson, freiw. Mitarb., Laien'/>
 		<code value='31' displayName='praktizierender Arzt'/>
@@ -119,9 +128,10 @@ History:
 	<!--
 	********************************************************
 	Behandlungsart
+	Va. Nr: 1.3.V01
 	********************************************************
 	-->
-	<system codeSystemName='Behandlungsart' root='2.16.756.5.30.PlaceholderMSKBehandlungsart'>
+	<system codeSystemName='Behandlungsart' root='2.16.756.5.30.1.126.3.3.2012.6'>
 		<code value='1' displayName='ambulant'/>
 		<code value='3' displayName='stationär'/>
 		<code value='9' displayName='unbekannt'/>
@@ -130,9 +140,10 @@ History:
 	<!--
 	********************************************************
 	Klasse
+	Va. Nr: 1.3.V02
 	********************************************************
 	-->
-	<system codeSystemName='Klasse' root='2.16.756.5.30.PlaceholderMSKKlasse'>
+	<system codeSystemName='Klasse' root='2.16.756.5.30.1.126.3.3.2012.7'>
 		<code value='1' displayName='allgemein'/>
 		<code value='2' displayName='halbprivat'/>
 		<code value='3' displayName='privat'/>
@@ -142,9 +153,10 @@ History:
 	<!--
 	********************************************************
 	Hauptkostenstelle
+	Va. Nr: 1.4.V01
 	********************************************************
 	-->
-	<system codeSystemName='Hauptkostenstelle' root='2.16.756.5.30.PlaceholderMSKHauptkostenstelle'>
+	<system codeSystemName='Hauptkostenstelle' root='2.16.756.5.30.1.126.3.3.2012.8'>
 		<code value='M000' displayName='Fachgebiete (allgemein)'/>
 		<code value='M050' displayName='Intensivmedizin'/>
 		<code value='M100' displayName='Innere Medizin'/>
@@ -164,9 +176,10 @@ History:
 	<!--
 	********************************************************
 	Hauptkostenträger für Grundversicherungsleistungen
+	Va. Nr: 1.4.V02
 	********************************************************
 	-->
-	<system codeSystemName='HauptkostenträgerGrundversicherungsleistungen' root='2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen'>
+	<system codeSystemName='HauptkostenträgerGrundversicherungsleistungen' root='2.16.756.5.30.1.126.3.3.2012.9'>
 		<code value='1' displayName='Krankenversicherung (obligat.)'/>
 		<code value='2' displayName='Invalidenversicherung'/>
 		<code value='3' displayName='Militärversicherung'/>
@@ -179,9 +192,10 @@ History:
 	<!--
 	********************************************************
 	Entscheid für Austritt
+	Va. Nr: 1.5.V02
 	********************************************************
 	-->
-	<system codeSystemName='EntscheidAustritt' root='2.16.756.5.30.PlaceholderMSKEntscheidAustritt'>
+	<system codeSystemName='EntscheidAustritt' root='2.16.756.5.30.1.126.3.3.2012.10'>
 		<code value='1' displayName='auf Initiative des Behandelnden'/>
 		<code value='2' displayName='auf Initiative des Patienten (gegen Ansicht des Behandelnden)'/>
 		<code value='3' displayName='auf Initiative einer Drittperson'/>
@@ -194,9 +208,10 @@ History:
 	<!--
 	********************************************************
 	Entscheid für Austritt (Psychiatrie)
+	Va. Nr: 3.5.V01 
 	********************************************************
 	-->
-	<system codeSystemName='EntscheidAustrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKEntscheidAustrittPsychiatrie'>
+	<system codeSystemName='EntscheidAustrittPsychiatrie' root='2.16.756.5.30.1.126.3.3.2012.11'>
 		<code value='11' displayName='in gegenseitigem Einvernehmen'/>
 		<code value='12' displayName='auf Initiative der Behandelnden'/>
 		<code value='20' displayName='auf Initiative des/r Patienten/in (nur gegen Ansicht des Behandelnden)'/>
@@ -211,9 +226,10 @@ History:
 	<!--
 	********************************************************
 	Aufenthalt nach Austritt
+	Va. Nr: 1.5.V03
 	********************************************************
 	-->
-	<system codeSystemName='AufenthaltNachAustritt' root='2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt'>
+	<system codeSystemName='AufenthaltNachAustritt' root='2.16.756.5.30.1.126.3.3.2012.12'>
 		<code value='1' displayName='Zuhause'/>
 		<code value='2' displayName='Krankenheim, Pflegeheim'/>
 		<code value='3' displayName='Altersheim, andere sozialmed. Institution'/>
@@ -229,9 +245,10 @@ History:
 	<!--
 	********************************************************
 	Aufenthalt nach Austritt (Psychiatrie)
+	Va. Nr: 3.5.V02
 	********************************************************
 	-->
-	<system codeSystemName='AufenthaltNachAustrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKAufenthaltNachAustrittPsychiatrie'>
+	<system codeSystemName='AufenthaltNachAustrittPsychiatrie' root='2.16.756.5.30.1.126.3.3.2012.13'>
 		<code value='11' displayName='Zuhause, alleine'/>
 		<code value='12' displayName='Zuhause, mit anderen'/>
 		<code value='20' displayName='Krankenheim, Pflegeheim'/>
@@ -250,9 +267,10 @@ History:
 	<!--
 	********************************************************
 	Behandlung nach Austritt
+	Va. Nr: 1.5.V04
 	********************************************************
 	-->
-	<system codeSystemName='BehandlungNachAustritt' root='2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt'>
+	<system codeSystemName='BehandlungNachAustritt' root='2.16.756.5.30.1.126.3.3.2012.14'>
 		<code value='1' displayName='geheilt/kein Behandlungsbedarf'/>
 		<code value='2' displayName='ambulante Behandlung'/>
 		<code value='3' displayName='ambulante Pflege (z.B. SPITEX)'/>
@@ -266,9 +284,10 @@ History:
 	<!--
 	********************************************************
 	Behandlung nach Austritt (Psychiatrie)
+	Va. Nr: 3.5.V03
 	********************************************************
 	-->
-	<system codeSystemName='BehandlungNachAustrittPsychiatrie' root='2.16.756.5.30.PlaceholderMSKBehandlungNachAustrittPsychiatrie'>
+	<system codeSystemName='BehandlungNachAustrittPsychiatrie' root='2.16.756.5.30.1.126.3.3.2012.15'>
 		<code value='10' displayName='geheilt / kein Behandlungsbedarf'/>
 		<code value='21' displayName='Bezugsperson, freiw. Mitarb., Laien'/>
 		<code value='22' displayName='Beratungsstelle, soziale Institution, Sozialdienst, etc.'/>
@@ -294,9 +313,10 @@ History:
 	<!--
 	********************************************************
 	Neugeborenen-Zusatzdaten; Angaben betreffend das Kind: 	Vitalstatus
+	Va. Nr: 2.2.V01
 	********************************************************
 	-->
-	<system codeSystemName='VitalstatusGeburt' root='2.16.756.5.30.PlaceholderMSKVitalstatusGeburt'>
+	<system codeSystemName='VitalstatusGeburt' root='2.16.756.5.30.1.126.3.3.2012.16'>
 		<code value='0' displayName='totgeboren'/>
 		<code value='1' displayName='lebendgeboren'/>
 	</system>
@@ -304,9 +324,10 @@ History:
 	<!--
 	********************************************************
 	Neugeborenen-Zusatzdaten; Angaben betreffend das Kind: 	Mehrling
+	Va. Nr: 2.2.V02
 	********************************************************
 	-->
-	<system codeSystemName='Mehrling' root='2.16.756.5.30.PlaceholderMSKMehrling'>
+	<system codeSystemName='Mehrling' root='2.16.756.5.30.1.126.3.3.2012.17'>
 		<code value='1' displayName='Einling'/>
 		<code value='2' displayName='Zwilling'/>
 		<code value='3' displayName='Driling'/>
@@ -321,9 +342,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten; Daten zur Person; Zivilstand
+	Va. Nr: 3.2.V01
 	********************************************************
 	-->
-	<system codeSystemName='Zivilstand' root='2.16.756.5.30.PlaceholderMSKZivilstand'>
+	<system codeSystemName='Zivilstand' root='2.16.756.5.30.1.126.3.3.2012.18'>
 		<code value='1' displayName='ledig'/>
 		<code value='2' displayName='verheiratet, zusammenlebend'/>
 		<code value='3' displayName='verheiratet, getrennt lebend'/>
@@ -335,9 +357,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten; Daten zur Person; Bildung
+	Va. Nr: 3.2.V12
 	********************************************************
 	-->
-	<system codeSystemName='Bildung' root='2.16.756.5.30.PlaceholderMSKBildung'>
+	<system codeSystemName='Bildung' root='2.16.756.5.30.1.126.3.3.2012.19'>
 		<code value='1' displayName='keine abgeschlossene Schulbildung'/>
 		<code value='2' displayName='obligatorische Volksschule'/>
 		<code value='3' displayName='Berufslehre oder Vollzeitberufsschule'/>
@@ -350,9 +373,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten; Daten zum Eintritt: Freiwilligkeit
+	Va. Nr: 3.3.V02
 	********************************************************
 	-->
-	<system codeSystemName='Freiwilligkeit' root='2.16.756.5.30.PlaceholderMSKFreiwilligkeit'>
+	<system codeSystemName='Freiwilligkeit' root='2.16.756.5.30.1.126.3.3.2012.20'>
 		<code value='1' displayName='freiwilliger Eintritt'/>
 		<code value='2' displayName='unfreiwilliger Eintritt'/>
 		<code value='9' displayName='unbekannt'/>
@@ -361,9 +385,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten; Daten zum Eintritt: Fürsorgerischer Freiheitsentzug
+	Va. Nr: 3.3.V03
 	********************************************************
 	-->
-	<system codeSystemName='FFE' root='2.16.756.5.30.PlaceholderMSKFFE'>
+	<system codeSystemName='FFE' root='2.16.756.5.30.1.126.3.3.2012.21'>
 		<code value='1' displayName='ohne FFE'/>
 		<code value='2' displayName='mit FFE'/>
 		<code value='9' displayName='unbekannt'/>
@@ -372,9 +397,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten; Daten zu Behandlung/Verlauf; Behandlung
+	Va. Nr: 3.4.V02  
 	********************************************************
 	-->
-	<system codeSystemName='BehandlungPsychiatrie' root='2.16.756.5.30.PlaceholderMSKBehandlungPsychiatrie'>
+	<system codeSystemName='BehandlungPsychiatrie' root='2.16.756.5.30.1.126.3.3.2012.22'>
 		<code value='1' displayName='Krisenintervention'/>
 		<code value='2' displayName='Beratung'/>
 		<code value='3' displayName='Psychotherapie (einzel)'/>
@@ -392,9 +418,10 @@ History:
 	<!--
 	********************************************************
 	MD-Diagnosen und Behandlungen (Typ)
+	Va. Nr: N/A
 	********************************************************
 	-->
-	<system codeSystemName='EintragsTypDiagnoseBehandlung' root='2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung'>
+	<system codeSystemName='EintragsTypDiagnoseBehandlung' root='2.16.756.5.30.1.126.3.3.2012.23'>
 		<code value='H' displayName='Haupteintrag'/>
 		<code value='Z' displayName='Zusatzeintrag zu Haupteintrag'/>
 		<code value='N' displayName='Nebeneintrag'/>
@@ -403,9 +430,10 @@ History:
 	<!--
 	********************************************************
 	MD-Diagnosen (Seitigkeit)
+	Va. Nr: 4.2.V011
 	********************************************************
 	-->
-	<system codeSystemName='Seitigkeit' root='2.16.756.5.30.PlaceholderMSKSeitigkeit'>
+	<system codeSystemName='Seitigkeit' root='2.16.756.5.30.1.126.3.3.2012.24'>
 		<code value='0' displayName='beidseitig'/>
 		<code value='1' displayName='einseitig rechts'/>
 		<code value='2' displayName='einseitig links'/>
@@ -417,9 +445,10 @@ History:
 	<!--
 	********************************************************
 	MD-Diagnosen (Tumoraktivität)
+	Va. Nr: 4.2.V012
 	********************************************************
 	-->
-	<system codeSystemName='Tumoraktivität' root='2.16.756.5.30.PlaceholderMSKTumoraktivität'>
+	<system codeSystemName='Tumoraktivität' root='2.16.756.5.30.1.126.3.3.2012.25'>
 		<code value='0' displayName='inaktiv'/>
 		<code value='1' displayName='aktiv'/>
 		<code value='9' displayName='unbekannt'/>
@@ -429,9 +458,10 @@ History:
 	<!--
 	********************************************************
 	MD-Intensivmedizin (Art des Score)
+	Va. Nr: 4.4.V03
 	********************************************************
 	-->
-	<system codeSystemName='ScoreArtIPS' root='2.16.756.5.30.PlaceholderMSKScoreArtIPS'>
+	<system codeSystemName='ScoreArtIPS' root='2.16.756.5.30.1.126.3.3.2012.26'>
 		<code value='S' displayName='SAPS'/>
 		<code value='P' displayName='PIM2'/>
 		<code value='C' displayName='CRIB'/>
@@ -440,32 +470,24 @@ History:
 	<!--
 	********************************************************
 	MD-Kennzeichnung von Wiedereintritten; Grund
+	Va. Nr: 4.7.V03, 4.7.V13, ...
 	********************************************************
 	-->
-	<system codeSystemName='GrundWiedereintritt' root='2.16.756.5.30.PlaceholderMSKGrundWiedereintritt'>
-		<!-- gemäss Infoblatt MS-03-2012 http://www.bfs.admin.ch/bfs/portal/de/index/infothek/erhebungen__quellen/blank/blank/mkh/04/04_03.Document.140378.pdf
-		-->
+	<system codeSystemName='GrundWiedereintritt' root='2.16.756.5.30.1.126.3.3.2012.27'>
 		<code value='N/A' displayName='leer/default'/>
 		<code value='1' displayName='Wiederaufnahme mit gleicher MDC'/>
 		<code value='2' displayName='Wiederaufnahme mit gleicher MDC durch Komplikationen'/>
 		<code value='3' displayName='Rückverlegung'/>
 		<code value='9' displayName='unbekannt'/>
-		<!-- gemäss Konzept:
-		<code value='N/A' displayName='leer/default'/>
-		<code value='1' displayName='Wiederaufnahme mit gleicher Basis-DRG'/>
-		<code value='2' displayName='Wiederaufnahme mit Partitionswechsel'/>
-		<code value='3' displayName='Wiederaufnahme wegen Komplikation'/>
-		<code value='4' displayName='Rückverlegung'/>
-		<code value='9' displayName='unbekannt'/>
-		-->
 	</system>
 
 	<!--
 	********************************************************
 	MD-Kennzeichnung von Wiedereintritten; Weitere Wiedereintritte
+	Va. Nr: 4.7.V41
 	********************************************************
 	-->
-	<system codeSystemName='WeitereWiedereintritte' root='2.16.756.5.30.PlaceholderMSKWeitereWiedereintritte'>
+	<system codeSystemName='WeitereWiedereintritte' root='2.16.756.5.30.1.126.3.3.2012.28'>
 		<code value='0' displayName='(default) nicht mehr als 5 Aufenthalte bzw. 4 Wiedereintritte'/>
 		<code value='1' displayName='mehr als 5 Aufenthalte bzw. 4 Wiedereintritte'/>
 	</system>
@@ -473,9 +495,10 @@ History:
 	<!--
 	********************************************************
 	Gestationsalter Code
+	Va. Nr: N/A
 	********************************************************
 	-->
-	<system codeSystemName='GestationsalterCode' root='2.16.756.5.30.PlaceholderMSKGestationsalterCode'>
+	<system codeSystemName='GestationsalterCode' root='2.16.756.5.30.1.126.3.3.2012.29'>
 		<code value='1' displayName='Gestationsalter 1'/>
 		<code value='2' displayName='Gestationsalter 2'/>
 	</system>
@@ -483,9 +506,10 @@ History:
 	<!--
 	********************************************************
 	Gestationswoche (gemäss MedPlaus 5)
+	Va. Nr: 2.3.V02 / 2.3.V03
 	********************************************************
 	-->
-	<system codeSystemName='Gestationswoche' root='2.16.756.5.30.PlaceholderMSKGestationswoche'>
+	<system codeSystemName='Gestationswoche' root='2.16.756.5.30.1.126.3.3.2012.30'>
 		<code value='16' displayName='Woche 16'/>
 		<code value='17' displayName='Woche 17'/>
 		<code value='18' displayName='Woche 18'/>
@@ -528,9 +552,10 @@ History:
 	<!--
 	********************************************************
 	Gestationstag (gemäss MedPlaus 5)
+	Va. Nr: 2.3.V02 / 2.3.V03
 	********************************************************
 	-->
-	<system codeSystemName='Gestationstag' root='2.16.756.5.30.PlaceholderMSKGestationstag'>
+	<system codeSystemName='Gestationstag' root='2.16.756.5.30.1.126.3.3.2012.31'>
 		<code value='0' displayName='Tag 0'/>
 		<code value='1' displayName='Tag 1'/>
 		<code value='2' displayName='Tag 2'/>
@@ -543,9 +568,10 @@ History:
 	<!--
 	********************************************************
 	Verlegungen
+	Va. Nr: 2.2V07 / 2.3.V08 
 	********************************************************
 	-->
-	<system codeSystemName='GeburtVerlegungen' root='2.16.756.5.30.PlaceholderMSKGeburtVerlegungen'>
+	<system codeSystemName='GeburtVerlegungen' root='2.16.756.5.30.1.126.3.3.2012.32'>
 		<code value='1' displayName='Verlegung Kind in anderes Spital'/>
 		<code value='2' displayName='Verlegung Mutter aus anderem Spital'/>
 	</system>
@@ -553,9 +579,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten: Kategorien
+	Va. Nr: 3.2.V03, 3.4.V03, ...
 	********************************************************
 	-->
-	<system codeSystemName='PsychiatrieZusatzdatenKategorien' root='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien'>
+	<system codeSystemName='PsychiatrieZusatzdatenKategorien' root='2.16.756.5.30.1.126.3.3.2012.33'>
 		<code value='1' displayName='Beschäftigung vor Eintritt'/>
 		<code value='2' displayName='Psychopharmakotherapie'/>
 		<code value='3' displayName='Wiedereintritte'/>
@@ -566,9 +593,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten: Daten zur Beschäftigung vor Eintritt
+	Va. Nr: 3.2.V03, ...
 	********************************************************
 	-->
-	<system codeSystemName='BeschäftigungVorEintritt' root='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt'>
+	<system codeSystemName='BeschäftigungVorEintritt' root='2.16.756.5.30.1.126.3.3.2012.34'>
 		<code value='1' displayName='teilzeit erwerbstätig'/>
 		<code value='2' displayName='voll erwerbstätig'/>
 		<code value='3' displayName='nicht erwerbstätig oder arbeitslos'/>
@@ -583,9 +611,10 @@ History:
 	<!--
 	********************************************************
 	Psychiatrie-Zusatzdaten: Psychopharmakotherapie
+	Va. Nr: 3.4.V03, ...
 	********************************************************
 	-->
-	<system codeSystemName='Psychopharmakotherapie' root='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie'>
+	<system codeSystemName='Psychopharmakotherapie' root='2.16.756.5.30.1.126.3.3.2012.35'>
 		<code value='1' displayName='Neuroleptika'/> 
 		<code value='2' displayName='Depotneuroleptika'/>
 		<code value='3' displayName='Antidepressiva'/>
@@ -603,9 +632,10 @@ History:
 	<!--
 	********************************************************
 	Zwischenaustritte
+	Va. Nr: 4.7.V01, ...
 	********************************************************
 	-->
-	<system codeSystemName='Zwischenaustritte' root='2.16.756.5.30.PlaceholderMSKZwischenaustritte'>
+	<system codeSystemName='Zwischenaustritte' root='2.16.756.5.30.1.126.3.3.2012.36'>
 		<code value='1' displayName='1. Zwischenaustritt'/> 
 		<code value='2' displayName='2. Zwischenaustritt'/>
 		<code value='3' displayName='3. Zwischenaustritt'/>
@@ -615,9 +645,10 @@ History:
 	<!--
 	********************************************************
 	Wiedereintritte
+	Va. Nr: 4.7.V02, ...
 	********************************************************
 	-->
-	<system codeSystemName='Wiedereintritte' root='2.16.756.5.30.PlaceholderMSKWiedereintritte'>
+	<system codeSystemName='Wiedereintritte' root='2.16.756.5.30.1.126.3.3.2012.37'>
 		<code value='1' displayName='1. Wiedereintritt'/> 
 		<code value='2' displayName='2. Wiedereintritt'/>
 		<code value='3' displayName='3. Wiedereintritt'/>
@@ -628,9 +659,10 @@ History:
 	<!--
 	********************************************************
 	Frühere Schwangerschaften
+	Va. Nr: 2.3.V04, ...
 	********************************************************
 	-->
-	<system codeSystemName='FrühereSchwangerschaften' root='2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften'>
+	<system codeSystemName='FrühereSchwangerschaften' root='2.16.756.5.30.1.126.3.3.2012.38'>
 		<code value='1' displayName='Anzahl vorausgegangener Schwangerschaften insgesamt'/>
 		<code value='2' displayName='Anzahl vorausgegangener Lebendgeburten'/>
 		<code value='3' displayName='Anzahl vorausgegangener Fehl- oder Totgeburten'/>

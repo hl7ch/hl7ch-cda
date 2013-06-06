@@ -2,13 +2,16 @@
 <!--
 ********************************************************
 
-Vocabulary for ALIS-Connect case statistics (casestat) V1.0 schematrons
+ALIS-Connect case statistics (casestat) schematrons; 2.16.756.5.30.1.114.2.1.1
+V1.1
+Vocabulary 
 
 History:
-13.03.2011: Tony Schaller, medshare GmbH (Initial draft)
-20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
-25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
-06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2011.03.13: Tony Schaller, medshare GmbH (Initial draft)
+2011.03.20: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+2011.03.25: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+2011.04.06: Tony Schaller, medshare GmbH (V1.0; Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2013.05.23: Tony Schaller, medshare GmbH (V1.1; OIDs nachgeführt)
 
 ********************************************************
 -->
@@ -19,7 +22,7 @@ History:
 	DRG Daten Kategorien
 	********************************************************
 	-->
-	<system codeSystemName='CaseStatDatenKategorien' root='2.16.756.5.30.PlaceholderCaseStatDataCat'>
+	<system codeSystemName='CaseStatDatenKategorien' root='2.16.756.5.30.1.114.3.1.1.1'>
 		<code value='I' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist'/>
 		<code value='F' displayName='Fallgruppe'/>
 		<code value='S' displayName='Codierstatus'/>
@@ -30,7 +33,7 @@ History:
 	DRG Codierstatus
 	********************************************************
 	-->
-	<system codeSystemName='CaseStatCodierstatus' root='2.16.756.5.30.PlaceholderCaseStatCodingStatus'>
+	<system codeSystemName='CaseStatCodierstatus' root='2.16.756.5.30.1.114.3.1.1.2'>
 		<code value='P' displayName='Pending'/>
 		<code value='COS' displayName='Coding started'/>
 		<code value='COC' displayName='Coding completed'/>

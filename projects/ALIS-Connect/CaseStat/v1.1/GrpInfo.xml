@@ -5,10 +5,11 @@ Medizinische Statistik der Krankenhäuser und Minimal Clinical Data Set im Spita
 Beispiel eines GrpInfo Dokuments
 
 History:
-15.03.2011: Tony Schaller, medshare GmbH (Initial draft)
-20.03.2011: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
-25.03.2011: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
-06.04.2011: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2011.03.15: Tony Schaller, medshare GmbH (Initial draft)
+2011.03.20: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber zum Review)
+2011.03.25: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
+2011.04.06: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
+2013.06.05: Tony Schaller, medshare GmbH (V1.1; OIDs nachgeführt)
 
 ********************************************************
 -->
@@ -21,7 +22,7 @@ History:
 	-->
 	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
 	<templateId extension='CDA-CH' root='2.16.756.5.30.1.1.1.1'/>
-	<templateId extension='alisconnect.casestat-grpinfo.doc' root='2.16.756.5.30.PlaceholderCaseStatV1'/>
+	<templateId extension='alisconnect.casestat-grpinfo.doc' root='2.16.756.5.30.1.114.2.1.1'/>
 	<id extension='E8BB6F1A-965B-4A03-866C-4E3667850B6E' root='2.16.756.5.30.1.1.1.1'/>
 	<code code='34106-5' codeSystem='2.16.840.1.113883.6.1' displayName='Zusammenfassung bei Entlassung'/>
 	<title>Informationen zuhanden Codierabteilung</title>
@@ -50,7 +51,7 @@ History:
 				<birthTime value='19381212'/>
 				<maritalStatusCode code='M' codeSystem='2.16.840.1.113883.5.2'>
 					<!-- Mapping auf MSK Code für Psychiatrie-Zusatzdaten -->
-					<translation code='2' codeSystem='2.16.756.5.30.PlaceholderMSKZivilstand' />
+					<translation code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.18' />
 				</maritalStatusCode>
 			</patient>
 			<providerOrganization>
@@ -193,7 +194,7 @@ History:
 		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.InsuranceCard"/>
 		<time>
 			<low nullFlavor='NASK' />
-			<high nullFlavor='20141231' />
+			<high value='20141231' />
 		</time>
 		<associatedEntity classCode='POLHOLD'>
 			<!-- Nummer der Versichertenkarte -->
@@ -229,7 +230,7 @@ History:
 			********************************************************-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Soziodemographie'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Soziodemographie'/>
 					<title>Soziodemographische Angaben</title>
 					<text>
 						<table>
@@ -261,7 +262,7 @@ History:
 			********************************************************-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Eintrittsmerkmale'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Eintrittsmerkmale'/>
 					<title>Eintrittsmerkmale</title>
 					<text>
 						<table>
@@ -296,7 +297,7 @@ History:
 					<!-- Eigentlicher Eintritt -->
 					<entry>
 						<encounter classCode='ENC' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.EintrittL3'/>
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.EintrittL3'/>
 							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 							<id extension='283641' root='2.16.756.5.30.133333' />
 							<!-- Eintrittsdatum und -Stunde -->
@@ -320,14 +321,14 @@ History:
 					<!-- Angaben für MSK zum Eintritt -->
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.EintrittAngabenMSKL3' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.EintrittAngabenMSKL3' />
 							<!-- Eintrittsart -->
-							<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKEintrittsart' displayName='angemeldet, geplant'/>
+							<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.3' displayName='angemeldet, geplant'/>
 							<statusCode code='completed'/>
 							<!-- Aufenthaltsort vor dem Eintritt -->
-							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintritt' displayName='Zuhause'/>
+							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.1' displayName='Zuhause'/>
 							<!-- Einweisende Instanz -->
-							<value xsi:type='CE' code='3' codeSystem='2.16.756.5.30.PlaceholderMSKEinweisendeInstanz' displayName='Arzt'/>
+							<value xsi:type='CE' code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.4' displayName='Arzt'/>
 							<!-- Beispiel für begleitende Dokumente, die mit MCD mitgeliefert werden sollen
 							<reference typeCode="SPRT">
 							<seperatableInd value="true"/>
@@ -349,7 +350,7 @@ History:
 			********************************************************-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Aufenthaltsmerkmale'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Aufenthaltsmerkmale'/>
 					<title>Aufenthaltsmerkmale</title>
 					<text>
 						<table>
@@ -384,7 +385,7 @@ History:
 					<!-- IPS Aufenthalt -->
 					<entry>
 						<encounter classCode='ENC' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.IPSAufenthaltL3'/>
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.IPSAufenthaltL3'/>
 							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 							<id extension='283641' root='2.16.756.5.30.133333' />
 							<!-- 24h IPS Aufenthalt von/bis zur Berechnung der gesamten Anzahl Stunden auf der Codierabteilung -->
@@ -409,7 +410,7 @@ History:
 							<!-- Künstliche Beatmung von/bis zur Berechnung der gesamten Anzahl Stunden auf der Codierabteilung -->
 							<entryRelationship typeCode='REFR'>
 								<encounter classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.IPSAufenthaltBeatmungL3'/>
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.IPSAufenthaltBeatmungL3'/>
 							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 									<id extension='283641' root='2.16.756.5.30.133333' />
 									<effectiveTime xsi:type='IVL_TS'>
@@ -421,9 +422,9 @@ History:
 							<!-- Schweregrad der akuten Erkrankung -->
 							<entryRelationship typeCode='REFR'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.IPSAufenthaltSchweregradL3'/>
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.IPSAufenthaltSchweregradL3'/>
 									<!-- Art des Score -->
-									<code code='S' codeSystem='2.16.756.5.30.PlaceholderMSKScoreArtIPS' displayName='SAPS'/>
+									<code code='S' codeSystem='2.16.756.5.30.1.126.3.3.2012.26' displayName='SAPS'/>
 									<statusCode code='completed'/>
 									<value xsi:type='INT' value='0' />
 								</observation>
@@ -431,7 +432,7 @@ History:
 							<!-- NEMS, Total aller Schichten -->
 							<entryRelationship typeCode='REFR'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.IPSAufenthaltNEMSL3'/>
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.IPSAufenthaltNEMSL3'/>
 									<code nullFlavor='NA' />
 									<statusCode code='completed'/>
 									<value xsi:type='INT' value='0' />
@@ -442,12 +443,12 @@ History:
 					<!-- Angaben für MSK zum Aufenthalt -->
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.AufenthaltAngabenMSKL3' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.AufenthaltAngabenMSKL3' />
 							<!-- Behandlungsart -->
-							<code code='3' codeSystem='2.16.756.5.30.PlaceholderMSKBehandlungsart' displayName='stationär'/>
+							<code code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.6' displayName='stationär'/>
 							<statusCode code='completed'/>
 							<!-- Klasse -->
-							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.PlaceholderMSKKlasse' displayName='allgemein'/>
+							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.7' displayName='allgemein'/>
 							<!-- Administrativer Urlaub und Ferien -->
 							<value xsi:type='INT' value='0' />
 						</observation>
@@ -461,7 +462,7 @@ History:
 			********************************************************-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.BetriebswirtschaftlicheAngaben'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.BetriebswirtschaftlicheAngaben'/>
 					<title>Betriebswirtschaftliche Angaben</title>
 					<text>
 						<table>
@@ -484,12 +485,12 @@ History:
 					<!-- Betriebswirtschaftliche Angaben für MSK -->
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.BetriebswirtschaftlicheAngabenL3' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.BetriebswirtschaftlicheAngabenL3' />
 							<!-- Hauptkostenstelle -->
-							<code code='M200' codeSystem='2.16.756.5.30.PlaceholderMSKHauptkostenstelle' displayName='Chirurgie'/>
+							<code code='M200' codeSystem='2.16.756.5.30.1.126.3.3.2012.8' displayName='Chirurgie'/>
 							<statusCode code='completed'/>
 							<!-- Hauptkostenträger für Grundversicherungsleistungen -->
-							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.PlaceholderMSKHauptkostenträgerGrundversicherungsleistungen' displayName='Krankenversicherung (obligat.)'/>
+							<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.9' displayName='Krankenversicherung (obligat.)'/>
 						</observation>
 					</entry>
 				</section>
@@ -501,7 +502,7 @@ History:
 			********************************************************-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Austrittsmerkmale'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Austrittsmerkmale'/>
 					<title>Austrittsmerkmale</title>
 					<text>
 						<table>
@@ -536,7 +537,7 @@ History:
 					<!-- Eigentlicher Austritt -->
 					<entry>
 						<encounter classCode='ENC' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.AustrittL3'/>
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.AustrittL3'/>
 							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 							<id extension='283641' root='2.16.756.5.30.133333' />
 							<!-- Austrittsdatum und -Stunde -->
@@ -560,14 +561,14 @@ History:
 					<!-- Angaben für MSK zum Austritt -->
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.AustrittAngabenMSKL3' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.AustrittAngabenMSKL3' />
 							<!-- Entscheid für Austritt -->
-							<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKEntscheidAustritt' displayName='auf Initiative des Behandelnden'/>
+							<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.10' displayName='auf Initiative des Behandelnden'/>
 							<statusCode code='completed'/>
 							<!-- Aufenthalt nach Austritt -->
-							<value xsi:type='CE' code='5' codeSystem='2.16.756.5.30.PlaceholderMSKAufenthaltNachAustritt' displayName='Rehabilitationsklinik'/>
+							<value xsi:type='CE' code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.12' displayName='Rehabilitationsklinik'/>
 							<!-- Behandlung nach Austritt -->
-							<value xsi:type='CE' code='5' codeSystem='2.16.756.5.30.PlaceholderMSKBehandlungNachAustritt' displayName='Rehabilitation (amb. oder stat.)'/>
+							<value xsi:type='CE' code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.14' displayName='Rehabilitation (amb. oder stat.)'/>
 						</observation>
 					</entry>
 				</section>
@@ -580,7 +581,7 @@ History:
 			-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Diagnosenliste'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Diagnosenliste'/>
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.DiagList'/>
 					<code codeSystem='2.16.840.1.113883.6.1' code='29308-4' displayName='Diagnosis:Nom'/>
 					<title>Diagnosen</title>
@@ -602,17 +603,17 @@ History:
 					</text>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DiagnoseL3'/>
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DiagnoseL3'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.DiagL3'/>
 							<code code='M16.1' codeSystem='1.2.276.0.76.5.384' displayName='Sonstige primäre Koxarthrose'/>
 							<text>Sonstige primäre Koxarthrose</text>
 							<effectiveTime value='20110103'/>
 							<!-- Tumoraktivität -->
-							<value xsi:type='CE' code='N/A' codeSystem='2.16.756.5.30.PlaceholderMSKTumoraktivität' displayName='Frage stellt sich nicht'/>
+							<value xsi:type='CE' code='N/A' codeSystem='2.16.756.5.30.1.126.3.3.2012.25' displayName='Frage stellt sich nicht'/>
 							<!-- Eintragtyp (Haupt- oder Nebendiagnose) -->
-							<interpretationCode code='Z' codeSystem='2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung' displayName='Haupteintrag'/>
+							<interpretationCode code='Z' codeSystem='2.16.756.5.30.1.126.3.3.2012.23' displayName='Haupteintrag'/>
 							<!-- Seitigkeit -->
-							<targetSiteCode code='2' codeSystem='2.16.756.5.30.PlaceholderMSKSeitigkeit' displayName='einseitig links' />
+							<targetSiteCode code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.24' displayName='einseitig links' />
 							<performer>
 								<assignedEntity>
 									<id extension='7604444444444' root='1.3.88'/>
@@ -638,7 +639,7 @@ History:
 			-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Behandlungsliste'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Behandlungsliste'/>
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ProcList'/>
 					<code code='29300-1' codeSystem='2.16.840.1.113883.6.1' displayName='Procedure:Nom'/>
 					<title>Behandlungen</title>
@@ -660,9 +661,9 @@ History:
 					</text>
 					<entry>
 						<procedure classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.BehandlungL3'/>
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.BehandlungL3'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ProcL3'/>
-							<code code='81.51.00' codeSystem='2.16.756.5.30.PlaceholderCHOP' displayName='Totalendoprothese des Hüftgelenks, n.n.bez.'/>
+							<code code='81.51.00' codeSystem='2.16.756.5.30.1.126.3.1.2012' displayName='Totalendoprothese des Hüftgelenks, n.n.bez.'/>
 							<!-- oid chop -->
 							<text>Totalendoprothese des Hüftgelenks, n.n.bez.</text>
 							<effectiveTime xsi:type='IVL_TS'>
@@ -670,7 +671,7 @@ History:
 								<high value='201101040930' />
 							</effectiveTime>
 							<!-- Seitigkeit -->
-							<targetSiteCode code='2' codeSystem='2.16.756.5.30.PlaceholderMSKSeitigkeit' displayName='einseitig links' />
+							<targetSiteCode code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.24' displayName='einseitig links' />
 							<performer>
 								<assignedEntity>
 									<id extension='7606666666666' root='1.3.88'/>
@@ -686,10 +687,10 @@ History:
 							</performer>
 							<entryRelationship typeCode='REFR'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.TreatmentZusatzL3'/>
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.TreatmentZusatzL3'/>
 									<code nullFlavor='NA' />
 									<!-- Eintragtyp (Haupt- oder Nebendiagnose) -->
-									<interpretationCode code='H' codeSystem='2.16.756.5.30.PlaceholderMSKEintragsTypDiagnoseBehandlung' displayName='Haupteintrag'/>
+									<interpretationCode code='H' codeSystem='2.16.756.5.30.1.126.3.3.2012.23' displayName='Haupteintrag'/>
 								</observation>
 							</entryRelationship>
 						</procedure>
@@ -703,7 +704,7 @@ History:
 			********************************************************
 			<component>
 			<section>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdaten'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdaten'/>
 			<title>Neugeborenen-Zusatzdaten</title>
 			<text>
 			Allgemeine Angaben
@@ -834,32 +835,32 @@ History:
 			</text>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenGeburtL3' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenGeburtL3' />
 			<id extension='23467' root='2.16.756.5.30.133333' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKVitalstatusGeburt' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.16' />
 			<statusCode code='completed'/>
 			<effectiveTime value='190020010000'/>
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenMissbildungenL3' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenMissbildungenL3' />
 			<code code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein' />
 			<statusCode code='completed' />
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungKindL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKGeburtVerlegungen' displayName='Nein' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungKindL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.32' displayName='Nein' />
 			<statusCode code='completed' />
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenMehrlingL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKMehrling' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenMehrlingL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.17' />
 			<value xsi:type='INT' value='1' />
 			</observation>
 			</entry>
@@ -913,7 +914,7 @@ History:
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenMutterL3' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenMutterL3' />
 			<code nullFlavor='NA' />
 			<statusCode code='completed'/>
 			<effectiveTime value='19000101'/>
@@ -921,58 +922,58 @@ History:
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter1L3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKGestationsalterCode' displayName='Gestationsalter 1' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter1L3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.29' displayName='Gestationsalter 1' />
 			<statusCode code='completed'/>
-			<value xsi:type='CE' code='39' codeSystem='2.16.756.5.30.PlaceholderMSKGestationswoche' displayName='Woche 39'/>
-			<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.PlaceholderMSKGestationstag' displayName='Tag 0'/>
+			<value xsi:type='CE' code='39' codeSystem='2.16.756.5.30.1.126.3.3.2012.30' displayName='Woche 39'/>
+			<value xsi:type='CE' code='0' codeSystem='2.16.756.5.30.1.126.3.3.2012.31' displayName='Tag 0'/>
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter2L3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKGestationsalterCode' displayName='Gestationsalter 2' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenGestationsalter2L3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.29' displayName='Gestationsalter 2' />
 			<statusCode code='completed'/>
-			<value xsi:type='CE' code='38' codeSystem='2.16.756.5.30.PlaceholderMSKGestationswoche' displayName='Woche 38'/>
-			<value xsi:type='CE' code='2' codeSystem='2.16.756.5.30.PlaceholderMSKGestationstag' displayName='Tag 2'/>
+			<value xsi:type='CE' code='38' codeSystem='2.16.756.5.30.1.126.3.3.2012.30' displayName='Woche 38'/>
+			<value xsi:type='CE' code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.31' displayName='Tag 2'/>
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftenL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften' displayName='Anzahl vorausgegangener Schwangerschaften insgesamt ' />
-			<statusCode code='completed'/>
-			<value xsi:type='INT' value='1' />
-			</observation>
-			</entry>
-			<entry>
-			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenLebendgeburtenL3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften' displayName='Anzahl vorausgegangener Lebendgeburten' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftenL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.38' displayName='Anzahl vorausgegangener Schwangerschaften insgesamt ' />
 			<statusCode code='completed'/>
 			<value xsi:type='INT' value='1' />
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenFehlgeburtenL3' />
-			<code code='3' codeSystem='2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften' displayName='Anzahl vorausgegangener Fehl- oder Totgeburten' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenLebendgeburtenL3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.38' displayName='Anzahl vorausgegangener Lebendgeburten' />
+			<statusCode code='completed'/>
+			<value xsi:type='INT' value='1' />
+			</observation>
+			</entry>
+			<entry>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenFehlgeburtenL3' />
+			<code code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.38' displayName='Anzahl vorausgegangener Fehl- oder Totgeburten' />
 			<statusCode code='completed'/>
 			<value xsi:type='INT' value='0' />
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftsabbruchL3' />
-			<code code='4' codeSystem='2.16.756.5.30.PlaceholderMSKFrühereSchwangerschaften' displayName='Anzahl vorausgegangener Schwangerschaftsabbrüche' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenSchwangerschaftsabbruchL3' />
+			<code code='4' codeSystem='2.16.756.5.30.1.126.3.3.2012.38' displayName='Anzahl vorausgegangener Schwangerschaftsabbrüche' />
 			<statusCode code='completed'/>
 			<value xsi:type='INT' value='0' />
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungMutterL3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKGeburtVerlegungen' displayName='Nein' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.NeugeborenenZusatzdatenVerlegungMutterL3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.32' displayName='Nein' />
 			<statusCode code='completed' />
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
@@ -987,7 +988,7 @@ History:
 			********************************************************
 			<component>
 			<section>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdaten'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdaten'/>
 			<title>Psychiatrie-Zusatzdaten</title>
 			<text>
 			Daten zur Person
@@ -1208,94 +1209,94 @@ History:
 			</text>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenEintrittL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKFreiwilligkeit' displayName='freiwilliger Eintritt'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenEintrittL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.20' displayName='freiwilliger Eintritt'/>
 			<statusCode code='completed'/>
-			<value xsi:type='CE' code='12' codeSystem='2.16.756.5.30.PlaceholderMSKAufenthaltsortVorEintrittPsychiatrie' displayName='Zuhause, mit anderen'/>
-			<value xsi:type='CE' code='11' codeSystem='2.16.756.5.30.PlaceholderMSKEinweisendeInstanzPsychiatrie' displayName='Patient kommt auf eigene Initiative'/>
-			<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.PlaceholderMSKFFE' displayName='ohne FFE'/>
+			<value xsi:type='CE' code='12' codeSystem='2.16.756.5.30.1.126.3.3.2012.2' displayName='Zuhause, mit anderen'/>
+			<value xsi:type='CE' code='11' codeSystem='2.16.756.5.30.1.126.3.3.2012.5' displayName='Patient kommt auf eigene Initiative'/>
+			<value xsi:type='CE' code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.21' displayName='ohne FFE'/>
 			</observation>
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPersonL3' />
-			<code code='3' codeSystem='2.16.756.5.30.PlaceholderMSKBildung' displayName='Berufslehre oder Vollzeitberufsschule'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPersonL3' />
+			<code code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.19' displayName='Berufslehre oder Vollzeitberufsschule'/>
 			<statusCode code='completed'/>
 			</observation>
 			</entry>
 			<entry>
 			<organizer classCode='CLUSTER' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Beschäftigung vor Eintritt' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Beschäftigung vor Eintritt' />
 			<statusCode code='completed'/>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittTeilzeitL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='teilzeit erwerbstätig' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittTeilzeitL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='teilzeit erwerbstätig' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittVollzeitL3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='voll erwerbstätig' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittVollzeitL3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='voll erwerbstätig' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Ja'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittNichtErwerbstätigL3' />
-			<code code='3' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='nicht erwerbstätig oder arbeitslos' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittNichtErwerbstätigL3' />
+			<code code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='nicht erwerbstätig oder arbeitslos' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittHausarbeitL3' />
-			<code code='4' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='Hausarbeit in eigenem Haushalt' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittHausarbeitL3' />
+			<code code='4' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='Hausarbeit in eigenem Haushalt' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittAusbildungL3' />
-			<code code='5' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='in Ausbildung (Schule, Lehre, Studium)' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittAusbildungL3' />
+			<code code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='in Ausbildung (Schule, Lehre, Studium)' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRehaL3' />
-			<code code='6' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='Rehabilitationsprogramm' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRehaL3' />
+			<code code='6' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='Rehabilitationsprogramm' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRenteL3' />
-			<code code='7' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='IV, AHV oder andere Rente' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittRenteL3' />
+			<code code='7' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='IV, AHV oder andere Rente' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittGeschütztL3' />
-			<code code='8' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='Arbeit in geschütztem oder beschützendem Rahmen' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittGeschütztL3' />
+			<code code='8' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='Arbeit in geschütztem oder beschützendem Rahmen' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittUnbekanntL3' />
-			<code code='9' codeSystem='2.16.756.5.30.PlaceholderMSKBeschäftigungVorEintritt' displayName='unbekannt' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBeschäftigungVorEintrittUnbekanntL3' />
+			<code code='9' codeSystem='2.16.756.5.30.1.126.3.3.2012.34' displayName='unbekannt' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
@@ -1304,109 +1305,109 @@ History:
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBehandlungL3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKBehandlungPsychiatrie' displayName='Beratung'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenBehandlungL3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.22' displayName='Beratung'/>
 			<statusCode code='completed'/>
 			<value xsi:type='INT' value='1' />
 			</observation>
 			</entry>
 			<entry>
 			<organizer classCode='CLUSTER' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieL3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Psychopharmakotherapie' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieL3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Psychopharmakotherapie' />
 			<statusCode code='completed'/>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieNeuroleptikaL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Neuroleptika' />
-			<statusCode code='completed'/>
-			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
-			</observation>
-			</component>
-			<component typeCode='COMP'>
-			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieDepotneuroleptikaL3' />
-			<code code='2' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Depotneuroleptika' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieNeuroleptikaL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Neuroleptika' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntidepressivaL3' />
-			<code code='3' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Antidepressiva' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieDepotneuroleptikaL3' />
+			<code code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Depotneuroleptika' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieTranquilizerL3' />
-			<code code='4' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Tranquilizer' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntidepressivaL3' />
+			<code code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Antidepressiva' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieHypnotikaL3' />
-			<code code='5' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Hypnotika' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieTranquilizerL3' />
+			<code code='4' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Tranquilizer' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiepileptikaL3' />
-			<code code='6' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Antiepileptika' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieHypnotikaL3' />
+			<code code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Hypnotika' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLithiumL3' />
-			<code code='7' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Lithium' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiepileptikaL3' />
+			<code code='6' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Antiepileptika' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtsubstitutionsmittelL3' />
-			<code code='8' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Suchtsubstitutionsmittel (z.B. Methadon)' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLithiumL3' />
+			<code code='7' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Lithium' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtaversionsmittelL3' />
-			<code code='9' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Suchtaversionsmittel (z.B. Antabus, Nemexin)' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtsubstitutionsmittelL3' />
+			<code code='8' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Suchtsubstitutionsmittel (z.B. Methadon)' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiparkinsonmittelL3' />
-			<code code='10' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Antiparkinsonmittel' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieSuchtaversionsmittelL3' />
+			<code code='9' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Suchtaversionsmittel (z.B. Antabus, Nemexin)' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAndereL3' />
-			<code code='11' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='andere' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAntiparkinsonmittelL3' />
+			<code code='10' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Antiparkinsonmittel' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLeidenL3' />
-			<code code='12' codeSystem='2.16.756.5.30.PlaceholderMSKPsychopharmakotherapie' displayName='Medikamente zur Behandlung körperlicher Leiden' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieAndereL3' />
+			<code code='11' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='andere' />
+			<statusCode code='completed'/>
+			<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
+			</observation>
+			</component>
+			<component typeCode='COMP'>
+			<observation classCode='OBS' moodCode='EVN'>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenPsychopharmakotherapieLeidenL3' />
+			<code code='12' codeSystem='2.16.756.5.30.1.126.3.3.2012.35' displayName='Medikamente zur Behandlung körperlicher Leiden' />
 			<statusCode code='completed'/>
 			<value xsi:type='CE' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Ja'/>
 			</observation>
@@ -1415,11 +1416,11 @@ History:
 			</entry>
 			<entry>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenAustrittL3' />
-			<code code='12' codeSystem='2.16.756.5.30.PlaceholderMSKEntscheidAustrittPsychiatrie' displayName='auf Initiative der Behandelnden'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.PsychiatrieZusatzdatenAustrittL3' />
+			<code code='12' codeSystem='2.16.756.5.30.1.126.3.3.2012.11' displayName='auf Initiative der Behandelnden'/>
 			<statusCode code='completed'/>
-			<value xsi:type='CE' code='12' codeSystem='2.16.756.5.30.PlaceholderMSKAufenthaltNachAustrittPsychiatrie' displayName='Zuhause, mit anderen'/>
-			<value xsi:type='CE' code='10' codeSystem='2.16.756.5.30.PlaceholderMSKBehandlungNachAustrittPsychiatrie' displayName='geheilt / kein Behandlungsbedarf'/>
+			<value xsi:type='CE' code='12' codeSystem='2.16.756.5.30.1.126.3.3.2012.12Psychiatrie' displayName='Zuhause, mit anderen'/>
+			<value xsi:type='CE' code='10' codeSystem='2.16.756.5.30.1.126.3.3.2012.15' displayName='geheilt / kein Behandlungsbedarf'/>
 			</observation>
 			</entry>
 			</section>
@@ -1432,7 +1433,7 @@ History:
 			********************************************************
 			<component>
 			<section>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Wiedereintritte'/>
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Wiedereintritte'/>
 			<title>MD-Kennzeichnung von Wiedereintritten</title>
 			<text>
 			<table>
@@ -1460,21 +1461,21 @@ History:
 			</text>
 			<entry>
 			<organizer classCode='CLUSTER' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.WiedereintrittListeL3' />
-			<code code='3' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Wiedereintritte' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.WiedereintrittListeL3' />
+			<code code='3' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Wiedereintritte' />
 			<statusCode code='completed'/>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.ZwischenaustrittL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKZwischenaustritte' displayName='1. Zwischenaustritt' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.ZwischenaustrittL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.36' displayName='1. Zwischenaustritt' />
 			<statusCode code='completed'/>
 			<effectiveTime value='19000101'/>
 			</observation>
 			</component>
 			<component typeCode='COMP'>
 			<observation classCode='OBS' moodCode='EVN'>
-			<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.WiedereintrittL3' />
-			<code code='1' codeSystem='2.16.756.5.30.PlaceholderMSKWiedereintritte' displayName='1. Wiedereintritt' />
+			<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.WiedereintrittL3' />
+			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.37' displayName='1. Wiedereintritt' />
 			<statusCode code='completed'/>
 			<effectiveTime value='19000104'/>
 			</observation>
@@ -1492,7 +1493,7 @@ History:
 			-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGData'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGData'/>
 					<title>DRG Daten</title>
 					<text>
 						<table>
@@ -1530,13 +1531,13 @@ History:
 					</entry>
 					<entry>
 						<organizer classCode='CLUSTER' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGDataInfoL3' />
-							<code code='4' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Nein' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGDataInfoL3' />
+							<code code='4' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Nein' />
 							<statusCode code='completed'/>
 							<component typeCode='COMP'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGStatusL3' />
-									<code code='I' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist' />
+									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGStatusL3' />
+									<code code='I' codeSystem='2.16.756.5.30.1.114.3.1.1.1' displayName='Information, ob ein Behandlungsfall über DRG abgerechnet worden ist' />
 									<statusCode code='completed'/>
 									<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' displayName='Nein'/>
 								</observation>
@@ -1544,11 +1545,11 @@ History:
 							<!--
 							<component typeCode='COMP'>
 							<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.DRGFallgruppeL3' />
-							<code code='F' codeSystem='2.16.756.5.30.PlaceholderCaseStatDataCat' displayName='Fallgruppe' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.DRGFallgruppeL3' />
+							<code code='F' codeSystem='2.16.756.5.30.1.114.3.1.1.1' displayName='Fallgruppe' />
 							<statusCode code='completed'/>
 							<effectiveTime value='20110115'/>
-							<value xsi:type='CE' code='I47B' codeSystem='2.16.756.5.30.PlaceholderSwissDRG' displayName='Revision oder Ersatz des Hüftgelenkes ohne komplizierende Diagnose. ohne Arthrodese. ohne äußerst schwere CC. Alter > 15 Jahre. ohne komplizierenden Eingriff'/>
+							<value xsi:type='CE' code='I47B' codeSystem='2.16.756.5.30.1.116' displayName='Revision oder Ersatz des Hüftgelenkes ohne komplizierende Diagnose. ohne Arthrodese. ohne äußerst schwere CC. Alter > 15 Jahre. ohne komplizierenden Eingriff'/>
 							<performer>
 							<assignedEntity>
 							<assignedPerson>
@@ -1565,7 +1566,7 @@ History:
 							<!--
 							<component typeCode='COMP'>
 								<substanceAdministration classCode='SBADM' moodCode='EVN'>
-									<templateId extension='alisconnect.casestat.body.MediL3' root='2.16.756.5.30.PlaceholderCaseStatV1'/>
+									<templateId extension='alisconnect.casestat.body.MediL3' root='2.16.756.5.30.1.114.2.1.1'/>
 									<templateId extension='CDA-CH.Body.MediL3' root='2.16.756.5.30.1.1.1.1.1'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 									<templateId root='2.16.840.1.113883.10.20.1.24'/>
@@ -1608,8 +1609,8 @@ History:
 									</consumable>
 									<entryRelationship typeCode='REFR'>
 										<observation classCode='OBS' moodCode='EVN'>
-											<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.KumulierteDosisL3' />
-											<code code='5' codeSystem='2.16.756.5.30.PlaceholderMSKPsychiatrieZusatzdatenKategorien' displayName='Nein' />
+											<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.KumulierteDosisL3' />
+											<code code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Nein' />
 											<statusCode code='completed'/>
 											<value xsi:type='IVL_PQ'>
 												<center value='1' unit='mg'>
@@ -1633,7 +1634,7 @@ History:
 			-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.Bemerkungen'/>
+					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Bemerkungen'/>
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.Rem'/>
 					<title>Bemerkungen</title>
 					<text>
@@ -1643,7 +1644,7 @@ History:
 					</text>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<templateId root='2.16.756.5.30.PlaceholderCaseStatV1' extension='alisconnect.casestat.body.BemerkungL3' />
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.BemerkungL3' />
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.RemL3'/>
 							<code code='1' codeSystem='2.16.756.5.30.2.1.1.9.1' />
 							<text>Keine Bemerkungen</text>
