@@ -1585,7 +1585,7 @@ History:
 									</effectiveTime>
 									<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
 									<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'>
-										<translation code='N/A' codeSystem='2.16.756.5.30.PlaceholderMSKMediINDICATION' />
+										<translation code='N/A' codeSystem='2.16.756.5.30.1.116.3.1.2013.1' />
 									</routeCode>
 									<doseQuantity>
 										<center value='2' unit='1'/>
@@ -1599,7 +1599,7 @@ History:
 												<code code='BEISPIEL' codeSystem='2.16.756.5.30.2.6.2'>
 													<translation code='B01AC13' codeSystem='2.16.840.1.113883.6.73'>
 														<qualifier>
-															<value code='N/A' codeSystem='2.16.756.5.30.PlaceholderMSKMediMEDICATIONEXTENSION'/>
+															<value code='N/A' codeSystem='2.16.756.5.30.1.116.3.1.2013.2'/>
 														</qualifier>
 													</translation>
 												</code>
@@ -1614,7 +1614,7 @@ History:
 											<statusCode code='completed'/>
 											<value xsi:type='IVL_PQ'>
 												<center value='1' unit='mg'>
-													<translation code='mg' codeSystem='2.16.756.5.30.PlaceholderMSKMediMEDICATIONUNITS' />
+													<translation code='mg' codeSystem='2.16.756.5.30.1.116.3.1.2013.4' />
 												</center>
 											</value>
 										</observation>

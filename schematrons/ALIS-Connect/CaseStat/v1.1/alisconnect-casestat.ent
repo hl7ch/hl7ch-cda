@@ -1642,7 +1642,7 @@ Body Templates
 		<assert id="entity-alisconnect-casestat-6701" test="cda:templateId[@extension=&quot;CDA-CH.Body.MediL3&quot;]">
 			<xhtml:p lang="de_ch">Hochteure Medikamente müssen mit dem Template 'CDA-CH.Body.MediL3' deklariert werden</xhtml:p>
 		</assert>
-		<assert id="entity-alisconnect-casestat-6702" test="cda:routeCode/cda:translation[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.1&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201107/medicationlist-voc2013.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.116.3.1.2013.1&quot;]/code/@value]">
+		<assert id="entity-alisconnect-casestat-6702" test="cda:routeCode/cda:translation[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.1&quot; and @code=$swissdrg-valueset[@root=&quot;2.16.756.5.30.1.116.3.1.2013.1&quot;]/code/@value]">
 			<xhtml:p lang="de_ch">Die Verabreichungsart des hochteuren Medikaments muss eine Angabe gemäss Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten (mittels 'routeCode/translation' und gültigem Wert aus der Wertetabelle '2.16.756.5.30.1.116.3.1.2013.1' deklarieren)</xhtml:p>
 		</assert>
 		<assert id="entity-alisconnect-casestat-6703" test="cda:entryRelationship/cda:observation/cda:templateId[@extension=&quot;alisconnect.casestat.body.KumulierteDosisL3&quot;]">
@@ -1663,10 +1663,10 @@ Body Templates
 		<assert id="entity-alisconnect-casestat-6801" test="ancestor::cda:manufacturedMaterial">
 			<xhtml:p lang="de_ch">Der ATC Code des hochteuren Medikaments muss unter dem CDA Body Element 'manufacturedMaterial' deklariert werden</xhtml:p>
 		</assert>
-		<assert id="entity-alisconnect-casestat-6802" test="./@code=document(&quot;../../../../schematrons/BFS/MSK/v201107/medicationlist-voc2013.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.116.3.1.2013.3&quot;]/code/@value">
+		<assert id="entity-alisconnect-casestat-6802" test="./@code=$swissdrg-valueset[@root=&quot;2.16.756.5.30.1.116.3.1.2013.3&quot;]/code/@value">
 			<xhtml:p lang="de_ch">Der ATC Code des hochteuren Medikaments muss in der Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten sein</xhtml:p>
 		</assert>
-		<assert id="entity-alisconnect-casestat-6803" test="(cda:translation/cda:qualifier/cda:value[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201107/medicationlist-voc2013.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot;]/code/@value]) or (cda:qualifier/cda:value[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201107/medicationlist-voc2013.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot;]/code/@value])">
+		<assert id="entity-alisconnect-casestat-6803" test="(cda:translation/cda:qualifier/cda:value[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot; and @code=$swissdrg-valueset[@root=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot;]/code/@value]) or (cda:qualifier/cda:value[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot; and @code=$swissdrg-valueset[@root=&quot;2.16.756.5.30.1.116.3.1.2013.2&quot;]/code/@value])">
 			<xhtml:p lang="de_ch">Der ATC Code des hochteuren Medikaments muss eine Zusatzangabe gemäss Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten (mittels 'qualifier/value' und gültigem Wert aus der Wertetabelle '2.16.756.5.30.1.116.3.1.2013.2' deklarieren)</xhtml:p>
 		</assert>
 	</rule>
@@ -1687,7 +1687,7 @@ Body Templates
 		<assert id="entity-alisconnect-casestat-6902" test="cda:value[@xsi:type=&quot;IVL_PQ&quot;]/cda:center[@value&gt;=1 and @value&lt;=999999999999999]">
 			<xhtml:p lang="de_ch">Hochteure Medikamente: Die kumulierte Dosis muss angegeben werden</xhtml:p>
 		</assert>
-		<assert id="entity-alisconnect-casestat-6903" test="cda:value/cda:center/cda:translation[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.4&quot; and @code=document(&quot;../../../../schematrons/BFS/MSK/v201107/medicationlist-voc2013.xml&quot;)/systems/system[@root=&quot;2.16.756.5.30.1.116.3.1.2013.4&quot;]/code/@value]">
+		<assert id="entity-alisconnect-casestat-6903" test="cda:value/cda:center/cda:translation[@codeSystem=&quot;2.16.756.5.30.1.116.3.1.2013.4&quot; and @code=$swissdrg-valueset[@root=&quot;2.16.756.5.30.1.116.3.1.2013.4&quot;]/code/@value]">
 			<xhtml:p lang="de_ch">Hochteure Medikamente: Die kumulierte Dosis muss eine Einheit gemäss Liste des BFS für die Medizinische Statistik der Krankenhäuser enthalten (mittels 'translation' und gültigem Wert aus der Wertetabelle '2.16.756.5.30.1.116.3.1.2013.4' deklarieren)</xhtml:p>
 		</assert>
 	</rule>
