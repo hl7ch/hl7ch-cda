@@ -279,11 +279,23 @@ History:
   <text language="it-CH" value="1.3.88" displayName="GS1 GLN"/>
   <text language="en" value="1.3.88" displayName="GS1 GLN"/>
 
+	<!-- deprecated -->
   <text language="de-CH" value="2.16.756.5.34" displayName="Versichertenkarte"/>
 	<text language="fr-CH" value="2.16.756.5.34" displayName="Carte d’assuré"/>
   <text language="it-CH" value="2.16.756.5.34" displayName="Carta di assicurazione"/>
   <text language="en" value="2.16.756.5.34" displayName="Insurance card"/>
+  <!-- end of deprecated -->
+  
+  <text language="de-CH" value="2.16.756.5.30.1.123.100.1.1.1" displayName="Versichertenkarte"/>
+	<text language="fr-CH" value="2.16.756.5.30.1.123.100.1.1.1" displayName="Carte d’assuré"/>
+  <text language="it-CH" value="2.16.756.5.30.1.123.100.1.1.1" displayName="Carta di assicurazione"/>
+  <text language="en" value="2.16.756.5.30.1.123.100.1.1.1" displayName="Insurance card"/>
 
+  <text language="de-CH" value="2.16.756.5.30.1.1.2" displayName="Versichertennummer"/>
+	<text language="fr-CH" value="2.16.756.5.30.1.1.2" displayName="Numéro d’assuré"/>
+  <text language="it-CH" value="2.16.756.5.30.1.1.2" displayName="Numero di assicurazione"/>
+  <text language="en" value="2.16.756.5.30.1.1.2" displayName="Insurance number"/>
+  
   <text language="de-CH" value="EmergencyContacts" displayName="Kontaktadressen für den Notfall"/>
   <text language="fr-CH" value="EmergencyContacts" displayName="tbd fr 'EmergencyContacts'"/>
   <text language="it-CH" value="EmergencyContacts" displayName="tbd it 'EmergencyContacts'"/>
@@ -308,6 +320,11 @@ History:
   <text language="fr-CH" value="CoveringParty" displayName="Couverture d'assurance"/>
   <text language="it-CH" value="CoveringParty" displayName="tbd it 'CoveringParty'"/>
   <text language="en" value="CoveringParty" displayName="Covering Party"/>
+
+  <text language="de-CH" value="Coverage" displayName="Versicherungsschutz"/>
+  <text language="fr-CH" value="Coverage" displayName="Couverture d'assurance"/>
+  <text language="it-CH" value="Coverage" displayName="tbd it 'Coverage'"/>
+  <text language="en" value="Coverage" displayName="Coverage"/>
 
   <text language="de-CH" value="PolicyHolder" displayName="Versicherungsnehmer"/>
   <text language="fr-CH" value="PolicyHolder" displayName="Titulaire du contrat"/>
@@ -358,6 +375,31 @@ History:
   <text language="fr-CH" value="GUARD" displayName="Représentant"/>
   <text language="it-CH" value="GUARD" displayName="tbd it 'GUARD'"/>
   <text language="en" value="GUARD" displayName="Guardian"/>
+
+  <text language="de-CH" value="832.10" displayName="KVG"/>
+  <text language="fr-CH" value="832.10" displayName="LAMal"/>
+  <text language="it-CH" value="832.10" displayName="LAMal"/>
+  <text language="en" value="832.10" displayName="tbd en '832.10'"/>
+
+  <text language="de-CH" value="832.20" displayName="UVG"/>
+  <text language="fr-CH" value="832.20" displayName="LAA"/>
+  <text language="it-CH" value="832.20" displayName="LAINF"/>
+  <text language="en" value="832.20" displayName="tbd en '832.20'"/>
+
+  <text language="de-CH" value="221.229.1" displayName="VVG"/>
+  <text language="fr-CH" value="221.229.1" displayName="LCA"/>
+  <text language="it-CH" value="221.229.1" displayName="LCA"/>
+  <text language="en" value="221.229.1" displayName="tbd en '221.229.1'"/>
+
+  <text language="de-CH" value="833.1" displayName="MVG"/>
+  <text language="fr-CH" value="833.1" displayName="LAM"/>
+  <text language="it-CH" value="833.1" displayName="LAM"/>
+  <text language="en" value="833.1" displayName="tbd en '833.1'"/>
+
+  <text language="de-CH" value="831.20" displayName="IVG"/>
+  <text language="fr-CH" value="831.20" displayName="LAI"/>
+  <text language="it-CH" value="831.20" displayName="LAI"/>
+  <text language="en" value="831.20" displayName="tbd en '831.20'"/>
 
   <!-- 
   ********************************************************************************

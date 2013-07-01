@@ -879,7 +879,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								<xsl:variable name="participantType">
 									<xsl:choose>
 										<xsl:when test="@typeCode='COV'">
-											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Coverage']/@displayName"/>
 										</xsl:when>
 										<xsl:when test="@typeCode='REF'">
 											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Referrer']/@displayName"/>
@@ -899,13 +899,19 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 									<xsl:variable name="entityType">
 										<xsl:choose>
 											<xsl:when test="@classCode='COVPTY'">
-												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='CoveringParty']/@displayName"/>
+												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='CoveredParty']/@displayName"/>
+											</xsl:when>
+											<xsl:when test="@classCode='PAYOR'">
+												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
 											</xsl:when>
 											<xsl:when test="@classCode='POLHOLD'">
 												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='PolicyHolder']/@displayName"/>
 											</xsl:when>
 											<xsl:when test="@classCode='CAREGIVER'">
 												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='CaregiverContact']/@displayName"/>
+											</xsl:when>
+											<xsl:when test="@classCode='CON'">
+												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
 											</xsl:when>
 											<xsl:when test="@classCode='ECON'">
 												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='EmergencyContact']/@displayName"/>
