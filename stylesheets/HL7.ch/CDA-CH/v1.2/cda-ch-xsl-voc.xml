@@ -234,6 +234,16 @@ History:
   <text language="it-CH" value="Contact" displayName="Contatto"/>
   <text language="en" value="Contact" displayName="Contact"/>
 
+  <text language="de-CH" value="PatientContacts" displayName="Patientenkontakte"/>
+  <text language="fr-CH" value="PatientContacts" displayName="Contacts du patient"/>
+  <text language="it-CH" value="PatientContacts" displayName="tbd it PatientContacts"/>
+  <text language="en" value="PatientContacts" displayName="Patient contacts"/>
+
+  <text language="de-CH" value="PatientContact" displayName="Angehörige"/>
+  <text language="fr-CH" value="PatientContact" displayName="Relatif"/>
+  <text language="it-CH" value="PatientContact" displayName="tbd it PatientContact"/>
+  <text language="en" value="PatientContact" displayName="Patient contact"/>
+
   <text language="de-CH" value="HL7.ch" displayName="HL7 Benutzergruppe Schweiz"/>
   <text language="fr-CH" value="HL7.ch" displayName="Groupe d'utilisateurs HL7 Suisse"/>
   <text language="it-CH" value="HL7.ch" displayName="Gruppo utenti svizzeri HL7"/>
@@ -279,10 +289,75 @@ History:
   <text language="it-CH" value="EmergencyContacts" displayName="tbd it 'EmergencyContacts'"/>
   <text language="en" value="EmergencyContacts" displayName="Emergency contacts"/>
 
+  <text language="de-CH" value="EmergencyContact" displayName="Kontaktadresse für den Notfall"/>
+  <text language="fr-CH" value="EmergencyContact" displayName="Contact en cas d'urgence"/>
+  <text language="it-CH" value="EmergencyContact" displayName="tbd it 'EmergencyContact'"/>
+  <text language="en" value="EmergencyContact" displayName="Emergency contact"/>
+
+  <text language="de-CH" value="CaregiverContact" displayName="Medizinische Kontaktperson"/>
+  <text language="fr-CH" value="CaregiverContact" displayName="Contact médical"/>
+  <text language="it-CH" value="CaregiverContact" displayName="tbd it 'CaregiverContact'"/>
+  <text language="en" value="CaregiverContact" displayName="Caregiver contact"/>
+
+  <text language="de-CH" value="IndirectContact" displayName="Weiterer Kontakt"/>
+  <text language="fr-CH" value="IndirectContact" displayName="Autre contact"/>
+  <text language="it-CH" value="IndirectContact" displayName="tbd it 'IndirectContact'"/>
+  <text language="en" value="IndirectContact" displayName="Indirect contact"/>
+  
+  <text language="de-CH" value="CoveringParty" displayName="Versicherungsdeckung"/>
+  <text language="fr-CH" value="CoveringParty" displayName="Couverture d'assurance"/>
+  <text language="it-CH" value="CoveringParty" displayName="tbd it 'CoveringParty'"/>
+  <text language="en" value="CoveringParty" displayName="Covering Party"/>
+
+  <text language="de-CH" value="PolicyHolder" displayName="Versicherungsnehmer"/>
+  <text language="fr-CH" value="PolicyHolder" displayName="Titulaire du contrat"/>
+  <text language="it-CH" value="PolicyHolder" displayName="tbd it 'PolicyHolder'"/>
+  <text language="en" value="PolicyHolder" displayName="Policy Holder"/>
+
+  <text language="de-CH" value="Provider" displayName="Leistungserbringer"/>
+  <text language="fr-CH" value="Provider" displayName="Prestateur"/>
+  <text language="it-CH" value="Provider" displayName="tbd it 'Provider'"/>
+  <text language="en" value="Provider" displayName="Provider"/>
+
+  <text language="de-CH" value="ParticipantType" displayName="Art des Kontakts"/>
+  <text language="fr-CH" value="ParticipantType" displayName="Type de contact"/>
+  <text language="it-CH" value="ParticipantType" displayName="tbd it 'ParticipantType'"/>
+  <text language="en" value="ParticipantType" displayName="Participant Type"/>
+  
+  <text language="de-CH" value="AssociatedEntityType" displayName="Art der Beziehung"/>
+  <text language="fr-CH" value="AssociatedEntityType" displayName="Type de la relation"/>
+  <text language="it-CH" value="AssociatedEntityType" displayName="tbd it 'AssociatedEntityType'"/>
+  <text language="en" value="AssociatedEntityType" displayName="Relation type"/>
+  
+  <text language="de-CH" value="AssociatedEntityRole" displayName="Rolle"/>
+  <text language="fr-CH" value="AssociatedEntityRole" displayName="Rôle"/>
+  <text language="it-CH" value="AssociatedEntityRole" displayName="tbd it 'AssociatedEntityRole'"/>
+  <text language="en" value="AssociatedEntityRole" displayName="Role"/>
+  
   <text language="de-CH" value="Organisation" displayName="Organisation"/>
   <text language="fr-CH" value="Organisation" displayName="tbd fr 'Organisation'"/>
   <text language="it-CH" value="Organisation" displayName="tbd it 'Organisation'"/>
   <text language="en" value="Organisation" displayName="Organisation"/>
+
+  <text language="de-CH" value="Name" displayName="Name"/>
+  <text language="fr-CH" value="Name" displayName="Nom"/>
+  <text language="it-CH" value="Name" displayName="tbd it 'Name'"/>
+  <text language="en" value="Name" displayName="Name"/>
+
+  <text language="de-CH" value="FTH" displayName="Vatter"/>
+  <text language="fr-CH" value="FTH" displayName="Père"/>
+  <text language="it-CH" value="FTH" displayName="tbd it 'FTH'"/>
+  <text language="en" value="FTH" displayName="Father"/>
+
+  <text language="de-CH" value="MTH" displayName="Mutter"/>
+  <text language="fr-CH" value="MTH" displayName="Mère"/>
+  <text language="it-CH" value="MTH" displayName="tbd it 'MTH'"/>
+  <text language="en" value="MTH" displayName="Mother"/>
+
+  <text language="de-CH" value="GUARD" displayName="Vertreter"/>
+  <text language="fr-CH" value="GUARD" displayName="Représentant"/>
+  <text language="it-CH" value="GUARD" displayName="tbd it 'GUARD'"/>
+  <text language="en" value="GUARD" displayName="Guardian"/>
 
   <!-- 
   ********************************************************************************

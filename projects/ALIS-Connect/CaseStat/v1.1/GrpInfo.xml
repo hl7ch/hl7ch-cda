@@ -10,6 +10,7 @@ History:
 2011.03.25: Tony Schaller, medshare GmbH (Abgabe an Projektteam ALIS-Connect CaseStat zum Review)
 2011.04.06: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
 2013.06.05: Tony Schaller, medshare GmbH (V1.1; OIDs nachgeführt)
+2013.06.19: Tony Schaller, medshare GmbH (Falsche semantische Verwendung von COVPTY korrigiert; neu: PAYOR)
 
 ********************************************************
 -->
@@ -169,7 +170,7 @@ History:
 			<low nullFlavor='NASK' />
 			<high nullFlavor='NASK' />
 		</time>
-		<associatedEntity classCode='COVPTY'>
+		<associatedEntity classCode='PAYOR'>
 			<!-- EAN der Versicherung -->
 			<id extension='7607777777777' root='1.3.88'/>
 			<associatedPerson>
