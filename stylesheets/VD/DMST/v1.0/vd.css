@@ -1,0 +1,34 @@
+/*********************************************************
+  Project specific CSS for DMST (Canton Vaud, Switzerland)
+  Date: 24.07.2013
+*********************************************************/
+/* Logo */
+h1 { 
+	font-size: 35px;
+	background: transparent url(logo_vd.png) no-repeat top right; 
+	margin: 0.83em 0.83em;
+}
+/* Header */
+table.head thead tr {
+	background-color: #669933;
+}
+table.head tr {
+	background-color: #C0DCC0;	
+}
+/* Body Tables */
+table.body tr th {
+	background-color: #99CC66;
+}
+table.body tr td {
+	background-color: #DDECDD;	
+}
+/* Footer */
+table.foot tr th {
+	background-color: #669933;
+}
+table.foot tr td {
+	background-color: #C0DCC0;
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}

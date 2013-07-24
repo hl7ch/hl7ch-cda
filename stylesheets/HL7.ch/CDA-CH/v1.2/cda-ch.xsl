@@ -2,7 +2,7 @@
 <!--
 ********************************************************
 Default Stylesheet for CDA-CH
-Stand: 29.10.2012
+Stand: 24.07.2013
 
 History:
 Derived from HL7 Finland R2 Tyylitiedosto: Tyyli_R2_B3_01.xslt
@@ -11,7 +11,7 @@ Updated by Keith W. Boone, Dictaphone - Burlington, MA
 Updated by Kai U. Heitmann, Heitmann Consulting Service, NL for VHitG, Germany
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, for CDA-CH V1.2
 Updated by Nico Ehinger, ELCA SA, code refactoring
-Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised for CDA-CH V1.2 Body templates and language dependent rendering
+Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised for CDA-CH Body templates and language dependent rendering
 
 ********************************************************
 -->
@@ -191,14 +191,8 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				<xsl:variable name="domain"
 				select="./@root"/>
 				<xsl:choose>
-					<xsl:when test="$domain='2.16.756.5.31'">
-						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.31']/@displayName"/>
-					</xsl:when>
-					<xsl:when test="$domain='2.16.756.5.32'">
-						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.32']/@displayName"/>
-					</xsl:when>
-					<xsl:when test="$domain='2.16.756.5.30.1.100.3.1.1'">
-						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='2.16.756.5.30.1.100.3.1.1']/@displayName"/>
+					<xsl:when test="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$domain]/@displayName">
+						<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$domain]/@displayName"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="./@root"/>

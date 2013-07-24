@@ -1,0 +1,3625 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- ********************************************************
+Sozial medical care plan V2.1
+Document médico-social de transmission (DMST) V2.1
+
+History:
+2013.06.24: Tony Schaller, medshare GmbH (First Draft)
+2013.07.24: Tony Schaller, medshare GmbH (Sample for Implementation guide)
+
+******************************************************** -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../stylesheets/VD/DMST/v1.0/vd.css'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!-- ********************************************************
+	CDA Header
+	******************************************************** -->
+	<realmCode code='CHE' />
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+	<!-- Parent Templates -->
+	<!-- IHE PCC Medical Documents Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
+	<!-- IHE PCC Patient Plan of Care Specification -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.20.1.1'/>
+	<!-- CDA-CH -->
+	<templateId root='2.16.756.5.30.1.1.1.1' extension='CDA-CH' />
+	<!-- CDA-CH-SMCP; Document médico-social de transmission (DMST) V2.1 -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='CDA-CH-SMCP' />
+
+	<id root='2.16.756.5.30.1.1.1.1.2' extension='2A1A1513-11D2-4A7C-BD05-9E63E47DA5F7' />
+	<code code='34746-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Nursing Evaluation and Management Note'/>
+	<title>Document médico-social de transmission</title>
+
+	<!-- DMST: 0.3 Le -->
+	<effectiveTime value='20130612'/>
+
+	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
+	<languageCode code='fr-CH'/>
+	<setId extension='2A1A1513-11D2-4A7C-BD05-9E63E47DA5F7' root='2.16.756.5.30.1.1.1.1.2'/>
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<!-- DMST: 1.4 N° AVS -->
+			<id extension='756.1234.5678.90' root='2.16.756.5.32'/>
+			<id extension='63871' root='2.16.756.5.48.1.1.4.1'/>
+			<addr use='HP'>
+				<!-- DMST: 1.16 Adresse du domicile -->
+				<streetName>Chemin du calvaire</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Hameau des malades</city>
+			</addr>
+			<!-- DMST: 1.17 Téléphone du domicile -->
+			<telecom use='HP' value='tel:+41.32.685.12.34'/>
+			<telecom use='PUB' value='tel:+41.32.123.77.88'/>
+			<patient>
+				<name>
+					<!-- DMST: 1.2 Prénom -->
+					<given>Jean</given>
+					<!-- DMST: 1.1 Nom -->
+					<family>DUPONT</family>
+				</name>
+				<!-- DMST: 1.3 Sexe -->
+				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
+				<!-- DMST: 1.5 Date de naissance -->
+				<birthTime value='19480611'/>
+				<!-- DMST: 1.10 Etat civil -->
+				<maritalStatusCode code='M' codeSystem='2.16.840.1.113883.11.12212' codeSystemName='MaritalStatus' displayName='Married' />
+				<!-- DMST: 1.15 Religion / confession -->
+				<religiousAffiliationCode code='TODO' displayName='Römisch-Katholisch' codeSystem='2.16.840.1.113883.2.16.1.4.1' codeSystemName='HL7.AT:ReligionAustria'/>
+				<birthplace>
+					<place>
+						<addr>
+							<!-- DMST: 1.6 Lieu de naissance -->
+							<city>Lausanne</city>
+						</addr>
+					</place>
+				</birthplace>
+				<languageCommunication>
+					<!-- DMST: 1.9 Langue(s) parlée(s) couramment -->
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.1'/>
+					<languageCode code='fr-CH'/>
+					<modeCode code='ESP' codeSystem='2.16.840.1.113883.5.60' codeSystemName='LanguageAbilityMode' displayName='Expressed spoken' />
+					<proficiencyLevelCode code='E' codeSystem='2.16.840.1.113883.5.61' codeSystemName='LanguageAbilityProficiency' displayName='Excellent' />
+					<preferenceInd value='true'/>
+				</languageCommunication>
+			</patient>
+			<providerOrganization>
+				<id extension='7608888888888' root='1.3.88'/>
+				<name>Dr. med. Théodore Guéri, Cabinet Médical CH</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value='20100215103249'/>
+		<assignedAuthor>
+			<id extension='7608888888888' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Rue de l’hôpital</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Guérison-ville</city>
+			</addr>
+			<!-- DMST: 0.4 No de tél. -->
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<!-- DMST: 0.5 No de fax -->
+			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+			<telecom use='PUB' value='mailto:gueri@cabinet-medical.ch'/>
+			<telecom use='PUB' value='http://www.cabinet-medical.ch'/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+					<suffix>Spécialiste de médecine générale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Cabinet Médical CH</name>
+				<addr use='WP'>
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!-- DMST: 0.1 Adressé par -->
+				<id extension='7608888888888' root='1.3.88'/>
+				<name>Cabinet Médical CH</name>
+				<addr use='WP'>
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode='PRCP'>
+		<!-- DMST: 0.2 A (destinataire) -->
+		<intendedRecipient>
+			<id extension='7606666666666' root='1.3.88'/>
+			<informationRecipient>
+				<name>EMS Guérison-ville</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<!-- DMST: 0.4 No de tél. -->
+				<telecom use='PUB' value='tel:+41.32.234.22.33'/>
+				<!-- DMST: 0.5 No de fax -->
+				<telecom use='PUB' value='fax:+41.32.234.22.44'/>
+				<telecom use='PUB' value='mailto:info@ems-guerison-ville.ch'/>
+				<telecom use='PUB' value='http://www.ems-guerison-ville.ch'/>
+				<addr use='WP'>
+					<streetAddressLine>Chemin de soins</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<!-- DMST: 9.4 Le -->
+		<time value='20100215103249'/>
+		<!-- DMST: 9.5 Validation -->
+		<signatureCode code='S'/>
+		<assignedEntity>
+			<id extension='7608888888888' root='1.3.88'/>
+			<assignedPerson>
+				<!-- DMST: 9.1 Document finalisé par -->
+				<!-- DMST: 9.3 Timbre -->
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+					<!-- DMST: 9.2 Fonction -->
+					<suffix>Spécialiste de médecine générale </suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<participant typeCode='IND'>
+		<associatedEntity classCode='PRS'>
+			<!-- DMST: 1.13 Filiation maternelle -->
+			<code code='MTH' codeSystem='2.16.840.1.113883.5.111' codeSystemName='HL7: RoleCode' displayName='mother' />
+			<associatedPerson>
+				<name>
+					<given>Sandrine</given>
+					<family>MERE</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='IND'>
+		<associatedEntity classCode='PRS'>
+			<!-- DMST: 1.14 Filiation paternelle -->
+			<code code='FTH' codeSystem='2.16.840.1.113883.5.111' codeSystemName='HL7: RoleCode' displayName='father' />
+			<associatedPerson>
+				<name>
+					<given>Jaques</given>
+					<family>PERE</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='IND'>
+		<associatedEntity classCode='PRS'>
+			<!-- DMST: 3.x (ex. fille au tessin) -->
+			<code code='DAUC' codeSystem='2.16.840.1.113883.5.111' codeSystemName='HL7: RoleCode' displayName='daugther' />
+			<associatedPerson>
+				<name nullFlavor='UNK' />
+			</associatedPerson>
+			<scopingOrganization>
+				<addr use='HP'>
+					<postalCode>6780</postalCode>
+					<city>Airolo</city>
+					<state>TI</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='IND'>
+		<associatedEntity classCode='CAREGIVER'>
+			<!-- DMST: 2.1 Représentant thérapeutique -->
+			<id extension='7608888888888' root='1.3.88'/>
+			<id extension='ldskjfnj' root='1.3.88'/>
+			<code code='HPOWATT' codeSystem='2.16.840.1.113883.5.111' codeSystemName='HL7: RoleCode' displayName='healthcare power of attorney' />
+			<associatedPerson>
+				<name>
+					<prefix>Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Cabinet Médical CH</name>
+				<telecom use='PUB' value='tel:+41.32.234.22.33'/>
+				<telecom use='PUB' value='fax:+41.32.234.22.44'/>
+				<telecom use='PUB' value='mailto:info@ems-guerison-ville.ch'/>
+				<telecom use='PUB' value='http://www.ems-guerison-ville.ch'/>
+				<addr use='WP'>
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='COV'>
+		<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Head.Insurance'/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high nullFlavor='NASK' />
+		</time>
+		<associatedEntity classCode='PAYOR'>
+			<!-- DMST: 2.6 No d'assuré -->
+			<id extension='23.253-m' root='2.16.756.5.30.1.1.2'/>
+			<!-- Lois -->
+			<code code='832.10' codeSystem='2.16.756.5.30.2.1.1.11' codeSystemName='ins-laws' displayName='LAMal' />
+			<scopingOrganization>
+				<!-- DMST: 2.5 Caisse maladie -->
+				<!-- GLN de l'assurance -->
+				<id extension='7607777777777' root='1.3.88'/>
+				<name>NousPaieronsTous assurances</name>
+				<telecom nullFlavor='NASK' />
+				<addr use='WP'>
+					<streetName>rue payant</streetName>
+					<houseNumber>89</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='COV'>
+		<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Head.Insurance'/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high nullFlavor='NASK' />
+		</time>
+		<associatedEntity classCode='PAYOR'>
+			<!-- DMST: 2.8 N° d'assuré -->
+			<id extension='23.253-a' root='2.16.756.5.30.1.1.2'/>
+			<!-- Lois -->
+			<code code='832.20' codeSystem='2.16.756.5.30.2.1.1.11' codeSystemName='ins-laws' displayName='LAA' />
+			<scopingOrganization>
+				<!-- DMST: 2.7 Caisse accident -->
+				<!-- GLN de l'assurance -->
+				<id extension='7607777777777' root='1.3.88'/>
+				<name>NousPaieronsTous assurances</name>
+				<telecom nullFlavor='NASK' />
+				<addr use='WP'>
+					<streetName>rue payant</streetName>
+					<houseNumber>89</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='IND'>
+		<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Head.Empl'/>
+		<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.2'/>
+		<time>
+			<low nullFlavor='UNK' />
+			<high nullFlavor='UNK' />
+		</time>
+		<associatedEntity classCode='CON'>
+			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<associatedPerson>
+				<name nullFlavor='UNK' />
+			</associatedPerson>
+			<scopingOrganization>
+				<!-- DMST: 2.14 Employeur actuel -->
+				<name>Soutien de famille Sarl</name>
+				<telecom nullFlavor='UNK' />
+				<addr use='WP'>
+					<streetAddressLine>bureau de la paie</streetAddressLine>
+					<streetAddressLine>case postale</streetAddressLine>
+					<postalCode>1000</postalCode>
+					<city>Lausanne</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+
+	<!-- DMST: 3.1 Nom / prénom
+	DMST: 3.2 Coordonnées
+	DMST: 3.3 Lien et rôle
+	DMST: 3.4 Nom / prénom
+	DMST: 3.5 Coordonnées
+	DMST: 3.6 Rôle
+
+	A implémenter comme participants additionnels. Voir les exemples dessus.
+	-->
+
+	<componentOf>
+		<!-- Date d'entrée; Date de sortie -->
+		<!-- TODO: XSL anpassen, damit das angezeigt wird -->
+		<encompassingEncounter>
+			<effectiveTime>
+				<!-- DMST: 1.11 Date d'entrée  -->
+				<low value='20130616' />
+				<!-- DMST: 1.12 Date de sortie -->
+				<high value='20130624' />
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!--
+	********************************************************
+	CDA Body
+	******************************************************** -->
+	<component>
+		<structuredBody>
+
+			<!--
+			********************************************************
+			HABITAT
+			********************************************************-->
+			<component>
+				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.HousingStatusL2'/>
+					<code code='71802-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Housing status' />
+					<title>Habitat</title>
+					<text>
+						<content ID='ha1'>
+							Monsieur Dupont vit avec sa femme dans un appartement au premier étage sans ascenseur à Hameau des malades.
+						</content>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 4.1 Habitat (description) -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#ha1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required Assessments Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4' />
+					<code code='X-ASSESS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ASSESSMENTS' />
+					<title>Evaluation</title>
+					<text>
+						Aucune évaluation
+					</text>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Conditional Physical Examination Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.9.15'/>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.9.15.1'/>
+			<code code='29545-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PHYSICAL EXAMINATION' />
+			<title>Examen physique</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Conditional Review of Systems Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.18'/>
+					<code code='10187-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='REVIEW OF SYSTEMS' />
+					<title>Bilan de santé</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Question</th>
+									<th>Résultat</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<th>Bilan de santé somatique</th>
+									<th />
+									<th />
+								</tr>
+								<tr>
+									<td>
+										Respiration:
+									</td>
+									<td>
+										<content ID='as2' >
+											Patient eupnéique en air ambiant avec O2 Saturation à 97%. Normocard et normotendu.
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Description de l'activité respiratoire (y.c. oxygénothérapie)
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Alimentation, hydratation:
+									</td>
+									<td>
+										<content ID='as3' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Description (nécessité de régime, y.c. nutrition par sonde), présence de troubles alimentaires
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Elimination:
+									</td>
+									<td>
+										<content ID='as4' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Description (y.c. présence d’incontinence). La présence de sondes et stomies doit être spécifiée.<br />
+										</content>
+										<content ID='as4_1' >
+											Colostomie
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Etat de la peau, plaies, cicatrices:
+									</td>
+									<td>
+										<content ID='as5' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Description actuelle de l'état de la peau
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Coordination, posture, mobilité, etc.:
+									</td>
+									<td>
+										<content ID='as6' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Description de la coordination
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Chutes:
+									</td>
+									<td>
+										<content ID='as7' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Description des chutes récentes (à 6 mois) et description des causes ainsi que des chutes non récentes
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Addiction:
+									</td>
+									<td>
+										<content ID='as8' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Existence de dépendances (exemple : alcool, médicament, etc.). A préciser le type de produit, le mode de prise, la fréquence, les antécédents de sevrage et/ou traitement. A préciser la consommation de tabac et la fréquence de prise
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Autres, préciser:
+									</td>
+									<td>
+										<content ID='as9' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Existence d'autres problématiques importantes pour la prise en charge
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<th>Bilan de santé psychique</th>
+									<th />
+									<th />
+								</tr>
+								<tr>
+									<td>
+										Humeur:
+									</td>
+									<td>
+										<content ID='as10' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Explicite. A signaler également les fluctuations dans la journée
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Anxiété:
+									</td>
+									<td>
+										<content ID='as11' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Sentiment de crainte sans objet. A signaler également les fluctuations dans la journée
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Potentiel suicidaire:
+									</td>
+									<td>
+										<content ID='as12' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Préciser le potentiel suicidaire et par exemple : préciser les scénarios suicidaires et les antécédents
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Troubles du comportement:
+									</td>
+									<td>
+										<content ID='as13' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Préciser s’il existe des troubles du comportement. Par exemple, agressivité, relation aux autres, intégration à un groupe, etc.
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Troubles du sommeil:
+									</td>
+									<td>
+										<content ID='as14' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Préciser s’il existe des troubles du sommeil (parle, crie, se lève la nuit, etc.). Préciser par exemple : les insomnies, les hypersomnies, les réveils fréquents, etc.
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Tendance à fuguer par désorientation:
+									</td>
+									<td>
+										<content ID='asx15' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Explicite
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Tendance à fuguer volontairement:
+									</td>
+									<td>
+										<content ID='as16' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Explicite
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Autres, préciser:
+									</td>
+									<td>
+										<content ID='as17' >
+
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Existence d'autres problématiques importantes pour la prise en charge (par ex : hallucinations, délire, etc.)
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.2 Respiration -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='11412-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='RESPIRATORY SYSTEM'/>
+							<text>
+								<reference value='#as2'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.3 Alimentation, hydratation -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as3'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.4 Elimination -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as4'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
+									<text>
+										<reference value='#as4_1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='NASK' />
+										<high nullFlavor='NASK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='Z93.3' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Colostomie' />
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.5 Etat de la peau, plaies, cicatrices  -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as5'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.6 Coordination, posture, mobilité, etc. -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as6'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.7 Chutes -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as7'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.8 Addiction -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as8'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
+									<text>
+										<reference value='#as4_1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='NASK' />
+										<high nullFlavor='NASK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='F17' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Troubles mentaux et du comportement liés à l&apos;utilisation de tabac' />
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.9 Autres, préciser -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as9'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.10 Humeur -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as10'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.11 Anxiété -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as11'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.12 Potentiel suicidaire -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as12'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.13 Troubles du comportement -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as13'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.14 Troubles du sommeil -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as14'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.15 Tendance à fuguer par désorientation -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as15'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.16 Tendance à fuguer volontairement -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as16'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 7.17 Autres, préciser -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#as17'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Conditional Coded Functional Status Assessment Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.17'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1'/>
+					<code code='47420-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Functional Status Assessment' />
+					<title>Statut de fonctions</title>
+					<text />
+					<component>
+						<section>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' />
+							<text />
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' >
+										<translation code='406127006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pain intensity' />
+									</code>
+									<text />
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' nullFlavor='NASK' />
+									<interpretationCode nullFlavor='NASK' />
+									<targetSiteCode nullFlavor='NASK' />
+								</observation>
+							</entry>
+						</section>
+					</component>
+
+					<component>
+						<section>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5'/>
+							<code code='46006-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Physical functioning and structural problems'/>
+							<title>Niveau d'autonomie</title>
+							<text>
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Résultat</th>
+											<th>Informations supplémentaires</th>
+										</tr>
+										<tr>
+											<th>Activités de la Vie Quotidienne</th>
+											<th />
+											<th />
+										</tr>
+										<tr>
+											<td>Manger - boire:</td>
+											<td>
+												<content ID='sf1' >
+													dépendent
+												</content>
+											</td>
+											<td>
+												<content ID='sf1_1' >
+													sonde
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>Se laver:</td>
+											<td>
+												<content ID='sf2' >
+													exige de l'aide
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>S'habiller:</td>
+											<td>
+												<content ID='sf3' >
+													surveillance / stimulation
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Se déshabiller:</td>
+											<td>
+												<content ID='sf4' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Entretenir sa personne:</td>
+											<td>
+												<content ID='sf5' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Continence vésicale:</td>
+											<td>
+												<content ID='sf6' >
+													dépendent
+												</content>
+											</td>
+											<td>
+												<content ID='sf6_1' >
+													sonde
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>Continence anale:</td>
+											<td>
+												<content ID='sf7' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Utiliser les toilettes:</td>
+											<td>
+												<content ID='sf8' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<th>Mobilité</th>
+											<th />
+											<th />
+										</tr>
+										<tr>
+											<td>Changer de position:</td>
+											<td>
+												<content ID='sf9' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Se déplacer à l'intérieur:</td>
+											<td>
+												<content ID='sf10' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Se déplacer à l'extérieur:</td>
+											<td>
+												<content ID='sf11' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Utiliser les moyens de transport:</td>
+											<td>
+												<content ID='sf12' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Utiliser les escaliers:</td>
+											<td>
+												<content ID='sf13' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Utilisation élévateur:</td>
+											<td>
+												<content ID='sf14' >
+													oui
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Utiliser les moyens auxiliaires:</td>
+											<td>
+												<content ID='sf15' >
+													autonome
+												</content>
+											</td>
+											<td>
+												<content ID='sf151' >
+													canne
+												</content>
+												<br />
+												<content ID='sf152' >
+													déambulateur
+												</content>
+												<br />
+												<content ID='sf153' >
+													chaise roulante
+												</content>
+												<br />
+												<content ID='sf154' >
+													autre
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<th>Vision, audition</th>
+											<th />
+											<th />
+										</tr>
+										<tr>
+											<td>Voir:</td>
+											<td>
+												<content ID='sf16' >
+													autonome
+												</content>
+											</td>
+											<td>
+												<content ID='sf161' >
+													porte des lunettes
+												</content>
+												<br />
+												<content ID='sf162' >
+													porte des verres de contact
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>Entendre:</td>
+											<td>
+												<content ID='sf17' >
+													autonome
+												</content>
+											</td>
+											<td>
+												<content ID='sf171' >
+													porte un appareil acoustique
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<th>Activités instrumentales de la vie quotidienne (AIVQ)</th>
+											<th />
+											<th />
+										</tr>
+										<tr>
+											<td>Utiliser le téléphone:</td>
+											<td>
+												<content ID='sf18' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Entretenir son logement:</td>
+											<td>
+												<content ID='sf19' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Préparer les repas:</td>
+											<td>
+												<content ID='sf20' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Faire les courses:</td>
+											<td>
+												<content ID='sf21' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Faire la lessive, entretenir le linge:</td>
+											<td>
+												<content ID='sf22' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Prendre ses médicaments:</td>
+											<td>
+												<content ID='sf23' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Gestion administrative:</td>
+											<td>
+												<content ID='sf24' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Gérer ses liens sociaux:</td>
+											<td>
+												<content ID='sf25' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<th>Facultés mentales</th>
+											<th />
+											<th />
+										</tr>
+										<tr>
+											<td>Mémoire:</td>
+											<td>
+												<content ID='sf26' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Orientation dans le temps:</td>
+											<td>
+												<content ID='sf27' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Orientation dans l'espace:</td>
+											<td>
+												<content ID='sf28' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Compréhension:</td>
+											<td>
+												<content ID='sf29' >
+													autonome
+												</content>
+											</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</text>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.1 Manger - boire  -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45602-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Eating - self-performance' />
+									<text>
+										<reference value='#sf1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='4' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='TOTAL DEPENDENCE' />
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
+											<text>
+												<reference value='#sf1_1'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='Z93.1' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Gastrostomie' />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.2 Se laver -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45608-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bathing - self-performance' />
+									<text>
+										<reference value='#sf2'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='2' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='LIMITED ASSISTANCE' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.3 S'habiller -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45600-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Dressing - self-performance' />
+									<text>
+										<reference value='#sf3'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='1' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='SUPERVISION' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.4 Se déshabiller -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-UNDRESSING' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Undressing - self-performance' />
+									<text>
+										<reference value='#sf4'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.5 Entretenir sa personne -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45606-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Personal hygiene - self-performance' />
+									<text>
+										<reference value='#sf5'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.6 Continence vésicale -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45619-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bladder continence' />
+									<text>
+										<reference value='#sf6'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='4' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='TOTAL DEPENDENCE' />
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
+											<text>
+												<reference value='#sf6_1'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='Z96.0' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Presence of urogenital implants' />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.7 Continence anale -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='69667-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bowel continence' />
+									<text>
+										<reference value='#sf7'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.8 Utiliser les toilettes -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45604-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Toilet use - self-performance' />
+									<text>
+										<reference value='#sf8'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.9 Changer de position -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45588-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bed mobility - self-performance' />
+									<text>
+										<reference value='#sf9'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.10 Se déplacer à l'intérieur -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45596-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Locomotion on unit - self-performance' />
+									<text>
+										<reference value='#sf10'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.11 Se déplacer à l'extérieur -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45598-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Locomotion off unit - self-performance' />
+									<text>
+										<reference value='#sf11'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.12 Utiliser les moyens de transport -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-USETRSPT' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Use of transport' />
+									<text>
+										<reference value='#sf12'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.13 Utiliser les escaliers -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-USESTRS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Use of stairs' />
+									<text>
+										<reference value='#sf13'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.14 Utilisation élévateur  -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-USEELVTR' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Use of elevators' />
+									<text>
+										<reference value='#sf14'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.15 Utiliser les moyens auxiliaires -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='45536-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Uses cane, walker or crutch' />
+									<text>
+										<reference value='#sf15'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf15_1'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='CAN' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='canne' />
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf15_2'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='WAL' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='déambulateur' />
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf15_3'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='WHC' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='chaise roulante' />
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf15_4'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='OTH' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='Autre' />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.16 Voir -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46529-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Sensory status: vision' />
+									<text>
+										<reference value='#sf16'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf16_1'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='LNS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='verres de contact' />
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf16_2'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='GLS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='lunettes' />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.17 Entendre  -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46530-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Sensory status: hearing and ability to understand spoken language' />
+									<text>
+										<reference value='#sf17'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<entryRelationship typeCode='SUBJ' inversionInd='false' >
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
+											<text>
+												<reference value='#sf16_2'/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low nullFlavor='NASK' />
+												<high nullFlavor='NASK' />
+											</effectiveTime>
+											<value xsi:type='CD' code='HAD' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='appareil acoustique' />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.18 Utiliser le téléphone -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46490-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Ability to use telephone' />
+									<text>
+										<reference value='#sf18'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.19 Entretenir son logement -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46488-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Housekeeping' />
+									<text>
+										<reference value='#sf19'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.20 Préparer les repas -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46485-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Planning &amp; preparing light meals' />
+									<text>
+										<reference value='#sf20'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.21 Faire les courses -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46489-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Shopping' />
+									<text>
+										<reference value='#sf21'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.22 Faire la lessive, entretenir le linge -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='46487-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Laundry' />
+									<text>
+										<reference value='#sf22'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.23 Prendre ses médicaments -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-TAKMEDI' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Self-application of medications' />
+									<text>
+										<reference value='#sf23'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.24 Gestion administrative -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-ADMMGT' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Administrative management' />
+									<text>
+										<reference value='#sf24'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.25 Gérer ses liens sociaux -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-MGTST' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Managing social ties' />
+									<text>
+										<reference value='#sf25'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.26 Mémoire -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='42850-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Memory impairment' />
+									<text>
+										<reference value='#sf2x'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.27 Orientation dans le temps -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-ORITME' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Orientation in time' />
+									<text>
+										<reference value='#sf2x'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.28 Orientation dans l'espace -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='X-ORISPC' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Orientation in space' />
+									<text>
+										<reference value='#sf2x'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+							<entry>
+								<observation classCode='OBS' moodCode='EVN'>
+									<!-- DMST: 6.29 Compréhension -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='57217-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Understanding of verbal content' />
+									<text>
+										<reference value='#sf2x'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime nullFlavor='NASK' />
+									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+								</observation>
+							</entry>
+						</section>
+					</component>
+
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Optional Family History Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.14'/>
+			<!-/- Optional Family History Section content -/->
+			<title>Anamnèse familiale</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Optional Coded Social History Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.15'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.16'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.16.1'/>
+					<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='SOCIAL HISTORY' />
+					<title>Anamnèse sociale</title>
+					<text>
+						<content ID='as1'>
+							Monsieur Dupont, 65 ans, vit avec sa femme. Il a une fille au Tessin.<br />
+							Il était autnome et travaillait à temps partiel comme peintre.<br />
+						</content>
+						<br />
+						<content styleCode='Italics'>
+							Ensemble des informations sociales qui permettent une prise en charge "globale" du patient. Il s'agit notamment: des ressources personnelles et besoins, événements et faits marquants, relations socio-familiales significatives, centres d'intérêts, animaux domestiques, etc.<br />
+							Historique des divers placements institutionnels (EMS, foyer socio-éducatif, appartement indépendant, protégé, etc.) et raisons des changements si significatifs pour la prise en charge actuelle.<br />
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Question</th>
+									<th>Résultat</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<td>Nationalité:</td>
+									<td>CH</td>
+									<td />
+								</tr>
+								<tr>
+									<td>Pays d'origine:</td>
+									<td>CH</td>
+									<td />
+								</tr>
+								<tr>
+									<td>Commune d'origine:</td>
+									<td>Lausanne</td>
+									<td />
+								</tr>
+								<tr>
+									<td>Patient connu du CMS:</td>
+									<td>Non</td>
+									<td>
+										<content ID='cms1'>
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>Profession:</td>
+									<td>
+										<content ID='oc1'>
+											Peintre
+										</content>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>PLAFA:</td>
+									<td>oui</td>
+									<td>
+										<content ID='oc2'>
+											Date de demande: 03.06.2013; Date de décision: 01.06.2013
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>PC:</td>
+									<td>oui</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>API:</td>
+									<td>non</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>AI:</td>
+									<td>démarches en cours</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>OCC:</td>
+									<td>ne sait pas</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Statut social:</td>
+									<td>permis</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Statut salaire:</td>
+									<td>autre</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Mandat judiciaire:</td>
+									<td>non</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Enfant(s) mineur(s) à charge:</td>
+									<td>oui</td>
+									<td>
+										<content ID='oc3' styleCode='Italics'>
+											système de garde
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 5.1 Contexte et habitudes de vie (description) -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<text>
+								<reference value='#as1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 1.7 Nationalité -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.NationalityL3' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='66476-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Country of citizenship' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='CH' codeSystem='1.0.3166' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 1.8 Origine -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.OriginCountryL3' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='67413-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Country of origin' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='CH' codeSystem='1.0.3166' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 1.8 Origine -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.OriginCityL3' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='67414-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Region of origin' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='ST'>Lausanne</value>
+							<!-- TODO oder auch OID PLZ, sobald von Post registriert
+							<value xsi:type='CD' code='1000' codeSystem='TODO' displayName='Lausanne' />
+							-->
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 1.19 Patient connu du CMS -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.PatientAlreadyKnown' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#cms1'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='non' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 1.18 Profession -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='21847-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Usual occupation' />
+							<text>
+								<reference value='#oc1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='ST'>Peintre</value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.3 PLAFA -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.PLAFA' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#oc2'/>
+							</text>
+							<effectiveTime>
+								<!-- DMST: 2.4 Dates relatives au PLAFA -->
+								<!-- Date de décision -->
+								<low value='20130601' />
+								<!-- Date de demande -->
+								<high value='20130603' />
+							</effectiveTime>
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.2.201207.3' codeSystemName='SMCP_PLAFA' displayName='oui' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.9 PC -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.PC' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='oui' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.10 API -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.API' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='non' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.11 AI -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.AI' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='D' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='démarches en cours' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.12 OCC -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.OCC' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='U' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='ne sait pas' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.13 Statut social -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.SocialStatus' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.112.3.2.201207.4' codeSystemName='SMCP_DefaultResponse' displayName='permis' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.15 Chômage -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.EmploymentL3' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='11295-3' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Current employment' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<!-- Strukturierte Angabe 'Employment Status' -->
+							<value xsi:type='CD' code='e' codeSystem='2.16.756.5.30.2.1.1.12' codeSystemName='Employment Status' displayName='emploYé' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.17 Mandat judiciaire -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.MandatJudiciaire' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='non' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.18 Enfant(s) mineur(s) à charge -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.EnfantsMineursACharge' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
+							<text>
+								<reference value='#oc3'/>
+							</text>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='oui' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required Active Problems Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.11'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<code code='11450-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROBLEM LIST' />
+					<title>Liste des problèmes</title>
+					<text>
+						<content styleCode='Italics'>
+							Diagnostic(s) médical ou problème(s) connu(s) au moment du transfert (ou en annexe du DMST à valider par la lettre de sortie, etc.
+							Préciser si le patient est au courant de son diagnostic. A noter que les informations du DMT peuvent être incluses au DMST ou en annexes, cela dépend des directives de l’institution.
+							<br />
+						</content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Problème</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<th>Diagnostics médical au moment du transfert</th>
+									<th />
+								</tr>
+								<tr>
+									<td>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Préciser si le patient est au courant de son diagnostic. A noter que les informations du DMT peuvent être incluses au DMST ou en annexes, cela dépend des directives de l’institution.
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<th>Problèmes connus au moment du transfert</th>
+									<th />
+								</tr>
+								<tr>
+									<td>
+										<content ID='p1'>
+											Insuffisance rénale
+										</content>
+									</td>
+									<td>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<!-- DMST: 7.1 Diagnostic(s) médical ou problème(s)  -->
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='98BD0CBE-01BB-44C2-AFB6-33BE0FA01EB1'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying problems of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#p1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20120801'/>
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='23' codeSystem='2.16.756.5.30.1.127.3.3.2013.1' codeSystemName='compl-risks' displayName='insuffisance rénale' >
+										<originalText>
+											<reference value='#p1'/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required if known Allergies and Intolerances Section content (1.3.6.1.4.1.19376.1.5.3.1.3.13)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.2'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<code code='48765-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Allergies, adverse reactions, alerts' />
+					<title>Allergies et autres réactions indésirables</title>
+					<text>
+						<content ID='al1'>
+							Allergie au blanc d'oeuf
+						</content>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<!-- DMST: 8.11 Allergie connue -->
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code nullFlavor='NA'/>
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low value='20010824'/>
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying allergies of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false'>
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.6'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code code='FALG' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType' displayName='Food Allergy' />
+									<text>
+										<reference value='#al1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20010824'/>
+									</effectiveTime>
+									<value xsi:type='CD' code='303300008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Egg protein (substance)' />
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required Care Plan Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.31'/>
+					<title>Attitude</title>
+					<text>
+						Résultats attendus :<br />
+						•	Amélioration des douleurs par la prise des antidouleurs par voie orale 3 fois par jours.<br />
+						•	Surveillance de l’insuffiance rénale.<br />
+						•	Peau non irritée.<br />
+						<br />
+						Planification :<br />
+						•	Diminuer les douleurs<br />
+						•	Surveiller l’élimination unrinaire<br />
+						•	Mobilisation régulière<br />
+						<br />
+						Mise en œuvre des actions du plan de soins :<br />
+						•	Regulièrement demander le patient s’il a des douleurs, observer son expression.<br />
+						•	Le patient est régulièrement pesé.<br />
+						•	Le patient est mobilisé en chaise roulante ou à l’aide de cannes, 2 fois par jour une à deux heures.<br />
+						<br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Question</th>
+									<th>Résultat</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<th>Motif du transfert / Objectifs de soins / Projets pour le patient</th>
+									<th />
+									<th />
+								</tr>
+								<tr>
+									<td>Patient en accord avec le transfert:</td>
+									<td>oui</td>
+									<td />
+								</tr>
+								<tr>
+									<th>Traitement en cours et soins à effectuer / Moyens et matériel nécessaires / Surveillance</th>
+									<th />
+									<th />
+								</tr>
+								<tr>
+									<td>Description:</td>
+									<td />
+									<td>
+										<content ID='att2' styleCode='Italics'>
+											Explicite. Cette rubrique doit permettre à l'institution qui reçoit la personne de prodiguer les soins nécessaires.
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>Protocole mesures de contrainte en annexe:</td>
+									<td>oui</td>
+									<td>
+										<content ID='extref' styleCode='Italics'>
+											Nom du fichier
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<th>Consultations</th>
+									<th />
+									<th />
+								</tr>
+								<tr>
+									<td>Agendées:</td>
+									<td />
+									<td>
+										<content ID='att3' styleCode='Italics'>
+											Cette rubrique permet de recenser l'ensemble des consultations agendées pour le patient après son transfert
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>A prévoir:</td>
+									<td />
+									<td>
+										<content ID='att4' styleCode='Italics'>
+											Consultation(s) à agender.
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 8.7 Motif du transfert / Objectifs de soins / Projets pour le patient (description) -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST: 8.8 Patient en accord avec le transfert -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#TODO'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+						</observation>
+					</entry>
+					<entry>
+						<procedure classCode='PROC' moodCode='INT'>
+							<!-- DMST: 8.9 Traitements en cours et soins à effectuer / Moyens et matériel de soins nécessaires / Surveillance (description) -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' />
+							<text>
+								<reference value='#att2'/>
+							</text>
+							<statusCode code='active'/>
+							<effectiveTime>
+								<low nullFlavor='NASK' />
+								<high nullFlavor='NASK' />
+							</effectiveTime>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<act classCode='ACT' moodCode='EVN'>
+									<!-- DMST: 8.10 Protocole mesures de contrainte en annexe -->
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.4'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<code nullFlavor='NA' />
+									<text>
+										<reference value='#extref'/>
+									</text>
+									<reference typeCode='SPRT'>
+										<templateId root='2.16.840.1.113883.10.20.1.36'/>
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<text>
+												<reference value='http://foo.todo.ch'/>
+											</text>
+										</externalDocument>
+									</reference>
+								</act>
+							</entryRelationship>
+						</procedure>
+					</entry>
+					<entry>
+						<encounter classCode='ENC' moodCode='PRMS'>
+							<!-- DMST: 8.12 Agendées -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
+							<text>
+								<reference value='#att3'/>
+							</text>
+							<effectiveTime>
+								<low value='201307051330'/>
+								<high value='201307051400'/>
+							</effectiveTime>
+							<performer typeCode='PRF'>
+								<assignedEntity>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale </suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+					<entry>
+						<encounter classCode='ENC' moodCode='ARQ'>
+							<!-- DMST: 8.13 A prévoir -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
+							<text>
+								<reference value='#att3'/>
+							</text>
+							<effectiveTime>
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<performer typeCode='PRF'>
+								<assignedEntity>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale </suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</encounter>
+					</entry>
+
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required Provider Orders Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<code code='46209-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROVIDER ORDERS' />
+					<title>Demande d’admission pour un hébergement</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Question</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td>Transfert en urgence:</td>
+									<td>
+										<content ID='enc1'>
+											Non
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>Demande d’admission pour un hébergement:</td>
+									<td>
+										<content ID='enc2'>
+											court séjour
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<encounter classCode='ENC' moodCode='EVN'>
+							<!-- DMST: 0.6 Transfert en urgence -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
+							<templateId root='2.16.840.1.113883.10.20.1.21'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.EmergencyTransfer' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='IMP' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'/>
+							<!--
+							<code code='EMER' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='emergency'/>
+							-->
+							<text>
+								<reference value='#enc1'/>
+							</text>
+							<effectiveTime>
+								<low nullFlavor='NASK' />
+								<high nullFlavor='NASK' />
+							</effectiveTime>
+						</encounter>
+					</entry>
+					<entry>
+						<encounter classCode='ENC' moodCode='ARQ'>
+							<!-- DMST: 0.7 Demande d'admission pour un hébergement -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.AdmissionType' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' displayName='hébergement court séjour' />
+							<text>
+								<reference value='#enc2'/>
+							</text>
+							<effectiveTime>
+								<low nullFlavor='NASK' />
+								<high nullFlavor='NASK' />
+							</effectiveTime>
+						</encounter>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Required Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.34)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.1'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.34'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.35'/>
+					<code code='42348-3' displayName='ADVANCE DIRECTIVES' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Directives anticipées</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Domaine</th>
+									<th>Consentement</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Réanimation</td>
+									<td>
+										<content ID='pv1'>
+											Permis
+										</content>
+									</td>
+									<td>23.04.2013</td>
+								</tr>
+								<tr>
+									<td>Intubation</td>
+									<td>
+										<content ID='pv2'>
+											Non autorisé
+										</content>
+									</td>
+									<td>23.04.2013</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<content>
+							<linkHtml href="http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf">Consentement numérisée</linkHtml>
+							<br/>
+							<br/>
+						</content>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.2 Directives anticipées -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.17'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='304251008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Resuscitation' />
+							<text>
+								<reference value='#pv1'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='20130423'/>
+							<value xsi:type='BL' value='true'/>
+							<reference typeCode='REFR'>
+								<templateId root='2.16.840.1.113883.10.20.1.36'/>
+								<externalDocument classCode='DOC' moodCode='EVN'>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<text>
+										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.2 Directives anticipées -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.17'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='52765003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Intubation' />
+							<text>
+								<reference value='#pv2'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime value='20130423'/>
+							<value xsi:type='BL' value='false'/>
+							<reference typeCode='REFR'>
+								<templateId root='2.16.840.1.113883.10.20.1.36'/>
+								<externalDocument classCode='DOC' moodCode='EVN'>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<text>
+										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
+									</text>
+								</externalDocument>
+							</reference>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			
+			<!--
+			********************************************************
+			Conditional Procedures and Interventions Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.11'/>
+			<!-/- Conditional Procedures and Interventions Section content -/->
+			<title>Interventions effectuées</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Conditional Medications Administered Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.21'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='C26420A8-87B0-4F1F-8796-360374552319'/>
+					<code code='18610-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='MEDICATION ADMINISTERED' />
+					<title>Médicaments administrés</title>
+					<text>
+						<content ID='m2_1'>Lisinopril HCT Streuli 10/12.5 mg</content>, <content ID='m2_2'>1 comprimé le matin</content> pour une hypertension artérielle. <br />
+						<!--
+						<table>
+							<tbody>
+								<tr>
+									<th>Médicaments</th>
+									<th>Dosage</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='m2_1'>Lisinopril HCT Streuli Tbl. 10/12.5 mg: 1-0-0</content>
+									</td>
+									<td>
+										<content ID='m2_2'>1-0-0</content>
+									</td>
+									<td />
+								</tr>
+							</tbody>
+						</table>
+						-->
+						<br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Question</th>
+									<th>Résultat</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<td>
+										Ordonnance:
+									</td>
+									<td>
+										<content ID='m3' >
+											en annexe
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Nom du fichier
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+
+									</td>
+									<td>
+										<content ID='m4' >
+											remise à
+										</content>
+									</td>
+									<td>
+										<content styleCode='Italics'>
+											Nom du destinataire
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<substanceAdministration classCode='SBADM' moodCode='EVN'>
+							<!-- DMST: 8.14 Derniers médicaments pris le jour du transfert (description) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<!-- GTIN -->
+							<id extension='7680569020096' root='1.3.160' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' displayName='Medikamentöse Therapie'/>
+							<text>
+								<reference value='#m2'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+								<!-- Wirkzeitraum -->
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
+								<!-- Dosierung 1-0-0 -->
+								<phase value='190001010800+0100'/>
+								<period value='24' unit='h'/>
+							</effectiveTime>
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7'
+							codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112'
+							codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
+							<doseQuantity>
+								<!-- 1 Stück (z. B. Tablette) -->
+								<center value='1' unit='1'/>
+							</doseQuantity>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<manufacturedMaterial>
+										<!-- Generic GroupCode -->
+										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+											<originalText>
+												<reference nullFlavor='UNK' />
+											</originalText>
+											<!-- ATC WHO Code -->
+											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+										</code>
+										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<participant typeCode='LOC'>
+								<!-- DMST: 8.15 Ordonnance remise à  -->
+								<participantRole classCode='SDLOC'>
+									<id extension='7605555555555' root='1.3.88'/>
+									<addr use='WP'>
+										<streetName>rue des substances</streetName>
+										<houseNumber>55</houseNumber>
+										<postalCode>8888</postalCode>
+										<city>Guérison-ville</city>
+									</addr>
+									<telecom nullFlavor='NASK' />
+									<playingEntity>
+										<name>Pharmacy Pharmaceutica</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<!-- DMST: 8.15 Ordonnance en annexe -->
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.4'/>
+									<code nullFlavor='NA' />
+									<text>
+										<reference value='#todo'/>
+									</text>
+									<reference typeCode='SPRT'>
+										<templateId root='2.16.840.1.113883.10.20.1.36'/>
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<text>
+												<reference value='http://foo.todo.ch'/>
+											</text>
+										</externalDocument>
+									</reference>
+								</act>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Conditional Fluids Administered Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.6'/>
+			<!-/- Conditional Fluids Administered Section content -/->
+			<title>Liquides intraveineux administrés</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Conditional History of Past Illness Section Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8'/>
+			<!-/- Conditional History of Past Illness Section Section content -/->
+			<title>Antécédents médicaux</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Conditional Coded List of Surgeries Section Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.12'/>
+			<!-/- Conditional Coded List of Surgeries Section Section content -/->
+			<title>Chirurgies</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Conditional Immunizations Section Section content
+			********************************************************
+			<component>
+			<section>
+			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
+			<!-/- Conditional Immunizations Section Section content -/->
+			<title>Vaccinations</title>
+			<text>
+			todo
+			</text>
+			</section>
+			</component>
+			-->
+
+			<!--
+			********************************************************
+			Capacité de travail
+			********************************************************-->
+			<component>
+				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ArbeitsfähigkeitList'/>
+					<code code='X-ATWRK' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Capacité de travail</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Valable à partir du</th>
+									<th>Valable jusqu'au</th>
+									<th>Durée de présence</th>
+									<th>Charge de travail</th>
+									<th>Evaluée par</th>
+								</tr>
+								<tr>
+									<td>Date</td>
+									<td>Date</td>
+									<td>Nombre raisonnable d’heures en entreprise</td>
+									<td>% de l’intensité de travail habituelle</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>01.02.2010</td>
+									<td>03.02.2010</td>
+									<td>0 h/jour</td>
+									<td>0%</td>
+									<td>Dr. med. E. Mergency, Service des urgences Hôpital cantonal</td>
+								</tr>
+								<tr>
+									<td>03.02.2010</td>
+									<td>15.02.2010</td>
+									<td>4 h/jour</td>
+									<td>100%</td>
+									<td>Dr. med. Théodore Guéri, Spécialiste de médecine générale</td>
+								</tr>
+								<tr>
+									<td>15.02.2010</td>
+									<td></td>
+									<td>6 h/jour</td>
+									<td>100%</td>
+									<td>Dr. med. Théodore Guéri, Spécialiste de médecine générale</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 2.16 Arrêt de travail -->
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ArbeitsfähigkeitL3'/>
+							<code code='X-ATWRK' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+							<text>arbeitsunfähig</text>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20100201'/>
+								<high value='20100203'/>
+							</effectiveTime>
+							<value xsi:type='CD' code='0' codeSystem='2.16.756.5.30.2.1.1.6.1' />
+							<interpretationCode code='0' codeSystem='2.16.756.5.30.2.1.1.7.1' />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor='UNK' />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>E.</given>
+											<family>Mergency</family>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<name>Hôpital cantonal, Clinique de chirurgie</name>
+										<addr use='WP'>
+											<streetName>Rue de l’hôpital</streetName>
+											<houseNumber>33</houseNumber>
+											<postalCode>1234</postalCode>
+											<city>Villemodèle</city>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ArbeitsfähigkeitL3'/>
+							<code code='X-ATWRK' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+							<text>halbtags</text>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20100203'/>
+								<high value='20100215'/>
+							</effectiveTime>
+							<value xsi:type='CD' code='4' codeSystem='2.16.756.5.30.2.1.1.6.1' />
+							<interpretationCode code='100' codeSystem='2.16.756.5.30.2.1.1.7.1' />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor='UNK' />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ArbeitsfähigkeitL3'/>
+							<code code='X-ATWRK' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+							<text>75%</text>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20100215'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.2.1.1.6.1' />
+							<interpretationCode code='100' codeSystem='2.16.756.5.30.2.1.1.7.1' />
+							<performer>
+								<assignedEntity>
+									<id nullFlavor='UNK' />
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Théodore</given>
+											<family>Guéri</family>
+											<suffix>Spécialiste de médecine générale</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- *******************************************************
+			Mode of Arrival – Angaben zum Eintritt
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<code code='11459-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TRANSPORT MODE' />
+					<title>Mode de transport</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Question</th>
+									<th>Résultat</th>
+									<th>Informations supplémentaires</th>
+								</tr>
+								<tr>
+									<td>
+										Transfert:
+									</td>
+									<td>
+										<content ID='mt1_1' >
+											23.06.2013
+										</content>
+									</td>
+									<td>
+										<content ID='mt1_2' >
+											transport privé
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Transféré avec:
+									</td>
+									<td>
+										<content ID='mt2_1' >
+											autre, préciser:
+										</content>
+									</td>
+									<td>
+										<content ID='mt2_2' >
+											Verres de contact
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+
+									</td>
+									<td>
+										<content ID='mt2_3' >
+											Lunettes
+										</content>
+									</td>
+									<td />
+								</tr>
+								<tr>
+									<td>
+										Enveloppe de transfert:
+									</td>
+									<td>
+										<content ID='mt3' >
+											non
+										</content>
+									</td>
+									<td />
+								</tr>
+								<tr>
+									<td>
+										Objet(s) perdu(s):
+									</td>
+									<td>
+										<content ID='mt4_1' >
+											oui
+										</content>
+									</td>
+									<td>
+										<content ID='mt4_2' >
+											Agenda
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Objet(s) en recherche:
+									</td>
+									<td>
+										<content ID='mt5_1' >
+											oui
+										</content>
+									</td>
+									<td>
+										<content ID='mt6_2' >
+											Portemonnaie
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<!-- Required Transport element -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<!-- DMST: 8.3 Transport effectué par  -->
+							<code code='50' codeSystem='2.16.840.1.113883.6.102.4.2' codeSystemName='DEEDS4.02' displayName='Walk-in following transport via private transportation' >
+								<originalText>
+									<reference value='#mt1_2'/>
+								</originalText>
+							</code>
+							<text>
+								<reference value='#mt1_1'/>
+							</text>
+							<!-- DMST: 8.4 Le -->
+							<effectiveTime>
+								<low value='201306231000' />
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+						</act>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST: 8.1 Transféré avec  -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<text>
+								<reference value='#TODO'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CO' code='99' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+									<text>
+										<reference value='#mt_2'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST: 8.1 Transféré avec  -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<text>
+								<reference value='#TODO'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CO' code='01' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST: 8.2 Enveloppe de transfert -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<text>
+								<reference value='#TODO'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CO' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Non' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST: 8.5 Objet(s) perdu(s)  -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<text>
+								<reference value='#TODO'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+									<text>
+										<reference value='#mt4_2'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST: 8.6 Objet(s) en recherche -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<text>
+								<reference value='#TODO'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+									<text>
+										<reference value='#mt5_2'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- *******************************************************
+			Coded Results
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.27'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.28'/>
+					<code code='30954-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='STUDIES SUMMARY' />
+					<title>Résultats</title>
+					<text>
+						•	Monsieur Dupont a 3 points sur 10 sur l’echelle de la douleur.<br />
+						•	La peau est intacte.<br />
+						•	Le poids est stable. La créatine est augementée à 150µmol/l.<br />
+						<br />
+						<content styleCode='Italics'>
+							Préciser si la feuille de synthèse d’entretien de réseau est en annexe ou si elle suit.
+						</content>
+					</text>
+					<entry>
+						<procedure classCode='PROC' moodCode='INT'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code nullFlavor='NA' />
+							<text>
+								<reference nullFlavor='NA' />
+							</text>
+							<statusCode nullFlavor='NA' />
+							<effectiveTime>
+								<low nullFlavor='NA' />
+								<high nullFlavor='NA' />
+							</effectiveTime>
+						</procedure>
+					</entry>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.4'/>
+							<code nullFlavor='NA' />
+							<text>
+								<reference value='#feuille'/>
+							</text>
+							<reference typeCode='SPRT'>
+								<externalDocument classCode='DOC' moodCode='EVN'>
+									<text>
+										<!-- DMST: 8.17 Feuille de synthèse d’entretien de réseau en annexe -->
+										<reference value='http://foo.todo.ch'/>
+										<!-- DMST: 8.17 Feuille de synthèse d’entretien de réseau suit 
+										<reference nullFlavor='NAV'/>
+										-->
+									</text>
+								</externalDocument>
+							</reference>
+						</act>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code nullFlavor='NA' />
+							<text>
+								<reference nullFlavor='NA' />
+							</text>
+							<statusCode nullFlavor='NA' />
+							<effectiveTime nullFlavor='NA' />
+							<value xsi:type='CD' nullFlavor='NA' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- *******************************************************
+			Coded Hospital Studies Summary
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.29'/>
+					<code code='11493-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HOSPITAL DISCHARGE STUDIES SUMMARY' />
+					<title>Rapports de sortie</title>
+					<text>
+						<content styleCode='Italics'>
+							Cet item permet de spécifier si le Document médical de transmission (DMT) est renseigné et envoyé en même temps ou si celui-ci est transmis ultérieurement et si celui-ci est envoyé à un médecin (par exemple : au médecin traitant)
+						</content>
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST: 8.16 Document médical -->
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<text>
+								<reference value='#todo'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime nullFlavor='NASK' />
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- *******************************************************
+			Comments
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.Rem' />
+					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ANNOTATION COMMENT' />
+					<title>Commentaire</title>
+					<text>
+						<content ID='co1'>
+							Aucun commentaire
+						</content>
+					</text>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.40'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+							<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+							<text>
+								<reference value='#co1'/>
+							</text>
+							<statusCode code='completed'/>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+		</structuredBody>
+	</component>
+</ClinicalDocument>

@@ -5,11 +5,13 @@
 Codetabellen für mehrsprachiges CDA-CH Stylesheet
 
 History:
-31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
-13.09.2010: Tony Schaller, medshare GmbH (Weitere Übersetzungen)
-09.12.2010: Tony Schaller, medshare GmbH (Weitere Übersetzungen, insbesondere infolge der CDA Dokumente für Suva)
-28.09.2011: Tony Schaller, medshare GmbH (English translation)
-01.10.2011: Tony Schaller, medshare GmbH (Italian translation)
+2009.12.31: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+2010.09.13: Tony Schaller, medshare GmbH (Weitere Übersetzungen)
+2010.12.09: Tony Schaller, medshare GmbH (Weitere Übersetzungen, insbesondere infolge der CDA Dokumente für Suva)
+2011.09.28: Tony Schaller, medshare GmbH (English translation)
+2011.10.01: Tony Schaller, medshare GmbH (Italian translation)
+2013.07.24: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
+
 
 ********************************************************
 -->
@@ -260,7 +262,7 @@ History:
   <text language="en" value="2.16.756.5.31" displayName="Old Swiss SSN"/>
 
   <text language="de-CH" value="2.16.756.5.32" displayName="Neue AHV Nr"/>
-  <text language="fr-CH" value="2.16.756.5.32" displayName="No AVS neuve"/>
+  <text language="fr-CH" value="2.16.756.5.32" displayName="No AVS nouveau"/>
   <text language="it-CH" value="2.16.756.5.32" displayName="Nuovo n. AVS"/>
   <text language="en" value="2.16.756.5.32" displayName="New Swiss SSN"/>
 
@@ -295,6 +297,11 @@ History:
 	<text language="fr-CH" value="2.16.756.5.30.1.1.2" displayName="Numéro d’assuré"/>
   <text language="it-CH" value="2.16.756.5.30.1.1.2" displayName="Numero di assicurazione"/>
   <text language="en" value="2.16.756.5.30.1.1.2" displayName="Insurance number"/>
+  
+  <text language="de-CH" value="2.16.756.5.48.1.1.4.1" displayName="ARCOS-Nr."/>
+	<text language="fr-CH" value="2.16.756.5.48.1.1.4.1" displayName="Numéro ARCOS"/>
+  <text language="it-CH" value="2.16.756.5.48.1.1.4.1" displayName="Numero ARCOS"/>
+  <text language="en" value="2.16.756.5.48.1.1.4.1" displayName="ARCOS number"/>
   
   <text language="de-CH" value="EmergencyContacts" displayName="Kontaktadressen für den Notfall"/>
   <text language="fr-CH" value="EmergencyContacts" displayName="tbd fr 'EmergencyContacts'"/>
@@ -370,6 +377,11 @@ History:
   <text language="fr-CH" value="MTH" displayName="Mère"/>
   <text language="it-CH" value="MTH" displayName="tbd it 'MTH'"/>
   <text language="en" value="MTH" displayName="Mother"/>
+
+  <text language="de-CH" value="DAUC" displayName="Tochter"/>
+  <text language="fr-CH" value="DAUC" displayName="Fille"/>
+  <text language="it-CH" value="DAUC" displayName="tbd it 'DAUC'"/>
+  <text language="en" value="DAUC" displayName="Daughter"/>
 
   <text language="de-CH" value="GUARD" displayName="Vertreter"/>
   <text language="fr-CH" value="GUARD" displayName="Représentant"/>
