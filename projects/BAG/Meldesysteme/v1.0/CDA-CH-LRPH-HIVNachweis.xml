@@ -4,7 +4,8 @@
 Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - HIV Nachweis 
 
 History:
-20.01.2013: Tony Schaller, medshare GmbH (Erster Entwurf)
+2013.20.01: Tony Schaller, medshare GmbH (Erster Entwurf)
+2013.07.26 Tony Schaller, medshare GmbH (Korrekturen nach Anhörungsauswertung CDA-CH-LRPH)
 
 ********************************************************
 -->
@@ -368,9 +369,9 @@ History:
 										</observation>
 									</component>
 									
-									<!-- Recency: No -->
+									<!-- Recency: No 
 									<component typeCode='COMP'>
-										<!-- IHE XD-LAB: Laboratory Observation -->
+										<!-/- IHE XD-LAB: Laboratory Observation -/->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
 											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
@@ -379,6 +380,7 @@ History:
 											<value xsi:type='CD' code='N' displayName='No' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' />
 										</observation>
 									</component>
+									-->
 									
 									<!-- Inno-Lia Banden -->									
 									
@@ -387,19 +389,19 @@ History:
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='35441-5' displayName='HIV 1 gp120 Ab [Presence] in Saliva (oral fluid) by Immunoblot (IB)' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<statusCode code='completed'/>
 											<effectiveTime value='201212011634+0100'/>
 											<value xsi:type='PQ' value='3' unit='1' />
 										</observation>
 									</component>
-
+									
 									<!-- sgp105 -->
 									<component typeCode='COMP'>
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='12893-4' displayName='HIV 1 gp105 Ab [Presence] in Serum by Immunoblot (IB)' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<statusCode code='completed'/>
 											<effectiveTime value='201212011634+0100'/>
 											<value xsi:type='PQ' value='0' unit='1' />
@@ -447,12 +449,13 @@ History:
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='TODO' displayName='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<code code='10902-5' displayName='HIV 2 gp36 Ab [Presence] in Serum by Immunoblot (IB)' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<statusCode code='completed'/>
 											<effectiveTime value='201212011634+0100'/>
 											<value xsi:type='PQ' value='0' unit='1' />
 										</observation>
 									</component>
+									
 
 									<!-- gp41 -->
 									<component typeCode='COMP'>
