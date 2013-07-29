@@ -5,7 +5,7 @@ Document médico-social de transmission (DMST) V2.1
 
 History:
 2013.06.24: Tony Schaller, medshare GmbH (First Draft)
-2013.07.24: Tony Schaller, medshare GmbH (Sample for Implementation guide)
+2013.07.29: Tony Schaller, medshare GmbH (Sample for Implementation guide)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -66,7 +66,12 @@ History:
 				<!-- DMST: 1.10 Etat civil -->
 				<maritalStatusCode code='M' codeSystem='2.16.840.1.113883.11.12212' codeSystemName='MaritalStatus' displayName='Married' />
 				<!-- DMST: 1.15 Religion / confession -->
-				<religiousAffiliationCode code='TODO' displayName='Römisch-Katholisch' codeSystem='2.16.840.1.113883.2.16.1.4.1' codeSystemName='HL7.AT:ReligionAustria'/>
+				<religiousAffiliationCode nullFlavor='NAV'>
+					<!-- TODO: XSL anpassen, damit das angezeigt wird -->
+					<originalText>
+						catholique
+					</originalText>
+				</religiousAffiliationCode>
 				<birthplace>
 					<place>
 						<addr>
@@ -376,7 +381,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 4.1 Habitat (description) -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='CD30CE6D-AEFA-4E75-902C-179F3BC6EB3A'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#ha1'/>
@@ -414,9 +419,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.9.15.1'/>
 			<code code='29545-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PHYSICAL EXAMINATION' />
 			<title>Examen physique</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -698,7 +701,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.2 Respiration -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='408A10C5-0213-4161-AB30-1411185CB6CE'/>
 							<code code='11412-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='RESPIRATORY SYSTEM'/>
 							<text>
 								<reference value='#as2'/>
@@ -712,7 +715,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.3 Alimentation, hydratation -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='59529B07-DB41-4F56-A6EA-2218354A241F'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as3'/>
@@ -726,7 +729,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.4 Elimination -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='550B6796-7FD1-44EE-9787-E5F73320EDC3'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as4'/>
@@ -738,7 +741,7 @@ History:
 								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='47657E88-EFEC-4080-A3F2-652234C632D0'/>
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
 									<text>
 										<reference value='#as4_1'/>
@@ -757,7 +760,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.5 Etat de la peau, plaies, cicatrices  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='26B31F16-FC1B-4FEF-8A00-7F00BFFE3F5A'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as5'/>
@@ -771,7 +774,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.6 Coordination, posture, mobilité, etc. -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='BB35A1F4-B51A-4332-A79B-5D4E7307C530'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as6'/>
@@ -785,7 +788,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.7 Chutes -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='EAD0AEE1-84AB-4D9B-8E1A-F7A2D7EDC131'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as7'/>
@@ -799,7 +802,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.8 Addiction -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='0CA36CDF-F663-460D-9987-529649D0EB60'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as8'/>
@@ -811,7 +814,7 @@ History:
 								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='8B315580-CA58-450C-AA97-24A0D4A53206'/>
 									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
 									<text>
 										<reference value='#as4_1'/>
@@ -830,7 +833,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.9 Autres, préciser -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='A7A7F145-D5CB-481E-BB79-FA6D76C92C48'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as9'/>
@@ -844,7 +847,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.10 Humeur -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DCC47E05-8AEE-4554-B670-C1FBFD7B819C'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as10'/>
@@ -858,7 +861,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.11 Anxiété -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='1E64003B-38A9-42B2-97F7-D4020BF6A7F1'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as11'/>
@@ -872,7 +875,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.12 Potentiel suicidaire -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='115AA416-008B-4123-8CF1-8FAA8875237A'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as12'/>
@@ -886,7 +889,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.13 Troubles du comportement -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='E8FC300B-5894-430C-B7B7-D04678A03429'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as13'/>
@@ -900,7 +903,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.14 Troubles du sommeil -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5C48A87C-2C1E-4874-93A6-9AE6A8F6B99B'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as14'/>
@@ -914,7 +917,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.15 Tendance à fuguer par désorientation -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2072AD1D-31E3-4579-9B79-FD355CBF6877'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as15'/>
@@ -928,7 +931,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.16 Tendance à fuguer volontairement -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='091CC97A-27A8-4054-9289-B61E8F42D2DF'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as16'/>
@@ -942,7 +945,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 7.17 Autres, préciser -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='29658DB8-9484-43AC-BE98-FDF4F00B72BC'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#as17'/>
@@ -969,13 +972,13 @@ History:
 					<component>
 						<section>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='8F61EBA1-BEE9-49E2-AF34-33EE69CF384A'/>
 							<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' />
 							<text />
 							<entry>
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5094C30B-9F05-4C9D-8420-4DC688305EEA'/>
 									<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' >
 										<translation code='406127006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pain intensity' />
 									</code>
@@ -1334,7 +1337,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5EC4D2A3-37CC-43B3-9FA5-D5889A66A42F'/>
 									<code code='45602-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Eating - self-performance' />
 									<text>
 										<reference value='#sf1'/>
@@ -1346,7 +1349,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='3157AE4E-CC09-4A7B-B051-4EF668BAAF2C'/>
 											<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
 											<text>
 												<reference value='#sf1_1'/>
@@ -1367,7 +1370,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='58340B6E-DAEF-4616-AADD-F7C8324B4084'/>
 									<code code='45608-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bathing - self-performance' />
 									<text>
 										<reference value='#sf2'/>
@@ -1383,7 +1386,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='0E68911A-4118-4917-8D45-D9C059C90D1D'/>
 									<code code='45600-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Dressing - self-performance' />
 									<text>
 										<reference value='#sf3'/>
@@ -1399,7 +1402,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='75107BD1-623F-4E14-9AF4-6BAB4046089C'/>
 									<code code='X-UNDRESSING' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Undressing - self-performance' />
 									<text>
 										<reference value='#sf4'/>
@@ -1415,7 +1418,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2F746F29-6EF7-41AD-9AD9-6988918BD339'/>
 									<code code='45606-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Personal hygiene - self-performance' />
 									<text>
 										<reference value='#sf5'/>
@@ -1431,7 +1434,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B01A1B30-AA1C-48D4-816F-93D41E49E8A2'/>
 									<code code='45619-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bladder continence' />
 									<text>
 										<reference value='#sf6'/>
@@ -1443,7 +1446,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='0789FF5E-C98E-4C1E-A734-19DD8B5AD685'/>
 											<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnostic' />
 											<text>
 												<reference value='#sf6_1'/>
@@ -1464,7 +1467,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='3E4205F2-6F58-47CE-BC56-1717BBB08EB6'/>
 									<code code='69667-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bowel continence' />
 									<text>
 										<reference value='#sf7'/>
@@ -1480,7 +1483,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='EDDC3C8D-2F54-438A-9C16-F6D7733BE823'/>
 									<code code='45604-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Toilet use - self-performance' />
 									<text>
 										<reference value='#sf8'/>
@@ -1496,7 +1499,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='23575770-C82A-4F36-B6F8-38F00B7AF1C5'/>
 									<code code='45588-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Bed mobility - self-performance' />
 									<text>
 										<reference value='#sf9'/>
@@ -1512,7 +1515,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='35EC089E-96BB-4BB3-A29A-9A5A5ED91ECD'/>
 									<code code='45596-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Locomotion on unit - self-performance' />
 									<text>
 										<reference value='#sf10'/>
@@ -1528,7 +1531,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='82449652-47F5-4E23-8D94-CC71CCD02D5E'/>
 									<code code='45598-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Locomotion off unit - self-performance' />
 									<text>
 										<reference value='#sf11'/>
@@ -1544,7 +1547,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='0491D5F7-A9A6-4921-9F6E-6B47E8ACACE9'/>
 									<code code='X-USETRSPT' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Use of transport' />
 									<text>
 										<reference value='#sf12'/>
@@ -1560,7 +1563,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='A9B35CAE-2602-487B-A8DF-294B44D01E06'/>
 									<code code='X-USESTRS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Use of stairs' />
 									<text>
 										<reference value='#sf13'/>
@@ -1576,7 +1579,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='109203CA-0C93-4B90-BE5E-F16A0317EF36'/>
 									<code code='X-USEELVTR' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Use of elevators' />
 									<text>
 										<reference value='#sf14'/>
@@ -1592,7 +1595,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B8CA0179-C6D8-4487-B5DA-F1EE81282905'/>
 									<code code='45536-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Uses cane, walker or crutch' />
 									<text>
 										<reference value='#sf15'/>
@@ -1604,7 +1607,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='D92E3D08-8226-4AC9-B7C8-410635B8068F'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf15_1'/>
@@ -1621,7 +1624,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2C52C698-686F-47B4-92EF-C421244CEBA8'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf15_2'/>
@@ -1638,7 +1641,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='FF9CBFDC-B2F2-4FDD-AD4D-742675C95F9A'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf15_3'/>
@@ -1655,7 +1658,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DEB970CC-8BF7-419B-A8A5-AC662EA5903C'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf15_4'/>
@@ -1676,7 +1679,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DF62E1BB-AE6E-4AEF-8960-7EDD1E502229'/>
 									<code code='46529-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Sensory status: vision' />
 									<text>
 										<reference value='#sf16'/>
@@ -1688,7 +1691,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B81C2208-5CBD-4344-980B-BC0BEC40B7CE'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf16_1'/>
@@ -1705,7 +1708,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='885E5A16-3F4E-4BB8-AD8B-5647E5E8AB99'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf16_2'/>
@@ -1726,7 +1729,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='0784B4C3-5191-420B-8BA1-B20556DB538D'/>
 									<code code='46530-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Sensory status: hearing and ability to understand spoken language' />
 									<text>
 										<reference value='#sf17'/>
@@ -1738,7 +1741,7 @@ History:
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2A7965FE-0920-415E-9632-737F46E72D1F'/>
 											<code code='248536006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Limitation fonctionelle' />
 											<text>
 												<reference value='#sf16_2'/>
@@ -1759,7 +1762,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='26A5CB4F-FA10-4971-994F-4341819884B8'/>
 									<code code='46490-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Ability to use telephone' />
 									<text>
 										<reference value='#sf18'/>
@@ -1775,7 +1778,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B9614B1E-9DF2-43E3-8B4B-F326391C2D1F'/>
 									<code code='46488-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Housekeeping' />
 									<text>
 										<reference value='#sf19'/>
@@ -1791,7 +1794,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='56F0E7B2-9B95-4CF8-BC17-0E44BE388FE3'/>
 									<code code='46485-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Planning &amp; preparing light meals' />
 									<text>
 										<reference value='#sf20'/>
@@ -1807,7 +1810,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD7081F8-2221-4307-A2B3-4EBB948054A0'/>
 									<code code='46489-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Shopping' />
 									<text>
 										<reference value='#sf21'/>
@@ -1823,7 +1826,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5E762A36-984E-4BD4-9ADD-4DEC7CA91CBF'/>
 									<code code='46487-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Laundry' />
 									<text>
 										<reference value='#sf22'/>
@@ -1839,7 +1842,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='A189A2C7-C876-4567-851C-89AD7F2D5486'/>
 									<code code='X-TAKMEDI' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Self-application of medications' />
 									<text>
 										<reference value='#sf23'/>
@@ -1855,7 +1858,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='E4CFA111-809A-42B6-B618-FFDBF975A904'/>
 									<code code='X-ADMMGT' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Administrative management' />
 									<text>
 										<reference value='#sf24'/>
@@ -1871,7 +1874,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='10026740-3732-4294-B950-628BFF092366'/>
 									<code code='X-MGTST' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Managing social ties' />
 									<text>
 										<reference value='#sf25'/>
@@ -1887,7 +1890,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='082FF271-CF93-492F-B2FF-4641B9A16E2B'/>
 									<code code='42850-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Memory impairment' />
 									<text>
 										<reference value='#sf2x'/>
@@ -1903,7 +1906,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='9857E58C-A176-481F-9ED5-F4CEAF064AE8'/>
 									<code code='X-ORITME' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Orientation in time' />
 									<text>
 										<reference value='#sf2x'/>
@@ -1919,7 +1922,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B32717B7-F779-4782-8D3D-739652FE1A6F'/>
 									<code code='X-ORISPC' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Orientation in space' />
 									<text>
 										<reference value='#sf2x'/>
@@ -1935,7 +1938,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='E70C5557-E250-478C-ABAE-8423C114041C'/>
 									<code code='57217-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Understanding of verbal content' />
 									<text>
 										<reference value='#sf2x'/>
@@ -1960,9 +1963,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.14'/>
 			<!-/- Optional Family History Section content -/->
 			<title>Anamnèse familiale</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -2090,7 +2091,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='E75BD8AD-2C2F-454E-A6B8-946E314CF00B'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
 							<text>
 								<reference value='#as1'/>
@@ -2107,7 +2108,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.NationalityL3' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='96879649-287A-4D8E-B73A-542B5D3033A1'/>
 							<code code='66476-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Country of citizenship' />
 							<text>
 								<reference value='#todo'/>
@@ -2124,7 +2125,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.OriginCountryL3' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DC064A9B-E304-4D2A-AE06-A2AFF7B6434C'/>
 							<code code='67413-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Country of origin' />
 							<text>
 								<reference value='#todo'/>
@@ -2141,7 +2142,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.OriginCityL3' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='67E5DE29-8D76-4779-8EFF-2D1C2FF5741C'/>
 							<code code='67414-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Region of origin' />
 							<text>
 								<reference value='#todo'/>
@@ -2161,7 +2162,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.PatientAlreadyKnown' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='41D0541E-1D16-49BC-91C7-A40277FC67DE'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#cms1'/>
@@ -2176,7 +2177,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='1E3A73F6-5460-4D4E-89B2-D9D9EAEC5023'/>
 							<code code='21847-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Usual occupation' />
 							<text>
 								<reference value='#oc1'/>
@@ -2193,7 +2194,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.PLAFA' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='BD40EA67-CD3F-496E-8DDA-599BB2F414A1'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#oc2'/>
@@ -2215,7 +2216,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.PC' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2C73352C-685A-44BD-8E65-DAED259D02F3'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#todo'/>
@@ -2231,7 +2232,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.API' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='6D9C7304-3E4A-4908-BDA9-A5B8E33A832F'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#todo'/>
@@ -2247,7 +2248,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.AI' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='7976F13B-04A5-4CCD-9727-490C9758D36F'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#todo'/>
@@ -2263,7 +2264,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.OCC' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5CA23D85-A2C3-40A8-BA54-2BD39ADD1DAE'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#todo'/>
@@ -2279,7 +2280,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.SocialStatus' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='D6DB47A0-B619-46E3-9537-50E8C1B12520'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#todo'/>
@@ -2295,7 +2296,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.EmploymentL3' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='19226CEF-6825-4D0A-B1A0-9466DAD84EC1'/>
 							<code code='11295-3' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Current employment' />
 							<text>
 								<reference value='#todo'/>
@@ -2312,7 +2313,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.MandatJudiciaire' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='52E0D1DF-7FFF-400B-9170-08CF06722088'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#todo'/>
@@ -2328,7 +2329,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.EnfantsMineursACharge' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='EA2C9C90-B1BA-4958-90AF-FB41C8489111'/>
 							<code code='29762-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Social history' />
 							<text>
 								<reference value='#oc3'/>
@@ -2348,7 +2349,7 @@ History:
 				<section>
 					<templateId root='2.16.840.1.113883.10.20.1.11'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
-					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='86376EE4-F5AA-42BE-841A-57D26F431635'/>
 					<code code='11450-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROBLEM LIST' />
 					<title>Liste des problèmes</title>
 					<text>
@@ -2440,7 +2441,7 @@ History:
 				<section>
 					<templateId root='2.16.840.1.113883.10.20.1.2'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.13'/>
-					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B8BA00B0-2CDB-485A-81A6-C709E01E377D'/>
 					<code code='48765-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Allergies, adverse reactions, alerts' />
 					<title>Allergies et autres réactions indésirables</title>
 					<text>
@@ -2454,7 +2455,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.27'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='252580D8-1B14-458A-B335-83ED93BBA0B0'/>
 							<code nullFlavor='NA'/>
 							<statusCode code='active'/>
 							<effectiveTime>
@@ -2466,7 +2467,7 @@ History:
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.6'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='FE10C38C-AE91-495A-B98E-9D73C21E2BB0'/>
 									<code code='FALG' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ObservationIntoleranceType' displayName='Food Allergy' />
 									<text>
 										<reference value='#al1'/>
@@ -2490,6 +2491,8 @@ History:
 			<component>
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.31'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='59F9D9A5-D3C1-4756-91EE-057BFB8CFF76'/>
+					<code code='18776-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TREATMENT PLAN' />
 					<title>Attitude</title>
 					<text>
 						Résultats attendus :<br />
@@ -2577,7 +2580,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 8.7 Motif du transfert / Objectifs de soins / Projets pour le patient (description) -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='3814E2F2-5F03-41A3-B429-DEA8E81A418B'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#todo'/>
@@ -2591,7 +2594,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST: 8.8 Patient en accord avec le transfert -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='9FC31CBF-F0BB-48BA-897C-980EC3BE9D9F'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#TODO'/>
@@ -2606,7 +2609,7 @@ History:
 							<!-- DMST: 8.9 Traitements en cours et soins à effectuer / Moyens et matériel de soins nécessaires / Surveillance (description) -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='965FC2F8-63A5-4485-A9C8-64A96A7B2A62'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' />
 							<text>
 								<reference value='#att2'/>
@@ -2620,7 +2623,7 @@ History:
 								<act classCode='ACT' moodCode='EVN'>
 									<!-- DMST: 8.10 Protocole mesures de contrainte en annexe -->
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.4'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='1BC05AAA-F4A7-4EA0-B81A-24CB56F53D98'/>
 									<code nullFlavor='NA' />
 									<text>
 										<reference value='#extref'/>
@@ -2628,7 +2631,7 @@ History:
 									<reference typeCode='SPRT'>
 										<templateId root='2.16.840.1.113883.10.20.1.36'/>
 										<externalDocument classCode='DOC' moodCode='EVN'>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='10DE859B-220E-4F26-8156-8B534E480DB3'/>
 											<text>
 												<reference value='http://foo.todo.ch'/>
 											</text>
@@ -2643,8 +2646,8 @@ History:
 							<!-- DMST: 8.12 Agendées -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='9D1AA704-BAA4-4FD3-B02C-A3BA0E1CDBE4'/>
+							<code nullFlavor='NASK' />
 							<text>
 								<reference value='#att3'/>
 							</text>
@@ -2672,7 +2675,7 @@ History:
 							<!-- DMST: 8.13 A prévoir -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B58D9CA0-884B-420F-8E8B-CC58D3D05B59'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
 							<text>
 								<reference value='#att3'/>
@@ -2707,7 +2710,7 @@ History:
 			<component>
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1'/>
-					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DC8ACEB8-8E31-43CE-A2FC-802F317A6B67'/>
 					<code code='46209-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROVIDER ORDERS' />
 					<title>Demande d’admission pour un hébergement</title>
 					<text>
@@ -2742,7 +2745,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
 							<templateId root='2.16.840.1.113883.10.20.1.21'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.EmergencyTransfer' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='D1878D3D-A3B1-4488-89B0-F0272E7E5D7E'/>
 							<code code='IMP' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'/>
 							<!--
 							<code code='EMER' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='emergency'/>
@@ -2762,8 +2765,8 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.AdmissionType' />
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
-							<code code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' displayName='hébergement court séjour' />
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='F48A438E-1306-4ABB-B0BE-6F6A0F77DC8D'/>
+							<code code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
 							<text>
 								<reference value='#enc2'/>
 							</text>
@@ -2828,7 +2831,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.17'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='23CCE4C6-DC5D-445A-AB93-5D052A8C9D54'/>
 							<code code='304251008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Resuscitation' />
 							<text>
 								<reference value='#pv1'/>
@@ -2839,7 +2842,7 @@ History:
 							<reference typeCode='REFR'>
 								<templateId root='2.16.840.1.113883.10.20.1.36'/>
 								<externalDocument classCode='DOC' moodCode='EVN'>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='54A4599D-486A-4686-96FD-3B701EB709FB'/>
 									<text>
 										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
 									</text>
@@ -2853,7 +2856,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.17'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='55DE5FA3-66CC-43D4-AC89-7FA05183909D'/>
 							<code code='52765003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Intubation' />
 							<text>
 								<reference value='#pv2'/>
@@ -2864,7 +2867,7 @@ History:
 							<reference typeCode='REFR'>
 								<templateId root='2.16.840.1.113883.10.20.1.36'/>
 								<externalDocument classCode='DOC' moodCode='EVN'>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='25AB6C70-541F-4129-BEF3-ACB56BF10FD3'/>
 									<text>
 										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
 									</text>
@@ -2874,7 +2877,7 @@ History:
 					</entry>
 				</section>
 			</component>
-			
+
 			<!--
 			********************************************************
 			Conditional Procedures and Interventions Section content
@@ -2884,9 +2887,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.11'/>
 			<!-/- Conditional Procedures and Interventions Section content -/->
 			<title>Interventions effectuées</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -2905,22 +2906,22 @@ History:
 						<content ID='m2_1'>Lisinopril HCT Streuli 10/12.5 mg</content>, <content ID='m2_2'>1 comprimé le matin</content> pour une hypertension artérielle. <br />
 						<!--
 						<table>
-							<tbody>
-								<tr>
-									<th>Médicaments</th>
-									<th>Dosage</th>
-									<th>Informations supplémentaires</th>
-								</tr>
-								<tr>
-									<td>
-										<content ID='m2_1'>Lisinopril HCT Streuli Tbl. 10/12.5 mg: 1-0-0</content>
-									</td>
-									<td>
-										<content ID='m2_2'>1-0-0</content>
-									</td>
-									<td />
-								</tr>
-							</tbody>
+						<tbody>
+						<tr>
+						<th>Médicaments</th>
+						<th>Dosage</th>
+						<th>Informations supplémentaires</th>
+						</tr>
+						<tr>
+						<td>
+						<content ID='m2_1'>Lisinopril HCT Streuli Tbl. 10/12.5 mg: 1-0-0</content>
+						</td>
+						<td>
+						<content ID='m2_2'>1-0-0</content>
+						</td>
+						<td />
+						</tr>
+						</tbody>
 						</table>
 						-->
 						<br />
@@ -2988,10 +2989,8 @@ History:
 								<phase value='190001010800+0100'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7'
-							codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112'
-							codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
 								<!-- 1 Stück (z. B. Tablette) -->
 								<center value='1' unit='1'/>
@@ -3041,7 +3040,7 @@ History:
 									<reference typeCode='SPRT'>
 										<templateId root='2.16.840.1.113883.10.20.1.36'/>
 										<externalDocument classCode='DOC' moodCode='EVN'>
-											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='691FFB55-4AD1-4A29-B7F6-825C2EA08B1F'/>
 											<text>
 												<reference value='http://foo.todo.ch'/>
 											</text>
@@ -3063,9 +3062,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.6'/>
 			<!-/- Conditional Fluids Administered Section content -/->
 			<title>Liquides intraveineux administrés</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -3079,9 +3076,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8'/>
 			<!-/- Conditional History of Past Illness Section Section content -/->
 			<title>Antécédents médicaux</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -3095,9 +3090,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.12'/>
 			<!-/- Conditional Coded List of Surgeries Section Section content -/->
 			<title>Chirurgies</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -3111,9 +3104,7 @@ History:
 			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
 			<!-/- Conditional Immunizations Section Section content -/->
 			<title>Vaccinations</title>
-			<text>
-			todo
-			</text>
+			<text />
 			</section>
 			</component>
 			-->
@@ -3267,7 +3258,7 @@ History:
 			<component>
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2'/>
-					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='88412F13-B709-4786-AA8C-2564149E0CBA'/>
 					<code code='11459-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TRANSPORT MODE' />
 					<title>Mode de transport</title>
 					<text>
@@ -3367,7 +3358,7 @@ History:
 						<act classCode='ACT' moodCode='EVN'>
 							<!-- Required Transport element -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='EA2EFA21-B4A5-44B8-B3D1-A2866DE57D23'/>
 							<!-- DMST: 8.3 Transport effectué par  -->
 							<code code='50' codeSystem='2.16.840.1.113883.6.102.4.2' codeSystemName='DEEDS4.02' displayName='Walk-in following transport via private transportation' >
 								<originalText>
@@ -3388,7 +3379,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST: 8.1 Transféré avec  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B2593552-52D1-4C1B-9CA0-6E78CD874BB2'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
 							<text>
 								<reference value='#TODO'/>
@@ -3414,7 +3405,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST: 8.1 Transféré avec  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='320F277B-DED0-4DD4-8557-FEA67F80A905'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
 							<text>
 								<reference value='#TODO'/>
@@ -3428,7 +3419,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST: 8.2 Enveloppe de transfert -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='93A7CA89-E637-42EF-AC7B-648982259B77'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
 							<text>
 								<reference value='#TODO'/>
@@ -3442,7 +3433,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST: 8.5 Objet(s) perdu(s)  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='6541E3B1-D2A9-4B64-8CE1-22CFD0B69140'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
 							<text>
 								<reference value='#TODO'/>
@@ -3468,7 +3459,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST: 8.6 Objet(s) en recherche -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B2675876-5683-49D8-B2BD-24580F4921F0'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
 							<text>
 								<reference value='#TODO'/>
@@ -3515,7 +3506,7 @@ History:
 						<procedure classCode='PROC' moodCode='INT'>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='42F8EE22-1931-4E99-858E-5F0A5B2DFD2D'/>
 							<code nullFlavor='NA' />
 							<text>
 								<reference nullFlavor='NA' />
@@ -3539,7 +3530,7 @@ History:
 									<text>
 										<!-- DMST: 8.17 Feuille de synthèse d’entretien de réseau en annexe -->
 										<reference value='http://foo.todo.ch'/>
-										<!-- DMST: 8.17 Feuille de synthèse d’entretien de réseau suit 
+										<!-- DMST: 8.17 Feuille de synthèse d’entretien de réseau suit
 										<reference nullFlavor='NAV'/>
 										-->
 									</text>
@@ -3550,7 +3541,7 @@ History:
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B72E1D27-C69F-4729-92D9-2B8B218C3968'/>
 							<code nullFlavor='NA' />
 							<text>
 								<reference nullFlavor='NA' />
@@ -3580,7 +3571,7 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 8.16 Document médical -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='TODO'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2308144E-2F85-4771-8AFD-E8C51BF5349C'/>
 							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
 							<text>
 								<reference value='#todo'/>
