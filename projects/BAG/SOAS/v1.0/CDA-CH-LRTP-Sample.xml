@@ -126,6 +126,10 @@ History:
 					<code code='18717-9' codeSystem='2.16.840.1.113883.6.1' displayName='BLOOD BANK STUDIES'/>
 					<title>Laborbefund</title>
 					<text>
+						<content styleCode="Italics">
+							Wichtiger Hinweis: Dieses Beispiel ist noch unvollständig und der Inhalt ohne Gewähr, solange Schematronregeln nicht fertiggestellt sind!<br />
+							<br />
+						</content>
 						<table>
 							<tbody>
 								<tr>
