@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Beispiel Laborbefund im Transplantationsprozess gemäss CDA-CH-LRTP V1.0 - 
+Beispiel Laborbefund im Transplantationsprozess gemäss CDA-CH-LRTP V1.0 -
 Wichtiger Hinweis: Noch unvollständig und Inhalt noch ohne Gewähr, solange Schematronregeln nicht fertiggestellt sind.
 
 History:
@@ -38,6 +38,8 @@ History:
 		<patientRole>
 			<id extension='123.95.332.115' root='2.16.756.5.31'/>
 			<id extension='012/08.111111' root='2.16.756.5.30.999999.1'/>
+			<!-- SOAS Code --> 
+			<id extension='LR-2012-0001' root='2.16.756.5.30.1.129.1.1.1'/> 
 			<addr use='HP'>
 				<postalCode>9876</postalCode>
 				<city>Specimendorf</city>
@@ -66,9 +68,9 @@ History:
 			</addr>
 			<telecom use='PUB' value='tel:+41.31.919.09.09'/>
 			<telecom use='PUB' value='fax:+41.31.919.09.10'/>
-			<assignedAuthoringDevice> 
-				<softwareName>Transplantationscenter LIS</softwareName> 
-			</assignedAuthoringDevice> 
+			<assignedAuthoringDevice>
+				<softwareName>Transplantationscenter LIS</softwareName>
+			</assignedAuthoringDevice>
 		</assignedAuthor>
 	</author>
 	<custodian>
@@ -83,20 +85,20 @@ History:
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
-	<informationRecipient typeCode='PRCP'> 
+	<informationRecipient typeCode='PRCP'>
 		<!-- IHE XD-LAB: Intended Recipient -->
-		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.4'/> 
+		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.4'/>
 		<!-- Beabsichtigter Empfänger PRCP=Primary recipient-->
-		<intendedRecipient> 
-			<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/> 
+		<intendedRecipient>
+			<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/>
 			<addr use='WP'>
 				<streetAddressLine>Laupenstrasse 37</streetAddressLine>
 				<postalCode>3008</postalCode>
 				<city>Bern</city>
 			</addr>
 			<telecom use='PUB' value='tel:+41.31.380.81.30'/>
-			<receivedOrganization> 
-				<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/> 
+			<receivedOrganization>
+				<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/>
 				<name>Swisstransplant</name>
 				<telecom use='PUB' value='tel:+41.31.380.81.30'/>
 				<addr use='WP'>
@@ -104,9 +106,14 @@ History:
 					<postalCode>3008</postalCode>
 					<city>Bern</city>
 				</addr>
-			</receivedOrganization> 
-		</intendedRecipient> 
+			</receivedOrganization>
+		</intendedRecipient>
 	</informationRecipient>
+	<documentationOf>
+		<serviceEvent>
+			<code code='RECIP' displayName='Recipient' codeSystem='2.16.756.5.30.1.127.3.99999999999.20130101.1'/>
+		</serviceEvent>
+	</documentationOf>
 	<!--
 	********************************************************
 	CDA Body
@@ -194,7 +201,7 @@ History:
 								<procedure classCode='PROC' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
 									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1'
-										codeSystemName='LOINC' displayName='Collection date'/>
+									codeSystemName='LOINC' displayName='Collection date'/>
 									<effectiveTime value='20100112'/>
 									<participant typeCode='PRD'>
 										<participantRole classCode='SPEC'>
@@ -209,7 +216,7 @@ History:
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
 											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
-												codeSystemName='IHEActCode' displayName='Receive Time'/>
+											codeSystemName='IHEActCode' displayName='Receive Time'/>
 											<effectiveTime value='201001141534+0100'/>
 										</act>
 									</entryRelationship>
@@ -221,7 +228,7 @@ History:
 								<organizer classCode='BATTERY' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
 									<statusCode code='completed'/>
-									
+
 									<!-- Hb -->
 									<component typeCode='COMP'>
 										<!-- IHE XD-LAB: Laboratory Observation -->
