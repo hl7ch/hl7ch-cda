@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Beispiel Laborbefund im Transplantationsprozess gemäss CDA-CH-LRTP V1.0 -
-Wichtiger Hinweis: Noch unvollständig und Inhalt noch ohne Gewähr, solange Schematronregeln nicht fertiggestellt sind.
+Beispiel Laborbefund im Transplantationsprozess gemäss CDA-CH-LRTP V1.0
 
 History:
 2013.10.09: Tony Schaller, medshare GmbH (First draft)
+2014.01.21 Tony Schaller, medshare GmbH (Alpha-Version)
+2014.01.22 Tony Schaller, medshare GmbH (Beta-Version)
 
 ********************************************************
 -->
@@ -27,9 +28,9 @@ History:
 	<!-- Laboratory Reports in the Transplantation Process V1 - (CDA-CH-LRTP) -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.4.1'/>
 	<id extension='A68AF3DB-5A1D-4C6C-85FA-2816E723DEF4' root='2.16.756.5.30.1.1.1.1.3.4.1'/>
-	<code code='18717-9' codeSystem='2.16.840.1.113883.6.1' displayName='BLOOD BANK STUDIES'/>
+	<code code='18717-9' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='BLOOD BANK STUDIES'/>
 	<title>Laborbefund im Transplantationsprozess</title>
-	<effectiveTime value='20100116'/>
+	<effectiveTime value='20140116'/>
 	<confidentialityCode code='R' codeSystem='2.16.840.1.113883.5.25'/>
 	<languageCode code='de-CH'/>
 	<setId extension='CD3AFF99-8956-44EF-A882-B160AAAFBF2A' root='2.16.756.5.30.1.1.1.1.3.4.1'/>
@@ -38,13 +39,10 @@ History:
 		<patientRole>
 			<id extension='123.95.332.115' root='2.16.756.5.31'/>
 			<id extension='012/08.111111' root='2.16.756.5.30.999999.1'/>
-			<!-- SOAS Code --> 
+			<!-- SOAS ID --> 
 			<id extension='LR-2012-0001' root='2.16.756.5.30.1.129.1.1.1'/> 
-			<addr use='HP'>
-				<postalCode>9876</postalCode>
-				<city>Specimendorf</city>
-			</addr>
-			<telecom use='PUB' value='tel:+41.32.685.12.34'/>
+			<addr nullFlavor='MSK' />
+			<telecom nullFlavor='MSK' />
 			<patient>
 				<name>
 					<given>Franz</given>
@@ -57,7 +55,7 @@ History:
 	</recordTarget>
 	<author>
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
-		<time value='20100116'/>
+		<time value='20140116'/>
 		<assignedAuthor>
 			<id extension='7606666666666' root='1.3.88'/>
 			<addr use='WP'>
@@ -97,9 +95,11 @@ History:
 				<city>Bern</city>
 			</addr>
 			<telecom use='PUB' value='tel:+41.31.380.81.30'/>
+			<informationRecipient>
+				<name>Swisstransplant</name>
+			</informationRecipient>
 			<receivedOrganization>
 				<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/>
-				<name>Swisstransplant</name>
 				<telecom use='PUB' value='tel:+41.31.380.81.30'/>
 				<addr use='WP'>
 					<streetAddressLine>Laupenstrasse 37</streetAddressLine>
@@ -111,7 +111,7 @@ History:
 	</informationRecipient>
 	<documentationOf>
 		<serviceEvent>
-			<code code='RECIP' displayName='Recipient' codeSystem='2.16.756.5.30.1.127.3.99999999999.20130101.1'/>
+			<code code='DDON' displayName='Deceased donor' codeSystem='2.16.756.5.30.1.129.1.1.4'/>
 		</serviceEvent>
 	</documentationOf>
 	<!--
@@ -123,6 +123,114 @@ History:
 		<structuredBody>
 			<!--
 			********************************************************
+			Blutgruppe
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.Body.StudiesSummaryL2' />
+					<code code='30954-2' displayName='Relevant diagnostic tests/laboratory data' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<title>Blutgruppe</title>
+					<text>
+						Blutgruppe: A pos
+					</text>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.Body.StudiesSummaryL3.Bloodgroup' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.6'/>
+							<templateId root='2.16.840.1.113883.10.20.1.31'/>
+							<id root='2.16.756.5.30.1.109.3.1' extension='6E9DD4C7-7401-46D8-A9CC-02421F750569' />
+							<code code='882-1' displayName='ABO+RH GROUP' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+							<text>
+								<reference value='#bloodgr-1' />
+							</text>
+							<statusCode code='completed' />
+							<effectiveTime value='20010824'/>
+							<value xsi:type='CE' code='278149003' codeSystem='2.16.840.1.113883.6.96' displayName='Blood group A Rh(D) positive' codeSystemName='SNOMED CT'/>
+							<author>
+								<time value='20120121' />
+								<assignedAuthor>
+									<id extension='7608888888888' root='1.3.88'/>
+								</assignedAuthor>
+							</author>
+							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
+							<!--
+							<entryRelationship typeCode='SUBJ' inversionInd='true'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.40'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
+									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+									<text>
+										<reference value='#todo'/>
+									</text>
+									<statusCode code='completed'/>
+								</act>
+							</entryRelationship>
+							-->
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Coded Vital Signs Section content (1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2)
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.25'/>
+					<templateId root='2.16.840.1.113883.10.20.1.16' />
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='0D42D3DB-67BB-43AD-99DE-10D248040821'/>
+					<code code='8716-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='VITAL SIGNS' />
+					<title>Codierte Vitalzeichenliste</title>
+					<text>
+						<content ID='o1'>
+							Vitalzeichen:<br />
+							- Grösse: 178 cm
+						</content>
+					</text>
+					<entry>
+						<organizer classCode='CLUSTER' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.32'/>
+							<templateId root='2.16.840.1.113883.10.20.1.35'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.1'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='7586A249-889D-4F09-843A-9C3399ECFCB6'/>
+							<code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital signs' />
+							<statusCode code='completed'/>
+							<effectiveTime value="20081118"/>
+							<author typeCode='AUT'>
+								<time value='20081118' />
+								<assignedAuthor>
+									<id extension='7608888888888' root='1.3.88'/>
+								</assignedAuthor>
+							</author>
+							<!-- one or more vital signs observations -->
+							<component typeCode='COMP'>
+								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH-LRTP.Body.VitalSignL3' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='2.16.840.1.113883.10.20.1.31'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.2'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='3B9A88CF-E868-490B-B0BF-DA25E7D2F9FA'/>
+									<code code='8302-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+									<text>
+										<reference value='#o1'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime value="20081118"/>
+									<value xsi:type='PQ' value='178' unit='cm'/>
+									<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+									<methodCode nullFlavor='NA' />
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			
+			<!--
+			********************************************************
 			Laborbefund
 			********************************************************
 			-->
@@ -130,60 +238,40 @@ History:
 				<section>
 					<!-- IHE XD-LAB: Laboratory Speciality Section -->
 					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
-					<code code='18717-9' codeSystem='2.16.840.1.113883.6.1' displayName='BLOOD BANK STUDIES'/>
+					<code code='18723-7' codeSystem='2.16.840.1.113883.6.1' displayName='Hematology studies'/>
 					<title>Laborbefund</title>
 					<text>
-						<content styleCode="Italics">
-							Wichtiger Hinweis: Dieses Beispiel ist noch unvollständig und der Inhalt ohne Gewähr, solange Schematronregeln nicht fertiggestellt sind!<br />
-							<br />
-						</content>
+						Befundgruppe: Hämatologie<br />
+						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
+						<br />
 						<table>
 							<tbody>
 								<tr>
 									<th>Beobachtung</th>
 									<th>Resultat</th>
+									<th>Interpretation</th>
 									<th>Code</th>
 									<th>Codesystem</th>
+									<th>Autor</th>
 									<th>Kommentar</th>
 								</tr>
 								<tr>
-									<td>
-										Hb
-									</td>
+									<td>Hemoglobin [Mass/volume] in Blood</td>
 									<td>159 g/l</td>
+									<td>N</td>
 									<td>718-7</td>
 									<td>LOINC</td>
+									<td>7608888888888</td>
 									<td></td>
 								</tr>
-							</tbody>
-						</table>
-						<br />
-						Weitere Angaben:
-						<table>
-							<tbody>
 								<tr>
-									<td>
-										Zeitpunkt der Entnahme:
-									</td>
-									<td>
-										12.01.2010
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Zeitpunkt Auftragseingang:
-									</td>
-									<td>
-										14.01.2010 15:34
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Zeitpunkt des Nachweises:
-									</td>
-									<td>
-										15.01.2010 10:37
-									</td>
+									<td>Fractional oxyhemoglobin in Blood</td>
+									<td>50%</td>
+									<td>N</td>
+									<td>11559-2</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
@@ -193,56 +281,345 @@ History:
 						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
 						<act classCode='ACT' moodCode='EVN'>
 
-							<code code='18717-9' codeSystem='2.16.840.1.113883.6.1' displayName='BLOOD BANK STUDIES'/>
+							<code code='18723-7' codeSystem='2.16.840.1.113883.6.1' displayName='Hematology studies'/>
 							<statusCode code='completed' />
-
-							<!-- IHE XD-LAB: Specimen Collection -->
-							<entryRelationship typeCode='COMP'>
-								<procedure classCode='PROC' moodCode='EVN'>
-									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
-									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1'
-									codeSystemName='LOINC' displayName='Collection date'/>
-									<effectiveTime value='20100112'/>
-									<participant typeCode='PRD'>
-										<participantRole classCode='SPEC'>
-											<id extension='8F6CCC3D-3A71-41BF-91F6-E3C8FFEF6E8F' root='2.16.756.5.30.1.1.1.1.3.4.1'/>
-											<playingEntity>
-												<code code='LOINC' codeSystem='2.16.756.5.30.2.1.1.10'/>
-											</playingEntity>
-										</participantRole>
-									</participant>
-									<!-- IHE XD-LAB: Specimen Received -->
-									<entryRelationship typeCode='COMP'>
-										<act classCode='ACT' moodCode='EVN'>
-											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
-											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
-											codeSystemName='IHEActCode' displayName='Receive Time'/>
-											<effectiveTime value='201001141534+0100'/>
-										</act>
-									</entryRelationship>
-								</procedure>
-							</entryRelationship>
 
 							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
 							<entryRelationship typeCode='COMP'>
 								<organizer classCode='BATTERY' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
 									<statusCode code='completed'/>
-
-									<!-- Hb -->
+									<author typeCode='AUT'>
+										<time value='201401151037' />
+										<assignedAuthor>
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									
 									<component typeCode='COMP'>
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='718-7' displayName='Hb' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
+											<code code='718-7' displayName='Hemoglobin [Mass/volume] in Blood' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
 												<!-- Translation auf proprietären Code des anliefernden Labors -->
 												<translation code='zzzzz' displayName='Hb' codeSystem='2.16.756.5.30.1.999999999999' codeSystemName='TODO'/>
 											</code>
 											<statusCode code='completed'/>
-											<effectiveTime value='201001151037+0100'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="INT" value="120" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low value="100"/>
+														<high value="130"/>
+													</value>
+													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='11559-2' displayName='Fractional oxyhemoglobin in Blood' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="PQ" value="50" unit="%" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low value="30"/>
+														<high value="70"/>
+													</value>
+													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+												</observationRange>
+											</referenceRange>
 										</observation>
 									</component>
 
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Laborbefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='Microbiology studies'/>
+					<title>Laborbefund</title>
+					<text>
+						Befundgruppe: Mikrobiologie<br />
+						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
+						<br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Autor</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method</td>
+									<td>Nein</td>
+									<td>N</td>
+									<td>11259-9</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+							
+							<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='Microbiology studies'/>
+							<statusCode code='completed' />
+							
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<statusCode code='completed'/>
+									<author typeCode='AUT'>
+										<time value='201401151037' />
+										<assignedAuthor>
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='11259-9' displayName='Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="false"/>
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Laborbefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18719-5' codeSystem='2.16.840.1.113883.6.1' displayName='Chemistry studies'/>
+					<title>Laborbefund</title>
+					<text>
+						Befundgruppe: Chemie<br />
+						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
+						<br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Autor</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>Protein [Presence] in Urine by Test strip</td>
+									<td>test</td>
+									<td>N</td>
+									<td>20454-5</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+							
+							<code code='18719-5' codeSystem='2.16.840.1.113883.6.1' displayName='Chemistry studies'/>
+							<statusCode code='completed' />
+							
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<statusCode code='completed'/>
+									<author typeCode='AUT'>
+										<time value='201401151037' />
+										<assignedAuthor>
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='20454-5' displayName='Protein [Presence] in Urine by Test strip' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="ST">test</value>
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Laborbefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18724-5' codeSystem='2.16.840.1.113883.6.1' displayName='HLA studies'/>
+					<title>Laborbefund</title>
+					<text>
+						Befundgruppe: HLA Studien<br />
+						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
+						<br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Autor</th>
+									<th>Center specific avoid</th>
+									<th>Previous TX</th>
+									<th>Kommentar</th>
+								</tr>
+<!--								
+								<tr>
+									<td>HLA-Antibody A11- MFI Value</td>
+									<td>5000</td>
+									<td>N</td>
+									<td>Anti-A11-MFI</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td>Nein</td>
+									<td></td>
+									<td></td>
+								</tr>
+-->								
+								<tr>
+									<td>DR18(3) HLA-Antigene</td>
+									<td>Nein</td>
+									<td>N</td>
+									<td>DR18(3)</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+							
+							<code code='18724-5' codeSystem='2.16.840.1.113883.6.1' displayName='HLA studies'/>
+							<statusCode code='completed' />
+							
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<statusCode code='completed'/>
+									<author typeCode='AUT'>
+										<time value='201401151037' />
+										<assignedAuthor>
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+
+<!--
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='Anti-A11-MFI' displayName='HLA-Antibody A11- MFI Value' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="INT" value="5000" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low value="500"/>
+														<high value="100000"/>
+													</value>
+													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+												</observationRange>
+											</referenceRange>
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<act classCode='ACT' moodCode='EVN'>
+													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
+													<code code='001' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Center specific avoid' />
+													<statusCode code='completed'/>
+													<value xsi:type="BL" value="false" />
+												</act>
+											</entryRelationship>
+											<entryRelationship typeCode='SUBJ' inversionInd='true'>
+												<act classCode='ACT' moodCode='EVN'>
+													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
+													<code code='002' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Previous TX' />
+													<statusCode code='completed'/>
+													<value nullFlavor="UNK" />
+												</act>
+											</entryRelationship>
+										</observation>
+									</component>
+-->									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='DR18(3)' displayName='DR18(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="false" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
 								</organizer>
 							</entryRelationship>
 						</act>

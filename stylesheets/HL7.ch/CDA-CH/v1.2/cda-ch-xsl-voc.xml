@@ -11,6 +11,7 @@ History:
 2011.09.28: Tony Schaller, medshare GmbH (English translation)
 2011.10.01: Tony Schaller, medshare GmbH (Italian translation)
 2013.07.24: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
+2014.01.22: Tony Schaller, medshare GmbH (Erweiterungen für SOAS; CDA-CH-LRTP)
 
 
 ********************************************************
@@ -302,6 +303,11 @@ History:
 	<text language="fr-CH" value="2.16.756.5.48.1.1.4.1" displayName="Numéro ARCOS"/>
   <text language="it-CH" value="2.16.756.5.48.1.1.4.1" displayName="Numero ARCOS"/>
   <text language="en" value="2.16.756.5.48.1.1.4.1" displayName="ARCOS number"/>
+  
+  <text language="de-CH" value="2.16.756.5.30.1.129.1.1.1" displayName="SOAS-ID"/>
+	<text language="fr-CH" value="2.16.756.5.30.1.129.1.1.1" displayName="SOAS-ID"/>
+  <text language="it-CH" value="2.16.756.5.30.1.129.1.1.1" displayName="SOAS-ID"/>
+  <text language="en" value="2.16.756.5.30.1.129.1.1.1" displayName="SOAS-ID"/>
   
   <text language="de-CH" value="EmergencyContacts" displayName="Kontaktadressen für den Notfall"/>
   <text language="fr-CH" value="EmergencyContacts" displayName="tbd fr 'EmergencyContacts'"/>
