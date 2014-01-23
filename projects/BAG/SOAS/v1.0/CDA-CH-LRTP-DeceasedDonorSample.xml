@@ -904,7 +904,7 @@ History:
 								<tr>
 									<td>Hemoglobin [Mass/volume] in Blood</td>
 									<td><content ID='l41'>97 g/l</content></td>
-									<td>N</td>
+									<td>L</td>
 									<td>718-7</td>
 									<td>LOINC</td>
 									<td>7608888888888</td>
@@ -1016,7 +1016,7 @@ History:
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type="INT" value="97" />
-											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ">
