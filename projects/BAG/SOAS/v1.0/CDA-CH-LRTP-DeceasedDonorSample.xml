@@ -39,7 +39,7 @@ History:
 			<id extension='123.95.332.115' root='2.16.756.5.31'/>
 			<id extension='012/08.111111' root='2.16.756.5.30.999999.1'/>
 			<!-- SOAS ID --> 
-			<id extension='DD-2012-0001' root='2.16.756.5.30.1.129.1.1.1'/> 
+			<id extension='DD-2012-9999' root='2.16.756.5.30.1.129.1.1.1'/> 
 			<addr nullFlavor='MSK' />
 			<telecom nullFlavor='MSK' />
 			<patient>
@@ -276,6 +276,604 @@ History:
 				</section>
 			</component>
 			
+			<!--
+			********************************************************
+			Laborbefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='Microbiology studies'/>
+					<title>Laborbefund</title>
+					<text>
+						Befundgruppe: 18725-2 - Microbiology studies<br />
+						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
+						<br />
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Autor</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>HIV 1 Ab [Presence] in Serum</td>
+									<td><content ID='l1'>-</content></td>
+									<td>N</td>
+									<td>7917-8</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>HIV 2 Ab [Presence] in Serum</td>
+									<td><content ID='l2'>-</content></td>
+									<td>N</td>
+									<td>7919-4</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>HIV 1 p24 Ag [Presence] in Serum</td>
+									<td><content ID='l3'>-</content></td>
+									<td>N</td>
+									<td>9821-0</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>HIV 1 RNA [Presence] in Blood by Probe and target amplification method</td>
+									<td><content ID='l4'>?</content></td>
+									<td></td>
+									<td>5017-9</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>HIV 2 RNA [Presence] in Serum or Plasma by Probe and target amplification method</td>
+									<td><content ID='l5'>?</content></td>
+									<td></td>
+									<td>69353-1</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Hepatitis B virus surface Ab [Presence] in Serum</td>
+									<td><content ID='l6'>-</content></td>
+									<td>N</td>
+									<td>22322-2</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Hepatitis B virus core Ab [Presence] in Serum</td>
+									<td><content ID='l7'>+</content></td>
+									<td>N</td>
+									<td>16933-4</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Hepatitis B virus e Ab [Presence] in Serum</td>
+									<td><content ID='l8'>?</content></td>
+									<td></td>
+									<td>22320-6</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Hepatitis B virus surface Ag [Presence] in Serum</td>
+									<td><content ID='l9'>-</content></td>
+									<td>N</td>
+									<td>5195-3</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Hepatitis C virus Ab [Presence] in Serum</td>
+									<td><content ID='l10'>-</content></td>
+									<td>N</td>
+									<td>16128-1</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method</td>
+									<td><content ID='l11'>?</content></td>
+									<td></td>
+									<td>11259-9</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Epstein Barr virus capsid IgG Ab [Presence] in Serum</td>
+									<td><content ID='l12'>+</content></td>
+									<td>N</td>
+									<td>30339-6</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Epstein Barr virus capsid IgM Ab [Presence] in Serum</td>
+									<td><content ID='l13'>-</content></td>
+									<td>N</td>
+									<td>30340-4</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Cytomegalovirus IgG Ab [Presence] in Serum</td>
+									<td><content ID='l14'>+</content></td>
+									<td>N</td>
+									<td>22244-8</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Cytomegalovirus IgM Ab [Presence] in Serum</td>
+									<td><content ID='l15'>-</content></td>
+									<td>N</td>
+									<td>30325-5</td>
+									<td>LOINC</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+
+							<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='Microbiology studies'/>
+							<statusCode code='completed' />
+
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<statusCode code='completed'/>
+									<author typeCode='AUT'>
+										<time value='201401151037' />
+										<assignedAuthor>
+											<id extension='7608888888888 ' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									
+									<!-- IHE XD-LAB: Laboratory Observations -->
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='7917-8' displayName='HIV 1 Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l1'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='7919-4' displayName='HIV 2 Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l2'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='9821-0' displayName='HIV 1 p24 Ag [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l3'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='5017-9' displayName='HIV 1 RNA [Presence] in Blood by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l4'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<interpretationCode nullFlavor='UNK' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='69353-1' displayName='HIV 2 RNA [Presence] in Serum or Plasma by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l5'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<interpretationCode nullFlavor='UNK' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='22322-2' displayName='Hepatitis B virus surface Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l6'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='16933-4' displayName='Hepatitis B virus core Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l7'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='true' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='22320-6' displayName='Hepatitis B virus e Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l8'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<interpretationCode nullFlavor='UNK' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='5195-3' displayName='Hepatitis B virus surface Ag [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l9'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='16128-1' displayName='Hepatitis C virus Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l10'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='11259-9' displayName='Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l11'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<interpretationCode nullFlavor='UNK' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='30339-6' displayName='Epstein Barr virus capsid IgG Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l12'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='true' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='30340-4' displayName='Epstein Barr virus capsid IgM Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l13'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='22244-8' displayName='Cytomegalovirus IgG Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l14'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='true' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='30325-5' displayName='Cytomegalovirus IgM Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+											<text><reference value='#l15'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type='BL' value='false' />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			Laborbefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18724-5' codeSystem='2.16.840.1.113883.6.1' displayName='HLA studies'/>
+					<title>Laborbefund</title>
+					<text>
+						Befundgruppe: 18724-5 - HLA studies<br />
+						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
+						<br />
+						HLA Typisierung:
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Autor</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>A2 HLA-Antigene</td>
+									<td><content ID='l21'>+</content></td>
+									<td>N</td>
+									<td>A2</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>A24(9) HLA-Antigene</td>
+									<td><content ID='l22'>+</content></td>
+									<td>N</td>
+									<td>A24-9</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>B7 HLA-Antigene</td>
+									<td><content ID='l23'>+</content></td>
+									<td>N</td>
+									<td>B7</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>B51(5) HLA-Antigene</td>
+									<td><content ID='l24'>+</content></td>
+									<td>N</td>
+									<td>B51-5</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DR1 HLA-Antigene</td>
+									<td><content ID='l25'>+</content></td>
+									<td>N</td>
+									<td>DR1</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DR11(5) HLA-Antigene</td>
+									<td><content ID='l26'>+</content></td>
+									<td>N</td>
+									<td>DR11-5</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DQ7(3) HLA-Antigene</td>
+									<td><content ID='l27'>+</content></td>
+									<td>N</td>
+									<td>DQ7-3</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DQ5(1) HLA-Antigene</td>
+									<td><content ID='l28'>+</content></td>
+									<td>N</td>
+									<td>DQ5-1</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+							
+							<code code='18724-5' codeSystem='2.16.840.1.113883.6.1' displayName='HLA studies'/>
+							<statusCode code='completed' />
+							
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<statusCode code='completed'/>
+									<author typeCode='AUT'>
+										<time value='201401151037' />
+										<assignedAuthor>
+											<id extension='7608888888888' root='1.3.88'/>
+										</assignedAuthor>
+									</author>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='A2' displayName='A2 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l21'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='A24-9' displayName='A24-9 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l22'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='B7' displayName='B7 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l23'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='B51-5' displayName='B51(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l24'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='DR1' displayName='DR1 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l25'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='DR11-5' displayName='DR11(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l26'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+									
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='DQ7-3' displayName='DQ7(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l27'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='DQ5-1' displayName='DQ5(1) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<text><reference value='#l28'/></text>
+											<statusCode code='completed'/>
+											<effectiveTime value='201401151037+0100'/>
+											<value xsi:type="BL" value="true" />
+											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
+										</observation>
+									</component>
+
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+
 		</structuredBody>
 	</component>
 </ClinicalDocument>

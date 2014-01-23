@@ -39,7 +39,7 @@ History:
 			<id extension='123.95.332.115' root='2.16.756.5.31'/>
 			<id extension='012/08.111111' root='2.16.756.5.30.999999.1'/>
 			<!-- SOAS ID --> 
-			<id extension='LR-2012-0001' root='2.16.756.5.30.1.129.1.1.1'/> 
+			<id extension='LR-2012-9999' root='2.16.756.5.30.1.129.1.1.1'/> 
 			<addr nullFlavor='MSK' />
 			<telecom nullFlavor='MSK' />
 			<patient>
@@ -622,6 +622,94 @@ History:
 						Befundgruppe: 18724-5 - HLA studies<br />
 						Zeitpunkt der Feststellungen: 15.01.2014 10:37<br />
 						<br />
+						HLA Typisierung:
+						<table>
+							<tbody>
+								<tr>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Autor</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>A3 HLA-Antigene</td>
+									<td><content ID='l21'>+</content></td>
+									<td>N</td>
+									<td>A3</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>A24(9) HLA-Antigene</td>
+									<td><content ID='l22'>+</content></td>
+									<td>N</td>
+									<td>A24-9</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>B7 HLA-Antigene</td>
+									<td><content ID='l23'>+</content></td>
+									<td>N</td>
+									<td>B7</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>B18 HLA-Antigene</td>
+									<td><content ID='l24'>+</content></td>
+									<td>N</td>
+									<td>B18</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DR11(5) HLA-Antigene</td>
+									<td><content ID='l25'>+</content></td>
+									<td>N</td>
+									<td>DR11-5</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DR8 HLA-Antigene</td>
+									<td><content ID='l26'>+</content></td>
+									<td>N</td>
+									<td>DR8</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DQ7(3) HLA-Antigene</td>
+									<td><content ID='l27'>+</content></td>
+									<td>N</td>
+									<td>DQ7-3</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DQ4 HLA-Antigene</td>
+									<td><content ID='l28'>+</content></td>
+									<td>N</td>
+									<td>DQ4</td>
+									<td>HLA</td>
+									<td>7608888888888</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						HLA Antikörper:<br />
 						<table>
 							<tbody>
 								<tr>
@@ -634,94 +722,6 @@ History:
 									<th>Center specific avoid</th>
 									<th>Previous TX</th>
 									<th>Kommentar</th>
-								</tr>
-								<tr>
-									<td>A3 HLA-Antigene</td>
-									<td><content ID='l21'>+</content></td>
-									<td>N</td>
-									<td>A3</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>A24(9) HLA-Antigene</td>
-									<td><content ID='l22'>+</content></td>
-									<td>N</td>
-									<td>A24-9</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>B7 HLA-Antigene</td>
-									<td><content ID='l23'>+</content></td>
-									<td>N</td>
-									<td>B7</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>B18 HLA-Antigene</td>
-									<td><content ID='l24'>+</content></td>
-									<td>N</td>
-									<td>B18</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>DR11(5) HLA-Antigene</td>
-									<td><content ID='l25'>+</content></td>
-									<td>N</td>
-									<td>DR11-5</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>DR8 HLA-Antigene</td>
-									<td><content ID='l26'>+</content></td>
-									<td>N</td>
-									<td>DR8</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>DQ7(3) HLA-Antigene</td>
-									<td><content ID='l27'>+</content></td>
-									<td>N</td>
-									<td>DQ7-3</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>DQ4 HLA-Antigene</td>
-									<td><content ID='l28'>+</content></td>
-									<td>N</td>
-									<td>DQ4</td>
-									<td>HLA</td>
-									<td>7608888888888</td>
-									<td></td>
-									<td></td>
-									<td></td>
 								</tr>
 								<tr>
 									<td>HLA-Antibody A2- MFI Value</td>
@@ -794,7 +794,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='A24-9' displayName='A24-9 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='A24-9' displayName='A24(9) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l22'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
@@ -830,7 +830,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='DR11-5' displayName='DR11-5 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='DR11-5' displayName='DR11(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l25'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
