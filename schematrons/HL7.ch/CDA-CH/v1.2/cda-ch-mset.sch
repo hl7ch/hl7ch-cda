@@ -7,6 +7,7 @@ Schematron master file for the Swiss HL7 CDA-CH-MSET Template
 History:
 2013.01.06: Laurent Millet, medshare GmbH (Draft)
 2013.01.13: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
+2014.01.23: Tony Schaller, medshare GmbH (Aktualisierung auf Neuerungen aus dem IHE Templates von IHE Europe)
 
 *******************************************************************************
 --><schema xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -125,8 +126,10 @@ History:
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13-warnings_pa00106"/>
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13-notes_pa00107"/>
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.1-errors_pa00108"/>
-      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors_pa00109"/>
-      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-errors_pa00110"/>
+      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.1-extensions_pa00109"/>
+      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors_pa00110"/>
+      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-extensions_pa00111"/>
+      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-errors_pa00112"/>
    </iso:phase>
    <iso:phase xmlns="" id="error">
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.6-errors_pa00086"/>
@@ -145,8 +148,8 @@ History:
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.12-errors_pa00103"/>
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13-errors_pa00105"/>
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.1-errors_pa00108"/>
-      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors_pa00109"/>
-      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-errors_pa00110"/>
+      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors_pa00110"/>
+      <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-errors_pa00112"/>
    </iso:phase>
    <iso:phase xmlns="" id="warning">
       <iso:active pattern="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5-warnings_pa00090"/>
@@ -218,7 +221,7 @@ History:
       <xhtml:ul id="cda-ch-mset-doc">
          <xhtml:li class="filename">cda-ch-mset-doc.ent</xhtml:li>
          <xhtml:li class="version">1.0</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.783+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.876+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="cda:ClinicalDocument" id="cda-ch-mset_ru00001">
          <xhtml:h3 lang="de">CDA-CH-MSET Templates</xhtml:h3>
@@ -234,26 +237,37 @@ History:
 			********************************************************
 			Infrastructure Rules
 			******************************************************** -->
-      <assert role="error"
+			<assert role="error"
                  test="document('cda-ch-voc.xml')"
                  id="cda-ch-mset_as00001">
-      	     <xhtml:p lang="de">Datei cda-ch-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
-         </assert>
-         <assert role="error"
-                 test="document('vvk-edi-voc.xml')"
-                 id="cda-ch-mset_as00002">
-      	     <xhtml:p lang="de">Datei vvk-edi-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
-         </assert>
-         <assert role="error"
-                 test="document('epSOS-pivot.xml')"
-                 id="cda-ch-mset_as00003">
-      	     <xhtml:p lang="de">Datei epSOS-pivot.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
-         </assert>
-         <assert role="error"
+				        <xhtml:p lang="de">Datei cda-ch-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
+				        <xhtml:p lang="fr">Fichier cda-ch-voc.xml n'existe pas ou n'est pas valide. La validation ne peut pas être effectuée correctement!</xhtml:p>
+			      </assert>
+			      <assert role="error"
                  test="document('vhitg-ruleset-voc.xml')"
+                 id="cda-ch-mset_as00002">
+				        <xhtml:p lang="de">Datei vhitg-ruleset-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
+				        <xhtml:p lang="fr">Fichier vhitg-ruleset-voc.xml n'existe pas ou n'est pas valide. La validation ne peut pas être effectuée correctement!</xhtml:p>
+			      </assert>
+			      <!--
+			<assert role="error" test="document('cda-ch-mset-voc.xml')">
+				<xhtml:p lang="de">Datei cda-ch-mset-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
+				<xhtml:p lang="fr">Fichier cda-ch-mset-voc.xml n'existe pas ou n'est pas valide. La validation ne peut pas être effectuée correctement!</xhtml:p>
+			</assert>
+			-->
+			<assert role="error"
+                 test="document('vvk-edi-voc.xml')"
+                 id="cda-ch-mset_as00003">
+				        <xhtml:p lang="de">Datei vvk-edi-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
+				        <xhtml:p lang="fr">Fichier vvk-edi-voc.xml n'existe pas ou n'est pas valide. La validation ne peut pas être effectuée correctement!</xhtml:p>
+			      </assert>
+			      <assert role="error"
+                 test="document('epSOS-pivot.xml')"
                  id="cda-ch-mset_as00004">
-      	     <xhtml:p lang="de">Datei vhitg-ruleset-voc.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
-         </assert>
+				        <xhtml:p lang="de">Datei epSOS-pivot.xml ist nicht vorhanden oder ungültig. Die Validierung kann nicht korrekt vorgenommen werden!</xhtml:p>
+				        <xhtml:p lang="fr">Fichier epSOS-pivot.xml n'existe pas ou n'est pas valide. La validation ne peut pas être effectuée correctement!</xhtml:p>
+			      </assert>
+
 
 			      <!--
 			********************************************************
@@ -384,7 +398,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH-MSET author template_pa00002">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-doc.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.783+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.876+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="cda:ClinicalDocument/cda:author" id="cda-ch-mset_ru00002">
          <xhtml:h3 lang="de">CDA-CH-MSET Autor Templates</xhtml:h3>
@@ -416,7 +430,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5.2-extensions_pa00003">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2']"
             id="cda-ch-mset_ru00003">
@@ -443,7 +457,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5-extensions-11450-4_pa00004">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5']"
             id="cda-ch-mset_ru00004">
@@ -506,7 +520,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5-extensions-Z94.9_pa00005">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5']"
             id="cda-ch-mset_ru00005">
@@ -569,7 +583,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.TransplantsL2_pa00006">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.TransplantsL2']"
             id="cda-ch-mset_ru00006">
@@ -634,7 +648,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5.3-extensions_pa00007">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5.3']"
             id="cda-ch-mset_ru00007">
@@ -665,7 +679,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.6-extensions_pa00008">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.6']"
             id="cda-ch-mset_ru00008">
@@ -730,7 +744,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.AllergyL3.Method_pa00009">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.AllergyL3.Method']"
             id="cda-ch-mset_ru00009">
@@ -763,7 +777,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.AllergyL3.Medication_pa00010">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.AllergyL3.Medication']"
             id="cda-ch-mset_ru00010">
@@ -826,7 +840,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.AllergyL3.MedicationSafety_pa00011">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.AllergyL3.MedicationSafety']"
             id="cda-ch-mset_ru00011">
@@ -847,7 +861,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.19-extensions_pa00012">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.19']"
             id="cda-ch-mset_ru00012">
@@ -873,7 +887,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.12559.11.10.1.3.1.3.4_pa00013">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.12559.11.10.1.3.1.3.4']"
             id="cda-ch-mset_ru00013">
@@ -920,7 +934,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.MediL3.Reason_pa00014">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.MediL3.Reason']"
             id="cda-ch-mset_ru00014">
@@ -941,7 +955,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.12-extensions_pa00015">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.12']"
             id="cda-ch-mset_ru00015">
@@ -1002,7 +1016,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.ImmunizationL3.Target_pa00016">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.ImmunizationL3.Target']"
             id="cda-ch-mset_ru00016">
@@ -1023,7 +1037,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.StudiesSummaryL2_pa00017">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.StudiesSummaryL2']"
             id="cda-ch-mset_ru00017">
@@ -1084,7 +1098,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.StudiesSummaryL3.Bloodgroup_pa00018">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.StudiesSummaryL3.Bloodgroup']"
             id="cda-ch-mset_ru00018">
@@ -1123,7 +1137,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.StudiesSummaryL3.Bloodgroup.Rhesusfactor_pa00019">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.StudiesSummaryL3.Bloodgroup.Rhesusfactor']"
             id="cda-ch-mset_ru00019">
@@ -1154,7 +1168,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.StudiesSummaryL3.Transfusions_pa00020">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.StudiesSummaryL3.Transfusions']"
             id="cda-ch-mset_ru00020">
@@ -1203,7 +1217,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.MedicalRecordL2_pa00021">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.MedicalRecordsL2']"
             id="cda-ch-mset_ru00021">
@@ -1252,7 +1266,7 @@ History:
    <pattern id="cda-ch-mset_CDA-CH.MSET.Body.MedicalRecordL3_pa00022">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.MedicalRecordL3']"
             id="cda-ch-mset_ru00022">
@@ -1293,7 +1307,7 @@ History:
   <pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-extensions_pa00023">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.34']"
             id="cda-ch-mset_ru00023">
@@ -1308,7 +1322,7 @@ History:
   <pattern id="cda-ch-mset_CDA-CH.MSET.Body.ConsentL3_pa00024">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-mset-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.844+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.902+01:00</xhtml:li>
       </xhtml:ul>
       <rule context="*[cda:templateId/@root='2.16.756.5.30.1.1.1.1.3.2.1' and cda:templateId/@extension='CDA-CH.MSET.Body.ConsentL3']"
             id="cda-ch-mset_ru00024">
@@ -1355,7 +1369,7 @@ History:
 		<xhtml:ul id="cda-ch_medication-section">
 			      <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2013-04-01T20:23:58.1+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2014-01-27T21:45:27.978+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediList&#34;]"
             id="cda-ch-mset_ru00025">
@@ -1397,7 +1411,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_medication-section_pa00026">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:58.1+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.978+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1509,6 +1523,12 @@ History:
 				        <xhtml:p lang="de">Wenn die anatomische Lage bei Medikationsdaten angegeben wird, dann muss dies ein gültiger Wert aus der Wertetabelle 'HumanSubstanceAdministrationSite (2.16.840.1.113883.5.1052)' sein)</xhtml:p>
 				        <xhtml:p lang="en">When an adminstration site is declared with medication, it must contain a valid value from the value set 'HumanSubstanceAdministrationSite (2.16.840.1.113883.5.1052)'</xhtml:p>
 			      </assert>
+			      <!-- LOT-Nr -->
+			<assert role="information"
+                 id="cda-ch-mset_cda-ch_medication-section-0213_as00145"
+                 test="cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:lotNumberText">
+				        <xhtml:p lang="de">Dem Medikament ist keine Chargennummer zugeordnet (die LOT-Nr. fehlt)</xhtml:p>
+			      </assert>
 		    </rule>
 
 		    <!--	Template Check -->
@@ -1526,7 +1546,7 @@ History:
 
 			      <!--	Dosierung	-->
 			<assert role="error"
-                 id="cda-ch-mset_cda-ch_medication-section-0251_as00145"
+                 id="cda-ch-mset_cda-ch_medication-section-0251_as00146"
                  test="cda:doseQuantity">
 				        <xhtml:p lang="de">Die Dosierung muss gemäss Addendum zum VHitG Arztbrief, Kapitel 1.2.7 spezifiziert werden</xhtml:p>
 				        <xhtml:p lang="fr">Le dosage doit être spécifié selon l'addenda au VHitG Arztbrief, chapitre 1.2.7</xhtml:p>
@@ -1535,7 +1555,7 @@ History:
 			      </assert>
 			      <!--	Einnahmeplan	-->
 			<assert role="error"
-                 id="cda-ch-mset_cda-ch_medication-section-0252_as00146"
+                 id="cda-ch-mset_cda-ch_medication-section-0252_as00147"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">Der Einnahmeplan muss gemäss Addendum zum VHitG Arztbrief, Kapitel 1.2.7 spezifiziert werden</xhtml:p>
 				        <xhtml:p lang="fr">Le plan d'administration doit être spécifié selon l'addenda au VHitG Arztbrief, chapitre 1.2.7</xhtml:p>
@@ -1543,7 +1563,7 @@ History:
 				        <xhtml:p lang="en">The administration schedule must be specified according to the Addendum to the VHitG Arztbrief, chapter 1.2.7</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_cda-ch_medication-section-0253_as00147"
+                 id="cda-ch-mset_cda-ch_medication-section-0253_as00148"
                  test="count(cda:doseQuantity/cda:center)=0 or cda:doseQuantity/cda:center/@value!=&#34;0&#34;">
 				        <xhtml:p lang="de">Die Dosierung darf nicht 0 oder leer sein</xhtml:p>
 				        <xhtml:p lang="fr">Le dosage ne doit pas être 0 ou vide</xhtml:p>
@@ -1556,7 +1576,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_medication-section_pa00027">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:58.1+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.978+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--	CDA-CH.Body.MediL3 Checks -->
 		<rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediL3&#34;]"
@@ -1572,7 +1592,7 @@ History:
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH Medication Entry Templates</xhtml:p>
 			      <!--	Korrekte RIM Klasse 	-->
 			<assert role="error"
-                 id="cda-ch-mset_cda-ch_medication-section-0301_as00148"
+                 id="cda-ch-mset_cda-ch_medication-section-0301_as00149"
                  test="self::cda:substanceAdministration">
 				        <xhtml:p lang="de">Medikationsdaten müssen als 'substanceAdministration' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les données de médication doivent être déclarées comme 'substanceAdministration' dans le CDA Body</xhtml:p>
@@ -1581,17 +1601,17 @@ History:
 			      </assert>
 			      <!--	Bezeichnung 	-->
 			<assert role="error"
-                 id="cda-ch-mset_cda-ch_medication-section-0302_as00149"
+                 id="cda-ch-mset_cda-ch_medication-section-0302_as00150"
                  test="cda:text">
 				        <xhtml:p lang="de">Medikationsdaten müssen auch im entry einen narrativen Text enthalten (Bezeichnung des Artikels)</xhtml:p>
 				        <xhtml:p lang="fr">Les données de médication doivent contenir un texte narratif également dans l'entry (désignation de l'article)</xhtml:p>
 				        <xhtml:p lang="it">I dati delle medicazioni devono contenere anche nell'entry un testo narrativo (designazione dell'articolo)</xhtml:p>
 				        <xhtml:p lang="en">Medication data must also contain a narrative text in the entry (Name of the article)</xhtml:p>
 			      </assert>
-			      <!--	IHE PCC Templates (für xPHR Extract und xPHR Update) -->
+			      <!--	IHE PCC Templates (für xPHR Extract - 1.3.6.1.4.1.19376.1.5.3.1.1.5 und xPHR Update - 1.3.6.1.4.1.19376.1.5.3.1.1.6) -->
 			<assert role="warning"
-                 id="cda-ch-mset_cda-ch_medication-section-0303_as00150"
-                 test="cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;">
+                 id="cda-ch-mset_cda-ch_medication-section-0303_as00151"
+                 test="not(/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.5&#34; or @root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.6&#34;]) or cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;">
 				        <xhtml:p lang="de">Medikationsdaten sollten das IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7) implementieren</xhtml:p>
 				        <xhtml:p lang="fr">Les données de médication doivent implémenter l'IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
 				        <xhtml:p lang="it">I dati delle medicazioni dovrebbero implementare l'IHE PCC Template 'Medications' (1.3.6.1.4.1.19376.1.5.3.1.4.7)</xhtml:p>
@@ -1608,7 +1628,7 @@ History:
 		<xhtml:ul id="cda-ch_vitalsigns">
 			      <xhtml:li class="filename">cda-ch_vitalsigns.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2013-04-01T20:23:58.122+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2014-01-27T21:45:27.984+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1626,7 +1646,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Vital signs)</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_cda-ch_vitalsigns-0101_as00151"
+                 id="cda-ch-mset_cda-ch_vitalsigns-0101_as00152"
                  test="count(cda:administrativeGenderCode)&gt;0">
 				        <xhtml:p lang="de">Beim Patient fehlt die Angabe des Geschlechts</xhtml:p>
 				        <xhtml:p lang="fr">L'indication du sexe manque pour le patient</xhtml:p>
@@ -1634,7 +1654,7 @@ History:
 				        <xhtml:p lang="en">The patient’s sex entry is missing</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_cda-ch_vitalsigns-0102_as00152"
+                 id="cda-ch-mset_cda-ch_vitalsigns-0102_as00153"
                  test="cda:administrativeGenderCode[@nullFlavor or @codeSystem=&#34;2.16.840.1.113883.5.1&#34;]">
 				        <xhtml:p lang="de">Ungültiges Codesystem bei der Angabe des Geschlechts des Patienten</xhtml:p>
 				        <xhtml:p lang="fr">Codesystem non valable pour l'indication du sexe du patient</xhtml:p>
@@ -1642,7 +1662,7 @@ History:
 				        <xhtml:p lang="en">Invalid code system for patient’s sex entry</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_cda-ch_vitalsigns-0103_as00153"
+                 id="cda-ch-mset_cda-ch_vitalsigns-0103_as00154"
                  test="cda:administrativeGenderCode[@nullFlavor or @code=$cda-ch-codeSystem[@codeSystemName=&#34;AdministrativeGender&#34;]/code/@value]">
 				        <xhtml:p lang="de">Ungültige Angabe beim Geschlecht des Patienten</xhtml:p>
 				        <xhtml:p lang="fr">Indication non valable pour le sexe du patient</xhtml:p>
@@ -1650,7 +1670,7 @@ History:
 				        <xhtml:p lang="en">Invalid entry for the patient’s sex</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_cda-ch_vitalsigns-0104_as00154"
+                 id="cda-ch-mset_cda-ch_vitalsigns-0104_as00155"
                  test="count(cda:birthTime)&gt;0">
 				        <xhtml:p lang="de">Beim Patient fehlt die Angabe des Geburtsdatums</xhtml:p>
 				        <xhtml:p lang="fr">L'indication de la date de naissance manque pour le patient</xhtml:p>
@@ -1672,7 +1692,7 @@ History:
 		<xhtml:ul id="entity_HL7-cda-ch">
 			      <xhtml:li class="filename">cda-ch.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1691,7 +1711,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Employer)</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0101_as00155"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0101_as00156"
                  test="self::cda:participant/@typeCode=&#34;IND&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitgeber' müssen als 'participant' mit typeCode 'IND' im CDA Header deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">L''Employeur' CDA-CH doit être déclaré comme 'participant' avec le typeCode 'IND' dans le CDA Header</xhtml:p>
@@ -1699,7 +1719,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Employer' must be declared as a 'Participant' with typeCode 'IND' in the CDA Header</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0102_as00156"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0102_as00157"
                  test="cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.2.2&#34;">
 				        <xhtml:p lang="de">CDA-CH Arbeitgeber müssen mit der IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2) deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">L''Employeur' CDA-CH doit être déclaré avec l'IHE PCC Specification 'Employer and School Contacts' (1.3.6.1.4.1.19376.1.5.3.1.2)</xhtml:p>
@@ -1711,7 +1731,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00030">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.Insurance&#34;]"
             id="cda-ch-mset_ru00031">
@@ -1725,7 +1745,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Insurances)</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0201_as00157"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0201_as00158"
                  test="self::cda:participant/@typeCode=&#34;COV&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Versicherungen' müssen als 'participant' mit typeCode 'COV' im CDA Header deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">'Assurances' CDA-CH doivent être déclaré comme 'participant' avec le typeCode 'COV' dans le CDA Header</xhtml:p>
@@ -1733,7 +1753,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Insurances' must be declared as a 'Participant' with typeCode 'COV' in the CDA Header</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0202_as00158"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0202_as00159"
                  test="self::cda:participant">
 				        <xhtml:p lang="de">CDA-CH 'Versicherungen' müssen als 'participant' im CDA Header deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Assurances' CDA-CH doivent être déclarées comme 'participant' dans le CDA Header</xhtml:p>
@@ -1741,27 +1761,34 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Insurances' must be declared as a 'Participant' in the CDA Header</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0203_as00159"
-                 test="cda:associatedEntity[@classCode=&#34;COVPTY&#34;]/cda:scopingOrganization">
-				        <xhtml:p lang="de">CDA-CH 'Versicherungen' müssen mit einer 'associatedEntity/scopingOrganization' und dem associatedEntity Attribut classCode="COVPTY" deklariert werden</xhtml:p>
-				        <xhtml:p lang="fr">Les 'Assurances' CDA-CH doivent contenir une 'associatedEntity/scopingOrganization' avec l'attribut classCode="COVPTY" pour associatedEntity</xhtml:p>
-				        <xhtml:p lang="it">Le 'Assicurazioni' CDA-CH devono contenere un 'associatedEntity/scopingOrganization' con attributo classCode="COVPTY" per associatedEntity</xhtml:p>
-				        <xhtml:p lang="en">CDA-CH 'Insurances' must be declared using a 'associatedEntity/scopingOrganization' and an associatedEntity attribute classCode="COVPTY"</xhtml:p>
+                 id="cda-ch-mset_entity_HL7-cda-ch-0203_as00160"
+                 test="cda:associatedEntity[@classCode=&#34;PAYOR&#34;]/cda:scopingOrganization">
+				        <xhtml:p lang="de">CDA-CH 'Versicherungen' müssen mit einer 'associatedEntity/scopingOrganization' und dem associatedEntity Attribut classCode="PAYOR" deklariert werden</xhtml:p>
+				        <xhtml:p lang="fr">Les 'Assurances' CDA-CH doivent contenir une 'associatedEntity/scopingOrganization' avec l'attribut classCode="PAYOR" pour associatedEntity</xhtml:p>
+				        <xhtml:p lang="it">Le 'Assicurazioni' CDA-CH devono contenere un 'associatedEntity/scopingOrganization' con attributo classCode="PAYOR" per associatedEntity</xhtml:p>
+				        <xhtml:p lang="en">CDA-CH 'Insurances' must be declared using a 'associatedEntity/scopingOrganization' and an associatedEntity attribute classCode="PAYOR"</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0204_as00160"
-                 test="cda:associatedEntity[@classCode=&#34;COVPTY&#34;]/cda:id[@root=&#34;1.3.88&#34;]">
+                 id="cda-ch-mset_entity_HL7-cda-ch-0204_as00161"
+                 test="(cda:associatedEntity[@classCode=&#34;PAYOR&#34;]/cda:scopingOrganization/cda:id[@root=&#34;1.3.88&#34;]) or (cda:associatedEntity[@classCode=&#34;PAYOR&#34;]/cda:id[@root=&#34;1.3.88&#34;])">
 				        <xhtml:p lang="de">CDA-CH 'Versicherungen' müssen mit der GLN identifiziert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Assurances' CDA-CH doivent êtres identifies avec le GLN</xhtml:p>
 				        <xhtml:p lang="it">Le 'Assicurazioni' CDA-CH devono essere identificati con GLN</xhtml:p>
 				        <xhtml:p lang="en">CDA-CH 'Insurances' must be identified using a GLN</xhtml:p>
+			      </assert>
+			      <assert role="warning"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0205_as00162"
+                 test="not(cda:associatedEntity[@classCode=&#34;PAYOR&#34;]/cda:id[@root=&#34;1.3.88&#34;])">
+				        <xhtml:p lang="de">Die GLN von CDA-CH 'Versicherungen' soll neu unter scopingOrganization deklariert werden</xhtml:p>
+				        <xhtml:p lang="fr">Le GLN des 'Assurances' CDA-CH doit être redéclarée sous scopingOrganization</xhtml:p>
+				        <xhtml:p lang="en">The GLN of CDA-CH 'Insurances' should be redeclared under scopingOrganization</xhtml:p>
 			      </assert>
 		    </rule>
 	  </pattern>
 	  <pattern id="cda-ch-mset_cda-ch_pa00031">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.InsuranceCard&#34;]"
             id="cda-ch-mset_ru00032">
@@ -1775,7 +1802,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH Header Templates</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH Header Templates (Insurancecard)</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0301_as00161"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0301_as00163"
                  test="self::cda:participant/@typeCode=&#34;HLD&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Versichertenkarte' muss als 'participant' mit typeCode 'HLD' im CDA Header deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'carte d’assuré' CDA-CH doit être déclaré comme 'participant' avec le typeCode 'HLD' dans le CDA Header</xhtml:p>
@@ -1783,27 +1810,33 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Insurancecard' must be declared as a 'Participant' with typeCode 'HLD' in the CDA Header</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0302_as00162"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0302_as00164"
                  test="self::cda:participant">
 				        <xhtml:p lang="de">CDA-CH 'Versicherungskarte' muss als 'participant' im CDA Header deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'carte d’assuré' CDA-CH doit être déclarées comme 'participant' dans le CDA Header</xhtml:p>
 				        <xhtml:p lang="it">Il 'carta di assicurazione' CDA-CH devono essere dichiarati come 'participant' nel CDA Header</xhtml:p>
 				        <xhtml:p lang="en">CDA-CH 'Insurancecard' must be declared as a 'Participant' in the CDA Header</xhtml:p>
 			      </assert>
-			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0303_as00163"
+			      <report role="warning"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0303_re00001"
                  test="cda:associatedEntity[@classCode=&#34;POLHOLD&#34;]/cda:id[@root=&#34;2.16.756.5.34&#34;]">
-				        <xhtml:p lang="de">CDA-CH 'Versichertenkarte' die Nummer der Karte als id enthalten (OID für die Versichertenkarte: 2.16.756.5.34)</xhtml:p>
-				        <xhtml:p lang="fr">La 'carte d’assuré' CDA-CH doit contenir le numero de la carte comme id (OID pour la carte d’assuré: 2.16.756.5.34)</xhtml:p>
-				        <xhtml:p lang="it">Il 'carta di assicurazione' CDA-CH deve contenere il numero della carta come id (OID per la carta di assicurazione: 2.16.756.5.34)</xhtml:p>
-				        <xhtml:p lang="en">CDA-CH 'Insurancecard' must contain the cardnumber as id (OID for the insurance card: 2.16.756.5.34)</xhtml:p>
+				        <xhtml:p lang="de">CDA-CH 'Versichertenkarte' enthält eine veralte OID für die Versichertenkarte (2.16.756.5.34). Die OID 2.16.756.5.30.1.123.100.1.1.1 wird bevorzugt.</xhtml:p>
+				        <xhtml:p lang="en">CDA-CH 'Insurancecard' contains a deprecated OID for the insurance card (2.16.756.5.34). The OID 2.16.756.5.30.1.123.100.1.1.1 is preferred.</xhtml:p>
+			      </report>
+			      <assert role="error"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0303_as00165"
+                 test="cda:associatedEntity[@classCode=&#34;POLHOLD&#34;]/cda:id[@root=&#34;2.16.756.5.30.1.123.100.1.1.1&#34; or @root=&#34;2.16.756.5.34&#34;]">
+				        <xhtml:p lang="de">CDA-CH 'Versichertenkarte' muss die Nummer der Karte als id enthalten (OID für die Versichertenkarte: 2.16.756.5.30.1.123.100.1.1.1)</xhtml:p>
+				        <xhtml:p lang="fr">La 'carte d’assuré' CDA-CH doit contenir le numero de la carte comme id (OID pour la carte d’assuré: 2.16.756.5.30.1.123.100.1.1.1)</xhtml:p>
+				        <xhtml:p lang="it">Il 'carta di assicurazione' CDA-CH deve contenere il numero della carta come id (OID per la carta di assicurazione: 2.16.756.5.30.1.123.100.1.1.1)</xhtml:p>
+				        <xhtml:p lang="en">CDA-CH 'Insurancecard' must contain the cardnumber as id (OID for the insurance card: 2.16.756.5.30.1.123.100.1.1.1)</xhtml:p>
 			      </assert>
 		    </rule>
 	  </pattern>
 	  <pattern id="cda-ch-mset_cda-ch_pa00032">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1827,7 +1860,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH remarks</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH remarks</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0401_as00164"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0401_as00166"
                  test="self::cda:section">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen als 'section' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent être déclarées comme 'section' dans le CDA Body</xhtml:p>
@@ -1835,7 +1868,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' must be declared as a 'Section' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0402_as00165"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0402_as00167"
                  test="((cda:title=&#34;Bemerkungen&#34; or cda:title=&#34;Kommentar&#34;) and //cda:languageCode/@code=&#34;de-CH&#34;) or //cda:languageCode/@code!=&#34;de-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' in Deutsch müssen einen section title 'Bemerkungen' oder 'Kommentar' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH en allemand doivent contenir un section title 'Bemerkungen' ou 'Kommentar'</xhtml:p>
@@ -1843,7 +1876,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' in German must contain a 'Bemerkungen' or 'Kommentar' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0403_as00166"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0403_as00168"
                  test="((cda:title=&#34;Remarques&#34; or cda:title=&#34;Commentaire&#34;) and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' in Französisch müssen einen section title 'Remarques' oder 'Commentaire' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH en français doivent contenir un section title 'Remarques' ou 'Commentaire'</xhtml:p>
@@ -1851,7 +1884,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' in French must contain a 'Remarques' or 'Commentaire' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0404_as00167"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0404_as00169"
                  test="((cda:title=&#34;Osservazioni&#34; or cda:title=&#34;Osservazione&#34;) and //cda:languageCode/@code=&#34;it-CH&#34;) or //cda:languageCode/@code!=&#34;it-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' in Italienisch müssen einen section title 'Osservazioni' oder 'Osservazione' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH en italien doivent contenir un section title 'Osservazioni' ou 'Osservazione'</xhtml:p>
@@ -1859,7 +1892,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' in Italian must contain a 'Osservazioni' or 'Osservazione' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0405_as00168"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0405_as00170"
                  test="((cda:title=&#34;Remarks&#34; or cda:title=&#34;Comment&#34;) and //cda:languageCode/@code=&#34;en&#34;) or //cda:languageCode/@code!=&#34;en&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' in Englisch müssen einen section title 'Remarks' oder 'Comment' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH en anglais doivent contenir un section title 'Remarks' ou 'Comment'</xhtml:p>
@@ -1868,7 +1901,7 @@ History:
 			      </assert>
          <!-- Verify the section type code -->
       <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0406_as00169"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0406_as00171"
                  test="cda:code[@code=&#34;48767-8&#34; and @codeSystem=&#34;2.16.840.1.113883.6.1&#34;]">
 				        <xhtml:p lang="de">CDA-CH  müssen den folgenden Section Code aus LOINC aufweisen: 48767-8</xhtml:p>
 	           <xhtml:p lang="en">For CDA-CH Comments, the section type code must come from LOINC: 48767-8</xhtml:p>
@@ -1878,7 +1911,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00033">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1897,7 +1930,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH list of diagnoses</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of diagnoses</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0501_as00170"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0501_as00172"
                  test="self::cda:section">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
@@ -1905,7 +1938,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' must be declared as a 'Section' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0502_as00171"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0502_as00173"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' muss einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH doit contenir un texte narratif</xhtml:p>
@@ -1913,7 +1946,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0503_as00172"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0503_as00174"
                  test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&#34;Diagnosen&#34; and //cda:languageCode/@code=&#34;de-CH&#34;) or //cda:languageCode/@code!=&#34;de-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' in Deutsch muss einen section title 'Diagnosen' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH en allemand doit contenir un section title 'Diagnosen'</xhtml:p>
@@ -1921,7 +1954,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' in German must contain a 'Diagnosen' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0504_as00173"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0504_as00175"
                  test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&#34;Diagnostics&#34; and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' in Französisch muss einen section title 'Diagnostics' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH en français doit contenir un section title 'Diagnostics'</xhtml:p>
@@ -1929,7 +1962,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' in French must contain a 'Diagnostics' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0505_as00174"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0505_as00176"
                  test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&#34;Diagnosi&#34; and //cda:languageCode/@code=&#34;it-CH&#34;) or //cda:languageCode/@code!=&#34;it-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' in Italienisch muss einen section title 'Diagnosi' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH en italien doit contenir un section title 'Diagnosi'</xhtml:p>
@@ -1937,7 +1970,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' in Italian must contain a 'Diagnosi' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0506_as00175"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0506_as00177"
                  test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.9']) or (cda:title=&#34;Diagnoses&#34; and //cda:languageCode/@code=&#34;en&#34;) or //cda:languageCode/@code!=&#34;en&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' in Englisch muss einen section title 'Diagnoses' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH en anglais doit contenir un section title 'Diagnoses'</xhtml:p>
@@ -1945,7 +1978,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' in English must contain a 'Diagnoses' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0507_as00176"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0507_as00178"
                  test="cda:code/@codeSystem=&#34;2.16.840.1.113883.6.1&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
@@ -1953,7 +1986,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0508_as00177"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0508_as00179"
                  test="cda:code/@code=$cda-ch-codeSystem[@codeSystemName=&#34;DiagnosisSectionCode&#34;]/code/@value">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
@@ -1961,7 +1994,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of diagnoses' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0509_as00178"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0509_as00180"
                  test="descendant::*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and (cda:templateId/@extension=&#34;CDA-CH.Body.DiagL1&#34; or cda:templateId/@extension=&#34;CDA-CH.Body.DiagL3&#34;)]">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosenliste' muss mindestens eine observation 'Diagnose' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de diagnostics' CDA-CH doit contenir au moins une observation 'Diagnostic'</xhtml:p>
@@ -1973,7 +2006,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00034">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1992,7 +2025,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L1 list of diagnoses</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on CDA-CH list of diagnoses</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0601_as00179"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0601_as00181"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body (section 'Diagnosen') deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Diagnostics')</xhtml:p>
@@ -2000,7 +2033,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must be declared as an 'Observation' in the CDA Body ('Diagnoses' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0602_as00180"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0602_as00182"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent contenir une date de constatation</xhtml:p>
@@ -2008,7 +2041,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a date of detection</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0603_as00181"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0603_as00183"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2020,7 +2053,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00035">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2039,7 +2072,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L3 single diagnosis</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on a diagnosis in level 3</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0701_as00182"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0701_as00184"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen als 'observation' im CDA Body deklariert werden (section 'Diagnosen')</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Diagnostics')</xhtml:p>
@@ -2047,7 +2080,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must be declared as an 'Observation' in the CDA Body ('Diagnoses' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0702_as00183"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0702_as00185"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen ein Datum der Feststellung enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent contenir une date de constatation</xhtml:p>
@@ -2055,7 +2088,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a date of detection</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0703_as00184"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0703_as00186"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2063,7 +2096,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0704_as00185"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0704_as00187"
                  test="cda:code/@codeSystem">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
@@ -2071,7 +2104,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0705_as00186"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0705_as00188"
                  test="cda:code/@code">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen einen Code enthalten (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent contenir un code (CDA Body Level 3)</xhtml:p>
@@ -2079,7 +2112,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Diagnoses' must contain a code (CDA Body Level 3)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0706_as00187"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0706_as00189"
                  test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
 				        <xhtml:p lang="de">CDA-CH 'Diagnosen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Diagnostics' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
@@ -2091,7 +2124,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00036">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2110,7 +2143,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH list of vital signs</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on CDA-CH vital signs</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0801_as00188"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0801_as00190"
                  test="self::cda:section">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
@@ -2118,7 +2151,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must be declared as a 'Section' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0802_as00189"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0802_as00191"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' muss einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH doit contenir un texte narratif</xhtml:p>
@@ -2126,7 +2159,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0803_as00190"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0803_as00192"
                  test="(cda:title=&#34;Vitalzeichen&#34; and //cda:languageCode/@code=&#34;de-CH&#34;) or //cda:languageCode/@code!=&#34;de-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' in Deutsch muss einen section title 'Vitalzeichen' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH en allemand doit contenir un section title 'Vitalzeichen'</xhtml:p>
@@ -2134,7 +2167,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' in German must contain a 'Vitalzeichen' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0804_as00191"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0804_as00193"
                  test="(cda:title=&#34;Signes vitaux&#34; and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' in Französisch muss einen section title 'Signes vitaux' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH en français doit contenir un section title 'Signes vitaux'</xhtml:p>
@@ -2142,7 +2175,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' in French must contain a 'Signes vitaux' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0805_as00192"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0805_as00194"
                  test="(cda:title=&#34;Segni vitali&#34; and //cda:languageCode/@code=&#34;it-CH&#34;) or //cda:languageCode/@code!=&#34;it-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' in Italienisch muss einen section title 'Segni vitali' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH en italien doit contenir un section title 'Segni vitali'</xhtml:p>
@@ -2150,7 +2183,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' in Italian must contain a 'Segni vitali' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0806_as00193"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0806_as00195"
                  test="(cda:title=&#34;Vital signs&#34; and //cda:languageCode/@code=&#34;en&#34;) or //cda:languageCode/@code!=&#34;en&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' in Englisch muss einen section title 'Vital signs' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH en anglais doit contenir un section title 'Vital signs'</xhtml:p>
@@ -2158,7 +2191,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' in English must contain a 'Vital signs' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0807_as00194"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0807_as00196"
                  test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.1&#34; and @code=&#34;8716-3&#34;]">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (LOINC Code 8716-3 "Vital signs"; OID für LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH doit contenir un codage de la signification de la section selon LOINC (LOINC Code 8716-3 "Vital signs"; OID pour LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
@@ -2169,7 +2202,7 @@ History:
 			entity_HL7-cda-ch-1305 in entity_HL7-cda-ch-1304 integriert
 			-->
 			<assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0808_as00195"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0808_as00197"
                  test="descendant::*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and (cda:templateId/@extension=&#34;CDA-CH.Body.VitalSignL1&#34; or cda:templateId/@extension=&#34;CDA-CH.Body.VitalSignL3&#34;)]">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichenliste' muss mindestens eine observation 'Vitalzeichen' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste des signes vitaux' CDA-CH doit contenir au moins une observation 'Signes vitaux'</xhtml:p>
@@ -2181,7 +2214,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00037">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2200,7 +2233,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L3 single vital sign</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the test on a vital sign in level 3</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0901_as00196"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0901_as00198"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Signes vitaux')</xhtml:p>
@@ -2208,7 +2241,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must be declared as an 'Observation' in theCDA Body ('Vital signs' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0902_as00197"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0902_as00199"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen ein Datum der Feststellung enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent contenir une date de constatation</xhtml:p>
@@ -2216,7 +2249,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must contain a date of detection</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0903_as00198"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0903_as00200"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2224,15 +2257,15 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0904_as00199"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0904_as00201"
                  test="cda:code/@codeSystem">
-				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen einen Code enthalten und das Code System angeben)</xhtml:p>
+				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen einen Code enthalten und das Code System angeben</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent contenir un code et mentionner le Code System</xhtml:p>
 				        <xhtml:p lang="it">I CDA-CH 'Segni vitali' devono contenere un codice e indicare il Code System</xhtml:p>
-				        <xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code and state the coding system)</xhtml:p>
+				        <xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code and state the coding system</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0905_as00200"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0905_as00202"
                  test="cda:code/@code">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen einen Code enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent contenir un code</xhtml:p>
@@ -2240,7 +2273,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must contain a code</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0906_as00201"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0906_as00203"
                  test="cda:code/@codeSystem=&#34;2.16.840.1.113883.6.1&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code angegeben werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent être indiqués avec un code LOINC</xhtml:p>
@@ -2248,7 +2281,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must be declared using a LOINC code</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0907_as00202"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0907_as00204"
                  test="cda:code/@code=$cda-ch-codeSystem[@root=&#34;2.16.756.5.30.2.1.1.5.1&#34; and @codeSystemName=&#34;VitalSignCodes&#34;]/code/@value">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen mit einem LOINC Code aus der Wertetabelle 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1' angegeben werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent être indiqués avec un code LOINC du tableau de valeurs 'VitalSignCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
@@ -2256,7 +2289,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' must be entered with a LOINC code from the table of values 'VitalSignsCodes, 2.16.756.5.30.2.1.1.5.1'</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0908_as00203"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0908_as00205"
                  test="cda:code/@code!=&#34;11449-6&#34; or (cda:code/@code=&#34;11449-6&#34; and cda:value/@codeSystem=&#34;2.16.756.5.30.2.1.1.4.1&#34;)">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' Schwangerschaftstatus muss als CE mit codeSystem 2.16.756.5.30.2.1.1.4.1 angegeben werden</xhtml:p>
 				        <xhtml:p lang="fr">Le 'signe vital' CDA-CH Etat de la grossesse doit être indiqué comme CE avec le codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
@@ -2264,7 +2297,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' pregnancy status must be entered as a CE with the codeSystem 2.16.756.5.30.2.1.1.4.1</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0909_as00204"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0909_as00206"
                  test="cda:code/@code!=&#34;11449-6&#34; or (cda:code/@code=&#34;11449-6&#34; and cda:value/@code=$cda-ch-codeSystem[@root=&#34;2.16.756.5.30.2.1.1.4.1&#34;]/code/@value)">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' für 'Schwangerschaftstatus' müssen mit einem LOINC Code aus der Wertetabelle 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1' angegeben werden)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH pour 'Etat de la grossesse' doivent être indiqués avec un code LOINC du tableau de valeurs 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1'</xhtml:p>
@@ -2272,7 +2305,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Vital signs' for 'Pregnancy status' must be entered with a LOINC code from the table of values 'PregnancyStatus, 2.16.756.5.30.2.1.1.4.1')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-0910_as00205"
+                 id="cda-ch-mset_entity_HL7-cda-ch-0910_as00207"
                  test="cda:value">
 				        <xhtml:p lang="de">CDA-CH 'Vitalzeichen' müssen ein Wert enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'signes vitaux' CDA-CH doivent contenir une valeur</xhtml:p>
@@ -2284,7 +2317,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00038">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2303,7 +2336,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH list of intolerances (Allergies / Intolerances)</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of intolerances (Allergies / Intolerances)</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1001_as00206"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1001_as00208"
                  test="self::cda:section">
 				        <xhtml:p lang="de">CDA-CH 'Intoleranzliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste d'intolérances' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
@@ -2311,7 +2344,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of intolerances' must be declared as a 'Section' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1002_as00207"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1002_as00209"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Intoleranzliste' muss einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste d'intolérances' CDA-CH doit contenir un texte narratif</xhtml:p>
@@ -2319,7 +2352,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of intolerances' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1003_as00208"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1003_as00210"
                  test="(cda:title=&#34;Allergien und Unverträglichkeiten&#34; and //cda:languageCode/@code=&#34;de-CH&#34;) or //cda:languageCode/@code!=&#34;de-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Intoleranzliste' in Deutsch muss einen section title 'Allergien und Unverträglichkeiten' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste d'intolérances' CDA-CH en allemand doit contenir un section title 'Allergien und Unverträglichkeiten'</xhtml:p>
@@ -2327,7 +2360,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of intolerances' in German must contain an 'Allergies and intolerances' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1004_as00209"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1004_as00211"
                  test="(cda:title=&#34;Allergies et intolérances&#34; and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Intoleranzliste' in Französisch muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste d'intolérances' CDA-CH en français doit contenir un section title 'Allergies et intolérances'</xhtml:p>
@@ -2335,7 +2368,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of intolerances' in French must contain an 'Allergies et intolérances' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1005_as00210"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1005_as00212"
                  test="(cda:title=&#34;Allergie e intolleranze&#34; and //cda:languageCode/@code=&#34;it-CH&#34;) or //cda:languageCode/@code!=&#34;it-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Intoleranzliste' in Italienisch muss einen section title 'Allergie e intolleranze' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste d'intolérances' CDA-CH en italien doit contenir un section title 'Allergie e intolleranze'</xhtml:p>
@@ -2343,7 +2376,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of intolerances' in Italian must contain an 'Allergie e intolleranze' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1006_as00211"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1006_as00213"
                  test="(cda:title=&#34;Allergies et intolérances&#34; and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Intoleranzliste' in Englisch muss einen section title 'Allergies et intolérances' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste d'intolérances' CDA-CH en anglais doit contenir un section title 'Allergies et intolérances'</xhtml:p>
@@ -2355,7 +2388,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00039">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2374,7 +2407,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L3 single allergy or intolerance</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on an allergy or intolerance on level 3</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1101_as00212"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1101_as00214"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">Allergien und Unverträglichkeiten müssen als 'observation' im CDA Body (section 'Allergien und Unverträglichkeiten') deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Allergies et intolérances doivent être déclarées comme 'observation' dans le CDA Body (section 'Allergies et intolérances')</xhtml:p>
@@ -2382,7 +2415,7 @@ History:
 				        <xhtml:p lang="en">Allergies and intolerances must be declared as an 'Observation' in the CDA Body ('Allergies and intolerances' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1102_as00213"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1102_as00215"
                  test="cda:code/@codeSystem=&#34;2.16.756.5.30.2.1.1.3.1&#34;">
 				        <xhtml:p lang="de">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
 				        <xhtml:p lang="fr">Allergies et intolérances doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
@@ -2390,7 +2423,7 @@ History:
 				        <xhtml:p lang="en">Allergies and intolerances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1103_as00214"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1103_as00216"
                  test="cda:code/@code=$cda-ch-codeSystem[@root=&#34;2.16.756.5.30.2.1.1.3.1&#34;]/code/@value">
 				        <xhtml:p lang="de">Allergien und Unverträglichkeiten müssen eine strukturierte Angabe enthalten (gültiger Wert aus der Wertetabelle '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
 				        <xhtml:p lang="fr">Allergies et intolérances doivent contenir une indication structurée (valeur valable du tableau de valeurs '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
@@ -2398,7 +2431,7 @@ History:
 				        <xhtml:p lang="en">Allergies and intolerances must contain a structured entry (valid value from the table of values '2.16.756.5.30.2.1.1.3.1')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1104_as00215"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1104_as00217"
                  test="(cda:code/@code=&#34;Y&#34; and cda:text) or (cda:code/@code!=&#34;Y&#34;)">
 				        <xhtml:p lang="de">Allergien und Unverträglichkeiten müssen einen narrativen Text enthalten, wenn der code="Y" ist</xhtml:p>
 				        <xhtml:p lang="fr">Allergies et intolérances doivent contenir un texte narratif si le code="Y"</xhtml:p>
@@ -2410,7 +2443,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00040">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2429,7 +2462,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH list with capacity to work entries</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH list with capacity to work entries</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1201_as00216"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1201_as00218"
                  test="self::cda:section">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' muss als 'section' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
@@ -2437,7 +2470,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' must be declared as a 'Section' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1202_as00217"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1202_as00219"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' muss einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH doit contenir un texte narratif</xhtml:p>
@@ -2445,7 +2478,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1203_as00218"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1203_as00220"
                  test="(cda:title=&#34;Arbeitsfähigkeit&#34; and //cda:languageCode/@code=&#34;de-CH&#34;) or //cda:languageCode/@code!=&#34;de-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' in Deutsch muss einen section title 'Arbeitsfähigkeit' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH en allemand doit contenir un section title 'Arbeitsfähigkeit'</xhtml:p>
@@ -2453,7 +2486,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' in German must contain a 'Arbeitsfähigkeit' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1204_as00219"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1204_as00221"
                  test="(cda:title=&#34;Capacité de travail&#34; and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' in Französisch muss einen section title 'Capacité de travail' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH en français doit contenir un section title 'Capacité de travail'</xhtml:p>
@@ -2461,7 +2494,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' in English must contain a 'Capacité de travail' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1205_as00220"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1205_as00222"
                  test="(cda:title=&#34;Capacità lavorativa&#34; and //cda:languageCode/@code=&#34;it-CH&#34;) or //cda:languageCode/@code!=&#34;it-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' in Italienisch muss einen section title 'Capacità lavorativa' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' en italien CDA-CH doit contenir un section title 'Capacità lavorativa'</xhtml:p>
@@ -2469,7 +2502,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' in Italian must contain a 'Capacità lavorativa' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1206_as00221"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1206_as00223"
                  test="(cda:title=&#34;Capacity to work&#34; and //cda:languageCode/@code=&#34;en&#34;) or //cda:languageCode/@code!=&#34;en&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' in Englisch muss einen section title 'Capacity to work' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH en anglais doit contenir un section title 'Capacity to work'</xhtml:p>
@@ -2477,7 +2510,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' in English must contain a 'Capacity to work' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1207_as00222"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1207_as00224"
                  test="cda:code/@codeSystem=&#34;2.16.840.1.113883.6.1&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section nach LOINC enthalten (OID für LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH doit contenir un codage de la signification de la section selon LOINC (OID pour LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
@@ -2485,7 +2518,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a coding of the significance of the section according to LOINC (OID for LOINC: 2.16.840.1.113883.6.1)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1208_as00223"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1208_as00225"
                  test="cda:code/@code=&#34;X-ATWRK&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' muss eine Codierung der Bedeutung der Section enthalten (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH doit contenir un codage de la signification de la section (code LOINC X-ATWRK selon la lettre abrégée de rééducation VHitG)</xhtml:p>
@@ -2493,7 +2526,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Capacity to work' must contain a coding of the significance of the section (LOINC Code X-ATWRK according to VHitG REHA short letter)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1209_as00224"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1209_as00226"
                  test="descendant::*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.ArbeitsfähigkeitL3&#34;]">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit' muss mindestens eine observation 'Beurteilung Arbeitsfähigkeit' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'Capacité de travail' CDA-CH doit contenir au moins une observation 'Evaluation de la capacité de travail'</xhtml:p>
@@ -2505,7 +2538,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00041">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2524,7 +2557,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L3 individual capacity to work</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on a capacity to work in level 3</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1301_as00225"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1301_as00227"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen als 'observation' im CDA Body (section 'Vitalzeichen') deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent être déclarées comme 'observation' dans le CDA Body (section 'Signes vitaux')</xhtml:p>
@@ -2532,7 +2565,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must be declared as an 'Observation' in the CDA Body ('Vital signs' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1302_as00226"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1302_as00228"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2540,7 +2573,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1303_as00227"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1303_as00229"
                  test="cda:code/@codeSystem=&#34;2.16.840.1.113883.6.1&#34; and cda:code/@code=&#34;X-ATWRK&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mit LOINC klassifiziert werden (LOINC Code X-ATWRK gemäss VHitG REHA Kurzbrief)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent être classifiées avec LOINC (code LOINC X-ATWRK selon la lettre abrégée de rééducation VHitG)</xhtml:p>
@@ -2548,7 +2581,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must be classified with LOINC (LOINC Code X-ATWRK according to VHitG REHA short letter)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1304_as00228"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1304_as00230"
                  test="cda:effectiveTime/cda:low">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen ein 'Gültig ab Datum' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir une 'date valable à partir de'</xhtml:p>
@@ -2556,7 +2589,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments for fitness of work' must contain a 'Valid from date'</xhtml:p>
 			      </assert>
 			      <assert role="warning"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1305_as00229"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1305_as00231"
                  test="cda:effectiveTime/cda:high">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' sollten ein 'Gültig bis Datum / Datum der geplanten, nächsten Beurteilung' enthalten (letzte Beurteulung kann nullFlavor='NA' enthalten)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir une 'date valable jusqu'à / date de la prochaine évaluation prévue' (la dernière évaluation peut contenir nullFlavor='NA')</xhtml:p>
@@ -2564,7 +2597,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain a 'Valid until date/ date of scheduled next assessment' (last assessment can contain nullFlavor='NA')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1306_as00230"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1306_as00232"
                  test="cda:value/@codeSystem=&#34;2.16.756.5.30.2.1.1.6.1&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Anzahl Stunden/Tag enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir la présence raisonnable en heures/jour</xhtml:p>
@@ -2572,7 +2605,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain the reasonable number of hours/days</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1307_as00231"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1307_as00233"
                  test="cda:value/@code=$cda-ch-codeSystem[@root=&#34;2.16.756.5.30.2.1.1.6.1&#34;]/code/@value">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Anzahl Stunden/Tag) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitStunden', 2.16.756.5.30.2.1.1.6.1 angegeben werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH (présence raisonnable en heures/jour) doivent être indiquées avec une valeur valable du tableau de valeurs 'Capacité de travail en heures', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
@@ -2580,7 +2613,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' (reasonable number of hours/days) must be entered with a valid value from the table of values 'Capacity to work hours', 2.16.756.5.30.2.1.1.6.1</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1308_as00232"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1308_as00234"
                  test="cda:interpretationCode/@codeSystem=&#34;2.16.756.5.30.2.1.1.7.1&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen die zumutbare Arbeitsintensität enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent contenir le degré raisonnable d'intensité du travail</xhtml:p>
@@ -2588,7 +2621,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' must contain the reasonable degree of work intensity</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1309_as00233"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1309_as00235"
                  test="cda:interpretationCode/@code=$cda-ch-codeSystem[@root=&#34;2.16.756.5.30.2.1.1.7.1&#34;]/code/@value">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' (zumutbare Arbeitsintensität) müssen mit einem gültigen Wert aus der Wertetabelle 'ArbeitsfähigkeitIntensität', 2.16.756.5.30.2.1.1.7.1 angegeben werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH (degré raisonnable d'intensité du travail) doivent être indiquées avec une valeur valable du tableau de valeurs 'Capacité de travail en intensité', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
@@ -2596,7 +2629,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Assessments of capacity to work' (reasonable degree of work intensity) must be entered with a valid value from the table of values 'Capacity to work intensity', 2.16.756.5.30.2.1.1.7.1</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1310_as00234"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1310_as00236"
                  test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
 				        <xhtml:p lang="de">CDA-CH 'Arbeitsfähigkeit Beurteilungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Evaluations de la capacité de travail' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le diagnostic ('performer/assignedEntity/assignedPerson/name')</xhtml:p>
@@ -2608,7 +2641,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00042">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2627,7 +2660,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH immunization status</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests for the CDA-CH immunization status</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1401_as00235"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1401_as00237"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Impfung' müssen als 'observation' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Vaccinations' CDA-CH doivent être déclarées comme 'observation' dans le CDA Body</xhtml:p>
@@ -2635,7 +2668,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'immunization' must be declared as 'observation' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1402_as00236"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1402_as00238"
                  test="cda:code/@codeSystem=&#34;2.16.840.1.113883.6.1&#34; and cda:code/@code=$cda-ch-codeSystem[@codeSystemName=&#34;Immunization&#34;]/code/@value">
 				        <xhtml:p lang="de">CDA-CH 'Impfung' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1', Teilmenge Immunization)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Vaccinations' CDA-CH doivent contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1', sous-ensemble immunization)</xhtml:p>
@@ -2643,7 +2676,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'immunization' must contain a coding with the meaning of section (valid value from the value table '2.16.840.1.113883.6.1', subset immunization)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1403_as00237"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1403_as00239"
                  test="cda:effectiveTime/cda:low or cda:effectiveTime/@value">
 				        <xhtml:p lang="de">CDA-CH 'Impfungen' müssen ein Datum enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Vaccinations' CDA-CH doivent contenir une date</xhtml:p>
@@ -2655,7 +2688,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00043">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2674,7 +2707,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH citizenship</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests for the CDA-CH citizenship</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1501_as00238"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1501_as00240"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Nationalität' muss als 'observation' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Nationalité' CDA-CH doit être déclarée comme 'observation' dans le CDA Body</xhtml:p>
@@ -2682,27 +2715,33 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'citizenship' must be declared as 'observation' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1502_as00239"
-                 test="cda:code[@codeSystem=&#34;2.16.756.5.30.1.106.1.10.10&#34; and @code=&#34;103.101.10&#34;]">
-				        <xhtml:p lang="de">CDA-CH 'Nationalität' muss eine Codierung der Bedeutung der Observation nach SMEEX enthalten (SMEEX Code 103.101.10 "nationality"; OID für SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-				        <xhtml:p lang="fr">La 'Nationalité' CDA-CH doit contenir un codage de la signification de l'observation selon SMEEX (SMEEX Code 103.101.10 "nationality"; OID pour SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-				        <xhtml:p lang="it">La CDA-CH 'Nazionalità' deve contenere un codice del significato della section secondo SMEEX (SMEEX Code 103.101.10 "nationality"; OID per SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
-				        <xhtml:p lang="en">CDA-CH 'citizenship' must contain a coding of the significance of the section according to SMEEX (SMEEX Code 103.101.10 "nationality"; OID of SMEEX: 2.16.756.5.30.1.106.1.10.10)</xhtml:p>
+                 id="cda-ch-mset_entity_HL7-cda-ch-1502_as00241"
+                 test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.1&#34; and @code=&#34;66476-3&#34;] or cda:code[@codeSystem=&#34;2.16.756.5.30.1.106.1.10.10&#34; and @code=&#34;103.101.10&#34;]">
+				        <xhtml:p lang="de">CDA-CH 'Nationalität' muss mit dem LOINC Code 66476-3 (Country of citizenship) codiert werden</xhtml:p>
+				        <xhtml:p lang="fr">La 'Nationalité' CDA-CH doit être codée avec le code LOINC 66476-3 (Country of citizenship)</xhtml:p>
+				        <xhtml:p lang="it">La CDA-CH 'Nazionalità' deve essere codificato con il codice LOINC 66476-3 (Country of citizenship)</xhtml:p>
+				        <xhtml:p lang="en">CDA-CH 'citizenship' must be coded with the LOINC Code 66476-3 (Country of citizenship)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1503_as00240"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1503_as00242"
                  test="cda:value[@xsi:type=&#34;II&#34; and @root=&#34;1.0.3166&#34; and @extension=$ISO_3166-1_Entry/ISO_3166-1_Alpha-2_Code_element]">
 				        <xhtml:p lang="de">CDA-CH 'Nationalität' muss einen gültigen alpha-2 code der ISO 3166 Tabelle enthalten (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
 				        <xhtml:p lang="fr">La 'Nationalité' CDA-CH doit contenir un code alpha-2 de ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
 				        <xhtml:p lang="it">La CDA-CH 'Nazionalità' deve contenere un codice alpha-2 secondo ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
 				        <xhtml:p lang="en">CDA-CH 'citizenship' must contain an alpha-2 code from ISO 3166 (OID: 1.0.3166; iso_3166-1_list_en.xml)</xhtml:p>
 			      </assert>
+			      <assert role="error"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1504_as00243"
+                 test="cda:code[@codeSystem=&#34;2.16.756.5.30.1.106.1.10.10&#34; and @code=&#34;103.101.10&#34;]">
+            <xhtml:p lang="de">CDA-CH 'Nationalität' enthält einen veralten Code (2.16.756.5.30.1.106.1.10.10). Der LOINC Code 66476-3 wird bevorzugt.</xhtml:p>
+            <xhtml:p lang="en">CDA-CH 'citizenship' contains a deprecated OID (2.16.756.5.30.1.106.1.10.10). The LOINC code 66476-3 is preferred.</xhtml:p>
+			      </assert>
 		    </rule>
 	  </pattern>
 	  <pattern id="cda-ch-mset_cda-ch_pa00044">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2721,7 +2760,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH list of treatments</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on the CDA-CH list of treatments</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1601_as00241"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1601_as00244"
                  test="self::cda:section">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' muss als 'section' im CDA Body deklariert werden</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH doit être déclarée comme 'section' dans le CDA Body</xhtml:p>
@@ -2729,7 +2768,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' must be declared as a 'Section' in the CDA Body</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1602_as00242"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1602_as00245"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' muss einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH doit contenir un texte narratif</xhtml:p>
@@ -2737,7 +2776,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1603_as00243"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1603_as00246"
                  test="(cda:title=&#34;Behandlungen&#34; and //cda:languageCode/@code=&#34;de-CH&#34;) or //cda:languageCode/@code!=&#34;de-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' in Deutsch muss einen section title 'Behandlungen' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH en allemand doit contenir un section title 'Behandlungen'</xhtml:p>
@@ -2745,7 +2784,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' in German must contain a 'Behandlungen' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1604_as00244"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1604_as00247"
                  test="(cda:title=&#34;Treatments&#34; and //cda:languageCode/@code=&#34;fr-CH&#34;) or //cda:languageCode/@code!=&#34;fr-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' in Französisch muss einen section title 'Treatments' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH en français doit contenir un section title 'Treatments'</xhtml:p>
@@ -2753,7 +2792,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' in French must contain a 'Treatments' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1605_as00245"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1605_as00248"
                  test="(cda:title=&#34;Trattamenti&#34; and //cda:languageCode/@code=&#34;it-CH&#34;) or //cda:languageCode/@code!=&#34;it-CH&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' in Italienisch muss einen section title 'Trattamenti' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH en italien doit contenir un section title 'Trattamenti'</xhtml:p>
@@ -2761,7 +2800,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' in Italian must contain a 'Trattamenti' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1606_as00246"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1606_as00249"
                  test="(cda:title=&#34;Treatments&#34; and //cda:languageCode/@code=&#34;en&#34;) or //cda:languageCode/@code!=&#34;en&#34;">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' in Englisch muss einen section title 'Treatments' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH en anglais doit contenir un section title 'Treatments'</xhtml:p>
@@ -2769,7 +2808,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' in English must contain a 'Treatments' section title</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1607_as00247"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1607_as00250"
                  test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.1&#34; and @code=$cda-ch-codeSystem[@codeSystemName=&#34;TreatmentSectionCode&#34;]/code/@value]">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' muss eine Codierung der Bedeutung der Section enthalten (gültiger Wert aus der Wertetabelle '2.16.840.1.113883.6.1')</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH doit contenir un codage de la signification de la section (valeur valable du tableau de valeurs '2.16.840.1.113883.6.1')</xhtml:p>
@@ -2777,7 +2816,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'List of treatments' must contain a coding of the significance of the section (valid value from the table of values '2.16.840.1.113883.6.1')</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1608_as00248"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1608_as00251"
                  test="descendant::*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and (cda:templateId/@extension=&#34;CDA-CH.Body.ProcL1&#34; or cda:templateId/@extension=&#34;CDA-CH.Body.ProcL3&#34;)]">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungsliste' muss mindestens eine procedure 'Behandlung' enthalten</xhtml:p>
 				        <xhtml:p lang="fr">La 'liste de treatments' CDA-CH doit contenir au moins une procedure 'Treatment'</xhtml:p>
@@ -2789,7 +2828,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00045">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2808,7 +2847,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L1 list of treatments</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on CDA-CH list of treatments</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1701_as00249"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1701_as00252"
                  test="self::cda:procedure">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen als 'procedure' im CDA Body deklariert werden (section 'Behandlungen')</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent être déclarés comme 'procedure' dans le CDA Body (section 'Treatments')</xhtml:p>
@@ -2816,7 +2855,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Treatments' must be declared as an 'Observation' in the CDA Body ('Treatments' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1702_as00250"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1702_as00253"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen ein den Durchführungszeitpunkt resp. -zeitraum enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent contenir le point de temps ou la période d'exécution</xhtml:p>
@@ -2824,7 +2863,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Treatments' must contain a point of time or the period of the execution</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1703_as00251"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1703_as00254"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2836,7 +2875,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00046">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2855,7 +2894,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L3 single Treatment</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on a treatment in level 3</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1801_as00252"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1801_as00255"
                  test="self::cda:procedure">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen als 'procedure' im CDA Body deklariert werden (section 'Behandlungen')</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent être déclarés comme 'procedure' dans le CDA Body (section 'Treatments')</xhtml:p>
@@ -2863,7 +2902,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Treatments' must be declared as an 'Observation' in the CDA Body ('Treatments' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1802_as00253"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1802_as00256"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen ein den Durchführungszeitpunkt resp. -zeitraum enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent contenir le point de temps ou la période d'exécution</xhtml:p>
@@ -2871,7 +2910,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Treatments' must contain a point of time or the period of the execution</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1803_as00254"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1803_as00257"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2879,7 +2918,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Treatments' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1804_as00255"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1804_as00258"
                  test="cda:code[@codeSystem and @code]">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
@@ -2887,7 +2926,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Treatments' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1805_as00256"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1805_as00259"
                  test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
 				        <xhtml:p lang="de">CDA-CH 'Behandlungen' müssen mindestens den Namen des verantwortlichen Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'treatments' CDA-CH doivent indiquer au moins le nom du médecin qui est responsable pur le treatment ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
@@ -2899,7 +2938,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00047">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2918,7 +2957,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH L3 single remark</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on a remark in level 3</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1901_as00257"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1901_as00260"
                  test="self::cda:observation">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen als 'observation' im CDA Body deklariert werden (section 'Bemerkungen')</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent être déclarés comme 'observation' dans le CDA Body (section 'Remarques')</xhtml:p>
@@ -2926,7 +2965,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' must be declared as an 'Observation' in the CDA Body ('Remarks' section)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1902_as00258"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1902_as00261"
                  test="cda:effectiveTime">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen ein Datum der Feststellung enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent contenir une date de constatation</xhtml:p>
@@ -2934,7 +2973,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' must contain a date of detection</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1903_as00259"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1903_as00262"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent contenir un texte narratif</xhtml:p>
@@ -2942,7 +2981,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' must contain a narrative text</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1904_as00260"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1904_as00263"
                  test="cda:code[@codeSystem and @code]">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen einen Code enthalten und das Code System angeben (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent contenir un code et mentionner le Code System (CDA Body Level 3)</xhtml:p>
@@ -2950,7 +2989,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' must contain a code and state the coding system (CDA Body Level 3)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1905_as00261"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1905_as00264"
                  test="cda:performer/cda:assignedEntity/cda:assignedPerson/cda:name">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen mindestens den Namen des beurteilenden Arztes angeben ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent indiquer au moins le nom du médecin qui a posé le Remarque ('performer/assignedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
@@ -2958,7 +2997,7 @@ History:
 				        <xhtml:p lang="en">CDA-CH 'Remarks' must contain at least the assessing doctor’s name ('performer/assignsedEntity/assignedPerson/name') (CDA Body Level 3)</xhtml:p>
 			      </assert>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-1906_as00262"
+                 id="cda-ch-mset_entity_HL7-cda-ch-1906_as00265"
                  test="cda:value[@xsi:type=&#34;CE&#34;]">
 				        <xhtml:p lang="de">CDA-CH 'Bemerkungen' müssen einen codierten Wert enthalten (mögliche Werteliste: 2.16.756.5.30.2.1.1.8.1)</xhtml:p>
 				        <xhtml:p lang="fr">Les 'Remarques' CDA-CH doivent contenir un valeur codée (valeurs possible: '2.16.756.5.30.2.1.1.8.1')</xhtml:p>
@@ -2970,7 +3009,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00048">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2988,7 +3027,7 @@ History:
 			      <xhtml:h3 lang="en">CDA-CH individual Body Section</xhtml:h3>
 			      <xhtml:p lang="en">The following rules describe the tests on individual Body Section</xhtml:p>
 			      <assert role="error"
-                 id="cda-ch-mset_entity_HL7-cda-ch-2001_as00263"
+                 id="cda-ch-mset_entity_HL7-cda-ch-2001_as00266"
                  test="cda:text">
 				        <xhtml:p lang="de">CDA-CH Body Sections müssen einen narrativen Text enthalten</xhtml:p>
 				        <xhtml:p lang="fr">Les sections CDA-CH Body doivent contenir un texte narratif</xhtml:p>
@@ -3001,7 +3040,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00049">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -3010,42 +3049,42 @@ History:
 		-->
 		<rule context="cda:effectiveTime" id="cda-ch-mset_ru00050">
 			      <assert role="error"
-                 test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12}[+-]\d{4}$')"
-                 id="cda-ch-mset_as00264">
-				        <xhtml:p lang="de">Das Datum muss also dem folgenden Muster entsprechen: YYYYMMDDHHMM+HHMM</xhtml:p>
-				        <xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM+HHMM</xhtml:p>
+                 test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12,14}[+-]\d{4}$')"
+                 id="cda-ch-mset_as00267">
+				        <xhtml:p lang="de">Das Datum muss dem folgenden Muster entsprechen: YYYYMMDDHHMM[SS]+HHMM</xhtml:p>
+				        <xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM[SS]+HHMM</xhtml:p>
 			      </assert>
 			      <assert role="error"
                  test="not(@value) or @nullFlavor or matches(@value,'^\d{4}\d+') or matches(@value,'^\d{4}$')"
-                 id="cda-ch-mset_as00265">
+                 id="cda-ch-mset_as00268">
 				        <xhtml:p lang="de">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</xhtml:p>
 				        <xhtml:p lang="en">The date must match the following pattern: YYYY[MM[DD]]</xhtml:p>
 			      </assert>
 		    </rule>
 		    <rule context="cda:effectiveTime/cda:low" id="cda-ch-mset_ru00051">
 			      <assert role="error"
-                 test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12}[+-]\d{4}$')"
-                 id="cda-ch-mset_as00266">
-				        <xhtml:p lang="de">Das Datum muss also dem folgenden Muster entsprechen: YYYYMMDDHHMM+HHMM</xhtml:p>
-				        <xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM+HHMM</xhtml:p>
+                 test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12,14}[+-]\d{4}$')"
+                 id="cda-ch-mset_as00269">
+				        <xhtml:p lang="de">Das Datum muss dem folgenden Muster entsprechen: YYYYMMDDHHMM[SS]+HHMM</xhtml:p>
+				        <xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM[SS]+HHMM</xhtml:p>
 			      </assert>
 			      <assert role="error"
                  test="not(@value) or @nullFlavor or matches(@value,'^\d{4}\d+') or matches(@value,'^\d{4}$')"
-                 id="cda-ch-mset_as00267">
+                 id="cda-ch-mset_as00270">
 				        <xhtml:p lang="de">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</xhtml:p>
 				        <xhtml:p lang="en">The date must match the following pattern: YYYY[MM[DD]]</xhtml:p>
 			      </assert>
 		    </rule>
 		    <rule context="cda:effectiveTime/cda:high" id="cda-ch-mset_ru00052">
 			      <assert role="error"
-                 test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12}[+-]\d{4}$')"
-                 id="cda-ch-mset_as00268">
-				        <xhtml:p lang="de">Das Datum muss also dem folgenden Muster entsprechen: YYYYMMDDHHMM+HHMM</xhtml:p>
-				        <xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM+HHMM</xhtml:p>
+                 test="not(@value) or @nullFlavor or matches(@value,'^\d{0,8}$') or matches(@value,'^\d{12,14}[+-]\d{4}$')"
+                 id="cda-ch-mset_as00271">
+				        <xhtml:p lang="de">Das Datum muss dem folgenden Muster entsprechen: YYYYMMDDHHMM[SS]+HHMM</xhtml:p>
+				        <xhtml:p lang="en">The date must match the following pattern: YYYYMMDDHHMM[SS]+HHMM</xhtml:p>
 			      </assert>
 			      <assert role="error"
                  test="not(@value) or @nullFlavor or matches(@value,'^\d{4}\d+') or matches(@value,'^\d{4}$')"
-                 id="cda-ch-mset_as00269">
+                 id="cda-ch-mset_as00272">
 				        <xhtml:p lang="de">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</xhtml:p>
 				        <xhtml:p lang="en">The date must match the following pattern: YYYY[MM[DD]]</xhtml:p>
 			      </assert>
@@ -3055,7 +3094,7 @@ History:
 	  <pattern id="cda-ch-mset_cda-ch_pa00050">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:57.954+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:27.947+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -3066,25 +3105,25 @@ History:
             id="cda-ch-mset_ru00053">
 			      <assert role="error"
                  test="@classCode='OBS' and @moodCode='EVN'"
-                 id="cda-ch-mset_as00270">
+                 id="cda-ch-mset_as00273">
 				        <xhtml:p lang="en">Dose numbers must be declared by an observation containing classCode='OBS' and moodCode='EVN'</xhtml:p>
 				        <xhtml:p lang="de">Lot-Nummern müssen mit einer observation und folgenden Attributen deklariert werden: classCode='OBS' und moodCode='EVN'</xhtml:p>
 			      </assert>
 			      <assert role="error"
                  test="cda:code[@codeSystem='2.16.840.1.113883.6.1' and @code='30973-2']"
-                 id="cda-ch-mset_as00271">
+                 id="cda-ch-mset_as00274">
 				        <xhtml:p lang="en">Dose numbers must be declared using the LOINC code 30973-2</xhtml:p>
 				        <xhtml:p lang="de">Lot-Nummern müssen mit dem LOINC Code 30973-2 deklariert werden</xhtml:p>
 			      </assert>
 			      <assert role="error"
                  test="cda:statusCode[@code='completed']"
-                 id="cda-ch-mset_as00272">
+                 id="cda-ch-mset_as00275">
 				        <xhtml:p lang="en">Dose numbers must be declared using a completed statusCode</xhtml:p>
 				        <xhtml:p lang="de">Lot-Nummern müssen mit statusCode completed angegeben werden</xhtml:p>
 			      </assert>
 			      <assert role="error"
                  test="cda:value[@xsi:type='ST' and text()]"
-                 id="cda-ch-mset_as00273">
+                 id="cda-ch-mset_as00276">
 				        <xhtml:p lang="en">Dose numbers must be declared as text in the value element using xsi:type='ST'</xhtml:p>
 				        <xhtml:p lang="de">Lot-Nummern müssen als Text im 'value' Element mit xsi:type='ST' angegeben werden</xhtml:p>
 			      </assert>
@@ -3102,12 +3141,12 @@ History:
 		<xhtml:ul id="vhitg-ruleset">
 			      <xhtml:li class="filename">vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules in vhitg-ruleset.ent)</xhtml:li>
 			      <xhtml:li class="version">1.5</xhtml:li>
-		       <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 
 		    <iso:rule id="cda-ch-mset_general-addr_ru00054" context="cda:addr[@nullFlavor]">
 			      <iso:assert role="error"
-                     id="cda-ch-mset_null-or-no-content_as00274"
+                     id="cda-ch-mset_null-or-no-content_as00277"
                      test="normalize-space(.) = ''">
 				vhitg-ruleset.ent: When the <emph xmlns="">addr</emph> element is null, it should not	have content.
 			</iso:assert>
@@ -3117,12 +3156,12 @@ History:
 	  <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00052">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="cda-ch-mset_general-addr-1_ru00055"
                 context="cda:addr[normalize-space(.) = '']">
 			      <iso:assert role="error"
-                     id="cda-ch-mset_empty-implies-null_as00275"
+                     id="cda-ch-mset_empty-implies-null_as00278"
                      test="not(string(@nullFlavor)='')">
 				vhitg-ruleset.ent: When the <emph xmlns="">addr</emph> element is empty, it must have a value for <emph xmlns="">nullFlavor</emph>.
 			</iso:assert>
@@ -3132,13 +3171,13 @@ History:
 	  <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00053">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="cda-ch-mset_general-time-req_ru00056"
                 context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
 			      <iso:assert role="error"
                      test="(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value) &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z')) &gt; 7"
-                     id="cda-ch-mset_as00276">
+                     id="cda-ch-mset_as00279">
 				vhitg-ruleset.ent: The <emph xmlns="">time</emph> element must be precise at least to the day.
 			</iso:assert>
 		    </iso:rule>
@@ -3147,28 +3186,28 @@ History:
 	  <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00054">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="cda-ch-mset_cda-id-oid_ru00057"
                 context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
 			      <iso:assert role="error"
                      test="translate(@root, '0123456789.', '') = ''"
-                     id="cda-ch-mset_as00277">
+                     id="cda-ch-mset_as00280">
 				vhitg-ruleset.ent: Characters that are not in the set 0-9 or . are not present in a valid OID.
 			</iso:assert>
 			      <iso:assert role="error"
                      test="not(substring(@root, 1, 1) = '.') and not(substring(@root, string-length(@root), 1) = '.')"
-                     id="cda-ch-mset_as00278">
+                     id="cda-ch-mset_as00281">
 				vhitg-ruleset.ent: The first and last characters of an OID must be a digit.
 			</iso:assert>
 			      <iso:assert role="error"
                      test="not(contains(@root,'..'))"
-                     id="cda-ch-mset_as00279">
+                     id="cda-ch-mset_as00282">
 				vhitg-ruleset.ent: A properly formatted OID should not contain two . characters without any intervening digits
 			</iso:assert>
 			      <iso:assert role="error"
                      test="string-length(@root) &lt; 65"
-                     id="cda-ch-mset_as00280">
+                     id="cda-ch-mset_as00283">
 				vhitg-ruleset.ent: An OID must be shorter than 65 characters.
 			</iso:assert>
 		    </iso:rule>
@@ -3177,11 +3216,11 @@ History:
 	  <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00055">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="cda-ch-mset_cda-id_ru00058"
                 context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
-			      <iso:assert role="error" test="false()" id="cda-ch-mset_as00281">
+			      <iso:assert role="error" test="false()" id="cda-ch-mset_as00284">
 				vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
 			</iso:assert>
 		    </iso:rule>
@@ -3190,11 +3229,11 @@ History:
 	  <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00056">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="cda-ch-mset_general-id_ru00059" context="cda:id">
 			      <iso:assert role="error"
-                     id="cda-ch-mset_null-or-no-root-attribute_as00282"
+                     id="cda-ch-mset_null-or-no-root-attribute_as00285"
                      test="./@nullFlavor or ./@root">
 				vhitg-ruleset.ent: When the <emph xmlns="">id</emph> element is not null, at least a root attribute must be present.
 			</iso:assert>
@@ -3211,12 +3250,12 @@ History:
 	<iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00057" name="NMSP Namespaces">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="cda-ch-mset_cda-root_ru00060" context="/*">
 			      <iso:assert role="error"
                      test="self::cda:ClinicalDocument"
-                     id="cda-ch-mset_as00283">
+                     id="cda-ch-mset_as00286">
 				vhitg-ruleset.ent: The root of a Clinical Document must be a <emph xmlns="">ClinicalDocument</emph> element from the <emph xmlns="">urn:hl7-org-v3</emph> namespace.
 			</iso:assert>
 		    </iso:rule>
@@ -3230,11 +3269,11 @@ History:
 	<iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00058" name="PERS Persons">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 		    <!-- abstract rules -->
 		<iso:rule id="cda-ch-mset_nameTest_ru00061" abstract="true">
-			      <iso:assert role="error" test="cda:name" id="cda-ch-mset_as00284">
+			      <iso:assert role="error" test="cda:name" id="cda-ch-mset_as00287">
 			vhitg-ruleset.ent: A Person (<name xmlns=""/>) must have a name
 		</iso:assert>
 	     </iso:rule>
@@ -3243,7 +3282,7 @@ History:
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00059">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- rules in context -->
 	<iso:rule context="cda:patient" id="cda-ch-mset_ru00062">
@@ -3254,7 +3293,7 @@ History:
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00060">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:assignedPerson" id="cda-ch-mset_ru00063">
 		       <extends xmlns="" rule="nameTest"/>
@@ -3264,7 +3303,7 @@ History:
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00061">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
                 id="cda-ch-mset_ru00064">
@@ -3284,7 +3323,7 @@ Name is already handled in person pattern
                 name="HCPC Healthcare professionals">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- abstract rules -->
 	<!--
@@ -3296,7 +3335,7 @@ Name is already handled in person pattern
 	<iso:rule id="cda-ch-mset_addresTestPersonOrRole_ru00065" abstract="true">
 		       <iso:assert role="error"
                      test="../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'"
-                     id="cda-ch-mset_as00285">
+                     id="cda-ch-mset_as00288">
 		vhitg-ruleset.ent: A Healthcare professional (<name xmlns=""/>) must have a non-empty addres associated with the role / scoping organization or the attribute 'nullFlavor' must be set to 'UNK'.
 	</iso:assert>
       </iso:rule>
@@ -3305,7 +3344,7 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00063">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -3324,7 +3363,7 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00064">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
                 id="cda-ch-mset_ru00067">
@@ -3342,10 +3381,10 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00065" name="ORGC Organization">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="cda-ch-mset_nameTestOrg_ru00068" abstract="true">
-		       <iso:assert role="error" test="cda:name" id="cda-ch-mset_as00286">
+		       <iso:assert role="error" test="cda:name" id="cda-ch-mset_as00289">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a name.
 	</iso:assert>
       </iso:rule>
@@ -3354,10 +3393,10 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00066">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="cda-ch-mset_addresTestOrg_ru00069" abstract="true">
-		       <iso:assert role="error" test="cda:addr/*" id="cda-ch-mset_as00287">
+		       <iso:assert role="error" test="cda:addr/*" id="cda-ch-mset_as00290">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a non-empty addres.
 	</iso:assert>
       </iso:rule>
@@ -3366,7 +3405,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00067">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -3395,22 +3434,22 @@ Separatorzeichen nur Bindestrich –, Punkte . oder Klammern ( ) verwenden.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00068" name="TURS TINT TCHS Telecom">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
 	<iso:rule context="cda:telecom" id="cda-ch-mset_ru00071">
 		       <iso:assert role="error"
                      test="(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:' or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor"
-                     id="cda-ch-mset_as00288">
+                     id="cda-ch-mset_as00291">
 			vhitg-ruleset.ent: Telecom values must begin with 'tel:' or 'fax:' or 'mailto:'.
 		</iso:assert>
 		       <iso:assert role="error"
-                     id="cda-ch-mset_telcom-regex_as00289"
+                     id="cda-ch-mset_telcom-regex_as00292"
                      test="(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+0123456789()-.',''),translate(substring(@value,6),'0123456789()-.',''))) = 0">
 			vhitg-ruleset.ent: Telephone/fax numbers must match the regular expression pattern tel:\+?[-0-9().]
 		</iso:assert>
 		       <iso:assert role="error"
-                     id="cda-ch-mset_telcom-has-digit_as00290"
+                     id="cda-ch-mset_telcom-has-digit_as00293"
                      test="(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+()-.',''),translate(substring(@value,6),'()-.',''))) &gt; 0">
 			vhitg-ruleset.ent: At least one dialing digit must be present in the telephone/fax number after visual separators are removed.
 		</iso:assert>
@@ -3455,7 +3494,7 @@ component               CDA Body 1..1 SCHEMA
                 name="HEAD General Header constraints">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-mset_ru00072">
 
@@ -3471,10 +3510,10 @@ component               CDA Body 1..1 SCHEMA
 		vhitg-ruleset.ent: The <emph>templateId</emph> element may only appear once.
 		</iso:assert>
 		-->
-		<iso:assert role="error" test="not(cda:copyTime)" id="cda-ch-mset_as00291">
+		<iso:assert role="error" test="not(cda:copyTime)" id="cda-ch-mset_as00294">
 			vhitg-ruleset.ent: The <emph xmlns="">copyTime</emph> element is not allowed.
 		</iso:assert>
-		       <iso:assert role="error" test="not(cda:informant)" id="cda-ch-mset_as00292">
+		       <iso:assert role="error" test="not(cda:informant)" id="cda-ch-mset_as00295">
 			vhitg-ruleset.ent: The <emph xmlns="">informant</emph> association element is not allowed.
 		</iso:assert>
 		       <!-- 21.01.2013 ts: auskommentiert, da diese Regel nicht mit der Spezifikation übereinstimmt (inFulfillmentOf: In Erfüllung von, –noch nicht verwendet– 0..* )
@@ -3498,13 +3537,13 @@ zugeben.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00070" name="TYID Document typeId">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:typeId" id="cda-ch-mset_ru00073">
 		       <iso:assert role="error"
                      test="normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'"
-                     id="cda-ch-mset_as00293">
+                     id="cda-ch-mset_as00296">
 			vhitg-ruleset.ent: The <emph xmlns="">extension</emph> attribute of the <emph xmlns="">typeId</emph> element must be <emph xmlns="">POCD_HD000040</emph> and the <emph xmlns="">root</emph> attribute must be <emph xmlns="">2.16.840.1.113883.1.3</emph>.
 		</iso:assert>
 	     </iso:rule>
@@ -3515,11 +3554,11 @@ Regel IIRT: Das @root Attribut ist bei Instanzidentifikatoren verpflichtend anzu
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00071" name="IIRT Instance identifiers">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
 	<iso:rule context="cda:id" id="cda-ch-mset_ru00074">
-		       <iso:assert role="error" test="@root or @nullFlavor" id="cda-ch-mset_as00294">
+		       <iso:assert role="error" test="@root or @nullFlavor" id="cda-ch-mset_as00297">
 			vhitg-ruleset.ent: Instance Identifiers must at least contain a <emph xmlns="">root</emph> attribute.
 		</iso:assert>
 	     </iso:rule>
@@ -3535,16 +3574,16 @@ verwenden.
                 name="CDCD CDLN ClinicalDocument Code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:code" id="cda-ch-mset_ru00075">
-		       <iso:assert role="error" test="@code and @codeSystem" id="cda-ch-mset_as00295">
+		       <iso:assert role="error" test="@code and @codeSystem" id="cda-ch-mset_as00298">
 			vhitg-ruleset.ent: The code element of the ClinicalDocument must have a <emph xmlns="">code</emph> and <emph xmlns="">codeSystem</emph>.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="normalize-space(@codeSystem)='2.16.840.1.113883.6.1'"
-                     id="cda-ch-mset_as00296">
+                     id="cda-ch-mset_as00299">
 			vhitg-ruleset.ent: The <emph xmlns="">OID root</emph> of ClinicalDocument.code must point to <emph xmlns="">LOINC (2.16.840.1.113883.6.1)</emph>
 		       </iso:assert>
 	     </iso:rule>
@@ -3559,14 +3598,14 @@ Datum mit Jahr, Monat und Tag angegeben sein.
                 name="CDET ClinicalDocument effectiveTime">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:effectiveTime"
                 id="cda-ch-mset_ru00076">
 		       <iso:assert role="error"
                      test="string-length(@value)&gt;7"
-                     id="cda-ch-mset_as00297">
+                     id="cda-ch-mset_as00300">
 			vhitg-ruleset.ent: The <emph xmlns="">effectiveTime</emph> element of the ClinicalDocument must be at least specific to the day.
 		</iso:assert>
 	     </iso:rule>
@@ -3581,11 +3620,11 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
                 name="CDLC ClinicalDocument languageCode">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="cda-ch-mset_cda-languageCode_ru00077"
                 context="/cda:ClinicalDocument">
-		       <iso:assert role="error" test="cda:languageCode" id="cda-ch-mset_as00298">
+		       <iso:assert role="error" test="cda:languageCode" id="cda-ch-mset_as00301">
 			vhitg-ruleset.ent: The <emph xmlns="">languageCode</emph> element must be present.
 		</iso:assert>
 	     </iso:rule>
@@ -3594,23 +3633,23 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
    <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00075">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="cda-ch-mset_cda-languageCode-format_ru00078"
                 context="/cda:ClinicalDocument/cda:languageCode">
 		       <iso:assert role="error"
                      test="(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code) = 2"
-                     id="cda-ch-mset_as00299">
+                     id="cda-ch-mset_as00302">
 			vhitg-ruleset.ent: The language code must be in the form <emph xmlns="">nn</emph>, or <emph xmlns="">nn-CC</emph>.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="substring(@code,1,2) = $vhitg-codeSystem[@codeSystemName='ISO639-1']/code/@value"
-                     id="cda-ch-mset_as00300">
+                     id="cda-ch-mset_as00303">
 			vhitg-ruleset.ent: The language must be a legal ISO-639-1 language code in lower case.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="string-length(@code) = 2 or substring(@code,4,2) = $vhitg-codeSystem[@codeSystemName='ISO3166-1']/code/@value"
-                     id="cda-ch-mset_as00301">
+                     id="cda-ch-mset_as00304">
 			vhitg-ruleset.ent: The country code portion, if present must be an ISO-3166 country code in upper case.
 		</iso:assert>
 	     </iso:rule>
@@ -3623,12 +3662,12 @@ nem Patienten (entity) anzugeben.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00076" name="PATR Patient Role">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:recordTarget" id="cda-ch-mset_ru00079">
 		       <iso:assert role="error"
                      test="count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1"
-                     id="cda-ch-mset_as00302">
+                     id="cda-ch-mset_as00305">
 			vhitg-ruleset.ent: There must be exactly one <emph xmlns="">patientRole</emph> element containing exactly one patient element
 		</iso:assert>
 	     </iso:rule>
@@ -3641,13 +3680,13 @@ country beim Geburtsort ist verpflichtend.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00077" name="BRCC Birthplace">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:patient/cda:birthplace/cda:place/cda:addr"
                 id="cda-ch-mset_ru00080">
 		       <iso:assert role="error"
                      test="cda:city or cda:country"
-                     id="cda-ch-mset_as00303">
+                     id="cda-ch-mset_as00306">
 			vhitg-ruleset.ent: for the <emph xmlns="">birthplace</emph> at least country or city must be present.
 		</iso:assert>
 	     </iso:rule>
@@ -3677,27 +3716,27 @@ addr, muss bei einer beteiligten Person vorliegen.
                 name="PTNO PTEC PTPH PTPR PTTL Participants">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:participant" id="cda-ch-mset_ru00081">
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK' and cda:associatedentity/cda:associatedPerson)"
-                     id="cda-ch-mset_as00304">
+                     id="cda-ch-mset_as00307">
 			vhitg-ruleset.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='NOK', an <emph xmlns="">associatedPerson</emph> element must be present.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON' and cda:associatedentity/cda:associatedPerson)"
-                     id="cda-ch-mset_as00305">
+                     id="cda-ch-mset_as00308">
 			vhitg-ruleset.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='ECON', an <emph xmlns="">associatedPerson</emph> element must be present.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD') or (normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD' and cda:associatedentity/cda:scopingOrganization)"
-                     id="cda-ch-mset_as00306">
+                     id="cda-ch-mset_as00309">
 			vhitg-ruleset.ent: When the particapation.typecode='HLD' and the associatedEntityClasscode='POLHOLD', a <emph xmlns="">scopingOrganization</emph> element must be present.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS' and cda:associatedentity/cda:associatedPerson)"
-                     id="cda-ch-mset_as00307">
+                     id="cda-ch-mset_as00310">
 			vhitg-ruleset.ent: When the particapation.typecode='IND' and the associatedEntityClasscode='PRS', an <emph xmlns="">associatedPerson</emph> element must be present.
 		</iso:assert>
 	     </iso:rule>
@@ -3728,27 +3767,27 @@ In XML Schema
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00079" name="RELD Relating documents">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-mset_ru00082">
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument[@typeCode='APND'])&lt;2"
-                     id="cda-ch-mset_as00308">
+                     id="cda-ch-mset_as00311">
 			vhitg-ruleset.ent: A <emph xmlns="">relatedDocument</emph> with typeCode='APND' may appear only once.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument[@typeCode='RPLC'])&lt;2"
-                     id="cda-ch-mset_as00309">
+                     id="cda-ch-mset_as00312">
 			vhitg-ruleset.ent: A <emph xmlns="">relatedDocument</emph> with typeCode='RPLC' may appear only once.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument[@typeCode='XFRM'])&lt;2"
-                     id="cda-ch-mset_as00310">
+                     id="cda-ch-mset_as00313">
 			vhitg-ruleset.ent: A <emph xmlns="">relatedDocument</emph> with typeCode='XFRM' may appear only once.
 		</iso:assert>
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument)&lt;3"
-                     id="cda-ch-mset_as00311">
+                     id="cda-ch-mset_as00314">
 			vhitg-ruleset.ent: No more than two <emph xmlns="">relatedDocument</emph>s are allowed.
 		</iso:assert>
 	     </iso:rule>
@@ -3760,12 +3799,12 @@ Regel BDSC: Ein Clinical Document muss mindestens ein „section“-Element enth
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00080" name="BDSC Section">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structuredBody" id="cda-ch-mset_ru00083">
 		       <iso:assert role="error"
                      test="count(/cda:component/cda:section)&lt;1"
-                     id="cda-ch-mset_as00312">
+                     id="cda-ch-mset_as00315">
 			vhitg-ruleset.ent: A Clinical Document must at least contain one <emph xmlns="">section</emph> element.
 		</iso:assert>
 	     </iso:rule>
@@ -3777,13 +3816,13 @@ Regel SCTX: Eine Sektion muss genau ein „Text“-Element enthalten.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00081" name="SCTX Section Text">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structeredbody/cda:component/cda:section"
                 id="cda-ch-mset_ru00084">
 		       <iso:assert role="error"
                      test="count(cda:text)=1 and string-length(normalize-space(cda:text))=0"
-                     id="cda-ch-mset_as00313">
+                     id="cda-ch-mset_as00316">
 			vhitg-ruleset.ent: A <emph xmlns="">section</emph> must contain exactly one non-empty text element.
 		</iso:assert>
 	     </iso:rule>
@@ -3815,12 +3854,12 @@ zu benutzen, der alternative Code steht dann in der <translation>.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00082" name="SCLN Section code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:section/cda:code" id="cda-ch-mset_ru00085">
 		       <iso:assert role="error"
                      test="@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0 and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)"
-                     id="cda-ch-mset_as00314">
+                     id="cda-ch-mset_as00317">
 			vhitg-ruleset.ent: Rule SCLN: The <emph xmlns="">codeSystem</emph> of the <emph xmlns="">section.code</emph> element must point to <emph xmlns="">LOINC (2.16.840.1.113883.6.1)</emph>. nullFlavor Codes must have a translation. See also "VHitG Arztbrief V1.50", page 90/91.
 		</iso:assert>
 	     </iso:rule>
@@ -3833,12 +3872,12 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
                 name="OMVL observationMedia Class">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:observationMedia" id="cda-ch-mset_ru00086">
 		       <iso:assert role="error"
                      test="cda:value/@xsi:type='ED'"
-                     id="cda-ch-mset_as00315">
+                     id="cda-ch-mset_as00318">
 			vhitg-ruleset.ent: <emph xmlns="">observationMedia</emph> must contain a value of type ED.
 		</iso:assert>
 	     </iso:rule>
@@ -3863,12 +3902,12 @@ Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen 
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00084" name="DGCD DGCN Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value" id="cda-ch-mset_ru00087">
 		       <iso:assert role="error"
                      test="@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')"
-                     id="cda-ch-mset_as00316">
+                     id="cda-ch-mset_as00319">
 			vhitg-ruleset.ent: The <emph xmlns="">value</emph> element of a diagnosis must contain a <emph xmlns="">code</emph> and a <emph xmlns="">codeSystem</emph> attribute or the nullFlavor must be set to 'UNK'
 		</iso:assert>
 	     </iso:rule>
@@ -3881,23 +3920,23 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
 <iso:pattern id="cda-ch-mset_vhitg-ruleset_pa00085" name="DGQL Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.574+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.236+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value/cda:qualifier"
                 id="cda-ch-mset_ru00088">
 		       <iso:assert role="error"
                      test="(./cda:name) and (./cda:value)"
-                     id="cda-ch-mset_as00317">
+                     id="cda-ch-mset_as00320">
 			vhitg-ruleset.ent: The <emph xmlns="">qualifier</emph> element of a diagnosis code must contain a <emph xmlns="">name</emph> and a <emph xmlns="">value</emph> node
 		</iso:assert>
 		       <iso:assert role="error"
                      test="(./cda:name/@code and ./cda:name/@codeSystem)"
-                     id="cda-ch-mset_as00318">
+                     id="cda-ch-mset_as00321">
 			vhitg-ruleset.ent: The <emph xmlns="">qualifier/name</emph> element of a diagnosis code must contain a <emph xmlns="">code</emph> and a <emph xmlns="">codeSystem</emph> attribute
 		</iso:assert>
 		       <iso:assert role="error"
                      test="(./cda:value/@code and ./cda:value/@codeSystem)"
-                     id="cda-ch-mset_as00319">
+                     id="cda-ch-mset_as00322">
 			vhitg-ruleset.ent: The <emph xmlns="">qualifier/value</emph> element of a diagnosis code must contain a <emph xmlns="">code</emph> and a <emph xmlns="">codeSystem</emph> attribute
 		</iso:assert>
 	     </iso:rule>
@@ -3905,232 +3944,232 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
    <?DSDL_INCLUDE_END templates/VHitG/Arztbrief/v1.5/vhitg-ruleset.sch?>
 
   <!-- IHE PCC patterns -->
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.6.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.6.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.3.6-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.6-errors_pa00086">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.3.6">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.6.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Active Problems Section</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.189+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.483+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.6&#34;]"
                 id="cda-ch-mset_ru00089">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
-      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00320">
+      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00323">
             <xhtml:p lang="en">In IHE PCC Active Problems Section (1.3.6.1.4.1.19376.1.5.3.1.3.6), the Active Problems can only be used on sections.</xhtml:p>
          </iso:assert>
          <!-- Verify that the parent templateId is also present. -->
       <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.11&#34;]"
-                     id="cda-ch-mset_as00321">
+                     id="cda-ch-mset_as00324">
             <xhtml:p lang="en">In IHE PCC Active Problems Section (1.3.6.1.4.1.19376.1.5.3.1.3.6), the parent template identifier (2.16.840.1.113883.10.20.1.11) for Active Problems is not present.</xhtml:p>
          </iso:assert>
          <!-- Verify the section type code -->
       <iso:assert role="error"
                      test="cda:code[@code = &#34;11450-4&#34;]"
-                     id="cda-ch-mset_as00322">
+                     id="cda-ch-mset_as00325">
             <xhtml:p lang="en">In IHE PCC Active Problems Section (1.3.6.1.4.1.19376.1.5.3.1.3.6), the section type code of Active Problems must be 11450-4</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@codeSystem = &#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00323">
+                     id="cda-ch-mset_as00326">
             <xhtml:p lang="en">In IHE PCC Active Problems Section (1.3.6.1.4.1.19376.1.5.3.1.3.6), the section type code of Active Problems must come from the LOINC code system (2.16.840.1.113883.6.1).</xhtml:p>
          </iso:assert>
          <!-- Verify that all required data elements are present -->
       <iso:assert role="error"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.2&#34;]"
-                     id="cda-ch-mset_as00324">
+                     id="cda-ch-mset_as00327">
             <xhtml:p lang="en">In IHE PCC Active Problems Section (1.3.6.1.4.1.19376.1.5.3.1.3.6), Active Problems must contain Problem Concern Entry.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.6.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.2.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.6.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.2.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.5.2-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5.2-errors_pa00087">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.5.2">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.2.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Problem Concern Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.355+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.998+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.2&#34;]"
                 id="cda-ch-mset_ru00090">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
-                     id="cda-ch-mset_as00325">
+                     id="cda-ch-mset_as00328">
             <xhtml:p lang="en">In IHE PCC Problem Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.2), the Problem Concern Entry has a template identifier of 1.3.6.1.4.1.19376.1.5.3.1.4.5.2, and is a subtype of the Concern Entry, and so must also conform to that specification, with the template identifier of 1.3.6.1.4.1.19376.1.5.3.1.4.5.1. These elements are required and shall be recorded exactly as indicated.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(cda:entryRelationship[@typeCode = &#34;SUBJ&#34;] and cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;] and cda:entryRelationship[@inversionInd=&#34;false&#34;]) or (cda:subjectOf[@typeCode = &#34;SUBJ&#34;] and cda:subjectOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;] and cda:subjectOf[@inversionInd=&#34;false&#34;])"
-                     id="cda-ch-mset_as00326">
+                     id="cda-ch-mset_as00329">
             <xhtml:p lang="en">In IHE PCC Problem Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.2), the Problem Concern Entry shall contain one or more problem entries that conform to the Problem Entry template 1.3.6.1.4.1.19376.1.5.3.1.4.5. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element. For HL7 Version 3 Messages, this SHALL be represented as a &lt;subjectOf&gt; element. The typeCode SHALL be SUBJ and inversionInd SHALL be false.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.2.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.1.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.2.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.1.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.5.1-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5.1-errors_pa00088">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.5.1">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.1.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Concern Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.343+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.98+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
                 id="cda-ch-mset_ru00091">
-         <iso:assert role="error" test="../cda:act" id="cda-ch-mset_as00327">
+         <iso:assert role="error" test="../cda:act" id="cda-ch-mset_as00330">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the Concern Entry can only be used on acts.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="../cda:act[@classCode=&#34;ACT&#34;] and ../cda:act[@moodCode=&#34;EVN&#34;]"
-                     id="cda-ch-mset_as00328">
+                     id="cda-ch-mset_as00331">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), all concerns reflect the act of recording (&lt;act classCode='ACT'&gt;) the event (moodCode='EVN') of being concerned about a problem, allergy or other issue about the patient condition.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.27&#34;]"
-                     id="cda-ch-mset_as00329">
+                     id="cda-ch-mset_as00332">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the required template identifiers indicates this Concern Entry conforms to the Concern Content module. This content module inherits constraints from the HL7 CCD Template for problem acts, and so also includes that template identifier (2.16.840.1.113883.10.20.1.27).</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00330">
+         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00333">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the Concern Entry requires id element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@nullFlavor=&#34;NA&#34;]"
-                     id="cda-ch-mset_as00331">
+                     id="cda-ch-mset_as00334">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the code is not applicable to a concern act (Concern Entry), and so shall be recorded as &lt;code nullFlavor='NA'/&gt;.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code=&#34;active&#34; or @code=&#34;suspended&#34; or @code=&#34;aborted&#34; or @code=&#34;completed&#34;]"
-                     id="cda-ch-mset_as00332">
+                     id="cda-ch-mset_as00335">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the statusCode associated with any concern must be one of the following values: active, suspended, aborted or completed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:effectiveTime/cda:low"
-                     id="cda-ch-mset_as00333">
+                     id="cda-ch-mset_as00336">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the &lt;effectiveTime&gt; element records the starting and ending times during which the concern (Concern Entry) was active. The &lt;low&gt; element shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(cda:statusCode[@code=&#34;completed&#34; or @code=&#34;aborted&#34;] and cda:effectiveTime/cda:high) or (cda:statusCode[@code=&#34;active&#34; or @code=&#34;suspended&#34;] and not(cda:effectiveTime/cda:high))"
-                     id="cda-ch-mset_as00334">
+                     id="cda-ch-mset_as00337">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the &lt;effectiveTime&gt; element records the starting and ending times during the concern (Concern Entry). The &lt;high&gt; element shall be present for concerns in the completed or aborted state, and shall not be present otherwise.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(cda:entryRelationship[@typeCode=&#34;SUBJ&#34;] and cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34; or @root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]) or (cda:sourceOf[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;false&#34;] and cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34; or @root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;])"
-                     id="cda-ch-mset_as00335">
+                     id="cda-ch-mset_as00338">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), each concern (Concern Entry) is about one or more related problems or allergies. This entry shall contain one or more problem or allergy entries that conform to the specification in section Problem Entry or Allergies and Intolerances. This is how a series of related observations can be grouped as a single concern. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element. The typeCode SHALL be SUBJ for both HL7 Version 3 and CDA. HL7 Version 3 additionally requires that inversionInd SHALL be false.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.1.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.1.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.5-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5-errors_pa00089">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.5">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Problem Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.383+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.021+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
                 id="cda-ch-mset_ru00092">
          <iso:assert role="error"
                      test="self::cda:observation[@classCode=&#34;OBS&#34; and @moodCode=&#34;EVN&#34;]"
-                     id="cda-ch-mset_as00336">
+                     id="cda-ch-mset_as00339">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the basic pattern for reporting a problem uses the CDA &lt;observation&gt; element, setting the classCode='OBS' to represent that this is an observation of a problem, and the moodCode='EVN', to represent that this is an observation that has in fact taken place.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.28&#34;]"
-                     id="cda-ch-mset_as00337">
+                     id="cda-ch-mset_as00340">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), &lt;templateId&gt; elements identify this under both IHE and CCD specifications (2.16.840.1.113883.10.20.1.28). This CCD template ID SHALL be included.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00338">
+         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00341">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the specific Problem Entry observation being recorded must have an identifier (&lt;id&gt;) that shall be provided for tracking purposes. If the source EMR does not or cannot supply an intrinsic identifier, then a GUID shall be provided as the root, with no extension (e.g., &lt;id root='CE1215CD-69EC-4C7B-805F-569233C5E159'/&gt;). At least one identifier must be present, more than one may appear.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:text" id="cda-ch-mset_as00339">
+         <iso:assert role="error" test="cda:text" id="cda-ch-mset_as00342">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the &lt;text&gt; element is required and points to the text describing the problem being recorded; including any dates, comments, et cetera. The &lt;reference&gt; contains a URI in value attribute. This URI points to the free text description of the problem in the document that is being described.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code=&#34;completed&#34;]"
-                     id="cda-ch-mset_as00340">
+                     id="cda-ch-mset_as00343">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), a clinical document normally records only those condition observation events that have been completed, not observations that are in any other state. Therefore, the &lt;statusCode&gt; shall always have code='completed' for Problem Entry.</xhtml:p>
          </iso:assert>
          <iso:report role="error"
                      test="cda:effectiveTime/cda:width or cda:effectiveTime/cda:center"
-                     id="cda-ch-mset_re00001">
+                     id="cda-ch-mset_re00002">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), while CDA allows for multiple mechanisms to record this time interval (e.g. by low and high values, low and width, high and width, or center point and width), we are constraining Medical summaries (Problem Entry) to use only the low/high form.</xhtml:p>
          </iso:report>
          <iso:assert role="error"
                      test="cda:effectiveTime/cda:low[@value or @nullFlavor = &#34;UNK&#34;]"
-                     id="cda-ch-mset_as00341">
+                     id="cda-ch-mset_as00344">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the effectiveTime &lt;low&gt; value should normally be present in Problem Entry. There are exceptions, such as for the case where the patient may be able to report that they had chicken pox, but are unsure when. In this case, the &lt;effectiveTime&gt; element shall have a &lt;low&gt; element with a nullFlavor attribute set to 'UNK'.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:value[@xsi:type=&#34;CD&#34;]"
-                     id="cda-ch-mset_as00342">
+                     id="cda-ch-mset_as00345">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the &lt;value&gt; is the condition that was found. This element is required. While the value of Problem Entry code may be a coded or an un-coded string, the type is always a coded value (xsi:type='CD').</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(cda:value[@code and @codeSystem]) or (not(cda:value[@code]) and not(cda:value[@codeSystem]))"
-                     id="cda-ch-mset_as00343">
+                     id="cda-ch-mset_as00346">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), if Problem Entry value is coded, the code and codeSystem attributes shall be present. If uncoded, all attributes other than xsi:type='CD' must be absent.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="count(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;] | cda:subjectOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;]) &lt;= 1"
-                     id="cda-ch-mset_as00344">
+                     id="cda-ch-mset_as00347">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), only one optional severity entry relationship is allowed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;]) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;] and cda:entryRelationship[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;])"
-                     id="cda-ch-mset_as00345">
+                     id="cda-ch-mset_as00348">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), an optional &lt;entryRelationship&gt; element may be present in Problem Entry indicating the severity of the problem. When present, this &lt;entryRelationship&gt; element shall contain a severity observation conforming to the Severity entry template (1.3.6.1.4.1.19376.1.5.3.1.4.1). The typeCode SHALL be SUBJ and inversionInd SHALL be true. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:subjectOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;]) or (cda:subjectOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;] and cda:subjectOf[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;])"
-                     id="cda-ch-mset_as00346">
+                     id="cda-ch-mset_as00349">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), an optional &lt;entryRelationship&gt; element may be present in Problem Entry indicating the severity of the problem. When present, this &lt;entryRelationship&gt; element shall contain a severity observation conforming to the Severity entry template (1.3.6.1.4.1.19376.1.5.3.1.4.1). The typeCode SHALL be SUBJ and inversionInd SHALL be true. For HL7 Version 3 Messages, this SHALL be represented as a &lt;subjectOf&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="count(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;] | cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;]) &lt;= 1"
-                     id="cda-ch-mset_as00347">
+                     id="cda-ch-mset_as00350">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), only one optional Problem Status Observation relationship is allowed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;]) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;] and cda:entryRelationship[@typeCode=&#34;REFR&#34; and @inversionInd=&#34;false&#34;])"
-                     id="cda-ch-mset_as00348">
+                     id="cda-ch-mset_as00351">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), an optional &lt;entryRelationship&gt; element may be present in Problem Entry indicating the clinical status of the problem, e.g., resolved, in remission, active. When present, this &lt;entryRelationship&gt; element shall contain a clinical status observation conforming to the Problem Status Observation template (1.3.6.1.4.1.19376.1.5.3.1.4.1.1). The typeCode SHALL be REFR and inversionInd SHALL be false. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;]) or (cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;] and cda:sourceOf[@typeCode=&#34;REFR&#34; and @inversionInd=&#34;false&#34;])"
-                     id="cda-ch-mset_as00349">
+                     id="cda-ch-mset_as00352">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), an optional &lt;entryRelationship&gt; element may be present in Problem Entry indicating the clinical status of the problem, e.g., resolved, in remission, active. When present, this &lt;entryRelationship&gt; element shall contain a clinical status observation conforming to the Problem Status Observation template (1.3.6.1.4.1.19376.1.5.3.1.4.1.1). The typeCode SHALL be REFR and inversionInd SHALL be false. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="count(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.2&#34;] | cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.2&#34;]) &lt;= 1"
-                     id="cda-ch-mset_as00350">
+                     id="cda-ch-mset_as00353">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), only one optional Health Status Observation relationship is allowed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.2&#34;]) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.2&#34;] and cda:entryRelationship[@typeCode=&#34;REFR&#34; and @inversionInd=&#34;false&#34;])"
-                     id="cda-ch-mset_as00351">
+                     id="cda-ch-mset_as00354">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), an optional &lt;entryRelationship&gt; may be present in Problem Entry referencing the health status of the patient, e.g., resolved, in remission, active. When present, this &lt;entryRelationship&gt; element shall contain a clinical status observation conforming to the Health Status Observation template (1.3.6.1.4.1.19376.1.5.3.1.4.1.2). The typeCode SHALL be REFR and inversionInd SHALL be false. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.2&#34;]) or (cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.2&#34;] and cda:sourceOf[@typeCode=&#34;REFR&#34; and @inversionInd=&#34;false&#34;])"
-                     id="cda-ch-mset_as00352">
+                     id="cda-ch-mset_as00355">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), an optional &lt;entryRelationship&gt; may be present in Problem Entry referencing the health status of the patient, e.g., resolved, in remission, active. When present, this &lt;entryRelationship&gt; element shall contain a clinical status observation conforming to the Health Status Observation template (1.3.6.1.4.1.19376.1.5.3.1.4.1.2). The typeCode SHALL be REFR and inversionInd SHALL be false. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;]) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;] and cda:entryRelationship[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;])"
-                     id="cda-ch-mset_as00353">
+                     id="cda-ch-mset_as00356">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), one or more optional &lt;entryRelationship&gt; elements may be present providing an additional comments (annotations) for the condition. When present, this &lt;entryRelationship&gt; element shall contain a comment observation conforming to the Comment entry template (1.3.6.1.4.1.19376.1.5.3.1.4.2). The typeCode SHALL be SUBJ and inversionInd SHALL be true. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;]) or (cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;] and cda:sourceOf[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;])"
-                     id="cda-ch-mset_as00354">
+                     id="cda-ch-mset_as00357">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), one or more optional &lt;entryRelationship&gt; elements may be present providing an additional comments (annotations) for the condition. When present, this &lt;entryRelationship&gt; element shall contain a comment observation conforming to the Comment entry template (1.3.6.1.4.1.19376.1.5.3.1.4.2). The typeCode SHALL be SUBJ and inversionInd SHALL be true. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4139,206 +4178,206 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5-warnings_pa00090">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.383+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.021+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
                 id="cda-ch-mset_ru00093">
          <iso:report role="warning"
                      test="./@negationInd=&#34;true&#34;"
-                     id="cda-ch-mset_re00002">
+                     id="cda-ch-mset_re00003">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the value of negationInd should not normally be set to true. Instead, to record that there is "no prior history of chicken pox", one would use a coded value indicated exactly that. However, it is not always possible to record problems in this manner, especially if using a controlled vocabulary that does not supply pre-coordinated negations , or which do not allow the negation to be recorded with post-coordinated coded terminology.</xhtml:p>
          </iso:report>
-         <iso:assert role="warning" test="cda:code" id="cda-ch-mset_as00355">
+         <iso:assert role="warning" test="cda:code" id="cda-ch-mset_as00358">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the code for Problem Entry describes the process of establishing a problem. The code element should be used, as the process of determining the value is important to clinicians (e.g., a diagnosis is a more advanced statement than a symptom).</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.6'] or cda:code[@codeSystem='2.16.840.1.113883.6.96']"
-                     id="cda-ch-mset_as00356">
+                     id="cda-ch-mset_as00359">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the recommended vocabulary for Problem Entry is '2.16.840.1.113883.6.96' (SNOMED CT).</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.6'] or cda:code[@code = '64572001' or @code = '418799008' or @code = '404684003' or @code = '409586006' or @code = '248536006' or @code = '55607006' or @code = '282291009']"
-                     id="cda-ch-mset_as00357">
+                     id="cda-ch-mset_as00360">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the recommended vocabulary for describing Problem Entry is shown in a table.</xhtml:p>
          </iso:assert>
          <iso:report role="warning"
                      test="cda:confidentialityCode"
-                     id="cda-ch-mset_re00003">
+                     id="cda-ch-mset_re00004">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), while CDA allows for a condition to specify a &lt;confidentialtyCode&gt; for an observation, in practice there is no way to enforce consistent use of this information across institutions to secure confidential patient information. Therefore, it is recommended that this element not be sent in Problem Entry. If there are confidentiality issues that need to be addressed other mechanisms should be negotiated within the affinity domain.</xhtml:p>
          </iso:report>
-         <iso:report role="warning" test="cda:uncertaintyCode" id="cda-ch-mset_re00004">
+         <iso:report role="warning" test="cda:uncertaintyCode" id="cda-ch-mset_re00005">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), CDA allows a condition to be specified with an &lt;uncertaintyCode&gt;. Such conditions can also be recorded as a possible condition (e.g. possible ear infection). There is no present consensus on the best use of this element; therefore, it is recommended that this element not be sent in Problem Entry.</xhtml:p>
          </iso:report>
          <iso:assert role="warning"
                      test="not(cda:value[@codeSystem]) or cda:value[@codeSystemName]"
-                     id="cda-ch-mset_as00358">
+                     id="cda-ch-mset_as00361">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), it is recommended that the value codeSystemName associated with the codeSystem be provided for diagnostic and human readability purposes, but this is not required by this profile.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="not(cda:value[@code]) or cda:value[@displayName]"
-                     id="cda-ch-mset_as00359">
+                     id="cda-ch-mset_as00362">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), it is recommended that the displayName for the code also be provided for diagnostic and human readability purposes, but this is not required by this profile.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.2.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.2.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.2-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.2-errors_pa00091">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.2">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.2.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Comments</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.33+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.919+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;]"
                 id="cda-ch-mset_ru00094">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.40&#34;]"
-                     id="cda-ch-mset_as00360">
+                     id="cda-ch-mset_as00363">
             <xhtml:p lang="en">In IHE PCC Comments (1.3.6.1.4.1.19376.1.5.3.1.4.2), the parent CCD templateId (2.16.840.1.113883.10.20.1.40) for Comments must be included.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@code=&#34;48767-8&#34; and @codeSystem=&#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00361">
+                     id="cda-ch-mset_as00364">
             <xhtml:p lang="en">In IHE PCC Comments (1.3.6.1.4.1.19376.1.5.3.1.4.2), the code element for Comments is required. The code and codeSystem attributes shall be recorded exactly as indicated.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:text/cda:reference" id="cda-ch-mset_as00362">
+         <iso:assert role="error" test="cda:text/cda:reference" id="cda-ch-mset_as00365">
             <xhtml:p lang="en">In IHE PCC Comments (1.3.6.1.4.1.19376.1.5.3.1.4.2), the &lt;observation&gt; element shall contain a &lt;text&gt; element. For CDA, the &lt;text&gt; elements shall contain a &lt;reference&gt; element pointing to the narrative where the severity is recorded, rather than duplicate text to avoid ambiguity.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code = &#34;completed&#34;]"
-                     id="cda-ch-mset_as00363">
+                     id="cda-ch-mset_as00366">
             <xhtml:p lang="en">In IHE PCC Comments (1.3.6.1.4.1.19376.1.5.3.1.4.2), the code attribute of &lt;statusCode&gt; for all Comments shall be completed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:author) or ( cda:author/cda:time and cda:author/cda:assignedAuthor/cda:id and cda:author/cda:assignedAuthor/cda:addr and cda:author/cda:assignedAuthor/cda:telecom and ( cda:author/cda:assignedAuthor/cda:assignedPerson/cda:name or cda:author/cda:assignedAuthor/cda:representedOrganization/cda:name))"
-                     id="cda-ch-mset_as00364">
+                     id="cda-ch-mset_as00367">
             <xhtml:p lang="en">In IHE PCC Comments (1.3.6.1.4.1.19376.1.5.3.1.4.2), the Comment may have an author. The time of the comment creation shall be recorded in the &lt;time&gt; element when the &lt;author&gt; element is present. The identifier of the author, and their address and telephone number must be present inside the &lt;id&gt;, &lt;addr&gt; and &lt;telecom&gt; elements when the &lt;author&gt; element is present. The author's and/or the organization's name must be present when the &lt;author&gt; element is present.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.2.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.13.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.2.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.13.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.3.13-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.13-errors_pa00092">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.3.13">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.13.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergies and Other Adverse Reactions Section</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:58.854+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.223+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.13&#34;]"
                 id="cda-ch-mset_ru00095">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
-      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00365">
+      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00368">
             <xhtml:p lang="en">In IHE PCC Allergies and Other Adverse Reactions Section (1.3.6.1.4.1.19376.1.5.3.1.3.13), the Allergies and Other Adverse Reactions can only be used on sections.</xhtml:p>
          </iso:assert>
          <!-- Verify that the parent templateId is also present. -->
       <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.2&#34;]"
-                     id="cda-ch-mset_as00366">
+                     id="cda-ch-mset_as00369">
             <xhtml:p lang="en">In IHE PCC Allergies and Other Adverse Reactions Section (1.3.6.1.4.1.19376.1.5.3.1.3.13), the parent template identifier for Allergies and Other Adverse Reactions is not present.</xhtml:p>
          </iso:assert>
          <!-- Verify the section type code -->
       <iso:assert role="error"
                      test="cda:code[@code = &#34;48765-2&#34;]"
-                     id="cda-ch-mset_as00367">
+                     id="cda-ch-mset_as00370">
             <xhtml:p lang="en">In IHE PCC Allergies and Other Adverse Reactions Section (1.3.6.1.4.1.19376.1.5.3.1.3.13), the section type code of a Allergies and Other Adverse Reactions must be 48765-2</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@codeSystem = &#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00368">
+                     id="cda-ch-mset_as00371">
             <xhtml:p lang="en">In IHE PCC Allergies and Other Adverse Reactions Section (1.3.6.1.4.1.19376.1.5.3.1.3.13), the section type code must come from the LOINC code system (2.16.840.1.113883.6.1).</xhtml:p>
          </iso:assert>
          <!-- Verify that all required data elements are present -->
       <iso:assert role="error"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.3&#34;]"
-                     id="cda-ch-mset_as00369">
+                     id="cda-ch-mset_as00372">
             <xhtml:p lang="en">In IHE PCC Allergies and Other Adverse Reactions Section (1.3.6.1.4.1.19376.1.5.3.1.3.13), an Allergies and Other Adverse Reactions must contain Allergies and Intolerances Concern.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.13.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.3.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.13.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.3.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.5.3-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.5.3-errors_pa00093">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.5.3">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.3.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergy and Intolerance Concern</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.368+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.008+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.3&#34;]"
                 id="cda-ch-mset_ru00096">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;2.16.840.1.113883.10.20.1.27&#34;] and cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
-                     id="cda-ch-mset_as00370">
+                     id="cda-ch-mset_as00373">
             <xhtml:p lang="en">In IHE PCC Allergy and Intolerance Concern: 1.3.6.1.4.1.19376.1.5.3.1.4.5.3), the parent CCD template ID (2.16.840.1.113883.10.20.1.27) and the parent PCC template ID (1.3.6.1.4.1.19376.1.5.3.1.4.5.1) shall be present in the Allergy and Intolerance Concern.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(cda:entryRelationship[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;false&#34;]//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]) or (cda:sourceOf[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;false&#34;]//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;])"
-                     id="cda-ch-mset_as00371">
+                     id="cda-ch-mset_as00374">
             <xhtml:p lang="en">In IHE PCC Allergy and Intolerance Concern: 1.3.6.1.4.1.19376.1.5.3.1.4.5.3), this Allergy and Intolerance Concern shall contain one or more allergy or intolerance entries that conform to the Allergy and Intolerance Entry. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element. The typeCode SHALL be 'SUBJ' and inversionInd SHALL be 'false'.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.3.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.6.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.5.3.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.6.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.6-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.6-errors_pa00094">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.6">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.6.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergies and Intolerances</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.4+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.035+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]"
                 id="cda-ch-mset_ru00097">
          <iso:assert role="error"
                      test="../cda:observation[@classCode=&#34;OBS&#34;]"
-                     id="cda-ch-mset_as00372">
+                     id="cda-ch-mset_as00375">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), allergies and intolerances are special kinds of problems, and so are also recorded in the CDA &lt;observation&gt; element, with classCode='OBS'.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
-                     id="cda-ch-mset_as00373">
+                     id="cda-ch-mset_as00376">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), this Allergies and Intolerances entry has a template identifier of 1.3.6.1.4.1.19376.1.5.3.1.4.6, and is a subtype of the 1.3.6.1.4.1.19376.1.5.3.1.4.5 Problem Entry, and so must also conform to the rules of the problem entry, which has the template identifier of 1.3.6.1.4.1.19376.1.5.3.1.4.5. These elements are required.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@code and @codeSystem]"
-                     id="cda-ch-mset_as00374">
+                     id="cda-ch-mset_as00377">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), the &lt;code&gt; element of Allergies and Intolerances represents the kind of allergy observation made, to a drug, food or environmental agent, and whether it is an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance). The &lt;code&gt; element of an allergy entry shall be provided, and a code and codeSystem attribute shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(cda:value[@xsi:type=&#34;CD&#34;]) and (cda:value[@code and @codeSystem] or cda:value[not(@code) and not(@codeSystem)])"
-                     id="cda-ch-mset_as00375">
+                     id="cda-ch-mset_as00378">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), the &lt;value&gt; is a description of the allergy or adverse reaction. While the value may be a coded or an uncoded string, the type is always a coded value (xsi:type='CD'). If coded, the code and codeSystem attributes must be present. The codingSystem should reference a controlled vocabulary describing allergies and adverse reactions. If uncoded, all attributes other than xsi:type='CD' must be absent.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:participant[@typeCode=&#34;CSM&#34;]/cda:participantRole[@classCode=&#34;MANU&#34;]/cda:playingEntity[@classCode=&#34;MMAT&#34;]) or cda:participant[@typeCode=&#34;CSM&#34;]/cda:participantRole[@classCode=&#34;MANU&#34;]/cda:playingEntity[@classCode=&#34;MMAT&#34;]/cda:code/cda:originalText/cda:reference"
-                     id="cda-ch-mset_as00376">
+                     id="cda-ch-mset_as00379">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), the &lt;code&gt; element shall be present. It may contain a code and codeSystem attribute to indicate the code for the substance causing the allergy or intolerance. It shall contain a &lt;reference&gt; to the &lt;originalText&gt; in the narrative where the substance is named.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;] and cda:entryRelationship/*/cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.54&#34;])"
-                     id="cda-ch-mset_as00377">
+                     id="cda-ch-mset_as00380">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), the entry contained with this Allergies and Intolerance entry relationship is some sort of problem that is a manifestation of the allergy. It is recorded using the Problem Entry structure (template identifier 1.3.6.1.4.1.19376.1.5.3.1.4.5), with the additional template identifier (2.16.840.1.113883.10.20.1.54) indicating that this problem is a reaction.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;]) and not(cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;])) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;] and cda:entryRelationship[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;]) or (cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;] and cda:sourceOf[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;])"
-                     id="cda-ch-mset_as00378">
+                     id="cda-ch-mset_as00381">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), an optional &lt;entryRelationship&gt; element may be present indicating the severity of the problem. When present, this &lt;entryRelationship&gt; element shall contain a severity observation conforming to the Severity entry template (1.3.6.1.4.1.19376.1.5.3.1.4.1). For CDA this SHALL be represented with the &lt;entryRelationship&gt; element. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element. The typeCode SHALL be 'SUBJ' and inversionInd SHALL be 'true'.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;]) and not(cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;])) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;] and cda:entryRelationship[@typeCode=&#34;REFR&#34; and @inversionInd=&#34;false&#34;]) or (cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1.1&#34;] and cda:sourceOf[@typeCode=&#34;REFR&#34; and @inversionInd=&#34;false&#34;])"
-                     id="cda-ch-mset_as00379">
+                     id="cda-ch-mset_as00382">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), an optional &lt;entryRelationship&gt; may be present indicating the clinical status of the allergy, e.g., resolved, in remission, active. When present, this &lt;entryRelationship&gt; element shall contain a clinical status observation conforming to the Problem Status Observation template (1.3.6.1.4.1.19376.1.5.3.1.4.1.1). The typeCode SHALL be 'REFR' and inversionInd SHALL be 'false'. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="(not(cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;]) and not(cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;])) or (cda:entryRelationship/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;] and cda:entryRelationship[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;]) or (cda:sourceOf/*/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;] and cda:sourceOf[@typeCode=&#34;SUBJ&#34; and @inversionInd=&#34;true&#34;])"
-                     id="cda-ch-mset_as00380">
+                     id="cda-ch-mset_as00383">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), one or more optional &lt;entryRelationship&gt; elements may be present providing an additional comments (annotations) for the allergy. When present, this &lt;entryRelationship&gt; element shall contain an entry conforming to the Comment entry template (1.3.6.1.4.1.19376.1.5.3.1.4.2). The typeCode SHALL be SUBJ and inversionInd SHALL be true. For CDA this SHALL be represented with the &lt;entryRelationship&gt; element. For HL7 Version 3 Messages, this SHALL be represented as a &lt;sourceOf&gt; element.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4347,37 +4386,37 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.6-warnings_pa00095">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.6.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.4+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.035+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]"
                 id="cda-ch-mset_ru00098">
          <iso:assert role="warning"
                      test="cda:code[@displayName and @codeSystemName]"
-                     id="cda-ch-mset_as00381">
+                     id="cda-ch-mset_as00384">
             <xhtml:p lang="en">In IHE PCC Allergies and Intolerances (1.3.6.1.4.1.19376.1.5.3.1.4.6), the &lt;code&gt; element of Allergies and Intolerances represents the kind of allergy observation made, to a drug, food or environmental agent, and whether it is an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance). The displayName and codeSystemName attributes should be present.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.6.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.2.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.6.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.2.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.7.2-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.7.2-errors_pa00096">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.7.2">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.2.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Product Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.423+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.055+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.2&#34;]"
                 id="cda-ch-mset_ru00099">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.53&#34;]"
-                     id="cda-ch-mset_as00382">
+                     id="cda-ch-mset_as00385">
             <xhtml:p lang="en">In IHE PCC Product Entry (1.3.6.1.4.1.19376.1.5.3.1.4.7.2), the template ID for CCD parent (2.16.840.1.113883.10.20.1.53) is required.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:manufacturedMaterial/cda:code/cda:originalText/cda:reference"
-                     id="cda-ch-mset_as00383">
+                     id="cda-ch-mset_as00386">
             <xhtml:p lang="en">In IHE PCC Product Entry (1.3.6.1.4.1.19376.1.5.3.1.4.7.2), the name and strength of the medication are specified in the elements under the &lt;manufacturedMaterial&gt; element. The &lt;originalText&gt; shall contain a &lt;reference&gt; whose URI value points to the generic name and strength of the medication, or just the generic name alone if strength is not relevant.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4386,97 +4425,97 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.7.2-warnings_pa00097">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.423+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.055+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.2&#34;]"
                 id="cda-ch-mset_ru00100">
          <iso:assert role="warning"
                      test="cda:manufacturedMaterial/cda:name"
-                     id="cda-ch-mset_as00384">
+                     id="cda-ch-mset_as00387">
             <xhtml:p lang="en">In IHE PCC Product Entry (1.3.6.1.4.1.19376.1.5.3.1.4.7.2), the &lt;name&gt; element should contain the brand name of the medication.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.2.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.19.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.2.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.19.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.3.19-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.19-errors_pa00098">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.3.19">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.19.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Medications Section</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.079+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.292+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.19&#34;]"
                 id="cda-ch-mset_ru00101">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
-      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00385">
+      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00388">
             <xhtml:p lang="en">In IHE PCC Medications Section (1.3.6.1.4.1.19376.1.5.3.1.3.19), the Medications can only be used on sections.</xhtml:p>
          </iso:assert>
          <!-- Verify that the parent templateId is also present. -->
       <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.8&#34;]"
-                     id="cda-ch-mset_as00386">
+                     id="cda-ch-mset_as00389">
             <xhtml:p lang="en">In IHE PCC Medications Section (1.3.6.1.4.1.19376.1.5.3.1.3.19), the parent template identifier for Medications is not present.</xhtml:p>
          </iso:assert>
          <!-- Verify the section type code -->
       <iso:assert role="error"
                      test="cda:code[@code = &#34;10160-0&#34;]"
-                     id="cda-ch-mset_as00387">
+                     id="cda-ch-mset_as00390">
             <xhtml:p lang="en">In IHE PCC Medications Section (1.3.6.1.4.1.19376.1.5.3.1.3.19), the section type code of a Medications must be 10160-0</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@codeSystem = &#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00388">
+                     id="cda-ch-mset_as00391">
             <xhtml:p lang="en">In IHE PCC Medications Section (1.3.6.1.4.1.19376.1.5.3.1.3.19), the section type code must come from the LOINC code system (2.16.840.1.113883.6.1).</xhtml:p>
          </iso:assert>
          <!-- Verify that all required data elements are present -->
       <iso:assert role="error"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;]"
-                     id="cda-ch-mset_as00389">
+                     id="cda-ch-mset_as00392">
             <xhtml:p lang="en">In IHE PCC Medications Section (1.3.6.1.4.1.19376.1.5.3.1.3.19), a Medications Section must contain Medications.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.19.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.19.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.7-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.7-errors_pa00099">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.7">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Medications</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.437+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.087+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;]"
                 id="cda-ch-mset_ru00102">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;2.16.840.1.113883.10.20.1.24&#34;]"
-                     id="cda-ch-mset_as00390">
+                     id="cda-ch-mset_as00393">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), all Medications entries use the templateId element specified (2.16.840.1.113883.10.20.1.24) to indicate that they are medication acts. This element is required.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="count(cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.1&#34;] | cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.8&#34;] | cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.9&#34;] | cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.10&#34;] | cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.11&#34;]) = 1"
-                     id="cda-ch-mset_as00391">
+                     id="cda-ch-mset_as00394">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the &lt;templateId&gt; element identifies this Medications &lt;entry&gt; as a particular type of medication event, allowing for validation of the content. As a side effect, readers of the CDA can quickly locate and identify medication events. The templateId must use one of the values in the table in the specification.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.1&#34;]) or count(.//cda:substanceAdministration) = 0"
-                     id="cda-ch-mset_as00392">
+                     id="cda-ch-mset_as00395">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), template ID 1.3.6.1.4.1.19376.1.5.3.1.4.7.1 indicates a "normal" &lt;substanceAdministration&gt; act that may not contain any subordinate &lt;substanceAdministration&gt; acts.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="count(cda:id) = 1" id="cda-ch-mset_as00393">
+         <iso:assert role="error" test="count(cda:id) = 1" id="cda-ch-mset_as00396">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), a top level &lt;substanceAdministration&gt; element must be uniquely identified in Medications. If there is no explicit identifier for this observation in the source EMR system, a GUID may be used for the root attribute, and the extension may be omitted. Although HL7 allows for multiple identifiers, this profile requires that one and only one be used.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code = &#34;completed&#34;]"
-                     id="cda-ch-mset_as00394">
+                     id="cda-ch-mset_as00397">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the status of all Medications &lt;substanceAdministration&gt; elements must be "completed". The act has either occurred, or the request or order has been placed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:consumable/cda:manufacturedProduct/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.2&#34;]"
-                     id="cda-ch-mset_as00395">
+                     id="cda-ch-mset_as00398">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the &lt;consumable&gt; element shall be present, and shall contain a &lt;manufacturedProduct&gt; entry conforming to the Product Entry (1.3.6.1.4.1.19376.1.5.3.1.4.7.2) template.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4485,37 +4524,37 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.7-warnings_pa00100">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.437+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.087+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;]"
                 id="cda-ch-mset_ru00103">
          <iso:assert role="warning"
                      test="(cda:effectiveTime[1][@xsi:type=&#34;IVL_TS&#34;]) and cda:effectiveTime[1]/cda:low[@value or @nullFlavor=&#34;UNK&#34;] and cda:effectiveTime[1]/cda:high[@value or @nullFlavor=&#34;UNK&#34;]"
-                     id="cda-ch-mset_as00396">
+                     id="cda-ch-mset_as00399">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the first &lt;effectiveTime&gt; of Medications is required if known and encodes the start and stop time of the medication regimen. This an interval of time (xsi:type='IVL_TS'), and must be specified as shown. The &lt;low&gt; and &lt;high&gt; values of the first &lt;effectiveTime&gt; element represent the start and stop times for the medication. The &lt;low&gt; value represents the start time, and the &lt;high&gt; value represents the stop time. If either the &lt;low&gt; or the &lt;high&gt; value is unknown, this shall be recorded by setting the nullFlavor attribute to UNK.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="cda:effectiveTime[@operator=&#34;A&#34;]"
-                     id="cda-ch-mset_as00397">
+                     id="cda-ch-mset_as00400">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the frequency of medication in Medications to be administered is required if known. It shall be recorded as an effectiveTime element with an operator attribute equal to "A".</xhtml:p>
          </iso:assert>
-         <iso:assert role="warning" test="cda:routeCode" id="cda-ch-mset_as00398">
+         <iso:assert role="warning" test="cda:routeCode" id="cda-ch-mset_as00401">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), a routeCode for Medications must be specified if the route is known.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="not(cda:routeCode) or cda:routeCode[@codeSystem = &#34;2.16.840.1.113883.5.112&#34;]"
-                     id="cda-ch-mset_as00399">
+                     id="cda-ch-mset_as00402">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the routeCode for Medications should use the HL7 RouteOfAdministration vocabulary.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="not(cda:routeCode) or cda:routeCode/@displayName"
-                     id="cda-ch-mset_as00400">
+                     id="cda-ch-mset_as00403">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the routeCode's displayName should be specified.</xhtml:p>
          </iso:assert>
-         <iso:assert role="warning" test="cda:doseQuantity" id="cda-ch-mset_as00401">
+         <iso:assert role="warning" test="cda:doseQuantity" id="cda-ch-mset_as00404">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the doseQuantity is required if known.</xhtml:p>
          </iso:assert>
-         <iso:assert role="warning" test="cda:rateQuantity" id="cda-ch-mset_as00402">
+         <iso:assert role="warning" test="cda:rateQuantity" id="cda-ch-mset_as00405">
             <xhtml:p lang="en">In IHE PCC Medications (1.3.6.1.4.1.19376.1.5.3.1.4.7), the rateQuantity is required if known.</xhtml:p>
          </iso:assert>
          <!--
@@ -4533,76 +4572,76 @@ never actually stated in the document...
 -->
     </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.1.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.1.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.7.1-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.7.1-errors_pa00101">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.7.1">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.1.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Normal Dosing</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.412+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:30.045+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.1&#34;]"
                 id="cda-ch-mset_ru00104">
          <iso:report role="error"
                      test="//cda:substanceAdministation"
-                     id="cda-ch-mset_re00005">
+                     id="cda-ch-mset_re00006">
             <xhtml:p lang="en">In IHE PCC Normal Dosing: 1.3.6.1.4.1.19376.1.5.3.1.4.7.1), medications that use this template identifier shall not use subordinate &lt;substanceAdministation&gt; acts.</xhtml:p>
          </iso:report>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.1.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.23.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.7.1.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.23.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.3.23-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.23-errors_pa00102">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.3.23">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.23.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunizations Section</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.124+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.337+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.23&#34;]"
                 id="cda-ch-mset_ru00105">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
-      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00403">
+      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00406">
             <xhtml:p lang="en">In IHE PCC Immunizations Section (1.3.6.1.4.1.19376.1.5.3.1.3.23), the Immunizations can only be used on sections.</xhtml:p>
          </iso:assert>
          <!-- Verify that the parent templateId is also present. -->
       <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.6&#34;]"
-                     id="cda-ch-mset_as00404">
+                     id="cda-ch-mset_as00407">
             <xhtml:p lang="en">In IHE PCC Immunizations Section (1.3.6.1.4.1.19376.1.5.3.1.3.23), the parent template identifier for Immunizations is not present.</xhtml:p>
          </iso:assert>
          <!-- Verify the section type code -->
       <iso:assert role="error"
                      test="cda:code[@code = &#34;11369-6&#34;]"
-                     id="cda-ch-mset_as00405">
+                     id="cda-ch-mset_as00408">
             <xhtml:p lang="en">In IHE PCC Immunizations Section (1.3.6.1.4.1.19376.1.5.3.1.3.23), the section type code of a Immunizations must be 11369-6</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@codeSystem = &#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00406">
+                     id="cda-ch-mset_as00409">
             <xhtml:p lang="en">In IHE PCC Immunizations Section (1.3.6.1.4.1.19376.1.5.3.1.3.23), the section type code must come from the LOINC code system (2.16.840.1.113883.6.1).</xhtml:p>
          </iso:assert>
          <!-- Verify that all required data elements are present -->
       <iso:assert role="error"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.12&#34;]"
-                     id="cda-ch-mset_as00407">
+                     id="cda-ch-mset_as00410">
             <xhtml:p lang="en">In IHE PCC Immunizations Section (1.3.6.1.4.1.19376.1.5.3.1.3.23), a Immunizations must contain Immunization.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.23.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.12.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.23.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.12.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.12-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.12-errors_pa00103">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.12">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunizations</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.215+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.563+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12&#34;]"
                 id="cda-ch-mset_ru00106">
@@ -4615,40 +4654,40 @@ two moodCode options...
 -->
       <iso:assert role="error"
                      test="@negationInd=&#34;true&#34; or @negationInd=&#34;false&#34;"
-                     id="cda-ch-mset_as00408">
+                     id="cda-ch-mset_as00411">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), an Immunization Entry may be a record of why a specific immunization was not performed. In this case, negationInd shall be set to true, otherwise, it shall be false.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.24&#34;]"
-                     id="cda-ch-mset_as00409">
+                     id="cda-ch-mset_as00412">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), Immunization shall record its parent CCD template ID (2.16.840.1.113883.10.20.1.24).</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00410">
+         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00413">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), an Immunization shall have an identifier (id).</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@code and @codeSystem]"
-                     id="cda-ch-mset_as00411">
+                     id="cda-ch-mset_as00414">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), this required element records that the act was an immunization. The substance administration act must have a &lt;code&gt; element with code and codeSystem attributes present. If no coding system is used by the source, then simply record the code exactly as shown: &lt;code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/&gt;.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code=&#34;completed&#34;]"
-                     id="cda-ch-mset_as00412">
+                     id="cda-ch-mset_as00415">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), the statusCode shall be set to "completed" for all Immunizations.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:effectiveTime[@value or @nullFlavor]"
-                     id="cda-ch-mset_as00413">
+                     id="cda-ch-mset_as00416">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), the effectiveTime element shall be present and should contain a time value that indicates the date of the substance administration. If the date is unknown, this shall be recorded using the nullFlavor attribute, with the reason that the information is unknown being specified.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:consumable//cda:manufacturedProduct//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.2&#34;]"
-                     id="cda-ch-mset_as00414">
+                     id="cda-ch-mset_as00417">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), the &lt;consumable&gt; element shall be present, and shall contain a &lt;manufacturedProduct&gt; entry conforming to the Product Entry template (1.3.6.1.4.1.19376.1.5.3.1.4.7.2).</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:entryRelationship[@inversionInd=&#34;false&#34; and @typeCode=&#34;CAUS&#34;]) or (cda:entryRelationship[@inversionInd=&#34;false&#34; and @typeCode=&#34;CAUS&#34;]//cda:observation/cda:id and cda:entryRelationship[@inversionInd=&#34;false&#34; and @typeCode=&#34;CAUS&#34;]//cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.28&#34;] and cda:entryRelationship[@inversionInd=&#34;false&#34; and @typeCode=&#34;CAUS&#34;]//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;] and cda:entryRelationship[@inversionInd=&#34;false&#34; and @typeCode=&#34;CAUS&#34;]//cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.54&#34;])"
-                     id="cda-ch-mset_as00415">
+                     id="cda-ch-mset_as00418">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), an entryRelationship should be used to identify adverse reactions caused by the immunization. In that case, an observation is required, and provides a pointer to the the adverse reaction caused by the immunization. An identifier (id) of the observation is required. It shall contain a conforming Problem Entry that also conforms to the CCD Reaction template.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4677,7 +4716,7 @@ Not needed.  Already checked by CCD.
 -->
       <iso:assert role="error"
                      test="not(ancestor::*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12&#34;]) or cda:statusCode[@code=&#34;completed&#34;]"
-                     id="cda-ch-mset_as00416">
+                     id="cda-ch-mset_as00419">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), in the optional entry relationship indicating that position of this immunization in a series of immunizations, the &lt;statusCode&gt; element shall be present, and must be recorded as completed.</xhtml:p>
          </iso:assert>
          <!--
@@ -4697,67 +4736,67 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.12-warnings_pa00104">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.215+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.563+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12&#34;]"
                 id="cda-ch-mset_ru00108">
          <iso:assert role="warning"
                      test="cda:text/cda:reference"
-                     id="cda-ch-mset_as00417">
+                     id="cda-ch-mset_as00420">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), in a CDA document, the URI given in the value attribute of the &lt;reference&gt; element points to an element in the narrative content that contains the complete text describing the immunization activity. In an HL7 message, the content of the text element shall contain the complete text describing the immunization activity.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="not(cda:effectiveTime/@value) or (string-length(cda:effectiveTime/@value) &gt;= 8)"
-                     id="cda-ch-mset_as00418">
+                     id="cda-ch-mset_as00421">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), the effectiveTime element shall be present and should contain a time value that indicates the date of the substance administration. If the date is unkown, this shall be recorded using the nullFlavor attribute, with the reason that the information is unknown being specified. Otherwise, the date shall be recorded, and should have precision of at least the day.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="not(cda:routeCode[@code]) or cda:routeCode[@displayName]"
-                     id="cda-ch-mset_as00419">
+                     id="cda-ch-mset_as00422">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), the &lt;routeCode&gt; element specifies the route of administration using the HL7 RouteOfAdministration vocabulary. A code must be specified if the route is known, and the displayName attribute should be specified.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
                      test="cda:approachSiteCode/cda:originalText/cda:reference"
-                     id="cda-ch-mset_as00420">
+                     id="cda-ch-mset_as00423">
             <xhtml:p lang="en">In IHE PCC Immunizations (1.3.6.1.4.1.19376.1.5.3.1.4.12), the &lt;approachSiteCode&gt; element describes the site of medication administrion. It may be coded to a controlled vocabulary that lists such sites (e.g., SNOMED-CT). In CDA documents, this element contains a URI in the value attribute of the &lt;reference&gt; that points to the text in the narrative identifying the site. In a message, the &lt;originalText&gt; element shall contain the text identifying the site.</xhtml:p>
          </iso:assert>
-         <iso:assert role="warning" test="cda:doseQuantity" id="cda-ch-mset_as00421">
+         <iso:assert role="warning" test="cda:doseQuantity" id="cda-ch-mset_as00424">
             <xhtml:p lang="en">In Immunizations, the dose is specified in the &lt;doseQuantity&gt; element. If a dose range is given (e.g., 1-2 tablets, or 325-750mg), then the &lt;low&gt; and &lt;high&gt; bounds are specified in their respective elements, otherwise both &lt;low&gt; and &lt;high&gt; have the same value. If the dose is in countable units (tablets, caplets, "eaches"), then the unit attribute is not sent. Otherwise the units are sent. The unit attribute should be derived from the HL7 UnitsOfMeasureCaseSensitive vocabulary.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.12.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.12.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.13-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13-errors_pa00105">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.13">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Simple Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.29+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.665+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
                 id="cda-ch-mset_ru00109">
-         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00422">
+         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00425">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), each Simple Observation shall have an &lt;id&gt; identifier.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:code" id="cda-ch-mset_as00423">
+         <iso:assert role="error" test="cda:code" id="cda-ch-mset_as00426">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), Simple Observations shall have a code describing what was measured.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:text/cda:reference" id="cda-ch-mset_as00424">
+         <iso:assert role="error" test="cda:text/cda:reference" id="cda-ch-mset_as00427">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), each observation measurement entry may contain a text element providing the free text that provides the same information as the observation within the narrative portion of the document with a text element. For CDA based uses of Simple Observations, this element SHALL be present, and SHALL contain a reference element that points to the related string in the narrative portion of the document.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code = &#34;completed&#34;]"
-                     id="cda-ch-mset_as00425">
+                     id="cda-ch-mset_as00428">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), the status code of all Simple Observations shall be completed.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:effectiveTime[@value or @nullFlavor]"
-                     id="cda-ch-mset_as00426">
+                     id="cda-ch-mset_as00429">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), the &lt;effectiveTime&gt; element shall be present in Simple Observations, and shall record the date and time when the measurement was taken. This element should be precise to the day. If the date and time is unknown, this element should record that using the nullFlavor attribute.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:value" id="cda-ch-mset_as00427">
+         <iso:assert role="error" test="cda:value" id="cda-ch-mset_as00430">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), the value of the Simple Observation shall be recorded using a data type appropriate to the observation.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4766,13 +4805,13 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13-warnings_pa00106">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.29+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.665+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
                 id="cda-ch-mset_ru00110">
          <iso:assert role="warning"
                      test="cda:effectiveTime[@nullFlavor] or string-length(cda:effectiveTime/@value) &gt;= 8"
-                     id="cda-ch-mset_as00428">
+                     id="cda-ch-mset_as00431">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), the effectiveTime element of a Simple Observation should be precise to the day. If the date and time is unknown, this element should record that using the nullFlavor attribute.</xhtml:p>
          </iso:assert>
       </iso:rule>
@@ -4781,140 +4820,205 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13-notes_pa00107">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.29+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.665+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
                 id="cda-ch-mset_ru00111">
          <iso:assert role="information"
                      test="cda:interpretationCode"
-                     id="cda-ch-mset_as00429">
+                     id="cda-ch-mset_as00432">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), if there is an interpretation that can be performed using an observation result (e.g., high, borderline, normal, low), these may be recorded within the interpretationCode element.</xhtml:p>
          </iso:assert>
-         <iso:assert role="information" test="cda:methodCode" id="cda-ch-mset_as00430">
+         <iso:assert role="information" test="cda:methodCode" id="cda-ch-mset_as00433">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), the methodCode element may be used to record the specific method used to make an observation when this information is not already pre-coordinated with the observation code.</xhtml:p>
          </iso:assert>
          <iso:assert role="information"
                      test="cda:targetSiteCode"
-                     id="cda-ch-mset_as00431">
+                     id="cda-ch-mset_as00434">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), the targetSiteCode may be used to record the target site where an observation is made when this information is not already pre-coordinated with the observation code.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.1.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.1.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.13.1-errors-->
   <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.1-errors_pa00108">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.13.1">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.1.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Vital Signs Organizer</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.232+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.576+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.1&#34;]"
                 id="cda-ch-mset_ru00112">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.32&#34;] and cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.35&#34;]"
-                     id="cda-ch-mset_as00432">
+                     id="cda-ch-mset_as00435">
             <xhtml:p lang="en">In IHE PCC Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1), the Vital Signs Organizer shall have template IDs (2.16.840.1.113883.10.20.1.32 and 2.16.840.1.113883.10.20.1.35) to indicate that it inherits constraints from the ASTM/HL7 CCD Specification for Vital signs.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00433">
+         <iso:assert role="error" test="cda:id" id="cda-ch-mset_as00436">
             <xhtml:p lang="en">In IHE PCC Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1), the Vital Signs Organizer shall have an &lt;id&gt; element.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@code=&#34;46680005&#34; and @displayName=&#34;Vital signs&#34; and @codeSystem=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName=&#34;SNOMED CT&#34;]"
-                     id="cda-ch-mset_as00434">
+                     id="cda-ch-mset_as00437">
             <xhtml:p lang="en">In IHE PCC Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1), the &lt;code&gt; element of Vital Signs Organizer shall be recorded as shown to indicate that this organizer captures information about patient vital signs. &lt;code code='46680005' displayName='Vital signs' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT'/&gt;</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:statusCode[@code=&#34;completed&#34;]"
-                     id="cda-ch-mset_as00435">
+                     id="cda-ch-mset_as00438">
             <xhtml:p lang="en">In IHE PCC Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1), the Vital Signs Organizer observations shall have all been completed.</xhtml:p>
          </iso:assert>
-         <iso:assert role="error" test="cda:effectiveTime" id="cda-ch-mset_as00436">
+         <iso:assert role="error" test="cda:effectiveTime" id="cda-ch-mset_as00439">
             <xhtml:p lang="en">In IHE PCC Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1), the effective time element shall be present in Vital Signs Organizer to indicate when the measurement was taken.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:component/cda:observation/cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.2&#34;]"
-                     id="cda-ch-mset_as00437">
+                     id="cda-ch-mset_as00440">
             <xhtml:p lang="en">In IHE PCC Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1), the Vital Signs Organizer shall have one or more &lt;component&gt; elements that are &lt;observation&gt; elements using the Vital Signs Observation template (1.3.6.1.4.1.19376.1.5.3.1.4.13.2).</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.1.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.6.sch?>
+   <!--1.3.6.1.4.1.19376.1.5.3.1.4.13.1-extensions--><iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.1-extensions_pa00109">
+      <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.1']"
+                id="cda-ch-mset_ru00113">
+		<!-- Organizer Attribute -->
+		<iso:assert role="error"
+                     test="self::cda:organizer[@classCode=&#34;CLUSTER&#34; and @moodCode=&#34;EVN&#34;]"
+                     id="cda-ch-mset_as00441">
+			         <xhtml:p lang="de">Der Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1) muss mit classCode='CLUSTER' und moodCode='EVN' deklariert werden.</xhtml:p>
+		       </iso:assert>
+
+		       <!-- Zeitpunkt der Messung -->
+		<iso:assert role="error"
+                     test="cda:effectiveTime[@value or @nullFlavor=$cda-ch-codeSystem[@codeSystemName='nullFlavor' and @root='2.16.840.1.113883.5.1008']/code/@value]"
+                     id="cda-ch-mset_as00442">
+			         <xhtml:p lang="de">Im Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1) muss der Zeitpunkt der Messung angegeben werden. Ist dieser unbekannt, MUSS effectiveTime mit null-Flavor angegeben werden.</xhtml:p>
+		       </iso:assert>
+
+		       <!-- Autor -->
+		<iso:assert role="error"
+                     test="cda:author[@typeCode=&#34;AUT&#34;]"
+                     id="cda-ch-mset_as00443">
+			         <xhtml:p lang="de">Im Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1) muss der Autor deklariert werden.</xhtml:p>
+		       </iso:assert>
+		       <iso:assert role="error"
+                     test="cda:author/cda:time/@value"
+                     id="cda-ch-mset_as00444">
+			         <xhtml:p lang="de">Im Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1) muss das Datum der Eintragung im time Element beim author angegeben werden.</xhtml:p>
+		       </iso:assert>
+		       <iso:assert role="error"
+                     test="cda:author/cda:assignedAuthor/cda:id/@extension"
+                     id="cda-ch-mset_as00445">
+			         <xhtml:p lang="de">Im Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1) muss die ID des Autors im 'id' element von 'assignedAuthor' deklariert werden.</xhtml:p>
+		       </iso:assert>
+		       <iso:assert role="information"
+                     test="cda:author/cda:assignedAuthor/cda:id[@extension and @root='1.3.88']"
+                     id="cda-ch-mset_as00446">
+			         <xhtml:p lang="de">Im Vital Signs Organizer (1.3.6.1.4.1.19376.1.5.3.1.4.13.1) ist kein Autor mit GLN deklariert.</xhtml:p>
+		       </iso:assert>
+
+	     </iso:rule>
+   </iso:pattern>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.1.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.6.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors-->
-  <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors_pa00109">
+  <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-errors_pa00110">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.4.13.6">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.6.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Blood Type Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.277+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.645+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.6&#34;]"
-                id="cda-ch-mset_ru00113">
+                id="cda-ch-mset_ru00114">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                     id="cda-ch-mset_as00438">
+                     id="cda-ch-mset_as00447">
             <xhtml:p lang="en">In IHE PCC Blood Type Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.6), the parent template Id (1.3.6.1.4.1.19376.1.5.3.1.4.13) of Blood Type Observation shall exist.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.31&#34;]"
-                     id="cda-ch-mset_as00439">
+                     id="cda-ch-mset_as00448">
             <xhtml:p lang="en">In IHE PCC Blood Type Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.6), the CCD template Id (2.16.840.1.113883.10.20.1.31) of Blood Type Observation shall exist.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00440">
+                     id="cda-ch-mset_as00449">
             <xhtml:p lang="en">In IHE PCC Blood Type Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.6), a Blood Type Observation shall have a LOINC code describing this as a finding of the patient's composite blood type.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@code=&#34;882-1&#34;] and cda:value[@xsi:type=&#34;CE&#34;]"
-                     id="cda-ch-mset_as00441">
+                     id="cda-ch-mset_as00450">
             <xhtml:p lang="en">In IHE PCC Blood Type Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.6), the Blood Type Observation with a LOINC code of 882-1 shall be recorded using a CE datatype.</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="not(cda:repeatNumber or cda:interpretationCode or cda:methodCode or cda:targetSiteCode)"
-                     id="cda-ch-mset_as00442">
+                     id="cda-ch-mset_as00451">
             <xhtml:p lang="en">In IHE PCC Blood Type Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.6), the repeatNumber, interpretationCode, methodCode and targetSiteCode elements should not be present in a blood type observation.</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.6.sch?>
-  <?DSDL_INCLUDE_START templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.34.sch?>
+   <!--1.3.6.1.4.1.19376.1.5.3.1.4.13.6-extensions--><iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.4.13.6-extensions_pa00111">
+      <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.6']"
+                id="cda-ch-mset_ru00115">
+		<!-- CDA-CH-LRTP Blutgruppe -->
+		<iso:assert role="error"
+                     test="cda:text/cda:reference/@value"
+                     id="cda-ch-mset_as00452">
+			         <xhtml:p lang="de">Bei der Blutgruppe fehlt die Referenz auf den menschlich lesbaren Text</xhtml:p>
+		       </iso:assert>
+		       <!-- Check that status is completed -->
+		<iso:assert role="error"
+                     test="cda:statusCode[@code='completed']"
+                     id="cda-ch-mset_as00453">
+			         <xhtml:p lang="de">Die Blutgruppe muss mit status='completed' angegeben werden</xhtml:p>
+		       </iso:assert>
+		       <!-- Check date and time of the test -->
+		<iso:assert role="warning"
+                     test="cda:effectiveTime/@value"
+                     id="cda-ch-mset_as00454">
+			         <xhtml:p lang="de">Bei der Blutgruppe fehlt das Datum des Blutgruppentests</xhtml:p>
+		       </iso:assert>
+
+	     </iso:rule>
+   </iso:pattern>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.4.13.6.sch?>
+  <?DSDL_INCLUDE_START templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.34.sch?>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.3.34-errors-->
-  <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-errors_pa00110">
+  <iso:pattern id="cda-ch-mset_1.3.6.1.4.1.19376.1.5.3.1.3.34-errors_pa00112">
       <xhtml:ul id="1.3.6.1.4.1.19376.1.5.3.1.3.34">
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.34.ent</xhtml:li>
-         <xhtml:li class="version">8.0</xhtml:li>
+         <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Advance Directives Section</xhtml:li>
-         <xhtml:li class="lastupdate">2013-04-01T20:23:59.162+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2014-01-27T21:45:29.438+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.34&#34;]"
-                id="cda-ch-mset_ru00114">
+                id="cda-ch-mset_ru00116">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
-      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00443">
+      <iso:assert role="error" test="self::cda:section" id="cda-ch-mset_as00455">
             <xhtml:p lang="en">In IHE PCC Advance Directives Section (1.3.6.1.4.1.19376.1.5.3.1.3.34), the Advance Directives can only be used on sections.</xhtml:p>
          </iso:assert>
          <!-- Verify that the parent templateId is also present. -->
       <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.1&#34;]"
-                     id="cda-ch-mset_as00444">
+                     id="cda-ch-mset_as00456">
             <xhtml:p lang="en">In IHE PCC Advance Directives Section (1.3.6.1.4.1.19376.1.5.3.1.3.34), the parent template identifier for Advance Directives is not present.</xhtml:p>
          </iso:assert>
          <!-- Verify the section type code -->
       <iso:assert role="error"
                      test="cda:code[@code = &#34;42348-3&#34;]"
-                     id="cda-ch-mset_as00445">
+                     id="cda-ch-mset_as00457">
             <xhtml:p lang="en">In IHE PCC Advance Directives Section (1.3.6.1.4.1.19376.1.5.3.1.3.34), the section type code of a Advance Directives must be 42348-3</xhtml:p>
          </iso:assert>
          <iso:assert role="error"
                      test="cda:code[@codeSystem = &#34;2.16.840.1.113883.6.1&#34;]"
-                     id="cda-ch-mset_as00446">
+                     id="cda-ch-mset_as00458">
             <xhtml:p lang="en">In IHE PCC Advance Directives Section (1.3.6.1.4.1.19376.1.5.3.1.3.34), the section type code must come from the LOINC code system (2.16.840.1.113883.6.1).</xhtml:p>
          </iso:assert>
       </iso:rule>
   </iso:pattern>
-   <?DSDL_INCLUDE_END templates/IHE/PCC/v8.0/1.3.6.1.4.1.19376.1.5.3.1.3.34.sch?>
+   <?DSDL_INCLUDE_END templates/IHE/PCC/v9.0/1.3.6.1.4.1.19376.1.5.3.1.3.34.sch?>
 
 </schema>

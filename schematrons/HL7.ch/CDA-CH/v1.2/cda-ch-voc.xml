@@ -6,12 +6,11 @@ Vocabulary zu HL7 CDA-CH V1.2 Schematrons
 Language: de-CH
 
 History:
-2009.12.31: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
-2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-2011.01.24: Tony Schaller, medshare GmbH (Übersetzungen französisch)
-2012.12.31: Tony Schaller, medshare GmbH (Abgabe CDA-CH-EDES)
-2013.01.13: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
-2013.07.01: Tony Schaller, medshare GmbH (Erweiterungen LanguageAbility und EmploymentStatus für CDA-CH-DMST)
+31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+31.12.2012: Tony Schaller, medshare GmbH (Abgabe CDA-CH-EDES)
+13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
 
 ********************************************************
 -->
@@ -948,4 +947,26 @@ History:
 		<code value='o' displayName='other/Anderes/autre' />
 	</system>
 
+	<!--
+	********************************************************
+	CDA-CH: Blood group
+	Value-Set aus SNOMED CT
+	********************************************************
+	-->
+	<system codeSystemName='bloodGroup' root='2.16.756.5.30.2.1.1.13'>
+		<code value='TODO jbl' displayName='A Rh pos' />
+	</system>
+
+	<!--
+	********************************************************
+	CDA-CH: NullFlavors
+	********************************************************
+	-->
+	<system codeSystemName='nullFlavor' root='2.16.840.1.113883.5.1008'>
+		<code value='NA' displayName='not applicable/Nicht anwendbar' />
+		<code value='NAV' displayName='temporarily unavailable/Vorübergehend unbekannt, wird später ausgefüllt' />
+		<code value='OTH' displayName='other/Andere Gründe' />
+		<code value='UNK' displayName='unknown/Unbekannt, ohne weitere Präzisierung' />
+	</system>
+	
 </systems>
