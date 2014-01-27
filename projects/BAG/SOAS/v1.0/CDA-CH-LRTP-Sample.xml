@@ -5,8 +5,9 @@ Beispiel Laborbefund im Transplantationsprozess gemäss CDA-CH-LRTP V1.0
 
 History:
 2013.10.09: Tony Schaller, medshare GmbH (First draft)
-2014.01.21 Tony Schaller, medshare GmbH (Alpha-Version)
-2014.01.22 Tony Schaller, medshare GmbH (Beta-Version)
+2014.01.21: Tony Schaller, medshare GmbH (Alpha-Version)
+2014.01.22: Tony Schaller, medshare GmbH (Beta-Version)
+2014.01.27: Tony Schaller, medshare GmbH (Release Candidate 1)
 
 ********************************************************
 -->
@@ -100,6 +101,7 @@ History:
 			</informationRecipient>
 			<receivedOrganization>
 				<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/>
+				<name>Swisstransplant</name>
 				<telecom use='PUB' value='tel:+41.31.380.81.30'/>
 				<addr use='WP'>
 					<streetAddressLine>Laupenstrasse 37</streetAddressLine>
@@ -306,7 +308,7 @@ History:
 											</code>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='INT' value='120' />
+											<value xsi:type='PQ' value='120' unit="g/L" />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -613,7 +615,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='DR18(3)' displayName='DR18(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='DR18' displayName='DR18(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />

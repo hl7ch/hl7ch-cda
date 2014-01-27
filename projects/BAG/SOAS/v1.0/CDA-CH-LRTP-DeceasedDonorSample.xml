@@ -6,6 +6,7 @@ Empfänger/Receiver
 
 History:
 2014.01.23: Tony Schaller, medshare GmbH (First draft)
+2014.01.27: Tony Schaller, medshare GmbH (Release Candidate 1)
 
 ********************************************************
 -->
@@ -99,6 +100,7 @@ History:
 			</informationRecipient>
 			<receivedOrganization>
 				<id extension='0000' root='1.3.6.1.4.1.19376.1.3.4'/>
+				<name>Swisstransplant</name>
 				<telecom use='PUB' value='tel:+41.31.380.81.30'/>
 				<addr use='WP'>
 					<streetAddressLine>Laupenstrasse 37</streetAddressLine>
@@ -548,7 +550,6 @@ History:
 									</author>
 									
 									<!-- IHE XD-LAB: Laboratory Observations -->
-									
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -560,7 +561,7 @@ History:
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
 									</component>
-
+																		
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -572,7 +573,7 @@ History:
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
 									</component>
-
+									
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -728,7 +729,7 @@ History:
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
 									</component>
-									
+
 								</organizer>
 							</entryRelationship>
 						</act>
@@ -776,7 +777,7 @@ History:
 									<td>A24(9) HLA-Antigene</td>
 									<td><content ID='l22'>+</content></td>
 									<td>N</td>
-									<td>A24-9</td>
+									<td>A24</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
 									<td></td>
@@ -812,7 +813,7 @@ History:
 									<td>DR11(5) HLA-Antigene</td>
 									<td><content ID='l26'>+</content></td>
 									<td>N</td>
-									<td>DR11-5</td>
+									<td>DR11</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
 									<td></td>
@@ -821,7 +822,7 @@ History:
 									<td>DQ7(3) HLA-Antigene</td>
 									<td><content ID='l27'>+</content></td>
 									<td>N</td>
-									<td>DQ7-3</td>
+									<td>DQ7</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
 									<td></td>
@@ -830,7 +831,7 @@ History:
 									<td>DQ5(1) HLA-Antigene</td>
 									<td><content ID='l28'>+</content></td>
 									<td>N</td>
-									<td>DQ5-1</td>
+									<td>DQ5</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
 									<td></td>
@@ -857,7 +858,6 @@ History:
 											<id extension='7608888888888' root='1.3.88'/>
 										</assignedAuthor>
 									</author>
-									
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -869,11 +869,11 @@ History:
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
 									</component>
-
+										
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='A24-9' displayName='A24-9 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='A24' displayName='A24(9) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l22'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
@@ -897,7 +897,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='B51-5' displayName='B51(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='B51' displayName='B51(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l24'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
@@ -921,7 +921,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='DR11-5' displayName='DR11(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='DR11' displayName='DR11(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l26'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
@@ -933,7 +933,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='DQ7-3' displayName='DQ7(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='DQ7' displayName='DQ7(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l27'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
@@ -945,7 +945,7 @@ History:
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='DQ5-1' displayName='DQ5(1) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
+											<code code='DQ5' displayName='DQ5(1) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l28'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
@@ -953,7 +953,6 @@ History:
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
 									</component>
-
 								</organizer>
 							</entryRelationship>
 						</act>
@@ -999,69 +998,13 @@ History:
 								</tr>
 								<tr>
 									<td>Hematocrit [Volume Fraction] of Blood</td>
-									<td><content ID='l42'>28%</content></td>
+									<td><content ID='l42'>28 %</content></td>
 									<td>L</td>
 									<td>20570-8</td>
 									<td>LOINC</td>
 									<td>7608888888888</td>
 									<td></td>
 								</tr>
-<!--								
-								<tr>
-									<td></td>
-									<td><content ID='l44'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><content ID='l45'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><content ID='l46'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><content ID='l47'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><content ID='l48'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><content ID='l49'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
--->								
 							</tbody>
 						</table>
 					</text>
@@ -1086,7 +1029,6 @@ History:
 									</author>
 									
 									<!-- Laboratory Observations -->
-
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -1094,7 +1036,7 @@ History:
 											<text><reference value='#l41'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='INT' value='97' />
+											<value xsi:type='PQ' value='97' unit="g/L" />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -1115,7 +1057,7 @@ History:
 											<text><reference value='#l42'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='INT' value='28' />
+											<value xsi:type='PQ' value='28' unit="%" />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -1128,7 +1070,6 @@ History:
 											</referenceRange>
 										</observation>
 									</component>
-									
 								</organizer>
 							</entryRelationship>
 						</act>
@@ -1180,17 +1121,6 @@ History:
 									<td>7608888888888</td>
 									<td></td>
 								</tr>
-<!--								
-								<tr>
-									<td></td>
-									<td><content ID='l51'></content></td>
-									<td>N</td>
-									<td></td>
-									<td>LOINC</td>
-									<td>7608888888888</td>
-									<td></td>
-								</tr>
--->								
 							</tbody>
 						</table>
 					</text>
@@ -1215,7 +1145,6 @@ History:
 									</author>
 									
 									<!-- Laboratory Observations -->
-									
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -1223,7 +1152,7 @@ History:
 											<text><reference value='#l51'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='PQ' value='13.00' unit='TODO by epyx' />
+											<value xsi:type='PQ' value='13.00' unit='10*9/L' />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -1244,7 +1173,7 @@ History:
 											<text><reference value='#l52'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='PQ' value='130.00' unit='TODO by epyx' />
+											<value xsi:type='PQ' value='130.00' unit='10*9/L' />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -1257,7 +1186,6 @@ History:
 											</referenceRange>
 										</observation>
 									</component>
-									
 								</organizer>
 							</entryRelationship>
 						</act>
@@ -1324,7 +1252,6 @@ History:
 									</author>
 									
 									<!-- Laboratory Observations -->
-									
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -1332,7 +1259,7 @@ History:
 											<text><reference value='#l61'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='PQ' value='11.8' unit='TODO by epyx' />
+											<value xsi:type='PQ' value='11.8' unit='mmol/L' />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -1345,7 +1272,6 @@ History:
 											</referenceRange>
 										</observation>
 									</component>
-									
 								</organizer>
 							</entryRelationship>
 						</act>
@@ -1412,7 +1338,6 @@ History:
 									</author>
 									
 									<!-- Laboratory Observations -->
-									
 									<component typeCode='COMP'>
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
@@ -1420,7 +1345,7 @@ History:
 											<text><reference value='#l71'/></text>
 											<statusCode code='completed'/>
 											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='PQ' value='7.0' unit='TODO by epyx' />
+											<value xsi:type='PQ' value='7.0' unit='N/A' />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
@@ -1433,7 +1358,6 @@ History:
 											</referenceRange>
 										</observation>
 									</component>
-									
 								</organizer>
 							</entryRelationship>
 						</act>
