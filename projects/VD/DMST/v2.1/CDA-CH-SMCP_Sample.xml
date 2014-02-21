@@ -6,6 +6,7 @@ Document médico-social de transmission (DMST) V2.1
 History:
 2013.06.24: Tony Schaller, medshare GmbH (First Draft)
 2013.07.29: Tony Schaller, medshare GmbH (Sample for Implementation guide)
+2014.02.21: Tony Schaller, medshare GmbH (Changes while implementing Schematron rules for CDA Header)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -57,7 +58,7 @@ History:
 					<!-- DMST: 1.2 Prénom -->
 					<given>Jean</given>
 					<!-- DMST: 1.1 Nom -->
-					<family>DUPONT</family>
+					<family>Dupont</family>
 				</name>
 				<!-- DMST: 1.3 Sexe -->
 				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
@@ -408,21 +409,6 @@ History:
 					</text>
 				</section>
 			</component>
-
-			<!--
-			********************************************************
-			Conditional Physical Examination Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.9.15'/>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.9.15.1'/>
-			<code code='29545-1' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PHYSICAL EXAMINATION' />
-			<title>Examen physique</title>
-			<text />
-			</section>
-			</component>
-			-->
 
 			<!--
 			********************************************************
@@ -1956,20 +1942,6 @@ History:
 
 			<!--
 			********************************************************
-			Optional Family History Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.14'/>
-			<!-/- Optional Family History Section content -/->
-			<title>Anamnèse familiale</title>
-			<text />
-			</section>
-			</component>
-			-->
-
-			<!--
-			********************************************************
 			Optional Coded Social History Section content
 			******************************************************** -->
 			<component>
@@ -2115,7 +2087,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='CH' codeSystem='1.0.3166' />
+							<value xsi:type='II' root='1.0.3166' extension='CH' />
 						</observation>
 					</entry>
 					<entry>
@@ -2652,8 +2624,8 @@ History:
 								<reference value='#att3'/>
 							</text>
 							<effectiveTime>
-								<low value='201307051330'/>
-								<high value='201307051400'/>
+								<low value='201307051330+0200'/>
+								<high value='201307051400+0200'/>
 							</effectiveTime>
 							<performer typeCode='PRF'>
 								<assignedEntity>
@@ -2880,20 +2852,6 @@ History:
 
 			<!--
 			********************************************************
-			Conditional Procedures and Interventions Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.11'/>
-			<!-/- Conditional Procedures and Interventions Section content -/->
-			<title>Interventions effectuées</title>
-			<text />
-			</section>
-			</component>
-			-->
-
-			<!--
-			********************************************************
 			Conditional Medications Administered Section content
 			******************************************************** -->
 			<component>
@@ -3052,62 +3010,6 @@ History:
 					</entry>
 				</section>
 			</component>
-
-			<!--
-			********************************************************
-			Conditional Fluids Administered Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.6'/>
-			<!-/- Conditional Fluids Administered Section content -/->
-			<title>Liquides intraveineux administrés</title>
-			<text />
-			</section>
-			</component>
-			-->
-
-			<!--
-			********************************************************
-			Conditional History of Past Illness Section Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8'/>
-			<!-/- Conditional History of Past Illness Section Section content -/->
-			<title>Antécédents médicaux</title>
-			<text />
-			</section>
-			</component>
-			-->
-
-			<!--
-			********************************************************
-			Conditional Coded List of Surgeries Section Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.12'/>
-			<!-/- Conditional Coded List of Surgeries Section Section content -/->
-			<title>Chirurgies</title>
-			<text />
-			</section>
-			</component>
-			-->
-
-			<!--
-			********************************************************
-			Conditional Immunizations Section Section content
-			********************************************************
-			<component>
-			<section>
-			<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
-			<!-/- Conditional Immunizations Section Section content -/->
-			<title>Vaccinations</title>
-			<text />
-			</section>
-			</component>
-			-->
 
 			<!--
 			********************************************************
@@ -3370,7 +3272,7 @@ History:
 							</text>
 							<!-- DMST: 8.4 Le -->
 							<effectiveTime>
-								<low value='201306231000' />
+								<low value='201306231000+0200' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 						</act>
