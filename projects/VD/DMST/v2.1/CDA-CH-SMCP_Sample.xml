@@ -7,6 +7,7 @@ History:
 2013.06.24: Tony Schaller, medshare GmbH (First Draft)
 2013.07.29: Tony Schaller, medshare GmbH (Sample for Implementation guide)
 2014.02.21: Tony Schaller, medshare GmbH (Changes while implementing Schematron rules for CDA Header)
+2014.03.11: Tony Schaller, medshare GmbH (Changes while implementing Schematron rules for CDA Body)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -366,11 +367,11 @@ History:
 
 			<!--
 			********************************************************
-			HABITAT
+			1. HABITAT
 			********************************************************-->
 			<component>
 				<section>
-					<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='SMCP.HousingStatusL2'/>
+					<templateId root='2.16.756.5.30.1.1.1.1.3.6.21' extension='CDA-CH.SMCP.Body.HousingStatusL2'/>
 					<code code='71802-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Housing status' />
 					<title>Habitat</title>
 					<text>
@@ -383,13 +384,16 @@ History:
 							<!-- DMST: 4.1 Habitat (description) -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='CD30CE6D-AEFA-4E75-902C-179F3BC6EB3A'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='71802-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Housing status/Habitat'/>
 							<text>
 								<reference value='#ha1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 				</section>
@@ -397,12 +401,12 @@ History:
 
 			<!--
 			********************************************************
-			Required Assessments Section content
+			2. Required Assessments Section content
 			******************************************************** -->
 			<component>
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4' />
-					<code code='X-ASSESS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ASSESSMENTS' />
+					<code code='51848-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ASSESSMENTS' />
 					<title>Evaluation</title>
 					<text>
 						Aucune évaluation
@@ -412,14 +416,15 @@ History:
 
 			<!--
 			********************************************************
-			Conditional Review of Systems Section content
+			3. Conditional Review of Systems Section content
 			******************************************************** -->
 			<component>
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.18'/>
 					<code code='10187-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='REVIEW OF SYSTEMS' />
-					<title>Bilan de santé</title>
+					<title>Anamnèse systématique</title>
 					<text>
+						Bilan de santé:
 						<table>
 							<tbody>
 								<tr>
@@ -695,6 +700,9 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -702,13 +710,16 @@ History:
 							<!-- DMST: 7.3 Alimentation, hydratation -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='59529B07-DB41-4F56-A6EA-2218354A241F'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='28141-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Body nutrition deficit/Alimentation, hydratation'/>
 							<text>
 								<reference value='#as3'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -716,13 +727,16 @@ History:
 							<!-- DMST: 7.4 Elimination -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='550B6796-7FD1-44EE-9787-E5F73320EDC3'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='57046-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Elimination status/Elimination'/>
 							<text>
 								<reference value='#as4'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<entryRelationship typeCode='SUBJ' inversionInd='false' >
 								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -738,6 +752,9 @@ History:
 										<high nullFlavor='NASK' />
 									</effectiveTime>
 									<value xsi:type='CD' code='Z93.3' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Colostomie' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entryRelationship>
 						</observation>
@@ -747,13 +764,16 @@ History:
 							<!-- DMST: 7.5 Etat de la peau, plaies, cicatrices  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='26B31F16-FC1B-4FEF-8A00-7F00BFFE3F5A'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='8709-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Physical findings of Skin/Etat de la peau, plaies, cicatrices'/>
 							<text>
 								<reference value='#as5'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -761,13 +781,16 @@ History:
 							<!-- DMST: 7.6 Coordination, posture, mobilité, etc. -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='BB35A1F4-B51A-4332-A79B-5D4E7307C530'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='71108-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Mobility/Coordination, posture, mobilité, etc.'/>
 							<text>
 								<reference value='#as6'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -775,13 +798,16 @@ History:
 							<!-- DMST: 7.7 Chutes -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='EAD0AEE1-84AB-4D9B-8E1A-F7A2D7EDC131'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='R29.6' codeSystem='2.16.756.5.30.1.126.3.2' codeSystemName='ICD-10' displayName='Tendency to fall, not elsewhere classified/Chutes'/>
 							<text>
 								<reference value='#as7'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -789,13 +815,16 @@ History:
 							<!-- DMST: 7.8 Addiction -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='0CA36CDF-F663-460D-9987-529649D0EB60'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='32709003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Addiction/Addiction'/>
 							<text>
 								<reference value='#as8'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<entryRelationship typeCode='SUBJ' inversionInd='false' >
 								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -811,6 +840,9 @@ History:
 										<high nullFlavor='NASK' />
 									</effectiveTime>
 									<value xsi:type='CD' code='F17' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Troubles mentaux et du comportement liés à l&apos;utilisation de tabac' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entryRelationship>
 						</observation>
@@ -820,13 +852,16 @@ History:
 							<!-- DMST: 7.9 Autres, préciser -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='A7A7F145-D5CB-481E-BB79-FA6D76C92C48'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='M99.0' codeSystem='2.16.756.5.30.1.126.3.2' codeSystemName='ICD-10' displayName='Segmental and somatic dysfunction/Autres problématiques somatiques'/>
 							<text>
 								<reference value='#as9'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -834,13 +869,16 @@ History:
 							<!-- DMST: 7.10 Humeur -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DCC47E05-8AEE-4554-B670-C1FBFD7B819C'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='365086004' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Humor/Humeur'/>
 							<text>
 								<reference value='#as10'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -848,13 +886,16 @@ History:
 							<!-- DMST: 7.11 Anxiété -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='1E64003B-38A9-42B2-97F7-D4020BF6A7F1'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='69729-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Patient Health Questionnaire - Somatic, Anxiety, and Depressive Symptoms (PHQ-SADS) [ - Reported]/Anxiété'/>
 							<text>
 								<reference value='#as11'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -862,13 +903,16 @@ History:
 							<!-- DMST: 7.12 Potentiel suicidaire -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='115AA416-008B-4123-8CF1-8FAA8875237A'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='225444004' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='At risk for suicide (finding)/Potentiel suicidaire'/>
 							<text>
 								<reference value='#as12'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -876,13 +920,16 @@ History:
 							<!-- DMST: 7.13 Troubles du comportement -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='E8FC300B-5894-430C-B7B7-D04678A03429'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='67564005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Social maladjustment (finding)/Troubles du comportement'/>
 							<text>
 								<reference value='#as13'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -890,13 +937,16 @@ History:
 							<!-- DMST: 7.14 Troubles du sommeil -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5C48A87C-2C1E-4874-93A6-9AE6A8F6B99B'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='193462001' codeSystem='2.16.840.1.113883.6.96' codeSystemName='LOINC' displayName='Insomnia (disorder)/Troubles du sommeil'/>
 							<text>
 								<reference value='#as14'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -904,13 +954,16 @@ History:
 							<!-- DMST: 7.15 Tendance à fuguer par désorientation -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2072AD1D-31E3-4579-9B79-FD355CBF6877'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='7.15' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Tend to run away by disorientation /Tendance à fuguer par désorientation'/>
 							<text>
 								<reference value='#as15'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -918,13 +971,16 @@ History:
 							<!-- DMST: 7.16 Tendance à fuguer volontairement -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='091CC97A-27A8-4054-9289-B61E8F42D2DF'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='7.16' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Tend to run away voluntarily /Tendance à fuguer volontairement'/>
 							<text>
 								<reference value='#as16'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -932,13 +988,16 @@ History:
 							<!-- DMST: 7.17 Autres, préciser -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='29658DB8-9484-43AC-BE98-FDF4F00B72BC'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='7.17' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Other, specify /Autres, préciser'/>
 							<text>
 								<reference value='#as17'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 				</section>
@@ -946,7 +1005,7 @@ History:
 
 			<!--
 			********************************************************
-			Conditional Coded Functional Status Assessment Section content
+			4. Conditional Coded Functional Status Assessment Section content
 			******************************************************** -->
 			<component>
 				<section>
@@ -964,15 +1023,19 @@ History:
 							<entry>
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.1'/>
 									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5094C30B-9F05-4C9D-8420-4DC688305EEA'/>
 									<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' >
 										<translation code='406127006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pain intensity' />
 									</code>
-									<text />
+									<text>
+										<reference value='#TODO'/>
+									</text>
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' nullFlavor='NASK' />
 									<interpretationCode nullFlavor='NASK' />
+									<methodCode nullFlavor='NA' />
 									<targetSiteCode nullFlavor='NASK' />
 								</observation>
 							</entry>
@@ -1331,6 +1394,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='4' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='TOTAL DEPENDENCE' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1346,6 +1412,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='Z93.1' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Gastrostomie' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 								</observation>
@@ -1364,6 +1433,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='2' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='LIMITED ASSISTANCE' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1380,6 +1452,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='1' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='SUPERVISION' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1396,6 +1471,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1412,6 +1490,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1428,6 +1509,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='4' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='TOTAL DEPENDENCE' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1443,6 +1527,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='Z96.0' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Presence of urogenital implants' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 								</observation>
@@ -1461,6 +1548,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1477,6 +1567,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1493,6 +1586,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1509,6 +1605,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1525,6 +1624,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1541,6 +1643,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1557,6 +1662,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1573,6 +1681,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1589,6 +1700,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1604,6 +1718,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='CAN' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='canne' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
@@ -1621,6 +1738,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='WAL' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='déambulateur' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
@@ -1638,6 +1758,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='WHC' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='chaise roulante' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
@@ -1655,6 +1778,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='OTH' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='Autre' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 								</observation>
@@ -1673,6 +1799,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1688,6 +1817,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='LNS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='verres de contact' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
@@ -1705,6 +1837,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='GLS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='lunettes' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 								</observation>
@@ -1723,6 +1858,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1738,6 +1876,9 @@ History:
 												<high nullFlavor='NASK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='HAD' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='appareil acoustique' />
+											<interpretationCode nullFlavor='NA' />
+											<methodCode nullFlavor='NA' />
+											<targetSiteCode nullFlavor='NA' />
 										</observation>
 									</entryRelationship>
 								</observation>
@@ -1756,6 +1897,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1772,6 +1916,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1788,6 +1935,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1804,6 +1954,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1820,6 +1973,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1836,6 +1992,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1852,6 +2011,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1868,6 +2030,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1884,6 +2049,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1900,6 +2068,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1916,6 +2087,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 							<entry>
@@ -1932,6 +2106,9 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entry>
 						</section>
@@ -1942,7 +2119,7 @@ History:
 
 			<!--
 			********************************************************
-			Optional Coded Social History Section content
+			5. Optional Coded Social History Section content
 			******************************************************** -->
 			<component>
 				<section>
@@ -2064,13 +2241,16 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='E75BD8AD-2C2F-454E-A6B8-946E314CF00B'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<code code='5.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Environment and living habits/Contexte et habitudes de vie'/>
 							<text>
 								<reference value='#as1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2088,6 +2268,9 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='II' root='1.0.3166' extension='CH' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2105,6 +2288,9 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='CH' codeSystem='1.0.3166' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2125,6 +2311,9 @@ History:
 							<!-- TODO oder auch OID PLZ, sobald von Post registriert
 							<value xsi:type='CD' code='1000' codeSystem='TODO' displayName='Lausanne' />
 							-->
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2139,8 +2328,12 @@ History:
 							<text>
 								<reference value='#cms1'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='non' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2157,6 +2350,9 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='ST'>Peintre</value>
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2171,6 +2367,7 @@ History:
 							<text>
 								<reference value='#oc2'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime>
 								<!-- DMST: 2.4 Dates relatives au PLAFA -->
 								<!-- Date de décision -->
@@ -2179,6 +2376,9 @@ History:
 								<high value='20130603' />
 							</effectiveTime>
 							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.2.201207.3' codeSystemName='SMCP_PLAFA' displayName='oui' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2193,8 +2393,12 @@ History:
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='oui' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2209,8 +2413,12 @@ History:
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='non' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2225,8 +2433,12 @@ History:
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='D' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='démarches en cours' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2241,8 +2453,12 @@ History:
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='U' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='ne sait pas' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2257,8 +2473,12 @@ History:
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.112.3.2.201207.4' codeSystemName='SMCP_DefaultResponse' displayName='permis' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2269,13 +2489,17 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.EmploymentL3' />
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='19226CEF-6825-4D0A-B1A0-9466DAD84EC1'/>
-							<code code='11295-3' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Current employment' />
+							<code code='11295-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Current employment' />
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<!-- Strukturierte Angabe 'Employment Status' -->
 							<value xsi:type='CD' code='e' codeSystem='2.16.756.5.30.2.1.1.12' codeSystemName='Employment Status' displayName='emploYé' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2290,8 +2514,12 @@ History:
 							<text>
 								<reference value='#todo'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='non' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2306,8 +2534,12 @@ History:
 							<text>
 								<reference value='#oc3'/>
 							</text>
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='oui' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 				</section>
@@ -2315,7 +2547,7 @@ History:
 
 			<!--
 			********************************************************
-			Required Active Problems Section content
+			6. Required Active Problems Section content
 			******************************************************** -->
 			<component>
 				<section>
@@ -2398,6 +2630,9 @@ History:
 											<reference value='#p1'/>
 										</originalText>
 									</value>
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entryRelationship>
 						</act>
@@ -2407,7 +2642,7 @@ History:
 
 			<!--
 			********************************************************
-			Required if known Allergies and Intolerances Section content (1.3.6.1.4.1.19376.1.5.3.1.3.13)
+			7. Required if known Allergies and Intolerances Section content (1.3.6.1.4.1.19376.1.5.3.1.3.13)
 			******************************************************** -->
 			<component>
 				<section>
@@ -2449,6 +2684,9 @@ History:
 										<low value='20010824'/>
 									</effectiveTime>
 									<value xsi:type='CD' code='303300008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Egg protein (substance)' />
+									<interpretationCode nullFlavor='NA' />
+									<methodCode nullFlavor='NA' />
+									<targetSiteCode nullFlavor='NA' />
 								</observation>
 							</entryRelationship>
 						</act>
@@ -2458,7 +2696,7 @@ History:
 
 			<!--
 			********************************************************
-			Required Care Plan Section content
+			8. Required Care Plan Section content
 			******************************************************** -->
 			<component>
 				<section>
@@ -2553,13 +2791,16 @@ History:
 							<!-- DMST: 8.7 Motif du transfert / Objectifs de soins / Projets pour le patient (description) -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='3814E2F2-5F03-41A3-B429-DEA8E81A418B'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='8.7' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transport motivation/Motif du transfert / Objectifs de soins / Projets pour le patient (description)'/>
 							<text>
 								<reference value='#todo'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2567,13 +2808,16 @@ History:
 							<!-- DMST: 8.8 Patient en accord avec le transfert -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='9FC31CBF-F0BB-48BA-897C-980EC3BE9D9F'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='8.8' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Patient consent for transfer/Patient en accord avec le transfert'/>
 							<text>
 								<reference value='#TODO'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -2677,7 +2921,7 @@ History:
 
 			<!--
 			********************************************************
-			Required Provider Orders Section content
+			9. Required Provider Orders Section content
 			******************************************************** -->
 			<component>
 				<section>
@@ -2753,7 +2997,7 @@ History:
 
 			<!--
 			********************************************************
-			Required Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.34)
+			10. Required Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.34)
 			******************************************************** -->
 			<component>
 				<section>
@@ -2852,7 +3096,7 @@ History:
 
 			<!--
 			********************************************************
-			Conditional Medications Administered Section content
+			11. Conditional Medications Administered Section content
 			******************************************************** -->
 			<component>
 				<section>
@@ -3013,7 +3257,7 @@ History:
 
 			<!--
 			********************************************************
-			Capacité de travail
+			12. Capacité de travail
 			********************************************************-->
 			<component>
 				<section>
@@ -3074,6 +3318,8 @@ History:
 							</effectiveTime>
 							<value xsi:type='CD' code='0' codeSystem='2.16.756.5.30.2.1.1.6.1' />
 							<interpretationCode code='0' codeSystem='2.16.756.5.30.2.1.1.7.1' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<performer>
 								<assignedEntity>
 									<id nullFlavor='UNK' />
@@ -3109,6 +3355,8 @@ History:
 							</effectiveTime>
 							<value xsi:type='CD' code='4' codeSystem='2.16.756.5.30.2.1.1.6.1' />
 							<interpretationCode code='100' codeSystem='2.16.756.5.30.2.1.1.7.1' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<performer>
 								<assignedEntity>
 									<id nullFlavor='UNK' />
@@ -3136,6 +3384,8 @@ History:
 							</effectiveTime>
 							<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.2.1.1.6.1' />
 							<interpretationCode code='100' codeSystem='2.16.756.5.30.2.1.1.7.1' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<performer>
 								<assignedEntity>
 									<id nullFlavor='UNK' />
@@ -3155,7 +3405,7 @@ History:
 			</component>
 
 			<!-- *******************************************************
-			Mode of Arrival – Angaben zum Eintritt
+			13. Mode of Arrival – Angaben zum Eintritt
 			******************************************************** -->
 			<component>
 				<section>
@@ -3282,13 +3532,16 @@ History:
 							<!-- DMST: 8.1 Transféré avec  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B2593552-52D1-4C1B-9CA0-6E78CD874BB2'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<code code='8.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transferred with /Transféré avec' />
 							<text>
 								<reference value='#TODO'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CO' code='99' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
 								<act classCode='ACT' moodCode='EVN'>
@@ -3308,13 +3561,16 @@ History:
 							<!-- DMST: 8.1 Transféré avec  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='320F277B-DED0-4DD4-8557-FEA67F80A905'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<code code='8.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transferred with /Transféré avec' />
 							<text>
 								<reference value='#TODO'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CO' code='01' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -3322,13 +3578,16 @@ History:
 							<!-- DMST: 8.2 Enveloppe de transfert -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='93A7CA89-E637-42EF-AC7B-648982259B77'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<code code='8.2' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transfer envelope /Enveloppe de transfert' />
 							<text>
 								<reference value='#TODO'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CO' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Non' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
@@ -3336,13 +3595,16 @@ History:
 							<!-- DMST: 8.5 Objet(s) perdu(s)  -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='6541E3B1-D2A9-4B64-8CE1-22CFD0B69140'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<code code='8.5' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Subject(s) lost(s) /Objet(s) perdu(s)' />
 							<text>
 								<reference value='#TODO'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
 								<act classCode='ACT' moodCode='EVN'>
@@ -3362,13 +3624,16 @@ History:
 							<!-- DMST: 8.6 Objet(s) en recherche -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B2675876-5683-49D8-B2BD-24580F4921F0'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO' />
+							<code code='8.6' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Object(s) search /Objet(s) en recherche' />
 							<text>
 								<reference value='#TODO'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
 								<act classCode='ACT' moodCode='EVN'>
@@ -3387,7 +3652,7 @@ History:
 			</component>
 
 			<!-- *******************************************************
-			Coded Results
+			14. Coded Results
 			******************************************************** -->
 			<component>
 				<section>
@@ -3444,20 +3709,23 @@ History:
 						<observation classCode='OBS' moodCode='EVN'>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B72E1D27-C69F-4729-92D9-2B8B218C3968'/>
-							<code nullFlavor='NA' />
+							<code code='7.17' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Network summary sheet/Feuille de synthèse d’entretien de réseau'/>
 							<text>
 								<reference nullFlavor='NA' />
 							</text>
-							<statusCode nullFlavor='NA' />
+							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NA' />
 							<value xsi:type='CD' nullFlavor='NA' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 				</section>
 			</component>
 
 			<!-- *******************************************************
-			Coded Hospital Studies Summary
+			15. Coded Hospital Studies Summary
 			******************************************************** -->
 			<component>
 				<section>
@@ -3474,20 +3742,23 @@ History:
 							<!-- DMST: 8.16 Document médical -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='2308144E-2F85-4771-8AFD-E8C51BF5349C'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TODO'/>
+							<code code='8.16' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Medical document/Document médical'/>
 							<text>
 								<reference value='#todo'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
 							<value xsi:type='CD' nullFlavor='NAV' />
+							<interpretationCode nullFlavor='NA' />
+							<methodCode nullFlavor='NA' />
+							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 				</section>
 			</component>
 
 			<!-- *******************************************************
-			Comments
+			16. Comments
 			******************************************************** -->
 			<component>
 				<section>
