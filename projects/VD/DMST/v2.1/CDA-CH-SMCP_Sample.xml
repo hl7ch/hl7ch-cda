@@ -601,7 +601,7 @@ History:
 									</td>
 									<td>
 										<content ID='as12' >
-
+											Non
 										</content>
 									</td>
 									<td>
@@ -748,8 +748,8 @@ History:
 									</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
-										<low nullFlavor='NASK' />
-										<high nullFlavor='NASK' />
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
 									</effectiveTime>
 									<value xsi:type='CD' code='Z93.3' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Colostomie' />
 									<interpretationCode nullFlavor='NA' />
@@ -836,8 +836,8 @@ History:
 									</text>
 									<statusCode code='completed'/>
 									<effectiveTime>
-										<low nullFlavor='NASK' />
-										<high nullFlavor='NASK' />
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
 									</effectiveTime>
 									<value xsi:type='CD' code='F17' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Troubles mentaux et du comportement liés à l&apos;utilisation de tabac' />
 									<interpretationCode nullFlavor='NA' />
@@ -909,7 +909,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' nullFlavor='NAV' />
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Nein/Non' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -1408,8 +1408,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='Z93.1' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Gastrostomie' />
 											<interpretationCode nullFlavor='NA' />
@@ -1523,8 +1523,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='Z96.0' codeSystem='2.16.756.5.30.1.126.3.2.2013' codeSystemName='icd10ch2013' displayName='Presence of urogenital implants' />
 											<interpretationCode nullFlavor='NA' />
@@ -1714,8 +1714,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='CAN' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='canne' />
 											<interpretationCode nullFlavor='NA' />
@@ -1734,8 +1734,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='WAL' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='déambulateur' />
 											<interpretationCode nullFlavor='NA' />
@@ -1754,8 +1754,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='WHC' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='chaise roulante' />
 											<interpretationCode nullFlavor='NA' />
@@ -1774,8 +1774,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='OTH' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='Autre' />
 											<interpretationCode nullFlavor='NA' />
@@ -1813,8 +1813,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='LNS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='verres de contact' />
 											<interpretationCode nullFlavor='NA' />
@@ -1833,8 +1833,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='GLS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='lunettes' />
 											<interpretationCode nullFlavor='NA' />
@@ -1872,8 +1872,8 @@ History:
 											</text>
 											<statusCode code='completed'/>
 											<effectiveTime>
-												<low nullFlavor='NASK' />
-												<high nullFlavor='NASK' />
+												<low nullFlavor='UNK' />
+												<high nullFlavor='UNK' />
 											</effectiveTime>
 											<value xsi:type='CD' code='HAD' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='appareil acoustique' />
 											<interpretationCode nullFlavor='NA' />
@@ -2616,7 +2616,7 @@ History:
 									<templateId root='2.16.840.1.113883.10.20.1.28'/>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
 									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
-									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
 									<text>
 										<reference value='#p1'/>
 									</text>
@@ -2682,6 +2682,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime>
 										<low value='20010824'/>
+										<high nullFlavor='UNK' />
 									</effectiveTime>
 									<value xsi:type='CD' code='303300008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Egg protein (substance)' />
 									<interpretationCode nullFlavor='NA' />
@@ -2734,7 +2735,11 @@ History:
 								</tr>
 								<tr>
 									<td>Patient en accord avec le transfert:</td>
-									<td>oui</td>
+									<td>
+										<content ID='att1'>
+											oui
+										</content>
+									</td>
 									<td />
 								</tr>
 								<tr>
@@ -2810,11 +2815,11 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='9FC31CBF-F0BB-48BA-897C-980EC3BE9D9F'/>
 							<code code='8.8' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Patient consent for transfer/Patient en accord avec le transfert'/>
 							<text>
-								<reference value='#TODO'/>
+								<reference value='#att1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Ja/Oui' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -3534,11 +3539,11 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B2593552-52D1-4C1B-9CA0-6E78CD874BB2'/>
 							<code code='8.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transferred with /Transféré avec' />
 							<text>
-								<reference value='#TODO'/>
+								<reference value='#mt2_1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CO' code='99' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
+							<value xsi:type='CD' code='99' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -3549,7 +3554,7 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<text>
-										<reference value='#mt_2'/>
+										<reference value='#mt2_2'/>
 									</text>
 									<statusCode code='completed'/>
 								</act>
@@ -3563,11 +3568,11 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='320F277B-DED0-4DD4-8557-FEA67F80A905'/>
 							<code code='8.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transferred with /Transféré avec' />
 							<text>
-								<reference value='#TODO'/>
+								<reference value='#mt2_3'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CO' code='01' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
+							<value xsi:type='CD' code='01' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -3580,11 +3585,11 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='93A7CA89-E637-42EF-AC7B-648982259B77'/>
 							<code code='8.2' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transfer envelope /Enveloppe de transfert' />
 							<text>
-								<reference value='#TODO'/>
+								<reference value='#mt3'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CO' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Non' />
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Nein/Non' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -3597,11 +3602,11 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='6541E3B1-D2A9-4B64-8CE1-22CFD0B69140'/>
 							<code code='8.5' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Subject(s) lost(s) /Objet(s) perdu(s)' />
 							<text>
-								<reference value='#TODO'/>
+								<reference value='#mt4_1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Ja/Oui' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -3626,11 +3631,11 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B2675876-5683-49D8-B2BD-24580F4921F0'/>
 							<code code='8.6' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Object(s) search /Objet(s) en recherche' />
 							<text>
-								<reference value='#TODO'/>
+								<reference value='#mt5_1'/>
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CO' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Oui' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Ja/Oui' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
