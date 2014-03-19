@@ -1393,6 +1393,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='4' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='TOTAL DEPENDENCE' />
+									<interpretationCode nullFlavor='NASK' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1426,6 +1427,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='2' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='LIMITED ASSISTANCE' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1442,6 +1444,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='1' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='SUPERVISION' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1458,6 +1461,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1474,6 +1478,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1490,6 +1495,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='4' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='TOTAL DEPENDENCE' />
+									<interpretationCode nullFlavor='NASK' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1526,6 +1532,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1542,6 +1549,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1558,6 +1566,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1574,6 +1583,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1590,6 +1600,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1606,6 +1617,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1622,6 +1634,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1638,6 +1651,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1654,6 +1668,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1750,6 +1765,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1806,6 +1822,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 									<entryRelationship typeCode='SUBJ' inversionInd='false' >
 										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28'/>
@@ -1842,6 +1859,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1858,6 +1876,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1874,6 +1893,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1890,6 +1910,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1906,6 +1927,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1922,6 +1944,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1938,6 +1961,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1954,6 +1978,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1970,6 +1995,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -1986,6 +2012,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -2002,6 +2029,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 							<entry>
@@ -2018,6 +2046,7 @@ History:
 									<statusCode code='completed'/>
 									<effectiveTime nullFlavor='NASK' />
 									<value xsi:type='CO' code='0' codeSystem='2.16.840.1.113883.6.257.755' codeSystemName='Activity of Daily Living Scale' displayName='INDEPENDENT' />
+									<interpretationCode nullFlavor='NASK' />
 								</observation>
 							</entry>
 						</section>
