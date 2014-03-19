@@ -2585,6 +2585,7 @@ History:
 			******************************************************** -->
 			<component>
 				<section>
+					<templateId root='2.16.840.1.113883.10.20.1.10'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.31'/>
 					<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='59F9D9A5-D3C1-4756-91EE-057BFB8CFF76'/>
 					<code code='18776-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TREATMENT PLAN' />
@@ -2715,11 +2716,11 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='965FC2F8-63A5-4485-A9C8-64A96A7B2A62'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' />
+							<code nullFlavor='NASK' />
 							<text>
 								<reference value='#att2'/>
 							</text>
-							<statusCode code='active'/>
+							<statusCode code='completed'/>
 							<effectiveTime>
 								<low nullFlavor='NASK' />
 								<high nullFlavor='NASK' />
@@ -2734,7 +2735,6 @@ History:
 										<reference value='#extref'/>
 									</text>
 									<reference typeCode='SPRT'>
-										<templateId root='2.16.840.1.113883.10.20.1.36'/>
 										<externalDocument classCode='DOC' moodCode='EVN'>
 											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='10DE859B-220E-4F26-8156-8B534E480DB3'/>
 											<text>
@@ -2752,7 +2752,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='9D1AA704-BAA4-4FD3-B02C-A3BA0E1CDBE4'/>
-							<code nullFlavor='NASK' />
+							<code code='AMB' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
 							<text>
 								<reference value='#att3'/>
 							</text>
@@ -2781,7 +2781,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='B58D9CA0-884B-420F-8E8B-CC58D3D05B59'/>
-							<code code='TODO' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
+							<code code='AMB' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' />
 							<text>
 								<reference value='#att3'/>
 							</text>
@@ -2845,38 +2845,37 @@ History:
 						</table>
 					</text>
 					<entry>
-						<encounter classCode='ENC' moodCode='EVN'>
+						<encounter classCode='ENC' moodCode='ARQ'>
 							<!-- DMST: 0.6 Transfert en urgence -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
-							<templateId root='2.16.840.1.113883.10.20.1.21'/>
+							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='D1878D3D-A3B1-4488-89B0-F0272E7E5D7E'/>
-							<code code='IMP' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'/>
+							<code code='IMP' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'>
+								<!-- DMST: 0.7 Demande d'admission pour un hébergement -->
+								<translation code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
+							</code>
 							<!--
-							<code code='EMER' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='emergency'/>
+							<code code='EMER' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'>
+								<!-/- DMST: 0.7 Demande d'admission pour un hébergement -/->
+								<translation code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
+							</code>
 							-->
 							<text>
 								<reference value='#enc1'/>
-							</text>
-							<effectiveTime>
-								<low nullFlavor='NASK' />
-								<high nullFlavor='NASK' />
-							</effectiveTime>
-						</encounter>
-					</entry>
-					<entry>
-						<encounter classCode='ENC' moodCode='ARQ'>
-							<!-- DMST: 0.7 Demande d'admission pour un hébergement -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.14'/>
-							<templateId root='2.16.840.1.113883.10.20.1.25'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='F48A438E-1306-4ABB-B0BE-6F6A0F77DC8D'/>
-							<code code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
-							<text>
 								<reference value='#enc2'/>
 							</text>
 							<effectiveTime>
-								<low nullFlavor='NASK' />
-								<high nullFlavor='NASK' />
+								<low nullFlavor='UNK' />
+								<high nullFlavor='UNK' />
 							</effectiveTime>
+							<performer typeCode='PRF'>
+								<assignedEntity>
+									<id nullFlavor='NA' />
+									<assignedPerson>
+										<name nullFlavor='NA' />
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
 						</encounter>
 					</entry>
 				</section>
@@ -3122,6 +3121,7 @@ History:
 								<!-- DMST: 8.15 Ordonnance en annexe -->
 								<act classCode='ACT' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.4'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='691FFB55-4AD1-4A29-B7F6-825C2EA08B1F'/>
 									<code nullFlavor='NA' />
 									<text>
 										<reference value='#todo'/>
@@ -3556,6 +3556,7 @@ History:
 							Préciser si la feuille de synthèse d’entretien de réseau est en annexe ou si elle suit.
 						</content>
 					</text>
+					<!--
 					<entry>
 						<procedure classCode='PROC' moodCode='INT'>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
@@ -3572,9 +3573,11 @@ History:
 							</effectiveTime>
 						</procedure>
 					</entry>
+					-->
 					<entry>
 						<act classCode='ACT' moodCode='EVN'>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.4'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='A0CC6C89-19D3-493B-81A5-A7B78304EEC4'/>
 							<code nullFlavor='NA' />
 							<text>
 								<reference value='#feuille'/>
