@@ -422,9 +422,8 @@ History:
 				<section>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.18'/>
 					<code code='10187-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='REVIEW OF SYSTEMS' />
-					<title>Anamnèse systématique</title>
+					<title>Bilan de santé</title>
 					<text>
-						Bilan de santé:
 						<table>
 							<tbody>
 								<tr>
@@ -2862,11 +2861,10 @@ History:
 							-->
 							<text>
 								<reference value='#enc1'/>
-								<reference value='#enc2'/>
 							</text>
 							<effectiveTime>
-								<low nullFlavor='UNK' />
-								<high nullFlavor='UNK' />
+								<low nullFlavor='NASK' />
+								<high nullFlavor='NASK' />
 							</effectiveTime>
 							<performer typeCode='PRF'>
 								<assignedEntity>
@@ -2883,7 +2881,7 @@ History:
 
 			<!--
 			********************************************************
-			10. Required Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.34)
+			10. Required Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.35)
 			******************************************************** -->
 			<component>
 				<section>
@@ -2930,8 +2928,8 @@ History:
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST: 2.2 Directives anticipées -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.17'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='23CCE4C6-DC5D-445A-AB93-5D052A8C9D54'/>
 							<code code='304251008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Resuscitation' />
@@ -2966,15 +2964,6 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime value='20130423'/>
 							<value xsi:type='BL' value='false'/>
-							<reference typeCode='REFR'>
-								<templateId root='2.16.840.1.113883.10.20.1.36'/>
-								<externalDocument classCode='DOC' moodCode='EVN'>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='25AB6C70-541F-4129-BEF3-ACB56BF10FD3'/>
-									<text>
-										<reference value='http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf'/>
-									</text>
-								</externalDocument>
-							</reference>
 						</observation>
 					</entry>
 				</section>
@@ -3062,7 +3051,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<!-- GTIN -->
 							<id extension='7680569020096' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' displayName='Medikamentöse Therapie'/>
+							<code code='182904002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='ActCode' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#m2'/>
 							</text>
