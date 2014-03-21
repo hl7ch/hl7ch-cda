@@ -121,6 +121,13 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							</td>
 						</tr>
 						<tr>
+							<xsl:variable name="sex"
+							select="/n1:ClinicalDocument/n1:recordTarget/n1:patientRole/n1:patient/n1:administrativeGenderCode/@code"/>
+							<xsl:variable name="maritalStatus"
+							select="/n1:ClinicalDocument/n1:recordTarget/n1:patientRole/n1:patient/n1:maritalStatusCode/@code"/>
+							<xsl:variable name="religion"
+							select="/n1:ClinicalDocument/n1:recordTarget/n1:patientRole/n1:patient/n1:religiousAffiliationCode/n1:originalText/text()"/>
+
 							<td class="label1">
 								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Creation']/@displayName"/>
 								<xsl:text>:</xsl:text>
@@ -133,10 +140,18 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 							<td class="label2">
 								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Sex']/@displayName"/>
 								<xsl:text>:</xsl:text>
+								<xsl:if test="$maritalStatus">
+									<br />
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatus']/@displayName"/>
+									<xsl:text>:</xsl:text>
+								</xsl:if>
+								<xsl:if test="$religion">
+									<br />
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Religion']/@displayName"/>
+									<xsl:text>:</xsl:text>
+								</xsl:if>
 							</td>
 							<td class="value2">
-								<xsl:variable name="sex"
-								select="/n1:ClinicalDocument/n1:recordTarget/n1:patientRole/n1:patient/n1:administrativeGenderCode/@code"/>
 								<xsl:choose>
 									<xsl:when test="$sex='M'">
 										<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='man']/@displayName"/>
@@ -148,6 +163,42 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 										<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='unknown']/@displayName"/>
 									</xsl:otherwise>
 								</xsl:choose>
+								<xsl:if test="$maritalStatus">
+									<br />
+									<xsl:choose>
+										<xsl:when test="$maritalStatus='A'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusAnnulled']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='D'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusDivorced']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='T'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusDomesticPartner']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='L'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusLegallySeparated']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='M'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusMarried']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='S'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusNeverMarried']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='P'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusPolygamous']/@displayName"/>
+										</xsl:when>
+										<xsl:when test="$maritalStatus='W'">
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='MaritalStatusWidowed']/@displayName"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='unknown']/@displayName"/>
+										</xsl:otherwise>
+									</xsl:choose>
+								</xsl:if>
+								<xsl:if test="$religion">
+									<br />
+									<xsl:value-of select="$religion"/>
+								</xsl:if>
 							</td>
 						</tr>
 					</tbody>

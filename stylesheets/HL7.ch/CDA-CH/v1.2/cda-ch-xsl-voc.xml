@@ -12,6 +12,7 @@ History:
 2011.10.01: Tony Schaller, medshare GmbH (Italian translation)
 2013.07.24: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
 2014.01.22: Tony Schaller, medshare GmbH (Erweiterungen für SOAS; CDA-CH-LRTP)
+2014.03.21: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
 
 
 ********************************************************
@@ -418,6 +419,71 @@ History:
   <text language="fr-CH" value="831.20" displayName="LAI"/>
   <text language="it-CH" value="831.20" displayName="LAI"/>
   <text language="en" value="831.20" displayName="tbd en '831.20'"/>
+
+  <text language="de-CH" value="MaritalStatus" displayName="Zivilstand"/>
+	<text language="fr-CH" value="MaritalStatus" displayName="Etat civil"/>
+  <text language="it-CH" value="MaritalStatus" displayName="tbd it: 'MaritalStatus'"/>
+	<text language="en" value="MaritalStatus" displayName="Marital status"/>
+
+  <text language="de-CH" value="Religion" displayName="Religion"/>
+	<text language="fr-CH" value="Religion" displayName="Religion"/>
+  <text language="it-CH" value="Religion" displayName="tbd it: 'Religion'"/>
+	<text language="en" value="Religion" displayName="Religion"/>
+
+  <text language="de-CH" value="MaritalStatusAnnulled" displayName="Aufgelöste Partnerschaft"/>
+	<text language="fr-CH" value="MaritalStatusAnnulled" displayName="Partenariat dissous"/>
+  <text language="it-CH" value="MaritalStatusAnnulled" displayName="tbd it: 'Annulled'"/>
+	<text language="en" value="MaritalStatusAnnulled" displayName="Annulled"/>
+
+  <text language="de-CH" value="MaritalStatusDivorced" displayName="Geschieden"/>
+	<text language="fr-CH" value="MaritalStatusDivorced" displayName="Divorcé"/>
+  <text language="it-CH" value="MaritalStatusDivorced" displayName="tbd it: 'Divorced'"/>
+	<text language="en" value="MaritalStatusDivorced" displayName="Divorced"/>
+
+  <text language="de-CH" value="MaritalStatusDomesticPartner" displayName="Eingetragene Partnerschaft"/>
+	<text language="fr-CH" value="MaritalStatusDomesticPartner" displayName="Partenariat enregistré"/>
+  <text language="it-CH" value="MaritalStatusDomesticPartner" displayName="tbd it: 'DomesticPartner'"/>
+	<text language="en" value="MaritalStatusDomesticPartner" displayName="Domestic partner"/>
+
+  <text language="de-CH" value="MaritalStatusLegallySeparated" displayName="Getrennt"/>
+	<text language="fr-CH" value="MaritalStatusLegallySeparated" displayName="Séparé"/>
+  <text language="it-CH" value="MaritalStatusLegallySeparated" displayName="tbd it: 'LegallySeparated'"/>
+	<text language="en" value="MaritalStatusLegallySeparated" displayName="Legally separated"/>
+
+  <text language="de-CH" value="MaritalStatusMarried" displayName="Verheiratet"/>
+	<text language="fr-CH" value="MaritalStatusMarried" displayName="Marié"/>
+  <text language="it-CH" value="MaritalStatusMarried" displayName="tbd it: 'Married'"/>
+	<text language="en" value="MaritalStatusMarried" displayName="Married"/>
+
+  <text language="de-CH" value="MaritalStatusNeverMarried" displayName="Ledig"/>
+	<text language="fr-CH" value="MaritalStatusNeverMarried" displayName="Célibataire"/>
+  <text language="it-CH" value="MaritalStatusNeverMarried" displayName="tbd it: 'NeverMarried'"/>
+	<text language="en" value="MaritalStatusNeverMarried" displayName="Never married"/>
+
+  <text language="de-CH" value="MaritalStatusPolygamous" displayName="Polygam"/>
+	<text language="fr-CH" value="MaritalStatusPolygamous" displayName="Polygame"/>
+  <text language="it-CH" value="MaritalStatusPolygamous" displayName="tbd it: 'Polygamous'"/>
+	<text language="en" value="MaritalStatusPolygamous" displayName="Polygamous"/>
+
+  <text language="de-CH" value="MaritalStatusWidowed" displayName="Verwitwet"/>
+	<text language="fr-CH" value="MaritalStatusWidowed" displayName="Veuf"/>
+  <text language="it-CH" value="MaritalStatusWidowed" displayName="tbd it: 'Widowed'"/>
+	<text language="en" value="MaritalStatusWidowed" displayName="Widowed"/>
+
+	<!--
+  <text language="de-CH" value="" displayName=""/>
+	<text language="fr-CH" value="" displayName=""/>
+  <text language="it-CH" value="" displayName="tbd it: ''"/>
+	<text language="en" value="" displayName=""/>
+
+  <text language="de-CH" value="" displayName=""/>
+	<text language="fr-CH" value="" displayName=""/>
+  <text language="it-CH" value="" displayName="tbd it: ''"/>
+	<text language="en" value="" displayName=""/>
+	-->
+
+
+
 
   <!-- 
   ********************************************************************************
