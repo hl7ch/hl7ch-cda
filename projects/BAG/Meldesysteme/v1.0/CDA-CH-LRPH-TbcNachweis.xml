@@ -5,7 +5,8 @@ Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - Tbc Nachweis
 
 History:
 2013.20.01: Tony Schaller, medshare GmbH (Erster Entwurf)
-2013.07.26 Tony Schaller, medshare GmbH (Korrekturen nach Anhörungsauswertung CDA-CH-LRPH)
+2013.07.26: Tony Schaller, medshare GmbH (Korrekturen nach Anhörungsauswertung CDA-CH-LRPH)
+2014.03.25: Tony Schaller, medshare GmbH (Korrektur participant nach Schematronregel-Update)
 
 ********************************************************
 -->
@@ -112,6 +113,12 @@ History:
 		<time nullFlavor='NASK' />
 		<associatedEntity classCode='PROV'>
 			<id extension='7601001383647' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Chutzenstrasse</streetName>
+				<houseNumber>24</houseNumber>
+				<postalCode>3001</postalCode>
+				<city>Bern</city>
+			</addr>
 			<telecom use='PUB' value='tel:+41.31.372.20.02'/>
 			<telecom use='PUB' value='fax:+41.31.371.40.44'/>
 			<telecom use='PUB' value='mailto:info@medics-labor.ch'/>
@@ -121,6 +128,10 @@ History:
 			</associatedPerson>
 			<scopingOrganization>
 				<name>Medics Labor AG</name>
+				<telecom use='PUB' value='tel:+41.31.372.20.02'/>
+				<telecom use='PUB' value='fax:+41.31.371.40.44'/>
+				<telecom use='PUB' value='mailto:info@medics-labor.ch'/>
+				<telecom use='PUB' value='http://www.medics-labor.ch'/>
 				<addr use='WP'>
 					<streetName>Chutzenstrasse</streetName>
 					<houseNumber>24</houseNumber>

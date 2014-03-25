@@ -3,14 +3,16 @@
 ********************************************************
 
 Vocabulary zu HL7 CDA-CH V1.2 Schematrons
-Language: de-CH
 
 History:
-31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-24.01.2011: Tony Schaller, medshare GmbH (Übersetzungen französisch)
-31.12.2012: Tony Schaller, medshare GmbH (Abgabe CDA-CH-EDES)
-13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
+2009.12.31: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2011.01.24: Tony Schaller, medshare GmbH (Übersetzungen französisch)
+2012.12.31: Tony Schaller, medshare GmbH (Abgabe CDA-CH-EDES)
+2013.01.13: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
+2014.02.19: Tony Schaller, medshare GmbH (Erweiterung mit HL7 Tabellen RoleCode, IHERoleCode, ins-laws)
+2014.03.20: Tony Schaller, medshare GmbH (Erweiterung mit SNOMED CT Value Set zum deklaraiern von Sonderfällen bei der Medikation; [IHE PCC TF-2], Table 6.3.4.16.7-1)
+2014.03.21: Tony Schaller, medshare GmbH (RC1 CDA-CH-SMCP)
 
 ********************************************************
 -->
@@ -91,7 +93,7 @@ History:
 
 	<!--
 	********************************************************
-	CDA-CH: Minimale Codierung für Bemerkungen im CDA Body TODO: im OID Register eintragen lassen
+	CDA-CH: Minimale Codierung für Bemerkungen im CDA Body
 	********************************************************
 	-->
 	<system codeSystemName='StandardCodierungBemerkungen' root='2.16.756.5.30.2.1.1.8.1'>
@@ -101,7 +103,7 @@ History:
 
 	<!--
 	********************************************************
-	CDA-CH: Codierungen von CDA Level3 Elementen TODO: im OID Register eintragen lassen
+	CDA-CH: Codierungen von CDA Level3 Elementen
 	********************************************************
 	-->
 	<system codeSystemName='CodierungVonElementen' root='2.16.756.5.30.2.1.1.9.1'>
@@ -812,7 +814,7 @@ History:
 
 	<!--
 	********************************************************
-	CDA-CH-EDES: Mode of transport to ED
+	CDA-CH-EDES, SMCP: Mode of transport to ED
 	********************************************************
 	-->
 	<system codeSystemName='ModeOfTransport' root='2.16.840.1.113883.6.102.4.2'>
@@ -829,7 +831,7 @@ History:
 
 	<!--
 	********************************************************
-	CDA-CH-EDES: Problem Entry Code (SNOMED CT)
+	CDA-CH-EDES, CDA-CH-SMCP: Problem Entry Code (SNOMED CT)
 	********************************************************
 	-->
 
@@ -949,24 +951,232 @@ History:
 
 	<!--
 	********************************************************
-	CDA-CH: Blood group
-	Value-Set aus SNOMED CT
-	********************************************************
-	-->
-	<system codeSystemName='bloodGroup' root='2.16.756.5.30.2.1.1.13'>
-		<code value='TODO jbl' displayName='A Rh pos' />
-	</system>
-
-	<!--
-	********************************************************
 	CDA-CH: NullFlavors
 	********************************************************
 	-->
 	<system codeSystemName='nullFlavor' root='2.16.840.1.113883.5.1008'>
-		<code value='NA' displayName='not applicable/Nicht anwendbar' />
-		<code value='NAV' displayName='temporarily unavailable/Vorübergehend unbekannt, wird später ausgefüllt' />
-		<code value='OTH' displayName='other/Andere Gründe' />
-		<code value='UNK' displayName='unknown/Unbekannt, ohne weitere Präzisierung' />
+		<code value='ASKU' displayName='asked but unknown' />
+		<code value='MSK' displayName='masked' />
+		<code value='NA' displayName='not applicable' />
+		<code value='NASK' displayName='not asked' />
+		<code value='NAV' displayName='temporarily unavailable' />
+		<code value='OTH' displayName='other' />
+		<code value='UNK' displayName='unknown' />
+	</system>
+
+	<!--
+	********************************************************
+	HL7 RoleCode
+	********************************************************
+	-->
+	<system codeSystemName='HL7RoleCode' root='2.16.840.1.113883.5.111'>
+		<code value='ACC' displayName='accident site/Lieu d‘accident' />
+		<code value='AUNT' displayName='aunt/Tante' />
+		<code value='BILL' displayName='Billing Contact/Contact de facturation' />
+		<code value='BRO' displayName='Brother/Frère' />
+		<code value='BROINLAW' displayName='brother-in-law/Beau-frère' />
+		<code value='CHILD' displayName='Child/Enfant' />
+		<code value='CHLDADOPT' displayName='adopted child/Enfant adopté' />
+		<code value='CHLDFOST' displayName='foster child/Nourrisson' />
+		<code value='CHLDINLAW' displayName='child in-law/Bel-enfant' />
+		<code value='COMM' displayName='Community Location/Endroit de la communauté' />
+		<code value='COUSN' displayName='cousin/Cousin' />
+		<code value='CSC' displayName='community service center/Centre de services communautaire' />
+		<code value='DAU' displayName='natural daughter/Propre fille' />
+		<code value='DAUADOPT' displayName='adopted daughter/Fille adoptée' />
+		<code value='DAUC' displayName='Daughter/Fille' />
+		<code value='DAUFOST' displayName='foster daughter/Fille adoptive' />
+		<code value='DAUINLAW' displayName='daughter in-law/Belle-fille' />
+		<code value='DPOWATT' displayName='durable power of attorney/Procuration durable' />
+		<code value='DOMPART' displayName='domestic partner/Partenaire domestique' />
+		<code value='ECON' displayName='emergency contact/Contact d’urgence' />
+		<code value='EXCEST' displayName='executor of estate/Exécuteur testamentaire de la succession' />
+		<code value='EXT' displayName='extended family member/Membre de la famille éloigné' />
+		<code value='FAMMEMB' displayName='Family Member/Membre de la famille' />
+		<code value='FRND' displayName='unrelated friend/Ami sans lien de parenté' />
+		<code value='FTH' displayName='Father/Père' />
+		<code value='FTHINLAW' displayName='father-in-law/Beau-père' />
+		<code value='GGRFTH' displayName='great grandfather/Arrière-grand-père' />
+		<code value='GGRMTH' displayName='great grandmother/Arrière-grand-mère' />
+		<code value='GGRPRN' displayName='great grandparent/Arrière-grand-parent' />
+		<code value='GRFTH' displayName='Grandfather/Grand-père' />
+		<code value='GRMTH' displayName='Grandmother/Grand-mère' />
+		<code value='GRNDCHILD' displayName='grandchild/Petit-enfant' />
+		<code value='GRNDDAU' displayName='granddaughter/Petite-fille' />
+		<code value='GRNDSON' displayName='grandson/Petit-fils' />
+		<code value='GRPRN' displayName='Grandparent/Grand-parent' />
+		<code value='GUADLTM' displayName='guardian ad lidem/Tuteur d’instance' />
+		<code value='GUARD' displayName='guardian/Tuteur' />
+		<code value='HBRO' displayName='half-brother/Demi-frère' />
+		<code value='HPOWATT' displayName='healthcare power of attorney/Directives anticipées' />
+		<code value='HSIB' displayName='half-sibling/Demi-frères et soeurs' />
+		<code value='HSIS' displayName='half-sister/Demi-sœur' />
+		<code value='HUSB' displayName='husband/Mari' />
+		<code value='MAUNT' displayName='Maternal Aunt/Tante maternelle' />
+		<code value='MCOUSN' displayName='Maternal Cousin/Cousin maternel' />
+		<code value='MGGRFTH' displayName='Maternal Great-grandfather/Arrière-grand-père maternel' />
+		<code value='MGGRMTH' displayName='Maternal Great-grandmother/Arrière-grand-mère maternelle' />
+		<code value='MGGRPRN' displayName='Maternal Great-grandparent/Arrière-grand-parent maternel' />
+		<code value='MGRFTH' displayName='Maternal Grandfather/Grand-père maternelle' />
+		<code value='MGRMTH' displayName='Maternal Grandmother/Grand-mère maternelle' />
+		<code value='MGRPRN' displayName='Maternal Grandparent/Grand-parent maternel' />
+		<code value='MTH' displayName='Mother/Mère' />
+		<code value='MTHINLAW' displayName='mother-in-law/Belle-mère' />
+		<code value='MUNCLE' displayName='Maternal Uncle/Oncle maternel' />
+		<code value='NBOR' displayName='neighbour/Voisin' />
+		<code value='NBRO' displayName='natural brother/Frère naturel' />
+		<code value='NCHILD' displayName='natural child/Enfant naturel' />
+		<code value='NEPHEW' displayName='nephew/Neveu' />
+		<code value='NFTH' displayName='natural father/Père naturel' />
+		<code value='NFTHF' displayName='natural father of fetus/Père naturel du fœtus' />
+		<code value='NIECE' displayName='niece/Nièce' />
+		<code value='NIENEPH' displayName='niece/nephew/Neveu' />
+		<code value='NMTH' displayName='natural mother/Mère naturelle' />
+		<code value='NOK' displayName='next of kin/Parent le plus proche' />
+		<code value='NPRN' displayName='natural parent/Parent naturel' />
+		<code value='NSIB' displayName='natural sibling/frères et sœurs naturels' />
+		<code value='NSIS' displayName='natural sister/Sœur naturelle' />
+		<code value='ORG' displayName='organizational contact/Contact organisationnel' />
+		<code value='PAUNT' displayName='Paternal Aunt/Tante paternelle' />
+		<code value='PAYOR' displayName='Payor Contact/Contact payeur' />
+		<code value='PCOUSN' displayName='Paternal Cousin/Cousin paternel' />
+		<code value='PGGRFTH' displayName='Paternal Great-grandfather/Arrière-grand-père paternel' />
+		<code value='PGGRMTH' displayName='Paternal Great-grandmother/Arrière-grand-mère paternel' />
+		<code value='PGGRPRN' displayName='Paternal Great-grandparent/Arrière-grand-parent paternel' />
+		<code value='PGRFTH' displayName='Paternal Grandfather/Grand-père paternel' />
+		<code value='PGRMTH' displayName='Paternal Grandmother/Grand-mère paternelle' />
+		<code value='PGRPRN' displayName='Paternal Grandparent/Grand-parent paternel' />
+		<code value='POWATT' displayName='power of attorney/Procuration' />
+		<code value='PRN' displayName='Parent/Parent' />
+		<code value='PRNINLAW' displayName='parent in-law/Beau-parent' />
+		<code value='PTRES' displayName='Patient’s Residence/Résidence du patient' />
+		<code value='PUNCLE' displayName='Paternal Uncle/Oncle paternel' />
+		<code value='RESPRSN' displayName='responsible party/Partie responsable' />
+		<code value='ROOM' displayName='Roommate/Colocataire' />
+		<code value='SCHOOL' displayName='school/École' />
+		<code value='SIB' displayName='Sibling/Frères et sœurs' />
+		<code value='SIBINLAW' displayName='sibling in-law/Beau-frères et sœurs' />
+		<code value='SIGOTHR' displayName='significant other/Autre significatif' />
+		<code value='SIS' displayName='Sister/Sœur' />
+		<code value='SISINLAW' displayName='sister-in-law/Belle-sœur' />
+		<code value='SON' displayName='natural son/Fils naturel' />
+		<code value='SONADOPT' displayName='adopted son/Fils adopté' />
+		<code value='SONC' displayName='son/Fils' />
+		<code value='SONFOST' displayName='foster son/Fils adoptif' />
+		<code value='SONINLAW' displayName='son in-law/Beau-fils, gendre' />
+		<code value='SPOWATT' displayName='special power of attorney/Procuration spécial' />
+		<code value='SPS' displayName='spouse/Conjoint' />
+		<code value='STPBRO' displayName='stepbrother/Demi-frère' />
+		<code value='STPCHLD' displayName='step child/Bel-enfant' />
+		<code value='STPDAU' displayName='stepdaughter/Belle-fille, bru' />
+		<code value='STPFTH' displayName='stepfather/Beau-père' />
+		<code value='STPMTH' displayName='stepmother/Belle-mère' />
+		<code value='STPPRN' displayName='step parent/Beau-parent' />
+		<code value='STPSIB' displayName='step sibling/Demi-frères et sœurs' />
+		<code value='STPSIS' displayName='stepsister/Demi-sœur' />
+		<code value='STPSON' displayName='stepson/Beau-fils' />
+		<code value='UNCLE' displayName='uncle/Oncle' />
+		<code value='UPC' displayName='underage protection center/Centre de protection pour mineur' />
+		<code value='WIFE' displayName='wife/Epouse' />
+		<code value='WORK' displayName='work site/Chantier' />
+	</system>
+
+	<!--
+	********************************************************
+	IHE RoleCode
+	********************************************************
+	-->
+	<system codeSystemName='IHERoleCode' root='1.3.5.1.4.1.19376.1.5.3.3'>
+		<code value='EMPLOYER' displayName='The employer of a person/L’employeur d’une personne' />
+		<code value='SCHOOL' displayName='The school in which a person is enrolled/L’école dans laquelle une personne est scolarisée' />
+		<code value='AFFILIATED' displayName='An organization with which a person is affiliated (e.g., a volunteer organization)/Une organization dans laquelle une personne est affiliée (par exemple une organisation volontaire)' />
+		<code value='PHARMACY' displayName='The pharmacy a person uses/La pharmacie qu’une personne fréquente' />
+	</system>
+
+	<!--
+	********************************************************
+	ins-laws
+	********************************************************
+	-->
+	<system codeSystemName='ins-laws' root='2.16.756.5.30.2.1.1.11'>
+		<code value='832.10' displayName='Federal law on illness insurance/Loi fédérale sur l’assurancemaladie (LAMal)' />
+		<code value='832.20' displayName='Federal law on accident insurance/Loi fédérale sur l’assuranceaccidents (LAA)' />
+		<code value='221.229.1' displayName='Federal law on insurance contract/Loi fédérale sur le contrat d’assurance (Loi sur le contrat d’assurance, LCA)' />
+		<code value='833.1' displayName='Federal law on military insurance/Loi fédérale sur l’assurance militaire (LAM)' />
+		<code value='831.20' displayName='Federal law on disability insurance/Loi fédérale sur l’assuranceinvalidité (LAI)' />
 	</system>
 	
+	<!--
+	********************************************************
+	Activity of Daily Living Scale
+	********************************************************
+	-->
+	<system codeSystemName='ActivityofDailyLivingScale' root='2.16.840.1.113883.6.257.755'>
+		<code value='0' displayName='INDEPENDENT-No help or oversight -OR- Help/oversight provided only 1 or 2 times during last 7 days' />
+		<code value='1' displayName='SUPERVISION-Oversight, encouragement or cueing provided 3 or more times during last7 days -OR- Supervision (3 or more times) plus physical assistance provided only 1 or 2 times during last 7 days' />
+		<code value='2' displayName='LIMITED ASSISTANCE-Resident highly involved in activity; received physical help in guided manoeuvring of limbs or other non-weight bearing assistance 3 or more times - OR-More help provided only 1 or 2 times during last 7 days' />
+		<code value='3' displayName='EXTENSIVE ASSISTANCE-While resident performed part of activity, over last 7-day period, help of following type(s) provided 3 or more times: - Weight-bearing support - Full staff performance during part (but not all) of last 7 days' />
+		<code value='4' displayName='TOTAL DEPENDENCE-Full staff performance of activity during entire 7 days' />
+		<code value='8' displayName='ACTIVITY DID NOT OCCUR during entire 7 days' />
+	</system>
+
+	<!--
+	********************************************************
+	 [IHE PCC TF-2], Table 6.3.4.16.7-1 to record that a patient is either not on medications, or that medications are not known
+	********************************************************
+	-->
+	<system codeSystemName='IHE-PCC-TF2-Table-6.3.4.16.7-1' root='2.16.840.1.113883.6.96'>
+		<code value='182904002' displayName='Drug Treatment Unknown' />
+		<code value='182849000' displayName='No Drug Therapy Prescribed' />
+		<code value='408350003' displayName='Patient Not On Self-Medications' />
+	</system>
+
+	<!-- 
+	********************************************************
+	 [IHE PCC TF-2], Chapter 6.3.4.29.4, type of advance directive
+	********************************************************
+  -->
+	<system codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.29.4' root='2.16.840.1.113883.6.96'>
+		<code value='304251008' displayName='Resuscitation/Réanimation' />
+		<code value='52765003' displayName='Intubation/Intubation' />
+		<code value='225204009' displayName='IV Fluid and Support/Perfusions et autres mesures intraveineuses' />
+		<code value='89666000' displayName='CPR/Réanimation cardio-pulmonaire (CPR)' />
+		<code value='281789004' displayName='Antibiotics/Antibiotiques' />
+		<code value='78823007' displayName='Life Support/Mesures de maintient en vie' />
+		<code value='61420007' displayName='Tube Feedings/Alimentation par sondes gastriques' />
+		<code value='116859006' displayName='Transfusion of blood product/Transfusion de produits sanguins' />
+		<code value='71388002' displayName='Other Directive/Autre directive' />
+	</system>
+	
+	<!-- 
+	********************************************************
+	 [IHE PCC TF-2], Chapter 6.3.4.14.11, information about a problem or allergy is unknown or where there are no problems or allergies
+	 Problems
+	********************************************************
+  -->
+	<system codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.14.11-Problem' root='2.16.840.1.113883.6.96'>
+		<code value='160243008' displayName='No Significant Medical History/Pas d´antécédents médicaux pertinents' />
+		<code value='160245001' displayName='No current problems or disability/Patient n´a pas de problèmes actuels' />
+		<code value='396782006' displayName='Past Medical History unknown/Pas d´antécédents connus' />
+		<code value='407559004' displayName='Family History Unknown/Aucun antécédent familial connu' />
+	</system>
+
+
+	<!-- 
+	********************************************************
+	 [IHE PCC TF-2], Chapter 6.3.4.14.11, information about a problem or allergy is unknown or where there are no problems or allergies
+	 Allergies
+	********************************************************
+  -->
+	<system codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.14.11-Allergy' root='2.16.840.1.113883.6.96'>
+		<code value='64970000' displayName='Substance Type Unknown/Le patient présente une allergie/intolérance à une substance inconnue.' />
+		<code value='160244002' displayName='No Known Allergies/Aucune allergie connue' />
+		<code value='409137002' displayName='No Known Drug Allergies/Aucune intolérance à des médicaments connue' />
+	</system>
+	
+	
+	
+
+
+
 </systems>

@@ -88,7 +88,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.943+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.595+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -262,7 +262,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.943+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.595+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -372,33 +372,35 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
                      <td colspan="3">(cda:code/@codeSystem="2.16.840.1.113883.5.4" and cda:code/@code=$cda-ch-codeSystem[@root="2.16.840.1.113883.5.4"]/code/@value)
-                        or (cda:code/@codeSystem="2.16.840.1.113883.6.1")
+                        or (cda:code/@codeSystem=("2.16.840.1.113883.6.1", "2.16.840.1.113883.6.96"))
                      </td>
                   </tr>
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
                      <td colspan="3">Medikationsdaten müssen eine Verordnungsart beinhalten (gültiger Wert aus der Wertetabelle
-                        'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)' oder LOINC Code)
+                        'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)' oder LOINC oder SNOMED CT
+                        Code)
                      </td>
                   </tr>
                   <tr lang="fr" class="hidden">
                      <td>Description</td>
                      <td colspan="3">Les données de médication doivent contenir un type de prescription (valeur valable
                         du tableau de valeurs 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)' ou
-                        un code LOINC)
+                        un code LOINC ou SNOMED CT)
                      </td>
                   </tr>
                   <tr lang="it" class="hidden">
                      <td>descritpiton tbd it</td>
                      <td colspan="3">I dati delle medicazioni devono contenere un tipo di prescrizione (valore valido della
                         tabella di valori 'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)' o LOINC
-                        codice)
+                        o SNOMED CT codice)
                      </td>
                   </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
                      <td colspan="3">Medication data must contain a type of prescription (valid value from the value set
-                        'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)' or a LOINC code)
+                        'ActSubstanceAdministrationCode (2.16.840.1.113883.5.4)' or a LOINC or a SNOMED CT
+                        code)
                      </td>
                   </tr>
                </tbody>
@@ -451,26 +453,26 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                   </tr>
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
-                     <td colspan="3">Medikationseinträge müssen mindestens mit der Packungs-GTIN oder der Identifikation
-                        aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)
+                     <td colspan="3">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels
+                        oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)
                      </td>
                   </tr>
                   <tr lang="fr" class="hidden">
                      <td>Description</td>
-                     <td colspan="3">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage
-                        ou l'identification de swissINDEX (code à barres ou pharmacode)
+                     <td colspan="3">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage,
+                        le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)
                      </td>
                   </tr>
                   <tr lang="it" class="hidden">
                      <td>descritpiton tbd it</td>
-                     <td colspan="3">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio
-                        o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)
+                     <td colspan="3">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio,
+                        il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)
                      </td>
                   </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
-                     <td colspan="3">Medication entries must be identified at least with the packaging GTIN or the identification
-                        from the SwissIndex (barcode or pharmacode)
+                     <td colspan="3">Medication entries must be identified at least with the packaging GTIN, the article
+                        GLN or the identification from the SwissIndex (barcode or pharmacode)
                      </td>
                   </tr>
                </tbody>
@@ -974,7 +976,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.943+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.595+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -1164,7 +1166,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.938+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.586+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -1186,7 +1188,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.938+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.586+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -1527,7 +1529,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.949+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.619+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -1735,7 +1737,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -1893,7 +1895,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -2151,7 +2153,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -2347,7 +2349,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -2643,7 +2645,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -3043,7 +3045,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -3221,7 +3223,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -3519,7 +3521,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -3889,7 +3891,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -4331,7 +4333,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -4643,7 +4645,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -4877,7 +4879,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -5299,7 +5301,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -5484,7 +5486,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:effectiveTime/cda:low</td>
+                     <td colspan="3">cda:effectiveTime/cda:low[@nullFlavor or @value]</td>
                   </tr>
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
@@ -5520,7 +5522,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:effectiveTime/cda:high</td>
+                     <td colspan="3">cda:effectiveTime/cda:high[@nullFlavor='NA' or @value]</td>
                   </tr>
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
@@ -5780,7 +5782,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -5958,7 +5960,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -6129,13 +6131,13 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
                      <th class="value1">cda-ch-medication-doc_entity_HL7-cda-ch-1504_as00120</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Warning</span><span lang="de" class="hidden">Warnung</span><span lang="fr" class="hidden">Alerte</span><span lang="it" class="hidden">Allarme</span></th>
                   </tr>
                </thead>
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:code[@codeSystem="2.16.756.5.30.1.106.1.10.10" and @code="103.101.10"]</td>
+                     <td colspan="3">not(cda:code[@codeSystem="2.16.756.5.30.1.106.1.10.10" and @code="103.101.10"])</td>
                   </tr>
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
@@ -6170,7 +6172,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -6520,7 +6522,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -6698,7 +6700,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -6961,7 +6963,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -7255,7 +7257,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -7357,7 +7359,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -7393,6 +7395,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                      <td>Beschreibung</td>
                      <td colspan="3">Das Datum muss dem folgenden Muster entsprechen: YYYYMMDDHHMM[SS]+HHMM</td>
                   </tr>
+                  <tr lang="fr" class="hidden">
+                     <td>Description</td>
+                     <td colspan="3">La date doit correspondre au schéma suivant: YYYYMMDDHHMM[SS]+HHMM</td>
+                  </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
                      <td colspan="3">The date must match the following pattern: YYYYMMDDHHMM[SS]+HHMM</td>
@@ -7418,6 +7424,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
                      <td colspan="3">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</td>
+                  </tr>
+                  <tr lang="fr" class="hidden">
+                     <td>Description</td>
+                     <td colspan="3">La date doit correspondre au schéma suivant: YYYY[MM[DD]]</td>
                   </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
@@ -7458,6 +7468,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                      <td>Beschreibung</td>
                      <td colspan="3">Das Datum muss dem folgenden Muster entsprechen: YYYYMMDDHHMM[SS]+HHMM</td>
                   </tr>
+                  <tr lang="fr" class="hidden">
+                     <td>Description</td>
+                     <td colspan="3">La date doit correspondre au schéma suivant: YYYYMMDDHHMM[SS]+HHMM</td>
+                  </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
                      <td colspan="3">The date must match the following pattern: YYYYMMDDHHMM[SS]+HHMM</td>
@@ -7483,6 +7497,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                   <tr lang="de" class="hidden">
                      <td>Beschreibung</td>
                      <td colspan="3">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</td>
+                  </tr>
+                  <tr lang="fr" class="hidden">
+                     <td>Description</td>
+                     <td colspan="3">La date doit correspondre au schéma suivant: YYYY[MM[DD]]</td>
                   </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
@@ -7523,6 +7541,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                      <td>Beschreibung</td>
                      <td colspan="3">Das Datum muss dem folgenden Muster entsprechen: YYYYMMDDHHMM[SS]+HHMM</td>
                   </tr>
+                  <tr lang="fr" class="hidden">
+                     <td>Description</td>
+                     <td colspan="3">La date doit correspondre au schéma suivant: YYYYMMDDHHMM[SS]+HHMM</td>
+                  </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
                      <td colspan="3">The date must match the following pattern: YYYYMMDDHHMM[SS]+HHMM</td>
@@ -7549,6 +7571,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                      <td>Beschreibung</td>
                      <td colspan="3">Das Datum muss dem folgenden Muster entsprechen: YYYY[MM[DD]]</td>
                   </tr>
+                  <tr lang="fr" class="hidden">
+                     <td>Description</td>
+                     <td colspan="3">La date doit correspondre au schéma suivant: YYYY[MM[DD]]</td>
+                  </tr>
                   <tr lang="en" class="hidden">
                      <td>Description</td>
                      <td colspan="3">The date must match the following pattern: YYYY[MM[DD]]</td>
@@ -7574,7 +7600,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:41.907+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:13.526+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -7715,7 +7741,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:42.851+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:14.886+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -7876,7 +7902,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:42.851+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:14.886+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -7935,7 +7961,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:42.593+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:14.338+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8072,76 +8098,11 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tbody>
             </table>
          </div>
-         <table class="entity">
-            <thead>
-               <tr>
-                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
-                  <th class="value2">cda-ch-medication-doc_1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2-extensions_pa00032</th>
-                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
-                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
-                  <td></td>
-                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
-                  <td class="value2"></td>
-               </tr>
-               <tr>
-                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3"></td>
-               </tr>
-            </tbody>
-         </table>
-         <div>
-            <table class="rule">
-               <thead>
-                  <tr>
-                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_ru00034</th>
-                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
-                     <th class="value1" width="30%">cda-ch-medication-doc_1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2-extensions_pa00032</th>
-                  </tr>
-               </thead>
-               <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00165</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:templateId[@root="2.16.840.1.113883.10.20.1.16"]</td>
-                  </tr>
-                  <tr lang="de" class="hidden">
-                     <td>Beschreibung</td>
-                     <td colspan="3">Die parent Template ID für HL7/ASTM CCD fehlt in der IHE PCC Coded Vital Signs Section
-                        (1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2).
-                     </td>
-                  </tr>
-                  <tr lang="en" class="hidden">
-                     <td>Description</td>
-                     <td colspan="3">In IHE PCC Coded Vital Signs Section (1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2), the HL7/ASTM
-                        CCD parent template identifier for Coded Vital Signs is not present.
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
          <table class="entity" id="vhitg-ruleset">
             <thead>
                <tr>
                   <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
-                  <th class="value2">cda-ch-medication-doc_vhitg-ruleset_pa00033</th>
+                  <th class="value2">cda-ch-medication-doc_vhitg-ruleset_pa00032</th>
                   <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
                   <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
                </tr>
@@ -8157,7 +8118,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8166,7 +8127,60 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_general-addr_ru00035</th>
+                     <th class="value2">cda-ch-medication-doc_general-addr_ru00034</th>
+                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
+                     <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00032</th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_null-or-no-content_as00165</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">normalize-space(.) = ''</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <table class="entity">
+            <thead>
+               <tr>
+                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
+                  <th class="value2">cda-ch-medication-doc_vhitg-ruleset_pa00033</th>
+                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
+                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
+                  <td>vhitg-ruleset.ent</td>
+                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
+                  <td class="value2"></td>
+               </tr>
+               <tr>
+                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
+               </tr>
+            </tbody>
+         </table>
+         <div>
+            <table class="rule">
+               <thead>
+                  <tr>
+                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
+                     <th class="value2">cda-ch-medication-doc_general-addr-1_ru00035</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00033</th>
                   </tr>
@@ -8179,7 +8193,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_null-or-no-content_as00166</th>
+                     <th class="value1">cda-ch-medication-doc_empty-implies-null_as00166</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -8187,7 +8201,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">normalize-space(.) = ''</td>
+                     <td colspan="3">not(string(@nullFlavor)='')</td>
                   </tr>
                </tbody>
             </table>
@@ -8210,7 +8224,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8219,7 +8233,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_general-addr-1_ru00036</th>
+                     <th class="value2">cda-ch-medication-doc_general-time-req_ru00036</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00034</th>
                   </tr>
@@ -8232,7 +8246,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_empty-implies-null_as00167</th>
+                     <th class="value1">cda-ch-medication-doc_as00167</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -8240,7 +8254,10 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(string(@nullFlavor)='')</td>
+                     <td colspan="3">(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value)
+                        &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z'))
+                        &gt; 7
+                     </td>
                   </tr>
                </tbody>
             </table>
@@ -8263,7 +8280,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8272,7 +8289,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_general-time-req_ru00037</th>
+                     <th class="value2">cda-ch-medication-doc_cda-id-oid_ru00037</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00035</th>
                   </tr>
@@ -8293,10 +8310,63 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value)
-                        &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z'))
-                        &gt; 7
+                     <td colspan="3">translate(@root, '0123456789.', '') = ''</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00169</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(substring(@root, 1, 1) = '.') and not(substring(@root, string-length(@root), 1)
+                        = '.')
                      </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00170</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(contains(@root,'..'))</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00171</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">string-length(@root) &lt; 65</td>
                   </tr>
                </tbody>
             </table>
@@ -8319,7 +8389,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8328,68 +8398,12 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_cda-id-oid_ru00038</th>
+                     <th class="value2">cda-ch-medication-doc_cda-id_ru00038</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00036</th>
                   </tr>
                </thead>
                <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00169</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">translate(@root, '0123456789.', '') = ''</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00170</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(substring(@root, 1, 1) = '.') and not(substring(@root, string-length(@root), 1)
-                        = '.')
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00171</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(contains(@root,'..'))</td>
-                  </tr>
-               </tbody>
             </table>
          </div>
          <div>
@@ -8405,7 +8419,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">string-length(@root) &lt; 65</td>
+                     <td colspan="3">false()</td>
                   </tr>
                </tbody>
             </table>
@@ -8428,7 +8442,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8437,7 +8451,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_cda-id_ru00039</th>
+                     <th class="value2">cda-ch-medication-doc_general-id_ru00039</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00037</th>
                   </tr>
@@ -8450,7 +8464,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00173</th>
+                     <th class="value1">cda-ch-medication-doc_null-or-no-root-attribute_as00173</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -8458,7 +8472,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">false()</td>
+                     <td colspan="3">./@nullFlavor or ./@root</td>
                   </tr>
                </tbody>
             </table>
@@ -8481,7 +8495,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8490,7 +8504,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_general-id_ru00040</th>
+                     <th class="value2">cda-ch-medication-doc_cda-root_ru00040</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00038</th>
                   </tr>
@@ -8503,7 +8517,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_null-or-no-root-attribute_as00174</th>
+                     <th class="value1">cda-ch-medication-doc_as00174</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -8511,7 +8525,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">./@nullFlavor or ./@root</td>
+                     <td colspan="3">self::cda:ClinicalDocument</td>
                   </tr>
                </tbody>
             </table>
@@ -8534,7 +8548,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8543,7 +8557,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_cda-root_ru00041</th>
+                     <th class="value2">cda-ch-medication-doc_nameTest_ru00041</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00039</th>
                   </tr>
@@ -8564,7 +8578,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">self::cda:ClinicalDocument</td>
+                     <td colspan="3">cda:name</td>
                   </tr>
                </tbody>
             </table>
@@ -8587,7 +8601,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8596,30 +8610,12 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_nameTest_ru00042</th>
+                     <th class="value2">cda-ch-medication-doc_ru00042</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00040</th>
                   </tr>
                </thead>
                <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00176</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:name</td>
-                  </tr>
-               </tbody>
             </table>
          </div>
          <table class="entity">
@@ -8640,7 +8636,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8675,7 +8671,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8710,7 +8706,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8719,12 +8715,30 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_ru00045</th>
+                     <th class="value2">cda-ch-medication-doc_addresTestPersonOrRole_ru00045</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00043</th>
                   </tr>
                </thead>
                <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00176</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'</td>
+                  </tr>
+               </tbody>
             </table>
          </div>
          <table class="entity">
@@ -8745,7 +8759,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8754,30 +8768,12 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_addresTestPersonOrRole_ru00046</th>
+                     <th class="value2">cda-ch-medication-doc_ru00046</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00044</th>
                   </tr>
                </thead>
                <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00177</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'</td>
-                  </tr>
-               </tbody>
             </table>
          </div>
          <table class="entity">
@@ -8798,7 +8794,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8833,7 +8829,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8842,12 +8838,30 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_ru00048</th>
+                     <th class="value2">cda-ch-medication-doc_nameTestOrg_ru00048</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00046</th>
                   </tr>
                </thead>
                <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00177</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">cda:name</td>
+                  </tr>
+               </tbody>
             </table>
          </div>
          <table class="entity">
@@ -8868,7 +8882,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8877,7 +8891,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_nameTestOrg_ru00049</th>
+                     <th class="value2">cda-ch-medication-doc_addresTestOrg_ru00049</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00047</th>
                   </tr>
@@ -8898,7 +8912,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:name</td>
+                     <td colspan="3">cda:addr/*</td>
                   </tr>
                </tbody>
             </table>
@@ -8921,7 +8935,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8930,30 +8944,12 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_addresTestOrg_ru00050</th>
+                     <th class="value2">cda-ch-medication-doc_ru00050</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00048</th>
                   </tr>
                </thead>
                <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00179</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:addr/*</td>
-                  </tr>
-               </tbody>
             </table>
          </div>
          <table class="entity">
@@ -8974,7 +8970,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -8989,6 +8985,66 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                   </tr>
                </thead>
                <tbody></tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00179</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:'
+                        or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_telcom-regex_as00180</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+0123456789()-.',''),translate(substring(@value,6),'0123456789()-.','')))
+                        = 0
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_telcom-has-digit_as00181</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+()-.',''),translate(substring(@value,6),'()-.','')))
+                        &gt; 0
+                     </td>
+                  </tr>
+               </tbody>
             </table>
          </div>
          <table class="entity">
@@ -9009,7 +9065,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9031,7 +9087,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00180</th>
+                     <th class="value1">cda-ch-medication-doc_as00182</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -9039,9 +9095,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:'
-                        or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor
-                     </td>
+                     <td colspan="3">not(cda:copyTime)</td>
                   </tr>
                </tbody>
             </table>
@@ -9051,7 +9105,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_telcom-regex_as00181</th>
+                     <th class="value1">cda-ch-medication-doc_as00183</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -9059,29 +9113,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+0123456789()-.',''),translate(substring(@value,6),'0123456789()-.','')))
-                        = 0
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_telcom-has-digit_as00182</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">(not(substring(@value,1,4) = 'tel:') and not(substring(@value,1,4) = 'fax:')) or string-length(concat(translate(substring(@value,5,1),'+()-.',''),translate(substring(@value,6),'()-.','')))
-                        &gt; 0
-                     </td>
+                     <td colspan="3">not(cda:informant)</td>
                   </tr>
                </tbody>
             </table>
@@ -9104,7 +9136,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9126,24 +9158,6 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00183</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(cda:copyTime)</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
                      <th class="value1">cda-ch-medication-doc_as00184</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
@@ -9152,7 +9166,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(cda:informant)</td>
+                     <td colspan="3">normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'</td>
                   </tr>
                </tbody>
             </table>
@@ -9175,7 +9189,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9205,7 +9219,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'</td>
+                     <td colspan="3">@root or @nullFlavor</td>
                   </tr>
                </tbody>
             </table>
@@ -9228,7 +9242,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9258,7 +9272,25 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">@root or @nullFlavor</td>
+                     <td colspan="3">@code and @codeSystem</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00187</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">normalize-space(@codeSystem)='2.16.840.1.113883.6.1'</td>
                   </tr>
                </tbody>
             </table>
@@ -9281,7 +9313,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9303,24 +9335,6 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00187</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">@code and @codeSystem</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
                      <th class="value1">cda-ch-medication-doc_as00188</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
@@ -9329,7 +9343,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">normalize-space(@codeSystem)='2.16.840.1.113883.6.1'</td>
+                     <td colspan="3">string-length(@value)&gt;7</td>
                   </tr>
                </tbody>
             </table>
@@ -9352,7 +9366,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9361,7 +9375,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_ru00057</th>
+                     <th class="value2">cda-ch-medication-doc_cda-languageCode_ru00057</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00055</th>
                   </tr>
@@ -9382,7 +9396,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">string-length(@value)&gt;7</td>
+                     <td colspan="3">cda:languageCode</td>
                   </tr>
                </tbody>
             </table>
@@ -9405,7 +9419,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9414,7 +9428,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_cda-languageCode_ru00058</th>
+                     <th class="value2">cda-ch-medication-doc_cda-languageCode-format_ru00058</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00056</th>
                   </tr>
@@ -9435,7 +9449,45 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:languageCode</td>
+                     <td colspan="3">(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code)
+                        = 2
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00191</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">substring(@code,1,2) = $vhitg-codeSystem[@codeSystemName='ISO639-1']/code/@value</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00192</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">string-length(@code) = 2 or substring(@code,4,2) = $vhitg-codeSystem[@codeSystemName='ISO3166-1']/code/@value</td>
                   </tr>
                </tbody>
             </table>
@@ -9458,7 +9510,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9467,50 +9519,12 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_cda-languageCode-format_ru00059</th>
+                     <th class="value2">cda-ch-medication-doc_ru00059</th>
                      <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
                      <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00057</th>
                   </tr>
                </thead>
                <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00191</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code)
-                        = 2
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00192</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">substring(@code,1,2) = $vhitg-codeSystem[@codeSystemName='ISO639-1']/code/@value</td>
-                  </tr>
-               </tbody>
             </table>
          </div>
          <div>
@@ -9526,7 +9540,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">string-length(@code) = 2 or substring(@code,4,2) = $vhitg-codeSystem[@codeSystemName='ISO3166-1']/code/@value</td>
+                     <td colspan="3">count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1</td>
                   </tr>
                </tbody>
             </table>
@@ -9549,7 +9563,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9579,7 +9593,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1</td>
+                     <td colspan="3">cda:city or cda:country</td>
                   </tr>
                </tbody>
             </table>
@@ -9602,7 +9616,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9632,7 +9646,73 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:city or cda:country</td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK')
+                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK'
+                        and cda:associatedentity/cda:associatedPerson)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00196</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON')
+                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON'
+                        and cda:associatedentity/cda:associatedPerson)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00197</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD')
+                        or (normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD'
+                        and cda:associatedentity/cda:scopingOrganization)
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00198</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS')
+                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS'
+                        and cda:associatedentity/cda:associatedPerson)
+                     </td>
                   </tr>
                </tbody>
             </table>
@@ -9655,7 +9735,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9677,69 +9757,6 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00196</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK')
-                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK'
-                        and cda:associatedentity/cda:associatedPerson)
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00197</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON')
-                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='ECON'
-                        and cda:associatedentity/cda:associatedPerson)
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00198</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD')
-                        or (normalize-space(cda:typedCode)='HLD' and normalize-space(cda:associatedentity/@typeCode)='POLHOLD'
-                        and cda:associatedentity/cda:scopingOrganization)
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
                      <th class="value1">cda-ch-medication-doc_as00199</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
@@ -9748,10 +9765,61 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS')
-                        or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='PRS'
-                        and cda:associatedentity/cda:associatedPerson)
-                     </td>
+                     <td colspan="3">count(cda:relatedDocument[@typeCode='APND'])&lt;2</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00200</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument[@typeCode='RPLC'])&lt;2</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00201</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument[@typeCode='XFRM'])&lt;2</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div>
+            <table class="body" width="100%">
+               <thead>
+                  <tr>
+                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
+                     <th class="value1">cda-ch-medication-doc_as00202</th>
+                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
+                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
+                     <td colspan="3">count(cda:relatedDocument)&lt;3</td>
                   </tr>
                </tbody>
             </table>
@@ -9774,7 +9842,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9796,60 +9864,6 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00200</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(cda:relatedDocument[@typeCode='APND'])&lt;2</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00201</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(cda:relatedDocument[@typeCode='RPLC'])&lt;2</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00202</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(cda:relatedDocument[@typeCode='XFRM'])&lt;2</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
                      <th class="value1">cda-ch-medication-doc_as00203</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
@@ -9858,7 +9872,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(cda:relatedDocument)&lt;3</td>
+                     <td colspan="3">count(/cda:component/cda:section)&lt;1</td>
                   </tr>
                </tbody>
             </table>
@@ -9881,7 +9895,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9911,7 +9925,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(/cda:component/cda:section)&lt;1</td>
+                     <td colspan="3">count(cda:text)=1 and string-length(normalize-space(cda:text))=0</td>
                   </tr>
                </tbody>
             </table>
@@ -9934,7 +9948,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -9964,7 +9978,9 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">count(cda:text)=1 and string-length(normalize-space(cda:text))=0</td>
+                     <td colspan="3">@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0
+                        and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)
+                     </td>
                   </tr>
                </tbody>
             </table>
@@ -9987,7 +10003,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -10017,9 +10033,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0
-                        and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)
-                     </td>
+                     <td colspan="3">cda:value/@xsi:type='ED'</td>
                   </tr>
                </tbody>
             </table>
@@ -10042,7 +10056,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -10072,7 +10086,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">cda:value/@xsi:type='ED'</td>
+                     <td colspan="3">@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')</td>
                   </tr>
                </tbody>
             </table>
@@ -10095,7 +10109,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                </tr>
                <tr>
                   <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
+                  <td colspan="3">2014-03-25T14:28:15.569+01:00</td>
                </tr>
             </tbody>
          </table>
@@ -10125,59 +10139,6 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <tbody>
                   <tr>
                      <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
-                     <td colspan="3">@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-         <table class="entity">
-            <thead>
-               <tr>
-                  <th class="label1" width="15%"><span lang="en" class="hidden">Pattern ID:</span><span lang="de" class="hidden">Pattern ID:</span><span lang="fr" class="hidden">ID du motif:</span><span lang="it" class="hidden">[pattern.id@it]:</span></th>
-                  <th class="value2">cda-ch-medication-doc_vhitg-ruleset_pa00067</th>
-                  <th class="label2" width="15%"><span lang="en" class="hidden">Phase:</span><span lang="de" class="hidden">Phase:</span><span lang="fr" class="hidden">Phase:</span><span lang="it" class="hidden">Fasi:</span></th>
-                  <th class="value2" width="15%"><span lang="en" class="hidden">all</span><span lang="de" class="hidden">alle</span><span lang="fr" class="hidden">toutes</span><span lang="it" class="hidden">tutte</span></th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td class="label1"><span lang="en" class="hidden">File name:</span><span lang="de" class="hidden">Dateiname:</span><span lang="fr" class="hidden">Nom du fichier:</span><span lang="it" class="hidden">[file.name@it]:</span></td>
-                  <td>vhitg-ruleset.ent</td>
-                  <td class="label2"><span lang="en" class="hidden">Version:</span><span lang="de" class="hidden">Version:</span><span lang="fr" class="hidden">Version:</span><span lang="it" class="hidden">[Version@it]:</span></td>
-                  <td class="value2"></td>
-               </tr>
-               <tr>
-                  <td class="label1"><span lang="en" class="hidden">Last upate:</span><span lang="de" class="hidden">Letzte Änderung:</span><span lang="fr" class="hidden">Dernière mutation:</span><span lang="it" class="hidden">[LastUpdate@it]:</span></td>
-                  <td colspan="3">2014-01-27T22:07:43.494+01:00</td>
-               </tr>
-            </tbody>
-         </table>
-         <div>
-            <table class="rule">
-               <thead>
-                  <tr>
-                     <th class="label1" width="15%"><span lang="en" class="hidden">Rule ID:</span><span lang="de" class="hidden">Regel ID:</span><span lang="fr" class="hidden">ID de la règle:</span><span lang="it" class="hidden">ID de la regola:</span></th>
-                     <th class="value2">cda-ch-medication-doc_ru00069</th>
-                     <th class="label2" width="15%"><span lang="en" class="hidden">Pattern:</span><span lang="de" class="hidden">Pattern:</span><span lang="fr" class="hidden">Motif:</span><span lang="it" class="hidden">[Pattern@it]:</span></th>
-                     <th class="value1" width="30%">cda-ch-medication-doc_vhitg-ruleset_pa00067</th>
-                  </tr>
-               </thead>
-               <tbody></tbody>
-            </table>
-         </div>
-         <div>
-            <table class="body" width="100%">
-               <thead>
-                  <tr>
-                     <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00209</th>
-                     <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
-                     <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td class="label1"><span lang="en" class="hidden">Assert:</span><span lang="de" class="hidden">Assert:</span><span lang="fr" class="hidden">Assert:</span><span lang="it" class="hidden">Assert:</span></td>
                      <td colspan="3">(./cda:name) and (./cda:value)</td>
                   </tr>
                </tbody>
@@ -10188,7 +10149,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00210</th>
+                     <th class="value1">cda-ch-medication-doc_as00209</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>
@@ -10206,7 +10167,7 @@ it: "SchDocumentation tbd it'cda-ch-medication-doc-sch.xml'",
                <thead>
                   <tr>
                      <th class="label1" width="10%"><span lang="en" class="hidden">Assert ID:</span><span lang="de" class="hidden">Assert ID:</span><span lang="fr" class="hidden">Assert ID:</span><span lang="it" class="hidden">Assert ID:</span></th>
-                     <th class="value1">cda-ch-medication-doc_as00211</th>
+                     <th class="value1">cda-ch-medication-doc_as00210</th>
                      <th class="label2" width="10%"><span lang="en" class="hidden">Role:</span><span lang="de" class="hidden">Kategorie:</span><span lang="fr" class="hidden">Catégorie:</span><span lang="it" class="hidden">Categoria:</span></th>
                      <th class="value2" width="10%"><span lang="en" class="hidden">Error</span><span lang="de" class="hidden">Fehler</span><span lang="fr" class="hidden">Erreur</span><span lang="it" class="hidden">Errore</span></th>
                   </tr>

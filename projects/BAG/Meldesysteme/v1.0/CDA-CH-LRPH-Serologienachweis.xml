@@ -4,7 +4,8 @@
 Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - Serologienachweis Hepatitis-B-Virus
 
 History:
-20.01.2013: Tony Schaller, medshare GmbH (Erster Entwurf)
+2013.01.20: Tony Schaller, medshare GmbH (Erster Entwurf)
+2014.03.25: Tony Schaller, medshare GmbH (Korrektur participant nach Schematronregel-Update)
 
 ********************************************************
 -->
@@ -125,6 +126,9 @@ History:
 			</associatedPerson>
 			<scopingOrganization>
 				<name>Kantonales Spital</name>
+				<telecom use="PUB" value="tel:+41.32.211.11.11"/>
+				<telecom use="PUB" value="fax:+41.32.211.11.54"/>
+				<telecom use="PUB" value="http:www.kantonales-spital.ch"/>
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
 					<houseNumber>33</houseNumber>
