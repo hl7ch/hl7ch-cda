@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+CDA-CH-SMCP
+Vocabulaire pour le Document médico-social de transmission V2.1 (DMST)
+
+
+History:
+2013.06.16: Tony Schaller, medshare GmbH (First Draft)
+2014.03.21: Tony Schaller, medshare GmbH (RC1 CDA-CH-SMCP)
+2014.04.07: Tony Schaller, medshare GmbH (Release CDA-CH-SMCP)
+
+********************************************************
+-->
+<systems>
+
+	<!-- DMST réponses de defaut -->
+	<system codeSystemName='SMCP_DefaultResponse' root='2.16.756.5.30.1.112.3.1.201207.1'>
+		<code value='N' displayName='non' />
+		<code value='Y' displayName='oui' />
+		<code value='D' displayName='démarches en cours' />
+		<code value='U' displayName='ne sait pas' />
+	</system>
+
+	<!-- Demande d’admission pour un hébergement -->
+	<system codeSystemName='SMCP_AdmissionType' root='2.16.756.5.30.1.112.3.1.201207.2'>
+		<code value='0' displayName='no admission/aucune hébergement' />
+		<code value='1' displayName='short stay/hébergement long séjour' />
+		<code value='2' displayName='long stay/hébergement court séjour' />
+		<code value='3' displayName='observing stay/séjour d’observation' />
+	</system>
+
+	<!-- PLAFA -->
+	<system codeSystemName='SMCP_PLAFA' root='2.16.756.5.30.1.112.3.1.201207.3'>
+		<code value='N' displayName='non' />
+		<code value='Y' displayName='oui' />
+		<code value='A' displayName='annexé' />
+		<code value='D' displayName='démarches en cours' />
+		<code value='U' displayName='ne sait pas' />
+	</system>
+
+	<!-- Statut social -->
+	<system codeSystemName='SMCP_SocialStatus' root='2.16.756.5.30.1.112.3.1.201207.4'>
+		<code value='1' displayName='Permis' />
+		<code value='2' displayName='Statut « Non Entrée en Matière »' />
+		<code value='3' displayName='Requérant d’asile' />
+		<code value='4' displayName='Sans Domicile Fixe' />
+	</system>
+
+	<!-- Moyens auxiliaires -->
+	<system codeSystemName='SMCP_Accessories' root='2.16.756.5.30.1.112.3.1.201207.5'>
+		<code value='CAN' displayName='Cane/canne' />
+		<code value='WAL' displayName='Walker/déambulateur' />
+		<code value='WHC' displayName='Wheel chair/chaise roulante' />
+		<code value='GLS' displayName='Glasses/lunettes' />
+		<code value='LNS' displayName='Contact lenses/verres de contact' />
+		<code value='HAD' displayName='Hearing aid device/appareil acoustique' />
+		<code value='OTH' displayName='Other/autre' />
+	</system>
+
+	<!-- Moyens auxiliaires pour la mobilité 
+	This table is not currently used. See SMCP_Accessories instead.
+	<system codeSystemName='SMCP_LocomotionSupport' root='2.16.756.5.30.1.112.3.1.201207.6'>
+		<code value='CAN' displayName='Cane/Gehstock/cannes' />
+		<code value='WAL' displayName='Walker/Gehhilfe/déambulateur' />
+		<code value='WHC' displayName='Wheelchair/Rollstuhl/chaise roulante' />
+		<code value='OTH' displayName='Other/Andere/Autre' />
+	</system>
+	-->
+
+	<!-- Moyens auxiliaires pour la vision
+	This table is not currently used. See SMCP_Accessories instead.
+	<system codeSystemName='SMCP_VisionSupport' root='2.16.756.5.30.1.112.3.1.201207.7'>
+		<code value='L' displayName='Lenses/Kontaktlinsen/verres de contact' />
+		<code value='G' displayName='Glasses/Brille/lunettes' />
+	</system>
+	-->
+
+	<!-- Moyens auxiliaires pour l'audition 
+	This table is not currently used. See SMCP_Accessories instead.
+	<system codeSystemName='SMCP_HearingSupport' root='2.16.756.5.30.1.112.3.1.201207.8'>
+		<code value='H' displayName='Hearing aid/Hörgerät/appareil acoustique' />
+	</system>
+	-->
+
+	<!-- Transféré avec -->
+	<system codeSystemName='SMCP_TransportEffects' root='2.16.756.5.30.1.112.3.1.201207.9'>
+		<code value='01' displayName='Glasses/lunettes' />
+		<code value='02' displayName='Dental prosthetics/appareil dentaire' />
+		<code value='03' displayName='Acoustic device/appareil acoustique' />
+		<code value='04' displayName='Cane/canne' />
+		<code value='05' displayName='Walker/déambulateur' />
+		<code value='06' displayName='Wheelchair/chaise roulante' />
+		<code value='99' displayName='Other, please specify/autre, préciser' />
+	</system>
+
+	<!-- Problèmes au moment du transfert -->
+	<system codeSystemName='SMCP_AdmissionProblems' root='2.16.756.5.30.1.112.3.1.201207.10'>
+		<code value='Z93.1' displayName='Gastrostomy status/Gastrostomie' />
+		<code value='Z96.0' displayName='Presence of urogenital implants/Présence d´implants urogénitaux' />
+		<code value='Z93.2' displayName='Ileostomy status/Iléostomie' />
+		<code value='Z93.3' displayName='Colostomy status/Colostomie' />
+		<code value='Z93.4' displayName='Other artificial openings of gastrointestinal tract status/Autres stomies de l´appareil digestif' />
+		<code value='Z93.5' displayName='Cystostomy status/Cystostomie' />
+		<code value='Z93.6' displayName='Other artificial openings of urinary tract status/Autres stomies de l´appareil urinaire' />
+		<code value='Z93.9' displayName='Artificial opening status, unspecified/Stomie, sans précision' />
+		<code value='F17' displayName='Nicotine dependence/Troubles mentaux et du comportement liés à l´utilisation de tabac' />
+	</system>
+
+	<!-- Observations au moment du transfert -->
+	<system codeSystemName='SMCP_Observations' root='2.16.756.5.30.1.112.3.1.201207.11'>
+		<code value='66476-3' codeSystem='2.16.840.1.113883.6.1' displayName='Country of citizenship/Nationalité' />
+		<code value='67413-5' codeSystem='2.16.840.1.113883.6.1' displayName='Country of origin/Origine' />
+		<code value='67414-3' codeSystem='2.16.840.1.113883.6.1' displayName='Region of origin/' />
+		<code value='21847-9' codeSystem='2.16.840.1.113883.6.1' displayName='Usual occupation/Profession' />
+		<code value='71802-3' codeSystem='2.16.840.1.113883.6.1' displayName='Housing status/Habitat' />
+		<code value='11295-3' codeSystem='2.16.840.1.113883.6.1' displayName='Current employment/Chômage' />
+		<code value='45602-0' codeSystem='2.16.840.1.113883.6.1' displayName='Eating - self-performance/Manger - boire' />
+		<code value='45608-7' codeSystem='2.16.840.1.113883.6.1' displayName='Bathing - self-performance/Se laver' />
+		<code value='45600-4' codeSystem='2.16.840.1.113883.6.1' displayName='Dressing - self-performance/S´habiller' />
+		<code value='X-UNDRESSING' codeSystem='2.16.840.1.113883.6.1' displayName='Undressing - self-performance/Se déshabiller' />
+		<code value='45606-1' codeSystem='2.16.840.1.113883.6.1' displayName='Personal hygiene - self-performance/Entretenir sa personne' />
+		<code value='45619-4' codeSystem='2.16.840.1.113883.6.1' displayName='Bladder continence/Continence vésicale' />
+		<code value='69667-4' codeSystem='2.16.840.1.113883.6.1' displayName='Bowel continence/Continence anale' />
+		<code value='45604-6' codeSystem='2.16.840.1.113883.6.1' displayName='Toilet use - self-performance/Utiliser les toilettes' />
+		<code value='45588-1' codeSystem='2.16.840.1.113883.6.1' displayName='Bed mobility - self-performance/Changer de position' />
+		<code value='45596-4' codeSystem='2.16.840.1.113883.6.1' displayName='Locomotion on unit - self-performance/Se déplacer à l´intérieur' />
+		<code value='45598-0' codeSystem='2.16.840.1.113883.6.1' displayName='Locomotion off unit - self-performance/Se déplacer à l´extérieur' />
+		<code value='X-USETRSPT' codeSystem='2.16.840.1.113883.6.1' displayName='Use of transport/Utiliser les moyens de transport' />
+		<code value='X-USESTRS' codeSystem='2.16.840.1.113883.6.1' displayName='Use of stairs/Utiliser les escaliers' />
+		<code value='X-USEELVTR' codeSystem='2.16.840.1.113883.6.1' displayName='Use of elevators/Utilisation élévateur' />
+		<code value='45536-0' codeSystem='2.16.840.1.113883.6.1' displayName='Uses cane, walker or crutch/Utiliser les moyens auxiliaires' />
+		<code value='46529-4' codeSystem='2.16.840.1.113883.6.1' displayName='Sensory status: vision/Voir' />
+		<code value='46530-2' codeSystem='2.16.840.1.113883.6.1' displayName='Sensory status: hearing and ability to understand spoken language/Entendre' />
+		<code value='46490-9' codeSystem='2.16.840.1.113883.6.1' displayName='Ability to use telephone/Utiliser le téléphone' />
+		<code value='46488-3' codeSystem='2.16.840.1.113883.6.1' displayName='Housekeeping/Entretenir son logement' />
+		<code value='46485-9' codeSystem='2.16.840.1.113883.6.1' displayName='Planning &amp; preparing light meals/Préparer les repas' />
+		<code value='46489-1' codeSystem='2.16.840.1.113883.6.1' displayName='Shopping/Faire les courses' />
+		<code value='46487-5' codeSystem='2.16.840.1.113883.6.1' displayName='Laundry/Faire la lessive, entretenir le linge' />
+		<code value='X-TAKMEDI' codeSystem='2.16.840.1.113883.6.1' displayName='Self-application of medications/Prendre ses médicaments' />
+		<code value='X-ADMMGT' codeSystem='2.16.840.1.113883.6.1' displayName='Administrative management/Gestion administrative' />
+		<code value='X-MGTST' codeSystem='2.16.840.1.113883.6.1' displayName='Managing social ties/Gérer ses liens sociaux' />
+		<code value='42850-8' codeSystem='2.16.840.1.113883.6.1' displayName='Memory impairment/Mémoire' />
+		<code value='X-ORITME' codeSystem='2.16.840.1.113883.6.1' displayName='Orientation in time/Orientation dans le temps' />
+		<code value='X-ORISPC' codeSystem='2.16.840.1.113883.6.1' displayName='Orientation in space/Orientation dans l´espace' />
+		<code value='57217-2' codeSystem='2.16.840.1.113883.6.1' displayName='Understanding of verbal content/Compréhension' />
+		<code value='11412-4' codeSystem='2.16.840.1.113883.6.1' displayName='RESPIRATORY SYSTEM/Respiration' />
+		<code value='28141-0' codeSystem='2.16.840.1.113883.6.1' displayName='Body nutrition deficit/Alimentation, hydratation' />
+		<code value='57046-5' codeSystem='2.16.840.1.113883.6.1' displayName='Elimination status/Elimination' />
+		<code value='8709-8' codeSystem='2.16.840.1.113883.6.1' displayName='Physical findings of Skin/Etat de la peau, plaies, cicatrices' />
+		<code value='71108-5' codeSystem='2.16.840.1.113883.6.1' displayName='Mobility/Coordination, posture, mobilité, etc.' />
+		<code value='69729-2' codeSystem='2.16.840.1.113883.6.1' displayName='Patient Health Questionnaire - Somatic, Anxiety, and Depressive Symptoms (PHQ-SADS) [ - Reported]/Anxiété' />
+		<code value='38208-5' codeSystem='2.16.840.1.113883.6.1' displayName='Pain Severity/N/A' />
+		<code value='R29.6' codeSystem='2.16.756.5.30.1.126.3.2' displayName='Tendency to fall, not elsewhere classified/Chutes' />
+		<code value='M99.0' codeSystem='2.16.756.5.30.1.126.3.2' displayName='Segmental and somatic dysfunction/Autres problématiques somatiques' />
+		<code value='32709003' codeSystem='2.16.840.1.113883.6.96' displayName='Addiction/Addiction' />
+		<code value='365086004' codeSystem='2.16.840.1.113883.6.96' displayName='Humor/Humeur' />
+		<code value='225444004' codeSystem='2.16.840.1.113883.6.96' displayName='At risk for suicide (finding)/Potentiel suicidaire' />
+		<code value='67564005' codeSystem='2.16.840.1.113883.6.96' displayName='Social maladjustment (finding)/Troubles du comportement' />
+		<code value='193462001' codeSystem='2.16.840.1.113883.6.96' displayName='Insomnia (disorder)/Troubles du sommeil' />
+		<code value='1.19' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/Patient connu du CMS' />
+		<code value='2.3' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/PLAFA' />
+		<code value='2.9' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/PC' />
+		<code value='2.10' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/API' />
+		<code value='2.11' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/AI' />
+		<code value='2.12' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/OCC' />
+		<code value='2.13' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Social status/Statut social' />
+		<code value='2.17' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Warrant/Mandat judiciaire' />
+		<code value='2.18' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/Enfant(s) mineur(s) à charge' />
+		<code value='5.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Environment and living habits/Contexte et habitudes de vie' />
+		<code value='7.15' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Tend to run away by disorientation /Tendance à fuguer par désorientation' />
+		<code value='7.16' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Tend to run away voluntarily /Tendance à fuguer volontairement' />
+		<code value='7.17' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Other, specify /Autres, préciser' />
+		<code value='8.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Transferred with /Transféré avec' />
+		<code value='8.2' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Transfer envelope /Enveloppe de transfert' />
+		<code value='8.5' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Subject(s) lost(s) /Objet(s) perdu(s)' />
+		<code value='8.6' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Object(s) search /Objet(s) en recherche' />
+		<code value='8.7' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Transport motivation/Motif du transfert / Objectifs de soins / Projets pour le patient (description)' />
+		<code value='8.8' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Patient consent for transfer/Patient en accord avec le transfert' />
+		<code value='8.16' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Medical document/Document médical' />
+		<code value='8.17' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Network summary sheet/Feuille de synthèse d’entretien de réseau' />
+	</system>
+
+</systems>
