@@ -8,6 +8,7 @@ History:
 2013.07.29: Tony Schaller, medshare GmbH (Sample for Implementation guide)
 2014.02.21: Tony Schaller, medshare GmbH (Changes while implementing Schematron rules for CDA Header)
 2014.03.11: Tony Schaller, medshare GmbH (Changes while implementing Schematron rules for CDA Body)
+2014.04.07: Tony Schaller, medshare GmbH (Release CDA-CH-SMCP)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -1682,7 +1683,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='CAN' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='canne' />
+											<value xsi:type='CD' code='CAN' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='canne' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -1702,7 +1703,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='WAL' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='déambulateur' />
+											<value xsi:type='CD' code='WAL' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='déambulateur' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -1722,7 +1723,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='WHC' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='chaise roulante' />
+											<value xsi:type='CD' code='WHC' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='chaise roulante' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -1742,7 +1743,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='OTH' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='Autre' />
+											<value xsi:type='CD' code='OTH' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='Autre' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -1779,7 +1780,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='LNS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='verres de contact' />
+											<value xsi:type='CD' code='LNS' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='verres de contact' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -1799,7 +1800,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='GLS' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='lunettes' />
+											<value xsi:type='CD' code='GLS' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='lunettes' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -1836,7 +1837,7 @@ History:
 												<low nullFlavor='UNK' />
 												<high nullFlavor='UNK' />
 											</effectiveTime>
-											<value xsi:type='CD' code='HAD' codeSystem='2.16.756.5.30.1.112.3.2.201207.5' codeSystemName='SMCP_Accessories' displayName='appareil acoustique' />
+											<value xsi:type='CD' code='HAD' codeSystem='2.16.756.5.30.1.112.3.1.201207.5' codeSystemName='SMCP_Accessories' displayName='appareil acoustique' />
 											<interpretationCode nullFlavor='NA' />
 											<methodCode nullFlavor='NA' />
 											<targetSiteCode nullFlavor='NA' />
@@ -2292,7 +2293,7 @@ History:
 								<!-- Date de demande -->
 								<high value='20130603' />
 							</effectiveTime>
-							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.2.201207.3' codeSystemName='SMCP_PLAFA' displayName='oui' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.1.201207.3' codeSystemName='SMCP_PLAFA' displayName='oui' />
 						</observation>
 					</entry>
 					<entry>
@@ -2308,7 +2309,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='oui' />
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='oui' />
 						</observation>
 					</entry>
 					<entry>
@@ -2324,7 +2325,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='non' />
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='non' />
 						</observation>
 					</entry>
 					<entry>
@@ -2340,7 +2341,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='D' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='démarches en cours' />
+							<value xsi:type='CD' code='D' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='démarches en cours' />
 						</observation>
 					</entry>
 					<entry>
@@ -2356,7 +2357,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='U' codeSystem='2.16.756.5.30.1.112.3.2.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='ne sait pas' />
+							<value xsi:type='CD' code='U' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='ne sait pas' />
 						</observation>
 					</entry>
 					<entry>
@@ -2372,7 +2373,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.112.3.2.201207.4' codeSystemName='SMCP_DefaultResponse' displayName='permis' />
+							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.112.3.1.201207.4' codeSystemName='SMCP_SocialStatus' displayName='permis' />
 						</observation>
 					</entry>
 					<entry>
@@ -2851,12 +2852,12 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='D1878D3D-A3B1-4488-89B0-F0272E7E5D7E'/>
 							<code code='IMP' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'>
 								<!-- DMST: 0.7 Demande d'admission pour un hébergement -->
-								<translation code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
+								<translation code='2' codeSystem='2.16.756.5.30.1.112.3.1.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
 							</code>
 							<!--
 							<code code='EMER' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActEncounterCode' displayName='inpatient encounter'>
 								<!-/- DMST: 0.7 Demande d'admission pour un hébergement -/->
-								<translation code='2' codeSystem='2.16.756.5.30.1.112.3.2.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
+								<translation code='2' codeSystem='2.16.756.5.30.1.112.3.1.201207.2' codeSystemName='SMCP_AdmissionType' displayName='hébergement court séjour' />
 							</code>
 							-->
 							<text>
@@ -3256,7 +3257,7 @@ History:
 							<statusCode code='completed'/>
 							<effectiveTime>
 								<low value='20100215'/>
-								<high nullFlavor='UNK' />
+								<high nullFlavor='NA' />
 							</effectiveTime>
 							<value xsi:type='CD' code='6' codeSystem='2.16.756.5.30.2.1.1.6.1' />
 							<interpretationCode code='100' codeSystem='2.16.756.5.30.2.1.1.7.1' />
@@ -3414,7 +3415,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='99' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
+							<value xsi:type='CD' code='99' codeSystem='2.16.756.5.30.1.112.3.1.201207.9' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
@@ -3443,7 +3444,7 @@ History:
 							</text>
 							<statusCode code='completed'/>
 							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='01' codeSystem='2.16.756.5.30.1.112.3.2.201207.8' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
+							<value xsi:type='CD' code='01' codeSystem='2.16.756.5.30.1.112.3.1.201207.9' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
 							<interpretationCode nullFlavor='NA' />
 							<methodCode nullFlavor='NA' />
 							<targetSiteCode nullFlavor='NA' />
