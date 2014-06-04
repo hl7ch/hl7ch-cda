@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+CDA-CH-VACD
+eVACDOC
+
+
+History:
+2014.03.25: Tony Schaller, medshare GmbH (First Draft)
+2014.04.02: Patrick Chaubert für medshare GmbH (Basis-Implementierung)
+2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
+
+********************************************************
+-->
+<systems>
+
+	<!-- VACD Einnahmearten (RouteCodes) -->
+	<system codeSystemName='VACD_RouteOfAdministration' root='2.16.840.1.113883.5.112'>
+		<code value='IDINJ' displayName='Injection, intradermal/Injektion, intradermal' />
+		<code value='NASNEB' displayName='Inhalation, nebulization, nasal/Inhalation, Vernebelung, nasal' />
+		<code value='PO' displayName='Swallow, oral/Schlucken, oral' />
+		<code value='SQ' displayName='Injection, subcutaneous/Injektion, subkutan' />
+		<code value='TRNSDERMD' displayName='Diffusion, transdermal/Diffusion, transdermal' />
+		<code value='IM' displayName='Injection, intramuscular/Injektion, intramuskulär' />
+	</system>
+	
+	<!-- VACD Impfungen -->
+	<system codeSystemName='VACD_Immunizations' root='2.16.840.1.113883.6.96'>
+		<code value='76668005' displayName='Diphtheria vaccination (procedure)' />
+		<code value='127787002' displayName='Haemophilus influenzae type b vaccination (procedure)' />
+		<code value='243789007' displayName='Hepatitis A immunization (procedure)' />
+		<code value='16584000' displayName='Hepatitis B vaccination (procedure)' />
+		<code value='86198006' displayName='Influenza vaccination (procedure)' />
+		<code value='314759000' displayName='Japanese encephalitis vaccination (procedure)' />
+		<code value='47435007' displayName='Measles vaccination (procedure)' />
+		<code value='41088001' displayName='Meningococcus vaccination (procedure)' />
+		<code value='41088001' displayName='Meningococcus vaccination (procedure)' />
+		<code value='50583002' displayName='Mumps vaccination (procedure)' />
+		<code value='39343008' displayName='Pertussis vaccination (procedure)' />
+		<code value='12866006' displayName='Pneumococcal vaccination (procedure)' />
+		<code value='12866006' displayName='Pneumococcal vaccination (procedure)' />
+		<code value='72093006' displayName='Poliomyelitis vaccination (procedure)' />
+		<code value='34631000' displayName='Rabies vaccination (procedure)' />
+		<code value='82314000' displayName='Rubella vaccination (procedure)' />
+		<code value='127786006' displayName='Tetanus vaccination (procedure)' />
+		<code value='281658005' displayName='Tick-borne encephalitis vaccination (procedure)' />
+		<code value='30338008' displayName='Typhus vaccination (procedure)' />
+		<code value='428570002' displayName='Vaccination for human papillomavirus (procedure)' />
+		<code value='428570002' displayName='Vaccination for human papillomavirus (procedure)' />
+		<code value='68525005' displayName='Varicella vaccination (procedure)' />
+		<code value='67308009' displayName='Yellow fever vaccination (procedure)' />
+	</system>
+
+	<!-- VACD Intoleranzarten -->
+	<system codeSystemName='VACD_ObservationIntoleranceType' root='2.16.840.1.113883.5.4'>
+		<code value='DALG' displayName='Drug Allergy'/>
+		<code value='DINT' displayName='Drug Intolerance'/>
+		<code value='FALG' displayName='Food Allergy'/>
+		<code value='FINT' displayName='Food Intolerance'/>
+	</system>
+
+	<!-- VACD Allergien -->
+	<system codeSystemName='VACD_Intolerances' root='2.16.840.1.113883.6.96'>
+		<code value='303300008' displayName='Egg protein (substance)' />
+		<code value='24079001' displayName='Atopic dermatitis' />
+	</system>
+
+	<!-- VACD Schweregrad -->
+	<system codeSystemName='VACD_Severity' root='2.16.840.1.113883.5.1063'>
+		<code value='H' displayName='high severity' />
+		<code value='M' displayName='moderate severity' />
+		<code value='L' displayName='low severity' />
+	</system>
+	
+	<!-- VACD Observations -->
+	<system codeSystemName='VACD_Observations' root='2.16.840.1.113883.6.1'>
+		<code value='49051-6' displayName='Gestational age in W' />
+		<code value='49052-4' displayName='Gestational age in D' />
+	</system>
+	
+	<!-- Interpretationcode of the lab result -->
+	<system codeSystemName='interpretation' root='2.16.756.5.30.1.127.3.2.20121101.3'>
+		<code value='POS' displayName='pathogen found in specimen' />
+		<code value='NEG' displayName='pathogen couldn&apos;t be determined in specimen' />
+	</system>
+
+	<!-- VACD Schwangerschaftsanamnese -->
+	<system codeSystemName='VACD_PregnacyObservations' root='2.16.840.1.113883.6.1'>
+		<code value='11778-8' displayName='DELIVERY DATE (CLINICAL ESTIMATE)/Entbindungsdatum (klinische Schätzung)' />
+	</system>
+
+	<!-- VACD 7.6.12 Labor Serologie -->
+	<system codeSystemName='VACD_LaboratoryObservations' root='2.16.840.1.113883.6.1'>
+		<code value='22602-7' displayName='Varicella zoster virus Ab.IgG' />
+		<code value='22502-9' displayName='Measles virus Ab.IgG' />
+		<code value='22417-0' displayName='Mumps virus Ab.IgG' />
+		<code value='41763-4' displayName='Rubella virus Ab.IgG' />
+		<code value='22313-1' displayName='Hepatitis A virus Ab.IgG' />
+		<code value='16935-9' displayName='Hepatitis B virus surface Ab.IgG' />
+		<code value='26061-2' displayName='European tick borne encephalitis virus Ab' />
+		<code value='6589-6' displayName='Yellow fever virus Ab' />
+		<code value='58770-9' displayName='Clostridium tetani toxin Ab.IgG' />
+	</system>
+
+	<!-- VACD Immunstörungen -->
+	<!-- 30.05.2014 tsc: Table 9 Not referenced in Spec
+	<system codeSystemName='VACD_ImmuneDisorders' root='2.16.840.1.113883.6.96'>
+		<code value='85828009' displayName='Autoimmune disease' />
+		<code value='396332003' displayName='Rheumatism' />
+		<code value='234645009' displayName='Drug-induced immunodeficiency' />
+		<code value='86406008' displayName='Human immunodeficiency virus infection' />
+		<code value='161626009' displayName='H/O: splenectomy' />
+		<code value='38096003' displayName='Functional asplenia' />
+		<code value='234556002' displayName='Specific antibody deficiency' />
+		<code value='24743004' displayName='Complement deficiency disease' />
+		<code value='160320002' displayName='Sickle cell anemia' />
+		<code value='234579001' displayName='Mannan-binding protein deficiency' />
+		<code value='76407009' displayName='Protein C deficiency disease' />
+		<code value='1563006' displayName='Protein S deficiency disease' />
+	</system>
+	-->
+
+	<!-- VACD Durchgemachte Krankheiten -->
+	<system codeSystemName='VACD_Diseases' root='2.16.840.1.113883.6.96'>
+		<code value='38907003' displayName='H/O: chickenpox' />
+		<code value='14189004' displayName='H/O: measles' />
+		<code value='36989005' displayName='H/O: mumps' />
+		<code value='36653000' displayName='H/O: rubella' />
+		<code value='40468003' displayName='Hepatitis A' />
+		<code value='66071002' displayName='Hepatitis B' />
+		<code value='16901001' displayName='Central European encephalitis' />
+		<code value='16541001' displayName='Yellow Fever' />
+		<code value='76902006' displayName='Tetanus' />
+	</system>
+
+
+	<!-- EKIF Komplikationsrisiken aus Impfplan 2013 -->
+	<system codeSystemName='compl-risks-2013' root='2.16.756.5.30.1.127.3.3.2013.1'>
+		<code value='01' displayName='Anatomische oder funktionelle Asplenie, Hyposplenie (Sichelzellanämie)' />
+		<code value='02' displayName='Cochlea-Implantat' />
+		<code value='03' displayName='Defekte bei der Komplementaktivierung des alternativen Wegs oder Defizite der Terminalfaktoren des Komplementsystems' />
+		<code value='04' displayName='Frühgeborene (&lt; 33 Wochen oder Geburtsgewicht &lt; 1500 g)' />
+		<code value='05' displayName='Hämoglobinopathie' />
+		<code value='06' displayName='Hepatopathien (chronische)' />
+		<code value='07' displayName='Herzkrankheiten (chronische, kongenitale Missbildungen)' />
+		<code value='08' displayName='HIV-Infektion mit genügend T-Lymphozyten CD4' />
+		<code value='09' displayName='HIV-Infektion mit ungenügend T-Lymphozyten CD4' />
+		<code value='10' displayName='Immuninsuffizienz jeder Art (medikamentös, Transplantation, chron. Erkrankungen)' />
+		<code value='11' displayName='Kongenitales Immunmangelsyndrom (mangelnde Immunantwort auf Polysaccharide, Antikörpermangel)' />
+		<code value='12' displayName='Leukämien, Lymphome' />
+		<code value='13' displayName='Liquorfistel' />
+		<code value='14' displayName='Mangel an Mannose-bindendem Lektin' />
+		<code value='15' displayName='Metabolische Erkrankungen mit Auswirkungen auf Herz, Lungen, Nieren und/oder Immunsystem (Diabetes, morbide Adipositas BMI ≥ 40 )' />
+		<code value='16' displayName='Missbildungen der Schädelbasis' />
+		<code value='17' displayName='Myelome' />
+		<code value='18' displayName='Nephrotisches Syndrom' />
+		<code value='19' displayName='Neugeborene und Säuglinge unter 12 Monaten aus Ländern mit hoher Tuberkulose prävalenz, die wahrscheinlich wieder dorthin zurückkehren (in ihrem ersten Lebensjahr)' />
+		<code value='20' displayName='Neugeborene von HBsAg-positiven Müttern' />
+		<code value='21' displayName='Neurodermitis (schwere bei Kindern)' />
+		<code value='22' displayName='Neurologische oder muskuloskelettale Erkrankung mit Auswirkung auf die Funktion von Herz, Lungen oder Nieren' />
+		<code value='23' displayName='Niereninsuffizienz' />
+		<code value='24' displayName='Pneumopathien (chronische)' />
+		<code value='25' displayName='Schwangere Frauen und Frauen, die in den letzten 4 Wochen entbunden haben ' />
+		<code value='999' displayName='Andere Komplikationsrisiken' />	
+	</system>
+
+	<!-- EKIF Komplikationsrisiken aus Impfplan 2014 -->
+	<system codeSystemName='compl-risks-2014' root='2.16.756.5.30.1.127.3.3.2014.1'>
+		<code value='01' displayName='Herzinsuffizienz' />
+		<code value='02' displayName='Kardiopathie, angeborene Fehlbildung' />
+		<code value='03' displayName='Chronisch obstruktive Pneumopathie' />
+		<code value='04' displayName='Schweres Asthma: bei verlängerter oder häufiger Behandlung mit oralen Steroiden' />
+		<code value='05' displayName='Bronchiektasen durch Antikörpermangel' />
+		<code value='06' displayName='Andere Lungenerkrankungen (z.B. Mukoviszidose, Asthma bronchiale, etc.)' />
+		<code value='07' displayName='Chronische Lebererkrankung' />
+		<code value='08' displayName='Leberzirrhose' />
+		<code value='09' displayName='Anatomische oder funktionelle Asplenie' />
+		<code value='10' displayName='Niereninsuffizienz' />
+		<code value='11' displayName='Nephrotisches Syndrom' />
+		<code value='12' displayName='Neuromuskuläre Krankheit (Falls Auswirkungen auf Herz-, Lungen- oder Nierenfunktion)' />
+		<code value='13' displayName='Schwere Neurodermitis beim Kind' />
+		<code value='14' displayName='Sichelzellanämie' />
+		<code value='15' displayName='Diabetes mit Auswirkung auf die Funktion von Herz, Lungen oder Nieren' />
+		<code value='16' displayName='Morbide Adipositas (BMI ≥ 40)' />
+		<code value='17' displayName='Lymphom, Leukämie, Myelom' />
+		<code value='18' displayName='Kandidaten für eine Solidorgantransplantation' />
+		<code value='19' displayName='Empfänger einer Solidorgantransplantation' />
+		<code value='20' displayName='Empfänger einer Stammzelltransplantation' />
+		<code value='21' displayName='Autoimmunkrankheit, welche eine Immunsuppression erfordert' />
+		<code value='22' displayName='Medikamentöse Immunosuppression (inkl. systemische Langzeitkortikoidtherapie und Radiotherapie)' />
+		<code value='23' displayName='HIV Infektion mit CD4-Zellen ≥ 15 % (Erwachsene: ≥ 200 / µl)' />
+		<code value='24' displayName='HIV Infektion mit CD4-Zellen &lt; 15 % (Erwachsene: &lt; 200 / µl)' />
+		<code value='25' displayName='Angeborene Immundefizienz, variables Immundefektsyndrom, defizitäre Antwort auf Polysaccharide' />
+		<code value='26' displayName='Mangel im klassischen oder alternativen Weg der Komplementaktivierung' />
+		<code value='27' displayName='Mangel an Mannose-bindendem Lektin' />
+		<code value='28' displayName='Schwangerschaft und post-partum Periode' />
+		<code value='29' displayName='Geburt vor der 33. Schwangerschaftswoche oder Geburtsgewicht &lt; 1500g' />
+		<code value='30' displayName='Mutter HBsAg positiv' />
+		<code value='31' displayName='Cochleaimplantat, in situ oder geplant' />
+		<code value='32' displayName='Schädelbasisfraktur / -Missbildung, zerebrospinale Liquorfistel' />
+		<code value='999' displayName='Andere Komplikationsrisiken' />	
+	</system>
+
+	<!-- EKIF Expositionsrisiken 2013 -->
+	<system codeSystemName='exp-risks-2013' root='2.16.756.5.30.1.127.3.3.2013.2'>
+		<code value='01' displayName='Beschäftigte im Gesundheitswesen' />
+		<code value='02' displayName='Enge Kontaktpersonen von Erkrankten' />
+		<code value='03' displayName='Erwachsene und Kinder ab 6 Jahren, die in Endemiegebieten wohnen oder sich teilweise dort aufhalten' />
+		<code value='04' displayName='Exponierte Tierpfleger, -händler, -seuchenpolizisten' />
+		<code value='05' displayName='Familienangehörige von Personen mit einem erhöhten Risiko' />
+		<code value='06' displayName='Fledermausforscher und -schützer' />
+		<code value='07' displayName='Geistig behinderte Personen in Heimen und deren BetreuerInnen' />
+		<code value='08' displayName='Hämodialysepatienten' />
+		<code value='09' displayName='Hämophile Personen' />
+		<code value='10' displayName='Kanalisationsarbeiter und Angestellte von Kläranlagen' />
+		<code value='11' displayName='Kinder aus Ländern mit mittlerer und hoher Endemizität, die in der Schweiz leben und für einen vorübergehenden Aufenthalt in ihr Herkunftsland zurückkehren' />
+		<code value='12' displayName='Konsumenten von injizierbaren Drogen und deren Kontaktpersonen' />
+		<code value='13' displayName='Laborpersonal' />
+		<code value='14' displayName='Männer, die mit Männern Geschlechtsverkehr haben' />
+		<code value='15' displayName='Patientinnen und Patienten in Pflegeheimen und in Einrichtungen für Personen mit chronischen Erkrankungen' />
+		<code value='16' displayName='Personen aus Ländern mit hoher oder intermediärer Hepatitis-B-Endemizität' />
+		<code value='17' displayName='Personen mit einer sexuell übertragbaren Krankheit' />
+		<code value='18' displayName='Personen mit engem Kontakt zu Personen aus Ländern mit hoher Endemizität' />
+		<code value='19' displayName='Personen mit häufig wechselnden Sexualpartnern' />
+		<code value='20' displayName='Personen mit regelmässigem Kontakt (beruflich/familiär) zu Säuglingen &lt; 6 Monaten, schwangere Frauen' />
+		<code value='21' displayName='Rekruten (Militär)' />
+		<code value='22' displayName='Sozialarbeiter, Gefängnispersonal und Polizeiangestellte mit häufigem Kontakt zu Konsumenten von injizierbaren Drogen' />
+		<code value='23' displayName='Tierärzte (inkl. Studenten, Praxisangestellte)' />
+		<code value='999' displayName='Andere Expositionsrisiken' />
+	</system>
+
+	<!-- EKIF Expositionsrisiken 2014 -->
+	<system codeSystemName='exp-risks-2014' root='2.16.756.5.30.1.127.3.3.2014.2'>
+		<code value='01' displayName='Beschäftigte im Gesundheitswesen' />
+		<code value='02' displayName='Personen mit regelmässigem Kontakt (beruflich / familiär) zu Säuglingen &lt; 6 Monaten, schwangere Frauen' />
+		<code value='03' displayName='Laborpersonal' />
+		<code value='04' displayName='Familienangehörige von Personen mit einem erhöhten Risiko' />
+		<code value='05' displayName='Enge Kontaktpersonen von Erkrankten' />
+		<code value='06' displayName='Patientinnen und Patienten in Pflegeheimen und in Einrichtungen für Personen mit chronischen Erkrankungen' />
+		<code value='07' displayName='Konsumenten von injizierbaren Drogen und deren Kontaktpersonen' />
+		<code value='08' displayName='Personen mit häufig wechselnden Sexualpartnern' />
+		<code value='09' displayName='Männer, die mit Männern Geschlechtsverkehr haben' />
+		<code value='10' displayName='Personen mit einer sexuell übertragbaren Krankheit' />
+		<code value='11' displayName='Hämodialysepatienten' />
+		<code value='12' displayName='Hämophile Personen' />
+		<code value='13' displayName='Sozialarbeiter, Gefängnispersonal und Polizeiangestellte mit häufigem Kontakt zu Konsumenten von injizierbaren Drogen' />
+		<code value='14' displayName='Geistig behinderte Personen in Heimen und deren BetreuerInnen' />
+		<code value='15' displayName='Personen aus Ländern mit hoher oder intermediärer Hepatitis-B-Endemizität' />
+		<code value='16' displayName='Kinder aus Ländern mit mittlerer und hoher Endemizität, die in der Schweiz leben und für einen vorübergehenden Aufenthalt in ihr Herkunftsland zurückkehren' />
+		<code value='17' displayName='Personen mit engem Kontakt zu Personen aus Ländern mit hoher Endemizität' />
+		<code value='18' displayName='Kanalisationsarbeiter und Angestellte von Kläranlagen' />
+		<code value='19' displayName='Rekruten (Militär)' />
+		<code value='20' displayName='Erwachsene und Kinder ab 6 Jahren, die in Endemiegebieten wohnen oder sich teilweise dort aufhalten' />
+		<code value='21' displayName='Tierärzte (inkl. Studenten, Praxisangestellte)' />
+		<code value='22' displayName='Tierpfleger, -händler, -seuchenpolizisten' />
+		<code value='23' displayName='Fledermausforscher und -schützer' />
+		<code value='999' displayName='Andere Expositionsrisiken' />
+	</system>
+
+</systems>

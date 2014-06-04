@@ -13,6 +13,8 @@ History:
 2014.02.19: Tony Schaller, medshare GmbH (Erweiterung mit HL7 Tabellen RoleCode, IHERoleCode, ins-laws)
 2014.03.20: Tony Schaller, medshare GmbH (Erweiterung mit SNOMED CT Value Set zum deklaraiern von Sonderfällen bei der Medikation; [IHE PCC TF-2], Table 6.3.4.16.7-1)
 2014.03.21: Tony Schaller, medshare GmbH (RC1 CDA-CH-SMCP)
+2014.05.11: Tony Schaller, medshare GmbH (RouteOfAdminstration ergänzt: Injection, intramuscular)
+2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
 
 ********************************************************
 -->
@@ -453,6 +455,8 @@ History:
 		<code value='ILUMTA' />
 		<!-- Injection, intralymphatic -->
 		<code value='ILYMPJINJ' />
+		<!-- Injection, intramuscular -->
+		<code value='IM' />
 		<!-- Injection, intramuscular, deep -->
 		<code value='IMD' />
 		<!-- Injection, intramedullary -->
@@ -1173,10 +1177,5 @@ History:
 		<code value='160244002' displayName='No Known Allergies/Aucune allergie connue' />
 		<code value='409137002' displayName='No Known Drug Allergies/Aucune intolérance à des médicaments connue' />
 	</system>
-	
-	
-	
-
-
 
 </systems>

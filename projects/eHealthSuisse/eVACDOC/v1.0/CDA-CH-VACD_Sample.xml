@@ -13,6 +13,7 @@ History:
 2013.11.29: Tony Schaller, medshare GmbH (Korrektur LOT Nummer Deklaration)
 2013.12.03: Tony Schaller, medshare GmbH (Beispiele dem neuen Spezifikationsentwurf angepasst)
 2014.05.18: Tony Schaller, medshare GmbH (Anpassungen während Erstellung der Schematronregeln)
+2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -52,8 +53,8 @@ History:
 			<telecom use='HP' value='tel:+41.32.685.12.34'/>
 			<patient>
 				<name>
-					<given>Franz</given>
-					<family>Muster</family>
+					<given>Heidi</given>
+					<family>Schweizer</family>
 				</name>
 				<administrativeGenderCode code='F' codeSystem='2.16.840.1.113883.5.1'/>
 				<birthTime value='19670520'/>
@@ -213,6 +214,7 @@ History:
 									<th>Impfung gegen</th>
 									<th>Impfung erfolgt durch</th>
 									<th>Impfung dokumentiert durch</th>
+									<th>Bemerkung</th>
 								</tr>
 								<tr>
 									<td>
@@ -221,10 +223,11 @@ History:
 										</content>
 									</td>
 									<td>GlaxoSmithKline AG</td>
-									<td>ex123456</td>
+									<td></td>
 									<td>15.06.1983</td>
 									<td>Poliomyelitis (Kinderlähmung)</td>
 									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+									<td></td>
 									<td>
 										<content ID='i1c'>
 											Bei Routineuntersuchung in Anwesenheit der Mutter verabreicht
@@ -243,6 +246,7 @@ History:
 									<td>DiTePer - Diphtherie, Tetanus, Pertussis (Keuchhusten)</td>
 									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
 									<td></td>
+									<td></td>
 								</tr>
 								<tr>
 									<td>
@@ -256,6 +260,7 @@ History:
 									<td>Cholera</td>
 									<td></td>
 									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
@@ -300,7 +305,6 @@ History:
 											<translation code='J07BF03' codeSystem='2.16.840.1.113883.6.73'/>
 										</code>
 										<name>POLIORIX Inj Lös Durchstf 0.5 ml</name>
-										<lotNumberText>ex123456</lotNumberText>
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
@@ -354,7 +358,6 @@ History:
 						</substanceAdministration>
 					</entry>
 					<!-- Impfung mit Angabe des Produkts (BOOSTRIX) -->
-<!--					
 					<entry>
 						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
@@ -461,9 +464,7 @@ History:
 							</entryRelationship>
 						</substanceAdministration>
 					</entry>
--->					
 					<!-- Impfung mit Angabe des Antigens (Dukoral) ohne dass ein Produkt bekannt ist -->
-<!--					
 					<entry>
 						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
@@ -484,6 +485,11 @@ History:
 							<effectiveTime operator='A' value='20010228' />
 							<priorityCode nullFlavor='UNK' />
 							<routeCode nullFlavor='UNK' />
+							<approachSiteCode nullFlavor='UNK'>
+								<originalText>
+									<reference nullFlavor='NA' />
+								</originalText>
+							</approachSiteCode>
 							<doseQuantity nullFlavor='UNK' />
 							<rateQuantity nullFlavor='UNK' />
 							<consumable>
@@ -501,6 +507,20 @@ History:
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
+							<performer>
+								<time value='20130411' />
+								<assignedEntity>
+									<id extension='7608888888888' root='1.3.88'/>
+									<assignedPerson>
+										<name>
+											<prefix>Dr. med.</prefix>
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<suffix>Facharzt für Allgemeine Medizin</suffix>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
 							<author>
 								<time value='20130411' />
 								<assignedAuthor>
@@ -525,7 +545,6 @@ History:
 							</entryRelationship>
 						</substanceAdministration>
 					</entry>
--->					
 				</section>
 			</component>
 
@@ -879,11 +898,11 @@ History:
 								</tr>
 								<tr>
 									<td>
-										Hepatitis B virus surface Ag
+										Windpocken
 									</td>
 									<td>Positiv</td>
-									<td>Index=4386.35 (Signal Probe / Signal Cutoff)</td>
-									<td>5195-3</td>
+									<td></td>
+									<td>22602-7</td>
 									<td>LOINC</td>
 									<td>
 										<content ID='c1'>
@@ -911,13 +930,9 @@ History:
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
-											<code code='5195-3' displayName='Hepatitis B virus surface Ag' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' >
-												<!-- Translation auf BAG labObsList -->
-												<translation code='5195-3' displayName='Hepatitis B virus surface Ag' codeSystem='2.16.756.5.30.1.127.3.2.20121101.2' codeSystemName='labObsList'/>
-											</code>
+											<code code='22602-7' displayName='Varicella zoster virus Ab.IgG' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<statusCode code='completed'/>
 											<effectiveTime value='201211240907+0100'/>
-											<value xsi:type='PQ' value='4386.35' unit='{s_co_ratio}' />
 											<!-- Erreger in Probe nachgewiesen -->
 											<interpretationCode code='POS' codeSystem='2.16.840.1.113883.5.83' displayName='POSITIVE' codeSystemName='ObservationInterpretation'/>
 											<performer typeCode='PRF'>
@@ -1023,7 +1038,7 @@ History:
 									<td>Diphterie, Tetanus und Pertussis</td>
 									<td>23.04.2013</td>
 									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
-									<td>todo <linkhtml>http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de</linkhtml></td>
+									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
 								</tr>
 							</tbody>
 						</table>
@@ -1077,15 +1092,20 @@ History:
 							<author>
 								<time value='20130423' />
 								<assignedAuthor>
-									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
+									<id extension='7607777777777' root='1.3.88'/>
+									<addr use='WP'>
+										<streetName>Rathaus</streetName>
+										<postalCode>8888</postalCode>
+										<city>Musterhausen</city>
+										<country>CH</country>
+									</addr>
+									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
+									<telecom use='PUB' value='mailto:info@cdss.ch'/>
+									<telecom use='PUB' value='http://www.cdss.ch'/>
+									<representedOrganization>
+										<id nullFlavor='NA'/>
+										<name>CDSS AG</name>
+									</representedOrganization>
 								</assignedAuthor>
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
