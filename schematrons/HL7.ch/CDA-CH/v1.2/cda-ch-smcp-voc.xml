@@ -10,6 +10,7 @@ History:
 2013.06.16: Tony Schaller, medshare GmbH (First Draft)
 2014.03.21: Tony Schaller, medshare GmbH (RC1 CDA-CH-SMCP)
 2014.04.07: Tony Schaller, medshare GmbH (Release CDA-CH-SMCP)
+2014.06.05: Tony Schaller, medshare GmbH (Some translations added)
 
 ********************************************************
 -->
@@ -42,10 +43,10 @@ History:
 
 	<!-- Statut social -->
 	<system codeSystemName='SMCP_SocialStatus' root='2.16.756.5.30.1.112.3.1.201207.4'>
-		<code value='1' displayName='Permis' />
-		<code value='2' displayName='Statut « Non Entrée en Matière »' />
-		<code value='3' displayName='Requérant d’asile' />
-		<code value='4' displayName='Sans Domicile Fixe' />
+		<code value='1' displayName='Permitted/Permis' />
+		<code value='2' displayName='Decision of non-consideration/Décision de non-entrée en matière' />
+		<code value='3' displayName='Asylum seeker/Requérant d’asile' />
+		<code value='4' displayName='Homeless/Sans Domicile Fixe' />
 	</system>
 
 	<!-- Moyens auxiliaires -->
@@ -159,15 +160,15 @@ History:
 		<code value='225444004' codeSystem='2.16.840.1.113883.6.96' displayName='At risk for suicide (finding)/Potentiel suicidaire' />
 		<code value='67564005' codeSystem='2.16.840.1.113883.6.96' displayName='Social maladjustment (finding)/Troubles du comportement' />
 		<code value='193462001' codeSystem='2.16.840.1.113883.6.96' displayName='Insomnia (disorder)/Troubles du sommeil' />
-		<code value='1.19' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/Patient connu du CMS' />
-		<code value='2.3' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/PLAFA' />
-		<code value='2.9' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/PC' />
-		<code value='2.10' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/API' />
-		<code value='2.11' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/AI' />
-		<code value='2.12' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/OCC' />
+		<code value='1.19' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Patient already using home care services/Patient connu du CMS' />
+		<code value='2.3' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Hospitalisation for treatment or care/PLAFA' />
+		<code value='2.9' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Income subsidy/PC' />
+		<code value='2.10' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Invalidity subsidy/API' />
+		<code value='2.11' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Invalidity insurance/AI' />
+		<code value='2.12' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Healthcare insurance subsidy/OVAM' />
 		<code value='2.13' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Social status/Statut social' />
 		<code value='2.17' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Warrant/Mandat judiciaire' />
-		<code value='2.18' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='TOTRANSLATE/Enfant(s) mineur(s) à charge' />
+		<code value='2.18' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Dependent child/Enfant(s) mineur(s) à charge' />
 		<code value='5.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Environment and living habits/Contexte et habitudes de vie' />
 		<code value='7.15' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Tend to run away by disorientation /Tendance à fuguer par désorientation' />
 		<code value='7.16' codeSystem='2.16.756.5.30.1.1.1.1.3.6' displayName='Tend to run away voluntarily /Tendance à fuguer volontairement' />

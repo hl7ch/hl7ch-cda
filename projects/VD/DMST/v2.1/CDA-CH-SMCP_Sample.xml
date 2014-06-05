@@ -1346,33 +1346,6 @@ History:
 							</tbody>
 						</table>
 					</text>
-					<component>
-						<section>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2'/>
-							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='8F61EBA1-BEE9-49E2-AF34-33EE69CF384A'/>
-							<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' />
-							<text />
-							<entry>
-								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.1'/>
-									<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5094C30B-9F05-4C9D-8420-4DC688305EEA'/>
-									<code code='38208-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Pain severity' >
-										<translation code='406127006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pain intensity' />
-									</code>
-									<text>
-										<reference nullFlavor='UNK' />
-									</text>
-									<statusCode code='completed'/>
-									<effectiveTime nullFlavor='NASK' />
-									<value xsi:type='CO' nullFlavor='NASK' />
-									<interpretationCode nullFlavor='NASK' />
-									<methodCode nullFlavor='NA' />
-									<targetSiteCode nullFlavor='NASK' />
-								</observation>
-							</entry>
-						</section>
-					</component>
 
 					<component>
 						<section>
@@ -2141,7 +2114,7 @@ History:
 									<td></td>
 								</tr>
 								<tr>
-									<td>OCC:</td>
+									<td>OVAM:</td>
 									<td>ne sait pas</td>
 									<td></td>
 								</tr>
@@ -2346,12 +2319,12 @@ History:
 					</entry>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST: 2.12 OCC -->
+							<!-- DMST: 2.12 OVAM -->
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='5CA23D85-A2C3-40A8-BA54-2BD39ADD1DAE'/>
-							<code code='2.12' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='OCC'/>
+							<code code='2.12' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='OVAM'/>
 							<text>
 								<reference value='#todo'/>
 							</text>
