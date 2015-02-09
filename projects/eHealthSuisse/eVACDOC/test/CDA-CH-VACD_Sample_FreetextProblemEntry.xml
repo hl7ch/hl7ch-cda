@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- ********************************************************
-Beispiel eVACDOC zum Darstellen eines elektronischen Impfausweises
+Sample for eVACDOC containing a ProblemEntry as narrative text in order to test Schematron rules
 
 History:
-2014.04.03: Tony Schaller, medshare GmbH (Dokument erstellt im Einklang mit den Schematronregeln)
-2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
-2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
-2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
+2015.09.02: Tony Schaller, medshare GmbH (Sample Creation)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -25,17 +22,17 @@ History:
 	<!-- eVACDOC (VACD) V1 -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH-VACD' />
 
-	<id extension='56B94FF0-3D35-4BC2-8F3C-0065EA83BB8D' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
+	<id extension='D2C32126-C0A3-42DA-9E0F-62BF7C965538' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
 	<code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF IMMUNIZATIONS'/>
-	<title>eVACDOC</title>
-	<effectiveTime value='20140604'/>
+	<title>eVACDOC - Schematron Test - Bisherige Krankheit als Freitext</title>
+	<effectiveTime value='20130423'/>
 	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
 	<languageCode code='de-CH'/>
-	<setId extension='77CF85B2-E1A9-4CEA-A513-2DC581DA595F' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
+	<setId extension='D2C32126-C0A3-42DA-9E0F-62BF7C965538' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
 	<versionNumber value='1'/>
 	<recordTarget>
 		<patientRole>
-			<id extension='898989' root='2.16.756.5.30.999999999999'/>
+			<id extension='123.71.332.115' root='2.16.756.5.31'/>
 			<addr use='HP'>
 				<streetName>Leidensweg</streetName>
 				<houseNumber>10</houseNumber>
@@ -43,14 +40,14 @@ History:
 				<city>Specimendorf</city>
 				<country>CH</country>
 			</addr>
-			<telecom nullFlavor='MSK' />
+			<telecom use='HP' value='tel:+41.32.685.12.34'/>
 			<patient>
 				<name>
-					<given>Sesuna</given>
-					<family>Tigrinja</family>
+					<given>Heidi</given>
+					<family>Schweizer</family>
 				</name>
 				<administrativeGenderCode code='F' codeSystem='2.16.840.1.113883.5.1'/>
-				<birthTime value='20000404'/>
+				<birthTime value='19670520'/>
 			</patient>
 			<providerOrganization>
 				<id extension='7608888888888' root='1.3.88'/>
@@ -60,7 +57,7 @@ History:
 	</recordTarget>
 	<author>
 		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
-		<time value='20140604'/>
+		<time value='20100203'/>
 		<assignedAuthor>
 			<id extension='7608888888888' root='1.3.88'/>
 			<addr use='WP'>
@@ -98,7 +95,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
+				<id nullFlavor='NA'/>
 				<name>Gruppenpraxis CH</name>
 				<addr use='WP'>
 					<streetName>Doktorgasse</streetName>
@@ -111,7 +108,7 @@ History:
 		</assignedCustodian>
 	</custodian>
 	<legalAuthenticator>
-		<time value='20140604'/>
+		<time value='20111110'/>
 		<signatureCode code='S'/>
 		<assignedEntity>
 			<id extension='7608888888888' root='1.3.88'/>
@@ -136,13 +133,56 @@ History:
 			</representedOrganization>
 		</assignedEntity>
 	</legalAuthenticator>
+	<participant typeCode='COV'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Insurance"/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high nullFlavor='NASK' />
+		</time>
+		<associatedEntity classCode='PAYOR'>
+			<associatedPerson>
+				<name>
+					<given>Kontakt</given>
+					<family>Person</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<!-- EAN der Versicherung -->
+				<id extension='7607777777777' root='1.3.88'/>
+				<name>WirZahlenAlles Versicherungen</name>
+				<telecom nullFlavor='NASK' />
+				<addr use='WP'>
+					<streetName>Zahlgasse</streetName>
+					<houseNumber>89</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<participant typeCode='HLD'>
+		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.InsuranceCard"/>
+		<time>
+			<low nullFlavor='NASK' />
+			<high value='20141231' />
+		</time>
+		<associatedEntity classCode='POLHOLD'>
+			<!-- Nummer der Versichertenkarte -->
+			<id extension='8077560000000000000000' root='2.16.756.5.30.1.123.100.1.1.1'/>
+			<associatedPerson>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
 	<!--
 	********************************************************
 	CDA Body
 	******************************************************** -->
 	<component>
 		<structuredBody>
-
 			<!--
 			********************************************************
 			Required History of Immunizations Section content (1.3.6.1.4.1.19376.1.5.3.1.3.23)
@@ -264,7 +304,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id root='2.999' extension='328709' />
+							<id root='2.999' extension='328709' /> 
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#ip1'/>
@@ -728,27 +768,55 @@ History:
 
 			<!--
 			********************************************************
-			Required if known Comments Section content (1.3.6.1.4.1.19376.1.5.3.1.4.2)
+			Required if known History of Past Illness Section content (1.3.6.1.4.1.19376.1.5.3.1.3.8)
 			******************************************************** -->
 			<component>
 				<section>
-					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.CodedRem" />
-					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ANNOTATION COMMENT'/>
-					<title>Kommentar</title>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8' />
+					<code code='11348-0' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' codeSystemVersion='2.34' displayName='History of past illness' />
+					<title>Bisherige Krankheiten</title>
 					<text>
-						<content ID='comment1'>
-							Der Impfausweis enthält alle Impfungen (im Fallbeispiel nun identisch mit den Verabreichten Impfungen).
+						<content ID='p12'>
+							Niereninsuffizienz
 						</content>
 					</text>
 					<entry>
 						<act classCode='ACT' moodCode='EVN'>
-							<templateId root='2.16.840.1.113883.10.20.1.40'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-							<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='98BD0CBE-01BB-44C2-AFB6-33BE0FA01EB1'/>
+							<code nullFlavor='NA'/>
 							<text>
-								<reference value='#comment1'/>
+								<reference value='#p12'/>
 							</text>
 							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying problems of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
+									<code code='282291009' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diagnosis' />
+									<text>
+										<reference value='#p12'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low nullFlavor='UNK' />
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' nullFlavor='UNK' >
+										<originalText>
+											<reference value='#p12'/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
 						</act>
 					</entry>
 				</section>

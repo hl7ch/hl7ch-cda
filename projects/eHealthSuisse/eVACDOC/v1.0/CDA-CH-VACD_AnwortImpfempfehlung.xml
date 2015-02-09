@@ -6,6 +6,7 @@ History:
 2014.04.03: Tony Schaller, medshare GmbH (Dokument erstellt im Einklang mit den Schematronregeln)
 2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
 2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
+2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -145,7 +146,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id root='1.3.160' extension='7680006690011'/>
+							<id root='2.999' extension='328709' />
 							<code code='182904002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Drug Treatment Unknown' />
 							<text>
 								<reference value='#i1'/>
@@ -164,6 +165,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id nullFlavor='NA' />
 									<manufacturedMaterial>
 										<!-- epSOSVaccine Pivot Code -->
 										<code nullFlavor='NA' >
@@ -227,7 +229,11 @@ History:
 									<td>GlaxoSmithKline AG</td>
 									<td></td>
 									<td></td>
-									<td>Diphterie, Tetanus, Keuchhusten, Kinderlähmung</td>
+									<td>
+										<content ID='ii1'>
+											Diphterie, Tetanus, Keuchhusten, Kinderlähmung
+										</content>
+									</td>
 									<td>04.06.2014</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
@@ -241,7 +247,11 @@ History:
 									<td>Sanofi Pasteur MSD AG</td>
 									<td></td>
 									<td></td>
-									<td>Masern, Mumps, Röteln</td>
+									<td>
+										<content ID='ii2'>
+										  Masern, Mumps, Röteln
+										</content>
+									</td>
 									<td>04.06.2014</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
@@ -255,7 +265,11 @@ History:
 									<td>GlaxoSmithKline AG</td>
 									<td></td>
 									<td></td>
-									<td>Hepatitis B</td>
+									<td>
+										<content ID='ii3'>
+										  Hepatitis B
+										</content>
+									</td>
 									<td>04.06.2014</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
@@ -269,7 +283,11 @@ History:
 									<td>Sanofi Pasteur MSD AG</td>
 									<td></td>
 									<td></td>
-									<td>Papilloma-Virus</td>
+									<td>
+										<content ID='ii4'>
+										  Papilloma-Virus
+										</content>
+									</td>
 									<td>04.06.2014</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
@@ -283,7 +301,7 @@ History:
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12.2'/>
-							<id root='1.3.160' extension='7680006370012'/>
+							<id root='2.999' extension='328710' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#ip1'/>
@@ -303,21 +321,19 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680006370012' />
 									<manufacturedMaterial>
-										<!-- epSOSVaccine Pivot Code -->
-										<code code='421245007' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Diphtheria + pertussis + tetanus vaccine'>
+										<code code='J07CA02' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												<reference value='#ip1'/>
+												diphtheria-pertussis-poliomyelitis-tetanus 
+												<reference value='#ii1'/>
 											</originalText>
-											<!-- GTIN -->
-											<translation code='7680006810013' codeSystem='1.3.160' />
-											<!-- ATC WHO Code -->
-											<translation code='J07CA02' codeSystem='2.16.840.1.113883.6.73'/>
-											<!-- Polio auch angeben -->
-											<translation code='111164008' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Poliovirus vaccine' />
-										</code>
+											</code>
 										<name>BOOSTRIX Polio Inj Susp</name>
 									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>
 							<author>
@@ -423,7 +439,7 @@ History:
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12.2'/>
-							<id root='1.3.160' extension='7680006370012'/>
+							<id root='2.999' extension='328711' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#ip2'/>
@@ -443,19 +459,19 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680007030014' />
 									<manufacturedMaterial>
-										<!-- epSOSVaccine Pivot Code -->
-										<code code='61153008' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Measles + Mumps + Rubella vaccine'>
+										<code code='J07BD52' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												<reference value='#ip1'/>
+												measles, combinations with mumps and rubella, live attenuated
+												<reference value='#ii2'/>
 											</originalText>
-											<!-- GTIN -->
-											<translation code='7680007030014' codeSystem='1.3.160' />
-											<!-- ATC WHO Code -->
-											<translation code='J07BD52' codeSystem='2.16.840.1.113883.6.73'/>
-										</code>
+											</code>
 										<name>MMRVAXPRO Trockensub c Solv</name>
 									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Sanofi Pasteur MSD AG</name>
+									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>
 							<author>
@@ -544,7 +560,7 @@ History:
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12.2'/>
-							<id root='1.3.160' extension='7680006370012'/>
+							<id root='2.999' extension='328712' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#ip3'/>
@@ -564,19 +580,19 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680005340016' />
 									<manufacturedMaterial>
-										<!-- epSOSVaccine Pivot Code -->
-										<code code='34689006' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Hepatitis B virus vaccine'>
+										<code code='J07BC01' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												<reference value='#ip1'/>
+												hepatitis B, purified antigen
+												<reference value='#ii3'/>
 											</originalText>
-											<!-- GTIN -->
-											<translation code='7680005340016' codeSystem='1.3.160' />
-											<!-- ATC WHO Code -->
-											<translation code='J07BC01' codeSystem='2.16.840.1.113883.6.73'/>
-										</code>
+											</code>
 										<name>ENGERIX B 20 Inj Susp Erw</name>
 									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>
 							<author>
@@ -631,7 +647,7 @@ History:
 							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='2.16.840.1.113883.10.20.1.25'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12.2'/>
-							<id root='1.3.160' extension='7680006370012'/>
+							<id root='2.999' extension='328713' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#ip4'/>
@@ -651,19 +667,19 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680577350031' />
 									<manufacturedMaterial>
-										<!-- epSOSVaccine Pivot Code (derzeit kein Code für Papilloma-Virus verfügbar) -->
-										<code nullFlavor='NAV' >
+										<code code='J07BM01' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												<reference value='#ip1'/>
+												papillomavirus (human types 6, 11, 16, 18)
+												<reference value='#ii4'/>
 											</originalText>
-											<!-- GTIN -->
-											<translation code='7680577350031' codeSystem='1.3.160' />
-											<!-- ATC WHO Code -->
-											<translation code='J07BM01' codeSystem='2.16.840.1.113883.6.73'/>
-										</code>
+											</code>
 										<name>GARDASIL Inj Susp m Nad o SD</name>
 									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Sanofi Pasteur MSD AG</name>
+									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>
 							<author>

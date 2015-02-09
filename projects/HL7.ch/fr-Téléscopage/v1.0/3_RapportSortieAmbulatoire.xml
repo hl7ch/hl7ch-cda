@@ -5,11 +5,10 @@ Exemple de cas «téléscopage» CDA-CH-II
 Rapport de sortie d’hôpital (soins ambulatoires) conformément à CDA-CH plus Medication Template CDA-CH-II
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
-09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
-30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
+2010.05.12: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2010.05.20: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
 
 ********************************************************
 -->
@@ -392,9 +391,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680475040232' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#m1'/>
 							</text>
@@ -405,7 +402,7 @@ History:
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 2-2-2 -->
+								<!-- Dosierung 2-2-2 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -418,9 +415,9 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<!-- 2 pezzo (ad esempio Compresse) -->
+								<!-- 2 Stück (z. B. Tablette) -->
 								<center value='2' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -428,14 +425,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680475040232' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="N02BE01SETN000000500TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="N02BE01" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
+												paracetamol
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="N02BE01" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="N02BE01SETN000000500TABL" codeSystem="2.16.756.5.30.2.6.2" />
 										</code>
 										<name>DAFALGAN Tabl 500 mg 100 Stk</name>
 									</manufacturedMaterial>
@@ -450,9 +448,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680446910359' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#m2'/>
 							</text>
@@ -463,7 +459,7 @@ History:
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-1-1-1 -->
+								<!-- Dosierung 1-1-1-1 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
@@ -480,9 +476,9 @@ History:
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<!-- 1 pezzo (ad esempio Compresse) -->
+								<!-- 1 Stück (z. B. Tablette) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -490,14 +486,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680446910359' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="M03BX02SETN000000004TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="M03BX02" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
+												tizanidine
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="M03BX02" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="M03BX02SETN000000004TABL" codeSystem="2.16.756.5.30.2.6.2" />
 										</code>
 										<name>SIRDALUD Tabl 4 mg 30 Stk</name>
 									</manufacturedMaterial>
@@ -512,9 +509,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680569020096' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Thérapie médicamenteuse'/>
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#m3'/>
 							</text>
@@ -525,14 +520,14 @@ History:
 								<high nullFlavor='UNK' />
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosage 1-0-0 -->
+								<!-- Dosierung 1-0-0 -->
 								<phase value='190001010800'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='avaler, orale' />
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
 							<doseQuantity>
-								<!-- 1 pezzo (ad esempio Compresse) -->
+								<!-- 1 Stück (z. B. Tablette) -->
 								<center value='1' unit='1'/>
 							</doseQuantity>
 							<rateQuantity nullFlavor='UNK' />
@@ -540,14 +535,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680569020096' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73" >
 											<originalText>
+												lisinopril and diuretics 
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2" />
 										</code>
 										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
 									</manufacturedMaterial>

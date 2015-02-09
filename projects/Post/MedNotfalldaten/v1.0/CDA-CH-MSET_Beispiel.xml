@@ -8,6 +8,7 @@ History:
 13.01.2013: Tony Schaller, medshare GmbH (Abgabe CDA-CH-MSET)
 18.03.2013: Tony Schaller, medshare GmbH (Anpassungen bezüglich CDA-CH-MSET Implementierungsleitfaden V1.1)
 01.04.2013: Tony Schaller, medshare GmbH (Anpassungen bezüglich CDA-CH-MSET Implementierungsleitfaden V1.1a)
+2015.02.09: Tony Schaller, medshare GmbH (Korrektur Medikationstemplate)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -786,7 +787,7 @@ History:
 											<templateId root='2.16.840.1.113883.10.20.1.24' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
-											<id extension='7601001002593' root='1.3.88' />
+											<id root='2.999' extension='328709' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament' codeSystemName='ClinicalReactionMedicationType (ICR-DHA)' />
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
@@ -812,6 +813,7 @@ History:
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<id extension='7601001002593' root='1.3.88' />
 													<manufacturedMaterial>
 														<code nullFlavor='NA' >
 															<!-- VVK-EDI: 2.3.1.4.2	Generischer Name des Ersatzmedikaments (optional) -->
@@ -856,7 +858,7 @@ History:
 											<templateId root='2.16.840.1.113883.10.20.1.24' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
-											<id extension='7601001002593' root='1.3.88' />
+											<id root='2.999' extension='328710' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament'  codeSystemName='ClinicalReactionMedicationType (ICR-DHA)'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
@@ -882,6 +884,7 @@ History:
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<id root='1.3.88' extension='7601001002593' />
 													<manufacturedMaterial>
 														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar'  codeSystemName='nameOfEmergencyMedicine (ICR-DHA, chapter 2.3.1.5.1)'>
 															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
@@ -1027,7 +1030,7 @@ History:
 											<templateId root='2.16.840.1.113883.10.20.1.24' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
-											<id extension='7601001002593' root='1.3.88' />
+											<id root='2.999' extension='328711' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='1' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Ersatzmedikament' codeSystemName='ClinicalReactionMedicationType (ICR-DHA)'/>
 											<!-- VVK-EDI: 2.3.1.4.1	Bezeichnung des Ersatzmedikaments (optional) -->
@@ -1053,6 +1056,7 @@ History:
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<id extension='7601001002593' root='1.3.88' />
 													<manufacturedMaterial>
 														<code nullFlavor='NA' >
 															<!-- VVK-EDI: 2.3.1.4.2	Generischer Name des Ersatzmedikaments (optional) -->
@@ -1101,7 +1105,7 @@ History:
 											<templateId root='2.16.840.1.113883.10.20.1.24' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
-											<id extension='7601001002593' root='1.3.88' />
+											<id root='2.999' extension='328712' />
 											<!-- VVK-EDI: 2.3.1.4/2.3.1.5 Unterscheidung Ersatz-/Notfallmedikament -->
 											<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.15' displayName='Notfallmedikament' codeSystemName='ClinicalReactionMedicationType (ICR-DHA)'/>
 											<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional) -->
@@ -1127,6 +1131,7 @@ History:
 												<manufacturedProduct>
 													<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 													<templateId root='2.16.840.1.113883.10.20.1.53' />
+													<id extension='7601001002593' root='1.3.88' />
 													<manufacturedMaterial>
 														<code code='2' codeSystem='2.16.756.5.30.1.127.3.1.20080401.5' displayName='Adrenalin injizierbar' codeSystemName='nameOfEmergencyMedicine (ICR-DHA, chapter 2.3.1.5.1)'>
 															<!-- VVK-EDI: 2.3.1.5.1	Bezeichnung des Notfallmedikaments (optional)/codiert -->
@@ -1228,8 +1233,7 @@ History:
 							<templateId root='2.16.840.1.113883.10.20.1.24' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
-							<!-- VVK-EDI: 2.4.3 GLN der Medikation (optional) -->
-							<id extension='7601001002593' root='1.3.88' />
+							<id root='2.999' extension='328713' />
 							<!-- 2.16.840.1.113883.6.96 -->
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
@@ -1249,19 +1253,25 @@ History:
 							<routeCode nullFlavor='UNK' displayName='Unknown' />
 							<doseQuantity nullFlavor='UNK' />
 							<rateQuantity nullFlavor='UNK' />
-							<consumable>
+							<consumable typeCode='CSM'>
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<!-- VVK-EDI: 2.4.3 GLN der Medikation (optional) -->
+									<id root='1.3.88' extension='7601001002593' />
 									<manufacturedMaterial>
-										<!-- VVK-EDI: 2.4.4 ATC-Nummer (Anatomical Therapeutical Chemical) der Medikation (optional) -->
-										<code code='B01AC06' codeSystem='2.16.840.1.113883.6.73'>
+										<!-- VVK-EDI: 2.4.4 ATC-Nummer der Medikation (optional) -->
+										<code code='B01AC06' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
+												acetylsalicylic acid
 												<reference value='#med-1' />
 											</originalText>
-										</code>
-										<name>Aspirin cardio 100mg</name>
+											</code>
+										<name>ASPIRIN CARDIO Filmtabl</name>
 									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>Bayer (Schweiz) AG</name>
+									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>
 							<author>
@@ -1336,7 +1346,11 @@ History:
 									<td>GlaxoSmithKline AG</td>
 									<td>ABC123</td>
 									<td>15.06.1983</td>
-									<td>Poliomyelitis (Kinderlähmung)</td>
+									<td>
+										<content ID='ii1'>
+											Poliomyelitis (Kinderlähmung)
+										</content>
+									</td>
 									<td>Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</td>
 									<td>
 										<content ID='i1-comment'>
@@ -1355,7 +1369,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id extension='7680006690011' root='1.3.160' />
+							<id root='2.999' extension='328709' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#i1'/>
@@ -1382,27 +1396,24 @@ History:
 							</approachSiteCode>
 							<doseQuantity nullFlavor='UNK' />
 							<rateQuantity nullFlavor='UNK' />
-							<consumable>
+							<consumable typeCode='CSM'>
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680006690011' />
 									<manufacturedMaterial>
-										<!-- epSOSVaccine Pivot Code -->
-										<code code='111164008' codeSystem='1.3.6.1.4.1.12559.11.10.1.3.1.42.28' codeSystemName='epSOSVaccine' displayName='Poliomyelitis vaccine'>
+										<code code='J07BF03' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												<reference value='#i1'/>
+												poliomyelitis, trivalent, inactivated, whole virus
+												<reference value='#ii1'/>
 											</originalText>
-											<!-- GTIN -->
-											<translation code='7680006690011' codeSystem='1.3.160' />
-											<!-- ATC WHO Code -->
-											<translation code='J07BF03' codeSystem='2.16.840.1.113883.6.73'/>
-										</code>
+											</code>
 										<!-- VVK-EDI: 2.5.3 Handelsname des Impfstoffes (optional) -->
-										<name>POLIORIX Inj Lös Durchstf 0.5 ml</name>
+										<name>POLIORIX Inj Lös</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
 										<!-- VVK-EDI: 2.5.4 Hersteller des Impfstoffes (optional) -->
-										<name>Dummy Impfung3</name>
+										<name>GlaxoSmithKline AG</name>
 									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>

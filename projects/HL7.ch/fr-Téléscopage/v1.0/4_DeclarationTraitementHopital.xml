@@ -5,11 +5,11 @@ Exemple de cas «téléscopage» CDA-CH-II
 Déclaration de traitement de l’hôpital cantonal à l’intention de la Suva 
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-09.09.2010: Tony Schaller, medshare GmbH (Traduction francaise)
-27.01.2011: Tony Schaller, medshare GmbH (eMedidoc auf eMedidoc umbenannt)
-30.09.2011: Tony Schaller, medshare GmbH (Corrections puisque la traduction anglaise)
+2010.05.12: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2010.01.06: Tony Schaller, medshare GmbH (Umbenennen eMedidoc -> eMedidoc)
+2011.09.30: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
+2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
 
 ********************************************************
 -->
@@ -127,15 +127,19 @@ History:
 			<high nullFlavor='UNK' />
 		</time>
 		<associatedEntity classCode='CON'>
-			<!-- Suva Kundennummer extern -->
-			<id extension='888-77777.6' root='2.16.756.5.30.1.100.3.7.1'/>
+			<id extension='987654321' root='2.16.756.5.30.1.100.9999999'/>
 			<code code='EMPLOYER' codeSystem='1.3.5.1.4.1.19376.1.5.3.3' codeSystemName='IHERoleCode'/>
+			<associatedPerson>
+				<name nullFlavor='UNK' />
+			</associatedPerson>
 			<scopingOrganization>
-				<name>Banque Scheffel und Co.</name>
+				<name>Donateur du pain SA</name>
+				<telecom nullFlavor='UNK' />
 				<addr use="WP">
-					<streetAddressLine>Dagobertweg</streetAddressLine>
-					<postalCode>8787</postalCode>
-					<city>Entenhausen</city>
+					<streetAddressLine>Bureau de la paie</streetAddressLine>
+					<streetAddressLine>Case postale</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Zürich</city>
 				</addr>
 			</scopingOrganization>
 		</associatedEntity>
@@ -231,6 +235,7 @@ History:
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<title>Remarques</title>
 					<text>
 						<content>Néant<br/>

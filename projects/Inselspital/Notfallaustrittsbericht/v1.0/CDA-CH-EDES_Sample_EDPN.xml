@@ -3,10 +3,11 @@
 Beispiel Notfallaustrittsbericht aus ärztlicher Sicht (EDPN)
 
 History:
-23.01.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
-02.02.2012: Tony Schaller, medshare GmbH (Erweiterungen für IHE Emergency Department Physician Note - EDPN)
-23.12.2012: Tony Schaller, medshare GmbH (Anpassungen, damit das Dokument gegenüber CDA-CH-EDES validiert)
-31.12.2012: Tony Schaller, medshare GmbH (Abgabe an Kunden)
+2012.01.23: Tony Schaller, medshare GmbH (Erster Entwurf)
+2012.02.02: Tony Schaller, medshare GmbH (Erweiterungen für IHE Emergency Department Physician Note - EDPN)
+2012.12.23: Tony Schaller, medshare GmbH (Anpassungen, damit das Dokument gegenüber CDA-CH-EDES validiert)
+2012.12.31: Tony Schaller, medshare GmbH (Abgabe an Kunden)
+2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -409,8 +410,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680569020096' root='1.3.160' />
+							<id root='2.999' extension='328709' />
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#m1'/>
@@ -437,14 +437,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680569020096' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
+												lisinopril and diuretics
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2"/>
 										</code>
 										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
 									</manufacturedMaterial>
@@ -554,46 +555,41 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id root='1.3.88' extension='7680006690011'/>
+							<id root='2.999' extension='328710' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
-								<reference value='#i1'/>
+								<reference value='#ip1'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
-								<low nullFlavor='UNK' />
-								<high nullFlavor='UNK' />
-							</effectiveTime>
-							<effectiveTime operator='A' value='19830615' />
-							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='IMD' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='Injection, intramuscular, deep' />
-							<approachSiteCode code='LD' codeSystem='2.16.840.1.113883.5.1052' codeSystemName='HumanSubstanceAdministrationSite' displayName='left deltoid'>
+							<effectiveTime value='20140604' />
+							<priorityCode nullFlavor='NASK' />
+							<routeCode nullFlavor='NASK' />
+							<approachSiteCode nullFlavor='NASK'>
 								<originalText>
-									<reference value='#i1'/>
+									<reference nullFlavor='NA' />
 								</originalText>
 							</approachSiteCode>
-							<doseQuantity value='0.5' unit='ml'/>
-							<rateQuantity nullFlavor='UNK' />
+							<doseQuantity nullFlavor='NASK' />
+							<rateQuantity nullFlavor='NASK' />
 							<consumable typeCode='CSM'>
-								<manufacturedProduct classCode='MANU'>
+								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
-									<manufacturedLabeledDrug classCode='MMAT' determinerCode='KIND'>
-										<!-- ATC WHO Code -->
-										<code code="J07BF03" codeSystem="2.16.840.1.113883.6.73"/>
-										<name>POLIORIX Inj Lös Durchstf 0.5 ml</name>
-									</manufacturedLabeledDrug>
+									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680006370012' />
+									<manufacturedMaterial>
+										<code code='J07CA02' codeSystem='2.16.840.1.113883.6.73' >
+											<originalText>
+												diphtheria-pertussis-poliomyelitis-tetanus 
+												<reference value='#ip1'/>
+											</originalText>
+										</code>
+										<name>BOOSTRIX Polio Inj Susp</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
 								</manufacturedProduct>
 							</consumable>
-							<!-- An optional entry relationship that identifies the immunization series number -->
-							<entryRelationship typeCode='SUBJ'>
-								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.840.1.113883.10.20.1.46'/>
-									<code code='30973-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Dose Number' />
-									<statusCode code='completed'/>
-									<value xsi:type='INT' value='123456'/>
-								</observation>
-							</entryRelationship>
 						</substanceAdministration>
 					</entry>
 				</section>
@@ -877,10 +873,8 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680569020096' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' 
-								displayName='Medikamentöse Therapie'/>
+							<id root='2.999' extension='328711' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text><reference value='#m2'/></text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
@@ -906,12 +900,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680569020096' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
-											<originalText><reference nullFlavor='UNK' /></originalText>
-											<!-- ATC WHO Code -->
-											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73" >
+											<originalText>
+												lisinopril and diuretics 
+												<reference nullFlavor='UNK' />
+											</originalText>
+											<!-- Generic GroupCode -->
+											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2"/>
 										</code>
 										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
 									</manufacturedMaterial>
@@ -943,7 +940,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.13.3.2'/>
-							<id extension='7680295545924' root='1.3.160' />
+							<id root='2.999' extension='328712' />
 							<code code='8984-7' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Fluid intake (Estimated Vol Pt)' />
 							<text><reference value='#ifu1'/></text>
 							<statusCode code='completed'/>
@@ -965,9 +962,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680295545924' />
 									<manufacturedMaterial>
 										<!-- ATC WHO Code -->
-										<code code="B05BB01" codeSystem="2.16.840.1.113883.6.73"/>
+										<code code="B05BB01" codeSystem="2.16.840.1.113883.6.73">
+											<originalText>
+												electrolytes
+												<reference value='#ifu1'/>
+											</originalText>
+										</code>
 										<name>NACL Braun 0.9 %</name>
 									</manufacturedMaterial>
 								</manufacturedProduct>
@@ -1140,10 +1143,8 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680569020096' root='1.3.160' />
-							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' 
-								displayName='Medikamentöse Therapie'/>
+							<id root='2.999' extension='328713' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text><reference value='#m3'/></text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
@@ -1169,12 +1170,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680569020096' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
-											<originalText><reference nullFlavor='UNK' /></originalText>
-											<!-- ATC WHO Code -->
-											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
+											<originalText>
+												lisinopril and diuretics
+												<reference nullFlavor='UNK' />
+											</originalText>
+											<!-- Generic GroupCode -->
+											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2"/>
 										</code>
 										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
 									</manufacturedMaterial>

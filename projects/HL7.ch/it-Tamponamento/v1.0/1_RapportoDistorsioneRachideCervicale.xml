@@ -6,11 +6,11 @@ Modulo di documentazione per prima consultazione successiva a trauma cranico-cer
 http://www.svv.ch/de/medizin/formulare/dokumentationsbogen-fuer-erstkonsultation-nach-kranio-zervikalem-beschleunigungstr
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
-30.09.2011: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
-06.10.2011: Tony Schaller, medshare GmbH (Italienische Übersetzung)
+2010.05.12: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2010.05.20: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2011.09.30: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
+2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
 
 ********************************************************
 -->
@@ -22,7 +22,7 @@ History:
   <id extension="A9BFE245-FA3E-40B1-BFBC-E1406205C56E" root="2.16.756.5.30.1.1.1.1"/>
   <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
   <title>Modulo di documentazione per prima consultazione successiva a trauma cranico-cervicale da accelerazione</title>
-  <effectiveTime value="20100201173000"/>
+  <effectiveTime value="20100201173000+0100"/>
   <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
   <languageCode code="it-CH"/>
   <setId extension="A9BFE245-FA3E-40B1-BFBC-E1406205C56E" root="2.16.756.5.30.1.1.1.1"/>
@@ -170,7 +170,7 @@ History:
 							<!-- Tipo di registrazione -->
 							<code nullFlavor='NA'/>
 							<!-- Data del sinistro -->
-							<effectiveTime value="20100201143000"/>
+							<effectiveTime value="20100201143000+0100"/>
 						</observation>
 					</entry>
 					<entry>
@@ -179,7 +179,7 @@ History:
 							<templateId root="2.16.756.5.30.1.110.2.1.1" extension="SVV.KZBT.ErstbehandlungL3"/>
 							<code nullFlavor='NA'/>
 							<!-- Data e eventualmente Tempo del trattamento iniziale -->
-							<effectiveTime value="20100201153000"/>
+							<effectiveTime value="20100201153000+0100"/>
 							<!-- Trattamento iniziale da medico riempimento -->
 							<performer>
 								<assignedEntity>
@@ -812,6 +812,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
           <title>Osservazioni</title>
           <text>
 						Nessuna

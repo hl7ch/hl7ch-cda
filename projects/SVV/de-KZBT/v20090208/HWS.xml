@@ -5,10 +5,11 @@ Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungs
 http://www.svv.ch/article7221/medizin/formulare/-erstdokubogen-kzbt-.htm
 
 History:
-31.12.2009: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
-22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2009.12.31: Tony Schaller, medshare GmbH (Abgabe an Auftraggeber)
+2010.04.22: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2010.05.20: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
 
 ********************************************************
 -->
@@ -21,7 +22,7 @@ History:
   <code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
   <!-- Regel CDLN: Als Codesystem für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
   <title>Dokumentationsbogen für Erstkonsultation nach kranio-zervikalem Beschleunigungstrauma</title>
-  <effectiveTime value="20080430103249"/>
+  <effectiveTime value="20080430103249+0100"/>
   <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
   <languageCode code="de-CH"/>
   <setId extension="fbca3d60-a20d-406f-81fe-6ca45b887254" root="2.16.756.5.30.1.1.1.1"/>
@@ -188,7 +189,7 @@ History:
 							<code code="U" codeSystem="2.16.756.5.30.1.100.3.2.2" displayName="Unfall"/>
 							-->
 							<!-- Schadendatum -->
-							<effectiveTime value="20081117173000"/>
+							<effectiveTime value="20081117173000+0100"/>
 						</observation>
 					</entry>
 					<entry>
@@ -917,6 +918,7 @@ History:
       <component>
         <section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
           <title>Bemerkungen</title>
           <text>
             <content styleCode="Italics">Umsetzungshinweis für CDA Template: Freitext<br /><br /></content>

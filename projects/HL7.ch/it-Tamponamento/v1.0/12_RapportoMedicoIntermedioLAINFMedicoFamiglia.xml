@@ -5,10 +5,10 @@ Caso pratico "Tamponamento" CDA-CH-II
 Rapporto medico intermedio LAINF per la SUVA
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
-06.10.2011: Tony Schaller, medshare GmbH (Italienische Übersetzung)
+2010.05.12: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2010.05.20: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
 
 ********************************************************
 -->
@@ -21,7 +21,7 @@ History:
 	<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" displayName="Assessment note"/>
 	<!-- Regel CDLN: Als Sistema di codifica für ClinicalDocument.code ist LOINC (2.16.840.1.113883.6.1) zu verwenden.-->
 	<title>Rapporto medico intermedio</title>
-	<effectiveTime value="20100215103249"/>
+	<effectiveTime value="20100215103249+0100"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
 	<languageCode code="it-CH"/>
 	<setId root="2.16.756.5.30.1.1.1.1" extension="4304ED8F-14BF-459E-B3BE-7F5EF626C470" />
@@ -707,6 +707,7 @@ History:
 				<section>
 					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.Rem"/>
 					<templateId root="2.16.756.5.30.1.100.2.2.1" extension="eMedidoc.Rem"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<title>Osservazioni</title>
 					<text>
 						<content>Nessuna<br/>

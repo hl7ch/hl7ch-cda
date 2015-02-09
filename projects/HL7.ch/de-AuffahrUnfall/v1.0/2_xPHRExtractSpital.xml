@@ -5,9 +5,10 @@ Fallbeispiel "Auffahrunfall" CDA-CH-II
 xPHR Extract Notfallaufnahme Kant. Spital
 
 History:
-12.05.2010: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
-17.05.2010: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
-20.05.2010: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2010.05.12: Tony Schaller, medshare GmbH (aus Input Storyboard HL7 CDA-CH-II)
+2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
+2010.05.20: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
+2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
 
 ********************************************************
 -->
@@ -26,7 +27,7 @@ History:
 	<id root='2.16.756.5.30.1.109.2' extension='0FD2BE73-EE93-4AEC-B178-B27C4011DB49' />
 	<code code='34133-9' displayName='Summary of Episode Note' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
 	<title>xPHR Extract Personal Health Record</title>
-	<effectiveTime value='20100201151500'/>
+	<effectiveTime value='20100201151500+0100'/>
 	<confidentialityCode code='N' displayName='Normal' codeSystem='2.16.840.1.113883.5.25' codeSystemName='Confidentiality' />
 	<languageCode code='de-CH'/>
 	<setId root='2.16.756.5.30.1.1.1.1' extension='0FD2BE73-EE93-4AEC-B178-B27C4011DB49' />
@@ -291,7 +292,7 @@ History:
 							<text>
 							<reference value='#bloodgr'/>Blutgruppe A, Rh pos.</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20091113012005'/>
+							<effectiveTime value='20091113012005+0100'/>
 							<value xsi:type='CD' nullFlavor='UNK' />
 						</observation>
 					</entry>
@@ -302,6 +303,7 @@ History:
 					<!-- Required Conditions Section content -->
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.8'/>
 					<code code='11348-0' displayName='HISTORY OF PAST ILLNESS' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+					<text />
 				</section>
 			</component>
 			<component>
@@ -394,8 +396,6 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680210370280' root='1.3.160' />
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#medi1'/>
@@ -408,7 +408,7 @@ History:
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 1-0-0 -->
-								<phase value='190001010800'/>
+								<phase value='190001010800+0100'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
@@ -421,14 +421,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680210370280' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="H03BB01SETN000000005TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="H03BB01" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
+												carbimazole
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="H03BB01" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="H03BB01SETN000000005TABL" codeSystem="2.16.756.5.30.2.6.2"/>
 										</code>
 										<name>NEO MERCAZOLE Tabl 5 mg 50 Stk</name>
 									</manufacturedMaterial>
@@ -442,8 +443,6 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680569020119' root='1.3.160' />
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text>
 								<reference value='#medi1'/>
@@ -456,7 +455,7 @@ History:
 							</effectiveTime>
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
 								<!-- Dosierung 1-0-0 -->
-								<phase value='190001010800'/>
+								<phase value='190001010800+0100'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
 							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
@@ -469,14 +468,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680569020119' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
+												lisinopril and diuretics 	
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2" />
 										</code>
 										<name>LISINOPRIL HCT Tabl 10/12.5 100 Stk</name>
 									</manufacturedMaterial>

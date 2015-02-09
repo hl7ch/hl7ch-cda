@@ -3,8 +3,9 @@
 Beispiel Notfallaustrittsbericht aus pflegerischer Sicht (CTNN)
 
 History:
-23.12.2012: Tony Schaller, medshare GmbH (Erster Entwurf)
-31.12.2012: Tony Schaller, medshare GmbH (Abgabe an Kunden)
+2012.12.23: Tony Schaller, medshare GmbH (Erster Entwurf)
+2012.12.31: Tony Schaller, medshare GmbH (Abgabe an Kunden)
+2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -340,8 +341,7 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<!-- GTIN -->
-							<id extension='7680569020096' root='1.3.160' />
+							<id root='2.999' extension='328709' />
 							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
 							<text><reference value='#m1'/></text>
 							<statusCode code='completed'/>
@@ -366,14 +366,15 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
+									<id root='1.3.160' extension='7680569020096' />
 									<manufacturedMaterial>
-										<!-- Generic GroupCode -->
-										<code code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2">
+										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
+												lisinopril and diuretics
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- ATC WHO Code -->
-											<translation code="C09BA03" codeSystem="2.16.840.1.113883.6.73"/>
+											<!-- Generic GroupCode -->
+											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2" />
 										</code>
 										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
 									</manufacturedMaterial>
