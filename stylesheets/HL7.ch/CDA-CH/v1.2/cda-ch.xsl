@@ -35,7 +35,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 	<xsl:variable name="language">
 		<xsl:choose>
 			<xsl:when test="/n1:ClinicalDocument/n1:languageCode/@code">
-				<xsl:value-of select="/n1:ClinicalDocument/n1:languageCode/@code"/>
+				<xsl:value-of select="substring(/n1:ClinicalDocument/n1:languageCode/@code,1,2)"/>
 			</xsl:when>
 			<xsl:otherwise>de-CH</xsl:otherwise>
 		</xsl:choose>
