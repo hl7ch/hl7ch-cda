@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ********************************************************
+Dispense (DIS) Demo-Document
+
+History:
+2015.05.27: Stéphane Spahni, University Hospitals of Geneva (Document Creation)
+2015.05.28: Tony Schaller, medshare GmbH (Stylesheet and CSS added; changed table headers in CDA body from td to th)
+
+******************************************************** -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../stylesheets/HUG/PlanDeTraitement/v1.0/hug.css'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 \Schemas\IHE+Pharmacy\CDA_extended_pharmacy.xsd">
+	<realmCode code="CH"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" assigningAuthorityName="IHE PCC"/>
+
+	<!-- DIS
+	-->
+	<templateId extension="PCC.PharmacyDispensation" root="1.2.40.0.32.6.1.10.1.1.1"/>
+	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.3"/>
+	<id root="2.16.756.5.30.4.9.1.1.9000.97005632.201507010900100.7" extension="SMTL-V1-DIS.7"/>
+	<code code="60593-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication dispensed.extended"/>
+	<title>Pharmacy Dispensation</title>
+
+	<effectiveTime value="201507010900100+0200"/>
+	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25" codeSystemName="HL7:Confidentiality"/>
+	<languageCode code="fr-CH"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="80756999999999993000" root="2.16.756.5.30.4.9.1.1.1000.200.3"/>
+			<addr>
+				<streetAddressLine>rue des Abeilles, 50</streetAddressLine>
+				<city>Geneva</city>
+				<postalCode>1205</postalCode>
+				<state nullFlavor="UNK"/>
+				<country>CH</country>
+			</addr>
+			<telecom value="tel:+41.22.300.00.00" use="HP"/>
+			<telecom value="tel:+41.22.300.00.00" use="MC"/>
+			<telecom value="tel:+41.22.300.00.00" use="WP"/>
+			<telecom use="HP" value="mailto:jean.etoile@hcuge.ch"/>
+			<patient>
+				<name>
+					<family>Kalbermatten</family>
+					<given>Karin</given>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+				<birthTime value="19320525"/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='2262' displayName='Pharmacists' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08'/>
+		<!-- profession -->
+		<time value="201507010900100+0200"/>
+		<assignedAuthor>
+			<id root="1.3.88" extension="7601000000001"/>
+			<!-- GS1 GLN -->
+			<code code='50045' displayName="Pharmacien d’officine" codeSystem='2.16.756.5.30.1.127.3.2.1.5' codeSystemName='EPD_XDS_healthcareFacilityTypeCode'/>
+			<addr>
+				<streetName>Rue du Patient</streetName>
+				<houseNumber>20</houseNumber>
+				<postalCode>1205</postalCode>
+				<city>Geneva</city>
+				<state>Geneva</state>
+				<country>Suisse</country>
+			</addr>
+			<assignedPerson>
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Pharmacien</given>
+					<family>Prefere</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="1.3.88" extension="7601000000001"/>
+				<!-- GS1 GLN -->
+				<name>Dr. Pharmacien Prefere</name>
+				<telecom value="tel:+41.22.123.01.02"/>
+				<telecom value="mailto:Pharmacien.Prefere@hin.ch"/>
+				<addr>
+					<streetName>Rue du Patient</streetName>
+					<houseNumber>20</houseNumber>
+					<postalCode>1205</postalCode>
+					<city>Geneva</city>
+					<state>Geneva</state>
+					<country>Suisse</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="1.3.88" extension="7601000000001"/>
+				<!-- GS1 GLN -->
+				<name>Dr. Pharmacien Prefere</name>
+				<telecom value="tel:+41.22.123.01.02"/>
+				<addr>
+					<streetName>Rue du Patient</streetName>
+					<houseNumber>20</houseNumber>
+					<postalCode>1205</postalCode>
+					<city>Geneva</city>
+					<state>Geneva</state>
+					<country>Suisse</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value="201507010900100+0200"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id root="1.3.88" extension="7601000000001"/>
+			<!-- GS1 GLN -->
+			<telecom value="tel:+41.22.123.01.02"/>
+			<telecom value="mailto:Pharmacien.Prefere@hin.ch"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Pharmacien</given>
+					<family>Prefere</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="1.3.88" extension="7601000000001"/>
+				<!-- GS1 GLN -->
+				<name>Dr. Pharmacien Prefere</name>
+				<telecom value="tel:+41.22.123.01.02"/>
+				<telecom value="mailto:Pharmacien.Prefere@hin.ch"/>
+				<addr>
+					<streetName>Rue du Patient</streetName>
+					<houseNumber>20</houseNumber>
+					<postalCode>1205</postalCode>
+					<city>Geneva</city>
+					<state>Geneva</state>
+					<country>Suisse</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<documentationOf>
+		<serviceEvent classCode="PCPR">
+			<effectiveTime>
+				<low value="20150505"/>
+				<high value="20150714"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3"/>
+				<functionCode code="2262" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Pharmacists"/>
+				<time>
+					<low value="20150505"/>
+					<high value="20150714"/>
+				</time>
+				<assignedEntity>
+					<id extension="7601000000001" root="1.3.88"/>
+					<telecom value="tel:+41.22.123.01.02"/>
+					<assignedPerson>
+						<name>
+							<given>Pharmacien</given>
+							<family>Prefere</family>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id extension="7601002116763" root="1.3.88"/>
+						<name>University Hospitals of Geneva (HUG)</name>
+						<telecom value="tel:+41.22.123.01.02" use="WP"/>
+						<telecom use="HP" value="mailto:Pharmacien.Prefere@hin.ch"/>
+						<addr>
+							<streetAddressLine>Rue du Patient 20</streetAddressLine>
+							<postalCode>1205</postalCode>
+							<city>Geneva</city>
+							<state>Geneva</state>
+							<country>CH</country>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<!-- DIS
+					-->
+					<templateId root="2.16.840.1.113883.10.20.1.8"/>
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.3"/>
+					<id root="2.16.756.5.30.4.9.1.1.9000.97005632.201507010900100.7" extension="SMTL-V1-DIS.7"/>
+					<code code="60590-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICATION DISPENSED.BRIEF"/>
+					<title>Dispensation</title>
+
+					<text>
+
+						<!-- Dispenses -->
+
+						<content>Dispensed medications</content>
+						<table>
+							<thead>
+								<tr styleCode="TableHeader">
+									<th>Branded Medication</th>
+									<th>Package name</th>
+									<th>Package form</th>
+									<th>LOT number</th>
+									<th>Package capacity</th>
+									<th>Ingredients</th>
+									<th>Date from</th>
+									<th>Date to</th>
+									<th>Frequency</th>
+									<th>Route code</th>
+									<th>Approach site</th>
+									<th>Dose quantity</th>
+									<th>Rate quantity</th>
+									<th>Reason</th>
+									<th>Patient instructions</th>
+									<th>Fulfilment instructions</th>
+									<th>Dispensed amount</th>
+									<th>Substitution</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<!-- Dispensed item entries corresponding to chapter 4.3.4 -->
+
+								<tr ID="disp7">
+									<td ID="disp7_brandedmedication">METFORMINE</td>
+									<td ID="disp7_packagename">METFORMINE Axapharm cpr pell 1000 mg 60 cpr</td>
+									<td ID="disp7_packageform">Tablet</td>
+									<td ID="disp7_lotnumber"/>
+									<td ID="disp7_packagecapacity">60</td>
+									<td ID="disp7_ingredients">
+										<list>
+											<item ID="disp7_ingredient1">
+												<content ID="disp7_ingredient1_name">metformin</content>
+												<content ID="disp7_ingredient1_quantity">1000 mg</content>
+											</item>
+										</list>
+									</td>
+									<td ID="disp7_datefrom">2015-05-05</td>
+									<td ID="disp7_dateto">2015-11-05</td>
+									<td ID="disp7_frequency">1 at breakfast, 1 at dinner</td>
+									<td ID="disp7_routecode">per os</td>
+									<td ID="disp7_approachsite"></td>
+									<td ID="disp7_dosequantity">1000 mg</td>
+									<td ID="disp7_ratequantity">2/d</td>
+									<td ID="disp7_reason"></td>
+									<td ID="disp7_pinstruct"></td>
+									<td ID="disp7_finstruct"></td>
+									<td ID="disp7_dispenseamount">1</td>
+									<td ID="disp7_substit"></td>
+								</tr>
+
+							</tbody>
+						</table>
+
+						<!-- Prescriptions -->
+
+						<content>Prescribed medications</content>
+						<table>
+							<thead>
+								<tr>
+									<th>Branded Medication</th>
+									<th>Package name</th>
+									<th>Package form</th>
+									<th>LOT number</th>
+									<th>Package capacity</th>
+									<th>Ingredients</th>
+									<th>Date from</th>
+									<th>Date to</th>
+									<th>Frequency</th>
+									<th>Route code</th>
+									<th>Approach site</th>
+									<th>Dose quantity</th>
+									<th>Rate quantity</th>
+									<th>Reason</th>
+									<th>Patient instructions</th>
+									<th>Fulfilment instructions</th>
+									<th>Dispense amount</th>
+									<th>Substitution</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<!-- Prescription item entries corresponding to chapter 4.3.1 -->
+
+								<tr ID="pre.1.3">
+									<td ID="pre.1.3_brandedmedication">METFIN</td>
+									<td ID="pre.1.3_packagename">METFIN cpr pell 1000 mg</td>
+									<td ID="pre.1.3_packageform">Tablet</td>
+									<td ID="pre.1.3_lotnumber"/>
+									<td ID="pre.1.3_packagecapacity"/>
+									<td ID="pre.1.3_ingredients">
+										<list>
+											<item ID="pre.1.3_ingredient1">
+												<content ID="pre.1.3_ingredient1_name">metformin</content>
+												<content ID="pre.1.3_ingredient1_quantity">1000 mg</content>
+											</item>
+										</list>
+									</td>
+									<td ID="pre.1.3_datefrom">2015-05-05</td>
+									<td ID="pre.1.3_dateto">2015-11-05</td>
+									<td ID="pre.1.3_frequency">1 at breakfast, 1 at dinner</td>
+									<td ID="pre.1.3_routecode">per os</td>
+									<td ID="pre.1.3_approachsite"></td>
+									<td ID="pre.1.3_dosequantity">1000 mg</td>
+									<td ID="pre.1.3_ratequantity">2/d</td>
+									<td ID="pre.1.3_reason"></td>
+									<td ID="pre.1.3_pinstruct"></td>
+									<td ID="pre.1.3_finstruct"></td>
+									<td ID="pre.1.3_dispenseamount">1 box of 60</td>
+									<td ID="pre.1.3_substitution">yes</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+
+					<!-- Dispense item entries corresponding to chapter 4.3.7 -->
+
+					<!-- Dispense of Metformin DIS document format -->
+					<entry>
+						<supply classCode="SPLY" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.1.34"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3"/>
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.4"/>
+							<id root="2.16.756.5.30.4.9.1.1.9000.97005632.201507010900100.7" extension="SMTL-V1-DIS7.1"/>
+							<code code='RFP' displayName='Refill - Part Fill' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
+							<quantity unit="1" value="1"/>
+							<product>
+								<manufacturedProduct classCode="MANU" xmlns:pharm="urn:ihe:pharm:medication">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1"/>
+										<code code="A10BA02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="metformin">
+											<originalText>
+												<reference value="#disp7_ingredient1"/>
+											</originalText>
+										</code>
+										<name>Metformine</name>
+										<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet"/>
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedMedicine classCode="CONT" determinerCode="INSTANCE">
+												<!-- National medicinal product code (package-level) -->
+												<pharm:code code="7680590990085" codeSystem="2.51.1.1" codeSystemName="GTIN" displayName="METFORMINE Axapharm cpr pell 1000 mg 60 pce"/>
+												<!-- Brand name (package) -->
+												<pharm:name>METFORMINE Axapharm cpr pell 1000 mg</pharm:name>
+												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet"/>
+												<pharm:capacityQuantity value="60"/>
+											</pharm:containerPackagedMedicine>
+										</pharm:asContent>
+										<pharm:ingredient classCode="ACTI" xmlns:pharm="urn:ihe:pharm:medication">
+											<pharm:quantity>
+												<pharm:numerator unit="mg" value="1000" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pharm:PQ"/>
+												<pharm:denominator value="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pharm:PQ"/>
+											</pharm:quantity>
+											<pharm:ingredient classCode="MMAT" determinerCode="KIND">
+												<pharm:code code="A10BA02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="metformin"/>
+												<pharm:name>various</pharm:name>
+											</pharm:ingredient>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</product>
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM' moodCode='INT'>
+									<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150505140000.1" extension="SMTL-V1-MTP1.3"/>
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2' displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List'/>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA'/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<entryRelationship typeCode="REFR">
+
+								<!-- DIS format -->
+								<substanceAdministration classCode="SBADM" moodCode="INT">
+									<templateId root="2.16.840.1.113883.10.20.1.24"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
+									<templateId root="1.3.6.1.4.1.19376.1.9.1.3.2"/>
+									<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150505140000.1" extension="SMTL-V1-PRE1.3"/>
+									<text>
+										<reference value="#pre.1.3"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime xsi:type="IVL_TS">
+										<low value="20150505"/>
+										<high value="20151105"/>
+									</effectiveTime>
+									<effectiveTime xsi:type="SXPR_TS" operator="A">
+										<comp xsi:type="SXPR_TS">
+											<comp xsi:type="IVL_TS">
+												<low value="20150505"/>
+												<high value="20151105"/>
+											</comp>
+											<comp xsi:type="EIVL_TS" operator="A">
+												<event code='ACM'/>
+											</comp>
+										</comp>
+										<comp xsi:type="SXPR_TS" operator="I">
+											<comp xsi:type="IVL_TS">
+												<low value="20150505"/>
+												<high value="20151105"/>
+											</comp>
+											<comp xsi:type="EIVL_TS" operator="A">
+												<event code='ACV'/>
+											</comp>
+										</comp>
+									</effectiveTime>
+									<repeatNumber value='3'/>
+									<routeCode code="PO" displayName="Oral" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration"/>
+									<doseQuantity>
+										<low unit="mg" value="1000">
+											<translation>
+												<originalText>
+													<reference value="#pre.1.3_dosequantity"/>
+												</originalText>
+											</translation>
+										</low>
+										<high unit="mg" value="1000">
+											<translation>
+												<originalText>
+													<reference value="#pre.1.3_dosequantity"/>
+												</originalText>
+											</translation>
+										</high>
+									</doseQuantity>
+									<rateQuantity>
+										<low unit="/d" value="2">
+											<translation>
+												<originalText>
+													<reference value="#pre.1.3_ratequantity"/>
+												</originalText>
+											</translation>
+										</low>
+										<high unit="/d" value="2">
+											<translation>
+												<originalText>
+													<reference value="#pre.1.3_ratequantity"/>
+												</originalText>
+											</translation>
+										</high>
+									</rateQuantity>
+									<consumable>
+										<manufacturedProduct classCode="MANU" xmlns:pharm="urn:ihe:pharm:medication">
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+											<templateId root="2.16.840.1.113883.10.20.1.53"/>
+											<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+												<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1"/>
+												<code code="A10BA02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="metformin">
+													<originalText>
+														<reference value="#pre.1.3_ingredient1"/>
+													</originalText>
+												</code>
+												<name>Metfin</name>
+												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet"/>
+												<pharm:asContent classCode="CONT">
+													<pharm:containerPackagedMedicine classCode="CONT" determinerCode="INSTANCE">
+														<!-- National medicinal product code (package-level) -->
+														<pharm:code code="7680553510145" codeSystem="2.51.1.1" codeSystemName="GTIN" displayName="METFIN cpr pell 1000 mg 60 pce"/>
+														<!-- Brand name (package) -->
+														<pharm:name>METFIN cpr pell 1000 mg</pharm:name>
+														<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet"/>
+														<pharm:capacityQuantity value="60"/>
+													</pharm:containerPackagedMedicine>
+												</pharm:asContent>
+												<pharm:ingredient classCode="ACTI" xmlns:pharm="urn:ihe:pharm:medication">
+													<pharm:quantity>
+														<pharm:numerator unit="mg" value="1000" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pharm:PQ"/>
+														<pharm:denominator value="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pharm:PQ"/>
+													</pharm:quantity>
+													<pharm:ingredient classCode="MMAT" determinerCode="KIND">
+														<pharm:code code="A10BA02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="metformin"/>
+														<pharm:name>various</pharm:name>
+													</pharm:ingredient>
+												</pharm:ingredient>
+											</manufacturedMaterial>
+										</manufacturedProduct>
+									</consumable>
+									<entryRelationship typeCode="COMP">
+										<supply classCode="SPLY" moodCode="RQO">
+											<independentInd value="false"/>
+											<quantity unit="1" value="1"/>
+										</supply>
+									</entryRelationship>
+								</substanceAdministration>
+							</entryRelationship>
+
+							<!-- Substition performed -->
+							<pharm:component1>
+								<pharm:substitutionMade classCode="SUBST" moodCode="EVN">
+									<pharm:code code="E" displayName="equivalent" codeSystem="2.16.840.1.113883.5.1070" codeSystemName="HL7 Substance Admin Substitution"/>
+								</pharm:substitutionMade>
+							</pharm:component1>
+						</supply>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

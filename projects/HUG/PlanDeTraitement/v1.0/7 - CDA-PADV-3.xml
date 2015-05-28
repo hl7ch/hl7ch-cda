@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ********************************************************
+Pharmaceutical ADVice (PADV) Demo-Document
+
+History:
+2015.05.27: Stéphane Spahni, University Hospitals of Geneva (Document Creation)
+2015.05.28: Tony Schaller, medshare GmbH (Stylesheet and CSS added; changed table headers in CDA body from td to th)
+
+******************************************************** -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../stylesheets/HUG/PlanDeTraitement/v1.0/hug.css'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 \Schemas\IHE+Pharmacy\CDA_extended_pharmacy.xsd">
+	<realmCode code="CH"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
+	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.2"/>
+
+	<!-- PADV
+	-->
+	<templateId extension="PCC.PharmaceuticalAdvice" root="1.2.40.0.32.6.1.10.1.1.1"/>
+	<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150701090000.1" extension="MTPS-V1-PADV.3"/>
+	<code code="61356-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pharmaceutical advice"/>
+	<title>Pharmacy Pharmaceutical Advice</title>
+
+	<effectiveTime value="20150701090000+0200"/>
+	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25" codeSystemName="HL7:Confidentiality"/>
+	<languageCode code="fr-CH"/>
+
+	<recordTarget>
+		<patientRole>
+			<id extension="80756999999999993000" root="2.16.756.5.30.4.9.1.1.1000.200.3"/>
+			<addr>
+				<streetAddressLine>rue des Abeilles, 50</streetAddressLine>
+				<city>Geneva</city>
+				<postalCode>1205</postalCode>
+				<state nullFlavor="UNK"/>
+				<country>CH</country>
+			</addr>
+			<telecom value="tel:+41.22.300.00.00" use="HP"/>
+			<telecom value="tel:+41.22.300.00.00" use="MC"/>
+			<telecom value="tel:+41.22.300.00.00" use="WP"/>
+			<telecom use="HP" value="mailto:jean.etoile@hcuge.ch"/>
+			<patient>
+				<name>
+					<family>Kalbermatten</family>
+					<given>Karin</given>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+				<birthTime value="19320525"/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='PCP' displayName='Medical doctors' codeSystem='2.16.756.5.30.2.1.1.1' codeSystemName='eCH ParticipationFunction'/>
+		<!-- profession -->
+		<time value="20150701090000+0200"/>
+		<assignedAuthor>
+			<id root="1.3.88" extension="7601000000100"/>
+			<!-- GS1 GLN -->
+			<code code='50012' displayName="Medecin specialiste en cardiologie" codeSystem='2.16.756.5.30.1.127.3.2.1.5' codeSystemName='EPD_XDS_healthcareFacilityTypeCode'/>
+			<addr>
+				<streetName>Boulevard de la Cluse</streetName>
+				<houseNumber>4</houseNumber>
+				<postalCode>1205</postalCode>
+				<city>Geneva</city>
+				<state>Geneva</state>
+				<country>Suisse</country>
+			</addr>
+			<assignedPerson>
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Medecin</given>
+					<family>Hospital</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="1.3.88" extension="7601000000000"/>
+				<!-- GS1 GLN -->
+				<name>Dr. Medecin Hospital</name>
+				<telecom value="tel:+41.22.123.45.67"/>
+				<telecom value="mailto:Medecin.Hospital@hopital.ch"/>
+				<addr>
+					<streetName>Boulevard de la Cluse</streetName>
+					<houseNumber>4</houseNumber>
+					<postalCode>1205</postalCode>
+					<city>Geneva</city>
+					<state>Geneva</state>
+					<country>Suisse</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="7601002116763" root="1.3.88"/>
+				<name>University Hospitals of Geneva (HUG)</name>
+				<telecom value="tel:+41.22.300.00.01" use="WP"/>
+				<addr>
+					<streetAddressLine>Rue Gabrielle-Perret-Gentil 4</streetAddressLine>
+					<city>Geneva</city>
+					<postalCode>1205</postalCode>
+					<state>Geneva</state>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value="20150701090000+0200"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="7601002116763" root="1.3.88"/>
+			<telecom value="tel:+41.22.300.00.01" use="WP"/>
+			<telecom value="tel:+41.22.300.00.11" use="WP"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Medecin</given>
+					<family>Hospital</family>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id extension="7601002116763" root="1.3.88"/>
+				<name>University Hospitals of Geneva (HUG)</name>
+				<telecom value="tel:+41.22.300.00.01" use="WP"/>
+				<telecom value="tel:+41.22.300.00.11" use="WP"/>
+				<telecom use="HP" value="mailto:mtps@hcuge.ch"/>
+				<addr>
+					<streetAddressLine>Rue Gabrielle-Perret-Gentil 4</streetAddressLine>
+					<city>Geneva</city>
+					<postalCode>1205</postalCode>
+					<state>Geneva</state>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.2"/>
+					<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150701090000.1" extension="MTPS-V1-PADV.3"/>
+					<code code="61357-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MEDICATION PHARMACEUTICAL ADVICE.BRIEF"/>
+					<title>Pharmaceutical advice</title>
+					<text>
+						<content>Planned medications</content>
+						<table>
+							<thead>
+								<tr>
+									<th>Branded Medication</th>
+									<th>Package name</th>
+									<th>Packag form</th>
+									<th>LOT number</th>
+									<th>Package capacity</th>
+									<th>Ingredients</th>
+									<th>Date from</th>
+									<th>Date to</th>
+									<th>Frequency</th>
+									<th>Route code</th>
+									<th>Approach site</th>
+									<th>Dose quantity</th>
+									<th>Rate quantity</th>
+									<th>Reason</th>
+									<th>Patient instructions</th>
+									<th>Fulfilment instructions</th>
+									<th>Dispense amount</th>
+									<th>Substitution</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="mtp.6.4">
+									<td ID="mtp.6.4_brandedmedication">NOVALGIN</td>
+									<td ID="mtp.6.4_packagename">NOVALGIN cpr pell 500 mg</td>
+									<td ID="mtp.6.4_packageform">Tablet</td>
+									<td ID="mtp.6.4_lotnumber"/>
+									<td ID="mtp.6.4_packagecapacity"/>
+									<td ID="mtp.6.4_ingredients">
+										<list>
+											<item ID="mtp.6.4_ingredient1">
+												<content ID="mtp.6.4_ingredient1_name">metformin</content>
+												<content ID="mtp.6.4_ingredient1_quantity">500 mg</content>
+											</item>
+										</list>
+									</td>
+									<td ID="mtp.6.4_datefrom">2015-06-30</td>
+									<td ID="mtp.6.4_dateto">2015-07-30</td>
+									<td ID="mtp.6.4_frequency">2 at breakfast, 2 at lunch, 2 at dinner, 2 at bedtime</td>
+									<td ID="mtp.6.4_routecode">per os</td>
+									<td ID="mtp.6.4_approachsite"></td>
+									<td ID="mtp.6.4_dosequantity">1000 mg</td>
+									<td ID="mtp.6.4_ratequantity">4/d</td>
+									<td ID="mtp.6.4_reason"></td>
+									<td ID="mtp.6.4_pinstruct"></td>
+									<td ID="mtp.6.4_finstruct"></td>
+									<td ID="mtp.6.4_dispenseamount">5 boxes of 50</td>
+									<td ID="mtp.6.4_substitution">yes</td>
+								</tr>
+							</tbody>
+						</table>
+						<content>Pharmaceutical Advice Information</content>
+						<table>
+							<thead>
+								<tr styleCode="TableHeader">
+									<th>Observation code</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="padv3">
+									<td ID="padv3_observation">Dispense with change expected (lower dosage)</td>
+								</tr>
+							</tbody>
+						</table>
+						<content>Pharmaceutical Advice Information - Recommendation</content>
+						<table>
+							<thead>
+								<tr>
+									<th>Branded Medication</th>
+									<th>Package name</th>
+									<th>Packag form</th>
+									<th>LOT number</th>
+									<th>Package capacity</th>
+									<th>Ingredients</th>
+									<th>Date from</th>
+									<th>Date to</th>
+									<th>Frequency</th>
+									<th>Route code</th>
+									<th>Approach site</th>
+									<th>Dose quantity</th>
+									<th>Rate quantity</th>
+									<th>Reason</th>
+									<th>Patient instructions</th>
+									<th>Fulfilment instructions</th>
+									<th>Dispense amount</th>
+									<th>Substitution</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="padv3_rec">
+									<td ID="padv3_rec_brandedmedication">TORASEMIDE</td>
+									<td ID="padv3_rec_packagename">TORASEMIDE Spirig HC cpr 5 mg</td>
+									<td ID="padv3_rec_packageform"/>
+									<td ID="padv3_rec_lotnumber"/>
+									<td ID="padv3_rec_packagecapacity"/>
+									<td ID="padv3_rec_ingredients">
+									</td>
+									<td ID="padv3_rec_datefrom"></td>
+									<td ID="padv3_rec_dateto"></td>
+									<td ID="padv3_rec_frequency">1 at breakfast, 1 at lunch, 1 at dinner, 1 at bedtime</td>
+									<td ID="padv3_rec_routecode"></td>
+									<td ID="padv3_rec_approachsite"></td>
+									<td ID="padv3_rec_dosequantity"></td>
+									<td ID="padv3_rec_ratequantity"></td>
+									<td ID="padv3_rec_reason"></td>
+									<td ID="padv3_rec_pinstruct"></td>
+									<td ID="padv3_rec_finstruct"></td>
+									<td ID="padv3_rec_dispenseamount"></td>
+									<td ID="padv3_rec_substitution"></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.3"/>
+							<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150701090000.1" extension="MTPS-V1-PADV.3.1"/>
+							<code code="CHANGE" codeSystem="1.3.6.1.4.1.19376.1.9.2.1" codeSystemName="IHE Pharmaceutical Advice Status List" displayName="Dispense with change expected"/>
+							<text>
+								<reference value="#padv3"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime value='20150701090000' />
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM' moodCode='INT'>
+									<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150630093000.1" extension="MTPS-V1-MTP6.4"/>
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2' displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List'/>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA'/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<entryRelationship inversionInd="false" typeCode="REFR">
+								<substanceAdministration classCode="SBADM" moodCode="INT">
+									<templateId root="2.16.840.1.113883.10.20.1.24"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
+									<templateId root="1.3.6.1.4.1.19376.1.9.1.3.2"/>
+									<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150701090000.1" extension="MTPS-V1-MTP6.4.V2"/>
+									<text>
+										<reference value="#mtp.6.4"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime xsi:type="IVL_TS">
+										<low value="20150630"/>
+										<high value="20150730"/>
+									</effectiveTime>
+									<effectiveTime xsi:type="SXPR_TS" operator="A">
+										<comp xsi:type="SXPR_TS">
+											<comp xsi:type="IVL_TS">
+												<low value="20150630"/>
+												<high value="20150730"/>
+											</comp>
+											<comp xsi:type="EIVL_TS" operator="A">
+												<event code='ACM'/>
+											</comp>
+										</comp>
+										<comp xsi:type="SXPR_TS" operator="I">
+											<comp xsi:type="IVL_TS">
+												<low value="20150630"/>
+												<high value="20150730"/>
+											</comp>
+											<comp xsi:type="EIVL_TS" operator="A">
+												<event code='ACD'/>
+											</comp>
+										</comp>
+										<comp xsi:type="SXPR_TS" operator="I">
+											<comp xsi:type="IVL_TS">
+												<low value="20150630"/>
+												<high value="20150730"/>
+											</comp>
+											<comp xsi:type="EIVL_TS" operator="A">
+												<event code='ACV'/>
+											</comp>
+										</comp>
+										<comp xsi:type="SXPR_TS" operator="I">
+											<comp xsi:type="IVL_TS">
+												<low value="20150630"/>
+												<high value="20150730"/>
+											</comp>
+											<comp xsi:type="EIVL_TS" operator="A">
+												<event code='HS'/>
+											</comp>
+										</comp>
+									</effectiveTime>
+									<routeCode code="PO" displayName="Oral" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration"/>
+									<doseQuantity>
+										<low unit="mg" value="500">
+											<translation>
+												<originalText>
+													<reference value="#mtp.6.4_dosequantity"/>
+												</originalText>
+											</translation>
+										</low>
+										<high unit="mg" value="500">
+											<translation>
+												<originalText>
+													<reference value="#mtp.6.4_dosequantity"/>
+												</originalText>
+											</translation>
+										</high>
+									</doseQuantity>
+									<rateQuantity>
+										<low unit="/d" value="4">
+											<translation>
+												<originalText>
+													<reference value="#mtp.6.4_ratequantity"/>
+												</originalText>
+											</translation>
+										</low>
+										<high unit="/d" value="4">
+											<translation>
+												<originalText>
+													<reference value="#mtp.6.4_ratequantity"/>
+												</originalText>
+											</translation>
+										</high>
+									</rateQuantity>
+									<consumable>
+										<manufacturedProduct classCode="MANU" xmlns:pharm="urn:ihe:pharm:medication">
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+											<templateId root="2.16.840.1.113883.10.20.1.53"/>
+											<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+												<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1"/>
+												<code code="N02BB02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="metamizole sodium">
+													<originalText>
+														<reference value="#mtp.6.4_ingredient1"/>
+													</originalText>
+												</code>
+												<name>Novalgin</name>
+												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet"/>
+												<pharm:asContent classCode="CONT">
+													<pharm:containerPackagedMedicine classCode="CONT" determinerCode="INSTANCE">
+														<!-- National medicinal product code (package-level) -->
+														<pharm:code code="7680169510218" codeSystem="2.51.1.1" codeSystemName="GTIN" displayName="NOVALGIN cpr pell 500 mg 50 pce"/>
+														<!-- Brand name (package) -->
+														<pharm:name>NOVALGIN cpr pell 500 mg</pharm:name>
+														<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet"/>
+														<pharm:capacityQuantity value="50"/>
+													</pharm:containerPackagedMedicine>
+												</pharm:asContent>
+												<pharm:ingredient classCode="ACTI" xmlns:pharm="urn:ihe:pharm:medication">
+													<pharm:quantity>
+														<pharm:numerator unit="mg" value="500" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pharm:PQ"/>
+														<pharm:denominator value="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pharm:PQ"/>
+													</pharm:quantity>
+													<pharm:ingredient classCode="MMAT" determinerCode="KIND">
+														<pharm:code code="N02BB02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="metamizole sodium"/>
+														<pharm:name>various</pharm:name>
+													</pharm:ingredient>
+												</pharm:ingredient>
+											</manufacturedMaterial>
+										</manufacturedProduct>
+									</consumable>
+									<entryRelationship typeCode="COMP">
+										<sequenceNumber value="1"/>
+										<supply classCode="SPLY" moodCode="RQO">
+											<independentInd value="false"/>
+											<quantity unit="1" value="3"/>
+										</supply>
+									</entryRelationship>
+									<entryRelationship inversionInd="true" typeCode="SUBJ">
+										<act classCode="ACT" moodCode="INT">
+											<templateId root="2.16.840.1.113883.10.20.1.49"/>
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.3"/>
+											<code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode"/>
+											<text>
+												<reference value="#mtp.6.4_pinstruct"/>
+											</text>
+											<statusCode code="completed"/>
+										</act>
+									</entryRelationship>
+									<entryRelationship inversionInd="true" typeCode="SUBJ">
+										<act classCode="ACT" moodCode="INT">
+											<templateId root="2.16.840.1.113883.10.20.1.43"/>
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.3.1"/>
+											<code code="FINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode"/>
+											<text>
+												<reference value="#mtp.6.4_finstruct"/>
+											</text>
+											<statusCode code="completed"/>
+										</act>
+									</entryRelationship>
+									<entryRelationship typeCode='COMP'>
+										<supply classCode="SPLY" moodCode="RQO">
+											<independentInd value="false" />
+											<pharm:subjectOf4>
+												<pharm:substitutionPermission classCode="SUBST" moodCode="PERM">
+													<pharm:code code='E' displayName='equivalent' codeSystem='2.16.840.1.113883.5.1070' codeSystemName='HL7 Substance Admin Substitution'/>
+												</pharm:substitutionPermission>
+											</pharm:subjectOf4>
+										</supply>
+									</entryRelationship>
+								</substanceAdministration>
+							</entryRelationship>
+
+							<!--
+							One or more Pharmaceutical Advice Concern entries, representing validation issues
+							with the objective Prescription- or Dispense Item
+							-->
+							<entryRelationship typeCode='REFR' inversionInd='false'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.27'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.5'/>
+									<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150701090000.1" extension="MTPS-V1-PADV.3.1.1"/>
+									<code nullFlavor='NA'/>
+									<text>
+										<reference value="#padv3"/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20150622100000'/>
+									</effectiveTime>
+
+									<!-- one or more entry relationships identifying problems of concern -->
+									<entryRelationship typeCode='SUBJ' inversionInd='false'>
+										<observation classCode='OBS' moodCode='EVN' negationInd=' false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28'/>
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+											<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150622100000.1" extension="MTPS-V1-PADV.3.1.1.1"/>
+											<code code='282291009' displayName='Diagnosis' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT'/>
+											<!-- cf 1.3.6.1.4.1.19376.1.5.3.1.4.5 -->
+											<text>
+												<reference value="#padv3_rec"/>
+											</text>
+											<statusCode code='completed'/>
+											<effectiveTime>
+												<low value='20150622100000'/>
+											</effectiveTime>
+											<value xsi:type='CD'>
+												<!-- pas de terminologie referencee sinon SNOMED -->
+												<originalText>
+													<reference value="#padv3_rec"/>
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
