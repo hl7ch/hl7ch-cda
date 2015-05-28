@@ -1,0 +1,44 @@
+/*********************************************************
+  Project specific CSS for HL7 CDA Templates for University hospitals of Geneva (HUG)
+  Date: 28.05.2015
+*********************************************************/
+/* Generics */
+h1, h2, h3, th {
+	color: #1D8BC0;	
+}
+
+/* Logo */
+h1 { 
+	font-size: 24px;
+	background: transparent url(LOGO_HUG_H_PANTONES.jpg) no-repeat top right; 
+	margin: 0.83em 0.83em;
+}
+
+/* Header */
+table.head th {
+	color: #1D8BC0;	
+}
+table.head thead tr {
+	background-color: #CEDDFB;
+}
+table.head tr {
+	background-color: #F7F7FA;	
+}
+/* Body Tables */
+table.body tr th {
+	background-color: #CEDDFB;
+}
+table.body tr td {
+	background-color: #F7F7FA;	
+}
+/* Footer */
+table.foot tr th {
+	color: #1D8BC0;	
+	background-color: #CEDDFB;
+}
+table.foot tr td {
+	background-color: #F7F7FA;	
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}
