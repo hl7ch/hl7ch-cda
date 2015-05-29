@@ -1,0 +1,34 @@
+/*********************************************************
+  Project specific CSS for QUALAB
+  Date: 30.05.2015
+*********************************************************/
+/* Logo */
+h1 { 
+	font-size: 24px;
+	background: transparent url(Qualab-Logo.jpg) no-repeat top right; 
+	margin: 0.83em 0.83em;
+}
+/* Header */
+table.head thead tr {
+	background-color: #888888;
+}
+table.head tr {
+	background-color: #EEEEEE;	
+}
+/* Body Tables */
+table.body tr th {
+	background-color: #AAAAAA;
+}
+table.body tr td {
+	background-color: #EEEEEE;	
+}
+/* Footer */
+table.foot tr th {
+	background-color: #AAAAAA;
+}
+table.foot tr td {
+	background-color: #EEEEEE;
+}
+table.foot tr th.empty {
+	background-color: transparent;
+}
