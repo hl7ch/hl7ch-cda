@@ -696,170 +696,6 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 		</xsl:if>
 	</xsl:template>
 
-	<!--
-	<xsl:template name="payer">
-	<table width="100%">
-	<xsl:for-each select="/n1:ClinicalDocument/n1:participant[@typeCode='HLD']">
-	<tr>
-	<td>
-	<b>
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assured']/@displayName"/>
-	<xsl:text>: </xsl:text>
-	</b>
-	</td>
-	<td>
-	<xsl:call-template name="getName">
-	<xsl:with-param name="name" select="n1:associatedEntity/n1:associatedPerson/n1:name"/>
-	</xsl:call-template>
-	</td>
-	<td>
-	<b>
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
-	<xsl:text>: </xsl:text>
-	</b>
-	</td>
-	<td>
-	<xsl:call-template name="getName">
-	<xsl:with-param name="name" select="n1:associatedEntity/n1:scopingOrganization/n1:name"/>
-	</xsl:call-template>
-	</td>
-	</tr>
-	<tr>
-	<td/>
-	<td>
-	<b>ID:</b>
-	<xsl:value-of select="n1:associatedEntity/n1:id/@extension"/>
-	<br/>
-	<xsl:call-template name="getContactInfo">
-	<xsl:with-param name="contact" select="n1:associatedEntity"/>
-	</xsl:call-template>
-	</td>
-	<td/>
-	<td>
-	<xsl:call-template name="getContactInfo">
-	<xsl:with-param name="contact" select="n1:associatedEntity/n1:scopingOrganization"/>
-	</xsl:call-template>
-	</td>
-	</tr>
-	<tr> </tr>
-	</xsl:for-each>
-	</table>
-	</xsl:template>
-
-	<!-/- Participants (z.B. Arbeitgeber, Versicherung)	-/->
-	<xsl:template match="n1:participant">
-	<xsl:variable name="typeCode"	select="@typeCode"/>
-	<xsl:variable name="classCode"	select="n1:associatedEntity/@classCode"/>
-	<xsl:variable name="participantCode"	select="n1:associatedEntity/n1:code/@code"/>
-	<xsl:for-each select="n1:associatedEntity">
-	<b>
-	<xsl:choose>
-	<xsl:when test="$typeCode='COV'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Assurance']/@displayName"/>
-	</xsl:when>
-	<xsl:when test="$typeCode='REF'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Referrer']/@displayName"/>
-	</xsl:when>
-	<xsl:when test="$typeCode='HLD'">
-	<!-/- no header -/->
-	</xsl:when>
-	<xsl:when test="$classCode='CAREGIVER'">
-	<!-/- no header -/->
-	</xsl:when>
-	<xsl:when test="$classCode='ECON'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='EmergencyContacts']/@displayName"/>
-	</xsl:when>
-	<xsl:when test="$classCode='PRS'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='EmergencyContacts']/@displayName"/>
-	</xsl:when>
-	<xsl:when test="$participantCode='EMPLOYER'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$participantCode]/@displayName"/>
-	</xsl:when>
-	<xsl:otherwise>Undefined Participant</xsl:otherwise>
-	</xsl:choose>
-	</b>
-	<xsl:choose>
-	<xsl:when test="not($classCode='CAREGIVER')">
-	<ul>
-	<table class="body">
-	<xsl:choose>
-	<xsl:when test="$participantCode='EMPLOYER'">
-	<tr>
-	<th>
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Company']/@displayName"/>
-	</th>
-	<th>
-	<xsl:call-template name="getName">
-	<xsl:with-param name="name" select="n1:scopingOrganization/n1:name"/>
-	</xsl:call-template>
-	</th>
-	</tr>
-	</xsl:when>
-	<xsl:when test="$classCode='ECON'">
-	<tr>
-	<th>
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Organisation']/@displayName"/>
-	</th>
-	<th>
-	<xsl:call-template name="getContactInfo">
-	<xsl:with-param name="contact" select="n1:scopingOrganization"/>
-	</xsl:call-template>
-	</th>
-	</tr>
-	</xsl:when>
-	</xsl:choose>
-	<xsl:variable name="oid" select="n1:id/@root"/>
-	<xsl:variable name="oidText" select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
-	<xsl:variable name="oidExt" select="n1:id/@extension"/>
-	<xsl:choose>
-	<xsl:when test="$oidText or $oidExt">
-	<tr>
-	<th>
-	<xsl:value-of select="$oidText"/>
-	</th>
-	<th>
-	<xsl:value-of select="$oidExt"/>
-	</th>
-	</tr>
-	</xsl:when>
-	</xsl:choose>
-	<tr>
-	<td>
-	<xsl:choose>
-	<xsl:when test="$typeCode='HLD'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Holder']/@displayName"/>
-	</xsl:when>
-	<xsl:when test="$participantCode='EMPLOYER' or $classCode='ECON'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
-	</xsl:when>
-	<xsl:when test="$typeCode='REF' and $classCode='PROV'">
-	<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='OrderPlacer']/@displayName"/>
-	</xsl:when>
-	<xsl:otherwise>
-	Unknown Type
-	</xsl:otherwise>
-	</xsl:choose>
-	</td>
-	<td>
-	<xsl:call-template name="getName">
-	<xsl:with-param name="name" select="n1:associatedPerson/n1:name"/>
-	</xsl:call-template>
-	<br />
-	<xsl:call-template name="getContactInfo">
-	<xsl:with-param name="contact" select="n1:scopingOrganization"/>
-	</xsl:call-template>
-	</td>
-	</tr>
-	</table>
-	</ul>
-	</xsl:when>
-	</xsl:choose>
-	</xsl:for-each>
-	</xsl:template>
-	-->
-
-	<!--
-	-->
 	<xsl:template name="performer">
 		<table width="100%">
 			<xsl:for-each select="//n1:serviceEvent/n1:performer">
@@ -940,7 +776,8 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:variable>
-								<xsl:for-each select="n1:associatedEntity">
+								<xsl:for-each select="./n1:associatedEntity">
+									<xsl:variable name="idCount" select="count(./n1:id)"/>
 									<xsl:variable name="entityType">
 										<xsl:choose>
 											<xsl:when test="@classCode='COVPTY'">
@@ -967,6 +804,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 											<xsl:when test="@classCode='PROV'">
 												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Provider']/@displayName"/>
 											</xsl:when>
+											<xsl:when test="@classCode='CLAIM'">
+												<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Claim']/@displayName"/>
+											</xsl:when>
 											<xsl:otherwise>
 												Undefined participant entity type
 											</xsl:otherwise>
@@ -975,9 +815,6 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 									<xsl:variable name="entityRole">
 										<xsl:value-of select="n1:code/@code"/>
 									</xsl:variable>
-									<xsl:variable name="oid" select="n1:id/@root"/>
-									<xsl:variable name="oidText" select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oid]/@displayName"/>
-									<xsl:variable name="oidExt" select="n1:id/@extension"/>
 									<tr>
 										<td>
 											<xsl:value-of select="$participantType"/>
@@ -1015,22 +852,34 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 											</xsl:choose>
 										</td>
 										<td>
-											<xsl:choose>
-												<xsl:when test="$oidText">
-													<xsl:value-of select="$oidText"/>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="$oid"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:choose>
-												<xsl:when test="$oid">
-													<xsl:text>:</xsl:text>
-												</xsl:when>
-											</xsl:choose>
+											<xsl:for-each select="./n1:id">
+												<xsl:variable name="oidRoot" select="@root"/>
+												<xsl:variable name="oidText" select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value=$oidRoot]/@displayName"/>
+												<xsl:choose>
+													<xsl:when test="$oidText">
+														<xsl:value-of select="$oidText"/>
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="$oidRoot"/>
+													</xsl:otherwise>
+												</xsl:choose>
+												<xsl:choose>
+													<xsl:when test="$oidRoot">
+														<xsl:text>:</xsl:text>
+														<xsl:if test="$idCount &gt; position()">
+															<br />
+														</xsl:if>
+													</xsl:when>
+												</xsl:choose>
+											</xsl:for-each>
 										</td>
 										<td>
-											<xsl:value-of select="$oidExt"/>
+											<xsl:for-each select="./n1:id">
+												<xsl:value-of select="@extension"/>
+												<xsl:if test="$idCount &gt; position()">
+													<br />
+												</xsl:if>
+											</xsl:for-each>
 										</td>
 									</tr>
 								</xsl:for-each>

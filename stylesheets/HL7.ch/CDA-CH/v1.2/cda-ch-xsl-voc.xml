@@ -14,6 +14,7 @@ History:
 2014.01.22: Tony Schaller, medshare GmbH (Erweiterungen für SOAS; CDA-CH-LRTP)
 2014.03.21: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
 2015.05.29: Tony Schaller, medshare GmbH (Optimierungen bei der Anzeige von Telefonnummern)
+2015.05.29: Tony Schaller, medshare GmbH (Optimierungen bei der Anzeige von ZSR-Nummern)
 
 ********************************************************
 -->
@@ -288,6 +289,11 @@ History:
   <text language="it" value="1.3.88" displayName="GS1 GLN"/>
   <text language="en" value="1.3.88" displayName="GS1 GLN"/>
 
+  <text language="de" value="2.16.756.5.30.1.123.100.2.1.1" displayName="ZSR-Nummer"/>
+  <text language="fr" value="2.16.756.5.30.1.123.100.2.1.1" displayName="n° RCC"/>
+  <text language="it" value="2.16.756.5.30.1.123.100.2.1.1" displayName="n° RCC"/>
+  <text language="en" value="2.16.756.5.30.1.123.100.2.1.1" displayName="ZSR number"/>
+
 	<!-- deprecated -->
   <text language="de" value="2.16.756.5.34" displayName="Versichertenkarte"/>
 	<text language="fr" value="2.16.756.5.34" displayName="Carte d’assuré"/>
@@ -354,6 +360,11 @@ History:
   <text language="fr" value="Provider" displayName="Prestateur"/>
   <text language="it" value="Provider" displayName="tbd it 'Provider'"/>
   <text language="en" value="Provider" displayName="Provider"/>
+
+  <text language="de" value="Claim" displayName="Abrechnung"/>
+  <text language="fr" value="Claim" displayName="Comptabilité"/>
+  <text language="it" value="Claim" displayName="tbd it 'Claim'"/>
+  <text language="en" value="Claim" displayName="Accounting"/>
 
   <text language="de" value="ParticipantType" displayName="Art des Kontakts"/>
   <text language="fr" value="ParticipantType" displayName="Type de contact"/>
