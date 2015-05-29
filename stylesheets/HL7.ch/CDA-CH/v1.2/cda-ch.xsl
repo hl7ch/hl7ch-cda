@@ -1283,6 +1283,9 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:when test="$code='WP'">
 				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='workplace']/@displayName"/>
 			</xsl:when>
+			<xsl:when test="$code='MC'">
+				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='mobile']/@displayName"/>
+			</xsl:when>
 			<xsl:when test="$code='PUB'">
 				<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='workplace']/@displayName"/>
 			</xsl:when>

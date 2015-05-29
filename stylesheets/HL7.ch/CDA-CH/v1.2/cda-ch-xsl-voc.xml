@@ -13,7 +13,7 @@ History:
 2013.07.24: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
 2014.01.22: Tony Schaller, medshare GmbH (Erweiterungen für SOAS; CDA-CH-LRTP)
 2014.03.21: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
-
+2015.05.29: Tony Schaller, medshare GmbH (Optimierungen bei der Anzeige von Telefonnummern)
 
 ********************************************************
 -->
@@ -194,7 +194,7 @@ History:
   <text language="en" value="DataEnterer" displayName="Data enterer"/>
 
   <text language="de" value="Tel" displayName="Tel"/>
-	<text language="fr" value="Tel" displayName="Tel"/>
+	<text language="fr" value="Tel" displayName="Tél"/>
   <text language="it" value="Tel" displayName="Tel"/>
   <text language="en" value="Tel" displayName="Tel"/>
 
@@ -213,12 +213,17 @@ History:
   <text language="it" value="Web" displayName="Web"/>
   <text language="en" value="Web" displayName="Web"/>
 
-  <text language="de" value="home" displayName="p"/>
-  <text language="fr" value="home" displayName="p"/>
+  <text language="de" value="home" displayName="privat"/>
+  <text language="fr" value="home" displayName="privé"/>
   <text language="it" value="home" displayName="casa"/>
   <text language="en" value="home" displayName="HP"/>
 
-  <text language="de" value="workplace" displayName="g"/>
+  <text language="de" value="mobile" displayName="mobil"/>
+  <text language="fr" value="mobile" displayName="mobile"/>
+  <text language="it" value="mobile" displayName="mobile"/>
+  <text language="en" value="mobile" displayName="MC"/>
+
+  <text language="de" value="workplace" displayName="Geschäft"/>
   <text language="fr" value="workplace" displayName="travail"/>
   <text language="it" value="workplace" displayName="ufficio"/>
   <text language="en" value="workplace" displayName="WP"/>
