@@ -1089,19 +1089,24 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 								<xsl:with-param name="name" select="n1:intendedRecipient/n1:informationRecipient/n1:name"/>
 							</xsl:call-template>
 						</xsl:if>
-						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
-							<xsl:call-template name="getName">
-								<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
-							</xsl:call-template>
-						</xsl:if>
 					</td>
 				</tr>
 				<tr>
 					<th class="empty"/>
 					<td>
 						<xsl:call-template name="getContactInfo">
-							<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
+							<xsl:with-param name="contact" select="n1:intendedRecipient"/>
 						</xsl:call-template>
+						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
+							<br />
+							<xsl:call-template name="getName">
+								<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
+							</xsl:call-template>
+							<br />
+							<xsl:call-template name="getContactInfo">
+								<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
+							</xsl:call-template>
+						</xsl:if>
 					</td>
 				</tr>
 			</xsl:for-each>
