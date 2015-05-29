@@ -7,6 +7,7 @@ History:
 2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
 2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
 2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
+2015.03.12: Tony Schaller, medshare GmbH (Korrektur Country, Patient Telecom hinzugefügt)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -41,9 +42,10 @@ History:
 				<houseNumber>10</houseNumber>
 				<postalCode>9876</postalCode>
 				<city>Specimendorf</city>
-				<country>CH</country>
+				<country>CHE</country>
 			</addr>
-			<telecom nullFlavor='MSK' />
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
 			<patient>
 				<name>
 					<given>Sesuna</given>
@@ -68,7 +70,7 @@ History:
 				<houseNumber>2</houseNumber>
 				<postalCode>8888</postalCode>
 				<city>Musterhausen</city>
-				<country>CH</country>
+				<country>CHE</country>
 			</addr>
 			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
 			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
@@ -90,7 +92,7 @@ History:
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
-					<country>CH</country>
+					<country>CHE</country>
 				</addr>
 			</representedOrganization>
 		</assignedAuthor>
@@ -105,7 +107,7 @@ History:
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
-					<country>CH</country>
+					<country>CHE</country>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
@@ -131,7 +133,7 @@ History:
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
-					<country>CH</country>
+					<country>CHE</country>
 				</addr>
 			</representedOrganization>
 		</assignedEntity>
@@ -199,7 +201,7 @@ History:
 									<td>04.06.2014</td>
 									<td>
 										<content ID='ii2'>
-										  Masern, Mumps, Röteln
+											Masern, Mumps, Röteln
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
@@ -221,7 +223,7 @@ History:
 									<td>04.06.2014</td>
 									<td>
 										<content ID='ii3'>
-										  Hepatitis B
+											Hepatitis B
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
@@ -243,7 +245,7 @@ History:
 									<td>04.06.2014</td>
 									<td>
 										<content ID='ii4'>
-										  Papilloma-Virus
+											Papilloma-Virus
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
@@ -288,10 +290,10 @@ History:
 									<manufacturedMaterial>
 										<code code='J07CA02' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												diphtheria-pertussis-poliomyelitis-tetanus 
+												diphtheria-pertussis-poliomyelitis-tetanus
 												<reference value='#ii1'/>
 											</originalText>
-											</code>
+										</code>
 										<name>BOOSTRIX Polio Inj Susp</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -321,7 +323,7 @@ History:
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
 										<city>Musterhausen</city>
-										<country>CH</country>
+										<country>CHE</country>
 									</addr>
 									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
 									<telecom use='PUB' value='mailto:info@cdss.ch'/>
@@ -423,7 +425,7 @@ History:
 												measles, combinations with mumps and rubella, live attenuated
 												<reference value='#ii2'/>
 											</originalText>
-											</code>
+										</code>
 										<name>MMRVAXPRO Trockensub c Solv</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -453,7 +455,7 @@ History:
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
 										<city>Musterhausen</city>
-										<country>CH</country>
+										<country>CHE</country>
 									</addr>
 									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
 									<telecom use='PUB' value='mailto:info@cdss.ch'/>
@@ -546,7 +548,7 @@ History:
 												hepatitis B, purified antigen
 												<reference value='#ii3'/>
 											</originalText>
-											</code>
+										</code>
 										<name>ENGERIX B 20 Inj Susp Erw</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -576,7 +578,7 @@ History:
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
 										<city>Musterhausen</city>
-										<country>CH</country>
+										<country>CHE</country>
 									</addr>
 									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
 									<telecom use='PUB' value='mailto:info@cdss.ch'/>
@@ -651,7 +653,7 @@ History:
 												papillomavirus (human types 6, 11, 16, 18)
 												<reference value='#ii4'/>
 											</originalText>
-											</code>
+										</code>
 										<name>GARDASIL Inj Susp m Nad o SD</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -681,7 +683,7 @@ History:
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
 										<city>Musterhausen</city>
-										<country>CH</country>
+										<country>CHE</country>
 									</addr>
 									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
 									<telecom use='PUB' value='mailto:info@cdss.ch'/>
