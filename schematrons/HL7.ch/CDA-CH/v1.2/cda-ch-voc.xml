@@ -15,7 +15,7 @@ History:
 2014.03.21: Tony Schaller, medshare GmbH (RC1 CDA-CH-SMCP)
 2014.05.11: Tony Schaller, medshare GmbH (RouteOfAdminstration ergänzt: Injection, intramuscular)
 2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
-
+2015.96.11: Oliver Egger, ahdis gmbh (updating PCC IHE-PCC-TF2-Table-6.3.4.16.7-1)
 ********************************************************
 -->
 <systems>
@@ -1133,6 +1133,7 @@ History:
 		<code value='182904002' displayName='Drug Treatment Unknown' />
 		<code value='182849000' displayName='No Drug Therapy Prescribed' />
 		<code value='408350003' displayName='Patient Not On Self-Medications' />
+		<code value='406149000' displayName='Medication refused, Patient Objective' /> 
 	</system>
 
 	<!-- 
