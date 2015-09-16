@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- ********************************************************
-Beispiel eVACDOC zum Darstellen eines elektronischen Impfausweises
+Sample for eVACDOC containing a patient as author in order to test Schematron rules
+Copied from CDA-CH-VACD_Impfausweis.xml:
+- changed all author elements to a patient
 
 History:
-2014.04.03: Tony Schaller, medshare GmbH (Dokument erstellt im Einklang mit den Schematronregeln)
-2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
-2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
-2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
-2015.09.16: Tony Schaller, medshare GmbH (Anpassung auf Update CDA-CH-VACD)
+2015.09.16: Tony Schaller, medshare GmbH (Sample Creation)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -60,40 +58,24 @@ History:
 		</patientRole>
 	</recordTarget>
 	<author>
-		<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+		<functionCode nullFlavor='NA' />
 		<time value='20150604'/>
 		<assignedAuthor>
-			<id extension='7608888888888' root='1.3.88'/>
-			<addr use='WP'>
-				<streetName>Doktorgasse</streetName>
-				<houseNumber>2</houseNumber>
-				<postalCode>8888</postalCode>
-				<city>Musterhausen</city>
+			<id extension='898989' root='2.16.756.5.30.999999999999'/>
+			<addr use='HP'>
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Specimendorf</city>
 				<country>CH</country>
 			</addr>
-			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
-			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
-			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
-			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
+			<telecom nullFlavor='MSK' />
 			<assignedPerson>
 				<name>
-					<prefix>Dr. med.</prefix>
-					<given>Allzeit</given>
-					<family>Bereit</family>
-					<suffix>Facharzt für Allgemeine Medizin</suffix>
+					<given>Sesuna</given>
+					<family>Tigrinja</family>
 				</name>
 			</assignedPerson>
-			<representedOrganization>
-				<id nullFlavor='NA'/>
-				<name>Gruppenpraxis CH</name>
-				<addr use='WP'>
-					<streetName>Doktorgasse</streetName>
-					<houseNumber>2</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</representedOrganization>
 		</assignedAuthor>
 	</author>
 	<custodian>
@@ -355,31 +337,24 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<functionCode nullFlavor='NA' />
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
-									<addr use='WP'>
-										<streetName>Rathaus</streetName>
-										<postalCode>8888</postalCode>
-										<city>Musterhausen</city>
+									<id extension='898989' root='2.16.756.5.30.999999999999'/>
+									<addr use='HP'>
+										<streetName>Leidensweg</streetName>
+										<houseNumber>10</houseNumber>
+										<postalCode>9876</postalCode>
+										<city>Specimendorf</city>
 										<country>CH</country>
 									</addr>
-									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
-									<telecom use='PUB' value='mailto:info@cdss.ch'/>
-									<telecom use='PUB' value='http://www.cdss.ch'/>
+									<telecom nullFlavor='MSK' />
 									<assignedPerson>
 										<name>
-											<prefix>Prof.</prefix>
-											<given>Pieks</given>
-											<family>Ratschlag</family>
-											<suffix>Immunologin</suffix>
+											<given>Sesuna</given>
+											<family>Tigrinja</family>
 										</name>
 									</assignedPerson>
-									<representedOrganization>
-										<id nullFlavor='NA'/>
-										<name>CDSS AG</name>
-									</representedOrganization>
 								</assignedAuthor>
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -541,31 +516,24 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<functionCode nullFlavor='NA' />
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
-									<addr use='WP'>
-										<streetName>Rathaus</streetName>
-										<postalCode>8888</postalCode>
-										<city>Musterhausen</city>
+									<id extension='898989' root='2.16.756.5.30.999999999999'/>
+									<addr use='HP'>
+										<streetName>Leidensweg</streetName>
+										<houseNumber>10</houseNumber>
+										<postalCode>9876</postalCode>
+										<city>Specimendorf</city>
 										<country>CH</country>
 									</addr>
-									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
-									<telecom use='PUB' value='mailto:info@cdss.ch'/>
-									<telecom use='PUB' value='http://www.cdss.ch'/>
+									<telecom nullFlavor='MSK' />
 									<assignedPerson>
 										<name>
-											<prefix>Prof.</prefix>
-											<given>Pieks</given>
-											<family>Ratschlag</family>
-											<suffix>Immunologin</suffix>
+											<given>Sesuna</given>
+											<family>Tigrinja</family>
 										</name>
 									</assignedPerson>
-									<representedOrganization>
-										<id nullFlavor='NA'/>
-										<name>CDSS AG</name>
-									</representedOrganization>
 								</assignedAuthor>
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -707,31 +675,24 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<functionCode nullFlavor='NA' />
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
-									<addr use='WP'>
-										<streetName>Rathaus</streetName>
-										<postalCode>8888</postalCode>
-										<city>Musterhausen</city>
+									<id extension='898989' root='2.16.756.5.30.999999999999'/>
+									<addr use='HP'>
+										<streetName>Leidensweg</streetName>
+										<houseNumber>10</houseNumber>
+										<postalCode>9876</postalCode>
+										<city>Specimendorf</city>
 										<country>CH</country>
 									</addr>
-									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
-									<telecom use='PUB' value='mailto:info@cdss.ch'/>
-									<telecom use='PUB' value='http://www.cdss.ch'/>
+									<telecom nullFlavor='MSK' />
 									<assignedPerson>
 										<name>
-											<prefix>Prof.</prefix>
-											<given>Pieks</given>
-											<family>Ratschlag</family>
-											<suffix>Immunologin</suffix>
+											<given>Sesuna</given>
+											<family>Tigrinja</family>
 										</name>
 									</assignedPerson>
-									<representedOrganization>
-										<id nullFlavor='NA'/>
-										<name>CDSS AG</name>
-									</representedOrganization>
 								</assignedAuthor>
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -833,31 +794,24 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<functionCode nullFlavor='NA' />
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
-									<addr use='WP'>
-										<streetName>Rathaus</streetName>
-										<postalCode>8888</postalCode>
-										<city>Musterhausen</city>
+									<id extension='898989' root='2.16.756.5.30.999999999999'/>
+									<addr use='HP'>
+										<streetName>Leidensweg</streetName>
+										<houseNumber>10</houseNumber>
+										<postalCode>9876</postalCode>
+										<city>Specimendorf</city>
 										<country>CH</country>
 									</addr>
-									<telecom use='PUB' value='tel:+41.99.999.99.99'/>
-									<telecom use='PUB' value='mailto:info@cdss.ch'/>
-									<telecom use='PUB' value='http://www.cdss.ch'/>
+									<telecom nullFlavor='MSK' />
 									<assignedPerson>
 										<name>
-											<prefix>Prof.</prefix>
-											<given>Pieks</given>
-											<family>Ratschlag</family>
-											<suffix>Immunologin</suffix>
+											<given>Sesuna</given>
+											<family>Tigrinja</family>
 										</name>
 									</assignedPerson>
-									<representedOrganization>
-										<id nullFlavor='NA'/>
-										<name>CDSS AG</name>
-									</representedOrganization>
 								</assignedAuthor>
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>

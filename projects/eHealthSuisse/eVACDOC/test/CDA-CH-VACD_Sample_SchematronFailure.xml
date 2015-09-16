@@ -15,6 +15,7 @@ History:
 2014.05.18: Tony Schaller, medshare GmbH (Anpassungen während Erstellung der Schematronregeln)
 2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
 2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
+2015.09.16: Tony Schaller, medshare GmbH (Anpassung auf Update CDA-CH-VACD)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -67,7 +68,7 @@ History:
 		</patientRole>
 	</recordTarget>
 	<author>
-		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
+		<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
 		<time value='20100203'/>
 		<assignedAuthor>
 			<id extension='7608888888888' root='1.3.88'/>
@@ -225,7 +226,7 @@ History:
 									</td>
 									<td>GlaxoSmithKline AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii1'>
 											Diphterie, Tetanus, Keuchhusten, Kinderlähmung
@@ -247,7 +248,7 @@ History:
 									</td>
 									<td>Sanofi Pasteur MSD AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii2'>
 										  Masern, Mumps, Röteln
@@ -269,7 +270,7 @@ History:
 									</td>
 									<td>GlaxoSmithKline AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii3'>
 										  Hepatitis B
@@ -291,7 +292,7 @@ History:
 									</td>
 									<td>Sanofi Pasteur MSD AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii4'>
 										  Papilloma-Virus
@@ -324,7 +325,7 @@ History:
 								<reference value='#ip1'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -354,7 +355,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -368,7 +369,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -456,7 +458,7 @@ History:
 								<reference value='#ip2'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -486,7 +488,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -500,7 +502,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -579,7 +582,7 @@ History:
 								<reference value='#ip3'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -609,7 +612,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -623,7 +626,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -684,7 +688,7 @@ History:
 								<reference value='#ip4'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -714,7 +718,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -728,7 +732,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -758,8 +763,7 @@ History:
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
-									<!-- derzeit kein Code für Papilloma-Virus verfügbar -->
-									<code nullFlavor='NAV' />
+									<code code='428570002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vaccination for human papillomavirus (procedure)' />
 									<statusCode code='completed'/>
 
 								</observation>
@@ -855,7 +859,7 @@ History:
 										<low value='20120801'/>
 										<high nullFlavor='UNK' />
 									</effectiveTime>
-									<value xsi:type='CD' code='23' codeSystem='2.16.756.5.30.1.127.3.3.2013.1' codeSystemName='compl-risks' displayName='Niereninsuffizienz' >
+									<value xsi:type='CD' code='113023' codeSystem='2.16.756.5.30.1.127.3.3.1' codeSystemName='compl-risks' displayName='Niereninsuffizienz' >
 										<originalText>
 											<reference value='#p12'/>
 										</originalText>
@@ -893,7 +897,7 @@ History:
 										<low value='20120801'/>
 										<high nullFlavor='UNK' />
 									</effectiveTime>
-									<value xsi:type='CD' code='06' codeSystem='2.16.756.5.30.1.127.3.3.2013.2' codeSystemName='exp-risks' displayName='Fledermausforscher und -schützer' >
+									<value xsi:type='CD' code='213006' codeSystem='2.16.756.5.30.1.127.3.3.2' codeSystemName='exp-risks' displayName='Fledermausforscher und -schützer' >
 										<originalText>
 											<reference value='#p22'/>
 										</originalText>
@@ -1274,7 +1278,7 @@ History:
 											Diphterie, Tetanus, Keuchhusten, Kinderlähmung
 										</content>
 									</td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
 								</tr>
@@ -1292,7 +1296,7 @@ History:
 										  Masern, Mumps, Röteln
 										</content>
 									</td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
 								</tr>
@@ -1310,7 +1314,7 @@ History:
 										  Hepatitis B
 										</content>
 									</td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
 								</tr>
@@ -1328,7 +1332,7 @@ History:
 										  Papilloma-Virus
 										</content>
 									</td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>Prof. Pieks Ratschlag, Immunologin</td>
 									<td><linkHtml href='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'>Schweizerischer Impfplan</linkHtml></td>
 								</tr>
@@ -1347,7 +1351,7 @@ History:
 								<reference value='#irp1'/>
 							</text>
 							<statusCode code='active'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -1377,7 +1381,8 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -1485,7 +1490,7 @@ History:
 								<reference value='#irp2'/>
 							</text>
 							<statusCode code='active'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -1515,7 +1520,8 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -1606,7 +1612,7 @@ History:
 								<reference value='#irp3'/>
 							</text>
 							<statusCode code='active'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -1636,7 +1642,8 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -1693,7 +1700,7 @@ History:
 								<reference value='#irp4'/>
 							</text>
 							<statusCode code='active'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -1723,7 +1730,8 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -1753,8 +1761,7 @@ History:
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
-									<!-- derzeit kein Code für Papilloma-Virus verfügbar -->
-									<code nullFlavor='NAV' />
+									<code code='428570002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vaccination for human papillomavirus (procedure)' />
 									<statusCode code='completed'/>
 									<reference typeCode='REFR'>
 										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />

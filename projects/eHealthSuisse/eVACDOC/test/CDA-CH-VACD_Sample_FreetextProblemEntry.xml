@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- ********************************************************
 Sample for eVACDOC containing a ProblemEntry as narrative text in order to test Schematron rules
+Copied from CDA-CH-VACD_Impfausweis.xml:
+- added History of Past Illness Section content (1.3.6.1.4.1.19376.1.5.3.1.3.8) 
+- removed Comments Section content (1.3.6.1.4.1.19376.1.5.3.1.4.2)
 
 History:
-2015.09.02: Tony Schaller, medshare GmbH (Sample Creation)
+2015.02.09: Tony Schaller, medshare GmbH (Sample Creation)
+2015.09.16: Tony Schaller, medshare GmbH (Anpassung auf Update CDA-CH-VACD)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -22,17 +26,17 @@ History:
 	<!-- eVACDOC (VACD) V1 -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH-VACD' />
 
-	<id extension='D2C32126-C0A3-42DA-9E0F-62BF7C965538' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
+	<id extension='56B94FF0-3D35-4BC2-8F3C-0065EA83BB8D' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
 	<code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF IMMUNIZATIONS'/>
-	<title>eVACDOC - Schematron Test - Bisherige Krankheit als Freitext</title>
-	<effectiveTime value='20130423'/>
+	<title>eVACDOC</title>
+	<effectiveTime value='20150604'/>
 	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
 	<languageCode code='de-CH'/>
-	<setId extension='D2C32126-C0A3-42DA-9E0F-62BF7C965538' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
+	<setId extension='77CF85B2-E1A9-4CEA-A513-2DC581DA595F' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
 	<versionNumber value='1'/>
 	<recordTarget>
 		<patientRole>
-			<id extension='123.71.332.115' root='2.16.756.5.31'/>
+			<id extension='898989' root='2.16.756.5.30.999999999999'/>
 			<addr use='HP'>
 				<streetName>Leidensweg</streetName>
 				<houseNumber>10</houseNumber>
@@ -40,14 +44,14 @@ History:
 				<city>Specimendorf</city>
 				<country>CH</country>
 			</addr>
-			<telecom use='HP' value='tel:+41.32.685.12.34'/>
+			<telecom nullFlavor='MSK' />
 			<patient>
 				<name>
-					<given>Heidi</given>
-					<family>Schweizer</family>
+					<given>Sesuna</given>
+					<family>Tigrinja</family>
 				</name>
 				<administrativeGenderCode code='F' codeSystem='2.16.840.1.113883.5.1'/>
-				<birthTime value='19670520'/>
+				<birthTime value='20000404'/>
 			</patient>
 			<providerOrganization>
 				<id extension='7608888888888' root='1.3.88'/>
@@ -56,8 +60,8 @@ History:
 		</patientRole>
 	</recordTarget>
 	<author>
-		<functionCode  code='221'  codeSystem='2.16.840.1.113883.2.9.6.2.7'  codeSystemName='ISCO-08'  displayName='Medical doctors'/>
-		<time value='20100203'/>
+		<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+		<time value='20150604'/>
 		<assignedAuthor>
 			<id extension='7608888888888' root='1.3.88'/>
 			<addr use='WP'>
@@ -95,7 +99,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id nullFlavor='NA'/>
+				<id extension='7608888888888' root='1.3.88'/>
 				<name>Gruppenpraxis CH</name>
 				<addr use='WP'>
 					<streetName>Doktorgasse</streetName>
@@ -108,7 +112,7 @@ History:
 		</assignedCustodian>
 	</custodian>
 	<legalAuthenticator>
-		<time value='20111110'/>
+		<time value='20150604'/>
 		<signatureCode code='S'/>
 		<assignedEntity>
 			<id extension='7608888888888' root='1.3.88'/>
@@ -133,56 +137,13 @@ History:
 			</representedOrganization>
 		</assignedEntity>
 	</legalAuthenticator>
-	<participant typeCode='COV'>
-		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.Insurance"/>
-		<time>
-			<low nullFlavor='NASK' />
-			<high nullFlavor='NASK' />
-		</time>
-		<associatedEntity classCode='PAYOR'>
-			<associatedPerson>
-				<name>
-					<given>Kontakt</given>
-					<family>Person</family>
-				</name>
-			</associatedPerson>
-			<scopingOrganization>
-				<!-- EAN der Versicherung -->
-				<id extension='7607777777777' root='1.3.88'/>
-				<name>WirZahlenAlles Versicherungen</name>
-				<telecom nullFlavor='NASK' />
-				<addr use='WP'>
-					<streetName>Zahlgasse</streetName>
-					<houseNumber>89</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-				</addr>
-			</scopingOrganization>
-		</associatedEntity>
-	</participant>
-	<participant typeCode='HLD'>
-		<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Head.InsuranceCard"/>
-		<time>
-			<low nullFlavor='NASK' />
-			<high value='20141231' />
-		</time>
-		<associatedEntity classCode='POLHOLD'>
-			<!-- Nummer der Versichertenkarte -->
-			<id extension='8077560000000000000000' root='2.16.756.5.30.1.123.100.1.1.1'/>
-			<associatedPerson>
-				<name>
-					<given>Max</given>
-					<family>MUSTER</family>
-				</name>
-			</associatedPerson>
-		</associatedEntity>
-	</participant>
 	<!--
 	********************************************************
 	CDA Body
 	******************************************************** -->
 	<component>
 		<structuredBody>
+
 			<!--
 			********************************************************
 			Required History of Immunizations Section content (1.3.6.1.4.1.19376.1.5.3.1.3.23)
@@ -204,6 +165,7 @@ History:
 									<th>Impfung gegen</th>
 									<th>Impfung erfolgt durch</th>
 									<th>Impfung dokumentiert durch</th>
+									<th>EKIF Empfehlungskategorie</th>
 									<th>Bemerkung</th>
 								</tr>
 								<tr>
@@ -214,16 +176,32 @@ History:
 									</td>
 									<td>GlaxoSmithKline AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii1'>
-											Diphterie, Tetanus, Keuchhusten, Kinderlähmung
+											<content ID='ii11'>
+												Diphterie
+											</content>/
+											<content ID='ii12'>
+												Tetanus
+											</content>/
+											<content ID='ii13'>
+												Keuchhusten
+											</content>/
+											<content ID='ii14'>
+												Kinderlähmung
+											</content>
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>
-										<content ID='ic1'>
+										<content ID='ica1'>
+											Empfohlene Basisimpfungen
+										</content>
+									</td>
+									<td>
+										<content ID='ico1'>
 											Anlässlich Schularztuntersuchung
 										</content>
 									</td>
@@ -236,16 +214,29 @@ History:
 									</td>
 									<td>Sanofi Pasteur MSD AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii2'>
-										  Masern, Mumps, Röteln
+											<content ID='ii21'>
+												Masern
+											</content>/
+											<content ID='ii22'>
+												Mumps
+											</content>/
+											<content ID='ii23'>
+												Röteln
+											</content>
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>
-										<content ID='ic2'>
+										<content ID='ica2'>
+											Empfohlene Basisimpfungen
+										</content>
+									</td>
+									<td>
+										<content ID='ico2'>
 											Anlässlich Schularztuntersuchung
 										</content>
 									</td>
@@ -258,16 +249,21 @@ History:
 									</td>
 									<td>GlaxoSmithKline AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii3'>
-										  Hepatitis B
+											Hepatitis B
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>
-										<content ID='ic3'>
+										<content ID='ica3'>
+											Empfohlene Basisimpfungen
+										</content>
+									</td>
+									<td>
+										<content ID='ico3'>
 											Anlässlich Schularztuntersuchung
 										</content>
 									</td>
@@ -280,16 +276,21 @@ History:
 									</td>
 									<td>Sanofi Pasteur MSD AG</td>
 									<td></td>
-									<td>04.06.2014</td>
+									<td>04.06.2015</td>
 									<td>
 										<content ID='ii4'>
-										  Papilloma-Virus
+											Papilloma-Virus
 										</content>
 									</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>Dr. med. Allzeit Bereit</td>
 									<td>
-										<content ID='ic4'>
+										<content ID='ica4'>
+											Empfohlene Basisimpfungen
+										</content>
+									</td>
+									<td>
+										<content ID='ico4'>
 											Anlässlich Schularztuntersuchung
 										</content>
 									</td>
@@ -304,13 +305,13 @@ History:
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id root='2.999' extension='328709' /> 
+							<id root='2.999' extension='328709' />
 							<code code='IMMUNIZ' codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode'/>
 							<text>
 								<reference value='#ip1'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -328,10 +329,10 @@ History:
 									<manufacturedMaterial>
 										<code code='J07CA02' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
-												diphtheria-pertussis-poliomyelitis-tetanus 
+												diphtheria-pertussis-poliomyelitis-tetanus
 												<reference value='#ii1'/>
 											</originalText>
-											</code>
+										</code>
 										<name>BOOSTRIX Polio Inj Susp</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -340,7 +341,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -354,7 +355,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -385,8 +387,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='76668005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diphtheria vaccination (procedure)' />
+									<text>
+										<reference value='#ii11'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -394,8 +407,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='127786006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Tetanus vaccination (procedure)' />
+									<text>
+										<reference value='#ii12'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -403,8 +427,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='39343008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pertussis vaccination (procedure)' />
+									<text>
+										<reference value='#ii13'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -412,8 +447,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='72093006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Poliomyelitis vaccination (procedure)' />
+									<text>
+										<reference value='#ii14'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
@@ -422,11 +468,20 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<text>
-										<reference value='#ic1'/>
+										<reference value='#ico1'/>
 									</text>
 									<statusCode code='completed'/>
 								</act>
 							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
+									<text>
+										<reference value='#ica1' />
+									</text>
+								</criterion>
+							</precondition>
 						</substanceAdministration>
 					</entry>
 					<entry>
@@ -442,7 +497,7 @@ History:
 								<reference value='#ip2'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -463,7 +518,7 @@ History:
 												measles, combinations with mumps and rubella, live attenuated
 												<reference value='#ii2'/>
 											</originalText>
-											</code>
+										</code>
 										<name>MMRVAXPRO Trockensub c Solv</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -472,7 +527,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -486,7 +541,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -517,8 +573,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='47435007' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Measles vaccination (procedure)' />
+									<text>
+										<reference value='#ii21'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -526,8 +593,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='50583002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Mumps vaccination (procedure)' />
+									<text>
+										<reference value='#ii22'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
@@ -535,8 +613,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='82314000' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Rubella vaccination (procedure)' />
+									<text>
+										<reference value='#ii23'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
@@ -545,11 +634,20 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<text>
-										<reference value='#ic2'/>
+										<reference value='#ico2'/>
 									</text>
 									<statusCode code='completed'/>
 								</act>
 							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
+									<text>
+										<reference value='#ica2' />
+									</text>
+								</criterion>
+							</precondition>
 						</substanceAdministration>
 					</entry>
 					<entry>
@@ -565,7 +663,7 @@ History:
 								<reference value='#ip3'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -586,7 +684,7 @@ History:
 												hepatitis B, purified antigen
 												<reference value='#ii3'/>
 											</originalText>
-											</code>
+										</code>
 										<name>ENGERIX B 20 Inj Susp Erw</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -595,7 +693,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -609,7 +707,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -640,8 +739,19 @@ History:
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='16584000' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Hepatitis B vaccination (procedure)' />
+									<text>
+										<reference value='#ii3'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
@@ -650,11 +760,20 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<text>
-										<reference value='#ic3'/>
+										<reference value='#ico3'/>
 									</text>
 									<statusCode code='completed'/>
 								</act>
 							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
+									<text>
+										<reference value='#ica3' />
+									</text>
+								</criterion>
+							</precondition>
 						</substanceAdministration>
 					</entry>
 					<entry>
@@ -670,7 +789,7 @@ History:
 								<reference value='#ip4'/>
 							</text>
 							<statusCode code='completed'/>
-							<effectiveTime value='20140604' />
+							<effectiveTime value='20150604' />
 							<priorityCode nullFlavor='NASK' />
 							<routeCode nullFlavor='NASK' />
 							<approachSiteCode nullFlavor='NASK'>
@@ -691,7 +810,7 @@ History:
 												papillomavirus (human types 6, 11, 16, 18)
 												<reference value='#ii4'/>
 											</originalText>
-											</code>
+										</code>
 										<name>GARDASIL Inj Susp m Nad o SD</name>
 									</manufacturedMaterial>
 									<manufacturerOrganization>
@@ -700,7 +819,7 @@ History:
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value='20140604' />
+								<time value='20150604' />
 								<assignedEntity>
 									<id extension='7608888888888' root='1.3.88'/>
 									<assignedPerson>
@@ -714,7 +833,8 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<time value='20140604' />
+								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
+								<time value='20150604' />
 								<assignedAuthor>
 									<id extension='7607777777777' root='1.3.88'/>
 									<addr use='WP'>
@@ -744,10 +864,20 @@ History:
 								<observation classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
 									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
-									<!-- derzeit kein Code für Papilloma-Virus verfügbar -->
-									<code nullFlavor='NAV' />
+									<code code='428570002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vaccination for human papillomavirus (procedure)' />
+									<text>
+										<reference value='#ii4'/>
+									</text>
 									<statusCode code='completed'/>
-
+									<reference typeCode='REFR'>
+										<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.ExtRef' />
+										<externalDocument classCode='DOC' moodCode='EVN'>
+											<id root='2.16.756.5.30.1.1.1.1.3.6.21' extension='DD76154A-FB44-4291-88C4-FE8CACE38321'/>
+											<text>
+												<reference value='http://www.bag.admin.ch/ekif/04423/04428/index.html?lang=de'/>
+											</text>
+										</externalDocument>
+									</reference>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode='SUBJ' inversionInd='true'>
@@ -756,11 +886,20 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
 									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
 									<text>
-										<reference value='#ic4'/>
+										<reference value='#ico4'/>
 									</text>
 									<statusCode code='completed'/>
 								</act>
 							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
+									<text>
+										<reference value='#ica4' />
+									</text>
+								</criterion>
+							</precondition>
 						</substanceAdministration>
 					</entry>
 				</section>

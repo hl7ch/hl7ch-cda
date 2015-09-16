@@ -2,14 +2,14 @@
 <!--
 ********************************************************
 
-CDA-CH-VACD
+CDA-CH-VACD Vocabulary
 eVACDOC
-
 
 History:
 2014.03.25: Tony Schaller, medshare GmbH (First Draft)
 2014.04.02: Patrick Chaubert für medshare GmbH (Basis-Implementierung)
 2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
+2015.09.16: Tony Schaller, medshare GmbH (Update auf neues Value-Set)
 
 ********************************************************
 -->
@@ -23,33 +23,6 @@ History:
 		<code value='SQ' displayName='Injection, subcutaneous/Injektion, subkutan' />
 		<code value='TRNSDERMD' displayName='Diffusion, transdermal/Diffusion, transdermal' />
 		<code value='IM' displayName='Injection, intramuscular/Injektion, intramuskulär' />
-	</system>
-	
-	<!-- VACD Impfungen -->
-	<system codeSystemName='VACD_Immunizations' root='2.16.840.1.113883.6.96'>
-		<code value='76668005' displayName='Diphtheria vaccination (procedure)' />
-		<code value='127787002' displayName='Haemophilus influenzae type b vaccination (procedure)' />
-		<code value='243789007' displayName='Hepatitis A immunization (procedure)' />
-		<code value='16584000' displayName='Hepatitis B vaccination (procedure)' />
-		<code value='86198006' displayName='Influenza vaccination (procedure)' />
-		<code value='314759000' displayName='Japanese encephalitis vaccination (procedure)' />
-		<code value='47435007' displayName='Measles vaccination (procedure)' />
-		<code value='41088001' displayName='Meningococcus vaccination (procedure)' />
-		<code value='41088001' displayName='Meningococcus vaccination (procedure)' />
-		<code value='50583002' displayName='Mumps vaccination (procedure)' />
-		<code value='39343008' displayName='Pertussis vaccination (procedure)' />
-		<code value='12866006' displayName='Pneumococcal vaccination (procedure)' />
-		<code value='12866006' displayName='Pneumococcal vaccination (procedure)' />
-		<code value='72093006' displayName='Poliomyelitis vaccination (procedure)' />
-		<code value='34631000' displayName='Rabies vaccination (procedure)' />
-		<code value='82314000' displayName='Rubella vaccination (procedure)' />
-		<code value='127786006' displayName='Tetanus vaccination (procedure)' />
-		<code value='281658005' displayName='Tick-borne encephalitis vaccination (procedure)' />
-		<code value='30338008' displayName='Typhus vaccination (procedure)' />
-		<code value='428570002' displayName='Vaccination for human papillomavirus (procedure)' />
-		<code value='428570002' displayName='Vaccination for human papillomavirus (procedure)' />
-		<code value='68525005' displayName='Varicella vaccination (procedure)' />
-		<code value='67308009' displayName='Yellow fever vaccination (procedure)' />
 	</system>
 
 	<!-- VACD Intoleranzarten -->
@@ -72,13 +45,13 @@ History:
 		<code value='M' displayName='moderate severity' />
 		<code value='L' displayName='low severity' />
 	</system>
-	
+
 	<!-- VACD Observations -->
 	<system codeSystemName='VACD_Observations' root='2.16.840.1.113883.6.1'>
 		<code value='49051-6' displayName='Gestational age in W' />
 		<code value='49052-4' displayName='Gestational age in D' />
 	</system>
-	
+
 	<!-- Interpretationcode of the lab result -->
 	<system codeSystemName='interpretation' root='2.16.756.5.30.1.127.3.2.20121101.3'>
 		<code value='POS' displayName='pathogen found in specimen' />
@@ -103,24 +76,6 @@ History:
 		<code value='58770-9' displayName='Clostridium tetani toxin Ab.IgG' />
 	</system>
 
-	<!-- VACD Immunstörungen -->
-	<!-- 30.05.2014 tsc: Table 9 Not referenced in Spec
-	<system codeSystemName='VACD_ImmuneDisorders' root='2.16.840.1.113883.6.96'>
-		<code value='85828009' displayName='Autoimmune disease' />
-		<code value='396332003' displayName='Rheumatism' />
-		<code value='234645009' displayName='Drug-induced immunodeficiency' />
-		<code value='86406008' displayName='Human immunodeficiency virus infection' />
-		<code value='161626009' displayName='H/O: splenectomy' />
-		<code value='38096003' displayName='Functional asplenia' />
-		<code value='234556002' displayName='Specific antibody deficiency' />
-		<code value='24743004' displayName='Complement deficiency disease' />
-		<code value='160320002' displayName='Sickle cell anemia' />
-		<code value='234579001' displayName='Mannan-binding protein deficiency' />
-		<code value='76407009' displayName='Protein C deficiency disease' />
-		<code value='1563006' displayName='Protein S deficiency disease' />
-	</system>
-	-->
-
 	<!-- VACD Durchgemachte Krankheiten -->
 	<system codeSystemName='VACD_Diseases' root='2.16.840.1.113883.6.96'>
 		<code value='38907003' displayName='H/O: chickenpox' />
@@ -135,127 +90,115 @@ History:
 	</system>
 
 
-	<!-- EKIF Komplikationsrisiken aus Impfplan 2013 -->
-	<system codeSystemName='compl-risks-2013' root='2.16.756.5.30.1.127.3.3.2013.1'>
-		<code value='01' displayName='Anatomische oder funktionelle Asplenie, Hyposplenie (Sichelzellanämie)' />
-		<code value='02' displayName='Cochlea-Implantat' />
-		<code value='03' displayName='Defekte bei der Komplementaktivierung des alternativen Wegs oder Defizite der Terminalfaktoren des Komplementsystems' />
-		<code value='04' displayName='Frühgeborene (&lt; 33 Wochen oder Geburtsgewicht &lt; 1500 g)' />
-		<code value='05' displayName='Hämoglobinopathie' />
-		<code value='06' displayName='Hepatopathien (chronische)' />
-		<code value='07' displayName='Herzkrankheiten (chronische, kongenitale Missbildungen)' />
-		<code value='08' displayName='HIV-Infektion mit genügend T-Lymphozyten CD4' />
-		<code value='09' displayName='HIV-Infektion mit ungenügend T-Lymphozyten CD4' />
-		<code value='10' displayName='Immuninsuffizienz jeder Art (medikamentös, Transplantation, chron. Erkrankungen)' />
-		<code value='11' displayName='Kongenitales Immunmangelsyndrom (mangelnde Immunantwort auf Polysaccharide, Antikörpermangel)' />
-		<code value='12' displayName='Leukämien, Lymphome' />
-		<code value='13' displayName='Liquorfistel' />
-		<code value='14' displayName='Mangel an Mannose-bindendem Lektin' />
-		<code value='15' displayName='Metabolische Erkrankungen mit Auswirkungen auf Herz, Lungen, Nieren und/oder Immunsystem (Diabetes, morbide Adipositas BMI ≥ 40 )' />
-		<code value='16' displayName='Missbildungen der Schädelbasis' />
-		<code value='17' displayName='Myelome' />
-		<code value='18' displayName='Nephrotisches Syndrom' />
-		<code value='19' displayName='Neugeborene und Säuglinge unter 12 Monaten aus Ländern mit hoher Tuberkulose prävalenz, die wahrscheinlich wieder dorthin zurückkehren (in ihrem ersten Lebensjahr)' />
-		<code value='20' displayName='Neugeborene von HBsAg-positiven Müttern' />
-		<code value='21' displayName='Neurodermitis (schwere bei Kindern)' />
-		<code value='22' displayName='Neurologische oder muskuloskelettale Erkrankung mit Auswirkung auf die Funktion von Herz, Lungen oder Nieren' />
-		<code value='23' displayName='Niereninsuffizienz' />
-		<code value='24' displayName='Pneumopathien (chronische)' />
-		<code value='25' displayName='Schwangere Frauen und Frauen, die in den letzten 4 Wochen entbunden haben ' />
-		<code value='999' displayName='Andere Komplikationsrisiken' />	
+	<!-- EKIF Komplikationsrisiken -->
+	<system codeSystemName='compl-risks' root='2.16.756.5.30.1.127.3.3.1'>
+		<code value='113001' displayNameDE='Anatomische oder funktionelle Asplenie' displayNameFR='Asplénie anatomique ou fonctionnelle' displayNameIT='Asplenia anatomica o funzionale' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113002' displayNameDE='Cochleaimplantat, in situ oder geplant' displayNameFR='Implant cochléaire, in situ ou planifié' displayNameIT='Impianto cocleare, in situ o pianificato' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113003' displayNameDE='Defekte bei der Komplementaktivierung des alternativen Wegs oder Defizite der Terminalfaktoren des Komplementsystems' displayNameFR='Déficit en facteurs de la voie alterne ou terminale du complément' displayNameIT='Deficit di fattori della via alterna o terminale del complemento' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113004' displayNameDE='Geburt vor der 33. Schwangerschaftswoche oder Geburtsgewicht &lt; 1500g' displayNameFR='Naissance avant la 33e semaine de grossesse ou poids de naissance &lt;1500 g' displayNameIT='Nascita prima della 33a settimana di gravidanza o peso alla nascita &lt;1500 g' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113005' displayNameDE='Hämoglobinopathie' displayNameFR='Hémoglobinopathie' displayNameIT='Emoglobinopatie' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113006' displayNameDE='Hepatopathien (chronische)' displayNameFR='Hépatopathies chroniques' displayNameIT='Epatopatie croniche' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113007' displayNameDE='Herzkrankheiten (chronische, kongenitale Missbildungen)' displayNameFR='Cardiopathies chroniques, malformations congénitales' displayNameIT='Cardiopatie croniche, malformazioni congenite' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113008' displayNameDE='HIV Infektion mit CD4-Zellen &gt;= 15 % (Erwachsene: &gt;= 200 / µl)' displayNameFR=' Infection à VIH avec CD4 &gt;= 15% (Adultes : &gt;= 200 / µl)' displayNameIT='Infezione HIV con CD4 &gt;= 15% (Adulti : &gt;= 200 / µl)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113009' displayNameDE='HIV Infektion mit CD4-Zellen &lt; 15 % (Erwachsene: &lt; 200 / µl)' displayNameFR='Infection à VIH avec CD4 &lt; 15% (Adultes : &lt; 200 / µl)' displayNameIT='Infezione HIV con CD4 &lt; 15% (Adulti : &lt; 200 / µl)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113010' displayNameDE='Immuninsuffizienz jeder Art (medikamentös, Transplantation, chron. Erkrankungen)' displayNameFR='Immunodéficiences (toutes situations) y. c. immunosuppression, immunosuppression médicamenteuse (transplantation, maladies chroniques) ' displayNameIT='Immunodeficienze (tutte le situazioni) compreso immunosoppressione e immunosoppressione medicamentosa (trapianto, malattie croniche)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113011' displayNameDE='Kongenitales Immunmangelsyndrom (mangelnde Immunantwort auf Polysaccharide, Antikörpermangel)' displayNameFR='Immunodéficience congénitale (défaut de réponses aux polysaccharides, déficiences en anticorps)' displayNameIT='Immunodeficienza congenita (difetto di risposta ai polisaccaridi, deficienze in anticorpi)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113012' displayNameDE='Lymphom, Leukämie, Myelom' displayNameFR='Lymphome, leucémie, myélome' displayNameIT='Linfoma, leucemia, mieloma' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113013' displayNameDE='Liquorfistel' displayNameFR='Fistule de LCR' displayNameIT='Fistola di LCR' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113014' displayNameDE='Mangel an Mannose-bindendem Lektin' displayNameFR='Déficit en lectine liant le mannose' displayNameIT='Deficit di lectina legante il mannosio' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113015' displayNameDE='Metabolische Erkrankungen mit Auswirkungen auf Herz, Lungen, Nieren und/oder Immunsystem (Diabetes, morbide Adipositas BMI &gt;= 40 )' displayNameFR='Maladies métaboliques chroniques affectant coeur, poumons et/ou défenses immunitaires (diabète, obésité morbide IMC &gt;= 40)' displayNameIT='Malattie metaboliche croniche che colpiscono cuore, polmoni e/o difese immunitarie (diabete, obesità patologica con BMI &gt;= 40) ' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113016' displayNameDE='Missbildungen der Schädelbasis' displayNameFR='Malformations de la base du crâne' displayNameIT='Malformazioni della base del cranio' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113017' displayNameDE='Myelome' displayNameFR='Myélome' displayNameIT='Mieloma' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113018' displayNameDE='Nephrotisches Syndrom' displayNameFR='Syndrome néphrotique' displayNameIT='Sindrome nefrosica' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113019' displayNameDE='Neugeborene und Säuglinge unter 12 Monaten aus Ländern mit hoher Tuberkulose prävalenz, die wahrscheinlich wieder dorthin zurückkehren (in ihrem ersten Lebensjahr)' displayNameFR='Nouveau-nés ou nourrissons &lt; 12 mois originaire d’un pays à haute endémie et susceptibles d’y retourner dans leur 1ère année de vie' displayNameIT='Neonati o lattanti &lt; 12 mesi originari di un paese a elevata endemia e suscettibili di ritornarci nel loro primo anno di vita ' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113020' displayNameDE='Neugeborene von HBsAg-positiven Müttern' displayNameFR='Nouveau-nés de mères HBsAg positives' displayNameIT='Neonati di madri HBsAg positive' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113021' displayNameDE='Schwere Neurodermitis beim Kind' displayNameFR='Eczema sévère chez l’enfant' displayNameIT='Eczema severo nel bambino' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113022' displayNameDE='Neurologische oder muskuloskelettale Erkrankung mit Auswirkung auf die Funktion von Herz, Lungen oder Nieren' displayNameFR='Affection neurologique ou musculo-squelettique avec répercussion sur la fonction cardiaque, pulmonaire ou rénale' displayNameIT='Affezione neurologica o muscolo-scheletrica con ripercussioni sulla funzione cardiaca, polmonare o renale' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113023' displayNameDE='Niereninsuffizienz' displayNameFR='Insuffisance rénale' displayNameIT='Insufficienza renale' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='N/A'/>
+		<code value='113024' displayNameDE='Pneumopathien (chronische)' displayNameFR='Pneumopathies chroniques' displayNameIT='Pneumopatie croniche' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='113025' displayNameDE='Schwangere Frauen und Frauen, die in den letzten 4 Wochen entbunden haben ' displayNameFR='Femmes enceintes ou ayant accouchées au cours des 4 semaines précédentes' displayNameIT='Donne incite o che hanno partorito nelle 4 settimane precedenti' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20130101' validTo='20131231'/>
+		<code value='114001' displayNameDE='Herzinsuffizienz' displayNameFR='Insuffisance cardiaque' displayNameIT='Insufficienza cardiaca' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114002' displayNameDE='Kardiopathie, angeborene Fehlbildung' displayNameFR='Cardiopathie, malformation congénitale' displayNameIT='Cardiopatia, malformazione congenita' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114003' displayNameDE='Chronisch obstruktive Pneumopathie' displayNameFR='Pneumopathie chronique obstructive' displayNameIT='Pneumopatia cronica ostruttiva' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114004' displayNameDE='Schweres Asthma: bei verlängerter oder häufiger Behandlung mit oralen Steroiden' displayNameFR='Asthme sévère : si traitement prolongé ou fréquent par des corticoïdes oraux' displayNameIT='Asma severa : se trattamento prolungato o frequente con corticoidi orali' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114005' displayNameDE='Bronchiektasen durch Antikörpermangel' displayNameFR='Bronchiectasies sur carence en anticorps' displayNameIT='Bronchiettasie su carenza in anticorpi' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114006' displayNameDE='Andere Lungenerkrankungen (z.B. Mukoviszidose, Asthma bronchiale, etc.)' displayNameFR='Autres maladies pulmonaires (ex : mucoviscidose, asthme traité par aérosols, etc)' displayNameIT='Altre malattie polmonari (p.es. mucoviscidosi, asma trattata con aerosol, ecc.)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114007' displayNameDE='Chronische Lebererkrankung' displayNameFR='Maladie hépatique chronique' displayNameIT='Malattia epatica cronica' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114008' displayNameDE='Leberzirrhose' displayNameFR='Cirrhose hépatique' displayNameIT='Cirrosi epatica' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114012' displayNameDE='Neuromuskuläre Krankheit (Falls Auswirkungen auf Herz-, Lungen- oder Nierenfunktion)' displayNameFR='Maladie neuromusculaire (Si répercussion sur la fonction cardiaque, pulmonaire ou rénale)' displayNameIT='Malattia neuromuscolare (Se ripercussione sulla funzione cardiaca, polmonare o renale)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114014' displayNameDE='Sichelzellanämie' displayNameFR='Anémie falciforme' displayNameIT='Anemia falciforme' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114015' displayNameDE='Diabetes mit Auswirkung auf die Funktion von Herz, Lungen oder Nieren' displayNameFR='Diabète avec répercussion sur la fonction cardiaque, pulmonaire ou rénale' displayNameIT='Diabete con ripercussioni sulla funzione cardiopolmonare o renale' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114016' displayNameDE='Morbide Adipositas (BMI &gt;= 40)' displayNameFR='Obésité morbide (IMC &gt;= 40)' displayNameIT='Obesità patologica (IMC &gt;= 40)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114018' displayNameDE='Kandidaten für eine Solidorgantransplantation' displayNameFR='Candidats à une transplantation d&apos;organe solide' displayNameIT='Candidati a un trapianto d&apos;organo solido' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114019' displayNameDE='Empfänger einer Solidorgantransplantation' displayNameFR='Receveurs d&apos;une transplantation d&apos;organe solide' displayNameIT='Riceventi di un trapianto d&apos;organo solido' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114020' displayNameDE='Empfänger einer Stammzelltransplantation' displayNameFR='Receveurs de cellules souches hématopoïétiques' displayNameIT='Riceventi di cellule staminali ematopoietiche' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114021' displayNameDE='Autoimmunkrankheit, welche eine Immunsuppression erfordert' displayNameFR='Maladie auto-immune exigeant vraisemblablement une immunosuppression' displayNameIT='Malattia autoimmune che richiede probabilmente una immunosoppressione' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114022' displayNameDE='Medikamentöse Immunosuppression (inkl. systemische Langzeitkortikoidtherapie und Radiotherapie)' displayNameFR='Immunosuppression médicamenteuse (y c. corticothérapie de longue durée par voie générale et radiothérapie)' displayNameIT='Immunosoppressione medicamentosa (compresa una corticoterapia di lunga durata per via generale e una radioterapia)' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114025' displayNameDE='Angeborene Immundefizienz, variables Immundefektsyndrom, defizitäre Antwort auf Polysaccharide' displayNameFR='Immunodéficience congénitale, immunodéficience commune variable, déficit réponse aux polysaccharidiques' displayNameIT='Immunodeficienza congenita, immunodeficienza comune variabile, deficit di risposta ai polisaccaridi' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114026' displayNameDE='Mangel im klassischen oder alternativen Weg der Komplementaktivierung' displayNameFR='Déficit en facteurs de la voie alterne ou terminale du complément' displayNameIT='Deficit in fattori della via alterna o terminale del complemento' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114028' displayNameDE='Schwangerschaft und post-partum Periode' displayNameFR='Grossesse et post-partum' displayNameIT='Gravidanza e post-parto' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114030' displayNameDE='Mutter HBsAg positiv' displayNameFR='Mère HBsAg positive' displayNameIT='Madre HBsAg positiva' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
+		<code value='114032' displayNameDE='Schädelbasisfraktur / -Missbildung, zerebrospinale Liquorfistel' displayNameFR='Fracture ou malformation de la base du crâne, fistule de liquide céphalo-rachidien' displayNameIT='Frattura o malformazione della base del cranio, fistola di liquido cerebrospinale' codeSystem='2.16.756.5.30.1.127.3.3.1' validFrom='20140101' validTo='N/A'/>
 	</system>
 
-	<!-- EKIF Komplikationsrisiken aus Impfplan 2014 -->
-	<system codeSystemName='compl-risks-2014' root='2.16.756.5.30.1.127.3.3.2014.1'>
-		<code value='01' displayName='Herzinsuffizienz' />
-		<code value='02' displayName='Kardiopathie, angeborene Fehlbildung' />
-		<code value='03' displayName='Chronisch obstruktive Pneumopathie' />
-		<code value='04' displayName='Schweres Asthma: bei verlängerter oder häufiger Behandlung mit oralen Steroiden' />
-		<code value='05' displayName='Bronchiektasen durch Antikörpermangel' />
-		<code value='06' displayName='Andere Lungenerkrankungen (z.B. Mukoviszidose, Asthma bronchiale, etc.)' />
-		<code value='07' displayName='Chronische Lebererkrankung' />
-		<code value='08' displayName='Leberzirrhose' />
-		<code value='09' displayName='Anatomische oder funktionelle Asplenie' />
-		<code value='10' displayName='Niereninsuffizienz' />
-		<code value='11' displayName='Nephrotisches Syndrom' />
-		<code value='12' displayName='Neuromuskuläre Krankheit (Falls Auswirkungen auf Herz-, Lungen- oder Nierenfunktion)' />
-		<code value='13' displayName='Schwere Neurodermitis beim Kind' />
-		<code value='14' displayName='Sichelzellanämie' />
-		<code value='15' displayName='Diabetes mit Auswirkung auf die Funktion von Herz, Lungen oder Nieren' />
-		<code value='16' displayName='Morbide Adipositas (BMI ≥ 40)' />
-		<code value='17' displayName='Lymphom, Leukämie, Myelom' />
-		<code value='18' displayName='Kandidaten für eine Solidorgantransplantation' />
-		<code value='19' displayName='Empfänger einer Solidorgantransplantation' />
-		<code value='20' displayName='Empfänger einer Stammzelltransplantation' />
-		<code value='21' displayName='Autoimmunkrankheit, welche eine Immunsuppression erfordert' />
-		<code value='22' displayName='Medikamentöse Immunosuppression (inkl. systemische Langzeitkortikoidtherapie und Radiotherapie)' />
-		<code value='23' displayName='HIV Infektion mit CD4-Zellen ≥ 15 % (Erwachsene: ≥ 200 / µl)' />
-		<code value='24' displayName='HIV Infektion mit CD4-Zellen &lt; 15 % (Erwachsene: &lt; 200 / µl)' />
-		<code value='25' displayName='Angeborene Immundefizienz, variables Immundefektsyndrom, defizitäre Antwort auf Polysaccharide' />
-		<code value='26' displayName='Mangel im klassischen oder alternativen Weg der Komplementaktivierung' />
-		<code value='27' displayName='Mangel an Mannose-bindendem Lektin' />
-		<code value='28' displayName='Schwangerschaft und post-partum Periode' />
-		<code value='29' displayName='Geburt vor der 33. Schwangerschaftswoche oder Geburtsgewicht &lt; 1500g' />
-		<code value='30' displayName='Mutter HBsAg positiv' />
-		<code value='31' displayName='Cochleaimplantat, in situ oder geplant' />
-		<code value='32' displayName='Schädelbasisfraktur / -Missbildung, zerebrospinale Liquorfistel' />
-		<code value='999' displayName='Andere Komplikationsrisiken' />	
+	<!-- EKIF Expositionsrisiken -->
+	<system codeSystemName='exp-risks' root='2.16.756.5.30.1.127.3.3.2'>
+		<code value='213001' displayNameDE='Beschäftigte im Gesundheitswesen' displayNameFR='Personnel médical et soignant' displayNameIT='Personale medico e di cura' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213002' displayNameDE='Enge Kontaktpersonen von Erkrankten' displayNameFR='Entourage familial d’une personne infectée' displayNameIT='Entourage famigliare di una persona infetta' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213003' displayNameDE='Erwachsene und Kinder ab 6 Jahren, die in Endemiegebieten wohnen oder sich teilweise dort aufhalten' displayNameFR='Adultes et enfants dès 6 ans qui résident ou séjournent temporairement dans des territoires endémiques ' displayNameIT='Adulti e bambini a partire dai 6 anni che risiedono o soggiornano in regioni endemiche' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213004' displayNameDE='Tierpfleger, -händler, -seuchenpolizisten' displayNameFR='Personnes exposées qui soignent des animaux, marchands d’animaux : personnel engagé dans la lutte contre les épizooties' displayNameIT='Persone esposte che curano animali, commercianti di animali, personale impiegato nella lotta contro le epizoozie' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213005' displayNameDE='Familienangehörige von Personen mit einem erhöhten Risiko' displayNameFR='Entourage familial des personnes à risque accru de complications' displayNameIT='Entourage famigliare di persone a maggiore rischio di complicazioni' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213006' displayNameDE='Fledermausforscher und -schützer' displayNameFR='Scientifiques effectuant des recherches sur les chiroptères, protecteurs ou amateurs de chauves-souris' displayNameIT='Ricercatori che svolgono ricerche sui chirotteri, protettori o appassionati di pipistrelli' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213007' displayNameDE='Geistig behinderte Personen in Heimen und deren BetreuerInnen' displayNameFR='Personnes handicapées mentales et personnel des institutions pour handicapés mentaux ' displayNameIT='Persone disabili mentali e personale degli istituti per disabili mentali' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213008' displayNameDE='Hämodialysepatienten' displayNameFR='Personnes dialysées' displayNameIT='Persone in dialisi' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213009' displayNameDE='Hämophile Personen' displayNameFR='Personnes hémophiles' displayNameIT='Persone affette da emofilia' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213010' displayNameDE='Kanalisationsarbeiter und Angestellte von Kläranlagen' displayNameFR='Travailleurs des canalisations et des stations d’épuration' displayNameIT='Personale addetto alla manutenzione delle fognature e delle stazioni di depurazione' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213011' displayNameDE='Kinder aus Ländern mit mittlerer und hoher Endemizität, die in der Schweiz leben und für einen vorübergehenden Aufenthalt in ihr Herkunftsland zurückkehren' displayNameFR='Enfants originaires de pays de moyenne et haute endémicité vivant en Suisse et retournant dans leurs pays pour des séjours temporaires' displayNameIT='Bambini originari di paesi di media ed elevata endemicità che vivono in Svizzera e che ritornano nel loro paese per dei soggiorni temporanei' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213012' displayNameDE='Konsumenten von injizierbaren Drogen und deren Kontaktpersonen' displayNameFR='Consommateurs de drogues injectables et personnes à leur contact' displayNameIT='Consumatori di droghe iniettabili e persone a loro contatto' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213013' displayNameDE='Laborpersonal' displayNameFR='Personnel de laboratoire susceptible d’être exposé' displayNameIT='Personale di laboratorio suscettibile di essere esposto' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213014' displayNameDE='Männer, die mit Männern Geschlechtsverkehr haben' displayNameFR='Hommes ayant des relations sexuelles avec d’autres hommes' displayNameIT='Uomini che hanno rapporti sessuali con altri uomini' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213015' displayNameDE='Patientinnen und Patienten in Pflegeheimen und in Einrichtungen für Personen mit chronischen Erkrankungen' displayNameFR='Patients résidant dans une maison de soins ou dans un établissement pour malades chroniques' displayNameIT='Ospiti di una casa di cura o di un istituto per malati cronici' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213016' displayNameDE='Personen aus Ländern mit hoher oder intermediärer Hepatitis-B-Endemizität' displayNameFR='Personnes provenant de zones d’endémie haute ou intermédiaire pour l’hépatite B' displayNameIT='Persone provenienti da zone di endemicità elevata o intermedia per l’epatite B' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213017' displayNameDE='Personen mit einer sexuell übertragbaren Krankheit' displayNameFR='Personnes consultant pour une maladie sexuellement transmissible' displayNameIT='Persone che consultano per una malattia sessualmente trasmissibile' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213018' displayNameDE='Personen mit engem Kontakt zu Personen aus Ländern mit hoher Endemizität' displayNameFR='Personnes en contact étroit avec des personnes en provenance de pays de haute endémicité' displayNameIT='Persone a stretto contatto con delle persone provenienti da paesi di endemicità elevata' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213019' displayNameDE='Personen mit häufig wechselnden Sexualpartnern' displayNameFR='Personnes changeant souvent de partenaires sexuels' displayNameIT='Persone che cambiano spesso partner sessuale' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213020' displayNameDE='Personen mit regelmässigem Kontakt (beruflich / familiär) zu Säuglingen &lt; 6 Monaten, schwangere Frauen' displayNameFR='Personnes en contact professionnel ou familial régulier avec des nourrissons &lt; 6 mois, femmes enceintes' displayNameIT='Personale in contatto professionale o famigliare con dei lattanti di meno di 6 mesi o con donne incinte' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213021' displayNameDE='Rekruten (Militär)' displayNameFR='Recrues (militaires)' displayNameIT='Reclute (militari)' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213022' displayNameDE='Sozialarbeiter, Gefängnispersonal und Polizeiangestellte mit häufigem Kontakt zu Konsumenten von injizierbaren Drogen' displayNameFR='Travailleurs sociaux, personnel des prisons et de la police en contact fréquent avec des consommateurs de drogues injectables' displayNameIT='Lavoratori nel campo socio-educativo o della sicurezza (carceri, polizia) a contatto frequente con dei consumatori di droghe iniettabili' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
+		<code value='213023' displayNameDE='Tierärzte (inkl. Studenten, Praxisangestellte)' displayNameFR='Vétérinaires (étudiants : assistants vétérinaires)' displayNameIT='Veterinari (studenti, assistenti veterinari)' codeSystem='2.16.756.5.30.1.127.3.3.2' validFrom='20130101' validTo='N/A'/>
 	</system>
 
-	<!-- EKIF Expositionsrisiken 2013 -->
-	<system codeSystemName='exp-risks-2013' root='2.16.756.5.30.1.127.3.3.2013.2'>
-		<code value='01' displayName='Beschäftigte im Gesundheitswesen' />
-		<code value='02' displayName='Enge Kontaktpersonen von Erkrankten' />
-		<code value='03' displayName='Erwachsene und Kinder ab 6 Jahren, die in Endemiegebieten wohnen oder sich teilweise dort aufhalten' />
-		<code value='04' displayName='Exponierte Tierpfleger, -händler, -seuchenpolizisten' />
-		<code value='05' displayName='Familienangehörige von Personen mit einem erhöhten Risiko' />
-		<code value='06' displayName='Fledermausforscher und -schützer' />
-		<code value='07' displayName='Geistig behinderte Personen in Heimen und deren BetreuerInnen' />
-		<code value='08' displayName='Hämodialysepatienten' />
-		<code value='09' displayName='Hämophile Personen' />
-		<code value='10' displayName='Kanalisationsarbeiter und Angestellte von Kläranlagen' />
-		<code value='11' displayName='Kinder aus Ländern mit mittlerer und hoher Endemizität, die in der Schweiz leben und für einen vorübergehenden Aufenthalt in ihr Herkunftsland zurückkehren' />
-		<code value='12' displayName='Konsumenten von injizierbaren Drogen und deren Kontaktpersonen' />
-		<code value='13' displayName='Laborpersonal' />
-		<code value='14' displayName='Männer, die mit Männern Geschlechtsverkehr haben' />
-		<code value='15' displayName='Patientinnen und Patienten in Pflegeheimen und in Einrichtungen für Personen mit chronischen Erkrankungen' />
-		<code value='16' displayName='Personen aus Ländern mit hoher oder intermediärer Hepatitis-B-Endemizität' />
-		<code value='17' displayName='Personen mit einer sexuell übertragbaren Krankheit' />
-		<code value='18' displayName='Personen mit engem Kontakt zu Personen aus Ländern mit hoher Endemizität' />
-		<code value='19' displayName='Personen mit häufig wechselnden Sexualpartnern' />
-		<code value='20' displayName='Personen mit regelmässigem Kontakt (beruflich/familiär) zu Säuglingen &lt; 6 Monaten, schwangere Frauen' />
-		<code value='21' displayName='Rekruten (Militär)' />
-		<code value='22' displayName='Sozialarbeiter, Gefängnispersonal und Polizeiangestellte mit häufigem Kontakt zu Konsumenten von injizierbaren Drogen' />
-		<code value='23' displayName='Tierärzte (inkl. Studenten, Praxisangestellte)' />
-		<code value='999' displayName='Andere Expositionsrisiken' />
+	<!-- VACD Impfungen -->
+	<system codeSystemName='immunizations' root='2.16.756.5.30.1.127.3.3.3'>
+		<code value='42284007' displayNameEN='BCG vaccination' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='76668005' displayNameEN='Diphtheria vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='127787002' displayNameEN='Haemophilus influenzae type b vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='243789007' displayNameEN='Hepatitis A immunization (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='16584000' displayNameEN='Hepatitis B vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='86198006' displayNameEN='Influenza vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='314759000' displayNameEN='Japanese encephalitis vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='47435007' displayNameEN='Measles vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='41088001' displayNameEN='Meningococcus vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='50583002' displayNameEN='Mumps vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='39343008' displayNameEN='Pertussis vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='12866006' displayNameEN='Pneumococcal vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='72093006' displayNameEN='Poliomyelitis vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='34631000' displayNameEN='Rabies vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='82314000' displayNameEN='Rubella vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='127786006' displayNameEN='Tetanus vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='281658005' displayNameEN='Tick-borne encephalitis vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='30338008' displayNameEN='Typhus vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='428570002' displayNameEN='Vaccination for human papillomavirus (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='68525005' displayNameEN='Varicella vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
+		<code value='67308009' displayNameEN='Yellow fever vaccination (procedure)' codeSystem='2.16.756.5.30.1.127.3.3.3' validFrom='20130101' validTo='N/A'/>
 	</system>
 
-	<!-- EKIF Expositionsrisiken 2014 -->
-	<system codeSystemName='exp-risks-2014' root='2.16.756.5.30.1.127.3.3.2014.2'>
-		<code value='01' displayName='Beschäftigte im Gesundheitswesen' />
-		<code value='02' displayName='Personen mit regelmässigem Kontakt (beruflich / familiär) zu Säuglingen &lt; 6 Monaten, schwangere Frauen' />
-		<code value='03' displayName='Laborpersonal' />
-		<code value='04' displayName='Familienangehörige von Personen mit einem erhöhten Risiko' />
-		<code value='05' displayName='Enge Kontaktpersonen von Erkrankten' />
-		<code value='06' displayName='Patientinnen und Patienten in Pflegeheimen und in Einrichtungen für Personen mit chronischen Erkrankungen' />
-		<code value='07' displayName='Konsumenten von injizierbaren Drogen und deren Kontaktpersonen' />
-		<code value='08' displayName='Personen mit häufig wechselnden Sexualpartnern' />
-		<code value='09' displayName='Männer, die mit Männern Geschlechtsverkehr haben' />
-		<code value='10' displayName='Personen mit einer sexuell übertragbaren Krankheit' />
-		<code value='11' displayName='Hämodialysepatienten' />
-		<code value='12' displayName='Hämophile Personen' />
-		<code value='13' displayName='Sozialarbeiter, Gefängnispersonal und Polizeiangestellte mit häufigem Kontakt zu Konsumenten von injizierbaren Drogen' />
-		<code value='14' displayName='Geistig behinderte Personen in Heimen und deren BetreuerInnen' />
-		<code value='15' displayName='Personen aus Ländern mit hoher oder intermediärer Hepatitis-B-Endemizität' />
-		<code value='16' displayName='Kinder aus Ländern mit mittlerer und hoher Endemizität, die in der Schweiz leben und für einen vorübergehenden Aufenthalt in ihr Herkunftsland zurückkehren' />
-		<code value='17' displayName='Personen mit engem Kontakt zu Personen aus Ländern mit hoher Endemizität' />
-		<code value='18' displayName='Kanalisationsarbeiter und Angestellte von Kläranlagen' />
-		<code value='19' displayName='Rekruten (Militär)' />
-		<code value='20' displayName='Erwachsene und Kinder ab 6 Jahren, die in Endemiegebieten wohnen oder sich teilweise dort aufhalten' />
-		<code value='21' displayName='Tierärzte (inkl. Studenten, Praxisangestellte)' />
-		<code value='22' displayName='Tierpfleger, -händler, -seuchenpolizisten' />
-		<code value='23' displayName='Fledermausforscher und -schützer' />
-		<code value='999' displayName='Andere Expositionsrisiken' />
+	<!-- EKIF Empfehlungskategorien -->
+	<system codeSystemName='rec-categories' root='2.16.756.5.30.1.127.3.3.4'>
+		<code value='41501' displayNameDE='Empfohlene Basisimpfungen' displayNameFR='Vaccinations recommandées de base' displayNameIT='Vaccinazioni raccomandate di base' codeSystem='2.16.756.5.30.1.127.3.3.4' validFrom='20150101' validTo='N/A'/>
+		<code value='41502' displayNameDE='Empfohlene ergänzende Impfungen' displayNameFR='Vaccinations recommandées complémentaires' displayNameIT='Vaccinazioni raccomandate complementari' codeSystem='2.16.756.5.30.1.127.3.3.4' validFrom='20150101' validTo='N/A'/>
+		<code value='41503' displayNameDE='Empfohlene Impfungen für Risikogruppen' displayNameFR='Vaccinations recommandées à des groupes à risque' displayNameIT='Vaccinazioni raccomandate a die gruppi a rischio' codeSystem='2.16.756.5.30.1.127.3.3.4' validFrom='20150101' validTo='N/A'/>
+		<code value='41504' displayNameDE='Impfungen ohne Empfehlungen' displayNameFR='Vaccinations sans recommandation d’utilisation' displayNameIT='Vaccinazioni senza raccomandazione d’utilizzo' codeSystem='2.16.756.5.30.1.127.3.3.4' validFrom='20150101' validTo='N/A'/>
 	</system>
 
 </systems>

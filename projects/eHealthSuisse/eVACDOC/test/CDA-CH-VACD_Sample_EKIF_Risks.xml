@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!-- ********************************************************
-Beispiel eVACDOC zum Darstellen einer Anfrage für Impfempfehlungen an einen Impfcheckservice (CDSS)
+Sample for eVACDOC containing two lab results in order to test Schematron rules
+Copied from CDA-CH-VACD_AnfrageImpfempfehlung.xml:
+- added Problem List Section content (1.3.6.1.4.1.19376.1.5.3.1.3.6)
+- removed Comments Section content (1.3.6.1.4.1.19376.1.5.3.1.4.2)
 
 History:
-2014.04.03: Tony Schaller, medshare GmbH (Dokument erstellt im Einklang mit den Schematronregeln)
-2014.06.04: Tony Schaller, medshare GmbH (Abgabe CDA-CH-VACD)
-2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
-2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
-2015.09.16: Tony Schaller, medshare GmbH (Anpassung auf Update CDA-CH-VACD)
+2015.09.16: Tony Schaller, medshare GmbH (Sample Creation)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -217,34 +216,124 @@ History:
 
 			<!--
 			********************************************************
-			Required if known Comments Section content (1.3.6.1.4.1.19376.1.5.3.1.4.2)
+			Required if known Problem List Section content (1.3.6.1.4.1.19376.1.5.3.1.3.6)
 			******************************************************** -->
 			<component>
 				<section>
-					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.CodedRem" />
-					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ANNOTATION COMMENT'/>
-					<title>Kommentar</title>
+					<templateId root='2.16.840.1.113883.10.20.1.11'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.6'/>
+					<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='7ABD05C9-D11C-4239-B3B6-8C25AC7E43D6'/>
+					<code code='11450-4' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='PROBLEM LIST' />
+					<title>Problemliste</title>
 					<text>
-						<content ID='comment1'>
-							Es handelt sich im vorliegenden Dokument um ein Muster aus einer Hausarztpraxis mit den Angaben, welche erwartet werden können.<br />
-							Problemliste: keine Angabe   (gesundes Mädchen in der Pubertät)<br />
-							Bisherige Krankheiten: keine Angabe (keine chronischen Erkrankungen, keine Erkrankungen von Relevanz für eine Impfung)<br />
-							Allergien und Unverträglichkeiten: keine Angabe  (keine bekannt)<br />
-							Codierte Resultate: Keine Angabe<br />
-							Codierte Vitalzeichen: Keine Angabe<br />
-							Laborbefund: Keine Angabe<br />
-							Impfplan: keine Angaben (in der eKG führt man nicht schon den ganzen Impfplan auf, sondern macht die nächste Impfung ab. Ev könnte ein Impfplan vom Impfcheck ausgefüllt werden und in der KG hinterlegt werden).
-						</content>
+						<table>
+							<tbody>
+								<tr>
+									<th>Risikokategorie</th>
+									<th>Risikofaktor</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID='p11'>
+											Komplikationsrisiko
+										</content>
+									</td>
+									<td>
+										<content ID='p12'>
+											Niereninsuffizienz
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID='p21'>
+											Expositionsrisiko
+										</content>
+									</td>
+									<td>
+										<content ID='p22'>
+											Fledermausforscher und -schützer
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
 					<entry>
 						<act classCode='ACT' moodCode='EVN'>
-							<templateId root='2.16.840.1.113883.10.20.1.40'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-							<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='98BD0CBE-01BB-44C2-AFB6-33BE0FA01EB1'/>
+							<code nullFlavor='NA'/>
 							<text>
-								<reference value='#comment1'/>
+								<reference value='#p11'/>
 							</text>
 							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<!-- 1..* entry relationships identifying problems of concern -->
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#p12'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20130801'/>
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='113023' codeSystem='2.16.756.5.30.1.127.3.3.1' codeSystemName='compl-risks' displayName='Niereninsuffizienz' >
+										<originalText>
+											<reference value='#p12'/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry>
+						<act classCode='ACT' moodCode='EVN'>
+							<templateId root='2.16.840.1.113883.10.20.1.27'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2'/>
+							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='98BD0CBE-01BB-44C2-AFB6-33BE0FA01EB1'/>
+							<code nullFlavor='NA'/>
+							<text>
+								<reference value='#p21'/>
+							</text>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<low value='20120801'/>
+								<high nullFlavor='UNK' />
+							</effectiveTime>
+							<entryRelationship typeCode='SUBJ' inversionInd='false' >
+								<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+									<templateId root='2.16.840.1.113883.10.20.1.28'/>
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5'/>
+									<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='C6815D49-F90E-49E9-8E66-F782E2598697'/>
+									<code code='55607006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Problem' />
+									<text>
+										<reference value='#p22'/>
+									</text>
+									<statusCode code='completed'/>
+									<effectiveTime>
+										<low value='20130801'/>
+										<high nullFlavor='UNK' />
+									</effectiveTime>
+									<value xsi:type='CD' code='213006' codeSystem='2.16.756.5.30.1.127.3.3.2' codeSystemName='exp-risks' displayName='Fledermausforscher und -schützer' >
+										<originalText>
+											<reference value='#p22'/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
 						</act>
 					</entry>
 				</section>
