@@ -6,6 +6,7 @@ Copied from CDA-CH-VACD_Impfausweis.xml:
 
 History:
 2015.09.16: Tony Schaller, medshare GmbH (Sample Creation)
+2015.10.13: Tony Schaller, medshare GmbH (Korrekur OID CDA-CH-VACD)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -359,8 +360,8 @@ History:
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='76668005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Diphtheria vaccination (procedure)' />
 									<text>
 										<reference value='#ii11'/>
@@ -379,8 +380,8 @@ History:
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='127786006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Tetanus vaccination (procedure)' />
 									<text>
 										<reference value='#ii12'/>
@@ -399,8 +400,8 @@ History:
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='39343008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Pertussis vaccination (procedure)' />
 									<text>
 										<reference value='#ii13'/>
@@ -419,8 +420,8 @@ History:
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='72093006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Poliomyelitis vaccination (procedure)' />
 									<text>
 										<reference value='#ii14'/>
@@ -450,7 +451,7 @@ History:
 							</entryRelationship>
 							<precondition>
 								<criterion>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
 									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
 									<text>
 										<reference value='#ica1' />
@@ -538,8 +539,8 @@ History:
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='47435007' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Measles vaccination (procedure)' />
 									<text>
 										<reference value='#ii21'/>
@@ -558,8 +559,8 @@ History:
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='50583002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Mumps vaccination (procedure)' />
 									<text>
 										<reference value='#ii22'/>
@@ -578,8 +579,8 @@ History:
 							</entryRelationship>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='82314000' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Rubella vaccination (procedure)' />
 									<text>
 										<reference value='#ii23'/>
@@ -609,7 +610,7 @@ History:
 							</entryRelationship>
 							<precondition>
 								<criterion>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
 									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
 									<text>
 										<reference value='#ica2' />
@@ -697,8 +698,8 @@ History:
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='16584000' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Hepatitis B vaccination (procedure)' />
 									<text>
 										<reference value='#ii3'/>
@@ -728,7 +729,7 @@ History:
 							</entryRelationship>
 							<precondition>
 								<criterion>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
 									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
 									<text>
 										<reference value='#ica3' />
@@ -816,8 +817,8 @@ History:
 							</author>
 							<entryRelationship typeCode='RSON' inversionInd='false'>
 								<observation classCode='OBS' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
-									<id root='2.16.756.5.30.1.1.1.1.3.2.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Reason' />
+									<id root='2.16.756.5.30.1.1.1.1.3.5.1' extension='66502037-9B9C-4ECB-9D24-A8EAD5D77D4B' />
 									<code code='428570002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vaccination for human papillomavirus (procedure)' />
 									<text>
 										<reference value='#ii4'/>
@@ -847,7 +848,7 @@ History:
 							</entryRelationship>
 							<precondition>
 								<criterion>
-									<templateId root='2.16.756.5.30.1.1.1.1.3.2.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
+									<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH.VACD.Body.MediL3.Category' />
 									<code code='41501' codeSystem='2.16.756.5.30.1.127.3.3.4' codeSystemName='CDA-CH-VACD rec-categories' displayName='Empfohlene Basisimpfungen' />
 									<text>
 										<reference value='#ica4' />
