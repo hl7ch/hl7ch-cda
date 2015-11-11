@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- ********************************************************
 Beispiel eVACDOC zum Darstellen einer Anfrage für Impfempfehlungen an einen Impfcheckservice (CDSS)
 
@@ -8,248 +8,147 @@ History:
 2014.11.11: Tony Schaller, medshare GmbH (Korrekturen zur besseren Validierung)
 2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
 2015.09.16: Tony Schaller, medshare GmbH (Anpassung auf Update CDA-CH-VACD)
+2015.11.11: Tony Schaller, medshare GmbH (Generiert mit eHealth Connector)
 
 ******************************************************** -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
-<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
-	<!-- ********************************************************
-	CDA Header
-	******************************************************** -->
-	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
-	<!-- Parent Templates -->
-	<!-- IHE PCC Medical Documents Specification -->
-	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
-	<!-- IHE Immunization Detail Specification -->
-	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'/>
-	<!-- CDA-CH -->
-	<templateId root='2.16.756.5.30.1.1.1.1' extension='CDA-CH' />
-	<!-- eVACDOC (VACD) V1 -->
-	<templateId root='2.16.756.5.30.1.1.1.1.3.5.1' extension='CDA-CH-VACD' />
-
-	<id extension='77CF85B2-E1A9-4CEA-A513-2DC581DA595F' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
-	<code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF IMMUNIZATIONS'/>
-	<title>eVACDOC</title>
-	<effectiveTime value='20150604'/>
-	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
-	<languageCode code='de-CH'/>
-	<setId extension='77CF85B2-E1A9-4CEA-A513-2DC581DA595F' root='2.16.756.5.30.1.1.1.1.3.5.1'/>
-	<versionNumber value='1'/>
-	<recordTarget>
-		<patientRole>
-			<id extension='898989' root='2.16.756.5.30.999999999999'/>
-			<addr use='HP'>
-				<streetName nullFlavor='MSK' />
-				<postalCode>9876</postalCode>
-				<city>Specimendorf</city>
-				<country>CH</country>
-			</addr>
-			<telecom nullFlavor='MSK' />
-			<patient>
-				<name nullFlavor='MSK' />
-				<administrativeGenderCode code='F' codeSystem='2.16.840.1.113883.5.1'/>
-				<birthTime value='20000404'/>
-			</patient>
-			<providerOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
-				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
-			</providerOrganization>
-		</patientRole>
-	</recordTarget>
-	<author>
-		<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
-		<time value='20150604'/>
-		<assignedAuthor>
-			<id extension='7608888888888' root='1.3.88'/>
-			<addr use='WP'>
-				<streetName>Doktorgasse</streetName>
-				<houseNumber>2</houseNumber>
-				<postalCode>8888</postalCode>
-				<city>Musterhausen</city>
-				<country>CH</country>
-			</addr>
-			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
-			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
-			<telecom use='PUB' value='mailto:bereit@gruppenpraxis.ch'/>
-			<telecom use='PUB' value='http://www.gruppenpraxis.ch'/>
-			<assignedPerson>
-				<name>
-					<prefix>Dr. med.</prefix>
-					<given>Allzeit</given>
-					<family>Bereit</family>
-					<suffix>Facharzt für Allgemeine Medizin</suffix>
-				</name>
-			</assignedPerson>
-			<representedOrganization>
-				<id nullFlavor='NA'/>
-				<name>Gruppenpraxis CH</name>
-				<addr use='WP'>
-					<streetName>Doktorgasse</streetName>
-					<houseNumber>2</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</representedOrganization>
-		</assignedAuthor>
-	</author>
-	<custodian>
-		<assignedCustodian>
-			<representedCustodianOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
-				<name>Gruppenpraxis CH</name>
-				<addr use='WP'>
-					<streetName>Doktorgasse</streetName>
-					<houseNumber>2</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</representedCustodianOrganization>
-		</assignedCustodian>
-	</custodian>
-	<legalAuthenticator>
-		<time value='20150604'/>
-		<signatureCode code='S'/>
-		<assignedEntity>
-			<id extension='7608888888888' root='1.3.88'/>
-			<assignedPerson>
-				<name>
-					<prefix>Dr. med.</prefix>
-					<given>Allzeit</given>
-					<family>Bereit</family>
-					<suffix>Facharzt für Allgemeine Medizin</suffix>
-				</name>
-			</assignedPerson>
-			<representedOrganization>
-				<id nullFlavor='NA'/>
-				<name>Gruppenpraxis CH</name>
-				<addr use='WP'>
-					<streetName>Doktorgasse</streetName>
-					<houseNumber>2</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</representedOrganization>
-		</assignedEntity>
-	</legalAuthenticator>
-	<!--
-	********************************************************
-	CDA Body
-	******************************************************** -->
-	<component>
-		<structuredBody>
-
-			<!--
-			********************************************************
-			Required History of Immunizations Section content (1.3.6.1.4.1.19376.1.5.3.1.3.23)
-			******************************************************** -->
-			<component>
-				<section>
-					<templateId root='2.16.840.1.113883.10.20.1.6'/>
-					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.23'/>
-					<code code='11369-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='HISTORY OF IMMUNIZATIONS' />
-					<title>Impfungen</title>
-					<text>
-						<content ID='i1'>
-							Keine Impfungen bekannt
-						</content>
-					</text>
-					<entry>
-						<substanceAdministration classCode='SBADM' moodCode='EVN' negationInd='false'>
-							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<templateId root='2.16.840.1.113883.10.20.1.24'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.12'/>
-							<id root='2.999' extension='328709' />
-							<code code='182904002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Drug Treatment Unknown' />
-							<text>
-								<reference value='#i1'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime value='20150604' />
-							<priorityCode nullFlavor='UNK' />
-							<routeCode nullFlavor='UNK' />
-							<approachSiteCode nullFlavor='NA' >
-								<originalText>
-									<reference nullFlavor='NA' />
-								</originalText>
-							</approachSiteCode>
-							<doseQuantity nullFlavor='UNK' />
-							<consumable>
-								<manufacturedProduct>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
-									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id nullFlavor='NA' />
-									<manufacturedMaterial>
-										<!-- epSOSVaccine Pivot Code -->
-										<code nullFlavor='NA' >
-											<originalText>
-												<reference value='#i1'/>
-											</originalText>
-											<!-- ATC WHO Code -->
-											<translation nullFlavor='NA' codeSystem='2.16.840.1.113883.6.73'/>
-										</code>
-										<name nullFlavor='NA' />
-									</manufacturedMaterial>
-								</manufacturedProduct>
-							</consumable>
-							<author>
-								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
-								<time value='19830615' />
-								<assignedAuthor>
-									<id extension='7608888888888' root='1.3.88'/>
-									<assignedPerson>
-										<name>
-											<prefix>Dr. med.</prefix>
-											<given>Allzeit</given>
-											<family>Bereit</family>
-											<suffix>Facharzt für Allgemeine Medizin</suffix>
-										</name>
-									</assignedPerson>
-								</assignedAuthor>
-							</author>
-						</substanceAdministration>
-					</entry>
-				</section>
-			</component>
-
-			<!--
-			********************************************************
-			Required if known Comments Section content (1.3.6.1.4.1.19376.1.5.3.1.4.2)
-			******************************************************** -->
-			<component>
-				<section>
-					<templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.CodedRem" />
-					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='ANNOTATION COMMENT'/>
-					<title>Kommentar</title>
-					<text>
-						<content ID='comment1'>
-							Es handelt sich im vorliegenden Dokument um ein Muster aus einer Hausarztpraxis mit den Angaben, welche erwartet werden können.<br />
-							Problemliste: keine Angabe   (gesundes Mädchen in der Pubertät)<br />
-							Bisherige Krankheiten: keine Angabe (keine chronischen Erkrankungen, keine Erkrankungen von Relevanz für eine Impfung)<br />
-							Allergien und Unverträglichkeiten: keine Angabe  (keine bekannt)<br />
-							Codierte Resultate: Keine Angabe<br />
-							Codierte Vitalzeichen: Keine Angabe<br />
-							Laborbefund: Keine Angabe<br />
-							Impfplan: keine Angaben (in der eKG führt man nicht schon den ganzen Impfplan auf, sondern macht die nächste Impfung ab. Ev könnte ein Impfplan vom Impfcheck ausgefüllt werden und in der KG hinterlegt werden).
-						</content>
-					</text>
-					<entry>
-						<act classCode='ACT' moodCode='EVN'>
-							<templateId root='2.16.840.1.113883.10.20.1.40'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-							<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
-							<text>
-								<reference value='#comment1'/>
-							</text>
-							<statusCode code='completed'/>
-						</act>
-					</entry>
-				</section>
-			</component>
-
-		</structuredBody>
-	</component>
+<?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3">
+  <realmCode code="CH"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.756.5.30.1.1.1.1.3.5.1" extension="CDA-CH-VACD"/>
+  <templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
+  <id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a640f7e-aa60-09a6-6776-cb8b18c1d388"/>
+  <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF IMMUNIZATIONS"/>
+  <title>eVACDOC</title>
+  <effectiveTime value="20150604"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="Normal"/>
+  <languageCode code="de-CH"/>
+  <setId root="2.16.756.5.30.1.1.1.1" extension="4a640f7e-aa60-09a6-6eb6-8d534c7c9e0d"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id nullFlavor="MSK"/>
+      <addr use="HP"><postalCode>9876</postalCode></addr>
+      <patient>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female"/>
+        <birthTime value="20000404"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <functionCode code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+    <time value="20150604"/>
+    <assignedAuthor>
+      <id root="1.3.88" extension="7608888888888"/>
+      <assignedPerson>
+        <name><given>Allzeit</given><family>Bereit</family><prefix>Dr. med.</prefix></name>
+      </assignedPerson>
+      <representedOrganization>
+        <id root="1.3.88" extension="7608888888888"/>
+        <name>Gruppenpraxis CH</name>
+        <telecom value="tel:+41.32.234.55.66" use="WP"/>
+        <telecom value="fax:+41.32.234.55.67" use="WP"/>
+        <telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+        <telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+        <addr use="WP"><streetName>Doktorgasse</streetName><houseNumber>2</houseNumber><city>Musterhausen</city><postalCode>8888</postalCode><country>CHE</country></addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="1.3.88" extension="7608888888888"/>
+        <name>Gruppenpraxis CH</name>
+        <telecom value="tel:+41.32.234.55.66" use="WP"/>
+        <addr use="WP"><streetName>Doktorgasse</streetName><houseNumber>2</houseNumber><city>Musterhausen</city><postalCode>8888</postalCode><country>CHE</country></addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="20150604"/>
+    <signatureCode code="S"/>
+    <assignedEntity>
+      <id root="1.3.88" extension="7608888888888"/>
+      <assignedPerson>
+        <name><given>Allzeit</given><family>Bereit</family><prefix>Dr. med.</prefix></name>
+      </assignedPerson>
+      <representedOrganization>
+        <id root="1.3.88" extension="7608888888888"/>
+        <name>Gruppenpraxis CH</name>
+        <telecom value="tel:+41.32.234.55.66" use="WP"/>
+        <telecom value="fax:+41.32.234.55.67" use="WP"/>
+        <telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+        <telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+        <addr use="WP"><streetName>Doktorgasse</streetName><houseNumber>2</houseNumber><city>Musterhausen</city><postalCode>8888</postalCode><country>CHE</country></addr>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.23"/>
+          <templateId root="2.16.840.1.113883.10.20.1.6"/>
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations"/>
+          <title>Impfungen</title>
+          <text><content ID="hoi1">Es sind keine Impfungen bekannt.</content></text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+              <templateId root="2.16.840.1.113883.10.20.1.24"/>
+              <templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.MediL3"/>
+              <id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a64132a-aa60-09a6-7e37-8d534c7c9e0d"/>
+              <code code="182904002" codeSystem="2.16.840.1.113883.6.96" displayName="Drug Treatment Unknown"/>
+              <text><reference value="#is10"/></text>
+              <statusCode code="completed"/>
+              <effectiveTime value="20150604"/>
+              <priorityCode nullFlavor="UNK"/>
+              <routeCode nullFlavor="NA"/>
+              <doseQuantity nullFlavor="UNK"/>
+              <consumable typeCode="CSM">
+                <manufacturedProduct>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
+                  <id nullFlavor="UNK"/>
+                  <manufacturedMaterial>
+                    <code nullFlavor="UNK"/>
+                    <name></name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <author>
+                <functionCode code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+                <time value="19830615"/>
+                <assignedAuthor>
+                  <id root="1.3.88" extension="7608888888888"/>
+                  <assignedPerson>
+                    <name><given>Allzeit</given><family>Bereit</family><prefix>Dr. med.</prefix></name>
+                  </assignedPerson>
+                </assignedAuthor>
+              </author>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.756.5.30.1.1.1.1.1" extension="CDA-CH.Body.CodedRem"/>
+          <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Kommentar</title>
+          <text><content ID="k1">Es handelt sich im vorliegenden Dokument um ein Muster aus einer Hausarztpraxis mit den Angaben, welche erwartet werden können.<br/>Problemliste: keine Angabe   (gesundes Mädchen in der Pubertät)<br/>Bisherige Krankheiten: keine Angabe (keine chronischen Erkrankungen, keine Erkrankungen von Relevanz für eine Impfung)<br/>Allergien und Unverträglichkeiten: keine Angabe  (keine bekannt)<br/>Codierte Resultate: Keine Angabe<br/>Codierte Vitalzeichen: Keine Angabe<br/>Laborbefund: Keine Angabe<br/>Impfplan: keine Angaben (in der eKG führt man nicht schon den ganzen Impfplan auf, sondern macht die nächste Impfung ab. Ev könnte ein Impfplan vom Impfcheck ausgefüllt werden und in der KG hinterlegt werden).</content></text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+              <templateId root="2.16.840.1.113883.10.20.1.40"/>
+              <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+              <text><reference value="#k1"/></text>
+              <statusCode code="completed"/>
+            </act>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
 </ClinicalDocument>
