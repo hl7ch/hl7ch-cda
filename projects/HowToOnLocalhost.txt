@@ -1,16 +1,42 @@
+================================================================================
+Introduction
+================================================================================
 Stylesheet rendering with local stylesheets does not work on all web browsers by default.
 This is due to security reasons.
 The follwing hints helps you to render the CDA documents on your local file system in your favorite browser.
 
+================================================================================
+Checklist for web browsers
+================================================================================
+
 Internet Explorer: 
+------------------------------
 Currently no action required
 
 Google Chrome: 
+------------------------------
 start chrome.exe using the following command line argument: --allow-file-access-from-files
 
 Mozilla Firefox: 
+------------------------------
 firefox.exe -P
 Create a new profile (e.g. AllowLocalFiles) and quit profile manager (make sure the new profile is not the default profile!)
 firefox.exe -P AllowLocalFiles
 about:config
 filter for security.fileuri.strict_origin_policy and set it to false
+
+
+================================================================================
+Automate "open with" on Windows:
+================================================================================
+modify AddXMLOpenEditCommand.reg at your needs (but please do not commit to svn, thanks)
+and doupleclick it to import the values in the registry.
+
+or manually edit keys in the registry:
+regedit
+create [HKEY_CURRENT_USER\SOFTWARE\Classes\xml_auto_file\shell\open\command] and set default: 
+firefox -P AllowLocalFiles %1
+or
+chrome.exe --allow-file-access-from-files %1
+
+edit [HKEY_CURRENT_USER\SOFTWARE\Classes\.xml] and set default: xml_auto_file
