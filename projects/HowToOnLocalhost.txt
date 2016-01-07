@@ -1,0 +1,16 @@
+Stylesheet rendering with local stylesheets does not work on all web browsers by default.
+This is due to security reasons.
+The follwing hints helps you to render the CDA documents on your local file system in your favorite browser.
+
+Internet Explorer: 
+Currently no action required
+
+Google Chrome: 
+start chrome.exe using the following command line argument: --allow-file-access-from-files
+
+Mozilla Firefox: 
+firefox.exe -P
+Create a new profile (e.g. AllowLocalFiles) and quit profile manager (make sure the new profile is not the default profile!)
+firefox.exe -P AllowLocalFiles
+about:config
+filter for security.fileuri.strict_origin_policy and set it to false
