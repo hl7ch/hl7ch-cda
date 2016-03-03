@@ -6,6 +6,7 @@ Beispiel Laborbefund für Qualitätskontrolle gemäss CDA-CH-LRQC V1.0
 History:
 2015.04.08: Tony Schaller, medshare GmbH (First draft)
 2015.11.30: Tony Schaller, medshare GmbH (corrected text reference)
+2016.03.03: Tony Schaller, medshare GmbH (fixed non living subject)
 
 ********************************************************
 -->
@@ -38,7 +39,7 @@ History:
 		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.2' />
 		<patientRole classCode='PAT'>
 			<id extension='434' root='2.16.756.5.30.1.139'/>
-			<patient nullFlavor='NA' />
+			<patient nullFlavor='OTH' />
 		</patientRole>
 	</recordTarget>
 	<author>
@@ -86,9 +87,9 @@ History:
 		<intendedRecipient>
 			<id root='2.16.756.5.30.1.139'/>
 			<addr use='WP'>
-				<streetAddressLine>Tempelstrasse 8B</streetAddressLine>
-				<postalCode>3608</postalCode>
-				<city>Thun-Allmendingen</city>
+				<streetAddressLine>Buchshaldenstrasse 2</streetAddressLine>
+				<postalCode>3661</postalCode>
+				<city>Uetendorf</city>
 			</addr>
 			<telecom use='PUB' value='tel:+41.33.341.23.44'/>
 			<informationRecipient>
@@ -205,6 +206,20 @@ History:
 						<act classCode='ACT' moodCode='EVN'>
 							<code code='18719-5' codeSystem='2.16.840.1.113883.6.1' displayName='Chemistry studies'/>
 							<statusCode code='completed' />
+
+							<!-- Non-Living subject -->
+							<subject>
+								<templateId root="1.3.6.1.4.1.19376.1.3.3.1.2.1"/>
+								<relatedSubject>
+									<code nullFlavor='UNK' />
+									<addr>
+										<streetAddressLine>Buchshaldenstrasse 2</streetAddressLine>
+										<postalCode>3661</postalCode>
+										<city>Uetendorf</city>
+										<country>CHE</country>
+									</addr>
+								</relatedSubject>
+							</subject>
 
 							<!-- IHE XD-LAB: Specimen Collection -->
 							<entryRelationship typeCode='COMP'>

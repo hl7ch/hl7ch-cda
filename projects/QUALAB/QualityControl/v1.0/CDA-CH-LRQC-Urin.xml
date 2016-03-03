@@ -6,6 +6,7 @@ Beispiel Laborbefund für Qualitätskontrolle gemäss CDA-CH-LRQC V1.0
 History:
 2015.04.08: Tony Schaller, medshare GmbH (First draft)
 2015.11.30: Tony Schaller, medshare GmbH (corrected text reference)
+2016.03.03: Tony Schaller, medshare GmbH (fixed non living subject)
 
 ********************************************************
 -->
@@ -38,7 +39,7 @@ History:
 		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.2' />
 		<patientRole classCode='PAT'>
 			<id extension='434' root='2.16.756.5.30.1.139'/>
-			<patient nullFlavor='NA' />
+			<patient nullFlavor='OTH' />
 		</patientRole>
 	</recordTarget>
 	<author>
@@ -86,9 +87,9 @@ History:
 		<intendedRecipient>
 			<id root='2.16.756.5.30.1.139'/>
 			<addr use='WP'>
-				<streetAddressLine>Tempelstrasse 8B</streetAddressLine>
-				<postalCode>3608</postalCode>
-				<city>Thun-Allmendingen</city>
+				<streetAddressLine>Buchshaldenstrasse 2</streetAddressLine>
+				<postalCode>3661</postalCode>
+				<city>Uetendorf</city>
 			</addr>
 			<telecom use='PUB' value='tel:+41.33.341.23.44'/>
 			<informationRecipient>
@@ -218,7 +219,9 @@ History:
 									<!--Probeneingang-->
 									<td>05.04.2015 15:34</td>
 									<!--Kommentar-->
-									<td><content ID='lc1'>Demo</content></td>
+									<td>
+										<content ID='lc1'>Demo</content>
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -230,12 +233,26 @@ History:
 							<code code='18729-4' codeSystem='2.16.840.1.113883.6.1' displayName='Urinalysis studies'/>
 							<statusCode code='completed' />
 
+							<!-- Non-Living subject -->
+							<subject>
+								<templateId root="1.3.6.1.4.1.19376.1.3.3.1.2.1"/>
+								<relatedSubject>
+									<code nullFlavor='UNK' />
+									<addr>
+										<streetAddressLine>Buchshaldenstrasse 2</streetAddressLine>
+										<postalCode>3661</postalCode>
+										<city>Uetendorf</city>
+										<country>CHE</country>
+									</addr>
+								</relatedSubject>
+							</subject>
+
 							<!-- IHE XD-LAB: Specimen Collection -->
 							<entryRelationship typeCode='COMP'>
 								<procedure classCode='PROC' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
 									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Collection date'/>
-									<effectiveTime value='20150404'/>
+									<effectiveTime nullFlavor='UNK' />
 									<participant typeCode='PRD'>
 										<participantRole classCode='SPEC'>
 											<id nullFlavor='NA' />
@@ -274,6 +291,9 @@ History:
 												<reference value='#l1'/>
 											</text>
 											<statusCode code='completed'/>
+											<value xsi:type='ED'>
+												<reference value='#l1'/>
+											</value>
 											<entryRelationship typeCode="SUBJ" inversionInd="true">
 												<act classCode="ACT" moodCode="EVN">
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
