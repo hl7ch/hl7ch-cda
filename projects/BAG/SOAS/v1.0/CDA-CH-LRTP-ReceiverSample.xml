@@ -8,6 +8,7 @@ History:
 2014.01.23: Tony Schaller, medshare GmbH (First draft)
 2014.01.27: Tony Schaller, medshare GmbH (Release Candidate 1)
 2015.03.03: Tony Schaller, medshare GmbH (Einbau Änderungsanträge BAG)
+2016.03.03: Tony Schaller, medshare GmbH (Some corrections in order to fulfill the schematron rules)
 
 ********************************************************
 -->
@@ -242,6 +243,7 @@ History:
 							</author>
 							<component typeCode='COMP'>
 								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
 									<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH-LRTP.Body.VitalSignL3' />
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
@@ -252,6 +254,7 @@ History:
 										<reference value='#o1'/>
 									</text>
 									<statusCode code='completed'/>
+									<effectiveTime nullFlavor="UNK" />
 									<value xsi:type='PQ' value='178' unit='cm'/>
 									<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 									<methodCode nullFlavor='NA' />
@@ -259,6 +262,7 @@ History:
 							</component>
 							<component typeCode='COMP'>
 								<observation classCode='OBS' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.VitalSignL3' />
 									<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH-LRTP.Body.VitalSignL3' />
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 									<templateId root='2.16.840.1.113883.10.20.1.31'/>
@@ -269,6 +273,7 @@ History:
 										<reference value='#o2'/>
 									</text>
 									<statusCode code='completed'/>
+									<effectiveTime nullFlavor="UNK" />
 									<value xsi:type='PQ' value='78' unit='kg'/>
 									<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 									<methodCode nullFlavor='NA' />
