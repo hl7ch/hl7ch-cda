@@ -2,7 +2,6 @@
 <!--
 ********************************************************
 Default Stylesheet for CDA-CH
-Stand: 24.07.2013
 
 History:
 Derived from HL7 Finland R2 Tyylitiedosto: Tyyli_R2_B3_01.xslt
@@ -738,24 +737,24 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 				</h3>
 				<ul>
 					<table class="body">
-						<thead>
-							<th>
-								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='ParticipantType']/@displayName"/>
-							</th>
-							<th>
-								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='AssociatedEntityType']/@displayName"/>
-							</th>
-							<th>
-								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='AssociatedEntityRole']/@displayName"/>
-							</th>
-							<th colspan="2">
-								<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
-							</th>
-							<th colspan="2">
-								<xsl:text>ID</xsl:text>
-							</th>
-						</thead>
 						<tbody>
+							<tr>
+								<th>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='ParticipantType']/@displayName"/>
+								</th>
+								<th>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='AssociatedEntityType']/@displayName"/>
+								</th>
+								<th>
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='AssociatedEntityRole']/@displayName"/>
+								</th>
+								<th colspan="2">
+									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='Contact']/@displayName"/>
+								</th>
+								<th colspan="2">
+									<xsl:text>ID</xsl:text>
+								</th>
+							</tr>
 							<xsl:for-each select="/n1:ClinicalDocument/n1:participant">
 								<xsl:variable name="participantType">
 									<xsl:choose>
