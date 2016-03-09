@@ -6,6 +6,7 @@ Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - NachweisHäufig
 History:
 2013.01.26: Tony Schaller, medshare GmbH (Erster Entwurf)
 2014.03.25: Tony Schaller, medshare GmbH (Korrektur participant nach Schematronregel-Update)
+2016.03.09: Tony Schaller, medshare GmbH (added codeSystemName LOINC for document code)
 
 ********************************************************
 -->
@@ -27,7 +28,7 @@ History:
 	<!-- Laboratory Reports for Public Health V1 - (CDA-CH-LRPH) -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.3.1'/>
 	<id extension='D0C4FEE0-1C7B-4192-8817-CA488ED8A75F' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
-	<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+	<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='MICROBIOLOGY STUDIES'/>
 	<title>Meldepflichtiger Laborbefund</title>
 	<effectiveTime value='20121123'/>
 	<confidentialityCode code='R' codeSystem='2.16.840.1.113883.5.25'/>
