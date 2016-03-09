@@ -9,6 +9,7 @@ History:
 2014.01.27: Tony Schaller, medshare GmbH (Release Candidate 1)
 2015.03.03: Tony Schaller, medshare GmbH (Einbau Änderungsanträge BAG)
 2016.03.03: Tony Schaller, medshare GmbH (Some corrections in order to fulfill the schematron rules)
+2016.03.09: Tony Schaller, medshare GmbH (Removed SOASInfo while this is obsolete)
 
 ********************************************************
 -->
@@ -727,8 +728,6 @@ History:
 									<th>Code</th>
 									<th>Codesystem</th>
 									<th>Autor</th>
-									<th>Center specific avoid</th>
-									<th>Previous TX</th>
 									<th>Kommentar</th>
 								</tr>
 								<tr>
@@ -738,8 +737,6 @@ History:
 									<td>Anti-A2-MFI</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
-									<td>N</td>
-									<td>Y</td>
 									<td></td>
 								</tr>
 								<tr>
@@ -749,8 +746,6 @@ History:
 									<td>Anti-A29-19-MFI</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
-									<td>N</td>
-									<td>N</td>
 									<td></td>
 								</tr>
 								<tr>
@@ -760,8 +755,6 @@ History:
 									<td>Anti-A32-19-MFI</td>
 									<td>HLA</td>
 									<td>7608888888888</td>
-									<td>N</td>
-									<td>Y</td>
 									<td></td>
 								</tr>
 							</tbody>
@@ -892,22 +885,6 @@ History:
 											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='INT' value='5868' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
-											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
-													<code code='001' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Center specific avoid' />
-													<statusCode code='completed'/>
-													<value xsi:type='BL' value='false' />
-												</observation>
-											</entryRelationship>
-											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
-													<code code='002' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Previous TX' />
-													<statusCode code='completed'/>
-													<value xsi:type='BL' value='true' />
-												</observation>
-											</entryRelationship>
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
 													<value xsi:type='IVL_PQ'>
@@ -929,22 +906,6 @@ History:
 											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='INT' value='1479' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
-											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
-													<code code='001' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Center specific avoid' />
-													<statusCode code='completed'/>
-													<value xsi:type='BL' value='false' />
-												</observation>
-											</entryRelationship>
-											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
-													<code code='002' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Previous TX' />
-													<statusCode code='completed'/>
-													<value xsi:type='BL' value='false' />
-												</observation>
-											</entryRelationship>
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
 													<value xsi:type='IVL_PQ'>
@@ -966,22 +927,6 @@ History:
 											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='INT' nullFlavor='UNK' />
 											<interpretationCode nullFlavor='UNK' />
-											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
-													<code code='001' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Center specific avoid' />
-													<statusCode code='completed'/>
-													<value xsi:type='BL' value='false' />
-												</observation>
-											</entryRelationship>
-											<entryRelationship typeCode='SUBJ' inversionInd='true'>
-												<observation classCode='OBS' moodCode='EVN'>
-													<templateId root='2.16.756.5.30.1.1.1.1.3.4.1' extension='CDA-CH.LRTP.SOASInfo'/>
-													<code code='002' codeSystem='2.16.756.5.30.1.129.1.1.2' codeSystemName='soas-info' displayName='Previous TX' />
-													<statusCode code='completed'/>
-													<value xsi:type='BL' value='true' />
-												</observation>
-											</entryRelationship>
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
 													<value xsi:type='IVL_PQ'>
