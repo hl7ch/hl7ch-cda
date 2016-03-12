@@ -10,6 +10,7 @@ History:
 2015.03.03: Tony Schaller, medshare GmbH (Einbau Änderungsanträge BAG)
 2016.03.03: Tony Schaller, medshare GmbH (Some corrections in order to fulfill the schematron rules)
 2016.03.09: Tony Schaller, medshare GmbH (Removed SOASInfo while this is obsolete)
+2016.03.12: Tony Schaller, medshare GmbH (Refactoring according to CDA-CH-LRTP V2alpha00)
 
 ********************************************************
 -->
@@ -235,7 +236,7 @@ History:
 							<id root='2.16.756.5.30.1.1.1.1.3.1.1' extension='7586A249-889D-4F09-843A-9C3399ECFCB6'/>
 							<code code='46680005' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Vital signs' />
 							<statusCode code='completed'/>
-							<effectiveTime value='20081118'/>
+							<effectiveTime value='200811181238+0100'/>
 							<author typeCode='AUT'>
 								<time value='20081118' />
 								<assignedAuthor>
@@ -255,7 +256,6 @@ History:
 										<reference value='#o1'/>
 									</text>
 									<statusCode code='completed'/>
-									<effectiveTime nullFlavor="UNK" />
 									<value xsi:type='PQ' value='178' unit='cm'/>
 									<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 									<methodCode nullFlavor='NA' />
@@ -274,7 +274,6 @@ History:
 										<reference value='#o2'/>
 									</text>
 									<statusCode code='completed'/>
-									<effectiveTime nullFlavor="UNK" />
 									<value xsi:type='PQ' value='78' unit='kg'/>
 									<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 									<methodCode nullFlavor='NA' />
@@ -460,7 +459,7 @@ History:
 											<code code='7917-8' displayName='HIV 1 Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l1'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>											<value xsi:type='BL' value='false' />
+											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
 									</component>
@@ -471,7 +470,6 @@ History:
 											<code code='7919-4' displayName='HIV 2 Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l2'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -483,7 +481,6 @@ History:
 											<code code='9821-0' displayName='HIV 1 p24 Ag [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l3'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -495,8 +492,7 @@ History:
 											<code code='5017-9' displayName='HIV 1 RNA [Presence] in Blood by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l4'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<value xsi:type='BL' nullFlavor='NA' /> 
 											<interpretationCode nullFlavor='UNK' />
 										</observation>
 									</component>
@@ -507,8 +503,7 @@ History:
 											<code code='69353-1' displayName='HIV 2 RNA [Presence] in Serum or Plasma by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l5'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<value xsi:type='BL' nullFlavor='NA' /> 
 											<interpretationCode nullFlavor='UNK' />
 										</observation>
 									</component>
@@ -519,7 +514,6 @@ History:
 											<code code='22322-2' displayName='Hepatitis B virus surface Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l6'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -531,7 +525,6 @@ History:
 											<code code='16933-4' displayName='Hepatitis B virus core Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l7'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -543,8 +536,7 @@ History:
 											<code code='22320-6' displayName='Hepatitis B virus e Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l8'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<value xsi:type='BL' nullFlavor='NA' /> 
 											<interpretationCode nullFlavor='UNK' />
 										</observation>
 									</component>
@@ -555,7 +547,6 @@ History:
 											<code code='5195-3' displayName='Hepatitis B virus surface Ag [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l9'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -567,7 +558,6 @@ History:
 											<code code='16128-1' displayName='Hepatitis C virus Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l10'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -579,8 +569,7 @@ History:
 											<code code='11259-9' displayName='Hepatitis C virus RNA [Presence] in Serum or Plasma by Probe and target amplification method' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l11'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='BL' nullFlavor='UNK' /> 
+											<value xsi:type='BL' nullFlavor='NA' /> 
 											<interpretationCode nullFlavor='UNK' />
 										</observation>
 									</component>
@@ -591,7 +580,6 @@ History:
 											<code code='49178-7' displayName='Epstein Barr virus Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l12'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -603,7 +591,6 @@ History:
 											<code code='22239-8' displayName='Cytomegalovirus Ab [Presence] in Serum' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
 											<text><reference value='#l13'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='false' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -773,6 +760,7 @@ History:
 								<organizer classCode='BATTERY' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
 									<statusCode code='completed'/>
+									<effectiveTime value='201401151138+0100'/>
 									<author typeCode='AUT'>
 										<time value='201401151037' />
 										<assignedAuthor>
@@ -786,7 +774,6 @@ History:
 											<code code='A3' displayName='A3 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l21'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -798,7 +785,6 @@ History:
 											<code code='A24' displayName='A24(9) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l22'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -810,7 +796,6 @@ History:
 											<code code='B7' displayName='B7 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l23'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -822,7 +807,6 @@ History:
 											<code code='B18' displayName='B18 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l24'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -834,7 +818,6 @@ History:
 											<code code='DR11' displayName='DR11(5) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l25'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -846,7 +829,6 @@ History:
 											<code code='DR8' displayName='DR8 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l26'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -858,7 +840,6 @@ History:
 											<code code='DQ7' displayName='DQ7(3) HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l27'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -870,7 +851,6 @@ History:
 											<code code='DQ4' displayName='DQ4 HLA-Antigene' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l28'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='BL' value='true' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 										</observation>
@@ -882,7 +862,6 @@ History:
 											<code code='Anti-A2-MFI' displayName='HLA-Antibody A2- MFI Value' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l31'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='INT' value='5868' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
@@ -903,7 +882,6 @@ History:
 											<code code='Anti-A29-MFI' displayName='HLA-Antibody A29(19)- MFI Value' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l32'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
 											<value xsi:type='INT' value='1479' />
 											<interpretationCode code='N' codeSystem='2.16.840.1.113883.5.83' />
 											<referenceRange typeCode='REFV'>
@@ -924,8 +902,7 @@ History:
 											<code code='Anti-A32-MFI' displayName='HLA-Antibody A32(19)- MFI Value' codeSystem='2.16.756.5.30.1.129.1.1.8' codeSystemName='HLA' />
 											<text><reference value='#l33'/></text>
 											<statusCode code='completed'/>
-											<effectiveTime value='201401151037+0100'/>
-											<value xsi:type='INT' nullFlavor='UNK' />
+											<value xsi:type='INT' nullFlavor='NA' />
 											<interpretationCode nullFlavor='UNK' />
 											<referenceRange typeCode='REFV'>
 												<observationRange classCode='OBS' moodCode='EVN.CRT'>
