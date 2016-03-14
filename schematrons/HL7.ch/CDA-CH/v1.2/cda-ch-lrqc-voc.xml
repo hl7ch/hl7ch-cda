@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+********************************************************
+
+Vocabulary zu Laborbefunde für Qualitätskontrolle (CDA-CH-LRQC)
+
+History:
+2015.05.29 Tony Schaller, medshare GmbH (First draft)
+2015.09.17 Tony Schaller, medshare GmbH (Abgabe Value-Set für Anhörung eHealth Suisse)
+2016.TODO Tony Schaller, medshare GmbH (Refactoring after implementing the Schematron rules)
+
+********************************************************
+-->
+<systems>
+
+	<!-- Liste der zugelassenen QUALAB Qualitätskontrollzenter (QKZ) -->
+	<system codeSystemName='qualab-qcc' root='2.16.756.5.30.1.144.1.1'>
+		<code value='7601001326507' displayName='Centre Suisse de Contrôle de Qualité CSCQ' codeSystem='2.51.1.3' codeSystemName='GLN' validFrom='20150101' validTo='N/A'/>
+		<code value='7601001402805' displayName='Verein für medizinische Qualitätskontrolle' codeSystem='2.51.1.3' codeSystemName='GLN' validFrom='20150101' validTo='N/A'/>
+		<code value='7601001363540' displayName='Interregionale Blutspende SRK AG' codeSystem='2.51.1.3' codeSystemName='GLN' validFrom='20150101' validTo='N/A'/>
+	</system>
+
+	<!-- Value-Set für Interpertationscodes von Beobachtungen in der externen obligatorischen Qualitätskontrolle -->
+	<system codeSystemName='qc-intCode' root='2.16.756.5.30.1.144.1.2.1'>
+		<code value='A' displayName='Abnormal' />
+		<code value='AA' displayName='Abnormal alert' />
+		<code value='H' displayName='High' />
+		<code value='HH' displayName='High alert' />
+		<code value='L' displayName='Low' />
+		<code value='LL' displayName='Low alert' />
+		<code value='N' displayName='Normal' />
+		<code value='&gt;' displayName='High of scale' />
+		<code value='&lt;' displayName='Low of scale' />
+		<code value='POS' displayName='Positive' />
+		<code value='NEG' displayName='Negative' />
+	</system>
+
+	<!-- Befundgruppen für die externe obligatorische Qualitätskontrolle -->
+	<system codeSystemName='qc-repGroup' root='2.16.756.5.30.1.144.1.2.2'>
+	</system>
+
+</systems>
