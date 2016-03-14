@@ -7,7 +7,7 @@ History:
 2015.04.08: Tony Schaller, medshare GmbH (First draft)
 2015.11.30: Tony Schaller, medshare GmbH (Corrected text reference)
 2016.03.03: Tony Schaller, medshare GmbH (Fixed non living subject)
-2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfil Schematron rules for CDA header)
+2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfil Schematron rules)
 
 ********************************************************
 -->
@@ -157,7 +157,7 @@ History:
 				<section>
 					<!-- IHE XD-LAB: Laboratory Speciality Section -->
 					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
-					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='Microbiology studies'/>
+					<code code='18719-5' codeSystem='2.16.840.1.113883.6.1' displayName='Chemistry studies'/>
 					<title>Laborbefund</title>
 					<text>
 						Befundgruppe: 18719-5 - Chemistry studies<br />
@@ -195,11 +195,15 @@ History:
 									<!--LOINC-->
 									<td>2951-2</td>
 									<!--Probenentnahme-->
-									<td>04.04.2015</td>
+									<td>
+										<content ID='sc1'>04.04.2015</content>
+									</td>
 									<!--Probeneingang-->
 									<td>05.04.2015 15:34</td>
 									<!--Kommentar-->
-									<td><content ID='lc1'>Demo</content></td>
+									<td>
+										<content ID='lc1'>Demo</content>
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -216,11 +220,10 @@ History:
 								<templateId root="1.3.6.1.4.1.19376.1.3.3.1.2.1"/>
 								<relatedSubject>
 									<code nullFlavor='UNK' />
-									<addr>
-										<streetAddressLine>Buchshaldenstrasse 2</streetAddressLine>
-										<postalCode>3661</postalCode>
-										<city>Uetendorf</city>
-										<country>CHE</country>
+									<addr use='WP'>
+										<streetAddressLine>Murtenstrasse 42</streetAddressLine>
+										<postalCode>3008</postalCode>
+										<city>Bern</city>
 									</addr>
 								</relatedSubject>
 							</subject>
@@ -230,6 +233,9 @@ History:
 								<procedure classCode='PROC' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
 									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Collection date'/>
+									<text>
+										<reference value='#sc1'/>
+									</text>
 									<effectiveTime value='20150404'/>
 									<participant typeCode='PRD'>
 										<participantRole classCode='SPEC'>
@@ -282,7 +288,7 @@ History:
 												<act classCode="ACT" moodCode="EVN">
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
-													<id root='1.299' extension='blabla' />
+													<id root='2.999' extension='xyz' />
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
 													<text>
 														<reference value="#lc1"/>

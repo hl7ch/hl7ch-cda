@@ -7,7 +7,7 @@ History:
 2015.04.08: Tony Schaller, medshare GmbH (First draft)
 2015.11.30: Tony Schaller, medshare GmbH (corrected text reference)
 2016.03.03: Tony Schaller, medshare GmbH (fixed non living subject)
-2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfil Schematron rules for CDA header)
+2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfil Schematron rules)
 
 ********************************************************
 -->
@@ -159,7 +159,7 @@ History:
 				<section>
 					<!-- IHE XD-LAB: Laboratory Speciality Section -->
 					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
-					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='Microbiology studies'/>
+					<code code='18729-4' codeSystem='2.16.840.1.113883.6.1' displayName='Urinalysis studies'/>
 					<title>Laborbefund</title>
 					<text>
 						Befundgruppe: 18729-4 - Urinalysis studies<br />
@@ -221,7 +221,9 @@ History:
 									<!--LOINC-->
 									<td>5767-9</td>
 									<!--Probenentnahme-->
-									<td>04.04.2015</td>
+									<td>
+										<content ID='sc1'>04.04.2015</content>
+									</td>
 									<!--Probeneingang-->
 									<td>05.04.2015 15:34</td>
 									<!--Kommentar-->
@@ -244,11 +246,10 @@ History:
 								<templateId root="1.3.6.1.4.1.19376.1.3.3.1.2.1"/>
 								<relatedSubject>
 									<code nullFlavor='UNK' />
-									<addr>
-										<streetAddressLine>Buchshaldenstrasse 2</streetAddressLine>
-										<postalCode>3661</postalCode>
-										<city>Uetendorf</city>
-										<country>CHE</country>
+									<addr use='WP'>
+										<streetAddressLine>Chemin du Petit-Bel-Air 2</streetAddressLine>
+										<postalCode>1225</postalCode>
+										<city>Chêne-Bourg</city>
 									</addr>
 								</relatedSubject>
 							</subject>
@@ -257,11 +258,14 @@ History:
 							<entryRelationship typeCode='COMP'>
 								<procedure classCode='PROC' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
-									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Collection date'/>
+									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Collection date' />
+									<text>
+										<reference value='#sc1'/>
+									</text>
 									<effectiveTime nullFlavor='UNK' />
 									<participant typeCode='PRD'>
 										<participantRole classCode='SPEC'>
-											<id nullFlavor='NA' />
+											<id root='2.999' extension='xyz' />
 											<playingEntity>
 												<code code='LOINC' codeSystem='2.16.756.5.30.2.1.1.10'/>
 											</playingEntity>
@@ -271,9 +275,8 @@ History:
 									<entryRelationship typeCode='COMP'>
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
-											<id nullFlavor='NA' />
-											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
-											codeSystemName='IHEActCode' displayName='Receive Time'/>
+											<id nullFlavor='UNK' />
+											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2' codeSystemName='IHEActCode' displayName='Receive Time'/>
 											<effectiveTime value='201504051534+0100'/>
 										</act>
 									</entryRelationship>
@@ -300,11 +303,11 @@ History:
 											<value xsi:type='ED'>
 												<reference value='#l1'/>
 											</value>
+											<interpretationCode nullFlavor='NA' />
 											<entryRelationship typeCode="SUBJ" inversionInd="true">
 												<act classCode="ACT" moodCode="EVN">
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
-													<id root='1.299' extension='blabla' />
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
 													<text>
 														<reference value="#lc1"/>
@@ -313,6 +316,104 @@ History:
 												</act>
 											</entryRelationship>
 										</observation>
+									</component>
+
+									<component typeCode='COMP'>
+										<observationMedia classCode="OBS" moodCode="EVN">
+											<value xsi:type='ED' mediaType="image/gif" representation="B64">
+												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
+												AvELA1MsxitQxmaswChrwg/xAlGMBUEAADs=
+											</value>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<act classCode="ACT" moodCode="EVN">
+													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+													<templateId root="2.16.840.1.113883.10.20.1.40"/>
+													<id root='2.999' extension='xyz' />
+													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+													<text>
+														<reference value="#lc1"/>
+													</text>
+													<statusCode code="completed"/>
+												</act>
+											</entryRelationship>
+										</observationMedia>
 									</component>
 
 								</organizer>
