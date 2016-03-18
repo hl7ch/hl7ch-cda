@@ -6,6 +6,7 @@ History:
 2012.12.23: Tony Schaller, medshare GmbH (Erster Entwurf)
 2012.12.31: Tony Schaller, medshare GmbH (Abgabe an Kunden)
 2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
+2016.03.18: Tony Schaller, medshare GmbH (Adding header template for CTNN and correction of document code according to IHE EDES CTNN)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -19,9 +20,12 @@ History:
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
 	<!-- Composite Triage and Nursing Note Specification -->
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.13.1.3"/>
+	<!-- CDA-CH -->
 	<templateId extension="CDA-CH" root="2.16.756.5.30.1.1.1.1"/>
+	<!-- CDA-CH-EDES V1.0 -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.1.1"/>
 	<id extension="69604928-C7F4-4E0F-AB13-4774F33DA938" root="2.16.756.5.30.1.1.1.1"/>
-	<code code="28568-4" codeSystem="2.16.840.1.113883.6.1" displayName="ED Visit Note"/>
+	<code code="X-TRIAGE" codeSystem="2.16.840.1.113883.6.1" displayName="Triage Note"/>
 	<title>Notfallaustrittsbericht</title>
 	<effectiveTime value="20111110"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
