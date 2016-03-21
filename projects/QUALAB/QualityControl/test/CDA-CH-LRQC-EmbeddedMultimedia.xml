@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
 ********************************************************
-Beispiel Laborbefund für Qualitätskontrolle gemäss CDA-CH-LRQC V1.0
+Test Laborbefund für Qualitätskontrolle gemäss CDA-CH-LRQC V1.0
 
 History:
-2015.04.08: Tony Schaller, medshare GmbH (First draft)
-2015.11.30: Tony Schaller, medshare GmbH (corrected text reference)
-2016.03.03: Tony Schaller, medshare GmbH (fixed non living subject)
-2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfil Schematron rules)
+2016.03.21: Tony Schaller, medshare GmbH (first draft)
 
 ********************************************************
 -->
@@ -1612,7 +1609,8 @@ History:
 												NTUzNSBmDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMDAgNjU1MzUgZg0KMDAwMDAwMDAw
 												MCA2NTUzNSBmDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMDAgNjU1MzUgZg0KMDAwMDAw
 												MDAwMCA2NTUzNSBmDQp0cmFpbGVyDQo8PC9TaXplIDIyPj4NCnN0YXJ0eHJlZg0KMTE2DQolJUVP
-											Rg0K											</value>
+												Rg0K
+											</value>
 										</observationMedia>
 									</component>
 								</organizer>
