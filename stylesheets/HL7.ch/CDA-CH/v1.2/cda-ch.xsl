@@ -11,6 +11,7 @@ Updated by Kai U. Heitmann, Heitmann Consulting Service, NL for VHitG, Germany
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, for CDA-CH V1.2
 Updated by Nico Ehinger, ELCA SA, code refactoring
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised for CDA-CH Body templates and language dependent rendering
+Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rendering
 
 ********************************************************
 -->
@@ -560,7 +561,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			<xsl:when test="//n1:regionOfInterest[@ID=$imageRef]">
 				<!-- Here is where the Region of Interest image referencing goes -->
 				<xsl:if
-					test="//n1:regionOfInterest[@ID=$imageRef]//n1:observationMedia/n1:value[@mediaType='image/gif' or @mediaType='image/jpeg']">
+					test="//n1:regionOfInterest[@ID=$imageRef]//n1:observationMedia/n1:value[@mediaType='image/gif' or  @mediaType='image/jpeg' or  @mediaType='image/png' or  @mediaType='image/bmp']">
 					<br clear="all"/>
 					<xsl:element name="img">
 						<xsl:attribute name="src">
@@ -571,11 +572,59 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised f
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- Here is where the direct MultiMedia image referencing goes -->
-				<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[@mediaType='image/gif' or  @mediaType='image/jpeg']">
+				<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[@representation='B64']">
+					<!-- base64 embedded object -->
+					<xsl:variable name="mediaType">
+						<xsl:value-of select="//n1:observationMedia[@ID=$imageRef]/n1:value/@mediaType"/>
+					</xsl:variable>
+					<xsl:variable name="b64Text">
+						<xsl:value-of select="//n1:observationMedia[@ID=$imageRef]/n1:value[@representation='B64']/text()"/>
+					</xsl:variable>
+					<br clear="all"/>
+					<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[(@mediaType='image/gif' or  @mediaType='image/jpeg' or  @mediaType='image/png' or  @mediaType='image/bmp')]">
+						<!-- base64 embedded image -->
+						<xsl:element name="img">
+							<xsl:attribute name="src">
+								<xsl:value-of select="concat(concat(concat('data:',$mediaType),';base64,'),$b64Text)"/>
+							</xsl:attribute>
+						</xsl:element>
+					</xsl:if>
+					<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[(@mediaType='application/pdf')]">
+						<!-- base64 embedded pdf -->
+						<xsl:element name="embed">
+							<xsl:attribute name="src">
+								<xsl:value-of select="concat(concat(concat('data:',$mediaType),';base64,'),$b64Text)"/>
+							</xsl:attribute>
+							<xsl:attribute name="width">
+								<xsl:value-of select="'800px'"/>
+							</xsl:attribute>
+							<xsl:attribute name="height">
+								<xsl:value-of select="'1200px'"/>
+							</xsl:attribute>
+						</xsl:element>
+					</xsl:if>
+				</xsl:if>
+				<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[not(@representation='B64') and (@mediaType='image/gif' or  @mediaType='image/jpeg' or  @mediaType='image/png' or  @mediaType='image/bmp')]">
+					<!-- referenced image file object -->
 					<br clear="all"/>
 					<xsl:element name="img">
 						<xsl:attribute name="src">
 							<xsl:value-of select="//n1:observationMedia[@ID=$imageRef]/n1:value/n1:reference/@value"/>
+						</xsl:attribute>
+					</xsl:element>
+				</xsl:if>
+				<xsl:if test="//n1:observationMedia[@ID=$imageRef]/n1:value[not(@representation='B64') and (@mediaType='application/pdf')]">
+					<!-- referenced file object -->
+					<br clear="all"/>
+					<xsl:element name="embed">
+						<xsl:attribute name="src">
+							<xsl:value-of select="//n1:observationMedia[@ID=$imageRef]/n1:value/n1:reference/@value"/>
+						</xsl:attribute>
+						<xsl:attribute name="width">
+							<xsl:value-of select="'800px'"/>
+						</xsl:attribute>
+						<xsl:attribute name="height">
+							<xsl:value-of select="'1200px'"/>
 						</xsl:attribute>
 					</xsl:element>
 				</xsl:if>
