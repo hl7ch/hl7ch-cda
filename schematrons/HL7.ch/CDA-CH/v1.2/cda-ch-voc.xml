@@ -891,7 +891,7 @@ History:
 
 	<!--
 	********************************************************
-	CDA-CH-EDES: Beurteilung von Resultaten
+	Beurteilung von Resultaten
 	********************************************************
 	-->
 	<system codeSystemName='ObservationInterpretation' root='2.16.840.1.113883.5.83'>
@@ -902,6 +902,10 @@ History:
 		<code value='L' displayName='Low' />
 		<code value='LL' displayName='Low alert' />
 		<code value='N' displayName='Normal' />
+		<code value='&gt;' displayName='High of scale' />
+		<code value='&lt;' displayName='Low of scale' />
+		<code value='POS' displayName='Positive' />
+		<code value='NEG' displayName='Negative' />
 	</system>
 
 	<!--
