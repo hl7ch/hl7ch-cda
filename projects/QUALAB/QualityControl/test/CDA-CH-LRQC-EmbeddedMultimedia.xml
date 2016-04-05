@@ -323,7 +323,7 @@ History:
 									</component>
 									<component typeCode='COMP'>
 										<observationMedia classCode="OBS" moodCode="EVN" ID="image1">
-											<value xsi:type='ED' mediaType="image/gif" representation="B64">
+											<value mediaType="image/gif" representation="B64">
 												R0lGODlhcAGAANUwADYAVf5dAGcZkf6uf/6GQP/Wv5p/qmhAgM2/1P/hz//177OMyP5nENnF4//r
 												3/6aYP/Mr41Trf5xIP/Cn/6QUP57MP+4j/6kcHEnmOLU6vXx+Ho2n/Lv9EMQYMao1uzi8ZdhtE8g
 												alwwddnP36BwusCvys+33IREprOfv+bf6o5woKp+wYJglaePtLyaz3VQiv///wAAAAAAAAAAAAAA
