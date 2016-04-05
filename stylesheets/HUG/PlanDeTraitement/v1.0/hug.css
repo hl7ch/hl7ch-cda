@@ -17,6 +17,7 @@ h1 {
 /* Header */
 table.head th {
 	color: #1D8BC0;	
+	font-weight: normal;
 }
 table.head thead tr {
 	background-color: #CEDDFB;
@@ -41,4 +42,8 @@ table.foot tr td {
 }
 table.foot tr th.empty {
 	background-color: transparent;
+}
+
+table.body thead {
+	background-color: #CEDDFB;
 }

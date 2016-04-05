@@ -37,7 +37,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 			<xsl:when test="/n1:ClinicalDocument/n1:languageCode/@code">
 				<xsl:value-of select="substring(/n1:ClinicalDocument/n1:languageCode/@code,1,2)"/>
 			</xsl:when>
-			<xsl:otherwise>de-CH</xsl:otherwise>
+			<xsl:otherwise>de</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
 
@@ -56,7 +56,6 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 	<xsl:template match="n1:ClinicalDocument">
 		<html>
 			<head>
-				<!-- <meta name='Generator' content='&CDA-Stylesheet;'/> -->
 				<xsl:comment>
 					Do NOT edit this HTML directly, it was generated via an XSLt transformation from the original release 2 CDA
 					Document.
@@ -411,7 +410,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</ul>
 	</xsl:template>
 
-	<!--   Title  -->
+	<!--  Title  -->
 	<xsl:template match="n1:title">
 		<xsl:param name="code" select="''"/>
 		<h3 title="{$code}">
@@ -419,7 +418,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</h3>
 	</xsl:template>
 
-	<!--   Text   -->
+	<!--  Text   -->
 	<xsl:template match="n1:text">
 		<xsl:apply-templates select="n1:linkHtml"/>
 		<xsl:apply-templates/>
@@ -432,52 +431,52 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</a>
 	</xsl:template>
 
-	<!--   paragraph  -->
+	<!--  Paragraph  -->
 	<xsl:template match="n1:paragraph">
 		<xsl:apply-templates/>
 		<p />
 	</xsl:template>
 
-	<!--   line break  -->
+	<!--  Line break  -->
 	<xsl:template match="n1:br">
 		<xsl:apply-templates/>
 		<br />
 	</xsl:template>
 
-	<!--     Content w/ deleted text is hidden -->
+	<!--  Content w/ deleted text is hidden -->
 	<xsl:template match="n1:content[@revised='delete']"/>
 
-	<!--   content  -->
+	<!--  Content  -->
 	<xsl:template match="n1:content">
 		<xsl:apply-templates/>
 	</xsl:template>
 
-	<!--   list  -->
+	<!--  List  -->
 	<xsl:template match="n1:list">
-		<!-- caption -->
+		<!-- Caption -->
 		<xsl:if test="n1:caption">
 			<span style="font-weight:bold; ">
 				<xsl:apply-templates select="n1:caption"/>
 			</span>
 		</xsl:if>
-		<!-- item -->
+		<!-- Item -->
 		<xsl:choose>
 			<xsl:when test="@listType='ordered'">
 				<ol>
 					<xsl:for-each select="n1:item">
 						<li>
-							<!-- list element-->
+							<!-- List element-->
 							<xsl:apply-templates/>
 						</li>
 					</xsl:for-each>
 				</ol>
 			</xsl:when>
 			<xsl:otherwise>
-				<!-- list is unordered -->
+				<!-- List is unordered -->
 				<ul>
 					<xsl:for-each select="n1:item">
 						<li>
-							<!-- list element-->
+							<!-- List element-->
 							<xsl:apply-templates/>
 						</li>
 					</xsl:for-each>
@@ -486,13 +485,13 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</xsl:choose>
 	</xsl:template>
 
-	<!--   caption  -->
+	<!--  Caption  -->
 	<xsl:template match="n1:caption">
 		<xsl:apply-templates/>
 		<xsl:text>: </xsl:text>
 	</xsl:template>
 
-	<!-- tables -->
+	<!-- Tables -->
 	<xsl:template match="n1:table/@*|n1:thead/@*|n1:tfoot/@*|n1:tbody/@*|n1:colgroup/@*|n1:col/@*|n1:tr/@*|n1:th/@*|n1:td/@*">
 		<xsl:copy>
 			<xsl:apply-templates/>
@@ -549,19 +548,14 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</span>
 	</xsl:template>
 
-	<!--   RenderMultiMedia
-	this currently only handles GIF's and JPEG's.  It could, however,
-	be extended by including other image MIME types in the predicate
-	and/or by generating <object> or <applet> tag with the correct
-	params depending on the media type  @ID  =$imageRef  referencedObject
-	-->
+	<!--  RenderMultiMedia	-->
 	<xsl:template match="n1:renderMultiMedia">
 		<xsl:variable name="imageRef" select="@referencedObject"/>
 		<xsl:choose>
 			<xsl:when test="//n1:regionOfInterest[@ID=$imageRef]">
 				<!-- Here is where the Region of Interest image referencing goes -->
 				<xsl:if
-					test="//n1:regionOfInterest[@ID=$imageRef]//n1:observationMedia/n1:value[@mediaType='image/gif' or  @mediaType='image/jpeg' or  @mediaType='image/png' or  @mediaType='image/bmp']">
+					test="//n1:regionOfInterest[@ID=$imageRef]//n1:observationMedia/n1:value[@mediaType='image/gif' or @mediaType='image/jpeg' or  @mediaType='image/png' or  @mediaType='image/bmp']">
 					<br clear="all"/>
 					<xsl:element name="img">
 						<xsl:attribute name="src">
@@ -686,7 +680,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</xsl:if>
 	</xsl:template>
 
-	<!--    Superscript or Subscript   -->
+	<!--  Superscript or Subscript   -->
 	<xsl:template match="n1:sup">
 		<xsl:element name="sup">
 			<xsl:apply-templates/>
@@ -744,6 +738,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</xsl:if>
 	</xsl:template>
 
+	<!-- Performer 	-->
 	<xsl:template name="performer">
 		<table width="100%">
 			<xsl:for-each select="//n1:serviceEvent/n1:performer">
@@ -786,7 +781,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 				</h3>
 				<ul>
 					<table class="body">
-						<tbody>
+						<thead>
 							<tr>
 								<th>
 									<xsl:value-of select="document('cda-ch-xsl-voc.xml')/localization/text[@language=$language and @value='ParticipantType']/@displayName"/>
@@ -804,6 +799,8 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 									<xsl:text>ID</xsl:text>
 								</th>
 							</tr>
+						</thead>
+						<tbody>
 							<xsl:for-each select="/n1:ClinicalDocument/n1:participant">
 								<xsl:variable name="participantType">
 									<xsl:choose>
@@ -1137,13 +1134,18 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 								<xsl:with-param name="name" select="n1:intendedRecipient/n1:informationRecipient/n1:name"/>
 							</xsl:call-template>
 						</xsl:if>
+						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
+							<xsl:call-template name="getName">
+								<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
+							</xsl:call-template>
+						</xsl:if>
 					</td>
 				</tr>
 				<tr>
 					<th class="empty"/>
 					<td>
 						<xsl:call-template name="getContactInfo">
-							<xsl:with-param name="contact" select="n1:intendedRecipient"/>
+							<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
 						</xsl:call-template>
 						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
 							<br />
@@ -1161,8 +1163,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		</table>
 	</xsl:template>
 
-	<!--
-	-->
+	<!-- Telecom codes -->
 	<xsl:template name="translateCode">
 		<xsl:param name="code"/>
 		<xsl:choose>

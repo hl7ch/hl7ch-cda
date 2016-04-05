@@ -84,9 +84,7 @@ table {
 td, th {
 	vertical-align: top;
 	text-align: left;
-	font-weight: normal;
 }
-
 
 /*********************************************************
   Head Table
@@ -96,6 +94,7 @@ table.head {
 }
 table.head th {
 	color:white;	
+	font-weight: normal;
 }
 table.head th, table.head td {
 	padding: 5px;
@@ -146,6 +145,12 @@ table.body tr th {
 }
 table.body tr td {
 	background-color: #ffff66;
+	text-align: left;
+}
+
+table.body thead {
+	font-weight: bold;
+	background-color: #ffd700;
 	text-align: left;
 }
 
