@@ -9,6 +9,7 @@ Copied from CDA-CH-VACD_Impfausweis.xml:
 History:
 2015.09.16: Tony Schaller, medshare GmbH (Sample Creation)
 2015.10.13: Tony Schaller, medshare GmbH (Korrekur OID CDA-CH-VACD)
+2016.05.29: Tony Schaller, medshare GmbH (realmCode CHE added)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -16,6 +17,7 @@ History:
 	<!-- ********************************************************
 	CDA Header
 	******************************************************** -->
+  <realmCode code="CHE"/>
 	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
 	<!-- Parent Templates -->
 	<!-- IHE PCC Medical Documents Specification -->
