@@ -7,8 +7,8 @@ History:
 2015.04.08: Tony Schaller, medshare GmbH (First draft)
 2015.11.30: Tony Schaller, medshare GmbH (corrected text reference)
 2016.03.03: Tony Schaller, medshare GmbH (fixed non living subject)
-2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfil Schematron rules)
-2016.06.03: Tony Schaller, medshare GmbH (XML reformat)
+2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfill Schematron rules)
+2016.06.03: Tony Schaller, medshare GmbH (Finalization for approval by QUALAB)
 
 ********************************************************
 -->
@@ -31,7 +31,7 @@ History:
 	<templateId root='2.16.756.5.30.1.1.1.1.3.7.1'/>
 	<id extension='C96035BD-09D6-4BE7-A011-EDAD2B275FA7' root='2.16.756.5.30.1.1.1.1.3.7.1'/>
 	<code code='11502-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='LABORATORY REPORT.TOTAL'/>
-	<title>Laborbefunde für Qualitätskontrolle</title>
+	<title>Laborbefund für Qualitätskontrolle</title>
 	<effectiveTime value='20150408'/>
 	<confidentialityCode code='N' codeSystem='2.16.840.1.113883.5.25'/>
 	<languageCode code='de-CH'/>
@@ -248,7 +248,7 @@ History:
 											</playingEntity>
 										</participantRole>
 									</participant>
-									
+
 									<!-- IHE XD-LAB: Specimen Received -->
 									<entryRelationship typeCode='COMP'>
 										<act classCode='ACT' moodCode='EVN'>
