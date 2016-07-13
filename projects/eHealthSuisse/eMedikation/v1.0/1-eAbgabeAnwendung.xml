@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ************************************************************ -->
+<!-- Fallbeispiel -->
+<!-- 1 eAbgabeAnwendungsDokument based on IHE DIS -->
+<!-- History: -->
+<!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
+<!-- ************************************************************ -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
+	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
+
+	<realmCode code="CHE" />
+
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+
+	<!-- IHE PCC -->
+	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
+
+	<!-- IHE PARM DIS -->
+	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.3" />
+
+	<!-- CDA-CH -->
+	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH" />
+
+	<!-- CDA-CH-EMED-AbgabeAnwendungsDokument-V1 -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.10.3" />
+	
+	<!-- CDA-CH-EMED-Abgabe -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.10.3.1" />
+	
+
+	<!-- id of the eAbgabeAwendung -->
+	<id root="2.16.756.5.30.1.1.1.1" extension="488bd23a-20c6-11e6-b67b-9e71128cae77" />
+
+	<!-- IHE PHARM DIS -->
+	<code code="60593-1" codeSystem="2.16.840.1.113883.6.1"
+		codeSystemName="LOINC" displayName="Medication dispensed" />
+	<title>eAbgabeDokument</title>
+
+	<effectiveTime value="20111129110100+0100" />
+
+	<confidentialityCode code="30003"
+		codeSystem="2.16.756.5.30.1.127.3.10.1.5" displayName="Medical data" />
+
+	<languageCode code="de-CH" />
+
+	<recordTarget>
+		<patientRole>
+			<id nullFlavor="NI" />
+			<patient>
+				<name>
+					<family>Wegmüller</family>
+					<given>Monika</given>
+				</name>
+				<birthTime value="1943" />
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+	<author>
+		<time value="20111129110000+0100" />
+		<assignedAuthor>
+			<id nullFlavor="NI" />
+			<assignedPerson>
+				<name>
+					<family>Hausarzt</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor="NI" />
+				<name>Hausarzt</name>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<legalAuthenticator>
+		<time value="20111129110000+0100" />
+		<signatureCode code="S" />
+		<assignedEntity>
+			<id nullFlavor="NI" />
+			<assignedPerson>
+				<name>
+					<family>Hausarzt</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+
+					<!-- DIS -->
+					<templateId root="2.16.840.1.113883.10.20.1.8" />
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.3" />
+					
+					<!-- CH-EMED-DispenseSectionContentModule -->
+					<templateId root="2.16.756.5.30.1.1.1.1.3.10.3" />
+					
+					<!-- id of the eAbgabeAwendung -->
+					<id root="2.16.756.5.30.1.1.1.1" extension="488bd23a-20c6-11e6-b67b-9e71128cae77" />
+					
+					<code code="60590-7" codeSystem="2.16.840.1.113883.6.1"
+						codeSystemName="LOINC" displayName="MEDICATION DISPENSED.BRIEF" />
+					<title>Abgabe von Medikamenten</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Präpartename</th>
+									<th>Wirkstoffname</th>
+									<th>Dosis pro Einheit</th>
+									<th>Galenische Form</th>
+									<th>Anzahl Packungen</th>
+									<th>Packungsgrösse</th>
+									<th>Verabreichungsweg</th>
+									<th>Anwendungsschema</th>
+									<th>Dos.Morgen</th>
+									<th>Dos.Mittag</th>
+									<th>Dos.Abend</th>
+									<th>Dos.Nacht</th>
+									<th>Anwendungsdauer</th>
+									<th>Abgabe an</th>
+									<th>Hinweise</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="dis.1">
+									<td ID="dis.1.brandedmedication">Triatec</td>
+									<td ID="dis.1.ingredient">Ramipril</td>
+									<td ID="dis.1.dosequantity">2.5 mg</td>
+									<td ID="dis.1.packageform">Tbl</td>
+									<td ID="dis.1.nopackages">1</td>
+									<td ID="dis.1.packagesize">20</td>
+									<td ID="dis.1.routecode">oral</td>
+									<td ID="dis.1.frequency">Morgens 1/2 Tablette nehmen</td>
+									<td ID="dis.1.dosagemorning">0.5</td>
+									<td ID="dis.1.dosagelunch">0</td>
+									<td ID="dis.1.dosageevening">0</td>
+									<td ID="dis.1.dosagenight">0</td>
+									<td ID="dis.1.datefromto"></td>
+									<td ID="dis.1.dipsenseto">Patient</td>
+									<td ID="dis.1.pinstruct"></td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+
+					<entry>
+						<supply classCode="SPLY" moodCode="EVN">
+
+							<!-- CH-EMED-DispenseItemEntryContentModule -->
+							<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.3.10.4.1" />
+
+							<!-- IHE PARM DIS 6.3.4.5.1 -->
+							<templateId root="2.16.840.1.113883.10.20.1.34" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.4" />
+
+							<!-- ID of dis item, IHE PARM DIS 6.3.4.5.3.3 -->
+							<id root="2.16.756.5.30.1.1.1.1" extension="5712fffe-20c6-11e6-b67b-9e71128cae77" />
+							
+							<text>
+								<reference value="#dis.1" />
+							</text>
+
+							<quantity unit="1" value="1" />
+							<product>
+								<manufacturedProduct classCode="MANU"
+									xmlns:pharm="urn:ihe:pharm:medication">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<manufacturedMaterial classCode="MMAT"
+										determinerCode="KIND">
+										<!-- CDACH-EMED Manufactured Material Content Module -->
+										<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.2" />
+										<!-- http://compendium.ch/prod/triatec-tabl-2-5-mg/de -->
+										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
+										<code code="C09AA05" codeSystem="2.16.840.1.113883.6.73"
+											codeSystemName="ATC WHO" displayName="ramipril">
+											<originalText>
+												<reference value="#dis.1.ingredient" />
+											</originalText>
+										</code>
+										<name>TRIATEC Tabl 2.5 mg</name>
+										<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+											displayName="Tablet" />
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedMedicine
+												classCode="CONT" determinerCode="INSTANCE">
+												<!-- National medicinal product code (package-level) -->
+												<pharm:code code="7680538751228" codeSystem="2.51.1.1"
+													codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 100 Stk" />
+												<!-- Brand name (package) -->
+												<pharm:name>TRIATEC Tabl 2.5 mg</pharm:name>
+												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+													displayName="Tablet" />
+												<pharm:capacityQuantity value="20" />
+											</pharm:containerPackagedMedicine>
+										</pharm:asContent>
+										<pharm:ingredient classCode="ACTI"
+											xmlns:pharm="urn:ihe:pharm:medication">
+											<pharm:quantity>
+												<pharm:numerator unit="mg" value="2.5"
+													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+													xsi:type="pharm:PQ" />
+												<pharm:denominator value="1"
+													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+													xsi:type="pharm:PQ" />
+											</pharm:quantity>
+											<pharm:ingredient classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="C09AA05" codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="ATC WHO" displayName="ramipril" />
+												<pharm:name>Ramipril</pharm:name>
+											</pharm:ingredient>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</product>
+ 							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<id root="2.16.756.5.30.1.1.1.1" extension="17931678-20b4-11e6-b67b-9e71128cae77" />
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
+										displayName='Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+ 							<!-- dosage insruction -->
+							<entryRelationship typeCode='COMP'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.6' />
+									<!-- A normal substanceAdministration act that may not contain any 
+										subordinate substanceAdministration acts. -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+									<effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+										xsi:type="IVL_TS">
+										<low value="20111129" />
+									</effectiveTime>
+									<effectiveTime xsi:type='EIVL_TS' operator='A'>
+										<event code='ACM' />
+									</effectiveTime>
+									<routeCode code="PO" displayName="Oral"
+										codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
+									<doseQuantity>
+										<center value="0.5">
+										</center>
+									</doseQuantity>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<!-- reference to eCurrentMedication document -->
+							<reference typeCode="XCRPT">
+								<externalDocument>
+									<id root="2.16.756.5.30.1.1.1.1" extension="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+								</externalDocument>
+							</reference>
+						</supply>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

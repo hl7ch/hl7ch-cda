@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ************************************************************ -->
+<!-- Fallbeispiel -->
+<!-- 3 eMedicationComment based on IHE PADV -->
+<!-- History: -->
+<!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
+<!-- ************************************************************ -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
+	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
+
+	<realmCode code="CHE" />
+	
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+
+	<!-- IHE PCC -->
+	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
+
+	<!-- IHE PHARM PADV -->
+	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.2" />
+
+	<!-- CDA-CH -->
+	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH"/>
+	
+	<!-- CDA-CH-EMED-eMedicationComment-V1 -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.10.4" />
+	
+	<!-- CDA-CH-EMED-eMedicationComment-Intervention -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.10.4.2" />
+	
+
+	<!-- id of this eMedicationComment -->
+	<id root="2.16.756.5.30.1.1.1.1" extension="8ed02d0a-2971-11e6-b67b-9e71128cae77" />
+
+	<!-- IHE PHARM PADV -->
+	<code code="61356-2" codeSystem="2.16.840.1.113883.6.1"
+		codeSystemName="LOINC" displayName="Pharmaceutical advice" />
+
+	<title>Kommentar zur Medikation</title>
+
+	<effectiveTime value="20120204140000+0100" />
+
+	<confidentialityCode code="30003"
+		codeSystem="2.16.756.5.30.1.127.3.10.1.5" displayName="Medical data" />
+		
+	<languageCode code="de-CH" />
+
+	<recordTarget>
+		<patientRole>
+			<id nullFlavor="NI" />
+			<patient>
+				<name>
+					<family>Wegmüller</family>
+					<given>Monika</given>
+				</name>
+				<administrativeGenderCode code="F"
+					codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
+				<birthTime value="19430515" />
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+	<author>
+		<time value="20120204140000+0100" />
+		<assignedAuthor>
+			<id nullFlavor="NI" />
+			<assignedPerson>
+				<name>
+					<family>Hausarzt</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor="NI" />
+				<name>Hausarzt</name>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<legalAuthenticator>
+		<time value="20120204140000+0100" />
+		<signatureCode code="S" />
+		<assignedEntity>
+			<id nullFlavor="NI" />
+			<assignedPerson>
+				<name>
+					<family>Hausarzt</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<!-- IHE PHARM PADV -->
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.2" />
+					<templateId root="2.16.756.5.30.1.127.77.4.10.9" />
+					
+					<!-- CH-EMED-PharmaceuticalAdviceSectionContentModule	 -->
+					<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.4.10.3.1" />
+					
+					<!-- id of this eMedicationComment -->
+					<id root="2.16.756.5.30.1.1.1.1" extension="8ed02d0a-2971-11e6-b67b-9e71128cae77" />
+					
+					<code code="61357-0" codeSystem="2.16.840.1.113883.6.1"
+						codeSystemName="LOINC" displayName="MEDICATION PHARMACEUTICAL ADVICE.BRIEF" />
+					<title>eMedication Commment</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Klassifizierung</th>
+									<th>Typ</th>
+									<th>Art der Intervention</th>
+									<th>Referenz-eDokument</th>
+									<th>Alter Präparatename</th>
+									<th>Neuer Präparatename</th>
+									<th>Wirkstoffname</th>
+									<th>Dosis pro Einheit </th>
+									<th>Galenische Form</th>
+									<th>Begründung</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="padv.1">
+									<td ID="padv.1.classificaton">Relevant</td>
+									<td ID="padv.1.typ">Intervention</td>
+									<td ID="padv.1.subytpe">Therapeutische Substitution</td>
+									<td ID="padv.1.referencedoc">eCurrent Medication vom 29.11.11</td>
+									<td ID="padv.1.oldbrandedmedication">Triatec</td>
+									<td ID="padv.1.newbrandedmedication"></td>
+									<td ID="padv.1.ingredient"></td>
+									<td ID="padv.1.dosequantity"></td>
+									<td ID="padv.1.packageform"></td>
+									<td ID="padv.1.reason">UAW Trockener Husten</td>
+									<td ID="padv.1.status">definitiv abgesetzt</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- IHE PHARM PADV -->
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.3" />
+
+							<!-- CH-EMED-PharmaceuticalAdviceItemEntryContentModule -->
+							<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.4.10.4.1" />
+							
+							<id root="2.16.756.5.30.1.1.1.1" extension="9cdbaef6-2971-11e6-b67b-9e71128cae77" />
+							
+							<!-- medication will be canceled -->
+							<code code="CANCEL" codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+								codeSystemName="IHE Pharmaceutical Advice Status List" />
+							<text>
+								<reference value="#padv.1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value='20120204140000+0100' />
+
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<!-- reference to eCurrent Medication MTP Item Step 1 (not step 2) -->
+									<id root="2.16.756.5.30.1.1.1.1" extension="17931678-20b4-11e6-b67b-9e71128cae77" />
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
+										displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+
+							<!-- One or more Pharmaceutical Advice Concern entries -->
+							<entryRelationship typeCode='REFR'
+								inversionInd='false'>
+								<act classCode='ACT' moodCode='EVN'>
+									<templateId root='2.16.840.1.113883.10.20.1.27' />
+									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1' />
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.5' />
+
+									<id root="2.16.756.5.30.1.1.1.1" extension="9cdbaef6-2971-11e6-b67b-9e71128cae77" />
+
+									<code nullFlavor='NA' />
+									<text>
+										<reference value="#padv1.comment" />
+									</text>
+									<statusCode code='completed' />
+									<effectiveTime>
+										<low value='20120204140000+0100' />
+									</effectiveTime>
+
+									<entryRelationship typeCode='SUBJ'
+										inversionInd='false'>
+										<observation classCode='OBS' moodCode='EVN'
+											negationInd=' false'>
+											<templateId root='2.16.840.1.113883.10.20.1.28' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
+											<code code='282291009' displayName='Diagnosis'
+												codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' />
+											<text>
+												<reference value="#padv.1.typ" />
+											</text>
+											<statusCode code='completed' />
+											<effectiveTime>
+												<low value='20120204140000+0100' />
+											</effectiveTime>
+											<value xsi:type='CD'>
+												<originalText>
+													<reference value="#padv.1.typ" />
+												</originalText>
+											</value>
+											<!-- Typ  -->
+											<interpretationCode code='2' codeSystem='2.16.756.5.30.1.127.77.4.11.3' displayName="Intervention"></interpretationCode>
+										</observation>
+									</entryRelationship>
+
+									<entryRelationship typeCode='SUBJ'
+										inversionInd='true'>
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='2.16.840.1.113883.10.20.1.55' />
+											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.1' />
+											<code code='SEV' displayName='Severity' codeSystem='2.16.840.1.113883.5.4'
+												codeSystemName='ActCode' />
+											<text>
+												<reference value='#padv.1.classificaton' />
+											</text>
+											<statusCode code='completed' />
+											<!-- Schweregrad H: kritisch, rot M: gelb, relevant L: grün  -->
+											<value xsi:type='CD' code='H' codeSystem='2.16.840.1.113883.5.1063'
+												codeSystemName='ObservationValue' />
+										</observation>
+									</entryRelationship>
+								</act>
+							</entryRelationship>
+
+							<!-- reference to eCurrent Medication Step 1 (not step 2) -->
+							<reference typeCode="XCRPT">
+								<externalDocument>
+									<id root="2.16.756.5.30.1.1.1.1" extension="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+								</externalDocument>
+							</reference>
+
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
