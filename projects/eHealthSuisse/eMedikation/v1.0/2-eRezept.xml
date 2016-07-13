@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ************************************************************ -->
+<!-- Fallbeispiel -->
+<!-- 2 eRezept based on IHE PRE -->
+<!-- History: -->
+<!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
+<!-- ************************************************************ -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
+	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
+
+	<realmCode code="CHE" />
+
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+
+	<!-- IHE PCC -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1' />
+
+	<!-- IHE PHARM PRE -->
+	<templateId root='1.3.6.1.4.1.19376.1.9.1.1.1' />
+
+	<!-- CDA-CH -->
+	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH" />
+
+	<!-- CDA-CH-EMED-eRezept-V1 -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.10.2" />
+
+	<!-- id of this eRezept -->
+	<id root="2.16.756.5.30.1.1.1.1" extension="d41d72ba-2100-11e6-b67b-9e71128cae77" />
+
+	<!-- IHE PHARM PRE -->
+	<code code="57833-6" codeSystem="2.16.840.1.113883.6.1"
+		codeSystemName="LOINC" displayName="Prescription for medication" />
+	<title>eRezept</title>
+
+	<effectiveTime value="20120204140000+0100" />
+
+	<confidentialityCode code="30003"
+		codeSystem="2.16.756.5.30.1.127.3.10.1.5" displayName="Medical data" />
+
+	<languageCode code="de-CH" />
+	<recordTarget>
+		<patientRole>
+			<id nullFlavor="NI" />
+			<patient>
+				<name>
+					<family>Wegmüller</family>
+					<given>Monika</given>
+				</name>
+				<administrativeGenderCode code="F"
+					codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
+				<birthTime value="19430515" />
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+	<author>
+		<time value="20120204140000+0100" />
+		<assignedAuthor>
+			<id nullFlavor="NI" />
+			<assignedPerson>
+				<name>
+					<family>Hausarzt</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor="NI" />
+				<name>Hausarzt</name>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<legalAuthenticator>
+		<time value="20120204140000+0100" />
+		<signatureCode code="S" />
+		<assignedEntity>
+			<id nullFlavor="NI" />
+			<assignedPerson>
+				<name>
+					<family>Hausarzt</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	
+
+	<!-- Dauerrezept -->
+	<documentationOf>
+		<serviceEvent>
+			<code></code>
+		</serviceEvent>
+	</documentationOf>
+
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<!-- PRE -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19" />
+					<templateId root="2.16.840.1.113883.10.20.1.8" />
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.1" />
+
+					<!-- CDA-CH EMED RPE -->
+					<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.2.10.3.1" />
+					
+					<!-- id of this eRezept -->
+					<id root="2.16.756.5.30.1.1.1.1" extension="d41d72ba-2100-11e6-b67b-9e71128cae77" />
+					
+
+					<code code="57828-6" codeSystem="2.16.840.1.113883.6.1"
+						codeSystemName="LOINC" displayName="PRESCRIPTIONS" />
+
+					<title>Arzneimittelverordnung</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Präpartename</th>
+									<th>Wirkstoffname</th>
+									<th>Dosis pro Einheit</th>
+									<th>Galenische Form</th>
+									<th>Anzahl Packungen</th>
+									<th>Packungsgrösse</th>
+									<th>Verabreichungsweg</th>
+									<th>Anwendungsschema (Einnahmemodus)</th>
+									<th>Anwendungsdauer</th>
+									<th>Dos.Morgen</th>
+									<th>Dos.Mittag</th>
+									<th>Dos.Abend</th>
+									<th>Dos.Nacht</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="pre.1">
+									<td ID="pre.1.brandedmedication">Norvasc</td>
+									<td ID="pre.1.ingredient">Amlodipin</td>
+									<td ID="pre.1.dosequantity">10 mg</td>
+									<td ID="pre.1.packageform">Tabl</td>
+									<td ID="pre.1.nopackages">1</td>
+									<td ID="pre.1.routecode">oral</td>
+									<td ID="pre.1.packagesize">30</td>
+									<td ID="pre.1.frequency"></td>
+									<td ID="pre.1.datefromto">Dauerrezept 3 Monate</td>
+									<td ID="pre.1.dosagemorning">1</td>
+									<td ID="pre.1.dosagelunch">0</td>
+									<td ID="pre.1.dosageevening">1</td>
+									<td ID="pre.1.dosagenight">0</td>
+									<td ID="pre.1.status">verschrieben</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+
+					<entry>
+						<substanceAdministration classCode="SBADM"
+							moodCode="INT">
+
+							<!-- IHE PHARM PRE -->
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.2"
+								assigningAuthorityName="IHE PHARM" />
+							<!-- CCD -->
+							<templateId root="2.16.840.1.113883.10.20.1.24"
+								assigningAuthorityName="HL7 CCD" />
+							<!-- PCC Medication Entry Content Module -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"
+								assigningAuthorityName="IHE PCC" />
+
+							<!-- CH-EMED Prescription Item Entry Content Module- -->
+							<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.2.10.4.1" />
+
+							<!-- A normal substanceAdministration act that may not contain any 
+								subordinate substanceAdministration acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+
+							<!-- ID of pre item, PCC TF2 6.3.4.16.6 -->
+							<id root="2.16.756.5.30.1.1.1.1" extension="6c968b1a-21ee-11e6-b67b-9e71128cae77" />
+
+							<text>
+								<reference value="#pre.1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20120204" />
+							</effectiveTime>
+							<effectiveTime xsi:type="SXPR_TS" operator="A">
+								<comp xsi:type="EIVL_TS">
+									<event code='ACM' />
+								</comp>
+								<comp xsi:type="EIVL_TS" operator="I">
+									<event code='ACV' />
+								</comp>
+							</effectiveTime>
+							<!-- 3 Monate -> 90 Tage * 1 Tablette / 30 Tablette -> 3 Packungen, 
+								repeatNumber=2 -->
+							<repeatNumber value='2' />
+							<routeCode code="PO" displayName="Oral"
+								codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
+							<doseQuantity>
+								<center value="0.5">
+								</center>
+							</doseQuantity>
+							<consumable>
+								<manufacturedProduct classCode="MANU"
+									xmlns:pharm="urn:ihe:pharm:medication">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<manufacturedMaterial classCode="MMAT"
+										determinerCode="KIND">
+										<!-- CDACH-EMED Manufactured Material Content Module -->
+										<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.2" />
+										<!-- Medicine Entry Module -->
+										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
+										<code code="C08CA01" codeSystem="2.16.840.1.113883.6.73"
+											codeSystemName="ATC WHO" displayName="amlodipine">
+											<originalText>
+												<reference value="#pre.1.ingredient" />
+											</originalText>
+										</code>
+										<name>NORVASC Tabl 10 mg</name>
+										<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+											displayName="Tablet" />
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedMedicine
+												classCode="CONT" determinerCode="INSTANCE">
+												<!-- National medicinal product code (package-level) -->
+												<pharm:code code="7680500440334" codeSystem="2.51.1.1"
+													codeSystemName="GTIN" displayName="NORVASC Tabl 10 mg" />
+												<!-- Brand name (package) -->
+												<pharm:name>NORVASC Tabl 10 mg</pharm:name>
+												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+													displayName="Tablet" />
+												<pharm:capacityQuantity value="30" />
+											</pharm:containerPackagedMedicine>
+										</pharm:asContent>
+										<pharm:ingredient classCode="ACTI"
+											xmlns:pharm="urn:ihe:pharm:medication">
+											<pharm:quantity>
+												<pharm:numerator unit="mg" value="10"
+													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+													xsi:type="pharm:PQ" />
+												<pharm:denominator value="1"
+													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+													xsi:type="pharm:PQ" />
+											</pharm:quantity>
+											<pharm:ingredient classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="C08CA01" codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="ATC WHO" displayName="amlodipine" />
+												<pharm:name>amlodipine</pharm:name>
+											</pharm:ingredient>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+
+							<entryRelationship typeCode='COMP'>
+								<supply moodCode="RQO" classCode="SPLY">
+									<independentInd value="false" />
+									<quantity unit="1" value="1" />
+								</supply>
+							</entryRelationship>
+
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<id root="2.16.756.5.30.1.1.1.1" extension="068e887c-2270-11e6-b67b-9e71128cae77" />
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
+										displayName='Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+
+							<entryRelationship typeCode="SUBJ"
+								inversionInd="true">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.5" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
+									<templateId root="2.16.840.1.113883.10.20.1.40" />
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
+										codeSystemName="LOINC" displayName="Annotation Comment" />
+									<text>
+										<reference value="#pre.1.status" />
+									</text>
+									<statusCode code="completed" />
+								</act>
+							</entryRelationship>
+
+
+							<reference typeCode="XCRPT">
+								<externalDocument>
+									<id root="2.16.756.5.30.1.1.1.1" extension="074da900-2103-11e6-b67b-9e71128cae77" />
+								</externalDocument>
+							</reference>
+
+						</substanceAdministration>
+					</entry>
+
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
