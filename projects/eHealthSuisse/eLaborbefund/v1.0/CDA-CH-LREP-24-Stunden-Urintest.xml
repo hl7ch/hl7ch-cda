@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+********************************************************
+Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - HIV Nachweis
+
+History:
+2016.07.15: Tony Schaller, medshare GmbH (Erster Entwurf)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!--
+	********************************************************
+	CDA Header
+	********************************************************
+	-->
+	<realmCode code='CHE'/>
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+	<!-- Parent Templates -->
+	<!-- IHE Laboratory Report Summary Specification (IHE XD-LAB) -->
+	<templateId root='1.3.6.1.4.1.19376.1.3.3'/>
+	<!-- CDA-CH -->
+	<templateId root='2.16.756.5.30.1.1.1.1' />
+	<!-- Swiss Laboratory Report V1 - (CDA-CH-LREP) -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.9.1'/>
+	<id extension='F9DC0A26-E16F-4B70-80B6-9B77150AC183' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<code code='11502-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='LABORATORY REPORT.TOTAL'/>
+	<title>Laborbefund - Multidisziplinäre Befunde</title>
+	<effectiveTime value='20160715'/>
+	<confidentialityCode code='R' codeSystem='2.16.840.1.113883.5.25'/>
+	<languageCode code='de-CH'/>
+	<setId extension='F9DC0A26-E16F-4B70-80B6-9B77150AC183' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+	<versionNumber value='1'/>
+	<recordTarget>
+		<patientRole>
+			<id root="2.999" extension="123456"/>
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Specimendorf</city>
+			</addr>
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<patient>
+				<name>
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19480611"/>
+			</patient>
+			<providerOrganization>
+				<id extension="7605555555555" root="1.3.88"/>
+				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<time value='20120117'/>
+		<assignedAuthor>
+			<id extension='7606666666666' root='1.3.88'/>
+			<addr use='WP'>
+				<streetName>Spalenring</streetName>
+				<houseNumber>145/147</houseNumber>
+				<postalCode>4002</postalCode>
+				<city>Basel</city>
+			</addr>
+			<telecom use='PUB' value='tel:+41.61.486.11.11'/>
+			<telecom use='PUB' value='fax:+41.61.486.11.12'/>
+			<assignedAuthoringDevice>
+				<softwareName>Viollier LIS</softwareName>
+			</assignedAuthoringDevice>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id nullFlavor='NASK' />
+				<name nullFlavor='NASK' />
+				<telecom nullFlavor='NASK' />
+				<addr nullFlavor='NASK' >
+					<streetName nullFlavor='NASK' />
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient typeCode='PRCP'>
+		<!-- IHE XD-LAB: Intended Recipient -->
+		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.4'/>
+		<!-- Beabsichtigter Empfänger PRCP=Primary recipient-->
+		<intendedRecipient>
+			<addr use="WP">
+				<streetName>Spitalstr.</streetName>
+				<houseNumber>23</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+			</addr>
+			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
+			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
+			<telecom use="PUB" value="http:www.kantonales-spital.ch"/>
+			<informationRecipient>
+				<name>Kantonales Spital, Aerztliche Leitung, Klinik für Orthopädie</name>
+			</informationRecipient>
+		</intendedRecipient>
+	</informationRecipient>
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			Mikrobiologiebefund
+			********************************************************
+			-->
+			<component>
+				<section>
+					<!-- IHE XD-LAB: Laboratory Speciality Section -->
+					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
+					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+					<title>Laborbefund</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Untersuchung</th>
+									<th>Resultat</th>
+									<th>Interpretation</th>
+									<th>Referenzbereich</th>
+									<th>Code</th>
+									<th>Codesystem</th>
+									<th>Kommentar</th>
+								</tr>
+								<tr>
+									<td>
+										Kreatinin-Clearance
+									</td>
+									<td>
+										52.7 ml/min
+									</td>
+									<td>
+										L
+									</td>
+									<td>
+										88-174
+									</td>
+									<td>
+										2164-2
+									</td>
+									<td>
+										LOINC
+									</td>
+									<td>
+
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Serum-Kreatinin
+									</td>
+									<td>
+										93 umol/l
+									</td>
+									<td>
+										N
+									</td>
+									<td>
+										50-100
+									</td>
+									<td>
+										15045-8
+									</td>
+									<td>
+										LOINC
+									</td>
+									<td>
+
+									</td>
+								</tr>
+								<tr>
+									<td>
+										24-Stunden-Urintest Kreatinin
+									</td>
+									<td>
+										7.06 mmol
+									</td>
+									<td>
+										L
+									</td>
+									<td>
+										8-16 (/24hr)
+									</td>
+									<td>
+										14684-5
+									</td>
+									<td>
+										LOINC
+									</td>
+									<td>
+
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Sammelperiode
+									</td>
+									<td>
+										24 Std
+									</td>
+									<td>
+
+									</td>
+									<td>
+
+									</td>
+									<td>
+										13362-9
+									</td>
+									<td>
+										LOINC
+									</td>
+									<td>
+
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Sammelvolumen
+									</td>
+									<td>
+										2400 ml
+									</td>
+									<td>
+
+									</td>
+									<td>
+
+									</td>
+									<td>
+										19153-6
+									</td>
+									<td>
+										LOINC
+									</td>
+									<td>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Weitere Angaben:
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										Auftragsnummer des Auftraggebers:
+									</td>
+									<td>
+										A83726
+									</td>
+								</tr>
+								<tr>
+									<td>
+										ID:
+									</td>
+									<td>
+										12-3456 (Laborinterne ID)
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Zeitraum der Entnahme:
+									</td>
+									<td>
+										13.07.2016 09:00 - 14.07.2016 09:00
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Zeitpunkt Auftragseingang:
+									</td>
+									<td>
+										14.07.2016 15:34
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Zeitpunkt des Nachweises:
+									</td>
+									<td>
+										15.07.2016 16:34
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Status:
+									</td>
+									<td>
+										Befund komplett
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						Bemerkungen: Keine
+					</text>
+					<entry typeCode='DRIV'>
+						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
+						<act classCode='ACT' moodCode='EVN'>
+
+							<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+							<statusCode code='completed' />
+
+							<!-- IHE XD-LAB: Specimen Collection -->
+							<entryRelationship typeCode='COMP'>
+								<procedure classCode='PROC' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
+									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1'
+									codeSystemName='LOINC' displayName='Collection date'/>
+									<effectiveTime>
+										<low value="201607130900+0200"/>
+										<high value="201607140900+0200"/>
+									</effectiveTime>
+									<participant typeCode='PRD'>
+										<participantRole classCode='SPEC'>
+											<id extension='0F55642B-E3DB-48B2-92FA-B05E44D28C23' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
+											<playingEntity>
+												<code code='LOINC' codeSystem='2.16.756.5.30.2.1.1.10'/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- IHE XD-LAB: Specimen Received -->
+									<entryRelationship typeCode='COMP'>
+										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
+											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
+											codeSystemName='IHEActCode' displayName='Receive Time'/>
+											<effectiveTime value='201607141534+0200'/>
+										</act>
+									</entryRelationship>
+								</procedure>
+							</entryRelationship>
+
+							<!-- IHE XD-LAB: Laboratory Battery Organizer -->
+							<!-- Quelle: http://www.ihe.net/uploadedFiles/Documents/PaLM/IHE_PaLM_TF_Vol2x.pdf, Seite 33/34
+							OBX|1|NM|2164-2^CREATININE CLEARANCE^LN||52.7|ml/min|88-174|L||S|F|||200310060735
+							OBX|2|NM|15045-8^SERUM CREATININE^LN||93|umol/l|50-100|N|||F|||200310060735
+							OBX|3|NM|14684-5^24H URINE CREATININE^LN||7.06|mmol|8-16 (/24hr)|L|||F||| 200310060830
+							OBX|1|NM|13362-9^URINE COLLECTION DURATION^LN||24|hr|||||F|||200309060735
+							OBX|2|NM|19153-6^URINE SPECIMEN VOLUME^LN||2400|ml|||||F|||200309060735
+							-->
+							<entryRelationship typeCode='COMP'>
+								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
+									<id root='2.16.756.5.30.1.129.1.2.1' extension='12-3456' />
+									<statusCode code='completed'/>
+									<effectiveTime value='201607151634+0200'/>
+
+									<!-- Resultat 1 -->
+									<component typeCode='COMP'>
+										<!-- IHE XD-LAB: Laboratory Observation -->
+										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
+											<code code='2164-2' displayName='CREATININE CLEARANCE' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+											<statusCode code='completed'/>
+											<value xsi:type='PQ' value='52.7' unit='ml/min' />
+											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' displayName='Low' codeSystemName='ObservationInterpretation'/>
+										</observation>
+									</component>
+
+									<!-- Weitere Resultat: TODO -->
+
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
