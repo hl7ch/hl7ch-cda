@@ -4,6 +4,7 @@
 <!-- 2 eRezept based on IHE PRE -->
 <!-- History: -->
 <!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
+<!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
@@ -48,9 +49,7 @@
 					<family>Wegmüller</family>
 					<given>Monika</given>
 				</name>
-				<administrativeGenderCode code="F"
-					codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
-				<birthTime value="19430515" />
+				<birthTime value="1943" />
 			</patient>
 		</patientRole>
 	</recordTarget>
@@ -86,16 +85,15 @@
 					<family>Hausarzt</family>
 				</name>
 			</assignedPerson>
+			<representedOrganization>
+				<addr>
+					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
+					<postalCode>8005</postalCode>
+					<city>Zürich</city>
+				</addr>
+			</representedOrganization>
 		</assignedEntity>
 	</legalAuthenticator>
-	
-
-	<!-- Dauerrezept -->
-	<documentationOf>
-		<serviceEvent>
-			<code></code>
-		</serviceEvent>
-	</documentationOf>
 
 	<component>
 		<structuredBody>
@@ -108,10 +106,10 @@
 
 					<!-- CDA-CH EMED RPE -->
 					<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.2.10.3.1" />
-					
+
 					<!-- id of this eRezept -->
 					<id root="2.16.756.5.30.1.1.1.1" extension="d41d72ba-2100-11e6-b67b-9e71128cae77" />
-					
+
 
 					<code code="57828-6" codeSystem="2.16.840.1.113883.6.1"
 						codeSystemName="LOINC" displayName="PRESCRIPTIONS" />
@@ -129,7 +127,7 @@
 									<th>Packungsgrösse</th>
 									<th>Verabreichungsweg</th>
 									<th>Anwendungsschema (Einnahmemodus)</th>
-									<th>Anwendungsdauer</th>
+									<th>Anwendungsdauer (Behandlungsdauer)</th>
 									<th>Dos.Morgen</th>
 									<th>Dos.Mittag</th>
 									<th>Dos.Abend</th>
@@ -146,7 +144,7 @@
 									<td ID="pre.1.nopackages">1</td>
 									<td ID="pre.1.routecode">oral</td>
 									<td ID="pre.1.packagesize">30</td>
-									<td ID="pre.1.frequency"></td>
+									<td ID="pre.1.dosageintakemode"></td>
 									<td ID="pre.1.datefromto">Dauerrezept 3 Monate</td>
 									<td ID="pre.1.dosagemorning">1</td>
 									<td ID="pre.1.dosagelunch">0</td>
@@ -267,6 +265,21 @@
 								</supply>
 							</entryRelationship>
 
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration moodCode="INT"
+									classCode="SBADM">
+									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.11" />
+									<text>
+										<reference value="#pre.1.dosageintakemode" />
+									</text>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA" />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							
 							<entryRelationship typeCode='REFR'>
 								<substanceAdministration classCode='SBADM'
 									moodCode='INT'>
@@ -278,14 +291,13 @@
 											<manufacturedMaterial nullFlavor='NA' />
 										</manufacturedProduct>
 									</consumable>
+									<reference typeCode="XCRPT">
+										<externalDocument>
+											<id root="2.16.756.5.30.1.1.1.1" extension="074da900-2103-11e6-b67b-9e71128cae77" />
+										</externalDocument>
+									</reference>
 								</substanceAdministration>
 							</entryRelationship>
-
-							<reference typeCode="XCRPT">
-								<externalDocument>
-									<id root="2.16.756.5.30.1.1.1.1" extension="074da900-2103-11e6-b67b-9e71128cae77" />
-								</externalDocument>
-							</reference>
 
 						</substanceAdministration>
 					</entry>

@@ -4,6 +4,7 @@
 <!-- 1 eCurrentMedication based on IHE MTP ITEMS -->
 <!-- History: -->
 <!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
+<!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
@@ -52,32 +53,6 @@
 		</patientRole>
 	</recordTarget>
 
-
-	<recordTarget>
-		<patientRole>
-			<id extension="807569999999999930200" root="2.16.756.5.30.4.9.1.1.1000.200.3" />
-			<addr>
-				<streetAddressLine>Idastrasse 50</streetAddressLine>
-				<city>Zürich</city>
-				<postalCode>8003</postalCode>
-				<country>CH</country>
-			</addr>
-			<telecom value="tel:+41.44.300.00.00" use="HP" />
-			<telecom value="tel:+41.44.300.00.00" use="MC" />
-			<telecom value="tel:+41.44.300.00.00" use="WP" />
-			<patient>
-				<name>
-					<family>Wegmüller</family>
-					<given>Monika</given>
-				</name>
-				<administrativeGenderCode code="F"
-					codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
-				<birthTime value="19430515" />
-			</patient>
-		</patientRole>
-	</recordTarget>
-
-
 	<author>
 		<time value="20111129110000+0100" />
 		<assignedAuthor>
@@ -88,21 +63,15 @@
 					<family>Hausarzt</family>
 				</name>
 			</assignedPerson>
+			<representedOrganization>
+				<addr>
+					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
+					<postalCode>8005</postalCode>
+					<city>Zürich</city>
+				</addr>
+			</representedOrganization>
 		</assignedAuthor>
 	</author>
-
-	<!-- <author> <functionCode code='4002' displayName='Physician' codeSystem='2.16.756.5.30.1.127.3.10.1.1.3' 
-		codeSystemName='Swiss Role Author EPD' /> <time value="20111129110000+0100" 
-		/> <assignedAuthor> --> <!-- GS1 GLN ex 1.3.88 --> <!-- <id root="2.51.1.3" extension="7601000000000" /> <code code='50001' 
-		displayName="Fachärztin/Facharzt für Allgemeine Innere Medizin" codeSystem='2.16.756.5.30.1.127.3.10.1.1.4' 
-		codeSystemName='Swiss Author Speciality EPD' /> <assignedPerson> <name> <prefix>Dr.</prefix> 
-		<given>Familien</given> <family>Hausarzt</family> </name> </assignedPerson> 
-		<representedOrganization> --> <!-- GS1 GLN ex 1.3.88 --> <!-- <id root="2.51.1.3" extension="7601000000000" /> <name>Organisationsname</name> 
-		<name>Abteilung/Organisationseinheit</name> <telecom value="tel:+41.44.123.45.67" 
-		/> <telecom value="mailto:familien.hausarzt@hin.ch" /> <addr> <streetAddressLine>Krankenstrasse 
-		2</streetAddressLine> <postalCode>8005</postalCode> <city>Zürich</city> </addr> 
-		</representedOrganization> </assignedAuthor> </author> -->
-
 
 	<custodian>
 		<assignedCustodian>
@@ -125,21 +94,6 @@
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
-
-	<!-- Kontakt modelliert äquivalent zu Elga, http://elga.art-decor.org/elga-html-20150205T181243/tmp-1.2.40.0.34.11.1.1.1-2014-03-25T000000.html -->
-	<participant typeCode="CALLBCK">
-		<templateId root="2.16.756.5.30.1.127.77.4.10.14" />
-		<associatedEntity classCode="PROV">
-			<telecom use="WP" value="tel:+41.44.300.24.24" />
-			<associatedPerson>
-				<!-- Name des Fachlichen Ansprechpartners -->
-				<name>
-					<given>Kontakt</given>
-					<family>Hausarzt</family>
-				</name>
-			</associatedPerson>
-		</associatedEntity>
-	</participant>
 
 	<component>
 		<structuredBody>
@@ -165,12 +119,12 @@
 									<th>Dosis pro Einheit</th>
 									<th>Galenische Form</th>
 									<th>Verabreichungsweg</th>
-									<th>Anwendungsschema</th>
+									<th>Anwendungsschema (Einnahmemodus)</th>
 									<th>Dos.Morgen</th>
 									<th>Dos.Mittag</th>
 									<th>Dos.Abend</th>
 									<th>Dos.Nacht</th>
-									<th>Anwendungsdauer</th>
+									<th>Anwendungsdauer (Behandlungsdauer)</th>
 									<th>Behandlungsgrund</th>
 									<th>Status</th>
 									<th>Hinweis</th>
@@ -183,7 +137,7 @@
 									<td ID="mtp.1.dosequantity">2.5 mg</td>
 									<td ID="mtp.1.packageform">Tbl</td>
 									<td ID="mtp.1.routecode">oral</td>
-									<td ID="mtp.1.frequency">Morgens 1/2 Tablette nehmen</td>
+									<td ID="mtp.1.dosageintakemode">Morgens 1/2 Tablette nehmen</td>
 									<td ID="mtp.1.dosagemorning">0.5</td>
 									<td ID="mtp.1.dosagelunch">0</td>
 									<td ID="mtp.1.dosageevening">0</td>
@@ -191,7 +145,7 @@
 									<td ID="mtp.1.datefromto"></td>
 									<td ID="mtp.1.reason">Bluthochdruck</td>
 									<td ID="mtp.1.status">abgegeben</td>
-									<td ID="mtp.1.pinstruct"></td>
+									<td ID="mtp.1.note"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -221,14 +175,13 @@
 								<reference value="#mtp.1" />
 							</text>
 							<statusCode code="completed" />
- 							<effectiveTime
-								xsi:type="IVL_TS">
+							<effectiveTime xsi:type="IVL_TS">
 								<low value="20111129" />
- 							</effectiveTime>
-	 						<effectiveTime operator='A' xsi:type='EIVL_TS'>
+							</effectiveTime>
+							<effectiveTime operator='A' xsi:type='EIVL_TS'>
 								<event code='ACM' />
 							</effectiveTime>
- 								<routeCode code="PO" displayName="Oral"
+							<routeCode code="PO" displayName="Oral"
 								codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
 							<doseQuantity>
 								<center value="0.5">
@@ -287,19 +240,6 @@
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
-							<author>
-								<time value="20111129110000+0100" />
-								<assignedAuthor>
-									<id nullFlavor="NI" />
-									<assignedPerson>
-										<name>
-											<given>Familien</given>
-											<family>Hausarzt</family>
-										</name>
-									</assignedPerson>
-								</assignedAuthor>
-							</author>
-							<!-- Behandlungsrund (äquivalent zu http://wiki.hl7.de/index.php/IG:Patientenbezogener_Medikationsplan#Grund_f.C3.BCr_Medikation) -->
 							<entryRelationship typeCode="RSON">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.127.77.4.10.20" />
@@ -313,20 +253,32 @@
 									</value>
 								</observation>
 							</entryRelationship>
-							<entryRelationship typeCode="SUBJ"
-								inversionInd="true">
-								<act classCode="ACT" moodCode="INT">
-									<templateId root="2.16.840.1.113883.10.20.1.49" />
-									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.3" />
-									<code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
-										codeSystemName="IHEActCode" />
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration moodCode="INT"
+									classCode="SBADM">
+									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.11" />
 									<text>
-										<reference value="#mtp.1.pinstruct" />
+										<reference value="#mtp.1.dosageintakemode" />
+									</text>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA" />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
+									<templateId root="2.16.840.1.113883.10.20.1.40" />
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
+										codeSystemName="LOINC" displayName="Annotation comment" />
+									<text>
+										<reference value="#mtp.1.note" />
 									</text>
 									<statusCode code="completed" />
 								</act>
 							</entryRelationship>
-							
 						</substanceAdministration>
 					</entry>
 				</section>
