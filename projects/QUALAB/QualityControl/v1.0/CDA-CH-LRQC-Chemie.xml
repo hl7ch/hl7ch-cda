@@ -9,6 +9,7 @@ History:
 2016.03.03: Tony Schaller, medshare GmbH (Fixed non living subject)
 2016.03.14: Tony Schaller, medshare GmbH (Corrections in order to fulfill Schematron rules)
 2016.06.03: Tony Schaller, medshare GmbH (Finalization for approval by QUALAB)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN to the current one)
 
 ********************************************************
 -->

@@ -6,6 +6,7 @@ CDA-CH V1.2 Sample
 History:
 27.01.2009: Tony Schaller, medshare GmbH (Publikation CDA-CH)
 22.04.2010: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ********************************************************
 -->
@@ -48,7 +49,7 @@ History:
 				<birthTime value="19381212"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7606666666666" root="1.3.88"/>
+				<id extension="7606666666666" root="2.51.1.3"/>
 				<name>Dr. med. Hans Spezialist, Facharzt für Orthopädie</name>
 			</providerOrganization>
 		</patientRole>
@@ -57,7 +58,7 @@ History:
 		<functionCode code='ATTPHYS' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value="20071015"/>
 		<assignedAuthor>
-			<id extension="7606666666666" root="1.3.88"/>
+			<id extension="7606666666666" root="2.51.1.3"/>
 			<addr use="WP">
 				<streetName>Ärztegasse</streetName>
 				<houseNumber>13</houseNumber>
@@ -91,7 +92,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7606666666666" root="1.3.88"/>
+				<id extension="7606666666666" root="2.51.1.3"/>
 				<name>Dr. med. Hans Spezialist, Facharzt für Orthopädie</name>
 				<addr use="WP">
 					<streetName>Ärztegasse</streetName>
@@ -121,7 +122,7 @@ History:
 		<time value="20071015"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
-			<id extension="7606666666666" root="1.3.88"/>
+			<id extension="7606666666666" root="2.51.1.3"/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>

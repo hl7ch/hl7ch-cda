@@ -8,6 +8,7 @@ History:
 2010.04.22: Tony Schaller, medshare GmbH (Anpassung Pfade für HL7.ch SVN Repository )
 2010.12.09: Tony Schaller, medshare GmbH (Neues Feld Erwerbstatus eingefügt und Wechsel auf suva-emedidoc.xsl)
 2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ********************************************************
 -->
@@ -53,7 +54,7 @@ History:
 				<birthTime value="19381212"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7608888888888" root="1.3.88"/>
+				<id extension="7608888888888" root="2.51.1.3"/>
 				<name>Dr. med. Allzeit Bereit, Gruppenpraxis CH</name>
 			</providerOrganization>
 		</patientRole>
@@ -62,7 +63,7 @@ History:
 		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value="20081017"/>
 		<assignedAuthor>
-			<id extension="7608888888888" root="1.3.88"/>
+			<id extension="7608888888888" root="2.51.1.3"/>
 			<addr use="WP">
 				<streetName>Doktorgasse</streetName>
 				<houseNumber>2</houseNumber>
@@ -106,7 +107,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7608888888888" root="1.3.88"/>
+				<id extension="7608888888888" root="2.51.1.3"/>
 				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
 				<addr use="WP">
 					<streetName>Doktorgasse</streetName>

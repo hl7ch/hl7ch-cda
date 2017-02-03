@@ -284,7 +284,7 @@ History:
 		    <xhtml:ul id="cda-ch-infrastructure">
 			      <xhtml:li class="filename">infrastructure.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-04-27T13:35:33.599+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:19.333+01:00</xhtml:li>
       </xhtml:ul>
 
 		    <rule context="cda:ClinicalDocument" id="cda-ch-vacd_ru00001">
@@ -351,7 +351,7 @@ History:
 		    <xhtml:ul id="cda-ch-vacd-doc">
 			      <xhtml:li class="filename">cda-ch-vacd-doc.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-04-27T13:35:33.459+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:19.239+01:00</xhtml:li>
       </xhtml:ul>
 
 		    <rule context="cda:ClinicalDocument" id="cda-ch-vacd_ru00002">
@@ -566,7 +566,7 @@ History:
 	<pattern id="cda-ch-vacd_CDA-CH.VACD.Body.MediL3.Reason_pa00003">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-vacd-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.474+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.271+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId[@root='2.16.756.5.30.1.1.1.1.3.5.1' and @extension='CDA-CH.VACD.Body.MediL3.Reason']]"
             id="cda-ch-vacd_ru00006">
@@ -624,7 +624,7 @@ History:
 	<pattern id="cda-ch-vacd_CDA-CH.VACD.Body.MediL3.Category_pa00004">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-vacd-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.474+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.271+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId[@root='2.16.756.5.30.1.1.1.1.3.5.1' and @extension='CDA-CH.VACD.Body.MediL3.Category']]"
             id="cda-ch-vacd_ru00007">
@@ -663,7 +663,7 @@ History:
 		<xhtml:ul id="cda-ch_medication-section">
 			      <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-04-27T13:35:33.568+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:19.317+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediList&#34;]"
             id="cda-ch-vacd_ru00008">
@@ -705,7 +705,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_medication-section_pa00006">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.568+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.317+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -751,7 +751,7 @@ History:
 			
 			      <!-- Backup altes Medikationstemplate
 			<!-/-	Identifikation mit GTIN, GLN oder Pharmacode 	-/->
-			<assert id="cda-ch_medication-section-0204" test="cda:id[@nullFlavor or @root=&quot;2.16.756.5.30.2.6.1&quot; or (@root='1.3.88' or @root='2.51.1.3') or @root=&quot;1.3.160&quot;]">
+			<assert id="cda-ch_medication-section-0204" test="cda:id[@nullFlavor or @root=&quot;2.16.756.5.30.2.6.1&quot; or (@root='1.3.88' or @root='2.51.1.3') or (@root=&quot;1.3.160&quot; or @root=&quot;2.51.1.1&quot;)]">
 				<xhtml:p lang="de_ch">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 				<xhtml:p lang="fr_ch">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage, le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
 				<xhtml:p lang="it_ch">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio, il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
@@ -838,7 +838,7 @@ History:
 			      </report>
 			      <report role="warning"
                  id="cda-ch-vacd_cda-ch_medication-section-0214-3_re00008"
-                 test="cda:id[@root=&#34;1.3.160&#34;]">
+                 test="cda:id[(@root=&#34;1.3.160&#34; or @root=&#34;2.51.1.1&#34;)]">
 				        <xhtml:p lang="de">substanceAdministration.id enthält GTIN (veraltete Implementation)</xhtml:p>
 				        <xhtml:p lang="en">substanceAdministration.id contains the GTIN (deprecated implementation)</xhtml:p>
 			      </report>
@@ -846,7 +846,7 @@ History:
 			      <!-- Neues Medikationstemplate ab 9.2.2015: manufacturedProduct - id: GTIN, GLN der Packung oder Pharmacode	-->
 			<assert role="error"
                  id="cda-ch-vacd_cda-ch_medication-section-0215_as00062"
-                 test="cda:consumable/cda:manufacturedProduct/cda:id[@nullFlavor or @root=(&#34;2.16.756.5.30.2.6.1&#34;, &#34;1.3.88&#34;, &#34;2.51.1.3&#34;, &#34;1.3.160&#34;)]">
+                 test="cda:consumable/cda:manufacturedProduct/cda:id[@nullFlavor or @root=(&#34;2.16.756.5.30.2.6.1&#34;, &#34;1.3.88&#34;, &#34;2.51.1.3&#34;, &#34;1.3.160&#34;, &#34;2.51.1.1&#34;)]">
 				        <xhtml:p lang="de">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 				        <xhtml:p lang="fr">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage, le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
 				        <xhtml:p lang="it">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio, il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
@@ -934,7 +934,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_medication-section_pa00007">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.568+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.317+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--	CDA-CH.Body.MediL3 Checks -->
 		<rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediL3&#34;]"
@@ -986,7 +986,7 @@ History:
 		<xhtml:ul id="cda-ch_vitalsigns">
 			      <xhtml:li class="filename">cda-ch_vitalsigns.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-04-27T13:35:33.584+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:19.317+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1050,7 +1050,7 @@ History:
 		<xhtml:ul id="entity_HL7-cda-ch">
 			      <xhtml:li class="filename">cda-ch.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1089,7 +1089,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00010">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.Insurance&#34;]"
             id="cda-ch-vacd_ru00014">
@@ -1146,7 +1146,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00011">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.InsuranceCard&#34;]"
             id="cda-ch-vacd_ru00015">
@@ -1194,7 +1194,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00012">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1342,7 +1342,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00013">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1437,7 +1437,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00014">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1484,7 +1484,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00015">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1555,7 +1555,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00016">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1645,7 +1645,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00017">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1762,7 +1762,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00018">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1833,7 +1833,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00019">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1888,7 +1888,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00020">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1983,7 +1983,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00021">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2086,7 +2086,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00022">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2133,7 +2133,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00023">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2186,7 +2186,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00024">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2273,7 +2273,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00025">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2320,7 +2320,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00026">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2383,7 +2383,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00027">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2454,7 +2454,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00028">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2485,7 +2485,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00029">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2545,7 +2545,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00030">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2584,7 +2584,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00031">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2617,7 +2617,7 @@ History:
 	  <pattern id="cda-ch-vacd_cda-ch_pa00032">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.506+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.286+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2627,6 +2627,16 @@ History:
 		<rule context="cda:id" id="cda-ch-vacd_ru00039">
 			      <report role="warning" test="@root='1.3.88'" id="cda-ch-vacd_re00017">
 				        <xhtml:p lang="de">Die OID 1.3.88 für GS1 GLN ist veraltet. Stattdessen soll die OID 2.51.1.3 verwendet werden.</xhtml:p>
+			      </report>
+		    </rule>
+		    <!--
+		********************************************************
+		Deprecated GTIN OID
+		********************************************************
+		-->
+		<rule context="cda:id" id="cda-ch-vacd_ru00040">
+			      <report role="warning" test="@root='1.3.160'" id="cda-ch-vacd_re00018">
+				        <xhtml:p lang="de">Die OID 1.3.160 für GS1 GTIN ist veraltet. Stattdessen soll die OID 2.51.1.1 verwendet werden.</xhtml:p>
 			      </report>
 		    </rule>
 	  </pattern>
@@ -2642,10 +2652,10 @@ History:
 		<xhtml:ul id="vhitg-ruleset">
 			      <xhtml:li class="filename">vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules in vhitg-ruleset.ent)</xhtml:li>
 			      <xhtml:li class="version">1.5</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 
-		    <iso:rule id="cda-ch-vacd_general-addr_ru00040" context="cda:addr[@nullFlavor]">
+		    <iso:rule id="cda-ch-vacd_general-addr_ru00041" context="cda:addr[@nullFlavor]">
 			      <iso:assert role="error"
                      id="cda-ch-vacd_null-or-no-content_as00205"
                      test="normalize-space(.) = ''">
@@ -2657,9 +2667,9 @@ History:
 	  <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00034">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-vacd_general-addr-1_ru00041"
+		    <iso:rule id="cda-ch-vacd_general-addr-1_ru00042"
                 context="cda:addr[normalize-space(.) = '']">
 			      <iso:assert role="error"
                      id="cda-ch-vacd_empty-implies-null_as00206"
@@ -2672,9 +2682,9 @@ History:
 	  <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00035">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-vacd_general-time-req_ru00042"
+		    <iso:rule id="cda-ch-vacd_general-time-req_ru00043"
                 context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
 			      <iso:assert role="error"
                      test="(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value) &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z')) &gt; 7"
@@ -2687,9 +2697,9 @@ History:
 	  <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00036">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-vacd_cda-id-oid_ru00043"
+		    <iso:rule id="cda-ch-vacd_cda-id-oid_ru00044"
                 context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
 			      <iso:assert role="error"
                      test="translate(@root, '0123456789.', '') = ''"
@@ -2717,9 +2727,9 @@ History:
 	  <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00037">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-vacd_cda-id_ru00044"
+		    <iso:rule id="cda-ch-vacd_cda-id_ru00045"
                 context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 			      <iso:assert role="error" test="false()" id="cda-ch-vacd_as00212">
 				vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
@@ -2730,9 +2740,9 @@ History:
 	  <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00038">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-vacd_general-id_ru00045" context="cda:id">
+		    <iso:rule id="cda-ch-vacd_general-id_ru00046" context="cda:id">
 			      <iso:assert role="error"
                      id="cda-ch-vacd_null-or-no-root-attribute_as00213"
                      test="./@nullFlavor or ./@root">
@@ -2751,9 +2761,9 @@ History:
 	<iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00039" name="NMSP Namespaces">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-vacd_cda-root_ru00046" context="/*">
+		    <iso:rule id="cda-ch-vacd_cda-root_ru00047" context="/*">
 			      <iso:assert role="error"
                      test="self::cda:ClinicalDocument"
                      id="cda-ch-vacd_as00214">
@@ -2770,10 +2780,10 @@ History:
 	<iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00040" name="PERS Persons">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 		    <!-- abstract rules -->
-		<iso:rule id="cda-ch-vacd_nameTest_ru00047" abstract="true">
+		<iso:rule id="cda-ch-vacd_nameTest_ru00048" abstract="true">
 			      <iso:assert role="error" test="cda:name" id="cda-ch-vacd_as00215">
 			vhitg-ruleset.ent: A Person (<name xmlns=""/>) must have a name
 		</iso:assert>
@@ -2783,10 +2793,10 @@ History:
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00041">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- rules in context -->
-	<iso:rule context="cda:patient" id="cda-ch-vacd_ru00048">
+	<iso:rule context="cda:patient" id="cda-ch-vacd_ru00049">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2794,9 +2804,9 @@ History:
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00042">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:assignedPerson" id="cda-ch-vacd_ru00049">
+	     <iso:rule context="cda:assignedPerson" id="cda-ch-vacd_ru00050">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2804,10 +2814,10 @@ History:
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00043">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
-                id="cda-ch-vacd_ru00050">
+                id="cda-ch-vacd_ru00051">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2824,7 +2834,7 @@ Name is already handled in person pattern
                 name="HCPC Healthcare professionals">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- abstract rules -->
 	<!--
@@ -2833,7 +2843,7 @@ Name is already handled in person pattern
 	addres or the attribute 'nullFlavor' must be set to 'UNK'. </iso:assert>
 	</iso:rule>
 	-->
-	<iso:rule id="cda-ch-vacd_addresTestPersonOrRole_ru00051" abstract="true">
+	<iso:rule id="cda-ch-vacd_addresTestPersonOrRole_ru00052" abstract="true">
 		       <iso:assert role="error"
                      test="../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'"
                      id="cda-ch-vacd_as00216">
@@ -2845,7 +2855,7 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00045">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -2855,7 +2865,7 @@ Name is already handled in person pattern
 	</iso:rule>
 	-->
 	<!-- rules in context -->
-	<iso:rule context="cda:assignedPerson" id="cda-ch-vacd_ru00052">
+	<iso:rule context="cda:assignedPerson" id="cda-ch-vacd_ru00053">
 		       <extends xmlns="" rule="addresTestPerson"/>
 		       <extends xmlns="" rule="telecomTestPerson"/>
 	     </iso:rule>
@@ -2864,10 +2874,10 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00046">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
-                id="cda-ch-vacd_ru00053">
+                id="cda-ch-vacd_ru00054">
 		       <extends xmlns="" rule="addresTestPersonOrRole"/>
 		       <extends xmlns="" rule="telecomTestPerson"/>
 	     </iso:rule>
@@ -2882,9 +2892,9 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00047" name="ORGC Organization">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-vacd_nameTestOrg_ru00054" abstract="true">
+	     <iso:rule id="cda-ch-vacd_nameTestOrg_ru00055" abstract="true">
 		       <iso:assert role="error" test="cda:name" id="cda-ch-vacd_as00217">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a name.
 	</iso:assert>
@@ -2894,9 +2904,9 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00048">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-vacd_addresTestOrg_ru00055" abstract="true">
+	     <iso:rule id="cda-ch-vacd_addresTestOrg_ru00056" abstract="true">
 		       <iso:assert role="error" test="cda:addr/*" id="cda-ch-vacd_as00218">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a non-empty addres.
 	</iso:assert>
@@ -2906,7 +2916,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00049">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -2917,7 +2927,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 	-->
 	<!-- rules in context -->
 	<iso:rule context="cda:representedOrganization | cda:representedCustodianOrganization | cda:scopingOrganization"
-                id="cda-ch-vacd_ru00056">
+                id="cda-ch-vacd_ru00057">
 		       <extends xmlns="" rule="nameTestOrg"/>
 		       <extends xmlns="" rule="addresTestOrg"/>
 		       <extends xmlns="" rule="telecomTestOrg"/>
@@ -2935,10 +2945,10 @@ Separatorzeichen nur Bindestrich –, Punkte . oder Klammern ( ) verwenden.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00050" name="TURS TINT TCHS Telecom">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
-	<iso:rule context="cda:telecom" id="cda-ch-vacd_ru00057">
+	<iso:rule context="cda:telecom" id="cda-ch-vacd_ru00058">
 		       <iso:assert role="error"
                      test="(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:' or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor"
                      id="cda-ch-vacd_as00219">
@@ -2995,9 +3005,9 @@ component               CDA Body 1..1 SCHEMA
                 name="HEAD General Header constraints">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-vacd_ru00058">
+	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-vacd_ru00059">
 
 
 		<!-- 21.01.2013 ts: auskommentiert, da z.B. IHE XD-LAB den realmCode erfordert
@@ -3038,10 +3048,10 @@ zugeben.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00052" name="TYID Document typeId">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
-	<iso:rule context="cda:ClinicalDocument/cda:typeId" id="cda-ch-vacd_ru00059">
+	<iso:rule context="cda:ClinicalDocument/cda:typeId" id="cda-ch-vacd_ru00060">
 		       <iso:assert role="error"
                      test="normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'"
                      id="cda-ch-vacd_as00224">
@@ -3055,10 +3065,10 @@ Regel IIRT: Das @root Attribut ist bei Instanzidentifikatoren verpflichtend anzu
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00053" name="IIRT Instance identifiers">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
-	<iso:rule context="cda:id" id="cda-ch-vacd_ru00060">
+	<iso:rule context="cda:id" id="cda-ch-vacd_ru00061">
 		       <iso:assert role="error" test="@root or @nullFlavor" id="cda-ch-vacd_as00225">
 			vhitg-ruleset.ent: Instance Identifiers must at least contain a <emph xmlns="">root</emph> attribute.
 		</iso:assert>
@@ -3075,10 +3085,10 @@ verwenden.
                 name="CDCD CDLN ClinicalDocument Code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
-	<iso:rule context="cda:ClinicalDocument/cda:code" id="cda-ch-vacd_ru00061">
+	<iso:rule context="cda:ClinicalDocument/cda:code" id="cda-ch-vacd_ru00062">
 		       <iso:assert role="error" test="@code and @codeSystem" id="cda-ch-vacd_as00226">
 			vhitg-ruleset.ent: The code element of the ClinicalDocument must have a <emph xmlns="">code</emph> and <emph xmlns="">codeSystem</emph>.
 		</iso:assert>
@@ -3099,11 +3109,11 @@ Datum mit Jahr, Monat und Tag angegeben sein.
                 name="CDET ClinicalDocument effectiveTime">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:effectiveTime"
-                id="cda-ch-vacd_ru00062">
+                id="cda-ch-vacd_ru00063">
 		       <iso:assert role="error"
                      test="string-length(@value)&gt;7"
                      id="cda-ch-vacd_as00228">
@@ -3121,9 +3131,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
                 name="CDLC ClinicalDocument languageCode">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-vacd_cda-languageCode_ru00063"
+	     <iso:rule id="cda-ch-vacd_cda-languageCode_ru00064"
                 context="/cda:ClinicalDocument">
 		       <iso:assert role="error" test="cda:languageCode" id="cda-ch-vacd_as00229">
 			vhitg-ruleset.ent: The <emph xmlns="">languageCode</emph> element must be present.
@@ -3134,9 +3144,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
    <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00057">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-vacd_cda-languageCode-format_ru00064"
+	     <iso:rule id="cda-ch-vacd_cda-languageCode-format_ru00065"
                 context="/cda:ClinicalDocument/cda:languageCode">
 		       <iso:assert role="error"
                      test="(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code) = 2"
@@ -3163,9 +3173,9 @@ nem Patienten (entity) anzugeben.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00058" name="PATR Patient Role">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:recordTarget" id="cda-ch-vacd_ru00065">
+	     <iso:rule context="cda:recordTarget" id="cda-ch-vacd_ru00066">
 		       <iso:assert role="error"
                      test="count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1"
                      id="cda-ch-vacd_as00233">
@@ -3181,10 +3191,10 @@ country beim Geburtsort ist verpflichtend.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00059" name="BRCC Birthplace">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:patient/cda:birthplace/cda:place/cda:addr"
-                id="cda-ch-vacd_ru00066">
+                id="cda-ch-vacd_ru00067">
 		       <iso:assert role="error"
                      test="cda:city or cda:country"
                      id="cda-ch-vacd_as00234">
@@ -3217,9 +3227,9 @@ addr, muss bei einer beteiligten Person vorliegen.
                 name="PTNO PTEC PTPH PTPR PTTL Participants">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:participant" id="cda-ch-vacd_ru00067">
+	     <iso:rule context="cda:participant" id="cda-ch-vacd_ru00068">
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK' and cda:associatedentity/cda:associatedPerson)"
                      id="cda-ch-vacd_as00235">
@@ -3268,9 +3278,9 @@ In XML Schema
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00061" name="RELD Relating documents">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-vacd_ru00068">
+	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-vacd_ru00069">
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument[@typeCode='APND'])&lt;2"
                      id="cda-ch-vacd_as00239">
@@ -3300,9 +3310,9 @@ Regel BDSC: Ein Clinical Document muss mindestens ein „section“-Element enth
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00062" name="BDSC Section">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:structuredBody" id="cda-ch-vacd_ru00069">
+	     <iso:rule context="cda:structuredBody" id="cda-ch-vacd_ru00070">
 		       <iso:assert role="error"
                      test="count(/cda:component/cda:section)&lt;1"
                      id="cda-ch-vacd_as00243">
@@ -3317,10 +3327,10 @@ Regel SCTX: Eine Sektion muss genau ein „Text“-Element enthalten.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00063" name="SCTX Section Text">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structeredbody/cda:component/cda:section"
-                id="cda-ch-vacd_ru00070">
+                id="cda-ch-vacd_ru00071">
 		       <iso:assert role="error"
                      test="count(cda:text)=1 and string-length(normalize-space(cda:text))=0"
                      id="cda-ch-vacd_as00244">
@@ -3355,9 +3365,9 @@ zu benutzen, der alternative Code steht dann in der <translation>.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00064" name="SCLN Section code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:section/cda:code" id="cda-ch-vacd_ru00071">
+	     <iso:rule context="cda:section/cda:code" id="cda-ch-vacd_ru00072">
 		       <iso:assert role="error"
                      test="@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0 and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)"
                      id="cda-ch-vacd_as00245">
@@ -3373,9 +3383,9 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
                 name="OMVL observationMedia Class">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:observationMedia" id="cda-ch-vacd_ru00072">
+	     <iso:rule context="cda:observationMedia" id="cda-ch-vacd_ru00073">
 		       <iso:assert role="error"
                      test="not(cda:value/@xsi:type) or cda:value/@xsi:type='ED'"
                      id="cda-ch-vacd_as00246">
@@ -3403,9 +3413,9 @@ Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen 
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00066" name="DGCD DGCN Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:entry/cda:observation/cda:value" id="cda-ch-vacd_ru00073">
+	     <iso:rule context="cda:entry/cda:observation/cda:value" id="cda-ch-vacd_ru00074">
 		       <iso:assert role="error"
                      test="@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')"
                      id="cda-ch-vacd_as00247">
@@ -3421,10 +3431,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
 <iso:pattern id="cda-ch-vacd_vhitg-ruleset_pa00067" name="DGQL Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.148+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.505+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value/cda:qualifier"
-                id="cda-ch-vacd_ru00074">
+                id="cda-ch-vacd_ru00075">
 		       <iso:assert role="error"
                      test="(./cda:name) and (./cda:value)"
                      id="cda-ch-vacd_as00248">
@@ -3451,10 +3461,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Medical Documents Specification</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.896+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.474+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.1&#34;]"
-                id="cda-ch-vacd_ru00075">
+                id="cda-ch-vacd_ru00076">
          <iso:assert role="error"
                      test="self::cda:ClinicalDocument"
                      id="cda-ch-vacd_as00251">
@@ -3475,9 +3485,9 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunization Detail Specification</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:34.524+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.739+01:00</xhtml:li>
       </xhtml:ul>
-      <iso:rule context="/" id="cda-ch-vacd_ru00076">
+      <iso:rule context="/" id="cda-ch-vacd_ru00077">
          <iso:assert role="error"
                      test="//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2&#34;]"
                      id="cda-ch-vacd_as00253">
@@ -3485,7 +3495,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2&#34;]"
-                id="cda-ch-vacd_ru00077">
+                id="cda-ch-vacd_ru00078">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error"
                      test="../cda:ClinicalDocument"
@@ -3515,10 +3525,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2-warnings_pa00070">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:34.524+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.739+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2&#34;]"
-                id="cda-ch-vacd_ru00078">
+                id="cda-ch-vacd_ru00079">
       <!-- Alert on any missing required if known elements -->
       <iso:assert role="warning"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.3.6&#34;]"
@@ -3573,10 +3583,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2-notes_pa00071">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:34.524+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.739+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2&#34;]"
-                id="cda-ch-vacd_ru00079">
+                id="cda-ch-vacd_ru00080">
       <!-- Note any missing optional elements -->
       <iso:assert role="information"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.3.31&#34;]"
@@ -3595,11 +3605,11 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.1.ent</xhtml:li>
          <xhtml:li class="version">5.0</xhtml:li>
          <xhtml:li class="title">IHE LAB Laboratory Report Data Processing Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.756+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.411+01:00</xhtml:li>
       </xhtml:ul>
       <!--  TF_Vol3_Ref_2.3.5.1.1 Derivation of the Text Block of a Section from the Data of an Entry -->
     <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1&#34;]"
-                id="cda-ch-vacd_ru00080">
+                id="cda-ch-vacd_ru00081">
          <iso:assert role="error"
                      test="ancestor::cda:component and parent::cda:section[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.3.2.1&#34; or cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.3.2.2&#34;] and self::cda:entry"
                      id="cda-ch-vacd_as00267">
@@ -3651,55 +3661,55 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.3.1-warnings_pa00073">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.1.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.756+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.411+01:00</xhtml:li>
       </xhtml:ul>
       <!-- 2.3.5.1.3 List of Content Modules Available for Level 3 -->
     <!-- Checking for R2 modules in the Specimen Act -->
     <!-- First set the context to any Specimen Act -->
     <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1&#34;]/cda:act"
-                id="cda-ch-vacd_ru00081">
+                id="cda-ch-vacd_ru00082">
          <iso:assert role="warning"
-                     test="not(count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.8&#34;]) &gt;= 1)"
+                     test="not(count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.8&#34;]) &gt;= 1)"
                      id="cda-ch-vacd_as00276">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) contains a Specimen Site (1.3.6.1.4.1.19376.1.3.1.8) templateId. This artifact from Revison 2.0 has been replaced by Specimen Received (1.3.6.1.4.1.19376.1.3.1.3) in Revision 3.0.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.2&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.2&#34;]) = 0"
                      id="cda-ch-vacd_as00277">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Specimen Collection (1.3.6.1.4.1.19376.1.3.1.2). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.3&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.3&#34;]) = 0"
                      id="cda-ch-vacd_as00278">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Specimen Received (1.3.6.1.4.1.19376.1.3.1.3). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1&#34;]) = 0"
                      id="cda-ch-vacd_as00279">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Notification Organizer (1.3.6.1.4.1.19376.1.3.1.1). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.1&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.1&#34;]) = 0"
                      id="cda-ch-vacd_as00280">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Notifiable Condition (1.3.6.1.4.1.19376.1.3.1.1.1). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.2&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.2&#34;]) = 0"
                      id="cda-ch-vacd_as00281">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Case Identifier (1.3.6.1.4.1.19376.1.3.1.1.2). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.3&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.3&#34;]) = 0"
                      id="cda-ch-vacd_as00282">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Outbreak Identifier (1.3.6.1.4.1.19376.1.3.1.1.3). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.4&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.4&#34;]) = 0"
                      id="cda-ch-vacd_as00283">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Laboratory Battery Organizer (1.3.6.1.4.1.19376.1.3.1.1.4). If known it shall be present.</xhtml:p>
          </iso:assert>
          <iso:assert role="warning"
-                     test="count(//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.5&#34;]) = 0"
+                     test="count(cda:act//cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.1.5&#34;]) = 0"
                      id="cda-ch-vacd_as00284">
             <xhtml:p lang="en">The Speciment Act in this Laboratory Data Processing Entry (1.3.6.1.4.1.19376.1.3.1) does not contain a Laboratory Isolate Organizer (1.3.6.1.4.1.19376.1.3.1.1.5). If known it shall be present.</xhtml:p>
          </iso:assert>
@@ -3707,7 +3717,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.3.1-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.3.1-extensions_pa00074">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.3.1']"
-                id="cda-ch-vacd_ru00082">
+                id="cda-ch-vacd_ru00083">
 		       <iso:assert role="error"
                      test="cda:act/cda:code[@codeSystem='2.16.840.1.113883.6.1' and @code='18727-8']"
                      id="cda-ch-vacd_as00285">
@@ -3733,10 +3743,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.1.4.ent</xhtml:li>
          <xhtml:li class="version">5.0</xhtml:li>
          <xhtml:li class="title">IHE LAB Laboratory Battery Organizer</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.693+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.364+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1.4&#34;]"
-                id="cda-ch-vacd_ru00083">
+                id="cda-ch-vacd_ru00084">
       <!-- Verify that templateId is used on the appropriate type of object -->
       <iso:assert role="error"
                      test="ancestor::cda:entry[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1&#34;]/cda:act and (parent::cda:entryRelationship[@typeCode=&#34;COMP&#34;] or parent::cda:component[@typeCode=&#34;COMP&#34;]/parent::cda:organizer[cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.1.5&#34;]]/parent::cda:entryRelationship[@typeCode=&#34;COMP&#34;]) and self::cda:organizer"
@@ -3780,10 +3790,10 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.3.1.4-warnings_pa00076">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.1.4.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.693+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.364+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1.4&#34;]"
-                id="cda-ch-vacd_ru00084">
+                id="cda-ch-vacd_ru00085">
          <iso:assert role="warning"
                      test="not(cda:specimen or //cda:specimen)"
                      id="cda-ch-vacd_as00296">
@@ -3799,10 +3809,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.1.6.ent</xhtml:li>
          <xhtml:li class="version">5.0</xhtml:li>
          <xhtml:li class="title">IHE LAB Laboratory Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.724+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.38+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1.6&#34;]"
-                id="cda-ch-vacd_ru00085">
+                id="cda-ch-vacd_ru00086">
       <!-- Verify that templateId is used on the appropriate type of object -->
       <iso:assert role="error"
                      test="ancestor::cda:entry[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1&#34;]/cda:act and self::cda:observation"
@@ -3900,7 +3910,7 @@ END OF DELETED RULE -->
       <!-- INSERT NEW CONTEXT FOR Possibly multiple Pre-conditions on observationRange -->
     <!-- Note that precondition under observationRange is a LAB extension to the CDA schema -->
     <iso:rule context="*[ancestor::cda:observation/cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1.6&#34; and parent::cda:observationRange and self::lab:precondition]"
-                id="cda-ch-vacd_ru00086">
+                id="cda-ch-vacd_ru00087">
          <iso:assert role="error" test="@typeCode=&#34;PRCN&#34;" id="cda-ch-vacd_as00316">
             <xhtml:p lang="en">In Laboratory Observation (1.3.6.1.4.1.19376.1.3.1.6) a precondition on an observationRange shall have the @typeCode attribute set to "PRCN".</xhtml:p>
          </iso:assert>
@@ -3923,10 +3933,10 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.3.1.6-warnings_pa00078">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.1.6.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.724+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.38+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.1.6&#34;]"
-                id="cda-ch-vacd_ru00087">
+                id="cda-ch-vacd_ru00088">
          <iso:assert role="warning" test="not(cda:specimen)" id="cda-ch-vacd_as00320">
             <xhtml:p lang="en">This Laboratory Observation (1.3.6.1.4.1.19376.1.3.1.6) conains a specimen element. In Lab Revision 3.0 all specimen information should be contained in a Specimen Collection procedure (1.3.6.1.4.1.19376.1.3.1.2) as specified in Section 2.3.5.5.</xhtml:p>
          </iso:assert>
@@ -3934,7 +3944,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.3.1.6-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.3.1.6-extensions_pa00079">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.3.1.6']"
-                id="cda-ch-vacd_ru00088">
+                id="cda-ch-vacd_ru00089">
 		<!-- Variable definieren, damit Kontext richtig angewendet werden kann-->
 		<iso:let name="docOf"
                   value="//cda:ClinicalDocument/cda:documentationOf/cda:serviceEvent/cda:code[@codeSystem='2.16.756.5.30.1.129.1.1.4']/@code"/>
@@ -4008,10 +4018,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.3.3.2.1.ent</xhtml:li>
          <xhtml:li class="version">5.0</xhtml:li>
          <xhtml:li class="title">IHE LAB Laboratory Specialty Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:33.865+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.458+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.3.2.1&#34;]"
-                id="cda-ch-vacd_ru00089">
+                id="cda-ch-vacd_ru00090">
       <!-- Verify that templateId is used on the appropriate type of object -->
       <iso:assert role="error"
                      test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section"
@@ -4051,7 +4061,7 @@ END OF DELETED RULE -->
     </iso:rule>
       <!-- TF_Vol3_Ref_2.3.4 Content Modules for CDA Sections -->
     <iso:rule context="//cda:section[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.3.3.2.1&#34;]/cda:component/cda:section"
-                id="cda-ch-vacd_ru00090">
+                id="cda-ch-vacd_ru00091">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.3.3.2.2&#34;]"
                      id="cda-ch-vacd_as00338">
@@ -4064,7 +4074,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.3.3.2.1-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.3.3.2.1-extensions_pa00081">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.3.3.2.1']"
-                id="cda-ch-vacd_ru00091">
+                id="cda-ch-vacd_ru00092">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Laboratory Specialty Section'">
             <xhtml:p lang="en">The English title must read 'Laboratory Specialty Section'</xhtml:p>
@@ -4108,10 +4118,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Pregnancy History Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:34.868+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.911+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4&#34;]"
-                id="cda-ch-vacd_ru00092">
+                id="cda-ch-vacd_ru00093">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00340">
@@ -4138,7 +4148,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4-extensions_pa00083">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4']"
-                id="cda-ch-vacd_ru00093">
+                id="cda-ch-vacd_ru00094">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'History of Pregnancies'">
             <xhtml:p lang="en">The English title must read 'History of Pregnancies'</xhtml:p>
@@ -4177,10 +4187,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunization Recommendations Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:34.524+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:19.755+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1&#34;]"
-                id="cda-ch-vacd_ru00094">
+                id="cda-ch-vacd_ru00095">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00344">
             <xhtml:p lang="en">An IHE PCC Immunization Recommendations Section (1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1) can only be used on sections.</xhtml:p>
@@ -4206,7 +4216,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1-extensions_pa00085">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1']"
-                id="cda-ch-vacd_ru00095">
+                id="cda-ch-vacd_ru00096">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Immunization Recommendations'">
             <xhtml:p lang="en">The English title must read 'Immunization Recommendations'</xhtml:p>
@@ -4245,10 +4255,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.6.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Active Problems Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.632+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.239+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.6&#34;]"
-                id="cda-ch-vacd_ru00096">
+                id="cda-ch-vacd_ru00097">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00348">
@@ -4281,7 +4291,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.6-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.6-extensions_pa00087">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.6']"
-                id="cda-ch-vacd_ru00097">
+                id="cda-ch-vacd_ru00098">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Active Problems'">
             <xhtml:p lang="en">The English title must read 'Active Problems'</xhtml:p>
@@ -4320,10 +4330,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.8.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC History of Past Illness Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.647+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.255+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.8&#34;]"
-                id="cda-ch-vacd_ru00098">
+                id="cda-ch-vacd_ru00099">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00353">
@@ -4350,7 +4360,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.8-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.8-extensions_pa00089">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.8']"
-                id="cda-ch-vacd_ru00099">
+                id="cda-ch-vacd_ru00100">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Past Medical History'">
             <xhtml:p lang="en">The English title must read 'Past Medical History'</xhtml:p>
@@ -4389,10 +4399,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.13.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergies and Other Adverse Reactions Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.366+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.146+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.13&#34;]"
-                id="cda-ch-vacd_ru00100">
+                id="cda-ch-vacd_ru00101">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00357">
@@ -4425,7 +4435,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.13-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.13-extensions_pa00091">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.13']"
-                id="cda-ch-vacd_ru00101">
+                id="cda-ch-vacd_ru00102">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Allergies and Other Adverse Reactions'">
             <xhtml:p lang="en">The English title must read 'Allergies and Other Adverse Reactions'</xhtml:p>
@@ -4464,10 +4474,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.23.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunizations Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.476+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.192+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.23&#34;]"
-                id="cda-ch-vacd_ru00102">
+                id="cda-ch-vacd_ru00103">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00362">
@@ -4500,7 +4510,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.23-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.23-extensions_pa00093">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.23']"
-                id="cda-ch-vacd_ru00103">
+                id="cda-ch-vacd_ru00104">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Immunizations'">
             <xhtml:p lang="en">The English title must read 'Immunizations'</xhtml:p>
@@ -4539,10 +4549,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.27.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Results Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.507+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.192+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.27&#34;]"
-                id="cda-ch-vacd_ru00104">
+                id="cda-ch-vacd_ru00105">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00367">
@@ -4569,10 +4579,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.28.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Coded Results Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.522+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.192+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.28&#34;]"
-                id="cda-ch-vacd_ru00105">
+                id="cda-ch-vacd_ru00106">
       <!-- Verify that the template id is used on the appropriate type of
     object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-vacd_as00370">
@@ -4607,10 +4617,10 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.28-warnings_pa00096">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.28.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.522+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.192+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.28&#34;]"
-                id="cda-ch-vacd_ru00106">
+                id="cda-ch-vacd_ru00107">
       <!-- Alert on any missing required if known elements -->
       <iso:assert role="warning"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.4&#34;]"
@@ -4623,10 +4633,10 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.28-notes_pa00097">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.28.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.522+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.192+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.28&#34;]"
-                id="cda-ch-vacd_ru00107">
+                id="cda-ch-vacd_ru00108">
       <!-- Note any missing optional elements -->
       <iso:assert role="information"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
@@ -4637,7 +4647,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.28-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.3.28-extensions_pa00098">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.28']"
-                id="cda-ch-vacd_ru00108">
+                id="cda-ch-vacd_ru00109">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Coded Results'">
             <xhtml:p lang="en">The English title must read 'Coded Results'</xhtml:p>
@@ -4676,10 +4686,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Severity</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.694+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.286+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;]"
-                id="cda-ch-vacd_ru00109">
+                id="cda-ch-vacd_ru00110">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.55&#34;]"
                      id="cda-ch-vacd_as00377">
@@ -4713,10 +4723,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Comments</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.897+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.38+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;]"
-                id="cda-ch-vacd_ru00110">
+                id="cda-ch-vacd_ru00111">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.40&#34;]"
                      id="cda-ch-vacd_as00382">
@@ -4744,7 +4754,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.2-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.2-extensions_pa00101">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.2']"
-                id="cda-ch-vacd_ru00111">
+                id="cda-ch-vacd_ru00112">
          <iso:assert role="error"
                      test="cda:code[@code='48767-8' and @codeSystem='2.16.840.1.113883.6.1' and @codeSystemName='LOINC' and @displayName='Annotation comment']"
                      id="cda-ch-vacd_as00387">
@@ -4761,10 +4771,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Problem Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.976+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.411+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
-                id="cda-ch-vacd_ru00112">
+                id="cda-ch-vacd_ru00113">
          <iso:assert role="error"
                      test="self::cda:observation[@classCode=&#34;OBS&#34; and @moodCode=&#34;EVN&#34;]"
                      id="cda-ch-vacd_as00388">
@@ -4788,7 +4798,7 @@ END OF DELETED RULE -->
          </iso:assert>
          <iso:report role="error"
                      test="cda:effectiveTime/cda:width or cda:effectiveTime/cda:center"
-                     id="cda-ch-vacd_re00018">
+                     id="cda-ch-vacd_re00019">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), while CDA allows for multiple mechanisms to record this time interval (e.g. by low and high values, low and width, high and width, or center point and width), we are constraining Medical summaries (Problem Entry) to use only the low/high form.</xhtml:p>
          </iso:report>
          <iso:assert role="error"
@@ -4867,13 +4877,13 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.5-warnings_pa00103">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.976+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.411+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
-                id="cda-ch-vacd_ru00113">
+                id="cda-ch-vacd_ru00114">
          <iso:report role="warning"
                      test="./@negationInd=&#34;true&#34;"
-                     id="cda-ch-vacd_re00019">
+                     id="cda-ch-vacd_re00020">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the value of negationInd should not normally be set to true. Instead, to record that there is "no prior history of chicken pox", one would use a coded value indicated exactly that. However, it is not always possible to record problems in this manner, especially if using a controlled vocabulary that does not supply pre-coordinated negations , or which do not allow the negation to be recorded with post-coordinated coded terminology.</xhtml:p>
          </iso:report>
          <iso:assert role="warning" test="cda:code" id="cda-ch-vacd_as00407">
@@ -4891,10 +4901,10 @@ END OF DELETED RULE -->
          </iso:assert>
          <iso:report role="warning"
                      test="cda:confidentialityCode"
-                     id="cda-ch-vacd_re00020">
+                     id="cda-ch-vacd_re00021">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), while CDA allows for a condition to specify a &lt;confidentialtyCode&gt; for an observation, in practice there is no way to enforce consistent use of this information across institutions to secure confidential patient information. Therefore, it is recommended that this element not be sent in Problem Entry. If there are confidentiality issues that need to be addressed other mechanisms should be negotiated within the affinity domain.</xhtml:p>
          </iso:report>
-         <iso:report role="warning" test="cda:uncertaintyCode" id="cda-ch-vacd_re00021">
+         <iso:report role="warning" test="cda:uncertaintyCode" id="cda-ch-vacd_re00022">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), CDA allows a condition to be specified with an &lt;uncertaintyCode&gt;. Such conditions can also be recorded as a possible condition (e.g. possible ear infection). There is no present consensus on the best use of this element; therefore, it is recommended that this element not be sent in Problem Entry.</xhtml:p>
          </iso:report>
          <iso:assert role="warning"
@@ -4911,7 +4921,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.5-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.5-extensions_pa00104">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5']"
-                id="cda-ch-vacd_ru00114">
+                id="cda-ch-vacd_ru00115">
 		       <iso:let name="actStartDate" value="cda:effectiveTime/cda:low/@value"/>
 		       <iso:let name="code" value="cda:value[@xsi:type='CD']/@code"/>
 		       <iso:let name="codeSystem" value="cda:value[@xsi:type='CD']/@codeSystem"/>
@@ -4924,12 +4934,12 @@ END OF DELETED RULE -->
 		       </iso:assert>
 		       <iso:report role="information"
                      test="cda:value[@xsi:type='CD' and @codeSystem='2.16.840.1.113883.6.96' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.14.11-Problem']/code/@value]"
-                     id="cda-ch-vacd_re00022">
+                     id="cda-ch-vacd_re00023">
 			         <xhtml:p lang="de">Das CDA-CH-VACD Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5) enthält einen Spezialfall (IHE-PCC-TF2 Chapter 6.3.4.14.11)</xhtml:p>
 		       </iso:report>
 		       <iso:report role="information"
                      test="cda:value[@xsi:type='CD' and @codeSystem='2.16.84 0.1.113883.6.96' and @code=$cda-ch-vacd-codeSystem[@root='2.16.840.1.113883.6.96' and @codeSystemName='VACD_Diseases']/code/@value]"
-                     id="cda-ch-vacd_re00023">
+                     id="cda-ch-vacd_re00024">
 			         <xhtml:p lang="de">Das CDA-CH-VACD Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5) enthält eine durchgemachte Krankheit aus der empfohlenen Liste, welche einen Immunschutz zur Folge haben</xhtml:p>
 		       </iso:report>
 		       <iso:assert role="error"
@@ -4977,10 +4987,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Concern Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.944+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.396+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
-                id="cda-ch-vacd_ru00115">
+                id="cda-ch-vacd_ru00116">
          <iso:assert role="error" test="../cda:act" id="cda-ch-vacd_as00420">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the Concern Entry can only be used on acts.</xhtml:p>
          </iso:assert>
@@ -5032,10 +5042,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Problem Concern Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.96+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.411+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.2&#34;]"
-                id="cda-ch-vacd_ru00116">
+                id="cda-ch-vacd_ru00117">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
                      id="cda-ch-vacd_as00429">
@@ -5050,7 +5060,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.5.2-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.5.2-extensions_pa00107">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2']"
-                id="cda-ch-vacd_ru00117">
+                id="cda-ch-vacd_ru00118">
 		       <iso:assert role="error" test="cda:text" id="cda-ch-vacd_as00431">
 			         <xhtml:p lang="de">Für CDA-CH-VACD MUSS die Bezeichnung des Leidens angegeben werden</xhtml:p>
 		       </iso:assert>
@@ -5064,10 +5074,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.3.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergy and Intolerance Concern</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.96+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.411+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.3&#34;]"
-                id="cda-ch-vacd_ru00118">
+                id="cda-ch-vacd_ru00119">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;2.16.840.1.113883.10.20.1.27&#34;] and cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
                      id="cda-ch-vacd_as00432">
@@ -5088,10 +5098,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.6.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergies and Intolerances</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.991+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.411+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]"
-                id="cda-ch-vacd_ru00119">
+                id="cda-ch-vacd_ru00120">
          <iso:assert role="error"
                      test="../cda:observation[@classCode=&#34;OBS&#34;]"
                      id="cda-ch-vacd_as00434">
@@ -5143,10 +5153,10 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.6-warnings_pa00110">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.6.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.991+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.411+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]"
-                id="cda-ch-vacd_ru00120">
+                id="cda-ch-vacd_ru00121">
          <iso:assert role="warning"
                      test="cda:code[@displayName and @codeSystemName]"
                      id="cda-ch-vacd_as00443">
@@ -5156,7 +5166,7 @@ END OF DELETED RULE -->
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.6-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.6-extensions_pa00111">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.6']"
-                id="cda-ch-vacd_ru00121">
+                id="cda-ch-vacd_ru00122">
 		       <iso:assert role="error"
                      test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.6']) or (cda:value[@xsi:type='CD' and @codeSystem=('2.16.756.5.30.1.126.3.1', '2.16.756.5.30.1.126.3.2', '2.16.840.1.113883.6.139', '2.16.840.1.113883.6.96')])"
                      id="cda-ch-vacd_as00444">
@@ -5164,7 +5174,7 @@ END OF DELETED RULE -->
 		       </iso:assert>
 		       <iso:report role="information"
                      test="cda:value[@xsi:type='CD' and @codeSystem='2.16.840.1.113883.6.96' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.14.11-Allergy']/code/@value]"
-                     id="cda-ch-vacd_re00024">
+                     id="cda-ch-vacd_re00025">
 			         <xhtml:p lang="de">Das CDA-CH-VACD Allergy and Intolerance Entry (1.3.6.1.4.1.19376.1.5.3.1.4.6) enthält einen Spezialfall</xhtml:p>
 		       </iso:report>
 		       <iso:assert role="error"
@@ -5204,7 +5214,7 @@ END OF DELETED RULE -->
 		       </iso:assert>
 		       <iso:report role="information"
                      test="cda:value[@xsi:type='CD' and @codeSystem='2.16.84 0.1.113883.6.96' and @code=$cda-ch-vacd-codeSystem[@root='2.16.840.1.113883.6.96' and @codeSystemName='VACD_Diseases']/code/@value]"
-                     id="cda-ch-vacd_re00025">
+                     id="cda-ch-vacd_re00026">
 			         <xhtml:p lang="de">Das CDA-CH-VACD Allergies and Other Adverse Reactions Entry (1.3.6.1.4.1.19376.1.5.3.1.4.6) enthält eine Allergie aus der empfohlenen Liste, welche im Zusammenhang mit Impfungen besonders relevant sind</xhtml:p>
 		       </iso:report>
 	     </iso:rule>
@@ -5217,10 +5227,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Product Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.007+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.427+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.2&#34;]"
-                id="cda-ch-vacd_ru00122">
+                id="cda-ch-vacd_ru00123">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.53&#34;]"
                      id="cda-ch-vacd_as00451">
@@ -5232,10 +5242,10 @@ END OF DELETED RULE -->
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.7.2-warnings_pa00113">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:36.007+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.427+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7.2&#34;]"
-                id="cda-ch-vacd_ru00123">
+                id="cda-ch-vacd_ru00124">
          <iso:assert role="warning"
                      test="cda:manufacturedMaterial/cda:name"
                      id="cda-ch-vacd_as00452">
@@ -5256,10 +5266,10 @@ END OF DELETED RULE -->
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunizations</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.726+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.286+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12&#34;]"
-                id="cda-ch-vacd_ru00124">
+                id="cda-ch-vacd_ru00125">
       <!--
 
 Note: 2009/10/28.  The wiki version of this template has been modified to refer to both moodCode EVN and INT.
@@ -5313,7 +5323,7 @@ two moodCode options...
     1.3.6.1.4.1.19376.1.5.3.1.4.12 object.
 -->
     <iso:rule context="*[cda:templateId/@root='2.16.840.1.113883.10.20.1.46']"
-                id="cda-ch-vacd_ru00125">
+                id="cda-ch-vacd_ru00126">
       <!--
 
 Not needed.  Already checked by CCD. 
@@ -5351,10 +5361,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.12-warnings_pa00115">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.726+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.286+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12&#34;]"
-                id="cda-ch-vacd_ru00126">
+                id="cda-ch-vacd_ru00127">
          <iso:assert role="warning"
                      test="cda:text/cda:reference"
                      id="cda-ch-vacd_as00463">
@@ -5382,7 +5392,7 @@ Not needed.  Already checked by CCD.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.12-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.12-extensions_pa00116">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.12']"
-                id="cda-ch-vacd_ru00127">
+                id="cda-ch-vacd_ru00128">
 		       <iso:let name="unknownMedication"
                   value="cda:code[@codeSystem='2.16.840.1.113883.6.96' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Table-6.3.4.16.7-1']/code/@value]"/>
 		       <iso:assert role="error"
@@ -5392,10 +5402,10 @@ Not needed.  Already checked by CCD.
 		       </iso:assert>
 		       <iso:report role="information"
                      test="$unknownMedication"
-                     id="cda-ch-vacd_re00026">
+                     id="cda-ch-vacd_re00027">
 			         <xhtml:p lang="de">Die Liste der Impfungen enthält einen Spezialfall (IHE-PCC-TF2 Table 6.3.4.16.7-1)</xhtml:p>
 		       </iso:report>
-		       <iso:report role="debug" test="@negationInd='true'" id="cda-ch-vacd_re00027">
+		       <iso:report role="debug" test="@negationInd='true'" id="cda-ch-vacd_re00028">
 			         <xhtml:p lang="de">Es handelt sich um eine ausdrücklich nicht erwünschte Impfung</xhtml:p>
 		       </iso:report>
 		       <iso:assert role="warning"
@@ -5476,10 +5486,10 @@ Not needed.  Already checked by CCD.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Immunization Recommendation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.694+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.286+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12.2&#34;]"
-                id="cda-ch-vacd_ru00128">
+                id="cda-ch-vacd_ru00129">
          <iso:assert role="error"
                      test="self::cda:substanceAdministration[@classCode='SBADM' and @moodCode=('INT','PRP') and @negationInd=('true','false')]"
                      id="cda-ch-vacd_as00483">
@@ -5522,10 +5532,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.12.2-warnings_pa00118">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.694+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.286+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12.2&#34;]"
-                id="cda-ch-vacd_ru00129">
+                id="cda-ch-vacd_ru00130">
       <!--
                 Note: the follwong 3 assert were copied from 1.3.6.1.4.1.19376.1.5.3.1.4.12.ent
                 Reason:
@@ -5553,10 +5563,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.12.2-notes_pa00119">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.12.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.694+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.286+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.12.2&#34;]"
-                id="cda-ch-vacd_ru00130">
+                id="cda-ch-vacd_ru00131">
       <!--
                 <code code='30973-2'
                 displayName='Dose Number'
@@ -5580,7 +5590,7 @@ Not needed.  Already checked by CCD.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.12.2-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.12.2-extensions_pa00120">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.12.2']"
-                id="cda-ch-vacd_ru00131">
+                id="cda-ch-vacd_ru00132">
 		       <iso:let name="unknownMedication"
                   value="cda:code[@codeSystem='2.16.840.1.113883.6.96' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Table-6.3.4.16.7-1']/code/@value]"/>
 		       <iso:assert role="error"
@@ -5608,10 +5618,10 @@ Not needed.  Already checked by CCD.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Simple Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.819+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.349+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                id="cda-ch-vacd_ru00132">
+                id="cda-ch-vacd_ru00133">
          <iso:assert role="error" test="cda:id" id="cda-ch-vacd_as00499">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), each Simple Observation shall have an &lt;id&gt; identifier.</xhtml:p>
          </iso:assert>
@@ -5640,10 +5650,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.13-warnings_pa00122">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.819+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.349+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                id="cda-ch-vacd_ru00133">
+                id="cda-ch-vacd_ru00134">
          <iso:assert role="warning"
                      test="cda:effectiveTime[@nullFlavor or (string-length(@value) &gt;= 8) or (cda:low[@nullFlavor or (string-length(@value) &gt;= 8)] and cda:high[@nullFlavor or (string-length(@value) &gt;= 8)])]"
                      id="cda-ch-vacd_as00505">
@@ -5655,10 +5665,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.13-notes_pa00123">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.819+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.349+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                id="cda-ch-vacd_ru00134">
+                id="cda-ch-vacd_ru00135">
          <iso:assert role="information"
                      test="(cda:templateId[@root=('1.3.6.1.4.1.19376.1.5.3.1.4.13.4', '1.3.6.1.4.1.19376.1.5.3.1.4.13.5', '1.3.6.1.4.1.19376.1.5.3.1.4.13.7')]) or (cda:interpretationCode)"
                      id="cda-ch-vacd_as00506">
@@ -5678,7 +5688,7 @@ Not needed.  Already checked by CCD.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.13-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.13-extensions_pa00124">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']"
-                id="cda-ch-vacd_ru00135">
+                id="cda-ch-vacd_ru00136">
 		       <iso:assert role="warning"
                      test="not(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.5']) or (cda:code[@codeSystem='2.16.840.1.113883.6.1' and @code=$cda-ch-vacd-codeSystem[@root='2.16.840.1.113883.6.1' and @codeSystemName='VACD_PregnacyObservations']/code/@value])"
                      id="cda-ch-vacd_as00509">
@@ -5704,10 +5714,10 @@ Not needed.  Already checked by CCD.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.5.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Pregnancy Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.788+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.333+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.5&#34;]"
-                id="cda-ch-vacd_ru00136">
+                id="cda-ch-vacd_ru00137">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
                      id="cda-ch-vacd_as00512">
@@ -5885,28 +5895,28 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.13.5-warnings_pa00126">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.5.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.788+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.333+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.5&#34;]"
-                id="cda-ch-vacd_ru00137">
+                id="cda-ch-vacd_ru00138">
          <iso:assert role="warning"
                      test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.1&#34; and index-of(( &#34;11636-8&#34;, &#34;11637-6&#34;, &#34;11638-4&#34;, &#34;11639-2&#34;, &#34;11640-0&#34;, &#34;11612-9&#34;, &#34;11613-7&#34;, &#34;11614-5&#34;, &#34;33065-4&#34;, &#34;57062-2&#34;, &#34;11996-6&#34;, &#34;45371-2&#34;, &#34;49051-6&#34;, &#34;11887-7&#34;, &#34;32396-4&#34;, &#34;8339-4&#34;, &#34;29300-1&#34;, &#34;8722-1&#34;, &#34;52829-9&#34;, &#34;42839-1&#34;, &#34;42840-9&#34;, &#34;11449-6&#34;, &#34;8678-5&#34;, &#34;8665-2&#34;, &#34;11778-8&#34;, &#34;11779-6&#34;, &#34;11780-4&#34;, &#34;11884-4&#34;, &#34;11885-1&#34;, &#34;11886-9&#34;), @code)]"
                      id="cda-ch-vacd_as00543">
             <xhtml:p lang="en">In IHE PCC Pregnancy Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.5), a pregnancy observation shall have a LOINC code describing what facet of patient's pregnancy history is being recorded. These codes should come from the list in the specification (Table 6.3.4.25.4-1: Pregnancy Observation Codes). Additional codes may be used to reflect additional information about the pregnancy history.</xhtml:p>
          </iso:assert>--&gt; 
-    <iso:report role="warning" test="cda:repeatNumber" id="cda-ch-vacd_re00028">
+    <iso:report role="warning" test="cda:repeatNumber" id="cda-ch-vacd_re00029">
             <xhtml:p lang="en">In IHE PCC Pregnancy Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.5), the &lt;repeatNumber&gt; element should not be present.</xhtml:p>
          </iso:report>
          <iso:report role="warning"
                      test="cda:interpretationCode or cda:methodCode or cda:targetSiteCode"
-                     id="cda-ch-vacd_re00029">
+                     id="cda-ch-vacd_re00030">
             <xhtml:p lang="en">In IHE PCC Pregnancy Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13.5), the &lt;interpretationCode&gt;, &lt;methodCode&gt;, and &lt;targetSiteCode&gt; should not be present.</xhtml:p>
          </iso:report>
       </iso:rule>
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.13.5-extensions--><iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.13.5-extensions_pa00127">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.5']"
-                id="cda-ch-vacd_ru00138">
+                id="cda-ch-vacd_ru00139">
 		       <iso:assert role="error"
                      test="cda:code/@codeSystem='2.16.840.1.113883.6.1' and cda:code/@code=$cda-ch-codeSystem[@root='2.16.840.1.113883.6.1' and @codeSystemName='PregnancyObservationCode']/code/@value"
                      id="cda-ch-vacd_as00544">
@@ -5950,10 +5960,10 @@ Not needed.  Already checked by CCD.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.19.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Procedure Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.882+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.38+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.19&#34;]"
-                id="cda-ch-vacd_ru00139">
+                id="cda-ch-vacd_ru00140">
          <iso:assert role="error"
                      test="self::cda:procedure[@classCode=&#34;PROC&#34;]"
                      id="cda-ch-vacd_as00549">
@@ -5994,10 +6004,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.19-warnings_pa00129">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.19.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.882+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.38+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.19&#34;]"
-                id="cda-ch-vacd_ru00140">
+                id="cda-ch-vacd_ru00141">
          <iso:assert role="warning" test="cda:code[@code]" id="cda-ch-vacd_as00557">
             <xhtml:p lang="en">In IHE PCC Procedure Entry (1.3.6.1.4.1.19376.1.5.3.1.4.19), a Procedure Entry should contain a code describing the type of procedure.</xhtml:p>
          </iso:assert>
@@ -6010,10 +6020,10 @@ Not needed.  Already checked by CCD.
   <iso:pattern id="cda-ch-vacd_1.3.6.1.4.1.19376.1.5.3.1.4.19-notes_pa00130">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.19.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-04-27T13:35:35.882+02:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:20.38+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.19&#34;]"
-                id="cda-ch-vacd_ru00141">
+                id="cda-ch-vacd_ru00142">
          <iso:assert role="information"
                      test="./@moodCode = &#34;INT&#34; or ./@moodCode = &#34;EVN&#34;"
                      id="cda-ch-vacd_as00559">

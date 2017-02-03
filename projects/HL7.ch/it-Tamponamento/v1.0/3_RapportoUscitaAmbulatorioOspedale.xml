@@ -9,6 +9,7 @@ History:
 2010.05.17: Tony Schaller, medshare GmbH (Einfügen finaler OIDs)
 2010.05.20: Tony Schaller, medshare GmbH (Korrektur, damit Dokument mit Eclipse CDA Instance Validator korrekt validiert)
 2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ********************************************************
 -->
@@ -49,7 +50,7 @@ History:
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
+				<id extension="7605555555555" root="2.51.1.3"/>
 				<name>Ospedale cantonale, Clinica di chirurgia e ortopedia</name>
 			</providerOrganization>
 		</patientRole>
@@ -58,7 +59,7 @@ History:
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value="20100201"/>
 		<assignedAuthor>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<addr use="WP">
 				<streetName>Spitalstr.</streetName>
 				<houseNumber>33</houseNumber>
@@ -90,7 +91,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
+				<id extension="7605555555555" root="2.51.1.3"/>
 				<name>Ospedale cantonale, Clinica di chirurgia</name>
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
@@ -105,7 +106,7 @@ History:
 		<time value="20100201"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
@@ -120,7 +121,7 @@ History:
 		<time value="20100201"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
@@ -425,7 +426,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680475040232' />
+									<id root='2.51.1.1' extension='7680475040232' />
 									<manufacturedMaterial>
 										<code code="N02BE01" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
@@ -486,7 +487,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680446910359' />
+									<id root='2.51.1.1' extension='7680446910359' />
 									<manufacturedMaterial>
 										<code code="M03BX02" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
@@ -535,7 +536,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680569020096' />
+									<id root='2.51.1.1' extension='7680569020096' />
 									<manufacturedMaterial>
 										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73" >
 											<originalText>

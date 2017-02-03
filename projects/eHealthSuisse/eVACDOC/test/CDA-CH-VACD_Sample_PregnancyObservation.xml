@@ -10,6 +10,7 @@ History:
 2015.09.16: Tony Schaller, medshare GmbH (Anpassung auf Update CDA-CH-VACD)
 2015.10.13: Tony Schaller, medshare GmbH (Korrekur OID CDA-CH-VACD)
 2016.05.29: Tony Schaller, medshare GmbH (realmCode CHE added)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -57,7 +58,7 @@ History:
 				<birthTime value='20000404'/>
 			</patient>
 			<providerOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
+				<id extension='7608888888888' root='2.51.1.3'/>
 				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
 			</providerOrganization>
 		</patientRole>
@@ -66,7 +67,7 @@ History:
 		<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
 		<time value='20150604'/>
 		<assignedAuthor>
-			<id extension='7608888888888' root='1.3.88'/>
+			<id extension='7608888888888' root='2.51.1.3'/>
 			<addr use='WP'>
 				<streetName>Doktorgasse</streetName>
 				<houseNumber>2</houseNumber>
@@ -102,7 +103,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
+				<id extension='7608888888888' root='2.51.1.3'/>
 				<name>Gruppenpraxis CH</name>
 				<addr use='WP'>
 					<streetName>Doktorgasse</streetName>
@@ -118,7 +119,7 @@ History:
 		<time value='20150604'/>
 		<signatureCode code='S'/>
 		<assignedEntity>
-			<id extension='7608888888888' root='1.3.88'/>
+			<id extension='7608888888888' root='2.51.1.3'/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
@@ -328,7 +329,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680006370012' />
+									<id root='2.51.1.1' extension='7680006370012' />
 									<manufacturedMaterial>
 										<code code='J07CA02' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
@@ -346,7 +347,7 @@ History:
 							<performer>
 								<time value='20150604' />
 								<assignedEntity>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -361,7 +362,7 @@ History:
 								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
+									<id extension='7607777777777' root='2.51.1.3'/>
 									<addr use='WP'>
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
@@ -514,7 +515,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680007030014' />
+									<id root='2.51.1.1' extension='7680007030014' />
 									<manufacturedMaterial>
 										<code code='J07BD52' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
@@ -532,7 +533,7 @@ History:
 							<performer>
 								<time value='20150604' />
 								<assignedEntity>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -547,7 +548,7 @@ History:
 								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
+									<id extension='7607777777777' root='2.51.1.3'/>
 									<addr use='WP'>
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
@@ -680,7 +681,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680005340016' />
+									<id root='2.51.1.1' extension='7680005340016' />
 									<manufacturedMaterial>
 										<code code='J07BC01' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
@@ -698,7 +699,7 @@ History:
 							<performer>
 								<time value='20150604' />
 								<assignedEntity>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -713,7 +714,7 @@ History:
 								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
+									<id extension='7607777777777' root='2.51.1.3'/>
 									<addr use='WP'>
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>
@@ -806,7 +807,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680577350031' />
+									<id root='2.51.1.1' extension='7680577350031' />
 									<manufacturedMaterial>
 										<code code='J07BM01' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
@@ -824,7 +825,7 @@ History:
 							<performer>
 								<time value='20150604' />
 								<assignedEntity>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -839,7 +840,7 @@ History:
 								<functionCode code='221' codeSystem='2.16.840.1.113883.2.9.6.2.7' codeSystemName='ISCO-08' displayName='Medical doctors'/>
 								<time value='20150604' />
 								<assignedAuthor>
-									<id extension='7607777777777' root='1.3.88'/>
+									<id extension='7607777777777' root='2.51.1.3'/>
 									<addr use='WP'>
 										<streetName>Rathaus</streetName>
 										<postalCode>8888</postalCode>

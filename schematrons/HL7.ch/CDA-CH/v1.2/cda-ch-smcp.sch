@@ -336,7 +336,7 @@ History:
 		    <xhtml:ul id="cda-ch-infrastructure">
 			      <xhtml:li class="filename">infrastructure.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:52:44.971+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:09.18+01:00</xhtml:li>
       </xhtml:ul>
 
 		    <rule context="cda:ClinicalDocument" id="cda-ch-smcp_ru00001">
@@ -403,7 +403,7 @@ History:
 		    <xhtml:ul id="CDA-CH-SMCP-doc">
 			      <xhtml:li class="filename">CDA-CH-SMCP-doc.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:52:44.799+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:09.055+01:00</xhtml:li>
       </xhtml:ul>
 
 		    <rule context="cda:ClinicalDocument" id="cda-ch-smcp_ru00002">
@@ -760,7 +760,7 @@ History:
 	  <pattern id="cda-ch-smcp_CDA-CH.SMCP.Body.HousingStatusL2_pa00003">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-smcp-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.814+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.071+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId[@root='2.16.756.5.30.1.1.1.1.3.6.21' and @extension='CDA-CH.SMCP.Body.HousingStatusL2']]"
             id="cda-ch-smcp_ru00010">
@@ -808,7 +808,7 @@ History:
 	  <pattern id="cda-ch-smcp_CDA-CH.SMCP.Body.ArbeitsfähigkeitL3_pa00004">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch-smcp-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.814+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.071+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId[@root='2.16.756.5.30.1.1.1.1.1' and @extension='CDA-CH.Body.ArbeitsfähigkeitList']]"
             id="cda-ch-smcp_ru00011">
@@ -828,7 +828,7 @@ History:
 		<xhtml:ul id="cda-ch_medication-section">
 			      <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:52:44.939+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:09.165+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediList&#34;]"
             id="cda-ch-smcp_ru00012">
@@ -870,7 +870,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_medication-section_pa00006">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.939+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.165+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -916,7 +916,7 @@ History:
 			
 			      <!-- Backup altes Medikationstemplate
 			<!-/-	Identifikation mit GTIN, GLN oder Pharmacode 	-/->
-			<assert id="cda-ch_medication-section-0204" test="cda:id[@nullFlavor or @root=&quot;2.16.756.5.30.2.6.1&quot; or (@root='1.3.88' or @root='2.51.1.3') or @root=&quot;1.3.160&quot;]">
+			<assert id="cda-ch_medication-section-0204" test="cda:id[@nullFlavor or @root=&quot;2.16.756.5.30.2.6.1&quot; or (@root='1.3.88' or @root='2.51.1.3') or (@root=&quot;1.3.160&quot; or @root=&quot;2.51.1.1&quot;)]">
 				<xhtml:p lang="de_ch">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 				<xhtml:p lang="fr_ch">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage, le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
 				<xhtml:p lang="it_ch">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio, il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
@@ -1003,7 +1003,7 @@ History:
 			      </report>
 			      <report role="warning"
                  id="cda-ch-smcp_cda-ch_medication-section-0214-3_re00003"
-                 test="cda:id[@root=&#34;1.3.160&#34;]">
+                 test="cda:id[(@root=&#34;1.3.160&#34; or @root=&#34;2.51.1.1&#34;)]">
 				        <xhtml:p lang="de">substanceAdministration.id enthält GTIN (veraltete Implementation)</xhtml:p>
 				        <xhtml:p lang="en">substanceAdministration.id contains the GTIN (deprecated implementation)</xhtml:p>
 			      </report>
@@ -1011,7 +1011,7 @@ History:
 			      <!-- Neues Medikationstemplate ab 9.2.2015: manufacturedProduct - id: GTIN, GLN der Packung oder Pharmacode	-->
 			<assert role="error"
                  id="cda-ch-smcp_cda-ch_medication-section-0215_as00081"
-                 test="cda:consumable/cda:manufacturedProduct/cda:id[@nullFlavor or @root=(&#34;2.16.756.5.30.2.6.1&#34;, &#34;1.3.88&#34;, &#34;2.51.1.3&#34;, &#34;1.3.160&#34;)]">
+                 test="cda:consumable/cda:manufacturedProduct/cda:id[@nullFlavor or @root=(&#34;2.16.756.5.30.2.6.1&#34;, &#34;1.3.88&#34;, &#34;2.51.1.3&#34;, &#34;1.3.160&#34;, &#34;2.51.1.1&#34;)]">
 				        <xhtml:p lang="de">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 				        <xhtml:p lang="fr">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage, le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
 				        <xhtml:p lang="it">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio, il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
@@ -1099,7 +1099,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_medication-section_pa00007">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.939+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.165+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--	CDA-CH.Body.MediL3 Checks -->
 		<rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediL3&#34;]"
@@ -1158,7 +1158,7 @@ History:
 		<xhtml:ul id="entity_HL7-cda-ch">
 			      <xhtml:li class="filename">cda-ch.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1197,7 +1197,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00009">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.Insurance&#34;]"
             id="cda-ch-smcp_ru00017">
@@ -1254,7 +1254,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00010">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.InsuranceCard&#34;]"
             id="cda-ch-smcp_ru00018">
@@ -1302,7 +1302,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00011">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1450,7 +1450,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00012">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1545,7 +1545,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00013">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1592,7 +1592,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00014">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1663,7 +1663,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00015">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1753,7 +1753,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00016">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1870,7 +1870,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00017">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1941,7 +1941,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00018">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1996,7 +1996,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00019">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2091,7 +2091,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00020">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2194,7 +2194,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00021">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2241,7 +2241,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00022">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2294,7 +2294,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00023">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2381,7 +2381,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00024">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2428,7 +2428,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00025">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2491,7 +2491,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00026">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2562,7 +2562,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00027">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2593,7 +2593,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00028">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2653,7 +2653,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00029">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2692,7 +2692,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00030">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2725,7 +2725,7 @@ History:
 	  <pattern id="cda-ch-smcp_cda-ch_pa00031">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:44.893+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.134+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2735,6 +2735,16 @@ History:
 		<rule context="cda:id" id="cda-ch-smcp_ru00042">
 			      <report role="warning" test="@root='1.3.88'" id="cda-ch-smcp_re00012">
 				        <xhtml:p lang="de">Die OID 1.3.88 für GS1 GLN ist veraltet. Stattdessen soll die OID 2.51.1.3 verwendet werden.</xhtml:p>
+			      </report>
+		    </rule>
+		    <!--
+		********************************************************
+		Deprecated GTIN OID
+		********************************************************
+		-->
+		<rule context="cda:id" id="cda-ch-smcp_ru00043">
+			      <report role="warning" test="@root='1.3.160'" id="cda-ch-smcp_re00013">
+				        <xhtml:p lang="de">Die OID 1.3.160 für GS1 GTIN ist veraltet. Stattdessen soll die OID 2.51.1.1 verwendet werden.</xhtml:p>
 			      </report>
 		    </rule>
 	  </pattern>
@@ -2750,10 +2760,10 @@ History:
 		<xhtml:ul id="vhitg-ruleset">
 			      <xhtml:li class="filename">vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules in vhitg-ruleset.ent)</xhtml:li>
 			      <xhtml:li class="version">1.5</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 
-		    <iso:rule id="cda-ch-smcp_general-addr_ru00043" context="cda:addr[@nullFlavor]">
+		    <iso:rule id="cda-ch-smcp_general-addr_ru00044" context="cda:addr[@nullFlavor]">
 			      <iso:assert role="error"
                      id="cda-ch-smcp_null-or-no-content_as00220"
                      test="normalize-space(.) = ''">
@@ -2765,9 +2775,9 @@ History:
 	  <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00033">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-smcp_general-addr-1_ru00044"
+		    <iso:rule id="cda-ch-smcp_general-addr-1_ru00045"
                 context="cda:addr[normalize-space(.) = '']">
 			      <iso:assert role="error"
                      id="cda-ch-smcp_empty-implies-null_as00221"
@@ -2780,9 +2790,9 @@ History:
 	  <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00034">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-smcp_general-time-req_ru00045"
+		    <iso:rule id="cda-ch-smcp_general-time-req_ru00046"
                 context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
 			      <iso:assert role="error"
                      test="(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value) &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z')) &gt; 7"
@@ -2795,9 +2805,9 @@ History:
 	  <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00035">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-smcp_cda-id-oid_ru00046"
+		    <iso:rule id="cda-ch-smcp_cda-id-oid_ru00047"
                 context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
 			      <iso:assert role="error"
                      test="translate(@root, '0123456789.', '') = ''"
@@ -2825,9 +2835,9 @@ History:
 	  <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00036">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-smcp_cda-id_ru00047"
+		    <iso:rule id="cda-ch-smcp_cda-id_ru00048"
                 context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 			      <iso:assert role="error" test="false()" id="cda-ch-smcp_as00227">
 				vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
@@ -2838,9 +2848,9 @@ History:
 	  <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00037">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-smcp_general-id_ru00048" context="cda:id">
+		    <iso:rule id="cda-ch-smcp_general-id_ru00049" context="cda:id">
 			      <iso:assert role="error"
                      id="cda-ch-smcp_null-or-no-root-attribute_as00228"
                      test="./@nullFlavor or ./@root">
@@ -2859,9 +2869,9 @@ History:
 	<iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00038" name="NMSP Namespaces">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-smcp_cda-root_ru00049" context="/*">
+		    <iso:rule id="cda-ch-smcp_cda-root_ru00050" context="/*">
 			      <iso:assert role="error"
                      test="self::cda:ClinicalDocument"
                      id="cda-ch-smcp_as00229">
@@ -2878,10 +2888,10 @@ History:
 	<iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00039" name="PERS Persons">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 		    <!-- abstract rules -->
-		<iso:rule id="cda-ch-smcp_nameTest_ru00050" abstract="true">
+		<iso:rule id="cda-ch-smcp_nameTest_ru00051" abstract="true">
 			      <iso:assert role="error" test="cda:name" id="cda-ch-smcp_as00230">
 			vhitg-ruleset.ent: A Person (<name xmlns=""/>) must have a name
 		</iso:assert>
@@ -2891,10 +2901,10 @@ History:
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00040">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- rules in context -->
-	<iso:rule context="cda:patient" id="cda-ch-smcp_ru00051">
+	<iso:rule context="cda:patient" id="cda-ch-smcp_ru00052">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2902,9 +2912,9 @@ History:
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00041">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:assignedPerson" id="cda-ch-smcp_ru00052">
+	     <iso:rule context="cda:assignedPerson" id="cda-ch-smcp_ru00053">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2912,10 +2922,10 @@ History:
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00042">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
-                id="cda-ch-smcp_ru00053">
+                id="cda-ch-smcp_ru00054">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2932,7 +2942,7 @@ Name is already handled in person pattern
                 name="HCPC Healthcare professionals">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- abstract rules -->
 	<!--
@@ -2941,7 +2951,7 @@ Name is already handled in person pattern
 	addres or the attribute 'nullFlavor' must be set to 'UNK'. </iso:assert>
 	</iso:rule>
 	-->
-	<iso:rule id="cda-ch-smcp_addresTestPersonOrRole_ru00054" abstract="true">
+	<iso:rule id="cda-ch-smcp_addresTestPersonOrRole_ru00055" abstract="true">
 		       <iso:assert role="error"
                      test="../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'"
                      id="cda-ch-smcp_as00231">
@@ -2953,7 +2963,7 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00044">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -2963,7 +2973,7 @@ Name is already handled in person pattern
 	</iso:rule>
 	-->
 	<!-- rules in context -->
-	<iso:rule context="cda:assignedPerson" id="cda-ch-smcp_ru00055">
+	<iso:rule context="cda:assignedPerson" id="cda-ch-smcp_ru00056">
 		       <extends xmlns="" rule="addresTestPerson"/>
 		       <extends xmlns="" rule="telecomTestPerson"/>
 	     </iso:rule>
@@ -2972,10 +2982,10 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00045">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
-                id="cda-ch-smcp_ru00056">
+                id="cda-ch-smcp_ru00057">
 		       <extends xmlns="" rule="addresTestPersonOrRole"/>
 		       <extends xmlns="" rule="telecomTestPerson"/>
 	     </iso:rule>
@@ -2990,9 +3000,9 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00046" name="ORGC Organization">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-smcp_nameTestOrg_ru00057" abstract="true">
+	     <iso:rule id="cda-ch-smcp_nameTestOrg_ru00058" abstract="true">
 		       <iso:assert role="error" test="cda:name" id="cda-ch-smcp_as00232">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a name.
 	</iso:assert>
@@ -3002,9 +3012,9 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00047">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-smcp_addresTestOrg_ru00058" abstract="true">
+	     <iso:rule id="cda-ch-smcp_addresTestOrg_ru00059" abstract="true">
 		       <iso:assert role="error" test="cda:addr/*" id="cda-ch-smcp_as00233">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a non-empty addres.
 	</iso:assert>
@@ -3014,7 +3024,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00048">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -3025,7 +3035,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 	-->
 	<!-- rules in context -->
 	<iso:rule context="cda:representedOrganization | cda:representedCustodianOrganization | cda:scopingOrganization"
-                id="cda-ch-smcp_ru00059">
+                id="cda-ch-smcp_ru00060">
 		       <extends xmlns="" rule="nameTestOrg"/>
 		       <extends xmlns="" rule="addresTestOrg"/>
 		       <extends xmlns="" rule="telecomTestOrg"/>
@@ -3043,10 +3053,10 @@ Separatorzeichen nur Bindestrich –, Punkte . oder Klammern ( ) verwenden.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00049" name="TURS TINT TCHS Telecom">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
-	<iso:rule context="cda:telecom" id="cda-ch-smcp_ru00060">
+	<iso:rule context="cda:telecom" id="cda-ch-smcp_ru00061">
 		       <iso:assert role="error"
                      test="(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:' or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor"
                      id="cda-ch-smcp_as00234">
@@ -3103,9 +3113,9 @@ component               CDA Body 1..1 SCHEMA
                 name="HEAD General Header constraints">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-smcp_ru00061">
+	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-smcp_ru00062">
 
 
 		<!-- 21.01.2013 ts: auskommentiert, da z.B. IHE XD-LAB den realmCode erfordert
@@ -3146,10 +3156,10 @@ zugeben.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00051" name="TYID Document typeId">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
-	<iso:rule context="cda:ClinicalDocument/cda:typeId" id="cda-ch-smcp_ru00062">
+	<iso:rule context="cda:ClinicalDocument/cda:typeId" id="cda-ch-smcp_ru00063">
 		       <iso:assert role="error"
                      test="normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'"
                      id="cda-ch-smcp_as00239">
@@ -3163,10 +3173,10 @@ Regel IIRT: Das @root Attribut ist bei Instanzidentifikatoren verpflichtend anzu
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00052" name="IIRT Instance identifiers">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
-	<iso:rule context="cda:id" id="cda-ch-smcp_ru00063">
+	<iso:rule context="cda:id" id="cda-ch-smcp_ru00064">
 		       <iso:assert role="error" test="@root or @nullFlavor" id="cda-ch-smcp_as00240">
 			vhitg-ruleset.ent: Instance Identifiers must at least contain a <emph xmlns="">root</emph> attribute.
 		</iso:assert>
@@ -3183,10 +3193,10 @@ verwenden.
                 name="CDCD CDLN ClinicalDocument Code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
-	<iso:rule context="cda:ClinicalDocument/cda:code" id="cda-ch-smcp_ru00064">
+	<iso:rule context="cda:ClinicalDocument/cda:code" id="cda-ch-smcp_ru00065">
 		       <iso:assert role="error" test="@code and @codeSystem" id="cda-ch-smcp_as00241">
 			vhitg-ruleset.ent: The code element of the ClinicalDocument must have a <emph xmlns="">code</emph> and <emph xmlns="">codeSystem</emph>.
 		</iso:assert>
@@ -3207,11 +3217,11 @@ Datum mit Jahr, Monat und Tag angegeben sein.
                 name="CDET ClinicalDocument effectiveTime">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:effectiveTime"
-                id="cda-ch-smcp_ru00065">
+                id="cda-ch-smcp_ru00066">
 		       <iso:assert role="error"
                      test="string-length(@value)&gt;7"
                      id="cda-ch-smcp_as00243">
@@ -3229,9 +3239,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
                 name="CDLC ClinicalDocument languageCode">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-smcp_cda-languageCode_ru00066"
+	     <iso:rule id="cda-ch-smcp_cda-languageCode_ru00067"
                 context="/cda:ClinicalDocument">
 		       <iso:assert role="error" test="cda:languageCode" id="cda-ch-smcp_as00244">
 			vhitg-ruleset.ent: The <emph xmlns="">languageCode</emph> element must be present.
@@ -3242,9 +3252,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
    <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00056">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-smcp_cda-languageCode-format_ru00067"
+	     <iso:rule id="cda-ch-smcp_cda-languageCode-format_ru00068"
                 context="/cda:ClinicalDocument/cda:languageCode">
 		       <iso:assert role="error"
                      test="(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code) = 2"
@@ -3271,9 +3281,9 @@ nem Patienten (entity) anzugeben.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00057" name="PATR Patient Role">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:recordTarget" id="cda-ch-smcp_ru00068">
+	     <iso:rule context="cda:recordTarget" id="cda-ch-smcp_ru00069">
 		       <iso:assert role="error"
                      test="count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1"
                      id="cda-ch-smcp_as00248">
@@ -3289,10 +3299,10 @@ country beim Geburtsort ist verpflichtend.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00058" name="BRCC Birthplace">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:patient/cda:birthplace/cda:place/cda:addr"
-                id="cda-ch-smcp_ru00069">
+                id="cda-ch-smcp_ru00070">
 		       <iso:assert role="error"
                      test="cda:city or cda:country"
                      id="cda-ch-smcp_as00249">
@@ -3325,9 +3335,9 @@ addr, muss bei einer beteiligten Person vorliegen.
                 name="PTNO PTEC PTPH PTPR PTTL Participants">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:participant" id="cda-ch-smcp_ru00070">
+	     <iso:rule context="cda:participant" id="cda-ch-smcp_ru00071">
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK' and cda:associatedentity/cda:associatedPerson)"
                      id="cda-ch-smcp_as00250">
@@ -3376,9 +3386,9 @@ In XML Schema
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00060" name="RELD Relating documents">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-smcp_ru00071">
+	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-smcp_ru00072">
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument[@typeCode='APND'])&lt;2"
                      id="cda-ch-smcp_as00254">
@@ -3408,9 +3418,9 @@ Regel BDSC: Ein Clinical Document muss mindestens ein „section“-Element enth
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00061" name="BDSC Section">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:structuredBody" id="cda-ch-smcp_ru00072">
+	     <iso:rule context="cda:structuredBody" id="cda-ch-smcp_ru00073">
 		       <iso:assert role="error"
                      test="count(/cda:component/cda:section)&lt;1"
                      id="cda-ch-smcp_as00258">
@@ -3425,10 +3435,10 @@ Regel SCTX: Eine Sektion muss genau ein „Text“-Element enthalten.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00062" name="SCTX Section Text">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structeredbody/cda:component/cda:section"
-                id="cda-ch-smcp_ru00073">
+                id="cda-ch-smcp_ru00074">
 		       <iso:assert role="error"
                      test="count(cda:text)=1 and string-length(normalize-space(cda:text))=0"
                      id="cda-ch-smcp_as00259">
@@ -3463,9 +3473,9 @@ zu benutzen, der alternative Code steht dann in der <translation>.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00063" name="SCLN Section code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:section/cda:code" id="cda-ch-smcp_ru00074">
+	     <iso:rule context="cda:section/cda:code" id="cda-ch-smcp_ru00075">
 		       <iso:assert role="error"
                      test="@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0 and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)"
                      id="cda-ch-smcp_as00260">
@@ -3481,9 +3491,9 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
                 name="OMVL observationMedia Class">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:observationMedia" id="cda-ch-smcp_ru00075">
+	     <iso:rule context="cda:observationMedia" id="cda-ch-smcp_ru00076">
 		       <iso:assert role="error"
                      test="not(cda:value/@xsi:type) or cda:value/@xsi:type='ED'"
                      id="cda-ch-smcp_as00261">
@@ -3511,9 +3521,9 @@ Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen 
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00065" name="DGCD DGCN Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:entry/cda:observation/cda:value" id="cda-ch-smcp_ru00076">
+	     <iso:rule context="cda:entry/cda:observation/cda:value" id="cda-ch-smcp_ru00077">
 		       <iso:assert role="error"
                      test="@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')"
                      id="cda-ch-smcp_as00262">
@@ -3529,10 +3539,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
 <iso:pattern id="cda-ch-smcp_vhitg-ruleset_pa00066" name="DGQL Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.644+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.422+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value/cda:qualifier"
-                id="cda-ch-smcp_ru00077">
+                id="cda-ch-smcp_ru00078">
 		       <iso:assert role="error"
                      test="(./cda:name) and (./cda:value)"
                      id="cda-ch-smcp_as00263">
@@ -3560,10 +3570,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.2.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Language Communication</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.8+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.047+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.2.1&#34;]"
-                id="cda-ch-smcp_ru00078">
+                id="cda-ch-smcp_ru00079">
       <!-- Verify that the template id is used on the appropriate type of object
    -->
       <iso:assert role="error"
@@ -3590,7 +3600,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
             <xhtml:p lang="en">In IHE PCC Language Communication (1.3.6.1.4.1.19376.1.5.3.1.2.1), the preferenceInd shall be valued "true" if this language is the patient's preferred language for communication, or "false" if this is not the patient's preferred language.</xhtml:p>
          </iso:assert>
       </iso:rule>
-      <iso:rule context="/" id="cda-ch-smcp_ru00079">
+      <iso:rule context="/" id="cda-ch-smcp_ru00080">
          <iso:assert role="error"
                      test="count(//cda:recordTarget//cda:languageCommunication) &lt; 2 or count(//cda:recordTarget//cda:languageCommunication) = count(//cda:recordTarget//cda:languageCommunication/cda:preferenceInd)"
                      id="cda-ch-smcp_as00271">
@@ -3611,10 +3621,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.2.4.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Patient Contacts</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.847+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.063+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.2.4&#34;]"
-                id="cda-ch-smcp_ru00080">
+                id="cda-ch-smcp_ru00081">
          <iso:assert role="error"
                      test="not(../cda:participant) or ../cda:participant[@typeCode=&#34;IND&#34;]"
                      id="cda-ch-smcp_as00273">
@@ -3636,10 +3646,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.2.4-warnings_pa00069">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.2.4.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.847+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.063+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.2.4&#34;]"
-                id="cda-ch-smcp_ru00081">
+                id="cda-ch-smcp_ru00082">
          <iso:assert role="warning"
                      test="not(../cda:participant) or cda:associatedEntity/cda:code"
                      id="cda-ch-smcp_as00276">
@@ -3657,10 +3667,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Transport Mode</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.377+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.305+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2&#34;]"
-                id="cda-ch-smcp_ru00082">
+                id="cda-ch-smcp_ru00083">
          <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00277">
             <xhtml:p lang="en">In IHE PCC Transport Mode (1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2), the Transport Mode can only be used on sections.</xhtml:p>
          </iso:assert>
@@ -3683,7 +3693,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2-extensions_pa00071">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2']"
-                id="cda-ch-smcp_ru00083">
+                id="cda-ch-smcp_ru00084">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Transport Mode'">
             <xhtml:p lang="en">The English title must read 'Transport Mode'</xhtml:p>
@@ -3727,10 +3737,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Transport</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.393+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.321+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1&#34;]"
-                id="cda-ch-smcp_ru00084">
+                id="cda-ch-smcp_ru00085">
       <!-- moodCode of Transport act shall be INT or EVN 
    <assert test='@moodCode="INT" or @moodCode="EVN"'> 
      Error: The moodCode of Transport act shall be INT or EVN 
@@ -3763,10 +3773,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1-warnings_pa00073">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.393+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.321+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1&#34;]"
-                id="cda-ch-smcp_ru00085">
+                id="cda-ch-smcp_ru00086">
          <iso:assert role="warning"
                      test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.102.4.2&#34;]"
                      id="cda-ch-smcp_as00286">
@@ -3778,14 +3788,14 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1-notes_pa00074">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.393+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.321+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1&#34;]"
-                id="cda-ch-smcp_ru00086"/>
+                id="cda-ch-smcp_ru00087"/>
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1-extensions_pa00075">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1']"
-                id="cda-ch-smcp_ru00087">
+                id="cda-ch-smcp_ru00088">
 		       <iso:assert role="error"
                      test="(cda:code[@codeSystem='2.16.840.1.113883.6.102.4.2' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.102.4.2&#34; and @codeSystemName='ModeOfTransport']/code/@value])"
                      id="cda-ch-smcp_as00287">
@@ -3806,10 +3816,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">Template_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.502+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.368+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1&#34;]"
-                id="cda-ch-smcp_ru00088">
+                id="cda-ch-smcp_ru00089">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00289">
             <xhtml:p lang="en">The Coded Functional Status Assessment can only be used on sections. See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1</xhtml:p>
@@ -3848,10 +3858,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1-notes_pa00077">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.502+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.368+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1&#34;]"
-                id="cda-ch-smcp_ru00089">
+                id="cda-ch-smcp_ru00090">
       <!-- Note any missing optional elements -->
       <iso:assert role="information"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.3&#34;]"
@@ -3880,10 +3890,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">Template_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.518+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.368+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2&#34;]"
-                id="cda-ch-smcp_ru00090">
+                id="cda-ch-smcp_ru00091">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00298">
             <xhtml:p lang="en">The Pain Scale Assessment can only be used on sections.</xhtml:p>
@@ -3915,10 +3925,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">Template_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.565+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.384+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5&#34;]"
-                id="cda-ch-smcp_ru00091">
+                id="cda-ch-smcp_ru00092">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00302">
             <xhtml:p lang="en">The Physical Function templateId can only be used on sections.</xhtml:p>
@@ -3945,10 +3955,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5-warnings_pa00080">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.565+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.384+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5&#34;]"
-                id="cda-ch-smcp_ru00092">
+                id="cda-ch-smcp_ru00093">
          <iso:assert role="warning"
                      test="descendant::cda:templateId[@root=(&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6&#34;, &#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.7&#34;)]"
                      id="cda-ch-smcp_as00306">
@@ -3960,14 +3970,14 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5-notes_pa00081">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.565+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.384+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5&#34;]"
-                id="cda-ch-smcp_ru00093"/>
+                id="cda-ch-smcp_ru00094"/>
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5-extensions_pa00082">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5']"
-                id="cda-ch-smcp_ru00094">
+                id="cda-ch-smcp_ru00095">
 		       <iso:assert role="error"
                      test="cda:entry/cda:observation/cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6']"
                      id="cda-ch-smcp_as00307">
@@ -3983,10 +3993,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">Template_1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.658+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.453+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6&#34;]"
-                id="cda-ch-smcp_ru00095">
+                id="cda-ch-smcp_ru00096">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error" test="self::cda:observation" id="cda-ch-smcp_as00308">
             <xhtml:p lang="en">An FSA Survey Observation shall be a CDA Observation element.</xhtml:p>
@@ -4030,7 +4040,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
       </iso:rule>
       <!-- New contexts to evaluate code values -->
     <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.755&#34;]"
-                id="cda-ch-smcp_ru00096">
+                id="cda-ch-smcp_ru00097">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34; or @code=&#34;3&#34; or @code=&#34;4&#34; or @code=&#34;8&#34;]"
                      id="cda-ch-smcp_as00317">
@@ -4038,7 +4048,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.768&#34;]"
-                id="cda-ch-smcp_ru00097">
+                id="cda-ch-smcp_ru00098">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34; or @code=&#34;8&#34;]"
                      id="cda-ch-smcp_as00318">
@@ -4046,7 +4056,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.860&#34;]"
-                id="cda-ch-smcp_ru00098">
+                id="cda-ch-smcp_ru00099">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34; or @code=&#34;3&#34; or @code=&#34;4&#34; or @code=&#34;8&#34;]"
                      id="cda-ch-smcp_as00319">
@@ -4054,7 +4064,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.876&#34;]"
-                id="cda-ch-smcp_ru00099">
+                id="cda-ch-smcp_ru00100">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34; or @code=&#34;3&#34;]"
                      id="cda-ch-smcp_as00320">
@@ -4062,7 +4072,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.889&#34;]"
-                id="cda-ch-smcp_ru00100">
+                id="cda-ch-smcp_ru00101">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34;]"
                      id="cda-ch-smcp_as00321">
@@ -4070,7 +4080,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.898&#34;]"
-                id="cda-ch-smcp_ru00101">
+                id="cda-ch-smcp_ru00102">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34;]"
                      id="cda-ch-smcp_as00322">
@@ -4078,7 +4088,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.117&#34;]"
-                id="cda-ch-smcp_ru00102">
+                id="cda-ch-smcp_ru00103">
          <iso:assert role="error"
                      test="cda:value[not(@code) or @code=&#34;0&#34; or @code=&#34;1&#34;]"
                      id="cda-ch-smcp_as00323">
@@ -4086,7 +4096,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          </iso:assert>
       </iso:rule>
       <iso:rule context="*[cda:value/@codeSystem=&#34;1.3.6.1.4.1.19376.6.257.464&#34;]"
-                id="cda-ch-smcp_ru00103">
+                id="cda-ch-smcp_ru00104">
          <iso:assert role="error"
                      test="cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34;]"
                      id="cda-ch-smcp_as00324">
@@ -4095,7 +4105,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
       </iso:rule>
       <!-- New context for checking values in certain FSA Survey Observations -->
     <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6&#34; and ancestor::cda:section[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5&#34; and cda:code/@code=&#34;46006-3&#34;] and ancestor::cda:organizer[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.7&#34;]]"
-                id="cda-ch-smcp_ru00104">
+                id="cda-ch-smcp_ru00105">
          <iso:assert role="error"
                      test="not(ancestor::cda:organizer/cda:code/@code=&#34;46007-1&#34;) or not(self::cda:observation/cda:code/@code=&#34;45888-1&#34;) or cda:value[@code=&#34;0&#34; or @code=&#34;1&#34; or @code=&#34;2&#34; or @code=&#34;3&#34; or @code=&#34;4&#34; or @code=&#34;8&#34;]"
                      id="cda-ch-smcp_as00325">
@@ -4367,19 +4377,19 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6-warnings_pa00084">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.658+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.453+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6&#34;]"
-                id="cda-ch-smcp_ru00105"/>
+                id="cda-ch-smcp_ru00106"/>
   </iso:pattern>
   <!--p-1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6-notes-->
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6-notes_pa00085">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.658+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.453+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6&#34;]"
-                id="cda-ch-smcp_ru00106">
+                id="cda-ch-smcp_ru00107">
          <iso:assert role="information"
                      test="cda:interpretationCode"
                      id="cda-ch-smcp_as00378">
@@ -4389,7 +4399,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6-extensions_pa00086">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6']"
-                id="cda-ch-smcp_ru00107">
+                id="cda-ch-smcp_ru00108">
 		       <iso:assert role="error"
                      test="cda:value[((@xsi:type='CE' and @nullFlavor) or (@xsi:type='CO' and @codeSystem=&#34;2.16.840.1.113883.6.257.755&#34; and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.257.755&#34; and @codeSystemName='ActivityofDailyLivingScale']/code/@value))]"
                      id="cda-ch-smcp_as00379">
@@ -4427,10 +4437,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Assessments Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.83+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.516+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4&#34;]"
-                id="cda-ch-smcp_ru00108">
+                id="cda-ch-smcp_ru00109">
       <!-- Verify that the template id is used on the appropriate type of
     object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00384">
@@ -4453,10 +4463,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4-notes_pa00088">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:45.83+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.516+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4&#34;]"
-                id="cda-ch-smcp_ru00109">
+                id="cda-ch-smcp_ru00110">
          <iso:assert role="information"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.1.13.3.4&#34;]"
                      id="cda-ch-smcp_as00387">
@@ -4466,7 +4476,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4-extensions_pa00089">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4']"
-                id="cda-ch-smcp_ru00110">
+                id="cda-ch-smcp_ru00111">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Assessments'">
             <xhtml:p lang="en">The English title must read 'Assessments'</xhtml:p>
@@ -4510,10 +4520,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Provider Orders</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.081+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.656+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1&#34;]"
-                id="cda-ch-smcp_ru00111">
+                id="cda-ch-smcp_ru00112">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00389">
@@ -4539,10 +4549,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1-warnings_pa00091">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.081+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.656+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1&#34;]"
-                id="cda-ch-smcp_ru00112">
+                id="cda-ch-smcp_ru00113">
          <iso:assert role="warning"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;]"
                      id="cda-ch-smcp_as00393">
@@ -4559,10 +4569,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1-notes_pa00092">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.081+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:09.656+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1&#34;]"
-                id="cda-ch-smcp_ru00113">
+                id="cda-ch-smcp_ru00114">
          <iso:assert role="information"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.14&#34;]"
                      id="cda-ch-smcp_as00395">
@@ -4577,7 +4587,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1-extensions_pa00093">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1']"
-                id="cda-ch-smcp_ru00114">
+                id="cda-ch-smcp_ru00115">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Provider orders'">
             <xhtml:p lang="en">The English title must read 'Provider orders'</xhtml:p>
@@ -4621,10 +4631,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.6.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Active Problems Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.16+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.172+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.6&#34;]"
-                id="cda-ch-smcp_ru00115">
+                id="cda-ch-smcp_ru00116">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00398">
@@ -4657,7 +4667,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.6-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.6-extensions_pa00095">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.6']"
-                id="cda-ch-smcp_ru00116">
+                id="cda-ch-smcp_ru00117">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Active Problems'">
             <xhtml:p lang="en">The English title must read 'Active Problems'</xhtml:p>
@@ -4696,10 +4706,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.13.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergies and Other Adverse Reactions Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.894+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.078+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.13&#34;]"
-                id="cda-ch-smcp_ru00117">
+                id="cda-ch-smcp_ru00118">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00403">
@@ -4732,7 +4742,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.13-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.13-extensions_pa00097">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.13']"
-                id="cda-ch-smcp_ru00118">
+                id="cda-ch-smcp_ru00119">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Allergies and Other Adverse Reactions'">
             <xhtml:p lang="en">The English title must read 'Allergies and Other Adverse Reactions'</xhtml:p>
@@ -4771,10 +4781,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.16.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Social History Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.925+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.094+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.16&#34;]"
-                id="cda-ch-smcp_ru00119">
+                id="cda-ch-smcp_ru00120">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00408">
@@ -4807,10 +4817,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.16.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Coded Social History Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.925+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.094+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.16.1&#34;]"
-                id="cda-ch-smcp_ru00120">
+                id="cda-ch-smcp_ru00121">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00412">
@@ -4842,7 +4852,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.16.1-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.16.1-extensions_pa00100">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.16.1']"
-                id="cda-ch-smcp_ru00121">
+                id="cda-ch-smcp_ru00122">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Social History'">
             <xhtml:p lang="en">The English title must read 'Social History'</xhtml:p>
@@ -4881,10 +4891,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.17.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Functional Status Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.941+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.094+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.17&#34;]"
-                id="cda-ch-smcp_ru00122">
+                id="cda-ch-smcp_ru00123">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00417">
@@ -4911,7 +4921,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.17-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.17-extensions_pa00102">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.17']"
-                id="cda-ch-smcp_ru00123">
+                id="cda-ch-smcp_ru00124">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Functional Status Assessment'">
             <xhtml:p lang="en">The English title must read 'Functional Status Assessment'</xhtml:p>
@@ -4955,10 +4965,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.18.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Review of Systems Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.956+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.094+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.18&#34;]"
-                id="cda-ch-smcp_ru00124">
+                id="cda-ch-smcp_ru00125">
       <!-- Verify that the template id is used on the appropriate type of
     object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00422">
@@ -4979,7 +4989,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.18-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.18-extensions_pa00104">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.18']"
-                id="cda-ch-smcp_ru00125">
+                id="cda-ch-smcp_ru00126">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Pertinent Review of Systems'">
             <xhtml:p lang="en">The English title must read 'Pertinent Review of Systems'</xhtml:p>
@@ -5023,10 +5033,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.21.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Medications Administered Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:46.988+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.11+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.21&#34;]"
-                id="cda-ch-smcp_ru00126">
+                id="cda-ch-smcp_ru00127">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00426">
@@ -5053,7 +5063,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.21-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.21-extensions_pa00106">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.21']"
-                id="cda-ch-smcp_ru00127">
+                id="cda-ch-smcp_ru00128">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Medications administered'">
             <xhtml:p lang="en">The English title must read 'Medications administered'</xhtml:p>
@@ -5092,10 +5102,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.27.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Results Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.05+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.125+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.27&#34;]"
-                id="cda-ch-smcp_ru00128">
+                id="cda-ch-smcp_ru00129">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00430">
@@ -5122,10 +5132,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.28.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Coded Results Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.05+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.125+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.28&#34;]"
-                id="cda-ch-smcp_ru00129">
+                id="cda-ch-smcp_ru00130">
       <!-- Verify that the template id is used on the appropriate type of
     object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00433">
@@ -5160,10 +5170,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.28-warnings_pa00109">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.28.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.05+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.125+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.28&#34;]"
-                id="cda-ch-smcp_ru00130">
+                id="cda-ch-smcp_ru00131">
       <!-- Alert on any missing required if known elements -->
       <iso:assert role="warning"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.4&#34;]"
@@ -5176,10 +5186,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.28-notes_pa00110">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.28.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.05+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.125+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.28&#34;]"
-                id="cda-ch-smcp_ru00131">
+                id="cda-ch-smcp_ru00132">
       <!-- Note any missing optional elements -->
       <iso:assert role="information"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
@@ -5190,7 +5200,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.28-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.28-extensions_pa00111">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.28']"
-                id="cda-ch-smcp_ru00132">
+                id="cda-ch-smcp_ru00133">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Results'">
             <xhtml:p lang="en">The English title must read 'Results'</xhtml:p>
@@ -5239,10 +5249,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.29.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Hospital Studies Summary</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.066+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.125+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.29&#34;]"
-                id="cda-ch-smcp_ru00133">
+                id="cda-ch-smcp_ru00134">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00442">
@@ -5263,7 +5273,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.29-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.29-extensions_pa00113">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.29']"
-                id="cda-ch-smcp_ru00134">
+                id="cda-ch-smcp_ru00135">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Hospital Studies Summary'">
             <xhtml:p lang="en">The English title must read 'Hospital Studies Summary'</xhtml:p>
@@ -5302,10 +5312,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.31.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Care Plan Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.097+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.141+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.31&#34;]"
-                id="cda-ch-smcp_ru00135">
+                id="cda-ch-smcp_ru00136">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00445">
@@ -5334,10 +5344,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.31-notes_pa00115">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.31.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.097+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.141+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.31']"
-                id="cda-ch-smcp_ru00136">
+                id="cda-ch-smcp_ru00137">
       <!--
 
 Note 2009/10/28: These optional entries are listed on the wiki version of the PCC templates,
@@ -5364,7 +5374,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.31-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.31-extensions_pa00116">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.31']"
-                id="cda-ch-smcp_ru00137">
+                id="cda-ch-smcp_ru00138">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Care plan'">
             <xhtml:p lang="en">The English title must read 'Care plan'</xhtml:p>
@@ -5397,7 +5407,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
    </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.31-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.31-extensions_pa00117">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.31']"
-                id="cda-ch-smcp_ru00138">
+                id="cda-ch-smcp_ru00139">
 		       <iso:assert role="error"
                      test="cda:entry/cda:procedure/cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.19']"
                      id="cda-ch-smcp_as00449">
@@ -5423,10 +5433,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.35.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Coded Advance Directives Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.128+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.156+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.35&#34;]"
-                id="cda-ch-smcp_ru00139">
+                id="cda-ch-smcp_ru00140">
       <!-- Verify that the template id is used on the appropriate type of object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00452">
             <xhtml:p lang="en">In IHE PCC Coded Advance Directives Section (1.3.6.1.4.1.19376.1.5.3.1.3.35), the Coded Advance Directives can only be used on sections.</xhtml:p>
@@ -5454,10 +5464,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.35-warnings_pa00119">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.35.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.128+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.156+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.35&#34;]"
-                id="cda-ch-smcp_ru00140">
+                id="cda-ch-smcp_ru00141">
       <!-- Alert on any missing required if known elements -->
       <iso:assert role="warning"
                      test=".//cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.7&#34;]"
@@ -5468,7 +5478,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.3.35-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.3.35-extensions_pa00120">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.3.35']"
-                id="cda-ch-smcp_ru00141">
+                id="cda-ch-smcp_ru00142">
 		       <report role="error"
                  test="$languageCode = 'en' and cda:title/text() != 'Advance Directives'">
             <xhtml:p lang="en">The English title must read 'Advance Directives'</xhtml:p>
@@ -5512,10 +5522,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.3.34.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Advance Directives Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.113+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.156+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.3.34&#34;]"
-                id="cda-ch-smcp_ru00142">
+                id="cda-ch-smcp_ru00143">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error" test="self::cda:section" id="cda-ch-smcp_as00458">
@@ -5548,10 +5558,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Severity</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.222+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.188+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.1&#34;]"
-                id="cda-ch-smcp_ru00143">
+                id="cda-ch-smcp_ru00144">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.55&#34;]"
                      id="cda-ch-smcp_as00462">
@@ -5585,10 +5595,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Comments</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.394+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.328+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.2&#34;]"
-                id="cda-ch-smcp_ru00144">
+                id="cda-ch-smcp_ru00145">
          <iso:assert role="error"
                      test="cda:templateId[@root=&#34;2.16.840.1.113883.10.20.1.40&#34;]"
                      id="cda-ch-smcp_as00467">
@@ -5616,7 +5626,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.2-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.2-extensions_pa00124">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.2']"
-                id="cda-ch-smcp_ru00145">
+                id="cda-ch-smcp_ru00146">
          <iso:assert role="error"
                      test="cda:code[@code='48767-8' and @codeSystem='2.16.840.1.113883.6.1' and @codeSystemName='LOINC' and @displayName='Annotation comment']"
                      id="cda-ch-smcp_as00472">
@@ -5633,10 +5643,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.4.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC External References</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.441+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.4&#34;]"
-                id="cda-ch-smcp_ru00146">
+                id="cda-ch-smcp_ru00147">
          <iso:assert role="error"
                      test="self::cda:act[@classCode=&#34;ACT&#34; and @moodCode=&#34;EVN&#34;]"
                      id="cda-ch-smcp_as00473">
@@ -5651,10 +5661,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.4-warnings_pa00126">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.4.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.441+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.4&#34;]"
-                id="cda-ch-smcp_ru00147">
+                id="cda-ch-smcp_ru00148">
          <iso:assert role="warning"
                      test="cda:code[@nullFlavor]"
                      id="cda-ch-smcp_as00475">
@@ -5680,10 +5690,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Problem Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.472+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
-                id="cda-ch-smcp_ru00148">
+                id="cda-ch-smcp_ru00149">
          <iso:assert role="error"
                      test="self::cda:observation[@classCode=&#34;OBS&#34; and @moodCode=&#34;EVN&#34;]"
                      id="cda-ch-smcp_as00478">
@@ -5707,7 +5717,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          </iso:assert>
          <iso:report role="error"
                      test="cda:effectiveTime/cda:width or cda:effectiveTime/cda:center"
-                     id="cda-ch-smcp_re00013">
+                     id="cda-ch-smcp_re00014">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), while CDA allows for multiple mechanisms to record this time interval (e.g. by low and high values, low and width, high and width, or center point and width), we are constraining Medical summaries (Problem Entry) to use only the low/high form.</xhtml:p>
          </iso:report>
          <iso:assert role="error"
@@ -5786,13 +5796,13 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.5-warnings_pa00128">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.472+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5&#34;]"
-                id="cda-ch-smcp_ru00149">
+                id="cda-ch-smcp_ru00150">
          <iso:report role="warning"
                      test="./@negationInd=&#34;true&#34;"
-                     id="cda-ch-smcp_re00014">
+                     id="cda-ch-smcp_re00015">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), the value of negationInd should not normally be set to true. Instead, to record that there is "no prior history of chicken pox", one would use a coded value indicated exactly that. However, it is not always possible to record problems in this manner, especially if using a controlled vocabulary that does not supply pre-coordinated negations , or which do not allow the negation to be recorded with post-coordinated coded terminology.</xhtml:p>
          </iso:report>
          <iso:assert role="warning" test="cda:code" id="cda-ch-smcp_as00497">
@@ -5810,10 +5820,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          </iso:assert>
          <iso:report role="warning"
                      test="cda:confidentialityCode"
-                     id="cda-ch-smcp_re00015">
+                     id="cda-ch-smcp_re00016">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), while CDA allows for a condition to specify a &lt;confidentialtyCode&gt; for an observation, in practice there is no way to enforce consistent use of this information across institutions to secure confidential patient information. Therefore, it is recommended that this element not be sent in Problem Entry. If there are confidentiality issues that need to be addressed other mechanisms should be negotiated within the affinity domain.</xhtml:p>
          </iso:report>
-         <iso:report role="warning" test="cda:uncertaintyCode" id="cda-ch-smcp_re00016">
+         <iso:report role="warning" test="cda:uncertaintyCode" id="cda-ch-smcp_re00017">
             <xhtml:p lang="en">In IHE PCC Problem Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5), CDA allows a condition to be specified with an &lt;uncertaintyCode&gt;. Such conditions can also be recorded as a possible condition (e.g. possible ear infection). There is no present consensus on the best use of this element; therefore, it is recommended that this element not be sent in Problem Entry.</xhtml:p>
          </iso:report>
          <iso:assert role="warning"
@@ -5830,7 +5840,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.5-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.5-extensions_pa00129">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5']"
-                id="cda-ch-smcp_ru00150">
+                id="cda-ch-smcp_ru00151">
 		       <iso:assert role="error"
                      test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.6']) or (cda:code[@code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='ProblemEntryCode']/code/@value]) or (cda:code[@codeSystem='2.16.840.1.113883.6.96' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.14.11-Problem']/code/@value])"
                      id="cda-ch-smcp_as00502">
@@ -5905,10 +5915,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.1.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Concern Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.456+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
-                id="cda-ch-smcp_ru00151">
+                id="cda-ch-smcp_ru00152">
          <iso:assert role="error" test="../cda:act" id="cda-ch-smcp_as00514">
             <xhtml:p lang="en">In IHE PCC Concern Entry (1.3.6.1.4.1.19376.1.5.3.1.4.5.1), the Concern Entry can only be used on acts.</xhtml:p>
          </iso:assert>
@@ -5960,10 +5970,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Problem Concern Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.456+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.2&#34;]"
-                id="cda-ch-smcp_ru00152">
+                id="cda-ch-smcp_ru00153">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
                      id="cda-ch-smcp_as00523">
@@ -5978,7 +5988,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.5.2-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.5.2-extensions_pa00132">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.5.2']"
-                id="cda-ch-smcp_ru00153">
+                id="cda-ch-smcp_ru00154">
 		       <iso:assert role="error"
                      test="not(cda:code[@nullFlavor='NA']) or (descendant::cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.5'])"
                      id="cda-ch-smcp_as00525">
@@ -5994,10 +6004,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.5.3.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergy and Intolerance Concern</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.472+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.344+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.3&#34;]"
-                id="cda-ch-smcp_ru00154">
+                id="cda-ch-smcp_ru00155">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;2.16.840.1.113883.10.20.1.27&#34;] and cda:templateId[@root = &#34;1.3.6.1.4.1.19376.1.5.3.1.4.5.1&#34;]"
                      id="cda-ch-smcp_as00526">
@@ -6018,10 +6028,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.6.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Allergies and Intolerances</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.488+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.36+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]"
-                id="cda-ch-smcp_ru00155">
+                id="cda-ch-smcp_ru00156">
          <iso:assert role="error"
                      test="../cda:observation[@classCode=&#34;OBS&#34;]"
                      id="cda-ch-smcp_as00528">
@@ -6073,10 +6083,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.6-warnings_pa00135">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.6.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.488+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.36+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.6&#34;]"
-                id="cda-ch-smcp_ru00156">
+                id="cda-ch-smcp_ru00157">
          <iso:assert role="warning"
                      test="cda:code[@displayName and @codeSystemName]"
                      id="cda-ch-smcp_as00537">
@@ -6086,7 +6096,7 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.6-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.6-extensions_pa00136">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.6']"
-                id="cda-ch-smcp_ru00157">
+                id="cda-ch-smcp_ru00158">
 		       <iso:assert role="error"
                      test="cda:code[@codeSystem='2.16.840.1.113883.5.4' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.5.4&#34; and @codeSystemName='ObservationIntoleranceType']/code/@value] or cda:code[@codeSystem='2.16.840.1.113883.6.96' and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.14.11-Allergy']/code/@value]"
                      id="cda-ch-smcp_as00538">
@@ -6102,10 +6112,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Medications</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.535+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.36+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;]"
-                id="cda-ch-smcp_ru00158">
+                id="cda-ch-smcp_ru00159">
          <iso:assert role="error"
                      test="cda:templateId[@root = &#34;2.16.840.1.113883.10.20.1.24&#34;]"
                      id="cda-ch-smcp_as00539">
@@ -6140,10 +6150,10 @@ Note 2009/10/28: These optional entries are listed on the wiki version of the PC
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.7-warnings_pa00138">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.7.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.535+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.36+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.7&#34;]"
-                id="cda-ch-smcp_ru00159">
+                id="cda-ch-smcp_ru00160">
          <iso:assert role="warning"
                      test="(cda:effectiveTime[1][@xsi:type=&#34;IVL_TS&#34;]) and cda:effectiveTime[1]/cda:low[@value or @nullFlavor=&#34;UNK&#34;] and cda:effectiveTime[1]/cda:high[@value or @nullFlavor=&#34;UNK&#34;]"
                      id="cda-ch-smcp_as00545">
@@ -6190,7 +6200,7 @@ never actually stated in the document...
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.7-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.7-extensions_pa00139">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.7']"
-                id="cda-ch-smcp_ru00160">
+                id="cda-ch-smcp_ru00161">
 		       <iso:assert role="error"
                      test="not(cda:code[@codeSystem='2.16.840.1.113883.6.96']) or (cda:code[@code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Table-6.3.4.16.7-1']/code/@value])"
                      id="cda-ch-smcp_as00552">
@@ -6216,10 +6226,10 @@ never actually stated in the document...
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Simple Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.316+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.297+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                id="cda-ch-smcp_ru00161">
+                id="cda-ch-smcp_ru00162">
          <iso:assert role="error" test="cda:id" id="cda-ch-smcp_as00555">
             <xhtml:p lang="en">In IHE PCC Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13), each Simple Observation shall have an &lt;id&gt; identifier.</xhtml:p>
          </iso:assert>
@@ -6248,10 +6258,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13-warnings_pa00141">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.316+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.297+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                id="cda-ch-smcp_ru00162">
+                id="cda-ch-smcp_ru00163">
          <iso:assert role="warning"
                      test="cda:effectiveTime[@nullFlavor or (string-length(@value) &gt;= 8) or (cda:low[@nullFlavor or (string-length(@value) &gt;= 8)] and cda:high[@nullFlavor or (string-length(@value) &gt;= 8)])]"
                      id="cda-ch-smcp_as00561">
@@ -6263,10 +6273,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13-notes_pa00142">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.316+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.297+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;]"
-                id="cda-ch-smcp_ru00163">
+                id="cda-ch-smcp_ru00164">
          <iso:assert role="information"
                      test="(cda:templateId[@root=('1.3.6.1.4.1.19376.1.5.3.1.4.13.4', '1.3.6.1.4.1.19376.1.5.3.1.4.13.5', '1.3.6.1.4.1.19376.1.5.3.1.4.13.7')]) or (cda:interpretationCode)"
                      id="cda-ch-smcp_as00562">
@@ -6286,7 +6296,7 @@ never actually stated in the document...
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.13-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13-extensions_pa00143">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']"
-                id="cda-ch-smcp_ru00164">
+                id="cda-ch-smcp_ru00165">
 		       <iso:assert role="error"
                      test="(cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7']) or (cda:code[@codeSystem=$cda-ch-smcp-codeSystem[@root=&#34;2.16.756.5.30.1.112.3.1.201207.11&#34; and @codeSystemName='SMCP_Observations']/code/@codeSystem and @code=$cda-ch-smcp-codeSystem[@root=&#34;2.16.756.5.30.1.112.3.1.201207.11&#34; and @codeSystemName='SMCP_Observations']/code/@value])"
                      id="cda-ch-smcp_as00565">
@@ -6370,10 +6380,10 @@ never actually stated in the document...
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.4.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Social History Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.285+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.266+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.4&#34;]"
-                id="cda-ch-smcp_ru00165">
+                id="cda-ch-smcp_ru00166">
          <iso:assert role="error"
                      test="cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13&#34;"
                      id="cda-ch-smcp_as00576">
@@ -6390,10 +6400,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13.4-warnings_pa00145">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.4.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.285+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.266+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.4&#34;]"
-                id="cda-ch-smcp_ru00166">
+                id="cda-ch-smcp_ru00167">
          <iso:assert role="warning"
                      test="not(cda:value) or not(cda:code[@code=(&#34;229819007&#34;,&#34;256235009&#34;,&#34;160573003&#34;) and @codeSystem=&#34;2.16.840.1.113883.6.96&#34;]) or cda:value[@xsi:type = &#34;PQ&#34;]"
                      id="cda-ch-smcp_as00578">
@@ -6431,7 +6441,7 @@ never actually stated in the document...
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.13.4-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13.4-extensions_pa00146">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4']"
-                id="cda-ch-smcp_ru00167">
+                id="cda-ch-smcp_ru00168">
 		       <iso:assert role="error"
                      test="not(cda:code[@code=('67414-3','21847-9')]) or (cda:value[@xsi:type='ST'])"
                      id="cda-ch-smcp_as00585">
@@ -6518,10 +6528,10 @@ never actually stated in the document...
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.7.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Advance Directive Observation</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.316+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.297+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.7&#34;]"
-                id="cda-ch-smcp_ru00168">
+                id="cda-ch-smcp_ru00169">
          <iso:assert role="error"
                      test="not(cda:repeatNumber) and not(cda:interpretationCode) and not(cda:methodCode) and not(cda:targetSiteCode)"
                      id="cda-ch-smcp_as00600">
@@ -6538,10 +6548,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13.7-warnings_pa00148">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.13.7.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.316+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.297+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.13.7&#34;]"
-                id="cda-ch-smcp_ru00169">
+                id="cda-ch-smcp_ru00170">
          <iso:assert role="warning"
                      test="cda:code[@code=&#34;304251008&#34; or @code=&#34;52765003&#34; or @code=&#34;225204009&#34; or @code=&#34;89666000&#34; or @code=&#34;281789004&#34; or @code=&#34;78823007&#34; or @code=&#34;61420007&#34; or @code=&#34;116859006&#34; or @code=&#34;71388002&#34;]"
                      id="cda-ch-smcp_as00602">
@@ -6551,7 +6561,7 @@ never actually stated in the document...
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.13.7-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13.7-extensions_pa00149">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7']"
-                id="cda-ch-smcp_ru00170">
+                id="cda-ch-smcp_ru00171">
 		       <iso:assert role="error"
                      test="cda:code[@codeSystem=&#34;2.16.840.1.113883.6.96&#34; and @code=$cda-ch-codeSystem[@root=&#34;2.16.840.1.113883.6.96&#34; and @codeSystemName='IHE-PCC-TF2-Chapter-6.3.4.29.4']/code/@value]"
                      id="cda-ch-smcp_as00603">
@@ -6561,7 +6571,7 @@ never actually stated in the document...
    </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.13.7-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.13.7-extensions_pa00150">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7']"
-                id="cda-ch-smcp_ru00171">
+                id="cda-ch-smcp_ru00172">
 		       <iso:assert role="error"
                      test="(cda:code[@code='71388002']) or (cda:value[@xsi:type='BL' and @value=('true', 'false')])"
                      id="cda-ch-smcp_as00604">
@@ -6587,10 +6597,10 @@ never actually stated in the document...
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.14.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Encounters</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.331+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.313+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.14&#34;]"
-                id="cda-ch-smcp_ru00172">
+                id="cda-ch-smcp_ru00173">
          <iso:assert role="error" test="@classCode=&#34;ENC&#34;" id="cda-ch-smcp_as00607">
             <xhtml:p lang="en">In IHE PCC Encounters (1.3.6.1.4.1.19376.1.5.3.1.4.14), the classCode shall be ENC.</xhtml:p>
          </iso:assert>
@@ -6629,10 +6639,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.14-warnings_pa00152">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.14.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.331+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.313+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.14&#34;]"
-                id="cda-ch-smcp_ru00173">
+                id="cda-ch-smcp_ru00174">
          <iso:assert role="warning"
                      test="cda:code[@codeSystem=&#34;2.16.840.1.113883.5.4&#34;]"
                      id="cda-ch-smcp_as00615">
@@ -6664,10 +6674,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.14-notes_pa00153">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.14.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.331+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.313+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.14&#34;]"
-                id="cda-ch-smcp_ru00174">
+                id="cda-ch-smcp_ru00175">
          <iso:assert role="information"
                      test="./@moodCode=&#34;PRMS&#34; or ./@moodCode=&#34;ARQ&#34; or ./@moodCode=&#34;EVN&#34;"
                      id="cda-ch-smcp_as00620">
@@ -6675,12 +6685,12 @@ never actually stated in the document...
          </iso:assert>
          <iso:report role="information"
                      test="count(cda:id) &gt; 1"
-                     id="cda-ch-smcp_re00017">
+                     id="cda-ch-smcp_re00018">
             <xhtml:p lang="en">In IHE PCC Encounters (1.3.6.1.4.1.19376.1.5.3.1.4.14), more than one encounter identifier is present.</xhtml:p>
          </iso:report>
          <iso:report role="information"
                      test="@moodCode=&#34;ARQ&#34; and cda:effectiveTime"
-                     id="cda-ch-smcp_re00018">
+                     id="cda-ch-smcp_re00019">
             <xhtml:p lang="en">In IHE PCC Encounters (1.3.6.1.4.1.19376.1.5.3.1.4.14), in ARQ mood, the effectiveTime element is present.</xhtml:p>
          </iso:report>
          <iso:assert role="information"
@@ -6702,7 +6712,7 @@ never actually stated in the document...
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.14-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.14-extensions_pa00154">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.14']"
-                id="cda-ch-smcp_ru00175">
+                id="cda-ch-smcp_ru00176">
 		       <iso:assert role="error"
                      test="not(ancestor::cda:section/cda:templateId[@root='2.16.840.1.113883.10.20.1.10']) or @moodCode=('PRMS', 'ARQ')"
                      id="cda-ch-smcp_as00624">
@@ -6753,10 +6763,10 @@ never actually stated in the document...
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.19.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Procedure Entry</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.378+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.328+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.19&#34;]"
-                id="cda-ch-smcp_ru00176">
+                id="cda-ch-smcp_ru00177">
          <iso:assert role="error"
                      test="self::cda:procedure[@classCode=&#34;PROC&#34;]"
                      id="cda-ch-smcp_as00632">
@@ -6797,10 +6807,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.19-warnings_pa00156">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.19.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.378+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.328+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.19&#34;]"
-                id="cda-ch-smcp_ru00177">
+                id="cda-ch-smcp_ru00178">
          <iso:assert role="warning" test="cda:code[@code]" id="cda-ch-smcp_as00640">
             <xhtml:p lang="en">In IHE PCC Procedure Entry (1.3.6.1.4.1.19376.1.5.3.1.4.19), a Procedure Entry should contain a code describing the type of procedure.</xhtml:p>
          </iso:assert>
@@ -6813,10 +6823,10 @@ never actually stated in the document...
   <iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.19-notes_pa00157">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.4.19.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:52:47.378+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:12:10.328+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.4.19&#34;]"
-                id="cda-ch-smcp_ru00178">
+                id="cda-ch-smcp_ru00179">
          <iso:assert role="information"
                      test="./@moodCode = &#34;INT&#34; or ./@moodCode = &#34;EVN&#34;"
                      id="cda-ch-smcp_as00642">
@@ -6826,7 +6836,7 @@ never actually stated in the document...
   </iso:pattern>
    <!--1.3.6.1.4.1.19376.1.5.3.1.4.19-extensions--><iso:pattern id="cda-ch-smcp_1.3.6.1.4.1.19376.1.5.3.1.4.19-extensions_pa00158">
       <iso:rule context="*[cda:templateId/@root='1.3.6.1.4.1.19376.1.5.3.1.4.19']"
-                id="cda-ch-smcp_ru00179">
+                id="cda-ch-smcp_ru00180">
 		       <iso:assert role="information"
                      test="not(descendant::cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.4'])"
                      id="cda-ch-smcp_as00643">

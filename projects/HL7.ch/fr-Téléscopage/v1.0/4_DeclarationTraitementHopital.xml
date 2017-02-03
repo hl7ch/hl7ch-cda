@@ -10,6 +10,7 @@ History:
 2010.01.06: Tony Schaller, medshare GmbH (Umbenennen eMedidoc -> eMedidoc)
 2011.09.30: Tony Schaller, medshare GmbH (Korrekturen, welche durch die englische Übersetzung aufgefallen sind)
 2015.02.09: Tony Schaller, medshare GmbH (Div. Korrekturen zu neuen Schematronregeln)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ********************************************************
 -->
@@ -52,7 +53,7 @@ History:
 				<birthTime value="19480611"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7608888888888" root="1.3.88"/>
+				<id extension="7608888888888" root="2.51.1.3"/>
 				<name>Dr. med. Théodore Guéri, Cabinet Médical CH</name>
 			</providerOrganization>
 		</patientRole>
@@ -61,7 +62,7 @@ History:
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value="20100201"/>
 		<assignedAuthor>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<addr use="WP">
 				<streetName>Rue de l’hôpital</streetName>
 				<houseNumber>33</houseNumber>
@@ -93,7 +94,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
+				<id extension="7605555555555" root="2.51.1.3"/>
 				<name>Hôpital cantonal, Clinique de chirurgie, Service des urgences</name>
 				<addr use="WP">
 					<streetName>Rue de l’hôpital</streetName>

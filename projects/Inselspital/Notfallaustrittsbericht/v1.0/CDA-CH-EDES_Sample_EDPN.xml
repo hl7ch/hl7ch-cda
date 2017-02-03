@@ -9,6 +9,7 @@ History:
 2012.12.31: Tony Schaller, medshare GmbH (Abgabe an Kunden)
 2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
 2016.03.18: Tony Schaller, medshare GmbH (Adding header template for CDA-CH-EDES V1.0)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -54,7 +55,7 @@ History:
 				<birthTime value="19670520"/>
 			</patient>
 			<providerOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
+				<id extension="7605555555555" root="2.51.1.3"/>
 				<name>Inselspital, Universitäres Notfallzentrum</name>
 			</providerOrganization>
 		</patientRole>
@@ -63,7 +64,7 @@ History:
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value="20111110"/>
 		<assignedAuthor>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<addr use="WP">
 				<postalCode>3010</postalCode>
 				<city>Bern</city>
@@ -92,7 +93,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7605555555555" root="1.3.88"/>
+				<id extension="7605555555555" root="2.51.1.3"/>
 				<name>Inselspital, Universitäres Notfallzentrum</name>
 				<addr use="WP">
 					<postalCode>3010</postalCode>
@@ -136,7 +137,7 @@ History:
 		<time value="20111110"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
@@ -441,7 +442,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680569020096' />
+									<id root='2.51.1.1' extension='7680569020096' />
 									<manufacturedMaterial>
 										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
@@ -579,7 +580,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680006370012' />
+									<id root='2.51.1.1' extension='7680006370012' />
 									<manufacturedMaterial>
 										<code code='J07CA02' codeSystem='2.16.840.1.113883.6.73' >
 											<originalText>
@@ -685,7 +686,7 @@ History:
 							<author>
 								<time value='20120121' />
 								<assignedAuthor>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 								</assignedAuthor>
 							</author>
 							<component typeCode='COMP'>
@@ -752,7 +753,7 @@ History:
 							<author typeCode='AUT'>
 								<time value='20081118' />
 								<assignedAuthor>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 								</assignedAuthor>
 							</author>
 							<!-- one or more vital signs observations -->
@@ -904,7 +905,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680569020096' />
+									<id root='2.51.1.1' extension='7680569020096' />
 									<manufacturedMaterial>
 										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73" >
 											<originalText>
@@ -966,7 +967,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680295545924' />
+									<id root='2.51.1.1' extension='7680295545924' />
 									<manufacturedMaterial>
 										<!-- ATC WHO Code -->
 										<code code="B05BB01" codeSystem="2.16.840.1.113883.6.73">
@@ -1174,7 +1175,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680569020096' />
+									<id root='2.51.1.1' extension='7680569020096' />
 									<manufacturedMaterial>
 										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
@@ -1219,7 +1220,7 @@ History:
 							<effectiveTime value='20120917'/>
 							<performer typeCode='PRF'>
 								<assignedEntity>
-									<id extension="7605555555555" root="1.3.88"/>
+									<id extension="7605555555555" root="2.51.1.3"/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>

@@ -10,6 +10,7 @@ History:
 2014.03.11: Tony Schaller, medshare GmbH (Changes while implementing Schematron rules for CDA Body)
 2014.04.07: Tony Schaller, medshare GmbH (Release CDA-CH-SMCP)
 2015.02.09: Tony Schaller, medshare GmbH (Anpassung auf neues Medikationstemplate)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -94,7 +95,7 @@ History:
 				</languageCommunication>
 			</patient>
 			<providerOrganization>
-				<id extension='7608888888888' root='1.3.88'/>
+				<id extension='7608888888888' root='2.51.1.3'/>
 				<name>Dr. med. Théodore Guéri, Cabinet Médical CH</name>
 			</providerOrganization>
 		</patientRole>
@@ -103,7 +104,7 @@ History:
 		<functionCode code='PCP' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value='20100215103249'/>
 		<assignedAuthor>
-			<id extension='7608888888888' root='1.3.88'/>
+			<id extension='7608888888888' root='2.51.1.3'/>
 			<addr use='WP'>
 				<streetName>Rue de l’hôpital</streetName>
 				<houseNumber>2</houseNumber>
@@ -139,7 +140,7 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- DMST: 0.1 Adressé par -->
-				<id extension='7608888888888' root='1.3.88'/>
+				<id extension='7608888888888' root='2.51.1.3'/>
 				<name>Cabinet Médical CH</name>
 				<addr use='WP'>
 					<streetName>Rue de l’hôpital</streetName>
@@ -153,7 +154,7 @@ History:
 	<informationRecipient typeCode='PRCP'>
 		<!-- DMST: 0.2 A (destinataire) -->
 		<intendedRecipient>
-			<id extension='7606666666666' root='1.3.88'/>
+			<id extension='7606666666666' root='2.51.1.3'/>
 			<informationRecipient>
 				<name>EMS Guérison-ville</name>
 			</informationRecipient>
@@ -178,7 +179,7 @@ History:
 		<!-- DMST: 9.5 Validation -->
 		<signatureCode code='S'/>
 		<assignedEntity>
-			<id extension='7608888888888' root='1.3.88'/>
+			<id extension='7608888888888' root='2.51.1.3'/>
 			<assignedPerson>
 				<!-- DMST: 9.1 Document finalisé par -->
 				<!-- DMST: 9.3 Timbre -->
@@ -235,8 +236,8 @@ History:
 	<participant typeCode='IND'>
 		<associatedEntity classCode='CAREGIVER'>
 			<!-- DMST: 2.1 Représentant thérapeutique -->
-			<id extension='7608888888888' root='1.3.88'/>
-			<id extension='ldskjfnj' root='1.3.88'/>
+			<id extension='7608888888888' root='2.51.1.3'/>
+			<id extension='ldskjfnj' root='2.51.1.3'/>
 			<code code='HPOWATT' codeSystem='2.16.840.1.113883.5.111' codeSystemName='HL7: RoleCode' displayName='healthcare power of attorney' />
 			<associatedPerson>
 				<name>
@@ -274,7 +275,7 @@ History:
 			<scopingOrganization>
 				<!-- DMST: 2.5 Caisse maladie -->
 				<!-- GLN de l'assurance -->
-				<id extension='7607777777777' root='1.3.88'/>
+				<id extension='7607777777777' root='2.51.1.3'/>
 				<name>NousPaieronsTous assurances</name>
 				<telecom nullFlavor='NASK' />
 				<addr use='WP'>
@@ -300,7 +301,7 @@ History:
 			<scopingOrganization>
 				<!-- DMST: 2.7 Caisse accident -->
 				<!-- GLN de l'assurance -->
-				<id extension='7607777777777' root='1.3.88'/>
+				<id extension='7607777777777' root='2.51.1.3'/>
 				<name>NousPaieronsTous assurances</name>
 				<telecom nullFlavor='NASK' />
 				<addr use='WP'>
@@ -2736,7 +2737,7 @@ History:
 							</effectiveTime>
 							<performer typeCode='PRF'>
 								<assignedEntity>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -2765,7 +2766,7 @@ History:
 							</effectiveTime>
 							<performer typeCode='PRF'>
 								<assignedEntity>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -3051,7 +3052,7 @@ History:
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='1.3.160' extension='7680569020096' />
+									<id root='2.51.1.1' extension='7680569020096' />
 									<manufacturedMaterial>
 										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
 											<originalText>
@@ -3068,7 +3069,7 @@ History:
 							<participant typeCode='LOC'>
 								<!-- DMST: 8.15 Ordonnance remise à  -->
 								<participantRole classCode='SDLOC'>
-									<id extension='7605555555555' root='1.3.88'/>
+									<id extension='7605555555555' root='2.51.1.3'/>
 									<addr use='WP'>
 										<streetName>rue des substances</streetName>
 										<houseNumber>55</houseNumber>

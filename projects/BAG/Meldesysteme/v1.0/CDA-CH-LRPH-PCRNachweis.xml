@@ -7,6 +7,7 @@ History:
 2013.01.20: Tony Schaller, medshare GmbH (Erster Entwurf)
 2014.03.25: Tony Schaller, medshare GmbH (Korrektur participant nach Schematronregel-Update)
 2016.03.09: Tony Schaller, medshare GmbH (added codeSystemName LOINC for document code)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN to the current one)
 
 ********************************************************
 -->
@@ -58,7 +59,7 @@ History:
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value='20120117'/>
 		<assignedAuthor>
-			<id extension='7606666666666' root='1.3.88'/>
+			<id extension='7606666666666' root='2.51.1.3'/>
 			<addr use='WP'>
 				<streetName>Frohbergstrasse</streetName>
 				<houseNumber>3</houseNumber>
@@ -112,7 +113,7 @@ History:
 		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.6'/>
 		<time nullFlavor='NASK' />
 		<associatedEntity classCode='PROV'>
-			<id extension="7605555555555" root="1.3.88"/>
+			<id extension="7605555555555" root="2.51.1.3"/>
 			<addr use="WP">
 				<streetName>Spitalstr.</streetName>
 				<houseNumber>33</houseNumber>

@@ -12,6 +12,7 @@ History:
 2016.03.03: Tony Schaller, medshare GmbH (Some corrections in order to fulfill the schematron rules)
 2016.03.09: Tony Schaller, medshare GmbH (Removed SOASInfo while this is obsolete)
 2016.03.12: Tony Schaller, medshare GmbH (Refactoring according to CDA-CH-LRTP V2alpha00)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN to the current one)
 
 ********************************************************
 -->
@@ -62,7 +63,7 @@ History:
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value='20140116'/>
 		<assignedAuthor>
-			<id extension='7606666666666' root='1.3.88'/>
+			<id extension='7606666666666' root='2.51.1.3'/>
 			<addr use='WP'>
 				<streetName>Organstrasse</streetName>
 				<houseNumber>51</houseNumber>
@@ -158,7 +159,7 @@ History:
 							<author>
 								<time value='20120121' />
 								<assignedAuthor>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 								</assignedAuthor>
 							</author>
 							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
@@ -210,7 +211,7 @@ History:
 							<author typeCode='AUT'>
 								<time value='20081118' />
 								<assignedAuthor>
-									<id extension='7608888888888' root='1.3.88'/>
+									<id extension='7608888888888' root='2.51.1.3'/>
 								</assignedAuthor>
 							</author>
 							<!-- one or more vital signs observations -->
@@ -301,7 +302,7 @@ History:
 									<author typeCode='AUT'>
 										<time value='201401151037' />
 										<assignedAuthor>
-											<id extension='7608888888888' root='1.3.88'/>
+											<id extension='7608888888888' root='2.51.1.3'/>
 										</assignedAuthor>
 									</author>
 									
@@ -409,7 +410,7 @@ History:
 									<author typeCode='AUT'>
 										<time value='201401151037' />
 										<assignedAuthor>
-											<id extension='7608888888888' root='1.3.88'/>
+											<id extension='7608888888888' root='2.51.1.3'/>
 										</assignedAuthor>
 									</author>
 									
@@ -485,7 +486,7 @@ History:
 									<author typeCode='AUT'>
 										<time value='201401151037' />
 										<assignedAuthor>
-											<id extension='7608888888888' root='1.3.88'/>
+											<id extension='7608888888888' root='2.51.1.3'/>
 										</assignedAuthor>
 									</author>
 									
@@ -560,7 +561,7 @@ History:
 									<author typeCode='AUT'>
 										<time value='201401151037' />
 										<assignedAuthor>
-											<id extension='7608888888888' root='1.3.88'/>
+											<id extension='7608888888888' root='2.51.1.3'/>
 										</assignedAuthor>
 									</author>
 

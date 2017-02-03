@@ -11,6 +11,7 @@ History:
 2011.04.06: Tony Schaller, medshare GmbH (Publikation in SVN Repository der HL7 Benutzergruppe Schweiz; Achtung: OIDs vorerst als Platzhalter)
 2013.06.05: Tony Schaller, medshare GmbH (V1.1; OIDs nachgeführt)
 2013.06.19: Tony Schaller, medshare GmbH (Falsche semantische Verwendung von COVPTY korrigiert; neu: PAYOR)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ********************************************************
 -->
@@ -56,7 +57,7 @@ History:
 				</maritalStatusCode>
 			</patient>
 			<providerOrganization>
-				<id extension='7605555555555' root='1.3.88'/>
+				<id extension='7605555555555' root='2.51.1.3'/>
 				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
 			</providerOrganization>
 		</patientRole>
@@ -65,7 +66,7 @@ History:
 		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
 		<time value='20071113'/>
 		<assignedAuthor>
-			<id extension='7604444444444' root='1.3.88'/>
+			<id extension='7604444444444' root='2.51.1.3'/>
 			<addr use='WP'>
 				<streetName>Spitalstr.</streetName>
 				<houseNumber>23</houseNumber>
@@ -108,7 +109,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension='7605555555555' root='1.3.88'/>
+				<id extension='7605555555555' root='2.51.1.3'/>
 				<name>Kantonales Spital</name>
 				<addr use='WP'>
 					<streetName>Spitalstr.</streetName>
@@ -138,7 +139,7 @@ History:
 		<time value='20071113'/>
 		<signatureCode code='S'/>
 		<assignedEntity>
-			<id extension='7603333333333' root='1.3.88'/>
+			<id extension='7603333333333' root='2.51.1.3'/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
@@ -153,7 +154,7 @@ History:
 		<time value='20071113'/>
 		<signatureCode code='S'/>
 		<assignedEntity>
-			<id extension='7604444444444' root='1.3.88'/>
+			<id extension='7604444444444' root='2.51.1.3'/>
 			<assignedPerson>
 				<name>
 					<prefix>Dr. med.</prefix>
@@ -172,7 +173,7 @@ History:
 		</time>
 		<associatedEntity classCode='PAYOR'>
 			<!-- EAN der Versicherung -->
-			<id extension='7607777777777' root='1.3.88'/>
+			<id extension='7607777777777' root='2.51.1.3'/>
 			<associatedPerson>
 				<name>
 					<given>Kontakt</given>
@@ -302,11 +303,11 @@ History:
 							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 							<id extension='283641' root='2.16.756.5.30.133333' />
 							<!-- Eintrittsdatum und -Stunde -->
-							<effectiveTime value='201101031000'/>
+							<effectiveTime value='201101031000+0100'/>
 							<!-- Eintrittsbericht durch ausfüllenden Arzt -->
 							<performer>
 								<assignedEntity>
-									<id extension='7604444444444' root='1.3.88'/>
+									<id extension='7604444444444' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -391,13 +392,13 @@ History:
 							<id extension='283641' root='2.16.756.5.30.133333' />
 							<!-- 24h IPS Aufenthalt von/bis zur Berechnung der gesamten Anzahl Stunden auf der Codierabteilung -->
 							<effectiveTime xsi:type='IVL_TS'>
-								<low value='201101041000' />
-								<high value='201101051000' />
+								<low value='201101041000+0100' />
+								<high value='201101051000+0100' />
 							</effectiveTime>
 							<!-- IPS-Verlegungsbericht -->
 							<performer>
 								<assignedEntity>
-									<id extension='7606666666666' root='1.3.88'/>
+									<id extension='7606666666666' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -412,11 +413,11 @@ History:
 							<entryRelationship typeCode='REFR'>
 								<encounter classCode='OBS' moodCode='EVN'>
 									<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.IPSAufenthaltBeatmungL3'/>
-							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
+									<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 									<id extension='283641' root='2.16.756.5.30.133333' />
 									<effectiveTime xsi:type='IVL_TS'>
-										<low value='201101041100' />
-										<high value='201101041200' />
+										<low value='201101041100+0100' />
+										<high value='201101041200+0100' />
 									</effectiveTime>
 								</encounter>
 							</entryRelationship>
@@ -542,11 +543,11 @@ History:
 							<!-- Fallnummer (OID steht als Beispiel für eine beliebige Fall-Nummr Domäne in einem Spital) -->
 							<id extension='283641' root='2.16.756.5.30.133333' />
 							<!-- Austrittsdatum und -Stunde -->
-							<effectiveTime value='201101121100'/>
+							<effectiveTime value='201101121100+0100'/>
 							<!-- Austrittsbericht durch ausfüllenden Arzt -->
 							<performer>
 								<assignedEntity>
-									<id extension='7604444444444' root='1.3.88'/>
+									<id extension='7604444444444' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -617,7 +618,7 @@ History:
 							<targetSiteCode code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.24' displayName='einseitig links' />
 							<performer>
 								<assignedEntity>
-									<id extension='7604444444444' root='1.3.88'/>
+									<id extension='7604444444444' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -668,14 +669,14 @@ History:
 							<!-- oid chop -->
 							<text>Totalendoprothese des Hüftgelenks, n.n.bez.</text>
 							<effectiveTime xsi:type='IVL_TS'>
-								<low value='201101040800' />
-								<high value='201101040930' />
+								<low value='201101040800+0100' />
+								<high value='201101040930+0100' />
 							</effectiveTime>
 							<!-- Seitigkeit -->
 							<targetSiteCode code='2' codeSystem='2.16.756.5.30.1.126.3.3.2012.24' displayName='einseitig links' />
 							<performer>
 								<assignedEntity>
-									<id extension='7606666666666' root='1.3.88'/>
+									<id extension='7606666666666' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>
@@ -840,7 +841,7 @@ History:
 			<id extension='23467' root='2.16.756.5.30.133333' />
 			<code code='1' codeSystem='2.16.756.5.30.1.126.3.3.2012.16' />
 			<statusCode code='completed'/>
-			<effectiveTime value='190020010000'/>
+			<effectiveTime value='190020010000+0100'/>
 			</observation>
 			</entry>
 			<entry>
@@ -1566,61 +1567,61 @@ History:
 							-->
 							<!--
 							<component typeCode='COMP'>
-								<substanceAdministration classCode='SBADM' moodCode='EVN'>
-									<templateId extension='alisconnect.casestat.body.MediL3' root='2.16.756.5.30.1.114.2.1.1'/>
-									<templateId extension='CDA-CH.Body.MediL3' root='2.16.756.5.30.1.1.1.1.1'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
-									<templateId root='2.16.840.1.113883.10.20.1.24'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-									<id extension='7680475040232' root='1.3.160' />
-									<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
-									<text>Antithrombin III</text>
-									<statusCode code='completed'/>
-									<effectiveTime xsi:type='IVL_TS'>
-										<low nullFlavor='UNK' />
-										<high nullFlavor='UNK' />
-									</effectiveTime>
-									<effectiveTime xsi:type='PIVL_TS' operator='A'>
-										<phase value='190001010800'/>
-										<period value='24' unit='h'/>
-									</effectiveTime>
-									<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-									<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'>
-										<translation code='N/A' codeSystem='2.16.756.5.30.1.116.3.1.2013.1' />
-									</routeCode>
-									<doseQuantity>
-										<center value='2' unit='1'/>
-									</doseQuantity>
-									<rateQuantity nullFlavor='UNK' />
-									<consumable>
-										<manufacturedProduct>
-											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
-											<templateId root='2.16.840.1.113883.10.20.1.53'/>
-											<manufacturedMaterial>
-												<code code='BEISPIEL' codeSystem='2.16.756.5.30.2.6.2'>
-													<translation code='B01AC13' codeSystem='2.16.840.1.113883.6.73'>
-														<qualifier>
-															<value code='N/A' codeSystem='2.16.756.5.30.1.116.3.1.2013.2'/>
-														</qualifier>
-													</translation>
-												</code>
-												<name>Antithrombin III</name>
-											</manufacturedMaterial>
-										</manufacturedProduct>
-									</consumable>
-									<entryRelationship typeCode='REFR'>
-										<observation classCode='OBS' moodCode='EVN'>
-											<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.KumulierteDosisL3' />
-											<code code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Nein' />
-											<statusCode code='completed'/>
-											<value xsi:type='IVL_PQ'>
-												<center value='1' unit='mg'>
-													<translation code='mg' codeSystem='2.16.756.5.30.1.116.3.1.2013.4' />
-												</center>
-											</value>
-										</observation>
-									</entryRelationship>
-								</substanceAdministration>
+							<substanceAdministration classCode='SBADM' moodCode='EVN'>
+							<templateId extension='alisconnect.casestat.body.MediL3' root='2.16.756.5.30.1.114.2.1.1'/>
+							<templateId extension='CDA-CH.Body.MediL3' root='2.16.756.5.30.1.1.1.1.1'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
+							<templateId root='2.16.840.1.113883.10.20.1.24'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
+							<id extension='7680475040232' root='2.51.1.1' />
+							<code code='DRUG' codeSystem='2.16.840.1.113883.5.4' displayName='Medikamentöse Therapie'/>
+							<text>Antithrombin III</text>
+							<statusCode code='completed'/>
+							<effectiveTime xsi:type='IVL_TS'>
+							<low nullFlavor='UNK' />
+							<high nullFlavor='UNK' />
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
+							<phase value='190001010800'/>
+							<period value='24' unit='h'/>
+							</effectiveTime>
+							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
+							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral'>
+							<translation code='N/A' codeSystem='2.16.756.5.30.1.116.3.1.2013.1' />
+							</routeCode>
+							<doseQuantity>
+							<center value='2' unit='1'/>
+							</doseQuantity>
+							<rateQuantity nullFlavor='UNK' />
+							<consumable>
+							<manufacturedProduct>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
+							<templateId root='2.16.840.1.113883.10.20.1.53'/>
+							<manufacturedMaterial>
+							<code code='BEISPIEL' codeSystem='2.16.756.5.30.2.6.2'>
+							<translation code='B01AC13' codeSystem='2.16.840.1.113883.6.73'>
+							<qualifier>
+							<value code='N/A' codeSystem='2.16.756.5.30.1.116.3.1.2013.2'/>
+							</qualifier>
+							</translation>
+							</code>
+							<name>Antithrombin III</name>
+							</manufacturedMaterial>
+							</manufacturedProduct>
+							</consumable>
+							<entryRelationship typeCode='REFR'>
+							<observation classCode='OBS' moodCode='EVN'>
+							<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.KumulierteDosisL3' />
+							<code code='5' codeSystem='2.16.756.5.30.1.126.3.3.2012.33' displayName='Nein' />
+							<statusCode code='completed'/>
+							<value xsi:type='IVL_PQ'>
+							<center value='1' unit='mg'>
+							<translation code='mg' codeSystem='2.16.756.5.30.1.116.3.1.2013.4' />
+							</center>
+							</value>
+							</observation>
+							</entryRelationship>
+							</substanceAdministration>
 							</component>
 							-->
 						</organizer>
@@ -1637,6 +1638,7 @@ History:
 				<section>
 					<templateId root='2.16.756.5.30.1.114.2.1.1' extension='alisconnect.casestat.body.Bemerkungen'/>
 					<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.Rem'/>
+					<code code='48767-8' codeSystem='2.16.840.1.113883.6.1'/>
 					<title>Bemerkungen</title>
 					<text>
 						<content>Keine<br/>
@@ -1653,7 +1655,7 @@ History:
 							<value xsi:type='CE' code='N' codeSystem='2.16.756.5.30.2.1.1.8.1' displayName='Zuhause'/>
 							<performer>
 								<assignedEntity>
-									<id extension='7604444444444' root='1.3.88'/>
+									<id extension='7604444444444' root='2.51.1.3'/>
 									<assignedPerson>
 										<name>
 											<prefix>Dr. med.</prefix>

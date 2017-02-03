@@ -5,6 +5,7 @@ Pharmaceutical ADVice (PADV) Demo-Document
 History:
 2015.05.27: Stéphane Spahni, University Hospitals of Geneva (Document Creation)
 2015.05.28: Tony Schaller, medshare GmbH (Stylesheet and CSS added; changed table headers in CDA body from td to th)
+2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN and GTIN to the current ones)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
@@ -55,7 +56,7 @@ History:
 		<!-- profession -->
 		<time value="20150707164500+0200"/>
 		<assignedAuthor>
-			<id root="1.3.88" extension="7601000000100"/>
+			<id root="2.51.1.3" extension="7601000000100"/>
 			<!-- GS1 GLN -->
 			<code code='50012' displayName="Mꥥcin spꤩaliste en cardiologie" codeSystem='2.16.756.5.30.1.127.3.2.1.5' codeSystemName='EPD_XDS_healthcareFacilityTypeCode'/>
 			<addr>
@@ -74,7 +75,7 @@ History:
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<id root="1.3.88" extension="7601000000000"/>
+				<id root="2.51.1.3" extension="7601000000000"/>
 				<!-- GS1 GLN -->
 				<name>Dr. Medecin Hospital</name>
 				<telecom value="tel:+41.22.123.45.67"/>
@@ -93,7 +94,7 @@ History:
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7601002116763" root="1.3.88"/>
+				<id extension="7601002116763" root="2.51.1.3"/>
 				<name>University Hospitals of Geneva (HUG)</name>
 				<telecom value="tel:+41.22.300.00.01" use="WP"/>
 				<addr>
@@ -110,7 +111,7 @@ History:
 		<time value="20150707164500+0200"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
-			<id extension="7601002116763" root="1.3.88"/>
+			<id extension="7601002116763" root="2.51.1.3"/>
 			<telecom value="tel:+41.22.300.00.01" use="WP"/>
 			<telecom value="tel:+41.22.300.00.11" use="WP"/>
 			<assignedPerson>
@@ -121,7 +122,7 @@ History:
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<id extension="7601002116763" root="1.3.88"/>
+				<id extension="7601002116763" root="2.51.1.3"/>
 				<name>University Hospitals of Geneva (HUG)</name>
 				<telecom value="tel:+41.22.300.00.01" use="WP"/>
 				<telecom value="tel:+41.22.300.00.11" use="WP"/>

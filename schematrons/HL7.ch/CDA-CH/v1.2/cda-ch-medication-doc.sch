@@ -177,7 +177,7 @@ History:
 		<xhtml:ul id="cda-ch_medication-section">
 			      <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:51:46.393+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:11:19.652+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediList&#34;]"
             id="cda-ch-medication-doc_ru00001">
@@ -219,7 +219,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_medication-section_pa00002">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.393+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.652+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -265,7 +265,7 @@ History:
 			
 			      <!-- Backup altes Medikationstemplate
 			<!-/-	Identifikation mit GTIN, GLN oder Pharmacode 	-/->
-			<assert id="cda-ch_medication-section-0204" test="cda:id[@nullFlavor or @root=&quot;2.16.756.5.30.2.6.1&quot; or (@root='1.3.88' or @root='2.51.1.3') or @root=&quot;1.3.160&quot;]">
+			<assert id="cda-ch_medication-section-0204" test="cda:id[@nullFlavor or @root=&quot;2.16.756.5.30.2.6.1&quot; or (@root='1.3.88' or @root='2.51.1.3') or (@root=&quot;1.3.160&quot; or @root=&quot;2.51.1.1&quot;)]">
 				<xhtml:p lang="de_ch">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 				<xhtml:p lang="fr_ch">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage, le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
 				<xhtml:p lang="it_ch">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio, il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
@@ -352,7 +352,7 @@ History:
 			      </report>
 			      <report role="warning"
                  id="cda-ch-medication-doc_cda-ch_medication-section-0214-3_re00003"
-                 test="cda:id[@root=&#34;1.3.160&#34;]">
+                 test="cda:id[(@root=&#34;1.3.160&#34; or @root=&#34;2.51.1.1&#34;)]">
 				        <xhtml:p lang="de">substanceAdministration.id enthält GTIN (veraltete Implementation)</xhtml:p>
 				        <xhtml:p lang="en">substanceAdministration.id contains the GTIN (deprecated implementation)</xhtml:p>
 			      </report>
@@ -360,7 +360,7 @@ History:
 			      <!-- Neues Medikationstemplate ab 9.2.2015: manufacturedProduct - id: GTIN, GLN der Packung oder Pharmacode	-->
 			<assert role="error"
                  id="cda-ch-medication-doc_cda-ch_medication-section-0215_as00013"
-                 test="cda:consumable/cda:manufacturedProduct/cda:id[@nullFlavor or @root=(&#34;2.16.756.5.30.2.6.1&#34;, &#34;1.3.88&#34;, &#34;2.51.1.3&#34;, &#34;1.3.160&#34;)]">
+                 test="cda:consumable/cda:manufacturedProduct/cda:id[@nullFlavor or @root=(&#34;2.16.756.5.30.2.6.1&#34;, &#34;1.3.88&#34;, &#34;2.51.1.3&#34;, &#34;1.3.160&#34;, &#34;2.51.1.1&#34;)]">
 				        <xhtml:p lang="de">Medikationseinträge müssen mindestens mit der Packungs-GTIN, der GLN des Artikels oder der Identifikation aus swissINDEX identifiziert werden (Strichcode oder Pharmacode)</xhtml:p>
 				        <xhtml:p lang="fr">Les entrées de médication doivent être identifiées au moins avec le GTIN de l'emballage, le GLN de l'article ou l'identification de swissINDEX (code à barres ou pharmacode)</xhtml:p>
 				        <xhtml:p lang="it">Le iscrizioni delle medicazioni devono essere identificate almeno con il GTIN dell'imballaggio, il GLN o l'identificazione di SwissIndex (codice a barre o codice farmaceutico)</xhtml:p>
@@ -448,7 +448,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_medication-section_pa00003">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-section.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.393+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.652+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--	CDA-CH.Body.MediL3 Checks -->
 		<rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Body.MediL3&#34;]"
@@ -499,7 +499,7 @@ History:
 		<xhtml:ul id="cda-ch_medication-doc">
 			      <xhtml:li class="filename">cda-ch_medication-doc.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:51:46.377+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:11:19.636+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -511,7 +511,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_medication-doc_pa00005">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch_medication-doc.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.377+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.636+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -603,7 +603,7 @@ History:
 		<xhtml:ul id="cda-ch_vitalsigns">
 			      <xhtml:li class="filename">cda-ch_vitalsigns.ent</xhtml:li>
 			      <xhtml:li class="version">1.2</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:51:46.408+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:11:19.652+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -668,7 +668,7 @@ History:
 		<xhtml:ul id="entity_HL7-cda-ch">
 			      <xhtml:li class="filename">cda-ch.ent</xhtml:li>
 			      <xhtml:li class="version">1.0</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -707,7 +707,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00008">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.Insurance&#34;]"
             id="cda-ch-medication-doc_ru00008">
@@ -764,7 +764,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00009">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <rule context="*[cda:templateId/@root=&#34;2.16.756.5.30.1.1.1.1.1&#34; and cda:templateId/@extension=&#34;CDA-CH.Head.InsuranceCard&#34;]"
             id="cda-ch-medication-doc_ru00009">
@@ -812,7 +812,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00010">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -960,7 +960,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00011">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1055,7 +1055,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00012">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1102,7 +1102,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00013">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1173,7 +1173,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00014">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1263,7 +1263,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00015">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1380,7 +1380,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00016">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1451,7 +1451,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00017">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1506,7 +1506,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00018">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1601,7 +1601,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00019">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1704,7 +1704,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00020">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1751,7 +1751,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00021">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1804,7 +1804,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00022">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1891,7 +1891,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00023">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -1938,7 +1938,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00024">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2001,7 +2001,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00025">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2072,7 +2072,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00026">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2103,7 +2103,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00027">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2163,7 +2163,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00028">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2202,7 +2202,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00029">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2235,7 +2235,7 @@ History:
 	  <pattern id="cda-ch-medication-doc_cda-ch_pa00030">
       <xhtml:ul>
          <xhtml:li class="filename">cda-ch.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:46.346+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:19.589+01:00</xhtml:li>
       </xhtml:ul>
 		    <!--
 		********************************************************
@@ -2247,6 +2247,18 @@ History:
                  test="@root='1.3.88'"
                  id="cda-ch-medication-doc_re00012">
 				        <xhtml:p lang="de">Die OID 1.3.88 für GS1 GLN ist veraltet. Stattdessen soll die OID 2.51.1.3 verwendet werden.</xhtml:p>
+			      </report>
+		    </rule>
+		    <!--
+		********************************************************
+		Deprecated GTIN OID
+		********************************************************
+		-->
+		<rule context="cda:id" id="cda-ch-medication-doc_ru00034">
+			      <report role="warning"
+                 test="@root='1.3.160'"
+                 id="cda-ch-medication-doc_re00013">
+				        <xhtml:p lang="de">Die OID 1.3.160 für GS1 GTIN ist veraltet. Stattdessen soll die OID 2.51.1.1 verwendet werden.</xhtml:p>
 			      </report>
 		    </rule>
 	  </pattern>
@@ -2262,10 +2274,10 @@ History:
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Employer and School Contacts</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.08+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.474+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.2.2&#34;]"
-                id="cda-ch-medication-doc_ru00034">
+                id="cda-ch-medication-doc_ru00035">
          <iso:assert role="error"
                      test="self::cda:participant[@typeCode = &#34;IND&#34;]"
                      id="cda-ch-medication-doc_as00163">
@@ -2297,10 +2309,10 @@ History:
   <iso:pattern id="cda-ch-medication-doc_1.3.6.1.4.1.19376.1.5.3.1.2.2-warnings_pa00032">
       <xhtml:ul>
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.2.2.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.08+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.474+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.2.2&#34;]"
-                id="cda-ch-medication-doc_ru00035">
+                id="cda-ch-medication-doc_ru00036">
          <iso:assert role="warning"
                      test=".//cda:associatedPerson"
                      id="cda-ch-medication-doc_as00168">
@@ -2317,10 +2329,10 @@ History:
          <xhtml:li class="filename">1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2.ent</xhtml:li>
          <xhtml:li class="version">9.0</xhtml:li>
          <xhtml:li class="title">IHE PCC Coded Vital Signs Section</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:47.657+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.349+01:00</xhtml:li>
       </xhtml:ul>
       <iso:rule context="*[cda:templateId/@root=&#34;1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2&#34;]"
-                id="cda-ch-medication-doc_ru00036">
+                id="cda-ch-medication-doc_ru00037">
       <!-- Verify that the template id is used on the appropriate type of
      object -->
       <iso:assert role="error"
@@ -2364,10 +2376,10 @@ History:
 		<xhtml:ul id="vhitg-ruleset">
 			      <xhtml:li class="filename">vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules in vhitg-ruleset.ent)</xhtml:li>
 			      <xhtml:li class="version">1.5</xhtml:li>
-		       <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 
-		    <iso:rule id="cda-ch-medication-doc_general-addr_ru00037"
+		    <iso:rule id="cda-ch-medication-doc_general-addr_ru00038"
                 context="cda:addr[@nullFlavor]">
 			      <iso:assert role="error"
                      id="cda-ch-medication-doc_null-or-no-content_as00174"
@@ -2380,9 +2392,9 @@ History:
 	  <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00035">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-medication-doc_general-addr-1_ru00038"
+		    <iso:rule id="cda-ch-medication-doc_general-addr-1_ru00039"
                 context="cda:addr[normalize-space(.) = '']">
 			      <iso:assert role="error"
                      id="cda-ch-medication-doc_empty-implies-null_as00175"
@@ -2395,9 +2407,9 @@ History:
 	  <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00036">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-medication-doc_general-time-req_ru00039"
+		    <iso:rule id="cda-ch-medication-doc_general-time-req_ru00040"
                 context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
 			      <iso:assert role="error"
                      test="(not(contains(translate(cda:time/@value,'+-','ZZ'),'Z')) and string-length(cda:time/@value) &gt; 7) or string-length(substring-before(translate(cda:time/@value,'+-','ZZ'),'Z')) &gt; 7"
@@ -2410,9 +2422,9 @@ History:
 	  <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00037">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-medication-doc_cda-id-oid_ru00040"
+		    <iso:rule id="cda-ch-medication-doc_cda-id-oid_ru00041"
                 context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
 			      <iso:assert role="error"
                      test="translate(@root, '0123456789.', '') = ''"
@@ -2440,9 +2452,9 @@ History:
 	  <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00038">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-medication-doc_cda-id_ru00041"
+		    <iso:rule id="cda-ch-medication-doc_cda-id_ru00042"
                 context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 			      <iso:assert role="error" test="false()" id="cda-ch-medication-doc_as00181">
 				vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
@@ -2453,9 +2465,9 @@ History:
 	  <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00039">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-medication-doc_general-id_ru00042" context="cda:id">
+		    <iso:rule id="cda-ch-medication-doc_general-id_ru00043" context="cda:id">
 			      <iso:assert role="error"
                      id="cda-ch-medication-doc_null-or-no-root-attribute_as00182"
                      test="./@nullFlavor or ./@root">
@@ -2474,9 +2486,9 @@ History:
 	<iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00040" name="NMSP Namespaces">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-		    <iso:rule id="cda-ch-medication-doc_cda-root_ru00043" context="/*">
+		    <iso:rule id="cda-ch-medication-doc_cda-root_ru00044" context="/*">
 			      <iso:assert role="error"
                      test="self::cda:ClinicalDocument"
                      id="cda-ch-medication-doc_as00183">
@@ -2493,10 +2505,10 @@ History:
 	<iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00041" name="PERS Persons">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 		    <!-- abstract rules -->
-		<iso:rule id="cda-ch-medication-doc_nameTest_ru00044" abstract="true">
+		<iso:rule id="cda-ch-medication-doc_nameTest_ru00045" abstract="true">
 			      <iso:assert role="error" test="cda:name" id="cda-ch-medication-doc_as00184">
 			vhitg-ruleset.ent: A Person (<name xmlns=""/>) must have a name
 		</iso:assert>
@@ -2506,10 +2518,10 @@ History:
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00042">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- rules in context -->
-	<iso:rule context="cda:patient" id="cda-ch-medication-doc_ru00045">
+	<iso:rule context="cda:patient" id="cda-ch-medication-doc_ru00046">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2517,9 +2529,9 @@ History:
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00043">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:assignedPerson" id="cda-ch-medication-doc_ru00046">
+	     <iso:rule context="cda:assignedPerson" id="cda-ch-medication-doc_ru00047">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2527,10 +2539,10 @@ History:
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00044">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
-                id="cda-ch-medication-doc_ru00047">
+                id="cda-ch-medication-doc_ru00048">
 		       <extends xmlns="" rule="nameTest"/>
 	     </iso:rule>
    </iso:pattern>
@@ -2547,7 +2559,7 @@ Name is already handled in person pattern
                 name="HCPC Healthcare professionals">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- abstract rules -->
 	<!--
@@ -2556,7 +2568,7 @@ Name is already handled in person pattern
 	addres or the attribute 'nullFlavor' must be set to 'UNK'. </iso:assert>
 	</iso:rule>
 	-->
-	<iso:rule id="cda-ch-medication-doc_addresTestPersonOrRole_ru00048"
+	<iso:rule id="cda-ch-medication-doc_addresTestPersonOrRole_ru00049"
                 abstract="true">
 		       <iso:assert role="error"
                      test="../*/cda:addr/* or ../cda:addr/* or ../*/cda:addr/@nullFlavor='UNK' or ../cda:addr/@nullFlavor='UNK'"
@@ -2569,7 +2581,7 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00046">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -2579,7 +2591,7 @@ Name is already handled in person pattern
 	</iso:rule>
 	-->
 	<!-- rules in context -->
-	<iso:rule context="cda:assignedPerson" id="cda-ch-medication-doc_ru00049">
+	<iso:rule context="cda:assignedPerson" id="cda-ch-medication-doc_ru00050">
 		       <extends xmlns="" rule="addresTestPerson"/>
 		       <extends xmlns="" rule="telecomTestPerson"/>
 	     </iso:rule>
@@ -2588,10 +2600,10 @@ Name is already handled in person pattern
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00047">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
-                id="cda-ch-medication-doc_ru00050">
+                id="cda-ch-medication-doc_ru00051">
 		       <extends xmlns="" rule="addresTestPersonOrRole"/>
 		       <extends xmlns="" rule="telecomTestPerson"/>
 	     </iso:rule>
@@ -2607,9 +2619,9 @@ pliziten Angaben im Konfliktfall geringere Priorität.
                 name="ORGC Organization">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-medication-doc_nameTestOrg_ru00051" abstract="true">
+	     <iso:rule id="cda-ch-medication-doc_nameTestOrg_ru00052" abstract="true">
 		       <iso:assert role="error" test="cda:name" id="cda-ch-medication-doc_as00186">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a name.
 	</iso:assert>
@@ -2619,9 +2631,9 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00049">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-medication-doc_addresTestOrg_ru00052" abstract="true">
+	     <iso:rule id="cda-ch-medication-doc_addresTestOrg_ru00053" abstract="true">
 		       <iso:assert role="error" test="cda:addr/*" id="cda-ch-medication-doc_as00187">
 		vhitg-ruleset.ent: An Organization (<name xmlns=""/>) must have a non-empty addres.
 	</iso:assert>
@@ -2631,7 +2643,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00050">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -2642,7 +2654,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 	-->
 	<!-- rules in context -->
 	<iso:rule context="cda:representedOrganization | cda:representedCustodianOrganization | cda:scopingOrganization"
-                id="cda-ch-medication-doc_ru00053">
+                id="cda-ch-medication-doc_ru00054">
 		       <extends xmlns="" rule="nameTestOrg"/>
 		       <extends xmlns="" rule="addresTestOrg"/>
 		       <extends xmlns="" rule="telecomTestOrg"/>
@@ -2661,10 +2673,10 @@ Separatorzeichen nur Bindestrich –, Punkte . oder Klammern ( ) verwenden.
                 name="TURS TINT TCHS Telecom">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
-	<iso:rule context="cda:telecom" id="cda-ch-medication-doc_ru00054">
+	<iso:rule context="cda:telecom" id="cda-ch-medication-doc_ru00055">
 		       <iso:assert role="error"
                      test="(substring(@value,1,4)='tel:' or substring(@value,1,4)='fax:') or substring(@value,1,7)='mailto:' or substring(@value,1,5)='http:' or substring(@value,1,6)='https:' or @nullFlavor"
                      id="cda-ch-medication-doc_as00188">
@@ -2721,9 +2733,9 @@ component               CDA Body 1..1 SCHEMA
                 name="HEAD General Header constraints">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-medication-doc_ru00055">
+	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-medication-doc_ru00056">
 
 
 		<!-- 21.01.2013 ts: auskommentiert, da z.B. IHE XD-LAB den realmCode erfordert
@@ -2769,11 +2781,11 @@ zugeben.
                 name="TYID Document typeId">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:typeId"
-                id="cda-ch-medication-doc_ru00056">
+                id="cda-ch-medication-doc_ru00057">
 		       <iso:assert role="error"
                      test="normalize-space(@root)='2.16.840.1.113883.1.3' and normalize-space(@extension)='POCD_HD000040'"
                      id="cda-ch-medication-doc_as00193">
@@ -2788,10 +2800,10 @@ Regel IIRT: Das @root Attribut ist bei Instanzidentifikatoren verpflichtend anzu
                 name="IIRT Instance identifiers">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
-	<iso:rule context="cda:id" id="cda-ch-medication-doc_ru00057">
+	<iso:rule context="cda:id" id="cda-ch-medication-doc_ru00058">
 		       <iso:assert role="error"
                      test="@root or @nullFlavor"
                      id="cda-ch-medication-doc_as00194">
@@ -2810,11 +2822,11 @@ verwenden.
                 name="CDCD CDLN ClinicalDocument Code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:code"
-                id="cda-ch-medication-doc_ru00058">
+                id="cda-ch-medication-doc_ru00059">
 		       <iso:assert role="error"
                      test="@code and @codeSystem"
                      id="cda-ch-medication-doc_as00195">
@@ -2837,11 +2849,11 @@ Datum mit Jahr, Monat und Tag angegeben sein.
                 name="CDET ClinicalDocument effectiveTime">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:effectiveTime"
-                id="cda-ch-medication-doc_ru00059">
+                id="cda-ch-medication-doc_ru00060">
 		       <iso:assert role="error"
                      test="string-length(@value)&gt;7"
                      id="cda-ch-medication-doc_as00197">
@@ -2859,9 +2871,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
                 name="CDLC ClinicalDocument languageCode">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-medication-doc_cda-languageCode_ru00060"
+	     <iso:rule id="cda-ch-medication-doc_cda-languageCode_ru00061"
                 context="/cda:ClinicalDocument">
 		       <iso:assert role="error"
                      test="cda:languageCode"
@@ -2874,9 +2886,9 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
    <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00058">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule id="cda-ch-medication-doc_cda-languageCode-format_ru00061"
+	     <iso:rule id="cda-ch-medication-doc_cda-languageCode-format_ru00062"
                 context="/cda:ClinicalDocument/cda:languageCode">
 		       <iso:assert role="error"
                      test="(string-length(@code) = 5 and substring(@code,3,1) = '-') or string-length(@code) = 2"
@@ -2904,9 +2916,9 @@ nem Patienten (entity) anzugeben.
                 name="PATR Patient Role">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:recordTarget" id="cda-ch-medication-doc_ru00062">
+	     <iso:rule context="cda:recordTarget" id="cda-ch-medication-doc_ru00063">
 		       <iso:assert role="error"
                      test="count(cda:patientRole)=1 and count(cda:patientRole/cda:patient)=1"
                      id="cda-ch-medication-doc_as00202">
@@ -2922,10 +2934,10 @@ country beim Geburtsort ist verpflichtend.
 <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00060" name="BRCC Birthplace">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:patient/cda:birthplace/cda:place/cda:addr"
-                id="cda-ch-medication-doc_ru00063">
+                id="cda-ch-medication-doc_ru00064">
 		       <iso:assert role="error"
                      test="cda:city or cda:country"
                      id="cda-ch-medication-doc_as00203">
@@ -2958,9 +2970,9 @@ addr, muss bei einer beteiligten Person vorliegen.
                 name="PTNO PTEC PTPH PTPR PTTL Participants">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:participant" id="cda-ch-medication-doc_ru00064">
+	     <iso:rule context="cda:participant" id="cda-ch-medication-doc_ru00065">
 		       <iso:assert role="error"
                      test="not(normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK') or (normalize-space(cda:typedCode)='IND' and normalize-space(cda:associatedentity/@typeCode)='NOK' and cda:associatedentity/cda:associatedPerson)"
                      id="cda-ch-medication-doc_as00204">
@@ -3010,9 +3022,9 @@ In XML Schema
                 name="RELD Relating documents">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-medication-doc_ru00065">
+	     <iso:rule context="cda:ClinicalDocument" id="cda-ch-medication-doc_ru00066">
 		       <iso:assert role="error"
                      test="count(cda:relatedDocument[@typeCode='APND'])&lt;2"
                      id="cda-ch-medication-doc_as00208">
@@ -3042,9 +3054,9 @@ Regel BDSC: Ein Clinical Document muss mindestens ein „section“-Element enth
 <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00063" name="BDSC Section">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:structuredBody" id="cda-ch-medication-doc_ru00066">
+	     <iso:rule context="cda:structuredBody" id="cda-ch-medication-doc_ru00067">
 		       <iso:assert role="error"
                      test="count(/cda:component/cda:section)&lt;1"
                      id="cda-ch-medication-doc_as00212">
@@ -3060,10 +3072,10 @@ Regel SCTX: Eine Sektion muss genau ein „Text“-Element enthalten.
                 name="SCTX Section Text">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structeredbody/cda:component/cda:section"
-                id="cda-ch-medication-doc_ru00067">
+                id="cda-ch-medication-doc_ru00068">
 		       <iso:assert role="error"
                      test="count(cda:text)=1 and string-length(normalize-space(cda:text))=0"
                      id="cda-ch-medication-doc_as00213">
@@ -3099,9 +3111,9 @@ zu benutzen, der alternative Code steht dann in der <translation>.
                 name="SCLN Section code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:section/cda:code" id="cda-ch-medication-doc_ru00068">
+	     <iso:rule context="cda:section/cda:code" id="cda-ch-medication-doc_ru00069">
 		       <iso:assert role="error"
                      test="@codeSystem='2.16.840.1.113883.6.1' or (@nullFlavor='NA' and count(@codeSystem)=0 and count(cda:translation/@codeSystem)&gt;0 and count(cda:translation/@code)&gt;0)"
                      id="cda-ch-medication-doc_as00214">
@@ -3117,9 +3129,9 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
                 name="OMVL observationMedia Class">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
-	     <iso:rule context="cda:observationMedia" id="cda-ch-medication-doc_ru00069">
+	     <iso:rule context="cda:observationMedia" id="cda-ch-medication-doc_ru00070">
 		       <iso:assert role="error"
                      test="not(cda:value/@xsi:type) or cda:value/@xsi:type='ED'"
                      id="cda-ch-medication-doc_as00215">
@@ -3148,10 +3160,10 @@ Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen 
                 name="DGCD DGCN Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value"
-                id="cda-ch-medication-doc_ru00070">
+                id="cda-ch-medication-doc_ru00071">
 		       <iso:assert role="error"
                      test="@xsi:type!='CE' or ((@code and @codeSystem) or @nullFlavor='UNK')"
                      id="cda-ch-medication-doc_as00216">
@@ -3167,10 +3179,10 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
 <iso:pattern id="cda-ch-medication-doc_vhitg-ruleset_pa00068" name="DGQL Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2016-03-23T14:51:48.892+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-02-03T17:11:20.802+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value/cda:qualifier"
-                id="cda-ch-medication-doc_ru00071">
+                id="cda-ch-medication-doc_ru00072">
 		       <iso:assert role="error"
                      test="(./cda:name) and (./cda:value)"
                      id="cda-ch-medication-doc_as00217">
