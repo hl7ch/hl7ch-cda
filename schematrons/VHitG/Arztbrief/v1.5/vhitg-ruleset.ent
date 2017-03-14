@@ -4,9 +4,12 @@
 Schematron rules for VHitG Arztbrief
 
 History:
-30.12.2009: Tony Schaller, medshare GmbH (Übernahme von supporting documents des VHitG und ein paar Anpassungen - alle kommentiert)
-11.12.2010: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
-06.06.2012: Tony Schaller, medshare GmbH (Migration zu XInclude )
+2009.12.30: Tony Schaller, medshare GmbH (Übernahme von supporting documents des VHitG und ein paar Anpassungen - alle kommentiert)
+2010.12.11: Tony Schaller, medshare GmbH (Version aus dem Dateinamen entfernt. Die Version wird im SVN Repository verwaltet und über den Pfad definiert)
+2012.06.06: Tony Schaller, medshare GmbH (Migration zu XInclude )
+2013.01.20: Tony Schaller, medshare GmbH (Korrekturen im Zusammenhang mit IHE XD-LAB und CDA-CH-LRPH)
+2016.03.23: Tony Schaller, medshare GmbH (Korrektur gemäss MDHT team zu xsi:type bei observationMedia)
+2017.03.14: Tony Schaller, medshare GmbH (Correction in the error message of rule id="cda-id": UUIDs are also permitted)
 
 ********************************************************
 -->
@@ -68,7 +71,7 @@ History:
 	<iso:pattern>
 		<iso:rule id="cda-id" context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 			<iso:assert test="false()">
-				vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
+				vhitg-ruleset.ent: The root attribute of the id element must be either a syntactically correct OID or UUID.
 			</iso:assert>
 		</iso:rule>
 	</iso:pattern>
@@ -271,9 +274,14 @@ component               CDA Body 1..1 SCHEMA
 -->
 <iso:pattern name="HEAD General Header constraints">
 	<iso:rule context="cda:ClinicalDocument">
+
+
+		<!-- 21.01.2013 ts: auskommentiert, da z.B. IHE XD-LAB den realmCode erfordert
 		<iso:assert test="not(cda:realmCode)">
 			vhitg-ruleset.ent: The <emph>realmCode</emph> element is not allowed.
 		</iso:assert>
+		-->
+		
 		<!-- 29.11.2009 ts: auskommentiert, da z.B. IHE PHR Extract mehrere Template IDs erfordert
 		<iso:assert test="count(cda:templateId)&lt;2">
 		vhitg-ruleset.ent: The <emph>templateId</emph> element may only appear once.
@@ -285,9 +293,11 @@ component               CDA Body 1..1 SCHEMA
 		<iso:assert test="not(cda:informant)">
 			vhitg-ruleset.ent: The <emph>informant</emph> association element is not allowed.
 		</iso:assert>
+		<!-- 21.01.2013 ts: auskommentiert, da diese Regel nicht mit der Spezifikation übereinstimmt (inFulfillmentOf: In Erfüllung von, –noch nicht verwendet– 0..* )
 		<iso:assert test="not(cda:inFulfillmentOf)">
 			vhitg-ruleset.ent: The <emph>inFulfillmentOf</emph> association element is not allowed.
 		</iso:assert>
+		-->
 		<!-- 29.11.2009 ts: auskommentiert, da z.B. IHE PHR Extract genau dies erfodert
 		<iso:assert test="not(cda:documentationOf)">
 		vhitg-ruleset.ent: The <emph>documentationOf</emph> association element is not allowed.
@@ -538,7 +548,7 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
 -->
 <iso:pattern name="OMVL observationMedia Class">
 	<iso:rule context="cda:observationMedia">
-		<iso:assert test="cda:value/@xsi:type='ED'">
+		<iso:assert test="not(cda:value/@xsi:type) or cda:value/@xsi:type='ED'">
 			vhitg-ruleset.ent: <emph>observationMedia</emph> must contain a value of type ED.
 		</iso:assert>
 	</iso:rule>

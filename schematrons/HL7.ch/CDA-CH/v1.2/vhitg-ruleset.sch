@@ -113,7 +113,7 @@ Date:        Version    Comment
 		<xhtml:ul id="vhitg-ruleset">
 			      <xhtml:li class="filename">vhitg-ruleset.ent (is only very poor documented by xhtml! (see the schematron rules in vhitg-ruleset.ent)</xhtml:li>
 			      <xhtml:li class="version">1.5</xhtml:li>
-		       <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+		       <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 
 		    <iso:rule id="vhitg-ruleset_general-addr_ru00001" context="cda:addr[@nullFlavor]">
@@ -128,7 +128,7 @@ Date:        Version    Comment
 	  <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00002">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="vhitg-ruleset_general-addr-1_ru00002"
                 context="cda:addr[normalize-space(.) = '']">
@@ -143,7 +143,7 @@ Date:        Version    Comment
 	  <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00003">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="vhitg-ruleset_general-time-req_ru00003"
                 context="cda:authenticator | cda:author | cda:dataEnterer | cda:legalAuthenticator">
@@ -158,7 +158,7 @@ Date:        Version    Comment
 	  <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00004">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="vhitg-ruleset_cda-id-oid_ru00004"
                 context="/cda:ClinicalDocument/cda:id[contains(@root, '.')]">
@@ -188,12 +188,12 @@ Date:        Version    Comment
 	  <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00005">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="vhitg-ruleset_cda-id_ru00005"
                 context="cda:id[not(contains(@root,'.') or contains(@root,'-') or string-length(@nullFlavor) &gt;1)]">
 			      <iso:assert role="error" test="false()" id="vhitg-ruleset_as00008">
-				vhitg-ruleset.ent: The root attribute of the id element must be a syntactically correct OID.
+				vhitg-ruleset.ent: The root attribute of the id element must be either a syntactically correct OID or UUID.
 			</iso:assert>
 		    </iso:rule>
 	  </iso:pattern>
@@ -201,7 +201,7 @@ Date:        Version    Comment
 	  <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00006">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="vhitg-ruleset_general-id_ru00006" context="cda:id">
 			      <iso:assert role="error"
@@ -222,7 +222,7 @@ Date:        Version    Comment
 	<iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00007" name="NMSP Namespaces">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <iso:rule id="vhitg-ruleset_cda-root_ru00007" context="/*">
 			      <iso:assert role="error"
@@ -241,7 +241,7 @@ Date:        Version    Comment
 	<iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00008" name="PERS Persons">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 		    <!-- abstract rules -->
 		<iso:rule id="vhitg-ruleset_nameTest_ru00008" abstract="true">
@@ -254,7 +254,7 @@ Date:        Version    Comment
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00009">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- rules in context -->
 	<iso:rule context="cda:patient" id="vhitg-ruleset_ru00009">
@@ -265,7 +265,7 @@ Date:        Version    Comment
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00010">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:assignedPerson" id="vhitg-ruleset_ru00010">
 		       <extends xmlns="" rule="nameTest"/>
@@ -275,7 +275,7 @@ Date:        Version    Comment
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00011">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
                 id="vhitg-ruleset_ru00011">
@@ -295,7 +295,7 @@ Name is already handled in person pattern
                 name="HCPC Healthcare professionals">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- abstract rules -->
 	<!--
@@ -316,7 +316,7 @@ Name is already handled in person pattern
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00013">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -335,7 +335,7 @@ Name is already handled in person pattern
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00014">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:informationRecipient/cda:intendedRecipient/cda:informationRecipient"
                 id="vhitg-ruleset_ru00014">
@@ -353,7 +353,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00015" name="ORGC Organization">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="vhitg-ruleset_nameTestOrg_ru00015" abstract="true">
 		       <iso:assert role="error" test="cda:name" id="vhitg-ruleset_as00013">
@@ -365,7 +365,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00016">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="vhitg-ruleset_addresTestOrg_ru00016" abstract="true">
 		       <iso:assert role="error" test="cda:addr/*" id="vhitg-ruleset_as00014">
@@ -377,7 +377,7 @@ pliziten Angaben im Konfliktfall geringere Priorität.
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00017">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 
 	     <!--
@@ -406,7 +406,7 @@ Separatorzeichen nur Bindestrich –, Punkte . oder Klammern ( ) verwenden.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00018" name="TURS TINT TCHS Telecom">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
 	<iso:rule context="cda:telecom" id="vhitg-ruleset_ru00018">
@@ -466,7 +466,7 @@ component               CDA Body 1..1 SCHEMA
                 name="HEAD General Header constraints">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:ClinicalDocument" id="vhitg-ruleset_ru00019">
 
@@ -509,7 +509,7 @@ zugeben.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00020" name="TYID Document typeId">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:typeId" id="vhitg-ruleset_ru00020">
@@ -527,7 +527,7 @@ Regel IIRT: Das @root Attribut ist bei Instanzidentifikatoren verpflichtend anzu
                 name="IIRT Instance identifiers">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Basic datatype, no need for abstract rules -->
 	<iso:rule context="cda:id" id="vhitg-ruleset_ru00021">
@@ -547,7 +547,7 @@ verwenden.
                 name="CDCD CDLN ClinicalDocument Code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:code" id="vhitg-ruleset_ru00022">
@@ -573,7 +573,7 @@ Datum mit Jahr, Monat und Tag angegeben sein.
                 name="CDET ClinicalDocument effectiveTime">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <!-- Single instance, no need for abstract rules -->
 	<iso:rule context="cda:ClinicalDocument/cda:effectiveTime"
@@ -595,7 +595,7 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
                 name="CDLC ClinicalDocument languageCode">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="vhitg-ruleset_cda-languageCode_ru00024"
                 context="/cda:ClinicalDocument">
@@ -608,7 +608,7 @@ gemäß ISO-639-1, und CC, zwei Großbuchstaben für den Ländercode gemäß ISO
    <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00025">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule id="vhitg-ruleset_cda-languageCode-format_ru00025"
                 context="/cda:ClinicalDocument/cda:languageCode">
@@ -637,7 +637,7 @@ nem Patienten (entity) anzugeben.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00026" name="PATR Patient Role">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:recordTarget" id="vhitg-ruleset_ru00026">
 		       <iso:assert role="error"
@@ -655,7 +655,7 @@ country beim Geburtsort ist verpflichtend.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00027" name="BRCC Birthplace">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:patient/cda:birthplace/cda:place/cda:addr"
                 id="vhitg-ruleset_ru00027">
@@ -691,7 +691,7 @@ addr, muss bei einer beteiligten Person vorliegen.
                 name="PTNO PTEC PTPH PTPR PTTL Participants">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:participant" id="vhitg-ruleset_ru00028">
 		       <iso:assert role="error"
@@ -742,7 +742,7 @@ In XML Schema
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00029" name="RELD Relating documents">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:ClinicalDocument" id="vhitg-ruleset_ru00029">
 		       <iso:assert role="error"
@@ -774,7 +774,7 @@ Regel BDSC: Ein Clinical Document muss mindestens ein „section“-Element enth
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00030" name="BDSC Section">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structuredBody" id="vhitg-ruleset_ru00030">
 		       <iso:assert role="error"
@@ -791,7 +791,7 @@ Regel SCTX: Eine Sektion muss genau ein „Text“-Element enthalten.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00031" name="SCTX Section Text">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:structeredbody/cda:component/cda:section"
                 id="vhitg-ruleset_ru00031">
@@ -829,7 +829,7 @@ zu benutzen, der alternative Code steht dann in der <translation>.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00032" name="SCLN Section code">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:section/cda:code" id="vhitg-ruleset_ru00032">
 		       <iso:assert role="error"
@@ -847,7 +847,7 @@ Regel OMVL: Wenn die Klasse observationMedia genutzt wird, muss sie ein value El
                 name="OMVL observationMedia Class">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:observationMedia" id="vhitg-ruleset_ru00033">
 		       <iso:assert role="error"
@@ -877,7 +877,7 @@ Enhancmend by Tony Schaller: value Element kann auch für anderes als Diagnosen 
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00034" name="DGCD DGCN Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value"
                 id="vhitg-ruleset_ru00034">
@@ -896,7 +896,7 @@ muss ein <name> und <value> Kindelement mit Codes vorhanden sein.
 <iso:pattern id="vhitg-ruleset_vhitg-ruleset_pa00035" name="DGQL Diagnosis">
       <xhtml:ul>
          <xhtml:li class="filename">vhitg-ruleset.ent</xhtml:li>
-         <xhtml:li class="lastupdate">2017-02-03T17:11:14.458+01:00</xhtml:li>
+         <xhtml:li class="lastupdate">2017-03-14T19:51:55.899+01:00</xhtml:li>
       </xhtml:ul>
 	     <iso:rule context="cda:entry/cda:observation/cda:value/cda:qualifier"
                 id="vhitg-ruleset_ru00035">
