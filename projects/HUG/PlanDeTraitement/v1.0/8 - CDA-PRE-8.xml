@@ -5,7 +5,7 @@
 		=======================================================================
 		IHE Pharmacy - Technical Committee
 
-		Medication Treatment List (MTP) Demo-Document
+		Prescription (PRE) Demo-Document
 
 		Author:
 			Stephane Spahni
@@ -20,10 +20,14 @@
 	<realmCode code="CH"/>
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" assigningAuthorityName="IHE PCC"/>
-	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.6"/>
-	<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-MTP8.1"/>
-	<code code="77603-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication treatment plan.extended"/>
-    <title>Medication Treatment Plan</title>
+
+	<!-- PRE
+	-->
+    <templateId extension="PCC.PharmacyPrescription" root="1.2.40.0.32.6.1.10.1.1.1"/>
+	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.1"/>
+	<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-PRE8"/>
+	<code code="57833-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Prescription for medication"/>
+    <title>Pharmacy Prescription</title>
 	
 	<effectiveTime value="20150707164500+0200"/>
 	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25" codeSystemName="HL7:Confidentiality"/>
@@ -93,7 +97,7 @@
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<id root="1.3.88" extension="7601000000000"/>	<!-- GS1 GLN -->
-				<name>Dr Medecin Famille</name>
+				<name>Dr Mdecin Famille</name>
 				<telecom value="tel:+41.22.123.45.67"/>
 				<addr>
 					<streetName>Rue des Malades</streetName>
@@ -141,16 +145,21 @@
 		<structuredBody>
 			<component>
 				<section>
-					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.6"/>
-					<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-MTP8.1"/>
-					<code code="77604-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication treatment plan.brief"/>
-					<title>Planned medications</title>
+
+					<!-- PRE
+					-->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19"/>
+					<templateId root="2.16.840.1.113883.10.20.1.8"/>
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.1"/>
+					<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-PRE8"/>
+					<code code="57828-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PRESCRIPTIONS"/>
+					<title>Prescription for medication</title>
 
 					<text>
 
 						<!-- Prescriptions -->
 
-                        <content>Planned medications</content>
+                        <content>Prescribed medications</content>
                         <table>
                             <thead>
                                 <tr>
@@ -178,35 +187,35 @@
                             </thead>
                             <tbody>
 
-								<!-- Planned item entries corresponding to chapter 4.3.8 -->
+								<!-- Prescription item entries corresponding to chapter 4.3.8 -->
 
-                                <tr ID="mtp.8.1">
-                                    <td ID="mtp.8.1_date">2015-07-07 16:45</td>
-                                    <td ID="mtp.8.1_brandedmedication">DIAMICRON</td>
-                                    <td ID="mtp.8.1_packagename">DIAMICRON MR cpr 60 mg</td>
-                                    <td ID="mtp.8.1_packageform">Tablet</td>
-                                    <td ID="mtp.8.1_lotnumber"/>
-                                    <td ID="mtp.8.1_packagecapacity"/>
-                                    <td ID="mtp.8.1_ingredients">
+                                <tr ID="pre.8.1">
+                                    <td ID="pre.8.1_date">2015-07-07 16:45</td>
+                                    <td ID="pre.8.1_brandedmedication">DIAMICRON</td>
+                                    <td ID="pre.8.1_packagename">DIAMICRON MR cpr 60 mg</td>
+                                    <td ID="pre.8.1_packageform">Tablet</td>
+                                    <td ID="pre.8.1_lotnumber"/>
+                                    <td ID="pre.8.1_packagecapacity"/>
+                                    <td ID="pre.8.1_ingredients">
                                         <list>
-                                            <item ID="mtp.8.1_ingredient1">
-                                                <content ID="mtp.8.1_ingredient1_name">gliclazide</content>
-                                                <content ID="mtp.8.1_ingredient1_quantity">60 mg</content>
+                                            <item ID="pre.8.1_ingredient1">
+                                                <content ID="pre.8.1_ingredient1_name">gliclazide</content>
+                                                <content ID="pre.8.1_ingredient1_quantity">60 mg</content>
                                             </item>
                                         </list>
                                     </td>
-                                    <td ID="mtp.8.1_datefrom">2015-07-07</td>
-                                    <td ID="mtp.8.1_dateto">2015-07-28</td>
-                                    <td ID="mtp.8.1_frequency">1 at lunch</td>
-                                    <td ID="mtp.8.1_routecode">per os</td>
-                                    <td ID="mtp.8.1_approachsite"></td>
-                                    <td ID="mtp.8.1_dosequantity">60 mg</td>
-                                    <td ID="mtp.8.1_ratequantity">1/d</td>
-                                    <td ID="mtp.8.1_reason"></td>
-                                    <td ID="mtp.8.1_pinstruct"></td>
-                                    <td ID="mtp.8.1_finstruct"></td>
-                                    <td ID="mtp.8.1_dispenseamount">1 boxes of 30</td>
-                                    <td ID="mtp.8.1_substitution">yes</td>
+                                    <td ID="pre.8.1_datefrom">2015-07-07</td>
+                                    <td ID="pre.8.1_dateto">2015-07-28</td>
+                                    <td ID="pre.8.1_frequency">1 at lunch</td>
+                                    <td ID="pre.8.1_routecode">per os</td>
+                                    <td ID="pre.8.1_approachsite"></td>
+                                    <td ID="pre.8.1_dosequantity">60 mg</td>
+                                    <td ID="pre.8.1_ratequantity">1/d</td>
+                                    <td ID="pre.8.1_reason"></td>
+                                    <td ID="pre.8.1_pinstruct"></td>
+                                    <td ID="pre.8.1_finstruct"></td>
+                                    <td ID="pre.8.1_dispenseamount">1 boxes of 30</td>
+                                    <td ID="pre.8.1_substitution">yes</td>
                                 </tr>
 
                             </tbody>
@@ -214,17 +223,20 @@
 
 					</text>
 
-					<!-- Planning of Diamicron -->
+					<!-- Prescription item entries corresponding to chapter 4.3.8 -->
+
+					<!-- Prescription of Diamicron -->
                     <entry>
                         <substanceAdministration classCode="SBADM" moodCode="INT">
-							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.7" assigningAuthorityName="IHE PHARM"/>
+                            <templateId root="1.3.6.1.4.1.19376.1.9.1.3.2" assigningAuthorityName="IHE PHARM"/>
 							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.6" assigningAuthorityName="IHE PHARM"/>
-							<templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="HL7 CCD"/>
-							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC"/>
-							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC"/>
-                            <id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-MTP8.1.1"/>
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="HL7 CCD"/>						
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC"/>						
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC"/>
+
+                            <id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-PRE8.1"/>
                             <text>
-                                <reference value="#mtp.8.1"/>
+                                <reference value="#pre.8.1"/>
                             </text>
                             <statusCode code="completed"/>
                             <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
@@ -239,14 +251,14 @@
                                 <low unit="mg" value="60">
                                     <translation>
                                         <originalText>
-                                            <reference value="#mtp.8.1_dosequantity"/>
+                                            <reference value="#pre.8.1_dosequantity"/>
                                         </originalText>
                                     </translation>
                                 </low>
                                 <high unit="mg" value="60">
                                     <translation>
                                         <originalText>
-                                            <reference value="#mtp.8.1_dosequantity"/>
+                                            <reference value="#pre.8.1_dosequantity"/>
                                         </originalText>
                                     </translation>
                                 </high>
@@ -255,14 +267,14 @@
                                 <low unit="/d" value="1">
                                     <translation>
                                         <originalText>
-                                            <reference value="#mtp.8.1_ratequantity"/>
+                                            <reference value="#pre.8.1_ratequantity"/>
                                         </originalText>
                                     </translation>
                                 </low>
                                 <high unit="/d" value="1">
                                     <translation>
                                         <originalText>
-                                            <reference value="#mtp.8.1_ratequantity"/>
+                                            <reference value="#pre.8.1_ratequantity"/>
                                         </originalText>
                                     </translation>
                                 </high>
@@ -275,7 +287,7 @@
                                         <templateId root="1.3.6.1.4.1.19376.1.9.1.3.1"/>
                                         <code code="A10BB09" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="gliclazide">
                                             <originalText>
-                                                <reference value="#mtp.8.1_ingredient1"/>
+                                                <reference value="#pre.8.1_ingredient1"/>
                                             </originalText>
                                         </code>
                                         <name>Diamicron</name>
@@ -303,13 +315,25 @@
                                     </manufacturedMaterial>
                                 </manufacturedProduct>
                             </consumable>
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM' moodCode='INT'>
+									<templateId root=' 1.3.6.1.4.1.19376.1.9.1.3.10'/>
+									<id root="2.16.756.5.30.4.9.1.1.9000.97005632.20150707164500.1" extension="MTPS-V1-MTP8.1.1"/>
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2' displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List'/>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA'/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
                             <entryRelationship typeCode="SUBJ" inversionInd="true" >
                                 <act classCode="ACT" moodCode="INT">
                                     <templateId root="2.16.840.1.113883.10.20.1.49"/>
                                     <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.3"/>
-                                    <code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode"/>
+									<code code='PINSTRUCT' codeSystem='1.3.6.1.4.1.19376.1.5.3.2' codeSystemName='IHEActCode' />
                                     <text>
-                                        <reference value="#mtp.8.1_pinstruct"/>
+                                        <reference value="#pre.8.1_pinstruct"/>
                                     </text>
                                     <statusCode code="completed"/>
                                 </act>
@@ -320,7 +344,7 @@
                                     <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.3.1"/>
                                     <code code="FINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode"/>
                                     <text>
-                                        <reference value="#mtp.8.1_finstruct"/>
+                                        <reference value="#pre.8.1_finstruct"/>
                                     </text>
                                     <statusCode code="completed"/>
                                 </act>
