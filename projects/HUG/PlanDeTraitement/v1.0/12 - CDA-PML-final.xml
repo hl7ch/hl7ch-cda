@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<?xml-stylesheet type='text/xsl' href='stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../stylesheets/HUG/PlanDeTraitement/v1.0/hug.css'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 \Schemas\IHE+Pharmacy\CDA_extended_pharmacy.xsd">
 	<!--
 		=======================================================================
