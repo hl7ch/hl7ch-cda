@@ -12,69 +12,90 @@ und dokumentiert dort seine Behandlung.
 
 In der eMedication History des EPD von Frau Wegmüller befinden sich die folgenden neuen eDokumente:
 
-**eCurrent Medication**   
-id doc    2.16.756.5.30.1.1.1.1, 658ab5ea-1f63-11e6-b6ba-3e1d05defe78
-id mtp.1  2.16.756.5.30.1.1.1.1, 17931678-20b4-11e6-b67b-9e71128cae77  
+**1.1 eMedicationTreatementPlan**   
 
-| Präparatename  | Wirkstoffname  | Dosis               | Galenische Form   | Verabreichungsweg  | Anwendungsschema (Einnahmemodus) | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Anwendungsdauer | Behandlungsgrund | Status    | Hinweis (Anwendungsinstruktion) |
-| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------| ---------------- | --------  | ------------------------------  |
-| Triatec       | Ramipril       | 2.5 mg              | Tbl               | oral               | Morgens 1/2 Tablette nehmen       | 0.5           | 0             | 0            | 0            |                 | Bluthochdruck    | abgegeben |                                 |
+id doc/mtp    658ab5ea-1f63-11e6-b6ba-3e1d05defe78
 
-**eAbgabeDokument**
-id doc 2.16.756.5.30.1.1.1.1, 488bd23a-20c6-11e6-b67b-9e71128cae77
-id dis 2.16.756.5.30.1.1.1.1, 5712fffe-20c6-11e6-b67b-9e71128cae77
+| Präparatename  | Wirkstoffname  | Galenische Form       | Dosis pro Einheit   Dosierung | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  | Verabreichungsweg  | Kommentar |Anwendungsdauer | Behandlungsgrund |
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------| ----------------| ---------------- | 
+| Triatec       | Ramipril       |    Tbl           | 2.5 mg / Tbl              | Morgens 1/2 Tablette nehmen       | 0.5           | 0             | 0            | 0            |        oral               |          |           | Bluthochdruck    |                                   
 
-| Präparatename  | Wirkstoffname  | Dosis pro Einheit   | Galenische Form   | Anzahl Packungen   | Packungsgrösse  | Verabreichungsweg | Anwendungsschema (Einnahmemodus)  |  Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Anwendungsdauer      | Abgabe an            | Hinweise   |   
-| ------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------  | ----------------- | --------------------------------- |  ------------- | ------------- | ------------ | ------------ | -------------------- | --------------------  |----------- |
-| Triatec       | Ramipril       | 2.5 mg              | Tbl               | 1                  |  20              | oral              | Morgens 1/2 Tablette nehmen       |  0.5           | 0             | 0            | 0            |                      | Patient               |            |
+**1.2 eAbgabeDokument**
+id doc/dis 488bd23a-20c6-11e6-b67b-9e71128cae77
+
+| Präparatename  | Wirkstoffname  | Galenische Form   | Dosis pro Einheit   | Anzahl Packungen   | Packungsgrösse  |  Dosierung  |  Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Verabreichungsweg | Kommentar      | Behandlungsrund      | Datum/Zeit der Abgabe/ Anwendung          | Identifikation des Empfängers   |   
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------  | ----------------- | --------------------------------- |  ------------- | ------------- | ------------ | ------------ | -----| ------------ | -------------------- | --------------------  |----------- |
+| Triatec       | Ramipril       |  Tbl            |      2.5 mg           | 1                  |  20                 | Morgens 1/2 Tablette nehmen       |  0.5           | 0             | 0            | 0           | oral            |                      | Bluthochdruck               |            |
 
 
 2 Kontrolle Hausarzt, Arztbesuch vom 4. Februar 2012
 ----------------------------------------------------
 
-Anlässlich einer Nachkontrolle der Hypertonie klagt Frau Wegmüller über einen trockenen Husten. Sie vermutete eine Erkältung, 
-der Hausarzt jedoch vermutet eine bekannte unerwünschte Arzneimittelnebenwirkung (UAW) für Ramipril und setzt diese 
-medikamentöse Therapie ab.
+Anlässlich einer Nachkontrolle der Hypertonie klagt Frau Wegmüller über einen trockenen Husten. Sie vermutete eine Erkältung. Der Hausarzt verschafft sich einen Überblick über die aktuelle Medikation von Frau Wegmüller indem er die eCur-entMedication abruft.
 
-eMedication Comment
+**2.1 eCurrentMedication**
+
+id doc 17931678-20b4-11e6-b67b-9e71128cae77
+
+| Präparatename  | Wirkstoffname  | Galenische Form       | Dosis pro Einheit   Dosierung | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  | Verabreichungsweg  | Kommentar |Anwendungsdauer | Behandlungsgrund |
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------| ----------------| ---------------- | 
+| Triatec       | Ramipril       |    Tbl           | 2.5 mg / Tbl              | Morgens 1/2 Tablette nehmen       | 0.5           | 0             | 0            | 0            |        oral               |          |           | Bluthochdruck    |                                   
+
+id doc/mtp    658ab5ea-1f63-11e6-b6ba-3e1d05defe78
+
+Er vermutet eine bekannte unerwünschte Arzneimittelnebenwirkung (UAW) für Ra- mipril und setzt diese medikamentöse Therapie ab.
+
+**2.2 eMedication Comment**
+
 id doc 8ed02d0a-2971-11e6-b67b-9e71128cae77
 id padv  9cdbaef6-2971-11e6-b67b-9e71128cae77
 
-| Klassifizierung  | Typ            | Art der Intervention           | Referenz-eDokument               | Alter Präparatename | Neuer Präparatname     | Wirkstoffname    | Dosis pro Einheit | Galenische Form   | Begründung            | Status                    |    
-| ---------------- | -------------- | ------------------------------ | -------------------------------  | ------------------- | ---------------------  | ---------------- | ----------------- | ------------------ | -------------------  | ------------------------- |
-| Relevant         | Intervention   | Therapeutische Substitution    | eCurrent Medication vom 29.11.11 | Triatec             |                        |                  |                   |                    | UAW Trockener Husten | definitiv abgesetzt       |
+| Präparatename  | Wirkstoffname  | Galenische Form       | Dosis pro Einheit | Dosierung | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Verabreichungsweg  |  Anwendungsdauer | Behandlungsgrund | Kommentar |
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------|  ---------------- | ---------------- | 
+| Triatec       | Ramipril       |    Tbl           | 2.5 mg / Tbl              | Morgens 1/2 Tablette nehmen       | 0.5           | 0             | 0            | 0            |        oral               |                 | Bluthochdruck    | Abgesetzt aufgrund UAW trockener Husten     |                                  
 
 Da sich gleichzeitig die Blutdruckwerte verschlechtert haben, verordnet der Arzt eine Kombinationstherapie mit 
 Amlodipin 10mg 2x täglich und Metoprolol 50mg in der Dosierung 1-0-0.5-0. Er gibt der Patientin Beloc Zok (Metoprolol) 
 mit und verschreibt ihr Norvasc mit einem elektronischen Rezept.
 
+**2.3 eMedicationTreatementPlan**   
 
-**eRezept**  
-NORVASC http://compendium.ch/prod/norvasc-tabl-10-mg/de
-id doc 2.16.756.5.30.1.1.1.1, d41d72ba-2100-11e6-b67b-9e71128cae77
-id pre 2.16.756.5.30.1.1.1.1, 6c968b1a-21ee-11e6-b67b-9e71128cae77 (references mtp.2)
+id doc/mtp    17931678-20b4-11e6-b67b-9e71128cae77
 
-| Präparatename  | Wirkstoffname  | Dosis pro Einheit   | Galenische Form   | Anzahl Packungen   | Packungsgrösse   | Verabreichungsweg | Anwendungsschema (Einnahmemodus)  | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  Anwendungsdauer   |     
-| -------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------  | ----------------- | --------------------------------- | ------------- | ------------- | ------------ | ------------ |  ------------------ |
-| Norvasc        | Amlodipin      | 10 mg               | Tabl              |                    |                  | oral              |                                   | 1             | 0             | 1            | 0            |  Dauerrezept 3 Mte |
+| Präparatename  | Wirkstoffname  | Galenische Form       | Dosis pro Einheit   Dosierung | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  | Verabreichungsweg  | Kommentar |Anwendungsdauer | Behandlungsgrund |
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------| ----------------| ---------------- | 
+| Beloc Zok       | Metoprolol       |    Ret Tbl           | 50 mg / Tbl              | Morgens 1 und abends 1/2 Tablette nehmen       | 1           | 0             | 0.5            | 0            |        oral               |          |           | Bluthochdruck    |                                   
 
-**eAbgabeDokument**  
+**2.4 eAbgabeDokument**  
 https://compendium.ch/prod/beloc-zok-ret-tabl-50-mg/de
-id doc d8143fea-4778-11e6-beb8-9e71128cae77
-id dis d81443dc-4778-11e6-beb8-9e71128cae77
+id doc/dis d8143fea-4778-11e6-beb8-9e71128cae77
 
-| Präparatename  | Wirkstoffname  | Dosis pro Einheit   | Galenische Form   | Anzahl Packungen   | Packungsgrösse   | Verabreichungsweg | Anwendungsschema (Einnahmemodus)         |  Dos. Morgen  | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Anwendungsdauer   | Abgabe an |
-| -------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------  | ----------------- | ---------------------------------------- | ------------- | ------------- | ------------ | ------------ | ----------------- | --------- |
-| Beloc Zok      | Metoprolol     | 50 mg               | Ret Tbl           | 1                  | 30 Stk           | oral              | Morgens 1 und abends 1/2 Tablette nehmen | 1             | 0             | 0.5          | 0            |                   | Patient   |
+| Präparatename  | Wirkstoffname  | Galenische Form   | Dosis pro Einheit   | Anzahl Packungen   | Packungsgrösse  |  Dosierung  |  Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Verabreichungsweg | Kommentar      | Behandlungsrund      | Datum/Zeit der Abgabe/ Anwendung          | Identifikation des Empfängers   |   
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------  | ----------------- | --------------------------------- |  ------------- | ------------- | ------------ | ------------ | -----| ------------ | -------------------- | --------------------  |----------- |
+| Beloc Zok      | Metoprolol     |  Ret Tbl | 50 mg                     | 1                  | 30 Stk           | oral              | Morgens 1 und abends 1/2 Tablette nehmen | 1             | 0             | 0.5          | 0            |                   | Bluthochdruck   |
 
-**eCurrent Medication**   
+**2.5 eMedicationTreatementPlan**   
 
-id doc 2.16.756.5.30.1.1.1.1, 074da900-2103-11e6-b67b-9e71128cae77
-id mtp.1 2.16.756.5.30.1.1.1.1, bcdc9970-4778-11e6-beb8-9e71128cae77
-id mtp.2 2.16.756.5.30.1.1.1.1, 068e887c-2270-11e6-b67b-9e71128cae77
+id doc/mtp    5712fffe-20c6-11e6-b67b-9e71128cae77
 
-| Präparatename  | Wirkstoffname  | Dosis               | Galenische Form   | Verabreichungsweg  | Anwendungsschema (Einnahmemodus)         | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   | Anwendungsdauer          | Behandlungsgrund | Status       | Hinweis (Anwendungsinstruktion)  | 
-| -------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------------------------------  | ------------- | ------------- | ------------ | ------------ | -----------------------  | ---------------- | ------------ |--------------------------------- |
-| Beloc Zok      | Metoprolol     | 50 mg               | Ret Tbl           | Oral               | Morgens 1 und abends 1/2 Tablette nehmen | 0             | 0             | 0.5          | 0            |                          | Bluthochdruck    | abgebegen    |                                  |
-| Norvasc        | Amlodipin      | 10 mg               | Tabl              | Oral               |                                          | 1             | 0             | 1            | 0            | Dauerrezept für 3 Monate | Bluthochdruck    | verschrieben |                                  |
+| Präparatename  | Wirkstoffname  | Galenische Form       | Dosis pro Einheit   Dosierung | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  | Verabreichungsweg  | Kommentar |Anwendungsdauer | Behandlungsgrund |
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------| ----------------| ---------------- | 
+| Norvasc       | Amlodipin       |    Tbl           | 10 mg / Tbl              | Morgens und abends 1 Tablette nehmen       | 1           | 0             | 1            | 0            |        oral               |          |           | Bluthochdruck    |                                   
 
+**2.6 eRezept**  
+NORVASC http://compendium.ch/prod/norvasc-tabl-10-mg/de
+id doc d41d72ba-2100-11e6-b67b-9e71128cae77
+
+| Präparatename  | Wirkstoffname  | Galenische Form   | Dosis pro Einheit   | Wiederholter Bezung pro Arzneimittel   |  Dosierung  | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  Verabreichungsweg | Kommentar | Anwendungsdauer   | Substituierbarkeit |   
+| -------------- | -------------- | ------------------- | ----------------- | -----------------  | ---------------  | ----------------- | --------------------------------- | ------------- | ------------- | ------------ | ------------ |  ------------------ | ------------------ |
+| Norvasc        | Amlodipin      | Tbl               | 10 mg/Tbl              | Dauerrezept 3 Mte                    | Morgens und abends je 1 Tablette nehmen                  | 1             | 0             | 1            | 0            |  oral |  |   |
+
+**3.1 eCurrent Medication**   
+
+id 074da900-2103-11e6-b67b-9e71128cae77
+
+
+| Präparatename  | Wirkstoffname  | Galenische Form       | Dosis pro Einheit   Dosierung | Dos. Morgen   | Dos. Mittag   | Dos. Abend   | Dos. Nacht   |  | Verabreichungsweg  | Kommentar |Anwendungsdauer | Behandlungsgrund |
+| ------------- | -------------- | ------------------- | ----------------- | -----------------  | --------------------------------  | ------------- | ------------- | ------------ | ------------ | ----------------| ----------------| ---------------- | 
+| Beloc Zok       | Metoprolol       |    Ret Tbl           | 50 mg / Tbl              | Morgens 1 und abends 1/2 Tablette nehmen       | 1           | 0             | 0.5            | 0            |        oral               |          |           | Bluthochdruck    |                                   
+| Norvasc       | Amlodipin       |    Tbl           | 10 mg / Tbl              | Morgens und abends 1 Tablette nehmen       | 1           | 0             | 1            | 0            |        oral               |          |           | Bluthochdruck    |                                   

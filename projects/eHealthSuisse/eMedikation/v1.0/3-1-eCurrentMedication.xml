@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ************************************************************ -->
 <!-- Fallbeispiel -->
-<!-- 2 eCurrentMedication based on IHE MTP -->
+<!-- 2.1 eCurrentMedication based on IHE MTP ITEMS -->
 <!-- History: -->
 <!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
 <!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
+<!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
@@ -18,32 +19,31 @@
 	<!-- IHE PCC -->
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
 
+	<!-- IHE PHARM PML -->
+	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.5" />
+
 	<!-- CDA-CH -->
 	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH" />
 
-	<!-- CDA-CH-EMED-eCurrentMedication-V1 -->
-	<templateId root="2.16.756.5.30.1.1.1.1.3.10.1" />
-
+	<!-- CDA-CH-PHARM eCurrentMedication-V1 -->
+	<templateId root="2.16.756.5.30.1.1.10.1.3" />
 
 	<!-- id of this eCurrentMedication -->
-	<id root="2.16.756.5.30.1.1.1.1" extension="074da900-2103-11e6-b67b-9e71128cae77" />
+	<id root="074da900-2103-11e6-b67b-9e71128cae77" />
 
-	<code code="77603-9" codeSystem="2.16.840.1.113883.6.1"
-		codeSystemName="LOINC" displayName="Medication treatment plan.extended" />
+	<!-- IHE PHARM PML -->
+	<code code="56445-0" codeSystem="2.16.840.1.113883.6.1"
+		codeSystemName="LOINC" displayName="Medication summary Document" />
 
 	<title>eCurrentMedication</title>
 
-	<effectiveTime value="20120204140000+0100" />
+	<effectiveTime value="20120205135500+0100" />
 
-	<confidentialityCode code="30003"
-		codeSystem="2.16.756.5.30.1.127.3.10.1.5" displayName="Medical data" />
+
+	<confidentialityCode code="1051000195109"
+		codeSystem="2.16.840.1.113883.6.96" displayName="Normal" />
 
 	<languageCode code="de-CH" />
-
-	<!-- Original eCurrentMedication -->
-	<setId root="2.16.756.5.30.1.1.1.1" extension="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
-	<!-- versionNumber, see pointer to previous replaced version in relatedDocument -->
-	<versionNumber value="2" />
 
 	<recordTarget>
 		<patientRole>
@@ -59,15 +59,16 @@
 	</recordTarget>
 
 	<author>
-		<time value="20120204140000+0100" />
+		<time value="20120205135500+0100" />
 		<assignedAuthor>
 			<id nullFlavor="NI" />
 			<assignedPerson>
 				<name>
+					<given>Familien</given>
 					<family>Hausarzt</family>
 				</name>
 			</assignedPerson>
-  			<representedOrganization>
+			<representedOrganization>
 				<addr>
 					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
 					<postalCode>8005</postalCode>
@@ -87,7 +88,7 @@
 	</custodian>
 
 	<legalAuthenticator>
-		<time value="20120204140000+0100" />
+		<time value="20120205135500+0100" />
 		<signatureCode code="S" />
 		<assignedEntity>
 			<id nullFlavor="NI" />
@@ -99,27 +100,18 @@
 		</assignedEntity>
 	</legalAuthenticator>
 
-
-
-	<relatedDocument typeCode="RPLC">
-		<parentDocument>
-			<id root="2.16.756.5.30.1.1.1.1" extension="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
-		</parentDocument>
-	</relatedDocument>
-
-
 	<component>
 		<structuredBody>
 			<component>
 				<section>
-					<!-- CDA-CH EMED eCurrentMedication -->
-					<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.1.10.3.1" />
+					<!-- CH-PHARM eCurrentMedication -->
+					<templateId root="2.16.756.5.30.1.1.10.3.9" />
 
-					<!-- CCD -->
-					<templateId root="2.16.840.1.113883.10.20.1.8" />
+					<!-- IHE PHARM PML -->
+					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.5" />
 
-					<code code="77604-7" codeSystem="2.16.840.1.113883.6.1"
-						codeSystemName="LOINC" displayName="Medication treatment plan.brief" />
+					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1"
+						codeSystemName="LOINC" displayName="History of medication use" />
 
 					<title>eCurrentMedication</title>
 
@@ -129,61 +121,54 @@
 								<tr>
 									<th>Präpartename</th>
 									<th>Wirkstoffname</th>
-									<th>Dosis pro Einheit</th>
 									<th>Galenische Form</th>
-									<th>Verabreichungsweg</th>
-									<th>Anwendungsschema (Einnahmemodus)</th>
+									<th>Dosis pro Einheit</th>
+									<th>Dosierung</th>
 									<th>Dos.Morgen</th>
 									<th>Dos.Mittag</th>
 									<th>Dos.Abend</th>
 									<th>Dos.Nacht</th>
-									<th>Anwendungsdauer (Behandlungsdauer)</th>
+									<th>Verabreichungsweg</th>
+									<th>Kommentar</th>
+									<th>Anwendungsdauer</th>
 									<th>Behandlungsgrund</th>
-									<th>Status</th>
-									<th>Hinweis</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr ID="mtp.1">
-									<td ID="mtp.1.brandedmedication">Beloc Zok</td>
-									<td ID="mtp.1.ingredient">Metoprolol</td>
-									<td ID="mtp.1.dosequantity">50 mg</td>
-									<td ID="mtp.1.packageform">Ret Tbl</td>
-									<td ID="mtp.1.routecode">oral</td>
-									<td ID="mtp.1.dosageintakemode">Morgens 1 und abends 1/2 Tablette nehmen</td>
-									<td ID="mtp.1.dosagemorning">1</td>
-									<td ID="mtp.1.dosagelunch">0</td>
-									<td ID="mtp.1.dosageevening">0.5</td>
-									<td ID="mtp.1.dosagenight">0</td>
-									<td ID="mtp.1.datefromto"></td>
-									<td ID="mtp.1.reason">Bluthochdruck</td>
-									<td ID="mtp.1.status">abgegeben</td>
-									<td ID="mtp.1.note"></td>
+								<tr ID="pml.1">
+									<td ID="pml.1.brandedmedication">Beloc Zok</td>
+									<td ID="pml.1.ingredient">Metoprolol</td>
+									<td ID="pml.1.packageform"> Ret Tbl</td>
+									<td ID="pml.1.dosequantity">2.5 mg</td>
+									<td ID="pml.1.dosageintakemode">Morgens 1 und abends 1/2 Tablette nehmen</td>
+									<td ID="pml.1.dosagemorning">1</td>
+									<td ID="pml.1.dosagelunch">0</td>
+									<td ID="pml.1.dosageevening">0.5</td>
+									<td ID="pml.1.dosagenight">0</td>
+									<td ID="pml.1.routecode">oral</td>
+									<td ID="pml.1.note"></td>
+									<td ID="pml.1.datefromto"></td>
+									<td ID="pml.1.reason">Bluthochdruck</td>
 								</tr>
-								<tr ID="mtp.2">
-									<td ID="mtp.2.brandedmedication">Norvasc</td>
-									<td ID="mtp.2.ingredient">Amlodipin</td>
-									<td ID="mtp.2.dosequantity">10 mg</td>
-									<td ID="mtp.2.packageform">Tabl</td>
-									<td ID="mtp.2.routecode">oral</td>
-									<td ID="mtp.2.dosageintakemode"></td>
-									<td ID="mtp.2.dosagemorning">1</td>
-									<td ID="mtp.2.dosagelunch">0</td>
-									<td ID="mtp.2.dosageevening">1</td>
-									<td ID="mtp.2.dosagenight">0</td>
-									<td ID="mtp.2.datefromto">Dauerrezept 3 Monate</td>
-									<td ID="mtp.2.reason">Bluthochdruck</td>
-									<td ID="mtp.2.status">verschrieben</td>
-									<td ID="mtp.2.note"></td>
+								<tr ID="pml.2">
+									<td ID="pml.2.brandedmedication">Norvasc</td>
+									<td ID="pml.2.ingredient">Amlodipin</td>
+									<td ID="pml.2.packageform">Tbl</td>
+									<td ID="pml.2.dosequantity">10 mg</td>
+									<td ID="pml.2.dosageintakemode">Morgens 1 und 1 Tablette nehmen</td>
+									<td ID="pml.2.dosagemorning">1</td>
+									<td ID="pml.2.dosagelunch">0</td>
+									<td ID="pml.2.dosageevening">1</td>
+									<td ID="pml.2.dosagenight">0</td>
+									<td ID="pml.2.routecode">oral</td>
+									<td ID="pml.2.note"></td>
+									<td ID="pml.2.datefromto"></td>
+									<td ID="pml.2.reason">Bluthochdruck</td>
 								</tr>
 							</tbody>
 						</table>
 					</text>
-
-
-
 					<entry>
-
 						<substanceAdministration classCode="SBADM"
 							moodCode="INT">
 							<!-- IHE PHARM MTP Required element indicating the Medication Treatment 
@@ -193,21 +178,25 @@
 							<templateId root="2.16.840.1.113883.10.20.1.24" />
 							<!-- PCC Medication Entry Content Module -->
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
-							<!-- CH-EMED Medication Treatment Plan Item Entry Content Module -->
-							<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.1.10.4.1" />
+							<!-- CH-PHARM Medication Treatment Plan Item Entry Content Module -->
+							<templateId root="2.16.756.5.30.1.1.10.4.34" />
 
-							<!-- Split dosing -->
+							<!-- split dosing -->
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
 
+
 							<!-- ID of mtp item, PCC TF2 6.3.4.16.6 -->
-							<id root="2.16.756.5.30.1.1.1.1" extension="bcdc9970-4778-11e6-beb8-9e71128cae77" />
+							<id root="17931678-20b4-11e6-b67b-9e71128cae77" />
 
 							<text>
-								<reference value="#mtp.1" />
+								<reference value="#pml.1" />
 							</text>
 							<statusCode code="completed" />
 							<effectiveTime xsi:type="IVL_TS">
 								<low value="20120204" />
+							</effectiveTime>
+							<effectiveTime operator='A' xsi:type='EIVL_TS'>
+								<event code='ACM' />
 							</effectiveTime>
 							<routeCode code="PO" displayName="Oral"
 								codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
@@ -218,13 +207,14 @@
 									<templateId root="2.16.840.1.113883.10.20.1.53" />
 									<manufacturedMaterial classCode="MMAT"
 										determinerCode="KIND">
-										<!-- CDACH-EMED Manufactured Material Content Module -->
-										<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.2" />
+										<!-- CH-PHARM Manufactured Material Content Module -->
+										<templateId root="2.16.756.5.30.1.1.10.4.33" />
+										<!-- http://compendium.ch/prod/triatec-tabl-2-5-mg/de -->
 										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
 										<code code="C07AB02" codeSystem="2.16.840.1.113883.6.73"
 											codeSystemName="ATC WHO" displayName="Metoprolol">
 											<originalText>
-												<reference value="#mtp.1.ingredient" />
+												<reference value="#pml.1.ingredient" />
 											</originalText>
 										</code>
 										<name>BELOC ZOK Ret Tabl 50 mg</name>
@@ -263,51 +253,71 @@
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
+							<!-- dosage insruction -->
 							<entryRelationship typeCode='COMP'>
-								<!-- morgens 1 stück -->
-								<sequenceNumber value='1' />
 								<substanceAdministration classCode='SBADM'
 									moodCode='INT'>
-									<effectiveTime xsi:type='EIVL_TS'>
-										<event code='ACM' />
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.6' />
+									<!-- Split dosing -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+									<effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+										xsi:type="IVL_TS">
+										<low value="20120204" />
 									</effectiveTime>
-									<doseQuantity>
-										<center value="1" />
-									</doseQuantity>
+									<routeCode code="PO" displayName="Oral"
+										codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
 									<consumable>
 										<manufacturedProduct>
-											<manufacturedMaterial nullFlavor="NA" />
+											<manufacturedMaterial nullFlavor='NA' />
 										</manufacturedProduct>
 									</consumable>
-								</substanceAdministration>
-							</entryRelationship>
-							<entryRelationship typeCode='COMP'>
-								<!-- abends 0.5 stück -->
-								<sequenceNumber value='2' />
-								<substanceAdministration classCode='SBADM'
-									moodCode='INT'>
-									<effectiveTime xsi:type='EIVL_TS'>
-										<event code='ACV' />
-									</effectiveTime>
-									<doseQuantity>
-										<center value="0.5" />
-									</doseQuantity>
-									<consumable>
-										<manufacturedProduct>
-											<manufacturedMaterial nullFlavor="NA" />
-										</manufacturedProduct>
-									</consumable>
+									<entryRelationship typeCode='COMP'>
+										<!-- morgens 1 stück -->
+										<sequenceNumber value='1' />
+										<substanceAdministration classCode='SBADM'
+											moodCode='INT'>
+											<effectiveTime xsi:type='EIVL_TS'>
+												<event code='ACM' />
+											</effectiveTime>
+											<doseQuantity>
+												<center value="1" />
+											</doseQuantity>
+											<consumable>
+												<manufacturedProduct>
+													<manufacturedMaterial nullFlavor="NA" />
+												</manufacturedProduct>
+											</consumable>
+										</substanceAdministration>
+									</entryRelationship>
+									<entryRelationship typeCode='COMP'>
+										<!-- abends 0.5 stück -->
+										<sequenceNumber value='2' />
+										<substanceAdministration classCode='SBADM'
+											moodCode='INT'>
+											<effectiveTime xsi:type='EIVL_TS'>
+												<event code='ACV' />
+											</effectiveTime>
+											<doseQuantity>
+												<center value="0.5" />
+											</doseQuantity>
+											<consumable>
+												<manufacturedProduct>
+													<manufacturedMaterial nullFlavor="NA" />
+												</manufacturedProduct>
+											</consumable>
+										</substanceAdministration>
+									</entryRelationship>
 								</substanceAdministration>
 							</entryRelationship>
 							<entryRelationship typeCode="RSON">
 								<observation classCode="OBS" moodCode="EVN">
-									<templateId root="2.16.756.5.30.1.127.77.4.10.20" />
+									<templateId root="2.16.756.5.30.1.1.10.4.41" />
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1"
 										displayName="Problem" />
 									<statusCode code="completed" />
 									<value xsi:type="CD" nullFlavor="OTH">
 										<originalText>
-											<reference value="#mtp.1.reason" />
+											<reference value="#pml.1.reason" />
 										</originalText>
 									</value>
 								</observation>
@@ -317,7 +327,7 @@
 									classCode="SBADM">
 									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.11" />
 									<text>
-										<reference value="#mtp.1.dosageintakemode" />
+										<reference value="#pml.1.dosageintakemode" />
 									</text>
 									<consumable>
 										<manufacturedProduct>
@@ -333,11 +343,30 @@
 									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
 										codeSystemName="LOINC" displayName="Annotation comment" />
 									<text>
-										<reference value="#mtp.1.note" />
+										<reference value="#pml.1.note" />
 									</text>
 									<statusCode code="completed" />
 								</act>
 							</entryRelationship>
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<id root="17931678-20b4-11e6-b67b-9e71128cae77" />
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
+										displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+									<reference typeCode="XCRPT">
+										<externalDocument>
+											<id root="17931678-20b4-11e6-b67b-9e71128cae77" />
+										</externalDocument>
+									</reference>
+								</substanceAdministration>
+							</entryRelationship>
+
 						</substanceAdministration>
 					</entry>
 					<entry>
@@ -350,18 +379,19 @@
 							<templateId root="2.16.840.1.113883.10.20.1.24" />
 							<!-- PCC Medication Entry Content Module -->
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
-							<!-- CH-EMED Medication Treatment Plan Item Entry Content Module -->
-							<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.1.10.4.1" />
+							<!-- CH-PHARM Medication Treatment Plan Item Entry Content Module -->
+							<templateId root="2.16.756.5.30.1.1.10.4.34" />
 
 							<!-- A normal substanceAdministration act that may not contain any 
 								subordinate substanceAdministration acts. -->
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
 
+
 							<!-- ID of mtp item, PCC TF2 6.3.4.16.6 -->
-							<id root="2.16.756.5.30.1.1.1.1" extension="068e887c-2270-11e6-b67b-9e71128cae77" />
+							<id root="5712fffe-20c6-11e6-b67b-9e71128cae77" />
 
 							<text>
-								<reference value="#mtp.2" />
+								<reference value="#pml.2" />
 							</text>
 							<statusCode code="completed" />
 							<effectiveTime xsi:type="IVL_TS">
@@ -377,10 +407,6 @@
 							</effectiveTime>
 							<routeCode code="PO" displayName="Oral"
 								codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
-							<doseQuantity>
-								<center value="1">
-								</center>
-							</doseQuantity>
 							<consumable>
 								<manufacturedProduct classCode="MANU"
 									xmlns:pharm="urn:ihe:pharm:medication">
@@ -388,14 +414,14 @@
 									<templateId root="2.16.840.1.113883.10.20.1.53" />
 									<manufacturedMaterial classCode="MMAT"
 										determinerCode="KIND">
-										<!-- CDACH-EMED Manufactured Material Content Module -->
-										<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.2" />
+										<!-- CH-PHARM Manufactured Material Content Module -->
+										<templateId root="2.16.756.5.30.1.1.10.4.33" />
 										<!-- Medicine Entry Module -->
 										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
 										<code code="C08CA01" codeSystem="2.16.840.1.113883.6.73"
 											codeSystemName="ATC WHO" displayName="amlodipine">
 											<originalText>
-												<reference value="#mtp.2.ingredient" />
+												<reference value="#pre.1.ingredient" />
 											</originalText>
 										</code>
 										<name>NORVASC Tabl 10 mg</name>
@@ -436,23 +462,23 @@
 							</consumable>
 							<entryRelationship typeCode="RSON">
 								<observation classCode="OBS" moodCode="EVN">
-									<templateId root="2.16.756.5.30.1.127.77.4.10.20" />
+									<templateId root="2.16.756.5.30.1.1.10.4.41" />
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1"
 										displayName="Problem" />
 									<statusCode code="completed" />
 									<value xsi:type="CD" nullFlavor="OTH">
 										<originalText>
-											<reference value="#mtp.2.reason" />
+											<reference value="#pml.2.reason" />
 										</originalText>
 									</value>
 								</observation>
 							</entryRelationship>
-						<entryRelationship typeCode="COMP">
+							<entryRelationship typeCode="COMP">
 								<substanceAdministration moodCode="INT"
 									classCode="SBADM">
 									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.11" />
 									<text>
-										<reference value="#mtp.1.dosageintakemode" />
+										<reference value="#pml.2.dosageintakemode" />
 									</text>
 									<consumable>
 										<manufacturedProduct>
@@ -468,11 +494,30 @@
 									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
 										codeSystemName="LOINC" displayName="Annotation comment" />
 									<text>
-										<reference value="#mtp.1.note" />
+										<reference value="#pml.2.note" />
 									</text>
 									<statusCode code="completed" />
 								</act>
 							</entryRelationship>
+							<entryRelationship typeCode='REFR'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<id root="5712fffe-20c6-11e6-b67b-9e71128cae77" />
+									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
+										displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+									<reference typeCode="XCRPT">
+										<externalDocument>
+											<id root="5712fffe-20c6-11e6-b67b-9e71128cae77" />
+										</externalDocument>
+									</reference>
+								</substanceAdministration>
+							</entryRelationship>
+
 						</substanceAdministration>
 					</entry>
 				</section>
