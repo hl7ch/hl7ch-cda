@@ -15,6 +15,7 @@ History:
 2014.03.21: Tony Schaller, medshare GmbH (Erweiterungen für DMST; CDA-CH-SMCP)
 2015.05.29: Tony Schaller, medshare GmbH (Optimierungen bei der Anzeige von Telefonnummern)
 2015.05.29: Tony Schaller, medshare GmbH (Optimierungen bei der Anzeige von ZSR-Nummern)
+2017.07.05: Tony Schaller, medshare GmbH (Einige weitere französische Übersetzungen)
 
 ********************************************************
 -->
@@ -140,12 +141,12 @@ History:
   <text language="en" value="Assurance" displayName="Assurance"/>
 
   <text language="de" value="Referrer" displayName="Einweisende Instanz"/>
-	<text language="fr" value="Referrer" displayName="tbd Referrer"/>
+	<text language="fr" value="Referrer" displayName="Organisme ayant ordonné l'admission"/>
   <text language="it" value="Referrer" displayName="tbd Referrer"/>
   <text language="en" value="Referrer" displayName="Referrer"/>
 
   <text language="de" value="OrderPlacer" displayName="Auftraggeber"/>
-	<text language="fr" value="OrderPlacer" displayName="tbd Order placer"/>
+	<text language="fr" value="OrderPlacer" displayName="Client"/>
   <text language="it" value="OrderPlacer" displayName="tbd Order placer"/>
   <text language="en" value="OrderPlacer" displayName="Order placer"/>
 
@@ -321,8 +322,8 @@ History:
   <text language="it" value="2.16.756.5.30.1.129.1.1.1" displayName="SOAS-ID"/>
   <text language="en" value="2.16.756.5.30.1.129.1.1.1" displayName="SOAS-ID"/>
   
-  <text language="de" value="EmergencyContacts" displayName="Kontaktadressen für den Notfall"/>
-  <text language="fr" value="EmergencyContacts" displayName="tbd fr 'EmergencyContacts'"/>
+  <text language="de" value="EmergencyContacts" displayName="Notfallkontakte"/>
+  <text language="fr" value="EmergencyContacts" displayName="Contacts d'urgence"/>
   <text language="it" value="EmergencyContacts" displayName="tbd it 'EmergencyContacts'"/>
   <text language="en" value="EmergencyContacts" displayName="Emergency contacts"/>
 
@@ -382,7 +383,7 @@ History:
   <text language="en" value="AssociatedEntityRole" displayName="Role"/>
   
   <text language="de" value="Organisation" displayName="Organisation"/>
-  <text language="fr" value="Organisation" displayName="tbd fr 'Organisation'"/>
+  <text language="fr" value="Organisation" displayName="Organisation"/>
   <text language="it" value="Organisation" displayName="tbd it 'Organisation'"/>
   <text language="en" value="Organisation" displayName="Organisation"/>
 
