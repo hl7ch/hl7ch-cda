@@ -51,6 +51,7 @@
 					<family>Wegmüller</family>
 					<given>Monika</given>
 				</name>
+				<administrativeGenderCode nullFlavor="NI" />
 				<birthTime value="1943" />
 			</patient>
 		</patientRole>
@@ -67,6 +68,9 @@
 				</name>
 			</assignedPerson>
 			<representedOrganization>
+				<id nullFlavor="NI" />
+				<name>Hauszarzt</name>
+				<telecom nullFlavor="NI" />
 				<addr>
 					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
 					<postalCode>8005</postalCode>
@@ -79,7 +83,7 @@
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id nullFlavor="NI" />
+				<id extension="7601000000000" root="2.51.1.3" />
 				<name>Hausarzt</name>
 			</representedCustodianOrganization>
 		</assignedCustodian>
@@ -92,13 +96,14 @@
 			<id nullFlavor="NI" />
 			<assignedPerson>
 				<name>
+					<given>Familien</given>				
 					<family>Hausarzt</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
 
-	<component>
+	<component contextConductionInd='true'>
 		<structuredBody>
 			<component>
 				<section>
@@ -195,15 +200,14 @@
 							<routeCode code="PO" displayName="Oral"
 								codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
 							<consumable>
+
 								<manufacturedProduct classCode="MANU"
 									xmlns:pharm="urn:ihe:pharm:medication">
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
 									<templateId root="2.16.840.1.113883.10.20.1.53" />
 									<manufacturedMaterial classCode="MMAT"
 										determinerCode="KIND">
-										<!-- CH-PHARM Manufactured Material Content Module -->
 										<templateId root="2.16.756.5.30.1.1.10.4.33" />
-										<!-- Medicine Entry Module -->
 										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
 										<code code="C08CA01" codeSystem="2.16.840.1.113883.6.73"
 											codeSystemName="ATC WHO" displayName="amlodipine">
@@ -217,10 +221,8 @@
 										<pharm:asContent classCode="CONT">
 											<pharm:containerPackagedMedicine
 												classCode="CONT" determinerCode="INSTANCE">
-												<!-- National medicinal product code (package-level) -->
 												<pharm:code code="7680500440334" codeSystem="2.51.1.1"
 													codeSystemName="GTIN" displayName="NORVASC Tabl 10 mg" />
-												<!-- Brand name (package) -->
 												<pharm:name>NORVASC Tabl 10 mg</pharm:name>
 												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
 													displayName="Tablet" />
@@ -246,7 +248,9 @@
 										</pharm:ingredient>
 									</manufacturedMaterial>
 								</manufacturedProduct>
+
 							</consumable>
+
 							<entryRelationship typeCode="RSON">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.41" />
@@ -260,6 +264,7 @@
 									</value>
 								</observation>
 							</entryRelationship>
+
 							<entryRelationship typeCode="COMP">
 								<substanceAdministration moodCode="INT"
 									classCode="SBADM">
@@ -286,6 +291,7 @@
 									<statusCode code="completed" />
 								</act>
 							</entryRelationship>
+
 						</substanceAdministration>
 					</entry>
 				</section>

@@ -14,7 +14,6 @@
 	<realmCode code="CHE" />
 
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
-
 	<!-- IHE PCC -->
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
 	
@@ -38,7 +37,8 @@
 
 	<effectiveTime value="20111129110000+0100" />
 
-	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" displayName="Normal" />
+  <confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" displayName="Normal" /> 	
+  
 
 	<languageCode code="de-CH" />
 
@@ -50,6 +50,7 @@
 					<family>Wegmüller</family>
 					<given>Monika</given>
 				</name>
+				<administrativeGenderCode nullFlavor="NI" />
 				<birthTime value="1943" />
 			</patient>
 		</patientRole>
@@ -66,6 +67,9 @@
 				</name>
 			</assignedPerson>
 			<representedOrganization>
+				<id nullFlavor="NI" />
+				<name>Hauszarzt</name>
+				<telecom nullFlavor="NI" />
 				<addr>
 					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
 					<postalCode>8005</postalCode>
@@ -78,7 +82,7 @@
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id nullFlavor="NI" />
+				<id extension="7601000000000" root="2.51.1.3" />
 				<name>Hausarzt</name>
 			</representedCustodianOrganization>
 		</assignedCustodian>
@@ -97,7 +101,7 @@
 		</assignedEntity>
 	</legalAuthenticator>
 
-	<component>
+	<component contextConductionInd='true'>
 		<structuredBody>
 			<component>
 				<section>
