@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.16643" name="SeverityObservation" displayName="SeverityObservation" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="ch-pharm-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>Potential values for observations of severity.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1063" identifierName="Observation&#160;Value"/>
+        <conceptList>
+            <concept code="H" codeSystem="2.16.840.1.113883.5.1063" displayName="High" level="1" type="L"/>
+            <concept code="L" codeSystem="2.16.840.1.113883.5.1063" displayName="Low" level="1" type="L"/>
+            <concept code="M" codeSystem="2.16.840.1.113883.5.1063" displayName="Moderate" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

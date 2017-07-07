@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.77.4.11.2" name="CH-EMED-TimingEvent" displayName="TimingEvent" effectiveDate="2016-06-30T14:58:13" statusCode="draft">
+        <sourceCodeSystem id="2.16.840.1.113883.5.139" identifierName="TimingEvent"/>
+        <conceptList>
+            <concept code="AC" codeSystem="2.16.840.1.113883.5.139" displayName="Before meal" level="1" type="L"/>
+            <concept code="HS" codeSystem="2.16.840.1.113883.5.139" codeSystemName="TimingEvent" displayName="Before sleep" level="1" type="L"/>
+            <concept code="ACD" codeSystem="2.16.840.1.113883.5.139" displayName="Before lunch" level="1" type="L"/>
+            <concept code="ACM" codeSystem="2.16.840.1.113883.5.139" displayName="Before breakfast" level="1" type="L"/>
+            <concept code="ACV" codeSystem="2.16.840.1.113883.5.139" displayName="Before dinner" level="1" type="L"/>
+            <concept code="C" codeSystem="2.16.840.1.113883.5.139" displayName="During meals" level="1" type="S"/>
+            <concept code="CD" codeSystem="2.16.840.1.113883.5.139" displayName="During lunch" level="2" type="L"/>
+            <concept code="CM" codeSystem="2.16.840.1.113883.5.139" displayName="During breakfast" level="2" type="L"/>
+            <concept code="CV" codeSystem="2.16.840.1.113883.5.139" displayName="During dinner" level="2" type="L"/>
+            <concept code="IC" codeSystem="2.16.840.1.113883.5.139" displayName="Between meals" level="1" type="L"/>
+            <concept code="ICD" codeSystem="2.16.840.1.113883.5.139" displayName="Between lunch and dinner" level="1" type="L"/>
+            <concept code="ICM" codeSystem="2.16.840.1.113883.5.139" displayName="Between breakfast and lunch" level="1" type="L"/>
+            <concept code="ICV" codeSystem="2.16.840.1.113883.5.139" displayName="Between dinner and the hour of sleep" level="1" type="L"/>
+            <concept code="PC" codeSystem="2.16.840.1.113883.5.139" displayName="After meal" level="1" type="L"/>
+            <concept code="PCD" codeSystem="2.16.840.1.113883.5.139" displayName="After lunch" level="1" type="L"/>
+            <concept code="PCM" codeSystem="2.16.840.1.113883.5.139" displayName="After breakfast" level="1" type="L"/>
+            <concept code="PCV" codeSystem="2.16.840.1.113883.5.139" displayName="After dinner" level="1" type="L"/>
+            <concept code="WAKE" codeSystem="2.16.840.1.113883.5.139" displayName="Waking up" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

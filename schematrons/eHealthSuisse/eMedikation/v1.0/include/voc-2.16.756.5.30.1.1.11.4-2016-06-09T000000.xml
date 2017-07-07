@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.11.4" name="SwissAuthorSpeciality" displayName="Swiss Author Speciality EPD" statusCode="cancelled" effectiveDate="2016-06-09T00:00:00" url="http://art-decor.org/decor/services/" ident="hl7chcda-" referencedFrom="ch-pharm-">
+        <desc language="de-CH">EPDV-EDI: Metadaten<br/>Medizinische Fachrichtung des Autors<br/>Nationale OID: 2.16.756.5.30.1.127.3.10.1.1.4</desc>
+        <sourceCodeSystem id="2.16.756.5.30.1.127.3.10.1.1.4" identifierName=""/>
+        <completeCodeSystem codeSystem="2.16.756.5.30.1.127.3.10.1.1.4" codeSystemName="epd_xds_authorSpeciality"/>
+        <conceptList>
+            <concept code="50001" codeSystem="2.16.756.5.30.1.127.3.10.1.1.4" displayName="Fachärztin/Facharzt für Allgemeine Innere Medizin" level="0" type="L"/>
+            <concept code="todo" codeSystem="2.16.756.5.30.1.127.3.10.1.1.4" displayName="todo structured import" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

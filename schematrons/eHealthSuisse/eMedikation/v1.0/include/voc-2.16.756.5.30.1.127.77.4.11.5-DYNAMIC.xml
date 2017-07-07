@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.77.4.11.5" name="CH-EMED-eRezeptType" displayName="eRezeptType" effectiveDate="2016-07-12T23:28:18" statusCode="cancelled">
+        <sourceCodeSystem id="2.16.756.5.30.1.127.77.4.11.5" identifierName=""/>
+        <conceptList>
+            <concept code="D" codeSystem="2.16.756.5.30.1.127.77.4.11.5" displayName="Dauerrezept" level="0" type="L"/>
+            <concept code="R" codeSystem="2.16.756.5.30.1.127.77.4.11.5" displayName="Rezept" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

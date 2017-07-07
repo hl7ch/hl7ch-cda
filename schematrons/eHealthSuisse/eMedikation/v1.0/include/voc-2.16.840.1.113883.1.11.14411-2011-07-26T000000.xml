@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.14411" name="OrderableDrugForm" displayName="OrderableDrugForm" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="ch-pharm-">
+        <sourceCodeSystem id="2.16.840.1.113883.5.85" identifierName="Orderable&#160;Drug&#160;Form"/>
+        <conceptList>
+            <concept code="_GasDrugForm" codeSystem="2.16.840.1.113883.5.85" displayName="GasDrugForm" level="1" type="A"/>
+            <concept code="GASINHL" codeSystem="2.16.840.1.113883.5.85" displayName="Gas for Inhalation" level="2" type="L"/>
+            <concept code="_GasLiquidMixture" codeSystem="2.16.840.1.113883.5.85" displayName="GasLiquidMixture" level="1" type="A"/>
+            <concept code="AER" codeSystem="2.16.840.1.113883.5.85" displayName="Aerosol" level="2" type="S"/>
+            <concept code="BAINHL" codeSystem="2.16.840.1.113883.5.85" displayName="Breath Activated Inhaler" level="3" type="L"/>
+            <concept code="INHLSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Inhalant Solution" level="3" type="L"/>
+            <concept code="MDINHL" codeSystem="2.16.840.1.113883.5.85" displayName="Metered Dose Inhaler" level="3" type="L"/>
+            <concept code="NASSPRY" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Spray" level="3" type="L"/>
+            <concept code="DERMSPRY" codeSystem="2.16.840.1.113883.5.85" displayName="Dermal Spray" level="2" type="L"/>
+            <concept code="FOAM" codeSystem="2.16.840.1.113883.5.85" displayName="Foam" level="2" type="S"/>
+            <concept code="FOAMAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Foam with Applicator" level="3" type="L"/>
+            <concept code="RECFORM" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal foam" level="3" type="L"/>
+            <concept code="VAGFOAM" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal foam" level="3" type="S"/>
+            <concept code="VAGFOAMAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal foam with applicator" level="4" type="L"/>
+            <concept code="RECSPRY" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Spray" level="2" type="L"/>
+            <concept code="VAGSPRY" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Spray" level="2" type="L"/>
+            <concept code="_GasSolidSpray" codeSystem="2.16.840.1.113883.5.85" displayName="GasSolidSpray" level="1" type="A"/>
+            <concept code="INHL" codeSystem="2.16.840.1.113883.5.85" displayName="Inhalant" level="2" type="S"/>
+            <concept code="BAINHLPWD" codeSystem="2.16.840.1.113883.5.85" displayName="Breath Activated Powder Inhaler" level="3" type="L"/>
+            <concept code="INHLPWD" codeSystem="2.16.840.1.113883.5.85" displayName="Inhalant Powder" level="3" type="L"/>
+            <concept code="MDINHLPWD" codeSystem="2.16.840.1.113883.5.85" displayName="Metered Dose Powder Inhaler" level="3" type="L"/>
+            <concept code="NASINHL" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Inhalant" level="3" type="L"/>
+            <concept code="ORINHL" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Inhalant" level="3" type="L"/>
+            <concept code="PWDSPRY" codeSystem="2.16.840.1.113883.5.85" displayName="Powder Spray" level="2" type="L"/>
+            <concept code="SPRYADAPT" codeSystem="2.16.840.1.113883.5.85" displayName="Spray with Adaptor" level="2" type="L"/>
+            <concept code="_Liquid" codeSystem="2.16.840.1.113883.5.85" displayName="Liquid" level="1" type="A"/>
+            <concept code="LIQCLN" codeSystem="2.16.840.1.113883.5.85" displayName="Liquid Cleanser" level="2" type="S"/>
+            <concept code="LIQSOAP" codeSystem="2.16.840.1.113883.5.85" displayName="Medicated Liquid Soap" level="3" type="L"/>
+            <concept code="SHMP" codeSystem="2.16.840.1.113883.5.85" displayName="Shampoo" level="3" type="L"/>
+            <concept code="OIL" codeSystem="2.16.840.1.113883.5.85" displayName="Oil" level="2" type="S"/>
+            <concept code="TOPOIL" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Oil" level="3" type="L"/>
+            <concept code="SOL" codeSystem="2.16.840.1.113883.5.85" displayName="Solution" level="2" type="S"/>
+            <concept code="DROP" codeSystem="2.16.840.1.113883.5.85" displayName="Drops" level="3" type="S"/>
+            <concept code="NDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Drops" level="4" type="L"/>
+            <concept code="OPDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Drops" level="4" type="L"/>
+            <concept code="ORDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Drops" level="4" type="L"/>
+            <concept code="OTDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Otic Drops" level="4" type="L"/>
+            <concept code="IPSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Intraperitoneal Solution" level="3" type="L"/>
+            <concept code="IRSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Irrigation Solution" level="3" type="S"/>
+            <concept code="DOUCHE" codeSystem="2.16.840.1.113883.5.85" displayName="Douche" level="4" type="L"/>
+            <concept code="ENEMA" codeSystem="2.16.840.1.113883.5.85" displayName="Enema" level="4" type="L"/>
+            <concept code="OPIRSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Irrigation Solution" level="4" type="L"/>
+            <concept code="IVSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Intravenous Solution" level="3" type="L"/>
+            <concept code="ORALSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Solution" level="3" type="S"/>
+            <concept code="ORDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Drops" level="4" type="L"/>
+            <concept code="ELIXIR" codeSystem="2.16.840.1.113883.5.85" displayName="Elixir" level="4" type="L"/>
+            <concept code="RINSE" codeSystem="2.16.840.1.113883.5.85" displayName="Mouthwash/Rinse" level="4" type="L"/>
+            <concept code="SYRUP" codeSystem="2.16.840.1.113883.5.85" displayName="Syrup" level="4" type="L"/>
+            <concept code="RECSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Solution" level="3" type="L"/>
+            <concept code="TOPSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Solution" level="3" type="S"/>
+            <concept code="LIN" codeSystem="2.16.840.1.113883.5.85" displayName="Liniment" level="4" type="L"/>
+            <concept code="MUCTOPSOL" codeSystem="2.16.840.1.113883.5.85" displayName="Mucous Membrane Topical Solution" level="4" type="L"/>
+            <concept code="TINC" codeSystem="2.16.840.1.113883.5.85" displayName="Tincture" level="4" type="L"/>
+            <concept code="_LiquidLiquidEmulsion" codeSystem="2.16.840.1.113883.5.85" displayName="LiquidLiquidEmulsion" level="1" type="A"/>
+            <concept code="CRM" codeSystem="2.16.840.1.113883.5.85" displayName="Cream" level="2" type="S"/>
+            <concept code="NASCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Cream" level="3" type="L"/>
+            <concept code="OPCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Cream" level="3" type="L"/>
+            <concept code="ORCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Cream" level="3" type="L"/>
+            <concept code="OTCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Otic Cream" level="3" type="L"/>
+            <concept code="RECCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Cream" level="3" type="L"/>
+            <concept code="TOPCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Cream" level="3" type="L"/>
+            <concept code="VAGCRM" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Cream" level="3" type="S"/>
+            <concept code="VAGCRMAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Cream with Applicator" level="4" type="L"/>
+            <concept code="LTN" codeSystem="2.16.840.1.113883.5.85" displayName="Lotion" level="2" type="S"/>
+            <concept code="TOPLTN" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Lotion" level="3" type="L"/>
+            <concept code="OINT" codeSystem="2.16.840.1.113883.5.85" displayName="Ointment" level="2" type="S"/>
+            <concept code="NASOINT" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Ointment" level="3" type="L"/>
+            <concept code="OINTAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Ointment with Applicator" level="3" type="L"/>
+            <concept code="OPOINT" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Ointment" level="3" type="L"/>
+            <concept code="OTOINT" codeSystem="2.16.840.1.113883.5.85" displayName="Otic Ointment" level="3" type="L"/>
+            <concept code="RECOINT" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Ointment" level="3" type="L"/>
+            <concept code="TOPOINT" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Ointment" level="3" type="L"/>
+            <concept code="VAGOINT" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Ointment" level="3" type="S"/>
+            <concept code="VAGOINTAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Ointment with Applicator" level="4" type="L"/>
+            <concept code="_LiquidSolidSuspension" codeSystem="2.16.840.1.113883.5.85" displayName="LiquidSolidSuspension" level="1" type="A"/>
+            <concept code="GEL" codeSystem="2.16.840.1.113883.5.85" displayName="Gel" level="2" type="S"/>
+            <concept code="GELAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Gel with Applicator" level="3" type="L"/>
+            <concept code="NASGEL" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Gel" level="3" type="L"/>
+            <concept code="OPGEL" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Gel" level="3" type="L"/>
+            <concept code="OTGEL" codeSystem="2.16.840.1.113883.5.85" displayName="Otic Gel" level="3" type="L"/>
+            <concept code="TOPGEL" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Gel" level="3" type="L"/>
+            <concept code="URETHGEL" codeSystem="2.16.840.1.113883.5.85" displayName="Urethral Gel" level="3" type="L"/>
+            <concept code="VAGGEL" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Gel" level="3" type="S"/>
+            <concept code="VGELAPL" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Gel with Applicator" level="4" type="L"/>
+            <concept code="PASTE" codeSystem="2.16.840.1.113883.5.85" displayName="Paste" level="2" type="S"/>
+            <concept code="PUD" codeSystem="2.16.840.1.113883.5.85" displayName="Pudding" level="3" type="L"/>
+            <concept code="TPASTE" codeSystem="2.16.840.1.113883.5.85" displayName="Toothpaste" level="3" type="L"/>
+            <concept code="SUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Suspension" level="2" type="S"/>
+            <concept code="ITSUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Intrathecal Suspension" level="3" type="L"/>
+            <concept code="OPSUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Suspension" level="3" type="L"/>
+            <concept code="ORSUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Suspension" level="3" type="S"/>
+            <concept code="ERSUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Extended-Release Suspension" level="4" type="S"/>
+            <concept code="ERSUSP12" codeSystem="2.16.840.1.113883.5.85" displayName="12 Hour Extended-Release Suspension" level="5" type="L"/>
+            <concept code="ERSUSP24" codeSystem="2.16.840.1.113883.5.85" displayName="24 Hour Extended Release Suspension" level="5" type="L"/>
+            <concept code="OTSUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Otic Suspension" level="3" type="L"/>
+            <concept code="RECSUSP" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Suspension" level="3" type="L"/>
+            <concept code="_SolidDrugForm" codeSystem="2.16.840.1.113883.5.85" displayName="SolidDrugForm" level="1" type="A"/>
+            <concept code="BAR" codeSystem="2.16.840.1.113883.5.85" displayName="Bar" level="2" type="S"/>
+            <concept code="BARSOAP" codeSystem="2.16.840.1.113883.5.85" displayName="Bar Soap" level="3" type="S"/>
+            <concept code="MEDBAR" codeSystem="2.16.840.1.113883.5.85" displayName="Medicated Bar Soap" level="4" type="L"/>
+            <concept code="CHEWBAR" codeSystem="2.16.840.1.113883.5.85" displayName="Chewable Bar" level="3" type="L"/>
+            <concept code="BEAD" codeSystem="2.16.840.1.113883.5.85" displayName="Beads" level="2" type="L"/>
+            <concept code="CAKE" codeSystem="2.16.840.1.113883.5.85" displayName="Cake" level="2" type="L"/>
+            <concept code="CEMENT" codeSystem="2.16.840.1.113883.5.85" displayName="Cement" level="2" type="L"/>
+            <concept code="CRYS" codeSystem="2.16.840.1.113883.5.85" displayName="Crystals" level="2" type="L"/>
+            <concept code="DISK" codeSystem="2.16.840.1.113883.5.85" displayName="Disk" level="2" type="L"/>
+            <concept code="FLAKE" codeSystem="2.16.840.1.113883.5.85" displayName="Flakes" level="2" type="L"/>
+            <concept code="GRAN" codeSystem="2.16.840.1.113883.5.85" displayName="Granules" level="2" type="L"/>
+            <concept code="GUM" codeSystem="2.16.840.1.113883.5.85" displayName="ChewingGum" level="2" type="L"/>
+            <concept code="PAD" codeSystem="2.16.840.1.113883.5.85" displayName="Pad" level="2" type="S"/>
+            <concept code="MEDPAD" codeSystem="2.16.840.1.113883.5.85" displayName="Medicated Pad" level="3" type="L"/>
+            <concept code="PATCH" codeSystem="2.16.840.1.113883.5.85" displayName="Patch" level="2" type="S"/>
+            <concept code="TPATCH" codeSystem="2.16.840.1.113883.5.85" displayName="Transdermal Patch" level="3" type="S"/>
+            <concept code="TPATH16" codeSystem="2.16.840.1.113883.5.85" displayName="16 Hour Transdermal Patch" level="4" type="L"/>
+            <concept code="TPATH24" codeSystem="2.16.840.1.113883.5.85" displayName="24 Hour Transdermal Patch" level="4" type="L"/>
+            <concept code="TPATH2WK" codeSystem="2.16.840.1.113883.5.85" displayName="Biweekly Transdermal Patch" level="4" type="L"/>
+            <concept code="TPATH72" codeSystem="2.16.840.1.113883.5.85" displayName="72 Hour Transdermal Patch" level="4" type="L"/>
+            <concept code="TPATHWK" codeSystem="2.16.840.1.113883.5.85" displayName="Weekly Transdermal Patch" level="4" type="L"/>
+            <concept code="PELLET" codeSystem="2.16.840.1.113883.5.85" displayName="Pellet" level="2" type="L"/>
+            <concept code="PILL" codeSystem="2.16.840.1.113883.5.85" displayName="Pill" level="2" type="S"/>
+            <concept code="CAP" codeSystem="2.16.840.1.113883.5.85" displayName="Capsule" level="3" type="S"/>
+            <concept code="ORCAP" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Capsule" level="4" type="S"/>
+            <concept code="ENTCAP" codeSystem="2.16.840.1.113883.5.85" displayName="Enteric Coated Capsule" level="5" type="S"/>
+            <concept code="ERENTCAP" codeSystem="2.16.840.1.113883.5.85" displayName="Extended Release Enteric Coated Capsule" level="6" type="L"/>
+            <concept code="ERCAP" codeSystem="2.16.840.1.113883.5.85" displayName="Extended Release Capsule" level="5" type="S"/>
+            <concept code="ERCAP12" codeSystem="2.16.840.1.113883.5.85" displayName="12 Hour Extended Release Capsule" level="6" type="L"/>
+            <concept code="ERCAP24" codeSystem="2.16.840.1.113883.5.85" displayName="24 Hour Extended Release Capsule" level="6" type="L"/>
+            <concept code="ERECCAP" codeSystem="2.16.840.1.113883.5.85" displayName="Extended Release Enteric Coated Capsule" level="6" type="L"/>
+            <concept code="TAB" codeSystem="2.16.840.1.113883.5.85" displayName="Tablet" level="3" type="S"/>
+            <concept code="ORTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Tablet" level="4" type="S"/>
+            <concept code="BUCTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Buccal Tablet" level="5" type="S"/>
+            <concept code="SRBUCTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Sustained Release Buccal Tablet" level="6" type="L"/>
+            <concept code="CAPLET" codeSystem="2.16.840.1.113883.5.85" displayName="Caplet" level="5" type="L"/>
+            <concept code="CHEWTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Chewable Tablet" level="5" type="L"/>
+            <concept code="CPTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Coated Particles Tablet" level="5" type="L"/>
+            <concept code="DISINTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Disintegrating Tablet" level="5" type="L"/>
+            <concept code="DRTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Delayed Release Tablet" level="5" type="L"/>
+            <concept code="ECTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Enteric Coated Tablet" level="5" type="S"/>
+            <concept code="ERECTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Extended Release Enteric Coated Tablet" level="6" type="L"/>
+            <concept code="ERTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Extended Release Tablet" level="5" type="S"/>
+            <concept code="ERECTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Extended Release Enteric Coated Tablet" level="6" type="L"/>
+            <concept code="ERTAB12" codeSystem="2.16.840.1.113883.5.85" displayName="12 Hour Extended Release Tablet" level="6" type="L"/>
+            <concept code="ERTAB24" codeSystem="2.16.840.1.113883.5.85" displayName="24 Hour Extended Release Tablet" level="6" type="L"/>
+            <concept code="ORTROCHE" codeSystem="2.16.840.1.113883.5.85" displayName="Lozenge/Oral Troche" level="5" type="L"/>
+            <concept code="SLTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Sublingual Tablet" level="5" type="L"/>
+            <concept code="VAGTAB" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Tablet" level="4" type="L"/>
+            <concept code="POWD" codeSystem="2.16.840.1.113883.5.85" displayName="Powder" level="2" type="S"/>
+            <concept code="TOPPWD" codeSystem="2.16.840.1.113883.5.85" displayName="Topical Powder" level="3" type="S"/>
+            <concept code="RECPWD" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Powder" level="4" type="L"/>
+            <concept code="VAGPWD" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Powder" level="4" type="L"/>
+            <concept code="SUPP" codeSystem="2.16.840.1.113883.5.85" displayName="Suppository" level="2" type="S"/>
+            <concept code="RECSUPP" codeSystem="2.16.840.1.113883.5.85" displayName="Rectal Suppository" level="3" type="L"/>
+            <concept code="URETHSUPP" codeSystem="2.16.840.1.113883.5.85" displayName="Urethral suppository" level="3" type="L"/>
+            <concept code="VAGSUPP" codeSystem="2.16.840.1.113883.5.85" displayName="Vaginal Suppository" level="3" type="L"/>
+            <concept code="SWAB" codeSystem="2.16.840.1.113883.5.85" displayName="Swab" level="2" type="S"/>
+            <concept code="MEDSWAB" codeSystem="2.16.840.1.113883.5.85" displayName="Medicated swab" level="3" type="L"/>
+            <concept code="WAFER" codeSystem="2.16.840.1.113883.5.85" displayName="Wafer" level="2" type="L"/>
+            <concept code="APPFUL" codeSystem="2.16.840.1.113883.5.85" displayName="Applicatorful" level="0" type="L"/>
+            <concept code="PUFF" codeSystem="2.16.840.1.113883.5.85" displayName="Puff" level="0" type="L"/>
+            <concept code="SCOOP" codeSystem="2.16.840.1.113883.5.85" displayName="Scoops" level="0" type="L"/>
+            <concept code="SPRY" codeSystem="2.16.840.1.113883.5.85" displayName="Sprays" level="0" type="L"/>
+            <concept code="DROP" codeSystem="2.16.840.1.113883.5.85" displayName="Drops" level="0" type="S"/>
+            <concept code="NDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Nasal Drops" level="1" type="L"/>
+            <concept code="OPDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Ophthalmic Drops" level="1" type="L"/>
+            <concept code="ORDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Oral Drops" level="1" type="L"/>
+            <concept code="OTDROP" codeSystem="2.16.840.1.113883.5.85" displayName="Otic Drops" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.77.4.11.3" name="CH-EMED-eMedicationCommentTyp" displayName="eMedicationCommentType" effectiveDate="2016-07-12T21:26:21" statusCode="draft">
+        <sourceCodeSystem id="2.16.756.5.30.1.127.77.4.11.3" identifierName=""/>
+        <conceptList>
+            <concept code="VAL" codeSystem="2.16.756.5.30.1.127.77.4.11.3" codeSystemName="SNOMED CT" displayName="Validierungsentscheid" level="0" type="L">
+                <desc language="de-CH">
+                    <span class="Apple-tab-span" style="white-space:pre"/>
+                </desc>
+            </concept>
+            <concept code="INT" codeSystem="2.16.756.5.30.1.127.77.4.11.3" displayName="Intervention" level="0" type="L"/>
+            <concept code="BEO" codeSystem="2.16.756.5.30.1.127.77.4.11.3" codeSystemName="SNOMED CT" displayName="Beobachtung" level="0" type="L"/>
+            <concept code="MED" codeSystem="2.16.756.5.30.1.127.77.4.11.3" codeSystemName="SNOMED CT" displayName="Medikationsanalyse" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

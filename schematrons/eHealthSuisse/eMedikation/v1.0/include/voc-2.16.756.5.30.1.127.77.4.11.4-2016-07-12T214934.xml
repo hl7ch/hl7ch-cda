@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.77.4.11.4" name="PCCTFVol2ProblemType" displayName="ProblemType" effectiveDate="2016-07-12T21:49:34" statusCode="draft">
+        <desc language="en-US">see&#160;6.3.4.14.7 PCC TF Vol 2</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms"/>
+        <conceptList>
+            <concept code="64572001" codeSystem="2.16.840.1.113883.6.96" displayName="Condition" level="0" type="L"/>
+            <concept code="418799008" codeSystem="2.16.840.1.113883.6.96" displayName="Symptom" level="0" type="L"/>
+            <concept code="404684003" codeSystem="2.16.840.1.113883.6.96" displayName="Finding" level="0" type="L"/>
+            <concept code="409586006" codeSystem="2.16.840.1.113883.6.96" displayName="Complaint" level="0" type="L"/>
+            <concept code="248536006" codeSystem="2.16.840.1.113883.6.96" displayName="Functional limitation" level="0" type="L"/>
+            <concept code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem" level="0" type="L"/>
+            <concept code="282291009" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnosis" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>
