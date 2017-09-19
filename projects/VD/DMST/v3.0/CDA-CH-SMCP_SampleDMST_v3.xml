@@ -1179,24 +1179,6 @@ History:
 					<text>TODO narrative text not yet done, please see the machine readble part in the xml.</text>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST v3: 1.18 Enfants mineurs à charge -->
-							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
-							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<id root="9176C591-F768-44D4-A542-66FFB8722060" />
-							<code code='1.18.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Minor children in charge'/>
-							<text nullFlavor="NAV"/>
-							<statusCode code="completed"/>
-							<!-- DMST v3: 1.18.1 Code Enfants mineurs à charge -->
-							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='oui' />
-							<!-- DMST v3: 1.18.2 Précision Enfants mineurs à charge -->
-							<value xsi:type='ST'>Précision du système de garde</value>
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST v3: 1.11 Nationalité -->
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
 							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
@@ -1225,38 +1207,241 @@ History:
 							<value xsi:type='II' root='1.0.3166.2.2.3' extension='CHE' />
 						</observation>
 					</entry>
-					<!-- TODO rausnehmen 
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<!-/- DMST: 1.8 Origine -/->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.OriginCityL3' />
-							<code code='67414-3' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Region of origin' />
-							<text><reference value='#todo'/></text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='ST'>Lausanne</value>
-							<!-/- TODO oder auch OID PLZ, sobald von Post registriert
-							<value xsi:type='CD' code='1000' codeSystem='TODO' displayName='Lausanne' />
-							-/->
+							<id root="D61AD9CE-0FAB-488E-B328-BF808BCCC083" />
+							<code code='1.13' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Residence permit'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 1.13 Permis de séjour -->
+							<value xsi:type='CD' code='C' codeSystem='2.16.756.5.30.1.112.3.1.201612.8' codeSystemName='dmst-res-perm' displayName='settlement permit' />
 						</observation>
 					</entry>
-					-->
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST: 1.19 Patient connu du CMS -->
+							<!-- DMST v3: 1.18 Enfants mineurs à charge -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="9176C591-F768-44D4-A542-66FFB8722060" />
+							<code code='1.18.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Minor children in charge'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 1.18.1 Code Enfants mineurs à charge -->
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='oui' />
+							<!-- DMST v3: 1.18.2 Précision Enfants mineurs à charge -->
+							<value xsi:type='ST'>Précision du système de garde</value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 1.20 Mandat pour inaptitude -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<code code='1.19' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Patient connu du CMS'/>
-							<text>
-								<reference value='#cms1'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='non' />
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="E57947BD-E96A-48F1-91ED-92BD9AE02219" />
+							<code code='1.20' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Mandate for incapacity'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 1.20.1 Code Mandat pour inaptitude -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 1.20.2 Précision Mandat pour inaptitude -->
+							<value xsi:type='CD' code='d' codeSystem='2.16.756.5.30.1.112.3.1.201612.5' codeSystemName='dmst-prec3' displayName='deposited' />
+							<!-- DMST v3: 1.20.3 Mandat pour inaptitude déposées auprès de -->
+							<value xsi:type='ST'>auprès de</value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 1.21 Plan de crise conjoint -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="E57947BD-E96A-48F1-91ED-92BD9AE02219" />
+							<code code='1.21' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Joint crisis plan'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 1.21.1 Code Plan de crise conjoint -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 1.21.2 Précision Plan de crise conjoint -->
+							<value xsi:type='CD' code='c' codeSystem='2.16.756.5.30.1.112.3.1.201612.9' codeSystemName='dmst-prec-pcc' displayName='to be considered between the various partners' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.1 RI (Revenu d’insertion) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="0F36EA29-D4CB-4942-9816-62B47F0D47B5" />
+							<code code='3.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='RI'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.1.1 Code RI -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.1.2 Précision RI -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.2 AVS (Assurance vieillesse et survivants) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="C2AFF5C7-AF68-4739-9AE8-CBA2787DF9E7" />
+							<code code='3.2' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='AVS'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.2.1 Code AVS -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.2.2 Précision AVS -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.3 AI (Assurance invalidité) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="48074399-3FFF-499C-A0BF-DFF5F750D429" />
+							<code code='3.3' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='AI'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.3.1 Code AI -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.3.2 Précision AI -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+							<!-- DMST v3: 3.3.3 Type AI -->
+							<value xsi:type='ST'>Description</value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.4 LPP (Prévoyance professionnelle) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="C2AFF5C7-AF68-4739-9AE8-CBA2787DF9E7" />
+							<code code='3.4' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='LPP'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.4.1 Code LPP -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.4.2 Précision LPP -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.5 PC (Prestations complémentaires) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="5EDA6D62-00DD-48DE-8C5C-3667199B7DAC" />
+							<code code='3.5' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='PC'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.5.1 Code PC -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.5.2 Précision PC -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.6 RFM (Remboursement des frais de maladie) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="999C6159-A7A7-49A9-A574-E9BC90848568" />
+							<code code='3.6' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='RFM'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.6.1 Code RFM -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.6.2 Précision RFM -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.7 API (Allocation pour impotence) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="83AED028-BBF2-43B0-AF2B-8F93A03F4381" />
+							<code code='3.7' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='API'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.7.1 Code API -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.7.2 Précision API -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.8 OVAM (Subside de l’Office vaudois de l’assurance-maladie) -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="6A24D032-698D-4A1C-B491-4FE36C70F686" />
+							<code code='3.8' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='OVAM'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.8.1 Code OVAM -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.8.2 Précision OVAM -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN'>
+							<!-- DMST v3: 3.9 Autres -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.1'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.69'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.33'/>
+							<id root="48074399-3FFF-499C-A0BF-DFF5F750D429" />
+							<code code='3.9' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Others'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 3.9.1 Code Autres -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 3.9.2 Précision Autres -->
+							<value xsi:type='CD' code='u' codeSystem='2.16.756.5.30.1.112.3.1.201612.10' codeSystemName='dmst-prec4' displayName='unknown' />
+							<!-- DMST v3: 3.9.3 Nom Autres -->
+							<value xsi:type='ST'>Nom</value>
 						</observation>
 					</entry>
 					<entry>
@@ -1272,71 +1457,6 @@ History:
 							<text nullFlavor="NAV"/>
 							<statusCode code="completed"/>
 							<value xsi:type='ST'>Peintre</value>
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST: 2.9 PC -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<code code='2.9' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='PC'/>
-							<text><reference value='#todo'/></text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='oui' />
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST: 2.10 API -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<code code='2.10' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='API'/>
-							<text><reference value='#todo'/></text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='non' />
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST v3: 3.3 AI -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<code code='TODO' codeSystem='TODO' codeSystemName='TODO' displayName='AI'/>
-							<text><reference value='#todo'/></text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='TODO' codeSystem='TODO' codeSystemName='TODO' displayName='TODO' />
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST: 2.12 OVAM -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<code code='2.12' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='OVAM'/>
-							<text><reference value='#todo'/></text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='U' codeSystem='2.16.756.5.30.1.112.3.1.201207.1' codeSystemName='SMCP_DefaultResponse' displayName='ne sait pas' />
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN'>
-							<!-- DMST: 2.13 Statut social -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<templateId root='2.16.840.1.113883.10.20.1.33'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.4'/>
-							<code code='2.13' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Statut social'/>
-							<text><reference value='#todo'/></text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='1' codeSystem='2.16.756.5.30.1.112.3.1.201207.4' codeSystemName='SMCP_SocialStatus' displayName='permis' />
 						</observation>
 					</entry>
 					<entry>
@@ -1653,6 +1773,24 @@ History:
 					<text>TODO narrative text not yet done, please see the machine readble part in the xml.</text>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.5'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='B4F30CBF-019E-425C-9664-BD3274402C99'/>
+							<code code='0.7' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Before the transfer, the person was taken care of'/>
+							<text><reference value='#todo'/></text>
+							<statusCode code='completed'/>
+							<effectiveTime>
+								<!-- DMST v3: 0.7.1  Avant le transfert, la personne a été prise en charge du … -->
+								<low value='20120616' />
+								<!-- DMST v3: 0.7.2  Avant le transfert, la personne a été prise en charge au … -->
+								<high value='20120630' />
+							</effectiveTime>
+							<value xsi:type='CD' nullFlavor='NAV' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST v3: 7.5 Projet de la personne -->
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.5'/>
 							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
@@ -1786,16 +1924,20 @@ History:
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST v3: 1.19 Directives anticipées -->
-							<templateId root='2.16.840.1.113883.10.20.1.17'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.11'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.78'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<templateId root='2.16.840.1.113883.10.20.1.17'/>
+							<id root='CB8A52C6-DE2A-41E2-B91C-AA2283D8F438'/>
 							<code code='304251008' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Resuscitation' />
-							<text>
-								<reference value='#pv1'/>
-							</text>
+							<text><reference value='#todo'/></text>
 							<statusCode code='completed'/>
 							<effectiveTime value='20130423'/>
+							<!-- DMST v3: 1.19.1 Code Directives anticipées -->
 							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 1.19.2 Précision Directives anticipées -->
+							<value xsi:type='CD' code='a' codeSystem='2.16.756.5.30.1.112.3.1.201612.5' codeSystemName='dmst-prec3' displayName='attached' />
 							<reference typeCode='REFR'>
 								<templateId root='2.16.840.1.113883.10.20.1.36'/>
 								<externalDocument classCode='DOC' moodCode='EVN'>
@@ -1809,16 +1951,22 @@ History:
 					<entry>
 						<observation classCode='OBS' moodCode='EVN'>
 							<!-- DMST v3: 1.19 Directives anticipées -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.11'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.78'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
 							<templateId root='2.16.840.1.113883.10.20.1.17'/>
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13.7'/>
+							<id root='91D40FFF-28AE-4B3A-AB73-214E9148799B'/>
 							<code code='52765003' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Intubation' />
-							<text>
-								<reference value='#pv2'/>
-							</text>
+							<text><reference value='#todo'/></text>
 							<statusCode code='completed'/>
 							<effectiveTime value='20130423'/>
-							<value xsi:type='BL' value='false'/>
+							<!-- DMST v3: 1.19.1 Code Directives anticipées -->
+							<value xsi:type='BL' value='true'/>
+							<!-- DMST v3: 1.19.2 Précision Directives anticipées -->
+							<value xsi:type='CD' code='d' codeSystem='2.16.756.5.30.1.112.3.1.201612.5' codeSystemName='dmst-prec3' displayName='deposited' />
+							<!-- DMST v3: 1.19.3 Directives anticipées déposées auprès de -->
+							<value xsi:type='ST'>auprès de</value>
 						</observation>
 					</entry>
 				</section>
@@ -1920,6 +2068,7 @@ History:
 			******************************************************** -->
 			<component>
 				<section>
+					<!-- DMST v3: 16.5 Médicaments pris le jour du transfert -->
 					<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.3.16'/>
 					<templateId root='2.16.756.5.30.1.1.10.3.36'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.3.19'/>
@@ -1929,48 +2078,44 @@ History:
 					<text>TODO narrative text not yet done, please see the machine readble part in the xml.</text>
 					<entry>
 						<substanceAdministration classCode='SBADM' moodCode='EVN'>
-							<!-- DMST v3: 16.6 Médicaments pris le jour du transfert -->
-							<templateId root='2.16.756.5.30.1.1.1.1.1' extension='CDA-CH.Body.MediL3' />
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.1'/>
 							<templateId root='2.16.840.1.113883.10.20.1.24'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7'/>
-							<id root='2.999' extension='328709' />
-							<code code='182904002' codeSystem='2.16.840.1.113883.6.96' codeSystemName='ActCode' displayName='Medikamentöse Therapie'/>
-							<text>
-								<reference value='#m2'/>
-							</text>
+							<id root='B380065F-4A71-41CE-B276-F93400E0BD43' />
+							<text><reference value='#TODO'/></text>
 							<statusCode code='completed'/>
 							<effectiveTime xsi:type='IVL_TS'>
-								<!-- Wirkzeitraum -->
+								<!-- Période actife-->
 								<low nullFlavor='UNK' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
+							<!-- Dosage 1-1-1 -->
 							<effectiveTime xsi:type='PIVL_TS' operator='A'>
-								<!-- Dosierung 1-0-0 -->
+								<!-- DMST v3: 16.5.2.2 Matin -->
 								<phase value='190001010800+0100'/>
 								<period value='24' unit='h'/>
 							</effectiveTime>
-							<priorityCode code='R' codeSystem='2.16.840.1.113883.5.7' codeSystemName='ActPriority' displayName='Routine'/>
-							<routeCode code='PO' codeSystem='2.16.840.1.113883.5.112' codeSystemName='RouteOfAdministration' displayName='schlucken, oral' />
-							<doseQuantity>
-								<!-- 1 Stück (z. B. Tablette) -->
-								<center value='1' unit='1'/>
-							</doseQuantity>
-							<rateQuantity nullFlavor='UNK' />
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
+								<!-- DMST v3: 16.5.2.3 Midi -->
+								<phase value='190001011200+0100'/>
+								<period value='24' unit='h'/>
+							</effectiveTime>
+							<effectiveTime xsi:type='PIVL_TS' operator='A'>
+								<!-- DMST v3: 16.5.2.4 Soir -->
+								<phase value='190001011800+0100'/>
+								<period value='24' unit='h'/>
+							</effectiveTime>
 							<consumable>
 								<manufacturedProduct>
 									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.7.2'/>
 									<templateId root='2.16.840.1.113883.10.20.1.53'/>
-									<id root='2.51.1.1' extension='7680569020096' />
 									<manufacturedMaterial>
-										<code code="C09BA03" codeSystem="2.16.840.1.113883.6.73">
+										<code nullFlavor='UNK'>
 											<originalText>
-												lisinopril and diuretics
 												<reference nullFlavor='UNK' />
 											</originalText>
-											<!-- Generic GroupCode -->
-											<translation code="C09BA03SETN000000010TABL" codeSystem="2.16.756.5.30.2.6.2"/>
 										</code>
+										<!-- DMST v3: 16.5.2.1 Déscription -->
 										<name>LISINOPRIL HCT Streuli Tabl 10/12.5 30 Stk</name>
 									</manufacturedMaterial>
 								</manufacturedProduct>
@@ -2095,6 +2240,8 @@ History:
 			******************************************************** -->
 			<component>
 				<section>
+					<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.3.19'/>
+					<templateId root='2.16.756.5.30.1.1.10.3.38'/>
 					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2'/>
 					<code code='11459-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='TRANSPORT MODE' />
 					<title>Mode de transport</title>
@@ -2102,7 +2249,10 @@ History:
 					<entry>
 						<act classCode='ACT' moodCode='EVN'>
 							<!-- Required Transport element -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.8'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.77'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1'/>
+							<id root='B8970E4B-5C54-44AD-B202-2ED2CD066ADF'/>
 							<!-- DMST v3: 16.4 Transport effectué par  -->
 							<code code='50' codeSystem='2.16.840.1.113883.6.102.4.2' codeSystemName='DEEDS4.02' displayName='Walk-in following transport via private transportation' >
 								<originalText>
@@ -2118,122 +2268,104 @@ History:
 								<low value='201306231000+0200' />
 								<high nullFlavor='UNK' />
 							</effectiveTime>
+							<performer typeCode='PRF'>
+								<assignedEntity>
+									<id root="3AD5712F-7941-4CA2-ACC6-C1BA844E0669"/>
+									<assignedPerson>
+										<name>
+											<given>Pierre</given>
+											<family>Taxi</family>
+										</name>
+									</assignedPerson>
+								</assignedEntity>
+							</performer>
 						</act>
 					</entry>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
-							<!-- DMST v3: 17.1 Transféré avec -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.10'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<code code='TODO' codeSystem='TODO' codeSystemName='TODO' displayName='Transferred with /Transféré avec' />
-							<text>
-								<reference value='#mt2_1'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='99' codeSystem='2.16.756.5.30.1.112.3.1.201207.9' codeSystemName='SMCP_TransportEffects' displayName='autre, préciser' />
-							<interpretationCode nullFlavor='NA' />
-							<methodCode nullFlavor='NA' />
-							<targetSiteCode nullFlavor='NA' />
-							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
-							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<act classCode='ACT' moodCode='EVN'>
-									<templateId root='2.16.840.1.113883.10.20.1.40'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
-									<text>
-										<reference value='#mt2_2'/>
-									</text>
-									<statusCode code='completed'/>
-								</act>
-							</entryRelationship>
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
-							<!-- DMST: 8.1 Transféré avec  -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<code code='8.1' codeSystem='2.16.756.5.30.1.1.1.1.3.6' codeSystemName='DMST' displayName='Transferred with /Transféré avec' />
-							<text>
-								<reference value='#mt2_3'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='01' codeSystem='2.16.756.5.30.1.112.3.1.201207.9' codeSystemName='SMCP_TransportEffects' displayName='lunettes' />
-							<interpretationCode nullFlavor='NA' />
-							<methodCode nullFlavor='NA' />
-							<targetSiteCode nullFlavor='NA' />
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
-							<!-- DMST v3: 16.5 Enveloppe de transfert -->
-							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<code code='TODO' codeSystem='TODO' codeSystemName='TODO' displayName='Enveloppe de transfert' />
-							<text>
-								<reference value='#mt3'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
+							<id root="073D5886-B3F8-4231-AF18-18A0F9C763F3" />
+							<code code='16.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Editor present on transfer day'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 16.1 Rédacteur du DMST présent le jour du transfert -->
 							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Nein/Non' />
-							<interpretationCode nullFlavor='NA' />
-							<methodCode nullFlavor='NA' />
-							<targetSiteCode nullFlavor='NA' />
 						</observation>
 					</entry>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
-							<!-- DMST v3: 17.2 Objets perdus -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.10'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<code code='TODO' codeSystem='TODO' codeSystemName='TODO' displayName='Subject(s) lost(s) /Objet(s) perdu(s)' />
-							<text>
-								<reference value='#mt4_1'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Ja/Oui' />
-							<interpretationCode nullFlavor='NA' />
-							<methodCode nullFlavor='NA' />
-							<targetSiteCode nullFlavor='NA' />
-							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
-							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<act classCode='ACT' moodCode='EVN'>
-									<templateId root='2.16.840.1.113883.10.20.1.40'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
-									<text>
-										<reference value='#mt4_2'/>
-									</text>
-									<statusCode code='completed'/>
-								</act>
-							</entryRelationship>
+							<id root="8C3C264F-AC1D-462B-991F-B956BA851489" />
+							<code code='16.4' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Transfer envelope'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 16.4 Enveloppe de transfert -->
+							<value xsi:type='CD' code='N' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Nein/Non' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.10'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root="817231FF-74A5-4E23-8BAF-076EE1CB83E8" />
+							<code code='16.5.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Drugs taken on the day of transfer'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 16.5.1 Médicaments pris le jour du transfert  -->
+							<value xsi:type='CD' code='p' codeSystem='2.16.756.5.30.1.112.3.1.201612.7' codeSystemName='dmst-transf-int' displayName='managed by the transferred person' />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST v3: 17.1 Transféré avec  -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.10'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root="F7B948B2-4CAF-42AC-B3F8-A62E6A4CAD86" />
+							<code code='17.1.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Transferred with'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 17.1.1 Code Transféré avec -->
+							<value xsi:type='CD' code='gla' codeSystem='2.16.756.5.30.1.112.3.1.201612.6' codeSystemName='dmst-transf-inv' displayName='glasses' />
+							<!-- DMST v3: 17.1.2 Précision Transféré avec autre -->
+							<value xsi:type='ST'>Précision Transféré avec autre</value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
+							<!-- DMST v3: 17.2 Objets perdus  -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.10'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
+							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root="FC98F818-2D8D-4F27-8096-6103DF2FE102" />
+							<code code='17.2.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Lost objects'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 17.2.1 Code Objets perdus -->
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Nein/Non' />
+							<!-- DMST v3: 17.2.2 Précision Objets perdus -->
+							<value xsi:type='ST'>Précision Objets perdus</value>
 						</observation>
 					</entry>
 					<entry>
 						<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 							<!-- DMST v3: 17.3 Objets en recherche -->
+							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.10'/>
+							<templateId root='2.16.756.5.30.1.1.10.4.71'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
-							<code code='TODO' codeSystem='TODO' codeSystemName='TODO' displayName='Object(s) search /Objet(s) en recherche' />
-							<text>
-								<reference value='#mt5_1'/>
-							</text>
-							<statusCode code='completed'/>
-							<effectiveTime nullFlavor='NASK' />
-							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Ja/Oui' />
-							<interpretationCode nullFlavor='NA' />
-							<methodCode nullFlavor='NA' />
-							<targetSiteCode nullFlavor='NA' />
-							<!-- entryRelationship: comments 1.3.6.1.4.1.19376.1.5.3.1.4.2 -->
-							<entryRelationship typeCode='SUBJ' inversionInd='true'>
-								<act classCode='ACT' moodCode='EVN'>
-									<templateId root='2.16.840.1.113883.10.20.1.40'/>
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.2'/>
-									<code code='48767-8' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Annotation comment' />
-									<text>
-										<reference value='#mt5_2'/>
-									</text>
-									<statusCode code='completed'/>
-								</act>
-							</entryRelationship>
+							<id root="C7507D2F-0770-4EA4-B80F-0E046F02C6C2" />
+							<code code='17.3.1' codeSystem='2.16.756.5.30.1.112.3.1.201612.1' codeSystemName='dmst-v3-fieldnr' displayName='Searching for objects'/>
+							<text nullFlavor="NAV"/>
+							<statusCode code="completed"/>
+							<!-- DMST v3: 17.3.1 Code Objets en recherche -->
+							<value xsi:type='CD' code='Y' codeSystem='2.16.756.5.30.2.1.1.3.1' codeSystemName='StandardCDABodySelektion' displayName='Nein/Non' />
+							<!-- DMST v3: 17.3.2 Précision Objets en recherche -->
+							<value xsi:type='ST'>Précision Objets en recherche</value>
 						</observation>
 					</entry>
 				</section>
