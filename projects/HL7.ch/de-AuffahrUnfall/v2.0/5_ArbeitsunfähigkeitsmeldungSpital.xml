@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************
+Fallbeispiel "Auffahrunfall" CDA-CH-II
+Arbeitsunfähigkeitszeugnis zuhanden Suva durch Kant. Spital
+
+History:
+2017.10.09: Tony Schaller, medshare GmbH (Creating dummy for CDA-CH V2)
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd' xmlns:sdtc='urn:hl7-org:sdtc'>
+	 <!-- This is only a dummy for CDA-CH V2. 
+	      The real sample is coming soon.
+	 -->
+</ClinicalDocument>
