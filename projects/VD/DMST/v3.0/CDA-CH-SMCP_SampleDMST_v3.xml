@@ -2142,7 +2142,9 @@ History:
 							<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.4.2'/>
 							<templateId root='2.16.756.5.30.1.1.10.4.70'/>
 							<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.13'/>
+							<id root='TODO auch in ART DECOR nachführen'/>
 							<code code='X-IATWRK' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Inability to work' />
+							<text>TODO auch in ART DECOR nachführen</text>
 							<effectiveTime>
 								<!-- DMST v3: 4.5.1 Depuis le  -->
 								<low value='20100201'/>
@@ -2259,9 +2261,7 @@ History:
 									<reference value='#mt1_2'/>
 								</originalText>
 							</code>
-							<text>
-								<reference value='#mt1_1'/>
-							</text>
+							<text><reference value='#TODO Kardinaltät in ART-DECOR auf 1..1 setzen'/></text>
 							<!-- DMST v3: 16.2 Transport effectué le -->
 							<!-- DMST v3: 16.3 Heure du transfert -->
 							<effectiveTime>
