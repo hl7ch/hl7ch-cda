@@ -10,6 +10,7 @@ History:
 2016.03.14 Tony Schaller, medshare GmbH (Refactoring after implementing the Schematron rules)
 2016.06.03 Tony Schaller, medshare GmbH (Finalization for approval by QUALAB)
 2017.02.01 Tony Schaller, medshare GmbH (Update for QUALAB EQK 2017)
+2017.11.14 Tony Schaller, medshare GmbH (Update for QUALAB EQK 2018)
 
 ********************************************************
 -->
@@ -55,6 +56,8 @@ History:
 
 	<!-- Liste der Laborbeobachtungen für die externe obligatorische Qualitätskontrolle (Whitelist von LOINC Codes zur Meldung EOQK) -->
 	<system codeSystemName='qc-labObsList' root='2.16.756.5.30.1.144.1.2.3'>
+		<code value='14957-5' displayName='Microalbumin [Mass/volume] in Urine' codeSystem='2.16.840.1.113883.6.20' specialtySection='18729-4' dataType='' codeEAL='1022.00' textEAL_de='Albumin, immunologisch, qn' textEAL_fr='Albumine, immunologique, qn' textEAL_it='Albumina, immunologico, qn' validFrom='20180101' validTo='N/A'/>
+		<code value='50949-7' displayName='Albumin [Presence] in Urine by Test strip' codeSystem='2.16.840.1.113883.6.20' specialtySection='18729-4' dataType='' codeEAL='1023.00' textEAL_de='Albumin, sq, Urin' textEAL_fr='Albumine urinaire, sq' textEAL_it='Albumina, nell’urina, sq' validFrom='20180101' validTo='N/A'/>
 		<code value='21551-7' displayName='t(15;17)(q24.1;q21.1)(PML,RARA) fusion transcript [Presence] in Blood or Tissue by Molecular genetics method' codeSystem='2.16.840.1.113883.6.20' specialtySection='26435-8' dataType='' codeEAL='2146.00' textEAL_de='Maligne Hämopathien' textEAL_fr='Hémopathies malignes' textEAL_it='Emopatie maligne' validFrom='20170101' validTo='N/A'/>
 		<code value='21819-8' displayName='t(8;21)(q22;q22.3)(RUNX1T1,RUNX1) fusion transcript [Presence] in Blood or Tissue by Molecular genetics method' codeSystem='2.16.840.1.113883.6.17' specialtySection='26435-8' dataType='' codeEAL='2146.00' textEAL_de='Maligne Hämopathien' textEAL_fr='Hémopathies malignes' textEAL_it='Emopatie maligne' validFrom='20170101' validTo='N/A'/>
 		<code value='21821-4' displayName='t(9;22)(q34.1;q11)(ABL1,BCR) fusion transcript [Presence] in Blood or Tissue by Molecular genetics method' codeSystem='2.16.840.1.113883.6.21' specialtySection='26435-8' dataType='' codeEAL='2146.00' textEAL_de='Maligne Hämopathien' textEAL_fr='Hémopathies malignes' textEAL_it='Emopatie maligne' validFrom='20170101' validTo='N/A'/>
