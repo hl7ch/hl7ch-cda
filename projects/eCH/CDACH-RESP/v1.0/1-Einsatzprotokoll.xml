@@ -4,6 +4,7 @@
 <!-- History: -->
 <!-- 2017.05.29: Oliver Egger, ahdis gmbh (Document Creation) -->
 <!-- 2017.09.05: Oliver Egger, ahdis gmbh (Update to Use Case 1) -->
+<!-- 2017.11.14: Oilver Egger, ahdis gmbh (Update to CDA-CH V2) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
@@ -11,19 +12,26 @@
 	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
 
 	<realmCode code="CHE" />
-
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
 
-	<!-- CDA-CH -->
-	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH" />
+	<!-- CDA-CH v2.0 ART-DECOR model - structuredBody.  -->
+	<!-- II 1..1 M  -->
+	<templateId root="2.16.756.5.30.1.1.10.1.9" />
+	<!-- HL7 CDA R2 (2005); contains ClinicalDocument.component as structuredBody.  -->
+	<templateId root="2.16.840.1.113883.10.12.2" />
+	<!-- HL7 CDA R2 (2005).  -->
+	<templateId root="2.16.840.1.113883.10.12.1" />
 
-	<!-- CDA-CH-RESP -->
-	<templateId root="2.16.756.5.30.1.1.10.1.2" />
+	<!-- A unique identifier for each CDA document instance.  -->
+	<!-- II 1..1 M  -->
+	<!-- Dataset: CDA-CH V2 hl7chcda-dataelement-217 Identification number of 
+		the document Identifikationsnummer des Dokuments EPRO-FDHA, Appendix 4, Exchange 
+		Formats (public consultation version) / Administrative information / Information 
+		about the document -->
+	<id root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
 
-	<!-- id of this document TODO enter oid for document for root -->
-	<id root="2.16.756.5.30.1.1.10.1.2" extension="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
-
-	<!-- Code used from -->
+	<!-- A LOINC based document type of a CDA document instance including a 
+		translation to the Swiss EPR XDS.b metadata.  -->
 	<code code="67796-3" codeSystem="2.16.840.1.113883.6.1"
 		codeSystemName="LOINC" displayName="EMS Patient Care Report">
 		<!-- Mapping to the Swiss EPR XDS.b metadata -->
@@ -33,24 +41,26 @@
 
 	<title>Einsatzprotokoll</title>
 
-	<!-- TOOD -->
-	<effectiveTime value="20170527110000+0100" />
+	<effectiveTime value="20161210121305+0100" />
 
 	<confidentialityCode code="1051000195109"
 		codeSystem="2.16.840.1.113883.6.96" displayName="Normal" />
 
 	<languageCode code="de-CH" />
 
+	<setId root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+	<versionNumber value="1" />
+
 	<recordTarget>
 		<patientRole>
 			<!-- cdachresp-dataelement-135 navs13 -->
 			<id root="2.16.756.5.32" extension="7560123123499" />
 
-			<!-- cdachresp-dataelement-486 VEKA -->
-			<!-- <id root="2.16.756.5.30.1.123.100.1" extension="" /> -->
+			<!-- OID SRZ, here dummy -->
+			<id root="2.16.756.5.30.1.9999999999.2" extension="762354" />
 
-			<!-- cdachresp-dataelement-7 PLS-ID TODO -->
-			<!-- <id root="" extension="" /> -->
+			<!-- cdachresp-dataelement-7 PLS-ID -->
+			<!-- <id root="2.16.756.5.30.1.143.20" extension="MU3242" /> -->
 
 			<addr use="HP">
 				<streetName>Bahnhofstrasse</streetName>
@@ -58,7 +68,6 @@
 				<city>Zürich</city>
 				<postalCode>8003</postalCode>
 			</addr>
-
 			<patient>
 				<name>
 					<!-- cdachresp-dataelement-8 -->
@@ -75,33 +84,41 @@
 		</patientRole>
 	</recordTarget>
 
+	<!-- Rettungssanitäterin -->
 	<author>
-		<!-- TODO functionCode tbd <functionCode code="TODO" codeSystem="2.16.840.1.113883.6.96" 
-			codeSystemName="SNOMED CT" displayName="TODO /> -->
+		<functionCode displayName="Andere Gesundheitsfachperson"
+			code="133932002" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+			<translation code="133932002" displayName="Betreuer"
+				codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+		</functionCode>
 		<time value="20170527110000+0100" />
 		<assignedAuthor>
-			<!-- TODO gln tbd -->
-			<id extension="760000001" root="2.51.1.3" />
+			<id extension="7601003330434" root="2.51.1.3" />
 			<assignedPerson>
 				<name>
-					<!-- TODO name tbd -->
-					<given>Kollege</given>
-					<family>Petra</family>
+					<given>Petra</given>
+					<family>Muster</family>
 				</name>
 			</assignedPerson>
-			<representedOrganization>
-				<id extension="7601002156363" root="2.51.1.3" />
-				<name>Schutz &amp; Rettung</name>
-				<telecom value="tel:+41.32.234.55.66" use="WP" />
-				<telecom value="fax:+41.32.234.55.67" use="WP" />
-				<addr use="WP">
-					<streetName>Westrasse</streetName>
-					<houseNumber>4</houseNumber>
-					<city>Zürich</city>
-					<postalCode>8036</postalCode>
-					<country>CHE</country>
-				</addr>
-			</representedOrganization>
+		</assignedAuthor>
+	</author>
+
+	<!-- Notarzt -->
+	<author>
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Physician">
+			<translation code="309343006" codeSystem="2.16.840.1.113883.6.96"
+				codeSystemName="SNOMED CT" displayName="Physician" />
+		</functionCode>
+		<time value="20170527110000+0100" />
+		<assignedAuthor>
+			<id extension="7601000028105" root="2.51.1.3" />
+			<assignedPerson>
+				<name>
+					<given>Notarzt</given>
+					<family>Hans</family>
+				</name>
+			</assignedPerson>
 		</assignedAuthor>
 	</author>
 
@@ -123,39 +140,117 @@
 		</assignedCustodian>
 	</custodian>
 
-	<!-- TODO -->
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<informationRecipient>
+				<name>USZ</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<id root="2.51.1.3" extension="7601002155939" />
+				<!-- cdachresp-dataelement-174 -->
+				<addr>
+					<streetAddressLine>Rämistrasse 100</streetAddressLine>
+					<city>Zürich</city>
+					<postalCode>8091</postalCode>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+
 	<legalAuthenticator>
-		<time />
+		<time value="20161210121305+0100" />
 		<signatureCode code="S" />
 		<assignedEntity>
-			<id nullFlavor="NI" />
+			<id extension="7601003330434" root="2.51.1.3" />
 			<assignedPerson>
 				<name>
-					<family>TODO</family>
+					<given>Petra</given>
+					<family>Muster</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
+	
+	<participant typeCode="HLD">
+		<templateId root="2.16.756.5.30.1.127.10.2.14" />
+		<time>
+			<low nullFlavor="NASK" />
+			<high nullFlavor="NASK" />
+		</time>
+		<associatedEntity classCode="POLHOLD">
+			<!-- cdachresp-dataelement-486 Nummer Versichertenkarte -->
+			<id root="2.16.756.5.30.1.123.100.1.1.1" extension="80756003760012390001" />
+			<scopingOrganization>
+				<!-- cdachresp-dataelement-525 Versicherung RESP -->
+				<name>KPT</name>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
 
-	<documentationOf>
-		<serviceEvent>
+	<participant typeCode="IND">
+		<templateId root="2.16.756.5.30.1.1.10.2.43" />
+		<templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4" />
+		<associatedEntity classCode="PRS">
+			<code code="WIFE" codeSystem="2.16.840.1.113883.5.111"
+				codeSystemName="HL7RoleCode" displayName="wife" />
+			<associatedPerson>
+				<name>
+					<family>Muster</family>
+					<given>Erika</given>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+
+	<documentationOf typeCode="DOC">
+		<templateId root="2.16.756.5.30.1.1.10.2.46" />
+		<templateId root="2.16.756.5.30.1.1.10.2.30" />
+		<serviceEvent classCode="ACT" moodCode="EVN">
 			<!-- cdachresp-dataelement-55 Einsatznummer -->
 			<!-- Extension: Einsatznummer SNZ root: OID vom SNZ -->
-			<id root="2.16.756.5.30.1.9999999999" extension="S12345678" />
-
-			<!-- cdachresp-dataelement-54: Einsatzdatum -->
-			<effectiveTime value="201612010" />
-
+			<id root="2.16.756.5.30.1.9999999999.1" extension="S12345678" />
+			<effectiveTime>
+				<!-- cdachresp-dataelement-54: Einsatzdatum -->
+				<low value="201612010" />
+				<high nullFlavor="NA" />
+			</effectiveTime>
 			<!-- cdachresp-dataelement-102 Team -->
 			<performer typeCode="PRF">
-
-				<!-- TODO cdachresp-dataelement-283 -->
-				<functionCode code="1000015" displayName="emergency doctor"
-					codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" />
-
+				<templateId root="2.16.756.5.30.1.1.10.9.31" />
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.24.3.5" />
+				<functionCode displayName="Andere Gesundheitsfachperson"
+					code="133932002" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+					<translation code="133932002" displayName="Betreuer"
+						codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+				</functionCode>
 				<assignedEntity>
 					<!-- cdachresp-dataelement-281 -->
-					<id root="2.51.1.3" extension="7601003330434" />
+					<id extension="7601003330434" root="2.51.1.3" />
+					<assignedPerson>
+						<name>
+							<given>Petra</given>
+							<family>Muster</family>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</performer>
+			<performer typeCode="PRF">
+				<templateId root="2.16.756.5.30.1.1.10.9.31" />
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.24.3.5" />
+				<functionCode displayName="Andere Gesundheitsfachperson"
+					code="133932002" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+					<translation code="133932002" displayName="Betreuer"
+						codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+				</functionCode>
+				<assignedEntity>
+					<!-- cdachresp-dataelement-281 -->
+					<id extension="7601000211804" root="2.51.1.3" />
+					<assignedPerson>
+						<name>
+							<given>Hans</given>
+							<family>Beispiel</family>
+						</name>
+					</assignedPerson>
 				</assignedEntity>
 			</performer>
 		</serviceEvent>
@@ -198,11 +293,15 @@
 								</tr>
 								<tr>
 									<td>Team</td>
-									<td>7601003330434, Rolle?, (Petra Muster)</td>
+									<td>
+										Petra Muster, GLN 7601003330434, Betreuerin
+										<br />
+										Hans Beispiel, GLN 7601000028105, Betreuer
+									</td>
 								</tr>
 								<tr>
 									<td>Einsatzort</td>
-									<td>8006, Zürich, Waldrand (47.392115, 8.553192)</td>
+									<td>Zürich, Waldrand (47.392115, 8.553192)</td>
 								</tr>
 								<tr>
 									<td>Zielort</td>
@@ -214,39 +313,28 @@
 							<tbody>
 								<tr>
 									<th>Alarm</th>
+									<th>Status DP</th>
 									<th>Status 1</th>
 									<th>Status 2</th>
 									<th>Kontakt Patient</th>
 									<th>Status 3</th>
 									<th>Status 4</th>
-									<th>Status 5</th>
-									<th>Status 6</th>
+									<!-- <th>Status 5</th> <th>Status 6</th> -->
 								</tr>
 								<tr>
 									<th ID="alarm">12.09</th>
+									<th ID="disposition">12.11</th>
 									<th ID="rollout">12.13</th>
 									<th ID="arrivalonscene">12.17</th>
 									<th ID="arrivalpatient">12.22</th>
 									<th ID="departurefromscene">12.48</th>
 									<th ID="arrivalattarget">12.54</th>
-									<th ID="departurefromtarget">13.25</th>
-									<th ID="operationalreadiness">13.40</th>
+									<!-- <th ID="departurefromtarget">13.25</th> <th ID="operationalreadiness">13.40</th> -->
 								</tr>
 							</tbody>
 						</table>
 						<paragraph>
-							Rettungsmittel / Crew
-							<br />
-							111 Tagschicht HW(Z-220), Mitarbeitender Rapportierend: Muster,
-							Petra
-						</paragraph>
-						<paragraph>
-							Zusätzliche Informationen
-							<br />
-							Leistungsart: Notfalleinsatz, Dringlichkeit: K1, NEF Status:
-							Primär mit Notarzt, Klinikwahl: Patientenwunsch, Sondersignal
-							zum Zielort, Sondersignal zum Einsatzort, Klinik Status: Notfall,
-							Zusätzlicher Kommentar, Transportziel: Kommentar
+							TEXT TODO
 						</paragraph>
 					</text>
 
@@ -261,7 +349,6 @@
 									<!-- cdachresp-dataelement-175 Einsatzort Postadresse (eCH-0010) -->
 									<addr>
 										<city>Zürich</city>
-										<postalCode>8006</postalCode>
 									</addr>
 									<playingEntity classCode="PLC">
 										<name>Waldrand</name>
@@ -332,6 +419,19 @@
 					<entry>
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.840.1.1133883.17.3.10.1.38" />
+							<!-- cdachresp-dataelement-278 : Bedeutung der Statuszeit -->
+							<code code="1000034" codeSystem="2.16.756.5.30.1.143.5.1"
+								codeSystemName="IVR Codesystem RESP" displayName="disposition" />
+							<text>
+								<reference value='#disposition' />
+							</text>
+							<!-- cdachresp-dataelement-286 Statuszeit -->
+							<value xsi:type="TS" value="2016120101211+0100" />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.1133883.17.3.10.1.38" />
 							<code code="1000035" codeSystem="2.16.756.5.30.1.143.5.1"
 								codeSystemName="IVR Codesystem RESP" displayName="rollout" />
 							<text>
@@ -384,29 +484,16 @@
 							<value xsi:type="TS" value="2016120101254+0100" />
 						</observation>
 					</entry>
-					<entry>
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.1133883.17.3.10.1.38" />
-							<code code="1000041" codeSystem="2.16.756.5.30.1.143.5.1"
-								codeSystemName="IVR Codesystem RESP" displayName="departure from target" />
-							<text>
-								<reference value='#departurefromtarget' />
-							</text>
-							<value xsi:type="TS" value="2016120101325+0100" />
-						</observation>
-					</entry>
-					<entry>
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.1133883.17.3.10.1.38" />
-							<code code="1000042" codeSystem="2.16.756.5.30.1.143.5.1"
-								codeSystemName="IVR Codesystem RESP" displayName="operational readiness" />
-							<text>
-								<reference value='#operationalreadiness' />
-							</text>
-							<value xsi:type="TS" value="2016120101340+0100" />
-						</observation>
-					</entry>
-
+					<!-- <entry> <observation classCode="OBS" moodCode="EVN"> <templateId 
+						root="2.16.840.1.1133883.17.3.10.1.38" /> <code code="1000041" codeSystem="2.16.756.5.30.1.143.5.1" 
+						codeSystemName="IVR Codesystem RESP" displayName="departure from target" 
+						/> <text> <reference value='#departurefromtarget' /> </text> <value xsi:type="TS" 
+						value="2016120101325+0100" /> </observation> </entry> <entry> <observation 
+						classCode="OBS" moodCode="EVN"> <templateId root="2.16.840.1.1133883.17.3.10.1.38" 
+						/> <code code="1000042" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR 
+						Codesystem RESP" displayName="operational readiness" /> <text> <reference 
+						value='#operationalreadiness' /> </text> <value xsi:type="TS" value="2016120101340+0100" 
+						/> </observation> </entry> -->
 				</section>
 			</component>
 
@@ -433,6 +520,19 @@
 					<title>Administrativ</title>
 					<!-- TODO -->
 					<text>
+
+						<table>
+							<tbody>
+								<tr>
+									<th>Person/Organsiation</th>
+								</tr>
+								<tr>
+									<td>Ehefrau</td>
+									<td>Erika Muster</td>
+								</tr>
+							</tbody>
+						</table>
+
 					</text>
 					<!-- TODO -->
 					<!-- <entry> </entry> -->
@@ -444,8 +544,8 @@
 					<!-- Pretreatment Section -->
 					<templateId root="2.16.756.5.30.1.1.10.3.9" />
 					<title>Vorbehandlung</title>
-					<!-- TODO -->
 					<text>
+						-
 					</text>
 				</section>
 			</component>
@@ -462,10 +562,12 @@
 						<table>
 							<tbody>
 								<tr>
-									<th>Notfallgeschehen</th>
+									<th>Geschehen</th>
 								</tr>
 								<tr>
-									<td ID="anamnesis">Schmerzen in Brust und linkem Oberarm</td>
+									<td ID="anamnesis">starke Schmerzen in der Brust und im linken Oberarm
+										und kaum möglich zu atmen kann
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -473,18 +575,20 @@
 						<table>
 							<tbody>
 								<tr>
-									<th>Leitsymptom</th>
+									<th>Symptome</th>
 								</tr>
 								<tr>
-									<td ID="symptom">Herzrasen</td>
+									<td ID="symptom">Akutes Kornarsysndrom</td>
 								</tr>
 							</tbody>
 						</table>
 
 						<list>
 							<caption>Allergien</caption>
-							<item>Bäume</item>
-							<item>Bactrim</item>
+							<item>Baumpollen </item>
+							<item>bekannte Unverträglichkeitsreaktion auf einzelne
+								Medikamente
+							</item>
 						</list>
 
 						<list>
@@ -494,35 +598,27 @@
 
 						<list>
 							<caption>Medizinische Vorgeschichte</caption>
-							<item>Herzvorfall vor 4 Jahren, behandelt im Triemli</item>
+							<item>Herzvorfall vor 4 Jahren, behandelt im Triemli, seit dem
+								Aspirin cardio
+							</item>
 						</list>
 
 						<list>
-							<caption>Letzte Nahrungsaufnahme</caption>
-							<item>Frühstück 08:00</item>
+							<caption>Weitere</caption>
+							<item>Seit dem Frühstück um ca.08:00 Uhr hat er nichts mehr
+								gegessen
+							</item>
+							<item>Peter Muster hat keine Patientenverfügung erstellt </item>
+							<item>es sind keine anderen medizinische Probleme bekannt</item>
 						</list>
 
-						<list>
-							<caption>Letzte Ausscheidung</caption>
-							<item>nicht erfragt</item>
-						</list>
-
-						<list>
-							<caption>Ereignisse vor Symptomen</caption>
-							<item>nicht erfragt</item>
-						</list>
-
-						<list>
-							<caption>Risikofaktoren</caption>
-							<item>keine Risikofaktoren bekannt</item>
-						</list>
 
 					</text>
 					<entry>
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.840.1.1133883.17.3.10.1.62" />
 							<code code="261665006" codeSystem="2.16.840.1.113883.6.96"
-								codeSystemName="SNOMED Clinical Terms" displayName="Unknown" />
+								codeSystemName="SNOMED CT" displayName="Unknown" />
 							<text>
 								<reference value="#anamnesis" />
 							</text>
@@ -532,14 +628,14 @@
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.1.10.4.63" />
 							<code code="162408000" codeSystem="2.16.840.1.113883.6.96"
-								codeSystemName="SNOMED Clinical Terms" displayName="General symptom description (finding)" />
+								codeSystemName="SNOMED CT" displayName="General symptom description (finding)" />
 							<text>
 								<reference value="#symptom" />
 							</text>
 						</observation>
 					</entry>
 				</section>
-				<!-- TODO ev Allergien strukturiert -->
+
 			</component>
 			<component>
 				<section>
@@ -615,6 +711,13 @@
 
 					</text>
 
+					<!-- <entry> <organizer moodCode="INT" classCode="CLUSTER"> <statusCode 
+						code="completed" /> <component> <observation classCode="OBS" moodCode="EVN"> 
+						<templateId root="2.16.840.1.113883.17.3.10.1.113" /> <code code="67525-6" 
+						displayName="Physical findings of Head NEMSIS" codeSystem="2.16.840.1.113883.6.1" 
+						codeSystemName="LOINC" /> <value xsi:type="CD" code="LA6626-1" displayName="Normal" 
+						codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" /> </observation> 
+						</component> </organizer> </entry> -->
 					<entry>
 						<!-- cdachresp-dataelement-108 GCS -->
 						<observation classCode="OBS" moodCode="EVN">
@@ -699,8 +802,8 @@
 									<th>Verdachtsdiagnose</th>
 								</tr>
 								<tr>
-									<td ID="diagnose1">Verdachtsdiagnose: Erkrankung: Akutes Koronarsyndrom,
-										ACS, Thoraxschmerz (Herz-Kreislauf-System)
+									<td ID="diagnose1">akuten transmuralen Myokardinfarkts der Vorderwand,
+										ACS/STEMI VW
 									</td>
 								</tr>
 							</tbody>
@@ -730,18 +833,21 @@
 									<statusCode code="completed" />
 
 									<effectiveTime>
-										<low value="2016120101218+0100" />
+										<low value="2016121001225+0100" />
 									</effectiveTime>
-									<value xsi:type="CD" code="I24.9" codeSystem="2.16.756.5.30.1.126.3.2"
-										displayName="Akute ischämische Herzkrankheit, nicht näher bezeichnet">
+									<value xsi:type="CD" code="I21.0" codeSystem="2.16.756.5.30.1.126.3.2"
+										displayName="ST elevation (STEMI) myocardial infarction of anterior wall">
 									</value>
 									<author>
-										<functionCode code="1000015" displayName="emergency doctor"
-											codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" />
-										<time value="2016120101218+0100" />
+										<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96"
+											codeSystemName="SNOMED CT" displayName="Physician">
+											<translation code="309343006" codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT" displayName="Physician" />
+										</functionCode>
+										<time value="2016120101225+0100" />
 										<assignedAuthor>
 											<!-- cdachresp-dataelement-281 -->
-											<id root="2.51.1.3" extension="7601003330434" />
+											<id root="2.51.1.3" extension="7601000028105" />
 										</assignedAuthor>
 									</author>
 								</observation>
@@ -759,32 +865,9 @@
 					<!-- TODO -->
 					<text>
 						<paragraph>
-							A - Atemwege
-							<br />
-							keine
-
-						</paragraph>
-						<paragraph>
-							B - Atmung
-							<br />
-							keine
-
-						</paragraph>
-						<paragraph>
-							C - Kreislauf
-							<br />
-
-							Zugang peripher-ven. Zugang, Unterarm (links) (G24) : --,
-							Durchgeführt durch Mitarbeitender Rapportierend, Keine
-							Wiederbelebung ::
-							Weitere
-							<br />
-						</paragraph>
-						<paragraph>
-
-							weitere Massnahmen: keine, Bergung / Immobilisierung: keine,
-							Lagerung: liegend
-							<br />
+							Infusion gelegt und verabreichen ihm um 12:30 eine
+							erste Dosis von 2
+							Hüben Nitrolingual-Spray
 						</paragraph>
 					</text>
 					<!-- TODO -->
@@ -798,8 +881,8 @@
 					<!-- TODO -->
 					<code />
 					<title>Todesfall</title>
-					<!-- TODO -->
 					<text>
+						-
 					</text>
 					<!-- TODO -->
 					<!-- <entry> </entry> -->
@@ -811,9 +894,8 @@
 					<!-- TODO -->
 					<code />
 					<title>Transport</title>
-					<!-- TODO -->
 					<text>
-
+						Fahrt mit Sondersignal ins USZ.
 					</text>
 					<!-- TODO -->
 					<!-- <entry> </entry> -->
@@ -828,81 +910,18 @@
 					<!-- TODO -->
 					<text>
 
-
-						<paragraph>
-							Puls: 45/min, regelm.
-							Blutdruck 135/80 mmHg
-							Schmerz 7
-						</paragraph>
-
-						<table>
-							<tbody>
-								<tr>
-									<th>A - Atemwege</th>
-								</tr>
-								<tr>
-									<td>Atemwege frei</td>
-								</tr>
-							</tbody>
-						</table>
-						<paragraph>
-							B - Atmung
-							unauffällige Spontanatmung
-						</paragraph>
-						<table>
-							<tbody>
-								<tr>
-									<th>C - EKG</th>
-								</tr>
-								<tr>
-									<td>Infarkt EKG / STEMI, Sinusrhythmus</td>
-								</tr>
-							</tbody>
-						</table>
-						<paragraph>
-							D - Neurologie
-							Psychischer Zustand:
-							unauffällig
-						</paragraph>
-						<table>
-							<tbody>
-								<tr>
-									<th>GCS</th>
-								</tr>
-								<tr>
-									<td ID="gcs2">15(4/5/6) um 13.08</td>
-								</tr>
-								<tr>
-									<th>NACA</th>
-								</tr>
-								<tr>
-									<td ID="naca">NACA: III</td>
-								</tr>
-								<tr>
-									<th>Zustand</th>
-								</tr>
-								<tr>
-									<td ID="statusdischarge">verbessert</td>
-								</tr>
-								<tr>
-									<th>Priorität</th>
-								</tr>
-								<tr>
-									<td ID="statuspriority">gelb (toverify)</td>
-								</tr>
-							</tbody>
-
-						</table>
-
-						<paragraph>
-							Übergabe an: Dr. Meier
-							Sonstige
-							Wertsachenverzeichnis:
-							Portemonaie,
-							Handy,
-							Uhr,
-							Schlüssel, Bargel
-						</paragraph>
+						<!-- <paragraph> Puls: 45/min, regelm. Blutdruck 135/80 mmHg Schmerz 
+							7 </paragraph> <table> <tbody> <tr> <th>A - Atemwege</th> </tr> <tr> <td>Atemwege 
+							frei</td> </tr> </tbody> </table> <paragraph> B - Atmung unauffällige Spontanatmung 
+							</paragraph> <table> <tbody> <tr> <th>C - EKG</th> </tr> <tr> <td>Infarkt 
+							EKG / STEMI, Sinusrhythmus</td> </tr> </tbody> </table> <paragraph> D - Neurologie 
+							Psychischer Zustand: unauffällig </paragraph> <table> <tbody> <tr> <th>GCS</th> 
+							</tr> <tr> <td ID="gcs2">15(4/5/6) um 13.08</td> </tr> <tr> <th>NACA</th> 
+							</tr> <tr> <td ID="naca">NACA: III</td> </tr> <tr> <th>Zustand</th> </tr> 
+							<tr> <td ID="statusdischarge">verbessert</td> </tr> <tr> <th>Priorität</th> 
+							</tr> <tr> <td ID="statuspriority">gelb (toverify)</td> </tr> </tbody> </table> 
+							<paragraph> Übergabe an: Dr. Meier Sonstige Wertsachenverzeichnis: Portemonaie, 
+							Handy, Uhr, Schlüssel, Bargel </paragraph> -->
 					</text>
 					<!-- TODO -->
 					<entry>
@@ -990,6 +1009,7 @@
 
 				</section>
 			</component>
+
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.10.3.2" />
@@ -997,9 +1017,7 @@
 						codeSystemName="LOINC" displayName="ANNOTATION COMMENT" />
 					<title>Kommentar</title>
 					<text>
-						<content ID="comment1"> Es handelt sich beim vorliegenden Dokument
-							um
-							ein Muster zur Illustration.
+				      <content ID="comment1"> Wertsachenbeutel sowie Wertscachenverzeichnis am USZ abgeben.	
 						</content>
 					</text>
 					<entry>
