@@ -170,7 +170,7 @@
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
-	
+
 	<participant typeCode="HLD">
 		<templateId root="2.16.756.5.30.1.127.10.2.14" />
 		<time>
@@ -197,6 +197,26 @@
 				<name>
 					<family>Muster</family>
 					<given>Erika</given>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+
+	<participant typeCode="IND">
+		<templateId root="2.16.756.5.30.1.1.10.2.49" />
+		<functionCode></functionCode>
+		<associatedEntity classCode="GUAR">
+			<addr>
+				<streetAddressLine>Times square</streetAddressLine>
+				<state>NJ</state>
+				<city>Ney York</city>
+				<postalCode>12345</postalCode>
+				<country>USA</country>
+			</addr>
+			<associatedPerson>
+				<name>
+					<family>Muster</family>
+					<given>Peter</given>
 				</name>
 			</associatedPerson>
 		</associatedEntity>
@@ -261,10 +281,9 @@
 
 			<component>
 				<section>
-					<!-- Mission Section -->
 					<templateId root="2.16.756.5.30.1.1.10.3.7" />
-					<!-- TODO Mapping to LOINC or SNOMED CT? oder nur Template ID? -->
-					<code />
+					<code code="1100001" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Einsatz" codeSystemName="IVR Codesystem RESP" />
 					<title>Einsatz</title>
 					<text>
 						<table>
@@ -497,28 +516,50 @@
 				</section>
 			</component>
 
-			<!-- TODO: Maybe the patient is not necessary as a seperate section due 
-				to the info probably already in the header -->
 			<component>
 				<section>
-					<!-- Patient Section -->
 					<templateId root="2.16.756.5.30.1.1.10.3.8" />
-					<!-- TODO -->
-					<code />
+					<code code="1100002" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Patient" codeSystemName="IVR Codesystem RESP" />
 					<title>Patient</title>
 					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>weitere Angaben</th>
+								</tr>
+								<tr>
+									<td>Heimatort</td>
+									<td ID="placeOfOrigin">Musterdorf ZH</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
+					<entry>
+						<observation xmlns="urn:hl7-org:v3" classCode="OBS"
+							moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.79" />
+							<templateId root="2.16.840.1.113883.10.12.303" />
+							<code displayName="Place of origin (observable entity)"
+								codeSystemName="SNOMED Clinical Terms" codeSystem="2.16.840.1.113883.6.96"
+								code="307117005" />
+							<text>
+								<reference value="#placeOfOrigin" />
+							</text>
+						</observation>
+					</entry>
 				</section>
 			</component>
 
 			<component>
 				<section>
-					<!-- TODO -->
-					<templateId />
-					<!-- TODO -->
-					<code />
-					<title>Administrativ</title>
-					<!-- TODO -->
+
+					<templateId root="2.16.756.5.30.1.1.10.3.43" />
+					<code code="1100003" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Administrativ" codeSystemName="IVR Codesystem RESP" />
+					<title>
+						Adminsitrativ
+					</title>
 					<text>
 
 						<table>
@@ -532,17 +573,16 @@
 								</tr>
 							</tbody>
 						</table>
-
 					</text>
-					<!-- TODO -->
-					<!-- <entry> </entry> -->
+
 				</section>
 			</component>
 
 			<component>
 				<section>
-					<!-- Pretreatment Section -->
-					<templateId root="2.16.756.5.30.1.1.10.3.9" />
+					<templateId root="2.16.756.5.30.1.1.10.3.42" />
+					<code code="1100004" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Vorbehandlung" codeSystemName="IVR Codesystem RESP" />
 					<title>Vorbehandlung</title>
 					<text>
 						-
@@ -552,11 +592,12 @@
 
 			<component>
 				<section>
-					<templateId root="2.16.756.5.30.1.1.10.3.10" />
-					<!-- TODO -->
-					<code />
-					<title>Anamnese</title>
-					<!-- TODO -->
+					<templateId root="2.16.756.5.30.1.1.10.3.41" />
+					<code code="1100005" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Vorbehandlung" codeSystemName="IVR Codesystem RESP" />
+					<title>
+						Anamnese
+					</title>
 					<text>
 
 						<table>
@@ -640,10 +681,9 @@
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.10.3.14" />
-					<!-- TODO -->
-					<code />
+					<code code="1100006" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Befund" codeSystemName="IVR Codesystem RESP" />
 					<title>Befund</title>
-					<!-- TODO -->
 					<text>
 						<table>
 							<tbody>
@@ -789,12 +829,10 @@
 			</component>
 			<component>
 				<section>
-					<!-- TODO -->
-					<templateId />
-					<!-- TODO -->
-					<code />
+					<templateId root="2.16.756.5.30.1.1.10.3.16" />
+					<code code="1100007" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Diagnosen" codeSystemName="IVR Codesystem RESP" />
 					<title>Diagnosen</title>
-					<!-- TODO -->
 					<text>
 						<table>
 							<tbody>
@@ -859,10 +897,9 @@
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.10.3.17" />
-					<!-- TODO -->
-					<code />
+					<code code="1100007" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Massnahmen" codeSystemName="IVR Codesystem RESP" />
 					<title>Massnahmen</title>
-					<!-- TODO -->
 					<text>
 						<paragraph>
 							Infusion gelegt und verabreichen ihm um 12:30 eine
@@ -876,10 +913,9 @@
 			</component>
 			<component>
 				<section>
-					<!-- TODO -->
-					<templateId />
-					<!-- TODO -->
-					<code />
+					<templateId root="2.16.756.5.30.1.1.10.3.18" />
+					<code code="1100009" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Todesfall" codeSystemName="IVR Codesystem RESP" />
 					<title>Todesfall</title>
 					<text>
 						-
@@ -891,8 +927,8 @@
 			<component>
 				<section>
 					<templateId root="2.16.756.5.30.1.1.10.3.19" />
-					<!-- TODO -->
-					<code />
+					<code code="110010" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Transport" codeSystemName="IVR Codesystem RESP" />
 					<title>Transport</title>
 					<text>
 						Fahrt mit Sondersignal ins USZ.
@@ -903,9 +939,9 @@
 			</component>
 			<component>
 				<section>
-					<templateId root="2.16.756.5.30.1.1.10.3.15" />
-					<!-- TODO -->
-					<code />
+					<templateId root="2.16.756.5.30.1.1.10.3.19" />
+					<code code="110011" codeSystem="2.16.756.5.30.1.143.5.1"
+						displayName="Übergabe" codeSystemName="IVR Codesystem RESP" />
 					<title>Übergabe</title>
 					<!-- TODO -->
 					<text>
@@ -1017,7 +1053,8 @@
 						codeSystemName="LOINC" displayName="ANNOTATION COMMENT" />
 					<title>Kommentar</title>
 					<text>
-				      <content ID="comment1"> Wertsachenbeutel sowie Wertscachenverzeichnis am USZ abgeben.	
+						<content ID="comment1"> Wertsachenbeutel sowie Wertscachenverzeichnis
+							am USZ abgeben.
 						</content>
 					</text>
 					<entry>
