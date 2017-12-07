@@ -276,8 +276,8 @@
 			<performer typeCode="PRF">
 				<templateId root="2.16.756.5.30.1.1.10.9.31" />
 				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.24.3.5" />
-				<functionCode displayName="Arzt"
-					code="309343006" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+				<functionCode displayName="Arzt" code="309343006"
+					codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
 					<translation code="309343006" displayName="Notärztin / Notarzt"
 						codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
 				</functionCode>
@@ -639,7 +639,8 @@
 								</tr>
 								<tr>
 									<td ID="symptom">Starke Schmerzen in der Brust und im linken Oberarm
-										verspürt</td>
+										verspürt
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -705,79 +706,27 @@
 						displayName="Befund" codeSystemName="IVR Codesystem RESP" />
 					<title>Befund</title>
 					<text>
-						<table>
-							<tbody>
-								<tr>
-									<th>Zeitpunkt Befund</th>
-								</tr>
-								<tr>
-									<td>12.30</td>
-								</tr>
-							</tbody>
-
-						</table>
 
 						<paragraph>
-							Puls: 45/min, regelm.
-							Blutdruck 140/80 mmHg
-							SpO2 97 %
-							Schmerz 7
+							Blutdruck 120/80 mmHg gemessen am rechten Arm
+							<br />
+							Schmerz 5
+							<br />
 						</paragraph>
 
-						<table>
-							<tbody>
-								<tr>
-									<th>A - Atemwege</th>
-								</tr>
-								<tr>
-									<td>Atemwege frei</td>
-								</tr>
-							</tbody>
-						</table>
-						<paragraph>
-							B - Atmung
-							unauffällige Spontanatmung
-						</paragraph>
-						<paragraph>
-							C - Kreislauf
-							Links, Puls tastbar, stark, Haut Befund:
-							Unauffällig
-						</paragraph>
-						<table>
-							<tbody>
-								<tr>
-									<th>C - EKG</th>
-								</tr>
-								<tr>
-									<td>Infarkt EKG / STEMI, Sinusrhythmus</td>
-								</tr>
-							</tbody>
-						</table>
-						<paragraph>
-							D - Neurologie
-							Psychischer Zustand: unauffällig
-						</paragraph>
 						<table>
 							<tbody>
 								<tr>
 									<th>GCS</th>
 								</tr>
 								<tr>
-									<td ID="gcs1">15(4/5/6) um 12:25</td>
+									<td ID="gcs1">Total 15 (Augenöffnung spontan 4/ verbale Antwort
+										orientiert 5/ morot. Reaktion befolgt Antweisungen 6) um 12:25
+									</td>
 								</tr>
 							</tbody>
-
 						</table>
-
 					</text>
-
-					<!-- <entry> <organizer moodCode="INT" classCode="CLUSTER"> <statusCode 
-						code="completed" /> <component> <observation classCode="OBS" moodCode="EVN"> 
-						<templateId root="2.16.840.1.113883.17.3.10.1.113" /> <code code="67525-6" 
-						displayName="Physical findings of Head NEMSIS" codeSystem="2.16.840.1.113883.6.1" 
-						codeSystemName="LOINC" /> <value xsi:type="CD" code="LA6626-1" displayName="Normal" 
-						codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" /> </observation> 
-						</component> </organizer> </entry> -->
 					<entry>
 						<!-- cdachresp-dataelement-108 GCS -->
 						<observation classCode="OBS" moodCode="EVN">
@@ -963,21 +912,42 @@
 					<code code="110011" codeSystem="2.16.756.5.30.1.143.5.1"
 						displayName="Übergabe" codeSystemName="IVR Codesystem RESP" />
 					<title>Übergabe</title>
-					<!-- TODO -->
 					<text>
 
-						<!-- <paragraph> Puls: 45/min, regelm. Blutdruck 135/80 mmHg Schmerz 
-							7 </paragraph> <table> <tbody> <tr> <th>A - Atemwege</th> </tr> <tr> <td>Atemwege 
-							frei</td> </tr> </tbody> </table> <paragraph> B - Atmung unauffällige Spontanatmung 
-							</paragraph> <table> <tbody> <tr> <th>C - EKG</th> </tr> <tr> <td>Infarkt 
-							EKG / STEMI, Sinusrhythmus</td> </tr> </tbody> </table> <paragraph> D - Neurologie 
-							Psychischer Zustand: unauffällig </paragraph> <table> <tbody> <tr> <th>GCS</th> 
-							</tr> <tr> <td ID="gcs2">15(4/5/6) um 13.08</td> </tr> <tr> <th>NACA</th> 
-							</tr> <tr> <td ID="naca">NACA: III</td> </tr> <tr> <th>Zustand</th> </tr> 
-							<tr> <td ID="statusdischarge">verbessert</td> </tr> <tr> <th>Priorität</th> 
-							</tr> <tr> <td ID="statuspriority">gelb (toverify)</td> </tr> </tbody> </table> 
-							<paragraph> Übergabe an: Dr. Meier Sonstige Wertsachenverzeichnis: Portemonaie, 
-							Handy, Uhr, Schlüssel, Bargel </paragraph> -->
+						<paragraph>der Zustand des Patienten hat sich im Verlauf des Einsatzes verbessert, Schmerz 4
+						</paragraph>
+						<table>
+							<tbody>
+								<tr>
+									<th>GCS</th>
+								</tr>
+								<tr>
+									<td ID="gcs2">15(4/5/6) um 13.03</td>
+								</tr>
+								<tr>
+									<th>NACA</th>
+								</tr>
+								<tr>
+									<td ID="naca">NACA: III</td>
+								</tr>
+								<tr>
+									<th>Zustand</th>
+								</tr>
+								<tr>
+									<td ID="statusdischarge">verbessert</td>
+								</tr>
+								<tr>
+									<th>Priorität</th>
+								</tr>
+								<tr>
+									<td ID="statuspriority">gelb (toverify)</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph> Übergabe an USZ 
+							Wertsachenbeutel mit Portemonaie,
+							Handy, Uhr, Schlüssel, Bargel sowie Wertsachenverzeichnis
+						</paragraph>
 					</text>
 					<!-- TODO -->
 					<entry>
@@ -991,7 +961,7 @@
 								<reference value="#gcs1" />
 							</text>
 							<statusCode code="completed" />
-							<effectiveTime value="2016120101308+0100" />
+							<effectiveTime value="2016120101303+0100" />
 							<!-- cdachresp-dataelement-109 -->
 							<value xsi:type="PQ" value="15" unit="{score}" />
 							<entryRelationship typeCode="COMP"
