@@ -2,10 +2,7 @@
 <!-- ************************************************************ -->
 <!-- CDA-CH RESP UseCase 1 Einsatzprotokoll -->
 <!-- History: -->
-<!-- 2017.05.29: Oliver Egger, ahdis gmbh (Document Creation) -->
-<!-- 2017.09.05: Oliver Egger, ahdis gmbh (Update to Use Case 1) -->
-<!-- 2017.11.14: Oliver Egger, ahdis gmbh (Update to CDA-CH V2) -->
-<!-- 2017.12.11: Oliver Egger, ahdis gmbh (Finalization of first part of Use Case 1) -->
+<!-- 2017.12.11: Oliver Egger, ahdis gmbh (Use Case 1, Protocol for archiving) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
@@ -29,7 +26,7 @@
 		the document Identifikationsnummer des Dokuments EPRO-FDHA, Appendix 4, Exchange 
 		Formats (public consultation version) / Administrative information / Information 
 		about the document -->
-	<id root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+	<id root="7e3ed351-5fc5-4336-bee4-a77ad8096c98" />
 
 	<!-- A LOINC based document type of a CDA document instance including a 
 		translation to the Swiss EPR XDS.b metadata.  -->
@@ -42,7 +39,7 @@
 
 	<title>Einsatzprotokoll</title>
 
-	<effectiveTime value="20161210121305+0100" />
+	<effectiveTime value="20161210121341+0100" />
 
 	<confidentialityCode code="1051000195109"
 		codeSystem="2.16.840.1.113883.6.96" displayName="Normal" />
@@ -50,7 +47,7 @@
 	<languageCode code="de-CH" />
 
 	<setId root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
-	<versionNumber value="1" />
+	<versionNumber value="2" />
 
 	<recordTarget>
 		<patientRole>
@@ -140,28 +137,15 @@
 
 	<informationRecipient typeCode="PRCP">
 		<intendedRecipient>
-			<id root="2.51.1.3" extension="7601002155939" />
-			<informationRecipient>
-				<name>
-					<prefix>Dr.</prefix>
-					<family>Spezialarzt</family>
-				</name>
-			</informationRecipient>
 			<receivedOrganization>
-				<id root="2.51.1.3" extension="7601002155939" />
-				<!-- cdachresp-dataelement-174 -->
-				<name>USZ</name>
-				<addr>
-					<streetAddressLine>Rämistrasse 100</streetAddressLine>
-					<city>Zürich</city>
-					<postalCode>8091</postalCode>
-				</addr>
+				<id root="2.51.1.3" extension="7601002156363" />
+				<name>SRZ</name>
 			</receivedOrganization>
 		</intendedRecipient>
 	</informationRecipient>
 
 	<legalAuthenticator>
-		<time value="20161210121305+0100" />
+		<time value="20161210121341+0100" />
 		<signatureCode code="S" />
 		<assignedEntity>
 			<id extension="7601003330434" root="2.51.1.3" />
@@ -360,7 +344,8 @@
 									<th>Kontakt Patient</th>
 									<th>Status 3</th>
 									<th>Status 4</th>
-									<th>Status 5</th> <th>Status 6</th>
+									<th>Status 5</th>
+									<th>Status 6</th>
 								</tr>
 								<tr>
 									<th ID="alarm">12.09</th>
@@ -370,8 +355,8 @@
 									<th ID="arrivalpatient">12.22</th>
 									<th ID="departurefromscene">12.48</th>
 									<th ID="arrivalattarget">12.54</th>
-									<th ID="departurefromtarget"> </th> 
-									<th ID="operationalreadiness"> </th> 
+									<th ID="departurefromtarget">13.25</th>
+									<th ID="operationalreadiness">13.40</th>
 								</tr>
 							</tbody>
 						</table>
@@ -521,6 +506,29 @@
 								<reference value='#arrivalattarget' />
 							</text>
 							<value xsi:type="TS" value="2016120101254+0100" />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.1133883.17.3.10.1.38" />
+							<code code="1000041" codeSystem="2.16.756.5.30.1.143.5.1"
+								codeSystemName="IVR Codesystem RESP" displayName="departure from target" />
+							<text>
+								<reference value='#departurefromtarget' />
+							</text>
+							<value xsi:type="TS" value="2016120101325+0100" />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.1133883.17.3.10.1.38" />
+							<code code="1000042" codeSystem="2.16.756.5.30.1.143.5.1"
+								codeSystemName="IVR 
+						Codesystem RESP" displayName="operational readiness" />
+							<text>
+								<reference value='#operationalreadiness' />
+							</text>
+							<value xsi:type="TS" value="2016120101340+0100" />
 						</observation>
 					</entry>
 				</section>
