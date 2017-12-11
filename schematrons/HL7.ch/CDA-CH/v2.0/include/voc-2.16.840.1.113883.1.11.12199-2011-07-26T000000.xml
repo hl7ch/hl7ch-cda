@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.12199" name="LanguageAbilityProficiency" displayName="LanguageAbilityProficiency" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>A value representing the level of proficiency in a language.</p>
+            <p>
+                <i>Example:</i> Excellent, good, fair, poor.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.61" identifierName="Language&#160;Ability&#160;Proficiency"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="E" codeSystem="2.16.840.1.113883.5.61" displayName="Excellent" level="0" type="L"/>
+            <concept code="F" codeSystem="2.16.840.1.113883.5.61" displayName="Fair" level="0" type="L"/>
+            <concept code="G" codeSystem="2.16.840.1.113883.5.61" displayName="Good" level="0" type="L"/>
+            <concept code="P" codeSystem="2.16.840.1.113883.5.61" displayName="Poor" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

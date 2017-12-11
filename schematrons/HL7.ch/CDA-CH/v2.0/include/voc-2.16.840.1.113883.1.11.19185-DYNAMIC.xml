@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.19185" name="ReligiousAffiliation" displayName="ReligiousAffiliation" effectiveDate="2014-03-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1360-20160323" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <p>
+                <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+            <b>description: </b>
+            <p>Assigment of spiritual faith affiliation</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1076" identifierName="ReligiousAffiliation"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="1001" codeSystem="2.16.840.1.113883.5.1076" displayName="Adventist" level="0" type="L"/>
+            <concept code="1002" codeSystem="2.16.840.1.113883.5.1076" displayName="African Religions" level="0" type="L"/>
+            <concept code="1003" codeSystem="2.16.840.1.113883.5.1076" displayName="Afro-Caribbean Religions" level="0" type="L"/>
+            <concept code="1004" codeSystem="2.16.840.1.113883.5.1076" displayName="Agnosticism" level="0" type="L"/>
+            <concept code="1005" codeSystem="2.16.840.1.113883.5.1076" displayName="Anglican" level="0" type="L"/>
+            <concept code="1006" codeSystem="2.16.840.1.113883.5.1076" displayName="Animism" level="0" type="L"/>
+            <concept code="1007" codeSystem="2.16.840.1.113883.5.1076" displayName="Atheism" level="0" type="L"/>
+            <concept code="1008" codeSystem="2.16.840.1.113883.5.1076" displayName="Babi &amp; Baha'I faiths" level="0" type="L"/>
+            <concept code="1009" codeSystem="2.16.840.1.113883.5.1076" displayName="Baptist" level="0" type="L"/>
+            <concept code="1010" codeSystem="2.16.840.1.113883.5.1076" displayName="Bon" level="0" type="L"/>
+            <concept code="1011" codeSystem="2.16.840.1.113883.5.1076" displayName="Cao Dai" level="0" type="L"/>
+            <concept code="1012" codeSystem="2.16.840.1.113883.5.1076" displayName="Celticism" level="0" type="L"/>
+            <concept code="1013" codeSystem="2.16.840.1.113883.5.1076" displayName="Christian (non-Catholic, non-specific)" level="0" type="L"/>
+            <concept code="1014" codeSystem="2.16.840.1.113883.5.1076" displayName="Confucianism" level="0" type="L"/>
+            <concept code="1015" codeSystem="2.16.840.1.113883.5.1076" displayName="Cyberculture Religions" level="0" type="L"/>
+            <concept code="1016" codeSystem="2.16.840.1.113883.5.1076" displayName="Divination" level="0" type="L"/>
+            <concept code="1017" codeSystem="2.16.840.1.113883.5.1076" displayName="Fourth Way" level="0" type="L"/>
+            <concept code="1018" codeSystem="2.16.840.1.113883.5.1076" displayName="Free Daism" level="0" type="L"/>
+            <concept code="1019" codeSystem="2.16.840.1.113883.5.1076" displayName="Gnosis" level="0" type="L"/>
+            <concept code="1020" codeSystem="2.16.840.1.113883.5.1076" displayName="Hinduism" level="0" type="L"/>
+            <concept code="1021" codeSystem="2.16.840.1.113883.5.1076" displayName="Humanism" level="0" type="L"/>
+            <concept code="1022" codeSystem="2.16.840.1.113883.5.1076" displayName="Independent" level="0" type="L"/>
+            <concept code="1023" codeSystem="2.16.840.1.113883.5.1076" displayName="Islam" level="0" type="L"/>
+            <concept code="1024" codeSystem="2.16.840.1.113883.5.1076" displayName="Jainism" level="0" type="L"/>
+            <concept code="1025" codeSystem="2.16.840.1.113883.5.1076" displayName="Jehovah's Witnesses" level="0" type="L"/>
+            <concept code="1026" codeSystem="2.16.840.1.113883.5.1076" displayName="Judaism" level="0" type="L"/>
+            <concept code="1027" codeSystem="2.16.840.1.113883.5.1076" displayName="Latter Day Saints" level="0" type="L"/>
+            <concept code="1028" codeSystem="2.16.840.1.113883.5.1076" displayName="Lutheran" level="0" type="L"/>
+            <concept code="1029" codeSystem="2.16.840.1.113883.5.1076" displayName="Mahayana" level="0" type="L"/>
+            <concept code="1030" codeSystem="2.16.840.1.113883.5.1076" displayName="Meditation" level="0" type="L"/>
+            <concept code="1031" codeSystem="2.16.840.1.113883.5.1076" displayName="Messianic Judaism" level="0" type="L"/>
+            <concept code="1032" codeSystem="2.16.840.1.113883.5.1076" displayName="Mitraism" level="0" type="L"/>
+            <concept code="1033" codeSystem="2.16.840.1.113883.5.1076" displayName="New Age" level="0" type="L"/>
+            <concept code="1034" codeSystem="2.16.840.1.113883.5.1076" displayName="non-Roman Catholic" level="0" type="L"/>
+            <concept code="1035" codeSystem="2.16.840.1.113883.5.1076" displayName="Occult" level="0" type="L"/>
+            <concept code="1036" codeSystem="2.16.840.1.113883.5.1076" displayName="Orthodox" level="0" type="L"/>
+            <concept code="1037" codeSystem="2.16.840.1.113883.5.1076" displayName="Paganism" level="0" type="L"/>
+            <concept code="1038" codeSystem="2.16.840.1.113883.5.1076" displayName="Pentecostal" level="0" type="L"/>
+            <concept code="1039" codeSystem="2.16.840.1.113883.5.1076" displayName="Process, The" level="0" type="L"/>
+            <concept code="1040" codeSystem="2.16.840.1.113883.5.1076" displayName="Reformed/Presbyterian" level="0" type="L"/>
+            <concept code="1041" codeSystem="2.16.840.1.113883.5.1076" displayName="Roman Catholic Church" level="0" type="L"/>
+            <concept code="1042" codeSystem="2.16.840.1.113883.5.1076" displayName="Satanism" level="0" type="L"/>
+            <concept code="1043" codeSystem="2.16.840.1.113883.5.1076" displayName="Scientology" level="0" type="L"/>
+            <concept code="1044" codeSystem="2.16.840.1.113883.5.1076" displayName="Shamanism" level="0" type="L"/>
+            <concept code="1045" codeSystem="2.16.840.1.113883.5.1076" displayName="Shiite (Islam)" level="0" type="L"/>
+            <concept code="1046" codeSystem="2.16.840.1.113883.5.1076" displayName="Shinto" level="0" type="L"/>
+            <concept code="1047" codeSystem="2.16.840.1.113883.5.1076" displayName="Sikism" level="0" type="L"/>
+            <concept code="1048" codeSystem="2.16.840.1.113883.5.1076" displayName="Spiritualism" level="0" type="L"/>
+            <concept code="1049" codeSystem="2.16.840.1.113883.5.1076" displayName="Sunni (Islam)" level="0" type="L"/>
+            <concept code="1050" codeSystem="2.16.840.1.113883.5.1076" displayName="Taoism" level="0" type="L"/>
+            <concept code="1051" codeSystem="2.16.840.1.113883.5.1076" displayName="Theravada" level="0" type="L"/>
+            <concept code="1052" codeSystem="2.16.840.1.113883.5.1076" displayName="Unitarian-Universalism" level="0" type="L"/>
+            <concept code="1053" codeSystem="2.16.840.1.113883.5.1076" displayName="Universal Life Church" level="0" type="L"/>
+            <concept code="1054" codeSystem="2.16.840.1.113883.5.1076" displayName="Vajrayana (Tibetan)" level="0" type="L"/>
+            <concept code="1055" codeSystem="2.16.840.1.113883.5.1076" displayName="Veda" level="0" type="L"/>
+            <concept code="1056" codeSystem="2.16.840.1.113883.5.1076" displayName="Voodoo" level="0" type="L"/>
+            <concept code="1057" codeSystem="2.16.840.1.113883.5.1076" displayName="Wicca" level="0" type="L"/>
+            <concept code="1058" codeSystem="2.16.840.1.113883.5.1076" displayName="Yaohushua" level="0" type="L"/>
+            <concept code="1059" codeSystem="2.16.840.1.113883.5.1076" displayName="Zen Buddhism" level="0" type="L"/>
+            <concept code="1060" codeSystem="2.16.840.1.113883.5.1076" displayName="Zoroastrianism" level="0" type="L"/>
+            <concept code="1061" codeSystem="2.16.840.1.113883.5.1076" displayName="Assembly of God" level="0" type="L"/>
+            <concept code="1062" codeSystem="2.16.840.1.113883.5.1076" displayName="Brethren" level="0" type="L"/>
+            <concept code="1063" codeSystem="2.16.840.1.113883.5.1076" displayName="Christian Scientist" level="0" type="L"/>
+            <concept code="1064" codeSystem="2.16.840.1.113883.5.1076" displayName="Church of Christ" level="0" type="L"/>
+            <concept code="1065" codeSystem="2.16.840.1.113883.5.1076" displayName="Church of God" level="0" type="L"/>
+            <concept code="1066" codeSystem="2.16.840.1.113883.5.1076" displayName="Congregational" level="0" type="L"/>
+            <concept code="1067" codeSystem="2.16.840.1.113883.5.1076" displayName="Disciples of Christ" level="0" type="L"/>
+            <concept code="1068" codeSystem="2.16.840.1.113883.5.1076" displayName="Eastern Orthodox" level="0" type="L"/>
+            <concept code="1069" codeSystem="2.16.840.1.113883.5.1076" displayName="Episcopalian" level="0" type="L"/>
+            <concept code="1070" codeSystem="2.16.840.1.113883.5.1076" displayName="Evangelical Covenant" level="0" type="L"/>
+            <concept code="1071" codeSystem="2.16.840.1.113883.5.1076" displayName="Friends" level="0" type="L"/>
+            <concept code="1072" codeSystem="2.16.840.1.113883.5.1076" displayName="Full Gospel" level="0" type="L"/>
+            <concept code="1073" codeSystem="2.16.840.1.113883.5.1076" displayName="Methodist" level="0" type="L"/>
+            <concept code="1074" codeSystem="2.16.840.1.113883.5.1076" displayName="Native American" level="0" type="L"/>
+            <concept code="1075" codeSystem="2.16.840.1.113883.5.1076" displayName="Nazarene" level="0" type="L"/>
+            <concept code="1076" codeSystem="2.16.840.1.113883.5.1076" displayName="Presbyterian" level="0" type="L"/>
+            <concept code="1077" codeSystem="2.16.840.1.113883.5.1076" displayName="Protestant" level="0" type="L"/>
+            <concept code="1078" codeSystem="2.16.840.1.113883.5.1076" displayName="Protestant, No Denomination" level="0" type="L"/>
+            <concept code="1079" codeSystem="2.16.840.1.113883.5.1076" displayName="Reformed" level="0" type="L"/>
+            <concept code="1080" codeSystem="2.16.840.1.113883.5.1076" displayName="Salvation Army" level="0" type="L"/>
+            <concept code="1081" codeSystem="2.16.840.1.113883.5.1076" displayName="Unitarian Universalist" level="0" type="L"/>
+            <concept code="1082" codeSystem="2.16.840.1.113883.5.1076" displayName="United Church of Christ" level="0" type="L"/>
+            <concept code="1061" codeSystem="2.16.840.1.113883.5.1076" displayName="Assembly of God" level="0" type="L"/>
+            <concept code="1062" codeSystem="2.16.840.1.113883.5.1076" displayName="Brethren" level="0" type="L"/>
+            <concept code="1063" codeSystem="2.16.840.1.113883.5.1076" displayName="Christian Scientist" level="0" type="L"/>
+            <concept code="1064" codeSystem="2.16.840.1.113883.5.1076" displayName="Church of Christ" level="0" type="L"/>
+            <concept code="1065" codeSystem="2.16.840.1.113883.5.1076" displayName="Church of God" level="0" type="L"/>
+            <concept code="1066" codeSystem="2.16.840.1.113883.5.1076" displayName="Congregational" level="0" type="L"/>
+            <concept code="1067" codeSystem="2.16.840.1.113883.5.1076" displayName="Disciples of Christ" level="0" type="L"/>
+            <concept code="1068" codeSystem="2.16.840.1.113883.5.1076" displayName="Eastern Orthodox" level="0" type="L"/>
+            <concept code="1069" codeSystem="2.16.840.1.113883.5.1076" displayName="Episcopalian" level="0" type="L"/>
+            <concept code="1070" codeSystem="2.16.840.1.113883.5.1076" displayName="Evangelical Covenant" level="0" type="L"/>
+            <concept code="1071" codeSystem="2.16.840.1.113883.5.1076" displayName="Friends" level="0" type="L"/>
+            <concept code="1072" codeSystem="2.16.840.1.113883.5.1076" displayName="Full Gospel" level="0" type="L"/>
+            <concept code="1073" codeSystem="2.16.840.1.113883.5.1076" displayName="Methodist" level="0" type="L"/>
+            <concept code="1074" codeSystem="2.16.840.1.113883.5.1076" displayName="Native American" level="0" type="L"/>
+            <concept code="1075" codeSystem="2.16.840.1.113883.5.1076" displayName="Nazarene" level="0" type="L"/>
+            <concept code="1076" codeSystem="2.16.840.1.113883.5.1076" displayName="Presbyterian" level="0" type="L"/>
+            <concept code="1077" codeSystem="2.16.840.1.113883.5.1076" displayName="Protestant" level="0" type="L"/>
+            <concept code="1078" codeSystem="2.16.840.1.113883.5.1076" displayName="Protestant, No Denomination" level="0" type="L"/>
+            <concept code="1079" codeSystem="2.16.840.1.113883.5.1076" displayName="Reformed" level="0" type="L"/>
+            <concept code="1080" codeSystem="2.16.840.1.113883.5.1076" displayName="Salvation Army" level="0" type="L"/>
+            <concept code="1081" codeSystem="2.16.840.1.113883.5.1076" displayName="Unitarian Universalist" level="0" type="L"/>
+            <concept code="1082" codeSystem="2.16.840.1.113883.5.1076" displayName="United Church of Christ" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.19447" name="x_ActRelationshipEntryRelationship" displayName="x_ActRelationshipEntryRelationship" effectiveDate="2014-03-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1360-20160323" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <p>
+                <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+            <b>description: </b>
+            <p>Used to enumerate the relationships between two CDA entries.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1002" identifierName="Act&#160;Relationship&#160;Type"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="CAUS" codeSystem="2.16.840.1.113883.5.1002" displayName="is etiology for" level="0" type="L"/>
+            <concept code="COMP" codeSystem="2.16.840.1.113883.5.1002" displayName="has component" level="0" type="S"/>
+            <concept code="GEVL" codeSystem="2.16.840.1.113883.5.1002" displayName="evaluates (goal)" level="0" type="L"/>
+            <concept code="MFST" codeSystem="2.16.840.1.113883.5.1002" displayName="is manifestation of" level="0" type="L"/>
+            <concept code="REFR" codeSystem="2.16.840.1.113883.5.1002" displayName="refers to" level="0" type="S"/>
+            <concept code="RSON" codeSystem="2.16.840.1.113883.5.1002" displayName="has reason" level="0" type="S"/>
+            <concept code="SAS" codeSystem="2.16.840.1.113883.5.1002" displayName="starts after start of" level="0" type="S"/>
+            <concept code="SPRT" codeSystem="2.16.840.1.113883.5.1002" displayName="has support" level="0" type="S"/>
+            <concept code="SUBJ" codeSystem="2.16.840.1.113883.5.1002" displayName="has subject" level="0" type="S"/>
+            <concept code="XCRPT" codeSystem="2.16.840.1.113883.5.1002" displayName="Excerpts" level="0" type="S"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

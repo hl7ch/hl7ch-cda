@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.11.15" name="AuthorizationType" displayName="AuthorizationType" effectiveDate="2015-12-18T00:00:00" statusCode="draft">
+        <sourceCodeSystem id="2.16.756.5.30.2.1.1.2" identifierName=""/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="OTH" codeSystem="2.16.756.5.30.2.1.1.2" displayName="other" level="0" type="L"/>
+            <concept code="EMAUTH" codeSystem="2.16.756.5.30.2.1.1.2" displayName="emergency authorization" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.3" name="EprDocumentClassCode" displayName="EprDocumentClassCode" statusCode="final" versionLabel="201704.0-stable" effectiveDate="2017-09-06T14:37:23" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
+        <desc language="de-CH">Dokumentenklasse gemäss EPDV-EDI Anhang 3, Kapitel 2.3. <span style="text-decoration: none;">
+                <br clear="none"/>
+            </span>
+        </desc>
+        <desc language="en-US">Document class as per EPRO-FDHA Annex 3, Chapter 2.3. <br clear="none"/>
+        </desc>
+        <desc language="fr-CH">Classification du document selon l'annexe 3 ODEP-DFI, chapitre 2.3<br clear="none"/>
+        </desc>
+        <desc language="it-CH">Classe del documento secondo l'allegato 3 OCIP-DFI, capitolo 2.3.<br clear="none"/>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+        <conceptList>
+            <concept code="1211000195104" codeSystem="2.16.840.1.113883.6.96" displayName="Note on Consultation (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Konsultationseinträge/-notizen"/>
+                <designation language="fr-CH" type="preferred" displayName="Notes de consultation"/>
+                <designation language="it-CH" type="preferred" displayName="Rapporti e note di consultazione"/>
+                <designation language="en-US" type="preferred" displayName="Notes on Consultations"/>
+            </concept>
+            <concept code="1231000195106" codeSystem="2.16.840.1.113883.6.96" displayName="Progress Note (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Verlaufseinträge/-notizen"/>
+                <designation language="fr-CH" type="preferred" displayName="Notes de suivi"/>
+                <designation language="it-CH" type="preferred" displayName="Diario clinico"/>
+                <designation language="en-US" type="preferred" displayName="Progress Notes"/>
+            </concept>
+            <concept code="1241000195103" codeSystem="2.16.840.1.113883.6.96" displayName="Note on Procedure (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Interventionseinträge/-notizen"/>
+                <designation language="fr-CH" type="preferred" displayName="Notes d'intervention"/>
+                <designation language="it-CH" type="preferred" displayName="Rapporti e note d'intervento"/>
+                <designation language="en-US" type="preferred" displayName="Notes on Procedures"/>
+            </concept>
+            <concept code="1251000195100" codeSystem="2.16.840.1.113883.6.96" displayName="Test or Procedure Request (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Untersuchungs-/Prozeduranforderungen"/>
+                <designation language="fr-CH" type="preferred" displayName="Demandes d'examen / procédure"/>
+                <designation language="it-CH" type="preferred" displayName="Richieste d'esame"/>
+                <designation language="en-US" type="preferred" displayName="Tests/Procedure Requests"/>
+            </concept>
+            <concept code="1261000195102" codeSystem="2.16.840.1.113883.6.96" displayName="Clinical Care Referral (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Zuweisungen/Überweisungen"/>
+                <designation language="fr-CH" type="preferred" displayName="Demandes de prise en charge"/>
+                <designation language="it-CH" type="preferred" displayName="Richieste di presa a carico"/>
+                <designation language="en-US" type="preferred" displayName="Clinical Care Referrals"/>
+            </concept>
+            <concept code="1271000195108" codeSystem="2.16.840.1.113883.6.96" displayName="Episode Summary Report (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Zusammenfassende Berichte"/>
+                <designation language="fr-CH" type="preferred" displayName="Résumés d'épisode"/>
+                <designation language="it-CH" type="preferred" displayName="Riassunti di episodio"/>
+                <designation language="en-US" type="preferred" displayName="Episode Summary Reports"/>
+            </concept>
+            <concept code="371532007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Progress report (qualifier value)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Verlaufsberichte"/>
+                <designation language="fr-CH" type="preferred" displayName="Rapports d'évolution"/>
+                <designation language="it-CH" type="preferred" displayName="Rapporti di evoluzione"/>
+                <designation language="en-US" type="preferred" displayName="Progress Reports"/>
+            </concept>
+            <concept code="1291000195107" codeSystem="2.16.840.1.113883.6.96" displayName="Diagnostic Test Result (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Diagnostische Untersuchungsbefunde"/>
+                <designation language="fr-CH" type="preferred" displayName="Résultats d'examen diagnostic"/>
+                <designation language="it-CH" type="preferred" displayName="Risultati di esame diagnostico"/>
+                <designation language="en-US" type="preferred" displayName="Diagnostic Test Results"/>
+            </concept>
+            <concept code="1301000195106" codeSystem="2.16.840.1.113883.6.96" displayName="Notification (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Meldungen"/>
+                <designation language="fr-CH" type="preferred" displayName="Notifications / déclarations"/>
+                <designation language="it-CH" type="preferred" displayName="Notifiche / dichiarazioni"/>
+                <designation language="en-US" type="preferred" displayName="Notifications"/>
+            </concept>
+            <concept code="1281000195105" codeSystem="2.16.840.1.113883.6.96" displayName="Historic Overview (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Zusammenfassungen der Krankengeschichte"/>
+                <designation language="fr-CH" type="preferred" displayName="Résumés d'antécédents"/>
+                <designation language="it-CH" type="preferred" displayName="Riassunti della storia clinica"/>
+                <designation language="en-US" type="preferred" displayName="Historic Overviews"/>
+            </concept>
+            <concept code="1311000195108" codeSystem="2.16.840.1.113883.6.96" displayName="Present State Summary (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Zusammenfassungen aktueller Zustand"/>
+                <designation language="fr-CH" type="preferred" displayName="Résumés de l'état actuel"/>
+                <designation language="it-CH" type="preferred" displayName="Riassunti dello stato attuale"/>
+                <designation language="en-US" type="preferred" displayName="Present State Summaries"/>
+            </concept>
+            <concept code="1321000195103" codeSystem="2.16.840.1.113883.6.96" displayName="Care Plan (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Behandlungspläne/Behandlungsschemata"/>
+                <designation language="it-CH" type="preferred" displayName="Piani di cura"/>
+                <designation language="en-US" type="preferred" displayName="Care Plans"/>
+                <designation language="fr-CH" type="preferred" displayName="Plans de soins"/>
+            </concept>
+            <concept code="1331000195101" codeSystem="2.16.840.1.113883.6.96" displayName="Alert (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Warnungen/Risiken"/>
+                <designation language="fr-CH" type="preferred" displayName="Alertes"/>
+                <designation language="it-CH" type="preferred" displayName="Avvertenze"/>
+                <designation language="en-US" type="preferred" displayName="Alerts"/>
+            </concept>
+            <concept code="1341000195109" codeSystem="2.16.840.1.113883.6.96" displayName="Scanned Document (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Gescannte Dokumente"/>
+                <designation language="fr-CH" type="preferred" displayName="Documents scannés"/>
+                <designation language="it-CH" type="preferred" displayName="Documenti scansionati"/>
+                <designation language="en-US" type="preferred" displayName="Scanned Documents"/>
+            </concept>
+            <concept code="1351000195107" codeSystem="2.16.840.1.113883.6.96" displayName="Data from Patient (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Eigene Daten des Patienten"/>
+                <designation language="fr-CH" type="preferred" displayName="Documents introduits par le patient"/>
+                <designation language="it-CH" type="preferred" displayName="Documenti inseriti dal paziente"/>
+                <designation language="en-US" type="preferred" displayName="Data from Patient"/>
+            </concept>
+            <concept code="419891008" codeSystem="2.16.840.1.113883.6.96" displayName="Other Composition" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Anderweitige Dokumente"/>
+                <designation language="fr-CH" type="preferred" displayName="Autre"/>
+                <designation language="it-CH" type="preferred" displayName="Altro"/>
+                <designation language="en-US" type="preferred" displayName="Other Composition"/>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.11610" name="x_ActRelationshipDocument" displayName="x_ActRelationshipDocument" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>Used to enumerate the relationships between two clinical documents for document management.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1002" identifierName="Act&#160;Relationship&#160;Type"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="APND" codeSystem="2.16.840.1.113883.5.1002" displayName="is appendage" level="0" type="L"/>
+            <concept code="RPLC" codeSystem="2.16.840.1.113883.5.1002" displayName="replaces" level="0" type="L"/>
+            <concept code="XFRM" codeSystem="2.16.840.1.113883.5.1002" displayName="transformation" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

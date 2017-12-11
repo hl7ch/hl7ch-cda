@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.19600" name="x_EncounterParticipant" displayName="x_EncounterParticipant" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>Clones using this x_domain should have a name "encounterParticipant".</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.90" identifierName="ParticipationType"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="ADM" codeSystem="2.16.840.1.113883.5.90" displayName="admitter" level="0" type="L"/>
+            <concept code="ATND" codeSystem="2.16.840.1.113883.5.90" displayName="attender" level="0" type="L"/>
+            <concept code="CON" codeSystem="2.16.840.1.113883.5.90" displayName="consultant" level="0" type="L"/>
+            <concept code="DIS" codeSystem="2.16.840.1.113883.5.90" displayName="discharger" level="0" type="L"/>
+            <concept code="REF" codeSystem="2.16.840.1.113883.5.90" displayName="referrer" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

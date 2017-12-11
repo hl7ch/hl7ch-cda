@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.9" name="EprDocumentFormatCode" displayName="EprDocumentFormatCode" effectiveDate="2017-10-23T09:43:59" statusCode="draft" versionLabel="201704.2-beta" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
+        <desc language="de-CH">Format des Dokumentes gemäss Anhang 3 EPDV-EDI, Kapitel 2.5. <br clear="none"/>
+            <br clear="none"/>Dieser eindeutige Code definiert das Format des XDS Dokumentes. Zusammen mit dem mimeType, sollte es dem potentiellen Konsumenten genügend Informationen liefern, ob er in der Lage ist, das Dokument zu verarbeiten.</desc>
+        <desc language="en-US">Document format as per Annex 3&#160; EPRO-FDHA, Chapter 2.5. <br clear="none"/>
+            <br clear="none"/>This unambiguous code defines the format of the XDS document. Together with the mimetype, this should provide the potential consumer with sufficient information as to whether they are in a position to process the document.<br clear="none"/>
+        </desc>
+        <desc language="fr-CH">Format du document selon l'annexe 3 ODEP-DFI, chapitre 2.5<br clear="none"/>
+            <br clear="none"/>Ce code univoque définit le format du document XDS. Combiné au mimeType, il doit fournir à l'utilisateur suffisamment d'informations pour savoir s'il est en mesure de traiter le document.<br clear="none"/>
+            <br clear="none"/>
+        </desc>
+        <desc language="it-CH">Formato del documento secondo l'allegato 3 OCIP-DFI, capitolo 2.5. <br clear="none"/>
+            <br clear="none"/>Questo codice univoco definisce il formato del documento XDS. Insieme al tipo MIME, intende fornire al potenziale consumatore sufficienti informazioni per capire se è in grado o meno di elaborare il documento.<br clear="none"/>
+        </desc>
+        <sourceCodeSystem id="2.16.756.5.30.1.127.77.10.5.2" identifierName="ch-epr-codesystem-2"/>
+        <sourceCodeSystem id="1.2.840.10008.2.6.1" identifierName="DICOM&#160;UID"/>
+        <sourceCodeSystem id="1.3.6.1.4.1.19376.1.2.3" identifierName=""/>
+        <publishingAuthority name="eHealth Suisse">
+            <addrLine>Schwarzenburgstrasse 165</addrLine>
+            <addrLine>CH-3003 Bern</addrLine>
+            <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="urn:che:epd:EPD_Unstructured_Document" codeSystem="2.16.756.5.30.1.127.77.10.5.2" displayName="Unstructured EPD document" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Unstrukturiertes EPD Dokument"/>
+                <designation language="fr-CH" type="preferred" displayName="Document DEP non structuré"/>
+                <designation language="it-CH" type="preferred" displayName="Documento CIP non strutturato"/>
+                <designation language="en-US" type="preferred" displayName="Unstructured EPD document"/>
+            </concept>
+            <concept code="1.2.840.10008.5.1.4.1.1.88.59" codeSystem="1.2.840.10008.2.6.1" displayName="&#x9; DICOM Manifest (DICOM KOS SOP Class UID)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="KOS Dokument"/>
+                <designation language="fr-CH" type="preferred" displayName="Document KOS"/>
+                <designation language="it-CH" type="preferred" displayName="Documento KOS "/>
+                <designation language="en-US" type="preferred" displayName="IHE KOS document"/>
+            </concept>
+            <concept code="urn:ihe:rad:TEXT" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="XDS-I CDA Wrapped Text Report (XDS-I)" level="0" type="L">
+                <desc language="en-US">According to Table 4.68.4.1.2.3-1: XDS-I.b-specific Metadata Requirements</desc>
+                <designation language="en-US" type="preferred" displayName="CDA Wrapped Text Report"/>
+            </concept>
+            <concept code="urn:ihe:rad:PDF" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="XDS-I PDF (XDS-I)" level="0" type="L">
+                <desc language="en-US">According to Table 4.68.4.1.2.3-1: XDS-I.b-specific Metadata Requirements</desc>
+                <designation language="en-US" type="preferred" displayName="PDF Radiology Report"/>
+            </concept>
+            <concept code="urn:ihe:rad:CDA:ImagingReportStructuredHeadings:2013" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="&#x9; XDS-I Imaging Report with Structured Headings (XDS-I)" level="0" type="L">
+                <desc language="en-US">According to Table 4.68.4.1.2.3-1: XDS-I.b-specific Metadata Requirements<br clear="none"/>
+                </desc>
+                <designation language="en-US" type="preferred" displayName="CDA Imaging Report with Structured Headings"/>
+            </concept>
+            <concept code="urn:ihe:iti:xds-sd:pdf:2008" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Scanned Documents (PDF)" level="0" type="L">
+                <designation language="en-US" type="preferred" displayName="PDF embedded in CDA per XDS-SD profile"/>
+            </concept>
+            <concept code="urn:ihe:iti:xds-sd:text:2008" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Scanned Documents (text)" level="0" type="L">
+                <designation language="en-US" type="preferred" displayName="Text embedded in CDA per XDS-SD profile"/>
+            </concept>
+            <concept code="urn:ihe:pharm:pml:2013" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Community Medication List" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-EMED Medikationsübersicht "/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-EMED Aperçu de la médication"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-EMED Panoramica della terapia farmacologica "/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-EMED CurrentMedication"/>
+            </concept>
+            <concept code="urn:ihe:pharm:pre:2010" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="CDA-CH-EMED Prescription" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-EMED Rezept "/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-EMED Ordonnance"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-EMED Ricetta"/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-EMED Prescription"/>
+            </concept>
+            <concept code="urn:ihe:pharm:dis:2010" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Community Dispense" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-EMED Abgabe "/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-EMED Remise"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-EMED Dispensazione "/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-EMED Dispense"/>
+            </concept>
+            <concept code="urn:ihe:pharm:mtp:2015" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Community Medication Treatment Plan" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-EMED Therapieentscheid"/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-EMED Décision thérapeutique"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-EMED Decisione terapeutica"/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-EMED Treatment Plan"/>
+            </concept>
+            <concept code="urn:ihe:pharm:padv:2010" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Community Pharmaceutical Advice" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-EMED Kommentar zu Medikation "/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-EMED Commentaire sur la médication"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-EMED Commento sulla terapia farmacologica "/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-EMED Comment"/>
+            </concept>
+            <concept code="urn:ihe:lab:xd-lab:2008" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="CDA Laboratory Report" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-LREP Allgemeiner Laborbefund "/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-LREP Rapport général de laboratoire"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-LREP Referto di laboratorio generico "/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-LREP Laboratory Report"/>
+            </concept>
+            <concept code="urn:ihe:pcc:ic:2009" codeSystem="1.3.6.1.4.1.19376.1.2.3" displayName="Immunization Content (IC)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="CDA-CH-VACD Impfausweis "/>
+                <designation language="fr-CH" type="preferred" displayName="CDA-CH-VACD Carnet de vaccination"/>
+                <designation language="it-CH" type="preferred" displayName="CDA-CH-VACD Libretto di vaccinazione "/>
+                <designation language="en-US" type="preferred" displayName="CDA-CH-VACD eVaccination record"/>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>
