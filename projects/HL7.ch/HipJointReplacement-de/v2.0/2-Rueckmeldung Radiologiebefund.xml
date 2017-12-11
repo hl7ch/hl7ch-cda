@@ -27,19 +27,19 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="971B9913-0F75-462D-AB8B-0400F295F607"/>
+	<id root="7CC0D34D-EF55-471D-9537-7BE879606FB5"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
+	<code code="18748-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnostic imaging study">
 		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
-		<translation code="373942005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Discharge summary"/>
+		<translation code="371527006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Radiology report"/>
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Austrittsbericht stationäre Rehabilitation</title>
+	<title>Radiologischer Befund</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<effectiveTime value="201712051742+0100"/>
+	<effectiveTime value="201710071734+0100"/>
 
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
@@ -51,7 +51,7 @@ History:
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
 	This document is a new version of the one created in 2009 for CDA-CH v1.2
 	-->
-	<setId root="64955DA4-937D-44AF-907E-9D5D3B17F2D1"/>
+	<setId root="E014BA18-84CF-4F2A-AB59-C2D44B4ABEEB"/>
 	<versionNumber value="2"/>
 
 	<!-- Human patient according to CDA-CH v2.0 and case study "hip joint replacement". -->
@@ -59,8 +59,7 @@ History:
 		<patientRole>
 			<!-- The patient's id. -->
 			<id extension="8733" root="2.16.756.888888.3.1"/>
-			<id extension="278364" root="2.16.756.555555.3.1"/>
-			<id extension="10378" root="2.16.756.444444.3.1"/>
+			<id extension="2345" root="2.16.756.777777.3.1"/>
 			<!-- The patient's address - also according to eCH-0010. -->
 			<addr use="HP">
 				<streetName>Leidensweg</streetName>
@@ -90,9 +89,9 @@ History:
 			<!-- The organization who took care of the patient in the same context with the current CDA document. -->
 			<providerOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7604444444444" root="2.51.1.3"/>
+				<id extension="7607777777777" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kurhaus Blumenalp</name>
+				<name use="L">Radiologieinstitut RoDiag</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -102,36 +101,39 @@ History:
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode code="223366009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Healthcare professional"/>
 		<!-- Timestamp of the authorship. -->
-		<time value="201712051000+0100"/>
+		<time value="201710071749+0100"/>
 		<assignedAuthor>
 			<!-- The author's id (GLN). -->
-			<id extension="7604444444444" root="2.51.1.3"/>
+			<id extension="7607777777777" root="2.51.1.3"/>
 			<!-- The author is a person. -->
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
 				<name use="L">
 					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>N.</given>
-					<family>Novodyn</family>
-					<suffix>Assistenzarzt</suffix>
+					<given>X.</given>
+					<family>Ray</family>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
 			<representedOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7604444444444" root="2.51.1.3"/>
+				<id extension="7607777777777" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für Orthopädische Rehabilitation</name>
+				<name use="L">Radiologieinstitut RoDiag</name>
 				<!-- The author's means of communication: phone work place.-->
-				<telecom value="tel:+41.33.456.21.21" use="WP"/>
+				<telecom value="tel:+41.32.456.99.90" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
-				<telecom value="fax:+41.33.456.21.13" use="WP"/>
+				<telecom value="fax:+41.32.456.99.99" use="WP"/>
+				<!-- The author's means of communication: eMail work place.-->
+				<telecom value="mailto:rodiag@rodiag_institut.ch" use="WP"/>
 				<!-- The author's means of communication: website work place.-->
-				<telecom value="http:www.ortho-blumenalp.ch" use="WP"/>
+				<telecom value="http:www.rodiag_institut.ch" use="WP"/>
 				<!-- The author's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<postalCode>9876</postalCode>
-					<city>Blumenalp</city>
+					<streetName>Röntgenstr</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
 					<country>CH</country>
 				</addr>
 			</representedOrganization>
@@ -143,15 +145,15 @@ History:
 		<!-- Template id according to CDA-CH v2.0 -->
 		<templateId root="2.16.756.5.30.1.1.10.2.7"/>
 		<!-- Timestamp of the data input. -->
-		<time value="201712051000+0100"/>
+		<time value="201710071750+0100"/>
 		<assignedEntity>
 			<!-- The data enterer's id. -->
-			<id extension="16" root="2.16.756.444444.2.1"/>
+			<id extension="23" root="2.16.756.777777.2.1"/>
 			<assignedPerson>
 				<!-- The data enterer's name. -->
 				<name use="L">
-					<given>Paula</given>
-					<family>Admistration</family>
+					<given>Andre</given>
+					<family>Volontariat</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -162,13 +164,15 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- The custodian's id (GLN).  -->
-				<id extension="7604444444444" root="2.51.1.3"/>
+				<id extension="7607777777777" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kurhaus Blumenalp</name>
+				<name use="L">Radiologieinstitut RoDiag</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<postalCode>9876</postalCode>
-					<city>Blumenalp</city>
+					<streetName>Röntgenstr</streetName>
+					<houseNumber>1</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
 					<country>CH</country>
 				</addr>
 			</representedCustodianOrganization>
@@ -177,24 +181,6 @@ History:
 
 	<!-- The main recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<informationRecipient typeCode="PRCP">
-		<intendedRecipient>
-			<receivedOrganization>
-				<!-- The addressee's name. -->
-				<name use="L">Kantonales Spital, Aerztliche Leitung, Klinik für Orthopädie</name>
-				<!-- The addressee's address - also according to eCH-0010. -->
-				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
-					<houseNumber>23</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</receivedOrganization>
-		</intendedRecipient>
-	</informationRecipient>
-
-	<!-- A secondary recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<informationRecipient typeCode="TRC">
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
@@ -211,75 +197,37 @@ History:
 		</intendedRecipient>
 	</informationRecipient>
 
-	<!-- A secondary recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<informationRecipient typeCode="TRC">
-		<intendedRecipient>
-			<receivedOrganization>
-				<!-- The addressee's name. -->
-				<name use="L">Dr. med. Hans Spezialist, Facharzt für Orthopädie</name>
-				<!-- The addressee's address - also according to eCH-0010. -->
-				<addr use="WP">
-					<streetName>Aerztegasse</streetName>
-					<houseNumber>13</houseNumber>
-					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
-					<country>CH</country>
-				</addr>
-			</receivedOrganization>
-		</intendedRecipient>
-	</informationRecipient>
-
 	<!-- The legal authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<legalAuthenticator>
 		<!-- Timestamp of the signature. -->
-		<time value="20171205"/>
+		<time value="20171007"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
 			<!-- The assigned entity's id (including the assigned person's id). -->
-			<id extension="7604444444444" root="2.51.1.3"/>
+			<id extension="7607777777777" root="2.51.1.3"/>
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
 					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>Freddy</given>
-					<family>Fango</family>
-					<suffix>Ärztlicher Leiter</suffix>
+					<given>X.</given>
+					<family>Ray</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
-
-	<!-- An authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<authenticator>
-		<!-- Timestamp of the signature. -->
-		<time value="20171205"/>
-		<signatureCode code="S"/>
-		<assignedEntity>
-			<!-- The assigned entity's id (including the assigned person's id). -->
-			<id extension="7605555555555" root="2.51.1.3"/>
-			<assignedPerson>
-				<!-- The person's legal name (with required family and given name). -->
-				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>N.</given>
-					<family>Novodyn</family>
-					<suffix>Assistenzarzt</suffix>
-				</name>
-			</assignedPerson>
-		</assignedEntity>
-	</authenticator>
 
 	<!-- Explicit authorization according to CDA R2 (not further constrained by CDA-CH v2.0) and case study "hip joint replacement". -->
 	<authorization>
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Indirekte Einwilligung durch Zuweisung zur Radiologischen Diagnostik vom 03.10.2017
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
 		</consent>
 	</authorization>
+
 
 	<!--
 	********************************************************
@@ -298,70 +246,74 @@ History:
 					<title>Präambel</title>
 					<text>
 						<content>
-							Wir berichten Ihnen über die stationäre Rehabilitation des oben genannten Patienten vom 10.11.2017 – 01.12.2017 bei Status nach Implantation einer Hüftgelenks-Totalendoprothese am 30.10.2017 im Kantonalen Spital.<br/>
+							Besten Dank für die freundliche Zuweisung vom 3.10.2017 zur Radiologischen Untersuchung des oben genannten Patienten. Das erstellte Röntgenbild finden sie hier: <linkHtml href="https://medshare.net/fileadmin/downloads/cda-ch/mustermaxhuefte1.jpg">RoDiag Webaccess</linkHtml>
+							<br/>
+							<br/>
 						</content>
 						<content styleCode="Italics">
-							Präambel mit Angabe der Hospitalisationsdauer<br/>
-						</content>
-					</text>
-				</section>
-			</component>
-			<!--
-			********************************************************
-			Diagnosenliste
-			********************************************************
-			-->
-			<component>
-				<section>
-					<title>Diagnosenliste</title>
-					<text>
-						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							Präambel, ev. mit Referenz auf das Überweisungsschreiben<br/>
 						</content>
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Durchgeführte Behandlungen
+			Beckenübersicht vom 6.10.2017
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Durchgeführte Behandlungen</title>
+					<title>Beckenübersicht vom 6.10.2017</title>
 					<text>
 						<content styleCode="Italics">
-							Phsyiotherapeutische und andere Massnahmen<br/>
+							Spezifizierung der durchgeführten Untersuchung und des Untersuchungsdatums in der Überschrift.<br/>
+							Im Textkörper dieses Abschnittes werden erwähnenswerte Befunde der Untersuchung beschrieben (pathologische Befunde, Auffälligkeiten, Normvarianten, erwähnenswerte Normalbefunde)
 						</content>
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Beurteilung und Verlauf
+			Aufnahme nach Lauenstein bds. vom 6.10.2017
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Beurteilung und Verlauf</title>
+					<title>Aufnahme nach Lauenstein bds. vom 6.10.2017</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des Behandlungsverlaufes, Interpretation und Beurteilung der erhobenen Befunde, Beschreibung der durchgeführten Massnahmen<br/>
+							Spezifizierung der durchgeführten Untersuchung und des Untersuchungsdatums in der Überschrift.<br/>
+							Im Textkörper dieses Abschnittes werden erwähnenswerte Befunde der Untersuchung beschrieben (pathologische Befunde, Auffälligkeiten, Normvarianten, erwähnenswerte Normalbefunde)
 						</content>
 					</text>
 				</section>
 			</component>
 			<!--
 			********************************************************
-			Medikamente bei Austritt
+			Beurteilung
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Austritt</title>
+					<title>Beurteilung</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Rehabilitations-Austrittes<br/>
+							Fachärztliche Erwägungen und Interpretationen zu den oben geschilderten Befunden. Häufig werden mehrere, logisch zusammengehörige Untersuchungen in einer gemeinsamen Beurteilung gewürdigt.
+						</content>
+					</text>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Empfehlungen
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Empfehlungen</title>
+					<text>
+						<content styleCode="Italics">
+							Hier können allenfalls Empfehlungen zum weiteren Vorgehen aufgeführt werden (z.B. „Kontrolluntersuchung in 12 Wochen empfohlen“ oder „Wir empfehlen die weitere Abklärung der Befunde mittels Computertomografie“)
 						</content>
 					</text>
 				</section>

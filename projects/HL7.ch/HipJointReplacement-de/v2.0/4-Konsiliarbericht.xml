@@ -1,16 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<!--
 ********************************************************
-CDA-CH V1.2 Sample
+CDA-CH V2.0 Sample
 
 History:
-2017.10.09: Tony Schaller, medshare GmbH (Creating dummy for CDA-CH V2)
+2017.12.11: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 
 ********************************************************
 -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd' xmlns:sdtc='urn:hl7-org:sdtc'>
-	 <!-- This is only a dummy for CDA-CH V2. 
-	      The real sample is coming soon.
-	 -->
+
+	<!-- CDA-CH V2 (2017) realm. -->
+	<realmCode code="CHE"/>
+
+	<!-- CDA R2 (2005) type code. -->
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
+	<!-- CDA-CH V2 ART-DECOR model - structuredBody. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.9"/>
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2"/>
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1"/>
+
+	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<id root="E2BC60D3-96C6-4664-8801-8F109EA68F87"/>
+
+	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<code code="11488-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Consultation note">
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<translation code="371530004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Consultation report"/>
+	</code>
+
+	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<title>Konsiliarbericht</title>
+
+	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<effectiveTime value="201710151736+0100"/>
+
+	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
+	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+
+	<!-- Document code according to CDA-CH v2.0. -->
+	<languageCode code="de-CH"/>
+
+	<!--
+	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
+	This document is a new version of the one created in 2009 for CDA-CH v1.2
+	-->
+	<setId root="6072748C-C635-4E5F-910E-35F55B323CD4"/>
+	<versionNumber value="2"/>
+
+	<!-- Human patient according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<recordTarget>
+		<patientRole>
+			<!-- The patient's id. -->
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="2131" root="2.16.756.666666.3.1"/>
+			<!-- The patient's address - also according to eCH-0010. -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+				<country>CH</country>
+			</addr>
+			<!-- The patient's means of communication: phone home private.-->
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<!-- The patient's means of communication: phone work place.-->
+			<telecom use="WP" value="tel:+41.32.123.77.88"/>
+			<!-- The patient's means of communication: public eMail address.-->
+			<telecom use="PUB" value="mailto:max.muster@sampledomain.ch"/>
+			<patient>
+				<!-- The patient's name - also according to eCH-0011. -->
+				<name use="L">
+					<given>Max</given>
+					<family>MUSTER</family>
+				</name>
+				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
+				<!-- The patient's birthdate. -->
+				<birthTime value="19381212"/>
+			</patient>
+
+			<!-- The organization who took care of the patient in the same context with the current CDA document. -->
+			<providerOrganization>
+				<!-- The organization's id (GLN). -->
+				<id extension="7606666666666" root="2.51.1.3"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Dr. med. Hans Spezialist, Facharzt für Orthopädie</name>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+
+	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<author>
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
+		<!-- Timestamp of the authorship. -->
+		<time value="201710151715+0100"/>
+		<assignedAuthor>
+			<!-- The author's id (GLN). -->
+			<id extension="7606666666666" root="2.51.1.3"/>
+			<!-- The author is a person. -->
+			<assignedPerson>
+				<!-- The author's name - also according to eCH-0011. -->
+				<name use="L">
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<given>Hans</given>
+					<family>Spezialist</family>
+					<suffix>Facharzt für Orthopädie</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id extension="7606666666666" root="2.51.1.3"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Praxis Dr. Hans Spezialist, Facharzt für Orthopädie</name>
+				<!-- The author's means of communication: phone work place.-->
+				<telecom value="tel:+41.32.252.25.25" use="WP"/>
+				<!-- The author's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Ärztegasse</streetName>
+					<houseNumber>13</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+
+	<!-- Information about the person that entered information in this CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<dataEnterer>
+		<!-- Template id according to CDA-CH v2.0 -->
+		<templateId root="2.16.756.5.30.1.1.10.2.7"/>
+		<!-- Timestamp of the data input. -->
+		<time value="201710151701+0100"/>
+		<assignedEntity>
+			<!-- The data enterer's id. -->
+			<id extension="5" root="2.16.756.666666.2.1"/>
+			<assignedPerson>
+				<!-- The data enterer's name. -->
+				<name use="L">
+					<given>Willi</given>
+					<family>Fiktiv</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+
+	<!-- The organization in whose name this CDA document has been created (corresponds to the sender of a letter) according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!-- The custodian's id (GLN).  -->
+				<id extension="7606666666666" root="2.51.1.3"/>
+				<!-- The custodian's name. -->
+				<name use="L">Dr. med. Hans Spezialist, Facharzt für Orthopädie</name>
+				<!-- The custodian's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Ärztegasse</streetName>
+					<houseNumber>13</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<!-- The main recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient>
+			<receivedOrganization>
+				<!-- The addressee's name. -->
+				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit, FMH Allgemeine Medizin</name>
+				<!-- The addressee's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+
+	<!-- The legal authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<legalAuthenticator>
+		<!-- Timestamp of the signature. -->
+		<time value="20171015"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<!-- The assigned entity's id (including the assigned person's id). -->
+			<id extension="7606666666666" root="2.51.1.3"/>
+			<assignedPerson>
+				<!-- The person's legal name (with required family and given name). -->
+				<name use="L">
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<given>Hans</given>
+					<family>Spezialist</family>
+					<suffix>Facharzt für Orthopädie</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+
+	<!-- Explicit authorization according to CDA R2 (not further constrained by CDA-CH v2.0) and case study "hip joint replacement". -->
+	<authorization>
+		<consent>
+			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
+				<originalText>
+					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+				</originalText>
+			</code>
+			<statusCode code="completed"/>
+		</consent>
+	</authorization>
+
+
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			Präambel
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Präambel</title>
+					<text>
+						<content>
+							Vielen Dank für die freundliche Zuweisung des oben genannten Patienten zur konsiliarischen Beurteilung in meiner Praxis.<br/>
+						</content>
+						<content styleCode="Italics">
+							Präambel<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Diagnosenliste
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Diagnosenliste</title>
+					<text>
+						<content styleCode="Italics">
+							Liste der bekannten Diagnosen des Patienten, meist strukturiert<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Anamnese und aktuelles Leiden
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Anamnese und aktuelles Leiden</title>
+					<text>
+						<content styleCode="Italics">
+							Kurze Zusammenfassung der Vorgeschichte des Leidens, weshalb der Patient konsiliarisch beurteilt wird.<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Untersuchungsbefunde
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Untersuchungsbefunde</title>
+					<text>
+						<content styleCode="Italics">
+							Erwähnenswerte Untersuchungsbefunde, evt. auch Ergebnisse weiterer apparativer Untersuchungen<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Beurteilung und Empfehlung zum weiteren Vorgehen
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Beurteilung und Empfehlung zum weiteren Vorgehen</title>
+					<text>
+						<content styleCode="Italics">
+							Beurteilung der Gesamtsituation unter Würdigung der erhobenen Befunde, Abgabe einer Empfehlung zum weiteren Vorgehen resp. einer Therapieempfehlung<br/>
+							<br/>
+						</content>
+						<content>
+							Darf ich Sie bitten, gegebenenfalls die präoperativen Laboranalysen in Ihrer Praxis durchzuführen.<br/>
+						</content>
+						<content styleCode="Italics">
+							Liste der präoperativ durchzuführenden Untersuchungen und Laboranalysen<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
 </ClinicalDocument>

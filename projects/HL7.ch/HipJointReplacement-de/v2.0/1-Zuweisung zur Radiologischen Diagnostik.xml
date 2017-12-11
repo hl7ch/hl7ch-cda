@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ********************************************************
-CDA-CH V1.2 Sample
+CDA-CH V2.0 Sample
 
 History:
 2017.11.10: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
@@ -31,7 +31,7 @@ History:
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<code code="28616-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Physician Transfer note">
-		<!-- Document code mapping to the Swiss EPR XDS.b metadata. -->
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
 		<translation code="371535009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Transfer summary report"/>
 	</code>
 
@@ -39,7 +39,7 @@ History:
 	<title>Zuweisung zur Radiologischen Diagnostik</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<effectiveTime value="201711101454+0100"/>
+	<effectiveTime value="201710031733+0100"/>
 
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
@@ -58,7 +58,7 @@ History:
 	<recordTarget>
 		<patientRole>
 			<!-- The patient's id. -->
-			<id extension="898989" root="2.999"/>
+			<id extension="8733" root="2.16.756.888888.3.1"/>
 			<!-- The patient's address - also according to eCH-0010. -->
 			<addr use="HP">
 				<streetName>Leidensweg</streetName>
@@ -71,17 +71,16 @@ History:
 			<telecom use="HP" value="tel:+41.32.685.12.34"/>
 			<!-- The patient's means of communication: phone work place.-->
 			<telecom use="WP" value="tel:+41.32.123.77.88"/>
-			<!-- The patient's means of communication: public eMail address.
+			<!-- The patient's means of communication: public eMail address.-->
 			<telecom use="PUB" value="mailto:max.muster@sampledomain.ch"/>
-			-->
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
-				<name>
+				<name use="L">
 					<given>Max</given>
 					<family>MUSTER</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
-				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male" />
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
 				<!-- The patient's birthdate. -->
 				<birthTime value="19381212"/>
 			</patient>
@@ -91,25 +90,25 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7608888888888" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
+				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
 
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<author>
-		<!-- The author's role according to the Swiss EPR XDS.b metadata. -->
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
 		<!-- Timestamp of the authorship. -->
-		<time value="201711101609+0100"/>
+		<time value="201710031609+0100"/>
 		<assignedAuthor>
 			<!-- The author's id (GLN). -->
 			<id extension="7608888888888" root="2.51.1.3"/>
 			<!-- The author is a person. -->
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
-				<name>
-					<prefix>Dr. med.</prefix>
+				<name use="L">
+					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>Allzeit</given>
 					<family>Bereit</family>
 					<suffix>Facharzt für Allgemeine Medizin</suffix>
@@ -120,7 +119,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7609999999999" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name>Gruppenpraxis CH</name>
+				<name use="L">Gruppenpraxis CH</name>
 				<!-- The author's means of communication: phone work place.-->
 				<telecom value="tel:+41.32.234.55.66" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
@@ -133,8 +132,8 @@ History:
 				<addr use="WP">
 					<streetName>Doktorgasse</streetName>
 					<houseNumber>2</houseNumber>
-					<city>Musterhausen</city>
 					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
 					<country>CH</country>
 				</addr>
 			</representedOrganization>
@@ -146,17 +145,19 @@ History:
 		<!-- Template id according to CDA-CH v2.0 -->
 		<templateId root="2.16.756.5.30.1.1.10.2.7"/>
 		<!-- Timestamp of the data input. -->
-		<time value="201710111315+0100"/>
+		<time value="201710031315+0100"/>
 		<assignedEntity>
 			<!-- The data enterer's id. -->
 			<id root="2.999" extension="0812763"/>
 			<assignedPerson>
 				<!-- The data enterer's name. -->
-				<name>Sk</name>
+				<name use="L">
+					<given>Schreib</given>
+					<family>Kraft</family>
+				</name>
 			</assignedPerson>
 		</assignedEntity>
 	</dataEnterer>
-
 
 	<!-- The organization in whose name this CDA document has been created (corresponds to the sender of a letter) according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<custodian>
@@ -165,13 +166,13 @@ History:
 				<!-- The custodian's id (GLN).  -->
 				<id extension="7608888888888" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name>Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
+				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Doktorgasse</streetName>
 					<houseNumber>2</houseNumber>
-					<city>Musterhausen</city>
 					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
 					<country>CH</country>
 				</addr>
 			</representedCustodianOrganization>
@@ -183,7 +184,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name>RoDiag Radiologieinstitut</name>
+				<name use="L">RoDiag Radiologieinstitut</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Röntgenstr.</streetName>
@@ -196,12 +197,32 @@ History:
 		</intendedRecipient>
 	</informationRecipient>
 
+	<!-- The legal authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<legalAuthenticator>
+		<!-- Timestamp of the signature. -->
+		<time value="20171003"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<!-- The assigned entity's id (including the assigned person's id). -->
+			<id extension="7607777777777" root="2.51.1.3"/>
+			<assignedPerson>
+				<!-- The person's legal name (with required family and given name). -->
+				<name use="L">
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Facharzt für Allgemeine Medizin</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+
 	<!-- Explicit authorization according to CDA R2 (not further constrained by CDA-CH v2.0) and case study "hip joint replacement". -->
 	<authorization>
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Mündliche Einwilligung während Konsultation vom 03.10.2007
+					Mündliche Einwilligung während Konsultation vom 03.10.2017
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
