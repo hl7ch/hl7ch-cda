@@ -137,9 +137,22 @@
 
 	<informationRecipient typeCode="PRCP">
 		<intendedRecipient>
+			<id root="2.51.1.3" extension="7601002155939" />
+			<informationRecipient>
+				<name>
+					<prefix>Dr.</prefix>
+					<family>Spezialarzt</family>
+				</name>
+			</informationRecipient>
 			<receivedOrganization>
-				<id root="2.51.1.3" extension="7601002156363" />
-				<name>SRZ</name>
+				<id root="2.51.1.3" extension="7601002155939" />
+				<!-- cdachresp-dataelement-174 -->
+				<name>USZ</name>
+				<addr>
+					<streetAddressLine>Rämistrasse 100</streetAddressLine>
+					<city>Zürich</city>
+					<postalCode>8091</postalCode>
+				</addr>
 			</receivedOrganization>
 		</intendedRecipient>
 	</informationRecipient>
