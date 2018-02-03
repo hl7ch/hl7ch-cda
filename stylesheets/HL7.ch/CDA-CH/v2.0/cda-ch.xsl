@@ -1122,6 +1122,83 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 				</tr>
 			</xsl:for-each>
 			<xsl:for-each select="/n1:ClinicalDocument/n1:informationRecipient">
+				<xsl:choose>
+					<xsl:when test="n1:intendedRecipient/n1:informationRecipient and n1:intendedRecipient/n1:receivedOrganization">
+						<tr>
+							<th>
+								<xsl:call-template name="getRecipientType">
+									<xsl:with-param name="typeCode" select="@typeCode"/>
+								</xsl:call-template>
+							</th>
+							<td>
+								<xsl:call-template name="getName">
+									<xsl:with-param name="name" select="n1:intendedRecipient/n1:informationRecipient/n1:name"/>
+								</xsl:call-template>
+							</td>
+						</tr>
+						<tr>
+							<th class="empty"/>
+							<td>
+								<xsl:call-template name="getContactInfo">
+									<xsl:with-param name="contact" select="n1:intendedRecipient"/>
+								</xsl:call-template>
+							</td>
+						</tr>
+						<tr>
+							<th class="empty"/>
+							<td>
+								<xsl:call-template name="getName">
+									<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
+								</xsl:call-template>
+							</td>
+						</tr>
+						<tr>
+							<th class="empty"/>
+							<td>
+								<xsl:call-template name="getContactInfo">
+									<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
+								</xsl:call-template>
+							</td>
+						</tr>
+					</xsl:when>
+					<xsl:otherwise>
+						<tr>
+							<th>
+								<xsl:call-template name="getRecipientType">
+									<xsl:with-param name="typeCode" select="@typeCode"/>
+								</xsl:call-template>
+							</th>
+							<td>
+								<xsl:if test="n1:intendedRecipient/n1:informationRecipient">
+									<xsl:call-template name="getName">
+										<xsl:with-param name="name" select="n1:intendedRecipient/n1:informationRecipient/n1:name"/>
+									</xsl:call-template>
+								</xsl:if>
+								<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
+									<xsl:call-template name="getName">
+										<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
+									</xsl:call-template>
+								</xsl:if>
+							</td>
+						</tr>
+						<tr>
+							<th class="empty"/>
+							<td>
+								<xsl:if test="n1:intendedRecipient/n1:informationRecipient">
+									<xsl:call-template name="getContactInfo">
+										<xsl:with-param name="contact" select="n1:intendedRecipient"/>
+									</xsl:call-template>
+								</xsl:if>
+								<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
+									<xsl:call-template name="getContactInfo">
+										<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
+									</xsl:call-template>
+								</xsl:if>
+							</td>
+						</tr>
+					</xsl:otherwise>
+		</xsl:choose>
+<!--
 				<tr>
 					<th>
 						<xsl:call-template name="getRecipientType">
@@ -1144,21 +1221,19 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 				<tr>
 					<th class="empty"/>
 					<td>
-						<xsl:call-template name="getContactInfo">
-							<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
-						</xsl:call-template>
-						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
-							<br />
-							<xsl:call-template name="getName">
-								<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
+						<xsl:if test="n1:intendedRecipient/n1:informationRecipient">
+							<xsl:call-template name="getContactInfo">
+								<xsl:with-param name="contact" select="n1:intendedRecipient"/>
 							</xsl:call-template>
-							<br />
+						</xsl:if>
+						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
 							<xsl:call-template name="getContactInfo">
 								<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
 							</xsl:call-template>
 						</xsl:if>
 					</td>
 				</tr>
+-->				
 			</xsl:for-each>
 		</table>
 	</xsl:template>
