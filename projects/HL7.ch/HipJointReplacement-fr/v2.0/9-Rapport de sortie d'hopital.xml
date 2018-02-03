@@ -27,7 +27,7 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="41A77840-7673-4579-88F6-79D3EB6C0B5E"/>
+	<id root="5AA1A0AB-7E3E-4D69-9B65-C78886DCD4B3"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
@@ -36,7 +36,7 @@ History:
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Spital-Austrittsbericht</title>
+	<title>Rapport de sortie d'hôpital</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<effectiveTime value="201711131741+0100"/>
@@ -45,7 +45,7 @@ History:
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
-	<languageCode code="de-CH"/>
+	<languageCode code="fr-CH"/>
 
 	<!--
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
@@ -62,10 +62,10 @@ History:
 			<id extension="278364" root="2.16.756.555555.3.1"/>
 			<!-- The patient's address - also according to eCH-0010. -->
 			<addr use="HP">
-				<streetName>Leidensweg</streetName>
+				<streetName>Chemin de Croix</streetName>
 				<houseNumber>10</houseNumber>
 				<postalCode>9999</postalCode>
-				<city>Specimendorf</city>
+				<city>Village spécimen</city>
 				<country>CH</country>
 			</addr>
 			<!-- The patient's means of communication: phone home private.-->
@@ -73,12 +73,12 @@ History:
 			<!-- The patient's means of communication: phone work place.-->
 			<telecom use="WP" value="tel:+41.32.123.77.88"/>
 			<!-- The patient's means of communication: public eMail address.-->
-			<telecom use="PUB" value="mailto:max.muster@sampledomain.ch"/>
+			<telecom use="PUB" value="mailto:max.untel@sampledomain.ch"/>
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
 				<name use="L">
 					<given>Max</given>
-					<family>MUSTER</family>
+					<family>UNTEL</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
@@ -91,7 +91,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<name use="L">Hôpital cantonal, Clinique chirurgicale et orthopédique</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -111,8 +111,8 @@ History:
 				<name use="L">
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistance</family>
+					<suffix>Médecin assistant</suffix>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
@@ -120,7 +120,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<name use="L">Hôpital cantonal, Clinique chirurgicale et orthopédique, Dr. Theo Klug, Médecin chef</name>
 				<!-- The author's means of communication: phone work place.-->
 				<telecom value="tel:+41.32.211.11.11" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
@@ -129,10 +129,10 @@ History:
 				<telecom value="http:www.kantonales-spital.ch" use="WP"/>
 				<!-- The author's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
+					<streetName>Rue de l'Hôpital</streetName>
 					<houseNumber>23</houseNumber>
 					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
+					<city>Quelquepart</city>
 					<country>CH</country>
 				</addr>
 			</representedOrganization>
@@ -152,7 +152,7 @@ History:
 				<!-- The data enterer's name. -->
 				<name use="L">
 					<given>Emil</given>
-					<family>Specimen</family>
+					<family>Spécimen</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -165,13 +165,13 @@ History:
 				<!-- The custodian's id (GLN).  -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kantonales Spital</name>
+				<name use="L">Hôpital cantonal</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
+					<streetName>Rue de l'Hôpital</streetName>
 					<houseNumber>23</houseNumber>
 					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
+					<city>Quelquepart</city>
 					<country>CH</country>
 				</addr>
 			</representedCustodianOrganization>
@@ -183,7 +183,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für orthopädische Rehabilitation, Aerztliche Leitung</name>
+				<name use="L">Maison de cure Blumenalp, Centre de rééducation orthopédique, Direction médicale</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<postalCode>9876</postalCode>
@@ -199,13 +199,13 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
+				<name use="L">Cabinet Médical CH, Dr. med. Toujours Prêt, Spécialiste pour médecine générale</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Doktorgasse</streetName>
+					<streetName>Allée du docteur</streetName>
 					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
+					<city>Quelquepart</city>
 					<country>CH</country>
 				</addr>
 			</receivedOrganization>
@@ -217,13 +217,13 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. H. Spezialist, Facharzt Orthopädie</name>
+				<name use="L">Hôpital cantonal, Clinique chirurgicale et orthopédique, Dr. H. Spécialiste, Orthopédiste</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
+					<streetName>Rue de l'Hôpital</streetName>
 					<houseNumber>23</houseNumber>
 					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
+					<city>Quelquepart</city>
 					<country>CH</country>
 				</addr>
 			</receivedOrganization>
@@ -244,7 +244,7 @@ History:
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>Theo</given>
 					<family>Klug</family>
-					<suffix>Chefarzt</suffix>
+					<suffix>Médecin chef</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -263,8 +263,8 @@ History:
 				<name use="L">
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistance</family>
+					<suffix>Médecin assistant</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -275,7 +275,7 @@ History:
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Consentement écrite pour soigner l'articulation droite de la hanche du patient par une opération d'implantation d'une endoprothèse de l'articulation de la hanche lors de la consultation auprès du 15/10/2017 Dr Hans Spécialiste, Orthopédiste
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
@@ -290,241 +290,241 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
+			<!-- 
 			********************************************************
-			Präambel
+			  Préambule
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Präambel</title>
+					<title>Préambule</title>
 					<text>
 						<content>
-							Wir danken Ihnen für die weitere Betreuung des oben genannten Patienten, welcher vom 29.10.2017 – 10.11.2017 bei uns hospitalisiert war und am 10.11.2017 in Ihrem Hause zur weiteren Rehabilitation eingetreten ist.<br/>
+							Nous vous remercions des soins que vous avez administrés au patient susmentionné qui a été hospitalisé dans notre établissement du 29/10/2007 au 10/11/2007 et a été admis dans votre centre de rééducation le 10/11/2007.<br/>
 							<br/>
 						</content>
 						<content styleCode="Italics">
-							Präambel mit Angabe der Hospitalisationsdauer<br/>
+							Préambule avec indication de la durée de l'hospitalisation<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Diagnosenliste
+			  Liste de diagnostics
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Diagnosenliste</title>
+					<title>Liste de diagnostics</title>
 					<text>
 						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							Liste structurée des diagnostics connus, triée par pertinence<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Durchgeführte Behandlungen
+			  Traitements effectués
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Durchgeführte Behandlungen</title>
+					<title>Traitements effectués</title>
 					<text>
 						<content styleCode="Italics">
-							Durchgeführte therapeutische Eingriffe, Operationen oder nichtinvasive (z.B. medikamentöse) Behandlungen<br/>
+							Interventions thérapeutiques, opérations ou traitements non invasifs (ex: médicamenteux) exécutés<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Anamnese
+			  Anamnèse
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Anamnese</title>
+					<title>Anamnèse</title>
 					<text>
 						<content>
-							Patientenanamnese<br/>
+							Anamnèse du patient<br/>
 						</content>
 						<content styleCode="Italics">
-							Medizinische Vorgeschichte des Patienten (durchgemachte Krankheiten und Operationen, bekannte Leiden etc.)<br/>
+							Antécédents médicaux du patient (maladies et opérations antérieures, pathologies connues, etc.)<br/>
 							<br/>
 						</content>
 						<content>
-							Systemanamnese<br/>
+							Anamnèse de système<br/>
 						</content>
 						<content styleCode="Italics">
-							Körperliche Vorgeschichte des Patienten, häufig gegliedert nach Organsystemen<br/>
+							Antécédents corporels du patient, fréquemment divisé par systèmes d'organes<br/>
 							<br/>
 						</content>
 						<content>
-							Bekannte Allergien<br/>
+							Allergies connues<br/>
 						</content>
 						<content styleCode="Italics">
-							Beschreibung des Allergens und der Reaktion nach Exposition<br/>
+							Description de l'allergène et de la réaction après exposition<br/>
 							<br/>
 						</content>
 						<content>
-							Sozialanamnese<br/>
+							Anamnèse sociale<br/>
 						</content>
 						<content styleCode="Italics">
-							Soziale Vorgeschichte, Lebensumstände des Patienten<br/>
+							Antécédents sociaux, conditions de vie du patient<br/>
 							<br/>
 						</content>
 						<content>
-							Familienanamnese<br/>
+							Anamnèse familiale<br/>
 						</content>
 						<content styleCode="Italics">
-							Bekannte familiäre Krankheitsdispositionen<br/>
+							Dispositions pathologiques familières connues<br/>
 							<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Aktuelles Leiden
-			********************************************************
-			-->
-			<component>
-				<section>
-					<title>Aktuelles Leiden</title>
-					<text>
-						<content styleCode="Italics">
-							Beschreibung des aktuellen Behandlungsgrundes<br/>
-						</content>
-					</text>
-				</section>
-			</component>
-			<!--
-			********************************************************
-			Medikamente bei Eintritt
+			  Pathologie actuelle
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Eintritt</title>
+					<title>Pathologie actuelle</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bestehenden Medikamente bei Eintritt (z.B. „Aspirin cardio 1-0-0“)<br/>
+							Description du motif du traitement actuel<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Klinische Befunde bei Eintritt
+			  Médicaments lors de l'admission
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Klinische Befunde bei Eintritt</title>
+					<title>Médicaments lors de l'admission</title>
 					<text>
 						<content styleCode="Italics">
-							Klinischer Status des Patienten, evt. nach Organsystemen gegliedert<br/>
+							Liste des médicaments existants lors de l'admission (ex: «aspirine cardio 1-0-0»)<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Bildgebende Verfahren
+			  Résultats cliniques lors de l'entrée
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Bildgebende Verfahren</title>
+					<title>Résultats cliniques lors de l'entrée</title>
 					<text>
 						<content styleCode="Italics">
-							Befunde und Beurteilung aus bildgebender Diagnostik (Röntgen etc.)<br/>
+							Situation clinique du patient, éventuellement divisée par systèmes d'organes<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Ergebnisse weiterer Untersuchungen
+			  Procédés d'imagerie
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Ergebnisse weiterer Untersuchungen</title>
+					<title>Procédés d'imagerie</title>
 					<text>
 						<content styleCode="Italics">
-							Befunde und Beurteilung aus Endoskopien<br/>
-							Konsiliarische Beurteilungen<br/>
+							Résultats et avis du diagnostic d'imagerie (radiographies, etc.)<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Laborresultate
+			  Résultats des autres examens
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Laborresultate</title>
+					<title>Résultats des autres examens</title>
 					<text>
 						<content styleCode="Italics">
-							Befunde aus Labordiagnostik oder Pathologie, häufig auch als zusammenfassender Laboraustrittsbericht (erster/letzter und höchster/tiefster Wert jeder durchgeführten Analyse) <br/>
+							Résultats et avis des endoscopies<br/>
+							Avis consultatifs<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Beurteilung und Verlauf
+			  Résultats de laboratoire
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Beurteilung und Verlauf</title>
+					<title>Résultats de laboratoire</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des Behandlungsverlaufes, Interpretation und Beurteilung der erhobenen Befunde, Beschreibung der durchgeführten Massnahmen<br/>
+							Résultats du diagnostic de laboratoire ou de la pathologie. Il s'agit souvent d'un rapport de laboratoire récapitulatif de sortie (première et /dernière valeurs, ainsi que la valeur la plus haute et la plus basse de chaque analyse effectuée)<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Medikamente bei Austritt
+			  Avis et suite du traitement
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Austritt</title>
+					<title>Avis et suite du traitement</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Spitalaustrittes<br/>
+							Description de la suite donnée au traitement, de l'interprétation et de l'avis sur les résultats relevés; description des mesures prises<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Empfehlungen für die weitere Behandlung
+			  Médicaments à la sortie
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Empfehlungen für die weitere Behandlung</title>
+					<title>Médicaments à la sortie</title>
 					<text>
 						<content styleCode="Italics">
-							Empfehlungen für die weitere Behandlung<br/>
+							Liste de la médication prescrite au moment de la sortie de l'hôpital<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Beilagen
+			  Recommandations pour la suite du traitement
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Recommandations pour la suite du traitement</title>
+					<text>
+						<content styleCode="Italics">
+							Recommandations pour la suite du traitement<br/>
+						</content>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Pièces jointes
 			********************************************************
 			-->
 			<component>
@@ -534,32 +534,28 @@ History:
 						<list>
 							<item>
 								<content ID="a1">
-									<linkHtml href="9-Laborbericht_Spital.pdf">Zusammenfassung Laboraustrittsbericht</linkHtml>
-									<br/>
+									<linkHtml href="9-Laborbericht_Spital.pdf">Résumé du rapport de sortie du laboratoire</linkHtml><br/>
 								</content>
 							</item>
 							<item>
 								<content ID="a2">
-									<linkHtml href="7-Operationsbericht.xml">Kopie OP-Bericht vom 30.10.2017</linkHtml>
-									<br/>
+									<linkHtml href="7-Rapport d'operation.xml">Copie du rapport d'OP</linkHtml><br/>
 								</content>
 							</item>
 							<item>
 								<content ID="a3">
-									Die Röntgenbilder erhalten Sie mit herkömlicher Post. Einen elektronischen Vorabzug legen wir Ihnen bei:<br/>
-									<linkHtml href="mustermaxhuefte1.jpg">Röntgenbild präop</linkHtml>
-									<br/>
-									<linkHtml href="mustermaxhuefte2.jpg">Röntgenbild postop</linkHtml>
-									<br/>
+									Les radiographies, vous recevrez par la poste traditionnelle. Un précompte électronique, nous vous ajouterions ici:<br/>
+									<linkHtml href="mustermaxhuefte1.jpg">Radiographies préopératoire</linkHtml><br/>
+									<linkHtml href="mustermaxhuefte2.jpg">Radiographies postopératoire</linkHtml><br/>
 								</content>
 							</item>
 						</list>
 					</text>
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
-							<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laborbericht"/>
-							<effectiveTime value="20171109"/>
-							<value xsi:type="CD" code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Laborbericht">
+							<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération"/>
+							<effectiveTime value="20071109"/>
+							<value xsi:type="CD" code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération">
 								<originalText>
 									<reference value="#a1"/>
 								</originalText>
@@ -576,9 +572,9 @@ History:
 					</entry>
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
-							<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Operationsbericht"/>
-							<effectiveTime value="20171030"/>
-							<value xsi:type="CD" code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Operationsbericht">
+							<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération"/>
+							<effectiveTime value="20071030"/>
+							<value xsi:type="CD" code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération">
 								<originalText>
 									<reference value="#a2"/>
 								</originalText>
@@ -588,7 +584,7 @@ History:
 								<externalDocument>
 									<id extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
 									<text mediaType="multipart/x-hl7-cda-level-one">
-										<reference value="7-Operationsbericht.xml"/>
+										<reference value="7-Rapport%20operation.xml"/>
 									</text>
 									<setId extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
 									<versionNumber value="1"/>
@@ -598,9 +594,9 @@ History:
 					</entry>
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
-							<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Röntgenbild"/>
-							<effectiveTime value="20171109"/>
-							<value xsi:type="CD" code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Röntgenbild">
+							<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Radiographie"/>
+							<effectiveTime value="20071109"/>
+							<value xsi:type="CD" code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Radiographie">
 								<originalText>
 									<reference value="#a3"/>
 								</originalText>
@@ -609,7 +605,7 @@ History:
 								<seperatableInd value="true"/>
 								<externalDocument>
 									<text>
-										Herkömliche Röntgenbilder mit separater Post
+										Radiographies conventionnelles par courrier séparé
 									</text>
 								</externalDocument>
 							</reference>

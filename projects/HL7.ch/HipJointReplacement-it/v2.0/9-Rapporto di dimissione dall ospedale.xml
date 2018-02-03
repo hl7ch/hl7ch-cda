@@ -27,7 +27,7 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="41A77840-7673-4579-88F6-79D3EB6C0B5E"/>
+	<id root="E7EBEA24-EBAD-4B86-BB3B-D3899A58179C"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
@@ -36,7 +36,7 @@ History:
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Spital-Austrittsbericht</title>
+	<title>Rapporto di dimissione dall ospedale</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<effectiveTime value="201711131741+0100"/>
@@ -45,7 +45,7 @@ History:
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
-	<languageCode code="de-CH"/>
+	<languageCode code="it-CH"/>
 
 	<!--
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
@@ -77,8 +77,8 @@ History:
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
 				<name use="L">
-					<given>Max</given>
-					<family>MUSTER</family>
+					<given>Mario</given>
+					<family>BIANCHI</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
@@ -91,7 +91,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -109,10 +109,10 @@ History:
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
+					<prefix qualifier="AC">Dott.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistente</family>
+					<suffix>Medico assistente</suffix>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
@@ -120,7 +120,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. Theo Klug, primario</name>
 				<!-- The author's means of communication: phone work place.-->
 				<telecom value="tel:+41.32.211.11.11" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
@@ -165,7 +165,7 @@ History:
 				<!-- The custodian's id (GLN).  -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kantonales Spital</name>
+				<name use="L">Ospedale cantonale</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
@@ -183,7 +183,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für orthopädische Rehabilitation, Aerztliche Leitung</name>
+				<name use="L">Casa di cura Blumenalp, Centro di riabilitzione ortopedica, Direzione medica</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<postalCode>9876</postalCode>
@@ -199,7 +199,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
+				<name use="L">Studio medico CH, Dott. Allzeit Bereit, Medico specializzato in medicina generale</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Doktorgasse</streetName>
@@ -217,7 +217,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. H. Spezialist, Facharzt Orthopädie</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. H. Specialista, Specialista ortopedico</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
@@ -241,10 +241,10 @@ History:
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
+					<prefix qualifier="AC">Dott.</prefix>
 					<given>Theo</given>
 					<family>Klug</family>
-					<suffix>Chefarzt</suffix>
+					<suffix>primario</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -261,10 +261,10 @@ History:
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
+					<prefix qualifier="AC">Dott.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistente</family>
+					<suffix>Medico assistente</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -275,7 +275,7 @@ History:
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2017 Dott. Hans Specialista, specialista di ortopedia
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
@@ -290,267 +290,263 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
+			<!-- 
 			********************************************************
-			Präambel
+			  Premessa
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Präambel</title>
+					<title>Premessa</title>
 					<text>
 						<content>
-							Wir danken Ihnen für die weitere Betreuung des oben genannten Patienten, welcher vom 29.10.2017 – 10.11.2017 bei uns hospitalisiert war und am 10.11.2017 in Ihrem Hause zur weiteren Rehabilitation eingetreten ist.<br/>
+							Con la presente ringrazio per l’ulteriore persa in carico del suddetto paziente, ospedalizzato presso la nostra struttura dal 29/10/2017 al 10/11/2017 e ricoverato in data 10/11/2017 presso il vostro istituto per riabilitazione.<br/>
 							<br/>
 						</content>
 						<content styleCode="Italics">
-							Präambel mit Angabe der Hospitalisationsdauer<br/>
+							Premessa con l’indicazione della durata della degenza<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Diagnosenliste
+			  Elenco diagnosi
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Diagnosenliste</title>
+					<title>Elenco diagnosi</title>
 					<text>
 						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							Elenco strutturato delle diagnosi note, in ordine di rilevanza<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Durchgeführte Behandlungen
+			  Trattamenti eseguiti
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Durchgeführte Behandlungen</title>
+					<title>Trattamenti eseguiti</title>
 					<text>
 						<content styleCode="Italics">
-							Durchgeführte therapeutische Eingriffe, Operationen oder nichtinvasive (z.B. medikamentöse) Behandlungen<br/>
+							Interventi terapeutici, chirurgici o trattamenti non invasivi eseguiti (ad es. medicamentosi).<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Anamnese
+			  Anamnesi
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Anamnese</title>
+					<title>Anamnesi</title>
 					<text>
 						<content>
-							Patientenanamnese<br/>
+							Anamnesi remota<br/>
 						</content>
 						<content styleCode="Italics">
-							Medizinische Vorgeschichte des Patienten (durchgemachte Krankheiten und Operationen, bekannte Leiden etc.)<br/>
+							Anamnesi medica del paziente (malattie e interventi passati, disturbi noti, ecc…)<br/>
 							<br/>
 						</content>
 						<content>
-							Systemanamnese<br/>
+							Anamnesi sistemica<br/>
 						</content>
 						<content styleCode="Italics">
-							Körperliche Vorgeschichte des Patienten, häufig gegliedert nach Organsystemen<br/>
+							Anamnesi fisica del paziente, spesso divisa per sistemi di organi<br/>
 							<br/>
 						</content>
 						<content>
-							Bekannte Allergien<br/>
+							Allergie note<br/>
 						</content>
 						<content styleCode="Italics">
-							Beschreibung des Allergens und der Reaktion nach Exposition<br/>
+							Descrizione di allergie e delle relazioni all’esposizione<br/>
 							<br/>
 						</content>
 						<content>
-							Sozialanamnese<br/>
+							Anamnesi sociale<br/>
 						</content>
 						<content styleCode="Italics">
-							Soziale Vorgeschichte, Lebensumstände des Patienten<br/>
+							Anamnesi sociale, condizioni di vita del paziente<br/>
 							<br/>
 						</content>
 						<content>
-							Familienanamnese<br/>
+							Anamnesi familiare<br/>
 						</content>
 						<content styleCode="Italics">
-							Bekannte familiäre Krankheitsdispositionen<br/>
+							Predisposizioni familiari a malattie nota<br/>
 							<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Aktuelles Leiden
+			  Anamnesi attuale
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Aktuelles Leiden</title>
+					<title>Anamnesi attuale</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des aktuellen Behandlungsgrundes<br/>
+							Descrizione della motivazione della cura corrente<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Medikamente bei Eintritt
+			  Terapia al momento del ricovero
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Eintritt</title>
+					<title>Terapia al momento del ricovero</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bestehenden Medikamente bei Eintritt (z.B. „Aspirin cardio 1-0-0“)<br/>
+							Elenco dei farmaci assunti al momento del ricovero (ad es. “Aspirin cardio 1-0-0”)<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Klinische Befunde bei Eintritt
+			  Referti clinici al momento del ricovero
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Klinische Befunde bei Eintritt</title>
+					<title>Referti clinici al momento del ricovero</title>
 					<text>
 						<content styleCode="Italics">
-							Klinischer Status des Patienten, evt. nach Organsystemen gegliedert<br/>
+							Stato clinico del paziente, eventualmente diviso per sistemi di organi<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Bildgebende Verfahren
+			  Diagnostica per immagini
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Bildgebende Verfahren</title>
+					<title>Diagnostica per immagini</title>
 					<text>
 						<content styleCode="Italics">
-							Befunde und Beurteilung aus bildgebender Diagnostik (Röntgen etc.)<br/>
+							Referti e valutazioni della diagnostica per immagini (radiografie, ecc...)<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Ergebnisse weiterer Untersuchungen
+			  Risultati di ulteriori esami
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Ergebnisse weiterer Untersuchungen</title>
+					<title>Risultati di ulteriori esami</title>
 					<text>
 						<content styleCode="Italics">
-							Befunde und Beurteilung aus Endoskopien<br/>
-							Konsiliarische Beurteilungen<br/>
+							Referti e valutazioni di endoscopie<br/>
+							Valutazioni consultive<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Laborresultate
+			  Risultati di laboratorio
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Laborresultate</title>
+					<title>Risultati di laboratorio</title>
 					<text>
 						<content styleCode="Italics">
-							Befunde aus Labordiagnostik oder Pathologie, häufig auch als zusammenfassender Laboraustrittsbericht (erster/letzter und höchster/tiefster Wert jeder durchgeführten Analyse) <br/>
+							Referti della diagnostica di laboratorio o patologia, spesso anche sotto forma di relazione di laboratorio riepilogativa (primo/ultimo valore e valore più alto/più basso di ogni analisi eseguita)<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Beurteilung und Verlauf
+			  Valutazione e decorso
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Beurteilung und Verlauf</title>
+					<title>Valutazione e decorso</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des Behandlungsverlaufes, Interpretation und Beurteilung der erhobenen Befunde, Beschreibung der durchgeführten Massnahmen<br/>
+							Descrizione del decorso del trattamento, interpretazione e valutazione dei referti raccolti, descrizione delle misure eseguite<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Medikamente bei Austritt
+			  Terapia alla dimissione
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Austritt</title>
+					<title>Terapia alla dimissione</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Spitalaustrittes<br/>
+							Elenco dei farmaci da utilizzare dopo la degenza in ospedale dal momento dell’uscita<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Empfehlungen für die weitere Behandlung
+			  Procedere
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Empfehlungen für die weitere Behandlung</title>
+					<title>Procedere</title>
 					<text>
 						<content styleCode="Italics">
-							Empfehlungen für die weitere Behandlung<br/>
+							Consigli per ulteriori cure<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Beilagen
+			  Allegati
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Beilagen</title>
+					<title>Allegati</title>
 					<text>
 						<list>
 							<item>
 								<content ID="a1">
-									<linkHtml href="9-Laborbericht_Spital.pdf">Zusammenfassung Laboraustrittsbericht</linkHtml>
-									<br/>
+									<linkHtml href="9-Laborbericht_Spital.pdf">Relazione riepilogativa di laboratorio</linkHtml><br/>
 								</content>
 							</item>
 							<item>
 								<content ID="a2">
-									<linkHtml href="7-Operationsbericht.xml">Kopie OP-Bericht vom 30.10.2017</linkHtml>
-									<br/>
+									<linkHtml href="7-Rapporto%20operatorio.xml">Copia relazione operatoria</linkHtml><br/>
 								</content>
 							</item>
 							<item>
 								<content ID="a3">
-									Die Röntgenbilder erhalten Sie mit herkömlicher Post. Einen elektronischen Vorabzug legen wir Ihnen bei:<br/>
-									<linkHtml href="mustermaxhuefte1.jpg">Röntgenbild präop</linkHtml>
-									<br/>
-									<linkHtml href="mustermaxhuefte2.jpg">Röntgenbild postop</linkHtml>
-									<br/>
+									Raggi X, vi verrà inviato tradizionali. Un rifiuto di elettronica, provvederemo ad aggiungere qui:<br/>
+									<linkHtml href="mustermaxhuefte1.jpg">X-Ray immagine pre operativo</linkHtml><br/>
+								<linkHtml href="mustermaxhuefte2.jpg">X-Ray immagine post operativo</linkHtml><br/>
 								</content>
 							</item>
 						</list>
@@ -576,9 +572,9 @@ History:
 					</entry>
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
-							<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Operationsbericht"/>
+							<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Interventosbericht"/>
 							<effectiveTime value="20171030"/>
-							<value xsi:type="CD" code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Operationsbericht">
+							<value xsi:type="CD" code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Interventosbericht">
 								<originalText>
 									<reference value="#a2"/>
 								</originalText>
@@ -588,7 +584,7 @@ History:
 								<externalDocument>
 									<id extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
 									<text mediaType="multipart/x-hl7-cda-level-one">
-										<reference value="7-Operationsbericht.xml"/>
+										<reference value="7-Rapporto%20operatorio.xml"/>
 									</text>
 									<setId extension="CE74D6DE-F6C1-4142-99E9-75277380E485" root="2.16.756.5.30.1.1.1.1"/>
 									<versionNumber value="1"/>
@@ -598,9 +594,9 @@ History:
 					</entry>
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
-							<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Röntgenbild"/>
+							<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="X-Ray immagine"/>
 							<effectiveTime value="20171109"/>
-							<value xsi:type="CD" code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Röntgenbild">
+							<value xsi:type="CD" code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="X-Ray immagine">
 								<originalText>
 									<reference value="#a3"/>
 								</originalText>
@@ -609,7 +605,7 @@ History:
 								<seperatableInd value="true"/>
 								<externalDocument>
 									<text>
-										Herkömliche Röntgenbilder mit separater Post
+										Raggi X, vi verrà inviato tradizionali.
 									</text>
 								</externalDocument>
 							</reference>

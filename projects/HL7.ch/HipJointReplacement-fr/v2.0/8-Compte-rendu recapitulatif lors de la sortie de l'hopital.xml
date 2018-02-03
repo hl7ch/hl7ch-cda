@@ -27,7 +27,7 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="7DECFBFE-4BF2-42E1-8A84-A4F7033F0341"/>
+	<id root="9EE4D0D4-BC59-4E99-8765-9153B6342762"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
@@ -36,7 +36,7 @@ History:
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Kurzbericht bei Spitalentlassung</title>
+	<title>Rapport de synthèse lors de la sortie de l'hôpital</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<effectiveTime value="201711101740+0100"/>
@@ -45,7 +45,7 @@ History:
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
-	<languageCode code="de-CH"/>
+	<languageCode code="fr-CH"/>
 
 	<!--
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
@@ -62,10 +62,10 @@ History:
 			<id extension="278364" root="2.16.756.555555.3.1"/>
 			<!-- The patient's address - also according to eCH-0010. -->
 			<addr use="HP">
-				<streetName>Leidensweg</streetName>
+				<streetName>Chemin de Croix</streetName>
 				<houseNumber>10</houseNumber>
 				<postalCode>9999</postalCode>
-				<city>Specimendorf</city>
+				<city>Village spécimen</city>
 				<country>CH</country>
 			</addr>
 			<!-- The patient's means of communication: phone home private.-->
@@ -73,12 +73,12 @@ History:
 			<!-- The patient's means of communication: phone work place.-->
 			<telecom use="WP" value="tel:+41.32.123.77.88"/>
 			<!-- The patient's means of communication: public eMail address.-->
-			<telecom use="PUB" value="mailto:max.muster@sampledomain.ch"/>
+			<telecom use="PUB" value="mailto:max.untel@sampledomain.ch"/>
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
 				<name use="L">
 					<given>Max</given>
-					<family>MUSTER</family>
+					<family>UNTEL</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
@@ -91,7 +91,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<name use="L">Hôpital cantonal, Clinique chirurgicale et orthopédique</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -111,8 +111,8 @@ History:
 				<name use="L">
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistance</family>
+					<suffix>Médecin assistant</suffix>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
@@ -120,7 +120,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<name use="L">Hôpital cantonal, Clinique chirurgicale et orthopédique, Dr. Theo Klug, Médecin chef</name>
 				<!-- The author's means of communication: phone work place.-->
 				<telecom value="tel:+41.32.211.11.11" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
@@ -129,10 +129,10 @@ History:
 				<telecom value="http:www.kantonales-spital.ch" use="WP"/>
 				<!-- The author's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
+					<streetName>Rue de l'Hôpital</streetName>
 					<houseNumber>33</houseNumber>
 					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
+					<city>Quelquepart</city>
 					<country>CH</country>
 				</addr>
 			</representedOrganization>
@@ -152,7 +152,7 @@ History:
 				<!-- The data enterer's name. -->
 				<name use="L">
 					<given>Emil</given>
-					<family>Specimen</family>
+					<family>Spécimen</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -165,13 +165,13 @@ History:
 				<!-- The custodian's id (GLN).  -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kantonales Spital</name>
+				<name use="L">Hôpital cantonal</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
+					<streetName>Rue de l'Hôpital</streetName>
 					<houseNumber>33</houseNumber>
 					<postalCode>8888</postalCode>
-					<city>Musterhausen</city>
+					<city>Quelquepart</city>
 					<country>CH</country>
 				</addr>
 			</representedCustodianOrganization>
@@ -183,7 +183,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für orthopädische Rehabilitation, Aerztliche Leitung</name>
+				<name use="L">Maison de cure Blumenalp, Centre de rééducation orthopédique, Direction médicale</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<postalCode>9876</postalCode>
@@ -208,7 +208,7 @@ History:
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>Theo</given>
 					<family>Klug</family>
-					<suffix>Chefarzt</suffix>
+					<suffix>Médecin chef</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -227,8 +227,8 @@ History:
 				<name use="L">
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistance</family>
+					<suffix>Médecin assistant</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -239,7 +239,7 @@ History:
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Consentement écrite pour soigner l'articulation droite de la hanche du patient par une opération d'implantation d'une endoprothèse de l'articulation de la hanche lors de la consultation auprès du 15/10/2017 Dr Hans Spécialiste, Orthopédiste
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
@@ -254,82 +254,82 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
+			<!-- 
 			********************************************************
-			Diagnosenliste
+			  Liste de diagnostics
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Diagnosenliste</title>
+					<title>Liste de diagnostics</title>
 					<text>
 						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							Liste structurée des diagnostics connus, triés par pertinence<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Operation
+			  Opération
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Operation</title>
+					<title>Opération</title>
 					<text>
 						<content styleCode="Italics">
-							Durchgeführte therapeutische Eingriffe, Operationen oder nichtinvasive (z.B. medikamentöse) Behandlungen<br/>
-							z.B. „Implantation einer Hüftgelenksendoprothese links am 30.10.2017, fecit Dr. Spezialist“<br/>
+							Interventions thérapeutiques, opérations ou traitements non invasifs (ex: médicamenteux) exécutés<br/>
+							Par exemple: implantation d'une endoprothèse de l'articulation gauche de la hanche le 30/10/2007, Dr Spécialiste<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Aktuelles Leiden
+			  Pathologie actuelle
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Aktuelles Leiden</title>
+					<title>Pathologie actuelle</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des aktuellen Behandlungsgrundes<br/>
+							Description du motif du traitement actuel.<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Medikamente bei Austritt
+			  Médicaments à la sortie
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Austritt</title>
+					<title>Médicaments à la sortie</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Spitalaustrittes.<br/>
+							Liste de la médication prescrite au moment de la sortie de l'hôpital.<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Empfehlungen für die weitere Behandlung
+			  Recommandations pour la suite du traitement
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Empfehlungen für die weitere Behandlung</title>
+					<title>Recommandations pour la suite du traitement</title>
 					<text>
 						<content styleCode="Italics">
-							Empfehlungen für die weitere Behandlung<br/>
-
+							Recommandations pour la suite du traitement<br/>
+							
 						</content>
 						<content>
-							Ein ausführlicher Bericht folgt.<br/>
+							Un rapport détaillé vous sera adressé sous peu.<br/>
 						</content>
 					</text>
 				</section>

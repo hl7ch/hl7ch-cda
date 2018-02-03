@@ -27,31 +27,31 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="7DECFBFE-4BF2-42E1-8A84-A4F7033F0341"/>
+	<id root="4AE3E7E5-FC51-48AE-9429-8B16AB48492C"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
+	<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Surgical operation note">
 		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
-		<translation code="373942005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Discharge summary"/>
+		<translation code="371526002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Operative report"/>
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Kurzbericht bei Spitalentlassung</title>
+	<title>Rapporto operatorio</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<effectiveTime value="201711101740+0100"/>
+	<effectiveTime value="201710301739+0100"/>
 
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
-	<languageCode code="de-CH"/>
+	<languageCode code="it-CH"/>
 
 	<!--
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
 	This document is a new version of the one created in 2009 for CDA-CH v1.2
 	-->
-	<setId root="FBAEF9DC-21A5-4B35-B3A0-234C4E424F31"/>
+	<setId root="CE74D6DE-F6C1-4142-99E9-75277380E485"/>
 	<versionNumber value="2"/>
 
 	<!-- Human patient according to CDA-CH v2.0 and case study "hip joint replacement". -->
@@ -77,8 +77,8 @@ History:
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
 				<name use="L">
-					<given>Max</given>
-					<family>MUSTER</family>
+					<given>Mario</given>
+					<family>BIANCHI</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
@@ -91,7 +91,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -99,9 +99,9 @@ History:
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<author>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
-		<functionCode code="223366009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Healthcare professional"/>
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
 		<!-- Timestamp of the authorship. -->
-		<time value="201711101000+0100"/>
+		<time value="201710301000+0100"/>
 		<assignedAuthor>
 			<!-- The author's id (GLN). -->
 			<id extension="7605555555555" root="2.51.1.3"/>
@@ -109,10 +109,10 @@ History:
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<prefix qualifier="AC">Dott.</prefix>
+					<given>Hans</given>
+					<family>Specialista</family>
+					<suffix>Specialista ortopedico</suffix>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
@@ -120,7 +120,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. Theo Klug, primario</name>
 				<!-- The author's means of communication: phone work place.-->
 				<telecom value="tel:+41.32.211.11.11" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
@@ -130,7 +130,7 @@ History:
 				<!-- The author's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
-					<houseNumber>33</houseNumber>
+					<houseNumber>23</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
 					<country>CH</country>
@@ -144,15 +144,15 @@ History:
 		<!-- Template id according to CDA-CH v2.0 -->
 		<templateId root="2.16.756.5.30.1.1.10.2.7"/>
 		<!-- Timestamp of the data input. -->
-		<time value="201711101000+0100"/>
+		<time value="201710301100+0100"/>
 		<assignedEntity>
 			<!-- The data enterer's id. -->
-			<id extension="35" root="2.16.756.555555.2.1"/>
+			<id extension="29" root="2.16.756.555555.2.1"/>
 			<assignedPerson>
 				<!-- The data enterer's name. -->
 				<name use="L">
-					<given>Emil</given>
-					<family>Specimen</family>
+					<given>Willi</given>
+					<family>Fiktiv</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -165,11 +165,11 @@ History:
 				<!-- The custodian's id (GLN).  -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kantonales Spital</name>
+				<name use="L">Ospedale cantonale</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
-					<houseNumber>33</houseNumber>
+					<houseNumber>23</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
 					<country>CH</country>
@@ -183,11 +183,31 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für orthopädische Rehabilitation, Aerztliche Leitung</name>
+				<name use="L">Ospedale cantonale, Direzione medica, Clinica ortopedica</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<postalCode>9876</postalCode>
-					<city>Blumenalp</city>
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+
+	<!-- A secondary recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<informationRecipient typeCode="TRC">
+		<intendedRecipient>
+			<receivedOrganization>
+				<!-- The addressee's name. -->
+				<name use="L">Studio medico CH, Dott. Allzeit Bereit, Medico specializzato in medicina generale</name>
+				<!-- The addressee's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
 					<country>CH</country>
 				</addr>
 			</receivedOrganization>
@@ -197,7 +217,7 @@ History:
 	<!-- The legal authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<legalAuthenticator>
 		<!-- Timestamp of the signature. -->
-		<time value="20171110"/>
+		<time value="20171030"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
 			<!-- The assigned entity's id (including the assigned person's id). -->
@@ -205,41 +225,21 @@ History:
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>Theo</given>
-					<family>Klug</family>
-					<suffix>Chefarzt</suffix>
+					<prefix qualifier="AC">Dott.</prefix>
+					<given>Hans</given>
+					<family>Specialista</family>
+					<suffix>Specialista ortopedico</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
-
-	<!-- An authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<authenticator>
-		<!-- Timestamp of the signature. -->
-		<time value="20171110"/>
-		<signatureCode code="S"/>
-		<assignedEntity>
-			<!-- The assigned entity's id (including the assigned person's id). -->
-			<id extension="7605555555555" root="2.51.1.3"/>
-			<assignedPerson>
-				<!-- The person's legal name (with required family and given name). -->
-				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
-				</name>
-			</assignedPerson>
-		</assignedEntity>
-	</authenticator>
 
 	<!-- Explicit authorization according to CDA R2 (not further constrained by CDA-CH v2.0) and case study "hip joint replacement". -->
 	<authorization>
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2017 Dott. Hans Specialista, specialista di ortopedia
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
@@ -254,82 +254,123 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
+			<!-- 
 			********************************************************
-			Diagnosenliste
+			  Data dell’intervento / Operatore / Assistentea / Anestesia / Durata dell’intervento / Numero sala…
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Diagnosenliste</title>
+					<title>Data dell’intervento / Operatore / Assistentea / Anestesia / Durata dell’intervento / Numero sala…</title>
 					<text>
+						Reparto: Chirurgia piano 13 stanza 74<br/>
+						<br/>
+						<table>
+							<tbody>
+								<tr>
+									<td valign="top">Data dell’intervento: 30/10/2017:</td>
+									<td valign="top">Operatore:: </td>
+									<td valign="top">Dott. H. Specialista</td>
+									<td valign="top"></td>
+								</tr>
+								<tr>
+									<td valign="top">ora incisione: 11:00</td>
+									<td valign="top">1° Assistente: </td>
+									<td valign="top">Dott. S. Teril</td>
+									<td valign="top"></td>
+								</tr>
+								<tr>
+									<td valign="top">ora sutura: 12:30</td>
+									<td valign="top">2° Assistente: </td>
+									<td valign="top">cm A. Halter</td>
+									<td valign="top">Strumentista: S. Kalpell</td>
+								</tr>
+								<tr>
+									<td valign="top">sala: 4</td>
+									<td valign="top">Anestesista:</td>
+									<td valign="top">Dott. G. Dormibene</td>
+									<td valign="top"></td>
+								</tr>
+							</tbody>
+						</table>
 						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							<br/>
+							Informazioni strutturate relative alla statistica operatoria<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Operation
+			  Diagnosi operatoria
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Operation</title>
+					<title>Diagnosi operatoria</title>
 					<text>
 						<content styleCode="Italics">
-							Durchgeführte therapeutische Eingriffe, Operationen oder nichtinvasive (z.B. medikamentöse) Behandlungen<br/>
-							z.B. „Implantation einer Hüftgelenksendoprothese links am 30.10.2017, fecit Dr. Spezialist“<br/>
+							Diagnosi acquisita sulla base dei referti in fase operatoria<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Aktuelles Leiden
+			  Intervento eseguito
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Aktuelles Leiden</title>
+					<title>Intervento eseguito</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des aktuellen Behandlungsgrundes<br/>
+							Descrizione precisa dell’intervento eseguito<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Medikamente bei Austritt
+			  Indicazione operatoria
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Austritt</title>
+					<title>Indicazione operatoria</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Spitalaustrittes.<br/>
+							Motivazione dell’intervento<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Empfehlungen für die weitere Behandlung
+			  Descrizione dell’intervento
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Empfehlungen für die weitere Behandlung</title>
+					<title>Descrizione dell’intervento</title>
 					<text>
 						<content styleCode="Italics">
-							Empfehlungen für die weitere Behandlung<br/>
-
+							Descrizione cronologica dettagliata dell’intervento dall’inizio (disinfezione, incisione cutanea) alla fine (sutura).<br/>
 						</content>
-						<content>
-							Ein ausführlicher Bericht folgt.<br/>
+					</text>
+				</section>
+			</component>
+			<!-- 
+			********************************************************
+			  Prescrizione del trattamento successivo
+			********************************************************
+			-->
+			<component>
+				<section>
+					<title>Prescrizione del trattamento successivo</title>
+					<text>
+						<content styleCode="Italics">
+							Direttive sulle cure postoperatorie, connesse all’intervento (analgesia, mobilizzazione, rimozione punti, drenaggio, controlli raggi x, ecc.)<br/>
 						</content>
 					</text>
 				</section>

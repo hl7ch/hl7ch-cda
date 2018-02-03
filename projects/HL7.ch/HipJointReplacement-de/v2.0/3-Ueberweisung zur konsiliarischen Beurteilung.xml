@@ -4,7 +4,7 @@
 CDA-CH V2.0 Sample
 
 History:
-2017.12.11: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
+2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 
 ********************************************************
 -->
@@ -187,7 +187,7 @@ History:
 				<name use="L">Dr. med. Hans Spezialist, Facharzt für Orthopädie</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Aerztegasse</streetName>
+					<streetName>Ärztegasse</streetName>
 					<houseNumber>13</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>

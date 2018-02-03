@@ -27,7 +27,7 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="7DECFBFE-4BF2-42E1-8A84-A4F7033F0341"/>
+	<id root="0B346C55-8EC6-41BB-B034-D613CCF0B5E7"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
@@ -36,7 +36,7 @@ History:
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Kurzbericht bei Spitalentlassung</title>
+	<title>Breve rapporto di dimissione</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<effectiveTime value="201711101740+0100"/>
@@ -45,7 +45,7 @@ History:
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
-	<languageCode code="de-CH"/>
+	<languageCode code="it-CH"/>
 
 	<!--
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
@@ -77,8 +77,8 @@ History:
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
 				<name use="L">
-					<given>Max</given>
-					<family>MUSTER</family>
+					<given>Mario</given>
+					<family>BIANCHI</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
@@ -91,7 +91,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -109,10 +109,10 @@ History:
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
+					<prefix qualifier="AC">Dott.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistente</family>
+					<suffix>Medico assistente</suffix>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
@@ -120,7 +120,7 @@ History:
 				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<name use="L">Ospedale cantonale, Clinica di chirurgia e ortopedia, Dr. Theo Klug, primario</name>
 				<!-- The author's means of communication: phone work place.-->
 				<telecom value="tel:+41.32.211.11.11" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
@@ -165,7 +165,7 @@ History:
 				<!-- The custodian's id (GLN).  -->
 				<id extension="7605555555555" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kantonales Spital</name>
+				<name use="L">Ospedale cantonale</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Spitalstr.</streetName>
@@ -183,7 +183,7 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für orthopädische Rehabilitation, Aerztliche Leitung</name>
+				<name use="L">Casa di cura Blumenalp, Centro di riabilitzione ortopedica, Direzione medica</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<postalCode>9876</postalCode>
@@ -205,10 +205,10 @@ History:
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
+					<prefix qualifier="AC">Dott.</prefix>
 					<given>Theo</given>
 					<family>Klug</family>
-					<suffix>Chefarzt</suffix>
+					<suffix>primario</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -225,10 +225,10 @@ History:
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
+					<prefix qualifier="AC">Dott.</prefix>
 					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<family>Assistente</family>
+					<suffix>Medico assistente</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -239,7 +239,7 @@ History:
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2017 Dott. Hans Specialista, specialista di ortopedia
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
@@ -254,82 +254,81 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
+			<!-- 
 			********************************************************
-			Diagnosenliste
+			  Elenco diagnosi
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Diagnosenliste</title>
+					<title>Elenco diagnosi</title>
 					<text>
 						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							Elenco strutturato delle diagnosi note, in ordine di rilevanza<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Operation
+			  Intervento
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Operation</title>
+					<title>Intervento</title>
 					<text>
 						<content styleCode="Italics">
-							Durchgeführte therapeutische Eingriffe, Operationen oder nichtinvasive (z.B. medikamentöse) Behandlungen<br/>
-							z.B. „Implantation einer Hüftgelenksendoprothese links am 30.10.2017, fecit Dr. Spezialist“<br/>
+							Interventi terapeutici, chirurgici o trattamenti non invasivi eseguiti (ad es. medicamentosi)<br/>
+							ad es. “impianto della protesi dell’articolazione sinistra del 30/10/2017, fecit Dott. Specialista”<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Aktuelles Leiden
+			  Disturbi correnti
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Aktuelles Leiden</title>
+					<title>Disturbi correnti</title>
 					<text>
 						<content styleCode="Italics">
-							Beschreibung des aktuellen Behandlungsgrundes<br/>
+							Descrizione della motivazione della cura corrente<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Medikamente bei Austritt
+			  Terapia alla dimissione
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Medikamente bei Austritt</title>
+					<title>Terapia alla dimissione</title>
 					<text>
 						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Spitalaustrittes.<br/>
+							Elenco dei farmaci da utilizzare dopo la degenza in ospedale dal momento dell’uscita.<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Empfehlungen für die weitere Behandlung
+			  Consigli per ulteriori cure = Procedere
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Empfehlungen für die weitere Behandlung</title>
+					<title>Consigli per ulteriori cure = Procedere</title>
 					<text>
 						<content styleCode="Italics">
-							Empfehlungen für die weitere Behandlung<br/>
-
+							Consigli per ulteriori cure<br/>
 						</content>
 						<content>
-							Ein ausführlicher Bericht folgt.<br/>
+							Seguirà un rapporto dettagliato.<br/>
 						</content>
 					</text>
 				</section>

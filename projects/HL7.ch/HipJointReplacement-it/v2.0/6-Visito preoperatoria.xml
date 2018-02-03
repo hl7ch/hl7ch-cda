@@ -27,31 +27,31 @@ History:
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
 	<!-- Document id according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<id root="7DECFBFE-4BF2-42E1-8A84-A4F7033F0341"/>
+	<id root="E7C19BEF-2271-4CD7-9B58-A870ED8CB125"/>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<code code="34106-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge summary note">
+	<code code="11492-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Provider-unspecifed, History and physical note">
 		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
-		<translation code="373942005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Discharge summary"/>
+		<translation code="4241000179101" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Laboratory report"/>
 	</code>
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<title>Kurzbericht bei Spitalentlassung</title>
+	<title>Visito preoperatoria</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<effectiveTime value="201711101740+0100"/>
+	<effectiveTime value="201710281738+0100"/>
 
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
-	<languageCode code="de-CH"/>
+	<languageCode code="it-CH"/>
 
 	<!--
 	Document setId and versionNumber according to CDA-CH v2.0 and case study "hip joint replacement".
 	This document is a new version of the one created in 2009 for CDA-CH v1.2
 	-->
-	<setId root="FBAEF9DC-21A5-4B35-B3A0-234C4E424F31"/>
+	<setId root="64B47FC1-6BB5-479F-A925-639D81423415"/>
 	<versionNumber value="2"/>
 
 	<!-- Human patient according to CDA-CH v2.0 and case study "hip joint replacement". -->
@@ -59,7 +59,6 @@ History:
 		<patientRole>
 			<!-- The patient's id. -->
 			<id extension="8733" root="2.16.756.888888.3.1"/>
-			<id extension="278364" root="2.16.756.555555.3.1"/>
 			<!-- The patient's address - also according to eCH-0010. -->
 			<addr use="HP">
 				<streetName>Leidensweg</streetName>
@@ -77,8 +76,8 @@ History:
 			<patient>
 				<!-- The patient's name - also according to eCH-0011. -->
 				<name use="L">
-					<given>Max</given>
-					<family>MUSTER</family>
+					<given>Mario</given>
+					<family>BIANCHI</family>
 				</name>
 				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
 				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
@@ -89,9 +88,9 @@ History:
 			<!-- The organization who took care of the patient in the same context with the current CDA document. -->
 			<providerOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7605555555555" root="2.51.1.3"/>
+				<id extension="7608888888888" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<name use="L">Studio medico CH, Dott. Allzeit Bereit</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
@@ -99,38 +98,40 @@ History:
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<author>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
-		<functionCode code="223366009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Healthcare professional"/>
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
 		<!-- Timestamp of the authorship. -->
-		<time value="201711101000+0100"/>
+		<time value="201710281013+0100"/>
 		<assignedAuthor>
 			<!-- The author's id (GLN). -->
-			<id extension="7605555555555" root="2.51.1.3"/>
+			<id extension="7608888888888" root="2.51.1.3"/>
 			<!-- The author is a person. -->
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
+					<prefix qualifier="AC">Dott.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Medico specializzato in medicina generale</suffix>
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
 			<representedOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7605555555555" root="2.51.1.3"/>
+				<id extension="7608888888888" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
-				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie, Dr. Theo Klug, Chefarzt</name>
+				<name use="L">Studio medico CH</name>
 				<!-- The author's means of communication: phone work place.-->
-				<telecom value="tel:+41.32.211.11.11" use="WP"/>
+				<telecom value="tel:+41.32.234.55.66" use="WP"/>
 				<!-- The author's means of communication: fax work place.-->
-				<telecom value="fax:+41.32.211.11.54" use="WP"/>
+				<telecom value="fax:+41.32.234.55.77" use="WP"/>
+				<!-- The author's means of communication: eMail work place.-->
+				<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
 				<!-- The author's means of communication: website work place.-->
-				<telecom value="http:www.kantonales-spital.ch" use="WP"/>
+				<telecom value="http:www.gruppenpraxis.ch" use="WP"/>
 				<!-- The author's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
-					<houseNumber>33</houseNumber>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
 					<country>CH</country>
@@ -144,15 +145,15 @@ History:
 		<!-- Template id according to CDA-CH v2.0 -->
 		<templateId root="2.16.756.5.30.1.1.10.2.7"/>
 		<!-- Timestamp of the data input. -->
-		<time value="201711101000+0100"/>
+		<time value="201710281315+0100"/>
 		<assignedEntity>
 			<!-- The data enterer's id. -->
-			<id extension="35" root="2.16.756.555555.2.1"/>
+			<id extension="2" root="2.16.756.888888.2.1"/>
 			<assignedPerson>
 				<!-- The data enterer's name. -->
 				<name use="L">
-					<given>Emil</given>
-					<family>Specimen</family>
+					<given>Schreib</given>
+					<family>Kraft</family>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
@@ -163,13 +164,13 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- The custodian's id (GLN).  -->
-				<id extension="7605555555555" root="2.51.1.3"/>
+				<id extension="7608888888888" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
-				<name use="L">Kantonales Spital</name>
+				<name use="L">Studio medico CH, Dott. Allzeit Bereit, Medico specializzato in medicina generale</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<streetName>Spitalstr.</streetName>
-					<houseNumber>33</houseNumber>
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
 					<postalCode>8888</postalCode>
 					<city>Musterhausen</city>
 					<country>CH</country>
@@ -183,11 +184,13 @@ History:
 		<intendedRecipient>
 			<receivedOrganization>
 				<!-- The addressee's name. -->
-				<name use="L">Kurhaus Blumenalp, Zentrum für orthopädische Rehabilitation, Aerztliche Leitung</name>
+				<name use="L">Ospedale cantonale, Direzione medica, Clinica ortopedica</name>
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
-					<postalCode>9876</postalCode>
-					<city>Blumenalp</city>
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
 					<country>CH</country>
 				</addr>
 			</receivedOrganization>
@@ -197,55 +200,34 @@ History:
 	<!-- The legal authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<legalAuthenticator>
 		<!-- Timestamp of the signature. -->
-		<time value="20171110"/>
+		<time value="20171028"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
 			<!-- The assigned entity's id (including the assigned person's id). -->
-			<id extension="7605555555555" root="2.51.1.3"/>
+			<id extension="7608888888888" root="2.51.1.3"/>
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>Theo</given>
-					<family>Klug</family>
-					<suffix>Chefarzt</suffix>
+					<prefix qualifier="AC">Dott.</prefix>
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<suffix>Medico specializzato in medicina generale</suffix>
 				</name>
 			</assignedPerson>
 		</assignedEntity>
 	</legalAuthenticator>
-
-	<!-- An authenticator of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
-	<authenticator>
-		<!-- Timestamp of the signature. -->
-		<time value="20171110"/>
-		<signatureCode code="S"/>
-		<assignedEntity>
-			<!-- The assigned entity's id (including the assigned person's id). -->
-			<id extension="7605555555555" root="2.51.1.3"/>
-			<assignedPerson>
-				<!-- The person's legal name (with required family and given name). -->
-				<name use="L">
-					<prefix qualifier="AC">Dr. med.</prefix>
-					<given>A.</given>
-					<family>Assistenz</family>
-					<suffix>Assistenzarzt</suffix>
-				</name>
-			</assignedPerson>
-		</assignedEntity>
-	</authenticator>
 
 	<!-- Explicit authorization according to CDA R2 (not further constrained by CDA-CH v2.0) and case study "hip joint replacement". -->
 	<authorization>
 		<consent>
 			<code nullFlavor="OTH" codeSystem="2.16.756.5.30.2.1.1.2">
 				<originalText>
-					Schriftliche Einwilligung zur operativen Sanierung des rechten Hüftgelenkes mittels Implantation einer Hüftgelenks-Endoprothese während Konsultation vom 15.10.2017 bei Dr. med. Hans Spezialist, Facharzt für Orthopädie
+					Consenso scritto per il ripristino del diritto hip operativo attraverso l'impianto di un hip-protesi durante la consultazione: 15/10/2017 Dott. Hans Specialista, specialista di ortopedia
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
 		</consent>
 	</authorization>
-
 
 	<!--
 	********************************************************
@@ -254,82 +236,99 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
+			<!-- 
 			********************************************************
-			Diagnosenliste
+			  Esame clinico
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Diagnosenliste</title>
+					<title>Esame clinico</title>
 					<text>
+						<table>
+							<tbody>
+								<tr>
+									<td>cardiopolmonare:</td>
+								</tr>
+								<tr>
+									<td>gastrointestinale:</td>
+								</tr>
+								<tr>
+									<td>urogenitale:</td>
+								</tr>
+								<tr>
+									<td>neurologico:</td>
+								</tr>
+								<tr>
+									<td>apparato motorio:</td>
+								</tr>
+							</tbody>
+						</table>
 						<content styleCode="Italics">
-							Strukturierte Liste der bekannten Diagnosen, nach Relevanz sortiert<br/>
+							<br/>
+							Referti e visite fisiche, spesso suddivise per sistemi di organi<br/>
 						</content>
 					</text>
 				</section>
 			</component>
-			<!--
+			<!-- 
 			********************************************************
-			Operation
-			********************************************************
-			-->
-			<component>
-				<section>
-					<title>Operation</title>
-					<text>
-						<content styleCode="Italics">
-							Durchgeführte therapeutische Eingriffe, Operationen oder nichtinvasive (z.B. medikamentöse) Behandlungen<br/>
-							z.B. „Implantation einer Hüftgelenksendoprothese links am 30.10.2017, fecit Dr. Spezialist“<br/>
-						</content>
-					</text>
-				</section>
-			</component>
-			<!--
-			********************************************************
-			Aktuelles Leiden
+			  Valori di laboratorio
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Aktuelles Leiden</title>
+					<title>Valori di laboratorio</title>
 					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th align="left">Tipo di analisi</th>
+									<th>Valore di riferimento</th>
+									<th>28/10/2017</th>
+								</tr>
+								<tr>
+									<td align="left">Glucosio [mmol/l]</td>
+									<td>4.2 – 6.1</td>
+									<td>5.8</td>
+								</tr>
+								<tr>
+									<td align="left">Sodio [mmol/l]</td>
+									<td>137 - 145</td>
+									<td>138</td>
+								</tr>
+								<tr>
+									<td align="left">Potassio [mmol/l]</td>
+									<td>3.6 – 5.0</td>
+									<td>3.8</td>
+								</tr>
+								<tr>
+									<td>Creatinina [mmol/l]</td>
+									<td>71 -133</td>
+									<td>78</td>
+								</tr>
+								<tr>
+									<td>Emoglobina [g%]</td>
+									<td>12.0 – 17.6</td>
+									<td>15.4</td>
+								</tr>
+								<tr>
+									<td>Trombociti [g%]</td>
+									<td>15000 – 40000</td>
+									<td>18000</td>
+								</tr>
+								<tr>
+									<td>INR</td>
+									<td>
+										- 1.200
+									</td>
+									<td>0.900</td>
+								</tr>
+							</tbody>
+						</table>
 						<content styleCode="Italics">
-							Beschreibung des aktuellen Behandlungsgrundes<br/>
-						</content>
-					</text>
-				</section>
-			</component>
-			<!--
-			********************************************************
-			Medikamente bei Austritt
-			********************************************************
-			-->
-			<component>
-				<section>
-					<title>Medikamente bei Austritt</title>
-					<text>
-						<content styleCode="Italics">
-							Liste der bei Austritt bestehenden Medikation zum Zeitpunkt des Spitalaustrittes.<br/>
-						</content>
-					</text>
-				</section>
-			</component>
-			<!--
-			********************************************************
-			Empfehlungen für die weitere Behandlung
-			********************************************************
-			-->
-			<component>
-				<section>
-					<title>Empfehlungen für die weitere Behandlung</title>
-					<text>
-						<content styleCode="Italics">
-							Empfehlungen für die weitere Behandlung<br/>
-
-						</content>
-						<content>
-							Ein ausführlicher Bericht folgt.<br/>
+							<br/>
+							Esempio di trasmissione di risultati di analisi di laboratorio<br/>
 						</content>
 					</text>
 				</section>
