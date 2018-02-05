@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ************************************************************ -->
 <!-- CDA-CH RESP UseCase 1 Einsatzprotokoll -->
+<!-- http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-RESP_(specification)#Use_case_1_-_Prim.C3.A4reinsatz_mit_identifizierbarem_Patienten -->
 <!-- History: -->
 <!-- 2017.05.29: Oliver Egger, ahdis gmbh (Document Creation) -->
 <!-- 2017.09.05: Oliver Egger, ahdis gmbh (Update to Use Case 1) -->
@@ -490,7 +491,7 @@
 							<text>
 								<reference value='#arrivalpatient' />
 							</text>
-							<value xsi:type="TS" value="20161210111200.0000+0100" />
+							<value xsi:type="TS" value="20161210112200.0000+0100" />
 						</observation>
 					</entry>
 					<entry>

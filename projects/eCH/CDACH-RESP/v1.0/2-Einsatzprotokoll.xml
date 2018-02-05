@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ************************************************************ -->
+<!-- CDA-CH RESP UseCase 1 Einsatzprotokoll -->
+<!-- http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-RESP_(specification)#Use_case_2_-_Prim.C3.A4reinsatz_mit_unbekanntem_Patienten -->
+<!-- 2018.05.02: Oliver Egger, ahdis gmbh (Document Creation) -->
+<!-- ************************************************************ -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument 
+    xmlns:pharm="urn:ihe:pharm:medication" 
+    xmlns="urn:hl7-org:v3" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
+    <realmCode code="CHE" />
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+    <!-- CDA-CH v2.0 ART-DECOR model - structuredBody.  -->
+    <templateId root="2.16.756.5.30.1.1.10.1.9" />
+    <!-- HL7 CDA R2 (2005); contains ClinicalDocument.component as structuredBody.  -->
+    <templateId root="2.16.840.1.113883.10.12.2" />
+    <!-- HL7 CDA R2 (2005).  -->
+    <templateId root="2.16.840.1.113883.10.12.1" />
+    <!-- CDA-CH RESP -->
+    <templateId root="2.16.756.5.30.1.1.10.1.2" />
+    <id root="662E3C16-0AAC-11E8-BA89-0ED5F89F718B" />
+    <!-- A LOINC based document type of a CDA document instance including a 
+		translation to the Swiss EPR XDS.b metadata.  -->
+    <code code="67796-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="EMS Patient Care Report">
+        <!-- Mapping to the Swiss EPR XDS.b metadata -->
+        <translation code="371535009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Transfer summary report" />
+    </code>
+    <title>Einsatzprotokoll</title>
+    <effectiveTime value="20161210120500.0000+0100" /
+    >
+    <confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" displayName="Normal" codeSystemName="SNOMED CT" />
+    <languageCode code="de-CH" />
+    <setId root="662E3C16-0AAC-11E8-BA89-0ED5F89F718B" />
+    <versionNumber value="1" />
+    <recordTarget>
+        <patientRole>
+            <id extension="MU43221" root="2.16.756.5.30.1.143.20"/>
+            <patient>
+                <name>
+                    <!-- cdachresp-dataelement-8 -->
+                    <family nullFlavor="UNK" />
+                    <!-- cdachresp-dataelement-9 -->
+                    <given nullFlavor="UNK" />
+                </name>
+                <!-- cdachresp-dataelement-11 -->
+                <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="HL7 AdministrativeGender"/>
+                <!-- cdachresp-dataelement-10 -->
+                <birthTime nullFlavor="UNK" />
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <!-- Rettungssanitäterin -->
+    <author>
+        <functionCode displayName="Andere Gesundheitsfachperson" code="223366009" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+            <translation code="133932002" displayName="Betreuer" codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+        </functionCode>
+        <time value="20161210121305.0000+0100" />
+        <assignedAuthor>
+            <id extension="7601003330434" root="2.51.1.3" />
+            <assignedPerson>
+                <name>
+                    <given>Petra</given>
+                    <family>Muster</family>
+                </name>
+            </assignedPerson>
+        </assignedAuthor>
+    </author>
+    <informant>
+        <assignedEntity>
+            <!-- cdachresp-dataelement-60 aufbietende Organisation -->
+            <id root="2.51.1.3" extension="7601002156370" />
+        </assignedEntity>
+    </informant>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <!-- cdachresp-dataelement-61 aufgebotene Organisation -->
+                <id root="2.51.1.3" extension="7601002156363" />
+                <!-- cdachresp-dataelement-384 aufgebotene Organisation -->
+                <name>Rettungsdienst Schutz &amp; Rettung Zürich</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <informationRecipient typeCode="PRCP">
+        <intendedRecipient>
+            <id root="2.51.1.3" extension="7601000404268" />
+            <informationRecipient>
+                <name>
+                    <given>Hans</given>
+                    <family>Spezialarzt</family>
+                </name>
+            </informationRecipient>
+            <receivedOrganization>
+                <id root="2.51.1.3" extension="7601002155939" />
+                <!-- cdachresp-dataelement-174 -->
+                <name>USZ</name>
+                <addr>
+                    <streetAddressLine>Rämistrasse 100</streetAddressLine>
+                    <city>Zürich</city>
+                    <postalCode>8091</postalCode>
+                    <country>CH</country>
+                </addr>
+            </receivedOrganization>
+        </intendedRecipient>
+    </informationRecipient>
+    <legalAuthenticator>
+        <time value="20161210121305.0000+0100" />
+        <signatureCode code="S" />
+        <assignedEntity>
+            <id extension="7601003330434" root="2.51.1.3" />
+            <assignedPerson>
+                <name>
+                    <given>Petra</given>
+                    <family>Muster</family>
+                </name>
+            </assignedPerson>
+        </assignedEntity>
+    </legalAuthenticator>
+    <documentationOf typeCode="DOC">
+        <templateId root="2.16.756.5.30.1.1.10.2.46" />
+        <serviceEvent classCode="ACT" moodCode="EVN">
+            <!-- cdachresp-dataelement-55 Einsatznummer -->
+            <!-- Extension: Einsatznummer SNZ root: OID vom SNZ -->
+            <id root="2.16.756.5.30.1.9999999999.1" extension="S12345678" />
+            <effectiveTime>
+                <!-- cdachresp-dataelement-54: Einsatzdatum -->
+                <low value="20161210" />
+                <high nullFlavor="NA" />
+            </effectiveTime>
+            <!-- cdachresp-dataelement-102 Team -->
+            <performer typeCode="PRF">
+                <templateId root="2.16.756.5.30.1.1.10.9.31" />
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.24.3.5" />
+                <functionCode displayName="Andere Gesundheitsfachperson" code="223366009" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+                    <translation code="133932002" displayName="Betreuer" codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+                </functionCode>
+                <assignedEntity>
+                    <!-- cdachresp-dataelement-281 -->
+                    <id extension="7601003330434" root="2.51.1.3" />
+                    <addr>
+                        <streetAddressLine>Bahnhofquai 3, Amtshaus I</streetAddressLine>
+                        <postalCode>8001</postalCode>
+                        <city>Zürich</city>
+                        <country>CH</country>
+                    </addr>
+                    <telecom nullFlavor="NA" />
+                    <assignedPerson>
+                        <name>
+                            <given>Petra</given>
+                            <family>Muster</family>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.51.1.3" extension="7601002156363" />
+                        <name>Rettungsdienst Schutz &amp; Rettung Zürich</name>
+                        <telecom nullFlavor="NA" />
+                        <addr>
+                            <streetAddressLine>Bahnhofquai 3, Amtshaus I</streetAddressLine>
+                            <postalCode>8001</postalCode>
+                            <city>Zürich</city>
+                            <country>CH</country>
+                        </addr>
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+            <performer typeCode="PRF">
+                <templateId root="2.16.756.5.30.1.1.10.9.31" />
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.24.3.5" />
+                <functionCode displayName="Andere Gesundheitsfachperson" code="223366009" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+                    <translation code="133932002" displayName="Betreuer" codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+                </functionCode>
+                <assignedEntity>
+                    <!-- cdachresp-dataelement-281 -->
+                    <id extension="7601000211804" root="2.51.1.3" />
+                    <addr>
+                        <streetAddressLine>Bahnhofquai 3, Amtshaus I</streetAddressLine>
+                        <postalCode>8001</postalCode>
+                        <city>Zürich</city>
+                        <country>CH</country>
+                    </addr>
+                    <telecom nullFlavor="NA" />
+                    <assignedPerson>
+                        <name>
+                            <given>Hans</given>
+                            <family>Beispiel</family>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.51.1.3" extension="7601002156363" />
+                        <name>Rettungsdienst Schutz &amp; Rettung Zürich</name>
+                        <telecom nullFlavor="NA" />
+                        <addr>
+                            <streetAddressLine>Bahnhofquai 3, Amtshaus I</streetAddressLine>
+                            <postalCode>8001</postalCode>
+                            <city>Zürich</city>
+                            <country>CH</country>
+                        </addr>
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+        </serviceEvent>
+    </documentationOf>
+    <component>
+        <structuredBody>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.7" />
+                    <code code="1100001" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Einsatz" codeSystemName="IVR Codesystem RESP" />
+                    <title>Einsatz</title>
+                    <text>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Einsatz</th>
+                                </tr>
+                                <tr>
+                                    <td>Einsatzdatum</td>
+                                    <!-- cdachresp-dataelement-54 -->
+                                    <td>10.12.2016</td>
+                                </tr>
+                                <tr>
+                                    <td>Einsatznummer</td>
+                                    <!-- cdachresp-dataelement-54 -->
+                                    <td>S12345678</td>
+                                </tr>
+                                <tr>
+                                    <td>aufbietende Organisation</td>
+                                    <td>7601002156370 (SNZ)</td>
+                                </tr>
+                                <tr>
+                                    <td>augebotene Organisation</td>
+                                    <td>7601002156363 (Rettungsdienst Schutz &amp; Rettung Zürich)									</td>
+                                </tr>
+                                <tr>
+                                    <td>Team</td>
+                                    <td>										Petra Muster, GLN 7601003330434, Betreuerin																																																																																										                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                        <br />										Hans Beispiel, GLN 7601000028105, Betreuer																																																																																	                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Einsatzort</td>
+                                    <td>wird 8050 Zürich, Sternen Oerlikon, Schaffhauserstr. 350</td>
+                                </tr>
+                                <tr>
+                                    <td>Zielort</td>
+                                    <td>USZ Notfall</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Alarm</th>
+                                    <th>Status DP</th>
+                                    <th>Status 1</th>
+                                    <th>Status 2</th>
+                                    <th>Kontakt Patient</th>
+                                    <th>Status 3</th>
+                                    <th>Status 4</th>
+                                    <th>Status 5</th>
+                                    <th>Status 6</th>
+                                </tr>
+                                <tr>
+                                    <th ID="alarm">12.09</th>
+                                    <th ID="disposition">12.11</th>
+                                    <th ID="rollout">12.13</th>
+                                    <th ID="arrivalonscene">12.17</th>
+                                    <th ID="arrivalpatient">12.18</th>
+                                    <th ID="departurefromscene">12.48</th>
+                                    <th ID="arrivalattarget">12.54</th>
+                                    <th ID="departurefromtarget"></th>
+                                    <th ID="operationalreadiness"></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <!-- cdachresp-dataelement-79 -->
+                        <encounter classCode="ENC" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.54" />
+                            <templateId root="2.16.840.1.113883.10.12.302" />
+                            <!-- dachresp-dataelement-25 -->
+                            <participant typeCode="LOC">
+                                <participantRole classCode="SDLOC">
+                                    <!-- cdachresp-dataelement-175 Einsatzort Postadresse (eCH-0010) -->
+                                    <addr>
+                                        <streetAddressLine>Schaffhauserstr. 350</streetAddressLine>
+                                        <city>Zürich</city>
+                                    </addr>
+                                    <playingEntity classCode="ENT">
+                                        <name>Sternen Oerlikon</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <!-- Id cdachresp-dataelement-103 -->
+                            <participant typeCode="DST">
+                                <participantRole classCode="SDLOC">
+                                    <!-- cdachresp-dataelement-222 -->
+                                    <id root="2.51.1.3" extension="7601002155939" />
+                                    <!-- cdachresp-dataelement-174 -->
+                                    <addr>
+                                        <streetAddressLine>Rämistrasse 100</streetAddressLine>
+                                        <city>Zürich</city>
+                                        <postalCode>8091</postalCode>
+                                    </addr>
+                                    <playingEntity classCode="ENT">
+                                        <name>Universitätsspital Zürich, Notfall</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                        </encounter>
+                    </entry>
+                    <!-- cdachresp-dataelement-78: Status Zeiten -->
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <!-- cdachresp-dataelement-278 : Bedeutung der Statuszeit -->
+                            <code code="1000033" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="alarm" />
+                            <text>
+                                <reference value='#alarm' />
+                            </text>
+                            <!-- cdachresp-dataelement-286 Statuszeit -->
+                            <value xsi:type="TS" value="20161210110900.0000+0100" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <!-- cdachresp-dataelement-278 : Bedeutung der Statuszeit -->
+                            <code code="1000034" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="disposition" />
+                            <text>
+                                <reference value='#disposition' />
+                            </text>
+                            <!-- cdachresp-dataelement-286 Statuszeit -->
+                            <value xsi:type="TS" value="20161210111100.0000+0100" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <code code="1000035" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="rollout" />
+                            <text>
+                                <reference value='#rollout' />
+                            </text>
+                            <value xsi:type="TS" value="20161210111300.0000+0100" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <code code="1000036" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="arrival on scene" />
+                            <text>
+                                <reference value='#arrivalonscene' />
+                            </text>
+                            <value xsi:type="TS" value="20161210111700.0000+0100" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <code code="1000037" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="arrival patient" />
+                            <text>
+                                <reference value='#arrivalpatient' />
+                            </text>
+                            <value xsi:type="TS" value="20161210111800.0000+0100" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <code code="1000038" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="departure from scene" />
+                            <text>
+                                <reference value='#departurefromscene' />
+                            </text>
+                            <value xsi:type="TS" value="20161210114800.0000+0100" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.60" />
+                            <code code="1000039" codeSystem="2.16.756.5.30.1.143.5.1" codeSystemName="IVR Codesystem RESP" displayName="arrival at target" />
+                            <text>
+                                <reference value='#arrivalattarget' />
+                            </text>
+                            <value xsi:type="TS" value="20161210115400.0000+0100" />
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.8" />
+                    <code code="1100002" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Patient" codeSystemName="IVR Codesystem RESP" />
+                    <title>Patient</title>
+                    <text>                    -                    </text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.43" />
+                    <code code="1100003" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Administrativ" codeSystemName="IVR Codesystem RESP" />
+                    <title>Adminsitrativ</title>
+                    <text>                    -                    </text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.42" />
+                    <code code="1100004" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Vorbehandlung" codeSystemName="IVR Codesystem RESP" />
+                    <title>Vorbehandlung</title>
+                    <text>						-					</text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.41" />
+                    <code code="1100005" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Anamnese" codeSystemName="IVR Codesystem RESP" />
+                    <title>Anamnese</title>
+                    <text>                        -                    </text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.14" />
+                    <code code="1100006" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Befund" codeSystemName="IVR Codesystem RESP" />
+                    <title>Befund</title>
+                    <text>
+                        <paragraph>Breathing:Der Patient hat eine unauffällige Spontanatmung</paragraph>
+                        <paragraph>Cardiology: Sein Puls ist tastbar, es liegt kein Herz-Kreislaufstillstand vor;Frequenz 84/Minute, Blutdruck 170 / 90, gemessen am rechten Arm</paragraph>
+                        <paragraph>Temperatur 37.2 °C, die Augen zeigen eine deutliche Anisokorie vor </paragraph>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Airways</th>
+                                    <td ID="airways">Die Atemwege sind nicht verlegt</td>
+                                </tr>
+                                <tr>
+                                    <th>GCS</th>
+                                    <td ID="gcs1">Total 9 Augenöffnung bei Ansprache (3), gibt Einzelworte von sich (3), Dekortikationsstarre (3)</td>
+                                </tr>
+                                <tr>
+                                    <th>AVPU</th>
+                                    <td ID="avpu">V (=reagiert auf laute Ansprache)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.82"/>
+                            <code code="301252002" codeSystem="2.16.840.1.113883.6.96" displayName="Finding of respiratory obstruction" codeSystemName="SNOMED CT"/>
+                            <text>
+                                <reference value="#airways"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <effectiveTime>
+                                <low value="20161210112500.0000+0100"/>
+                            </effectiveTime>
+                            <value xsi:type="CD" code="23875004" codeSystem="2.16.840.1.113883.6.96" displayName="No pathologic finding"/>
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.65"/>
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2"/>
+                            <templateId root="2.16.840.1.113883.10.20.1.31"/>
+                            <id root="D3B3CC67-2C2F-4995-8B96-5AFA4622BB6D"/>
+                            <code code="11454-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Level of Responsiveness (AVPU)"/>
+                            <text>
+                                <reference value="#avpu"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <effectiveTime value="20161210112500.0000+0100"/>
+<!-- FIXME does not validate, mayve better use nictiz version                            <value xsi:type="QTY" value="V" unit="{score}"/> -->
+                        </observation>
+                    </entry>
+                    <entry>
+                        <!-- cdachresp-dataelement-108 GCS -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="1.2.276.0.76.10.4034" />
+                            <id root="1.2.276.0.76.4.17.9814184919" extension="98C1EB7E-DC2D-4D1F-806A-2AD65EBA0351" />
+                            <code code="9269-2" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score total" />
+                            <text>
+                                <reference value='#gcs1' />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime value="20161210112500.0000+0100" />
+                            <!-- cdachresp-dataelement-109 -->
+                            <value xsi:type="PQ" value="15" unit="{score}" />
+                            <entryRelationship typeCode="COMP" contextConductionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="9267-6" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score eye opening" />
+                                    <statusCode code="completed" />
+                                    <!-- cdachresp-dataelement-110 -->
+                                    <value xsi:type="PQ" value="3" unit="{score}" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP" contextConductionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="9270-0" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score verbal" />
+                                    <statusCode code="completed" />
+                                    <!-- cdachresp-dataelement-111 -->
+                                    <value xsi:type="PQ" value="3" unit="{score}" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP" contextConductionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="9268-4" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score motor" />
+                                    <statusCode code="completed" />
+                                    <!-- cdachresp-dataelement-112 -->
+                                    <value xsi:type="PQ" value="3" unit="{score}" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.16" />
+                    <code code="1100007" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Diagnosen" codeSystemName="IVR Codesystem RESP" />
+                    <title>Diagnosen</title>
+                    <text>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Verdachtsdiagnose</th>
+                                </tr>
+                                <tr>
+                                    <td ID="diagnose1">Stroke (I63)	</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.68" />
+                            <templateId root="2.16.840.1.113883.10.20.1.27" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+                            <id root="1962D16E-D153-4A58-B17E-1D65FC81E6CE" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="active" />
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN" negationInd="false">
+                                    <templateId root="2.16.756.5.30.1.1.10.4.67" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" />
+                                    <id root="AD092C2A-813D-4EAA-83F1-EB53DB2F16F0" />
+                                    <code code="2931005" codeSystem="2.16.840.1.113883.6.96" displayName="Verdachtsdiagnose" />
+                                    <text>
+                                        <reference value="#diagnose1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low value="20161210112500.0000+0100" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="I63" codeSystem="2.16.756.5.30.1.126.3.2" displayName="Hirninfarkt"></value>
+                                    <author>
+                                        <functionCode displayName="Andere Gesundheitsfachperson" code="223366009" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
+                                            <translation code="133932002" displayName="Betreuer" codeSystem="2.16.840.1.113883.6.96" codeSystemName="IVR Codesystem RESP" />
+                                        </functionCode>
+                                        <time value="20161210112500.0000+0100" />
+                                        <assignedAuthor>
+                                            <!-- cdachresp-dataelement-281 -->
+                                            <id extension="7601003330434" root="2.51.1.3" />
+                                        </assignedAuthor>
+                                    </author>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.17" />
+                    <code code="1100008" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Massnahmen" codeSystemName="IVR Codesystem RESP" />
+                    <title>Massnahmen</title>
+                    <text>                        Infusion mit 500 ml Ringer. Der Patient wird liegend in den Rettungswagen verladen.                    </text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.18" />
+                    <code code="1100009" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Todesfall" codeSystemName="IVR Codesystem RESP" />
+                    <title>Todesfall</title>
+                    <text>						-					</text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.19" />
+                    <code code="1100010" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Transport" codeSystemName="IVR Codesystem RESP" />
+                    <title>Transport</title>
+                    <text>						Fahrt mit Sondersignal ins USZ.					</text>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.15" />
+                    <code code="1100011" codeSystem="2.16.756.5.30.1.143.5.1" displayName="Übergabe" codeSystemName="IVR Codesystem RESP" />
+                    <title>Übergabe</title>
+                    <text>
+                        <paragraph>Schmerz 4						</paragraph>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>GCS</th>
+                                </tr>
+                                <tr>
+                                    <td ID="gcs2">10 (TODO Aufteilung) um 13.03</td>
+                                </tr>
+                                <tr>
+                                    <th>NACA</th>
+                                </tr>
+                                <tr>
+                                    <td ID="naca">NACA: III</td>
+                                </tr>
+                                <tr>
+                                    <th>Zustand</th>
+                                </tr>
+                                <tr>
+                                    <td ID="statusdischarge">der Zustand des Patienten hat sich im Verlauf des										Einsatzes verbessert									</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <paragraph> Übergabe an USZ							Effekten sowie							Wertsachenverzeichnis						</paragraph>
+                    </text>
+                    <entry>
+                        <!-- cdachresp-dataelement-108 GCS -->
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="1.2.276.0.76.10.4034" />
+                            <id root="1.2.276.0.76.4.17.9814184919" extension="98c1eb7e-dc2d-4d1f-806a-2ad65eba0351" />
+                            <code code="9269-2" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score total" />
+                            <text>
+                                <reference value="#gcs1" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime value="20161210120300.0000+0100" />
+                            <!-- cdachresp-dataelement-109 -->
+                            <value xsi:type="PQ" value="15" unit="{score}" />
+                            <entryRelationship typeCode="COMP" contextConductionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="9267-6" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score eye opening" />
+                                    <statusCode code="completed" />
+                                    <!-- cdachresp-dataelement-110 -->
+                                    <value xsi:type="PQ" value="4" unit="{score}" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP" contextConductionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="9270-0" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score verbal" />
+                                    <statusCode code="completed" />
+                                    <!-- cdachresp-dataelement-111 -->
+                                    <value xsi:type="PQ" value="5" unit="{score}" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP" contextConductionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="9268-4" codeSystem="2.16.840.1.113883.6.1" displayName="Glasgow coma score motor" />
+                                    <statusCode code="completed" />
+                                    <!-- cdachresp-dataelement-112 -->
+                                    <value xsi:type="PQ" value="6" unit="{score}" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="1.2.276.0.76.10.4167" />
+                            <code code="X-NACA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="NACA Score" />
+                            <statusCode code="completed" />
+                            <value xsi:type="CE" code="III" codeSystem="1.2.276.0.76.5.82" />
+                        </observation>
+                    </entry>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.756.5.30.1.1.10.4.65" />
+                            <code code="75527-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital status at discharge" />
+                            <text>
+                                <reference value="#statusdischarge" />
+                            </text>
+                            <statusCode code="completed" />
+                            <value xsi:type="CD" code="385425000" codeSystem="2.16.840.1.113883.6.96" displayName="Improved" />
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <templateId root="2.16.756.5.30.1.1.10.3.2" />
+                    <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment [Interpretation] Narrative" />
+                    <title>Kommentar</title>
+                    <text>						-					</text>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>

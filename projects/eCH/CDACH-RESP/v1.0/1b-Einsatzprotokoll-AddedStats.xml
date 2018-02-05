@@ -484,7 +484,7 @@
 							<text>
 								<reference value='#arrivalpatient' />
 							</text>
-							<value xsi:type="TS" value="20161210111200.0000+0100" />
+							<value xsi:type="TS" value="20161210112200.0000+0100" />
 						</observation>
 					</entry>
 					<entry>
