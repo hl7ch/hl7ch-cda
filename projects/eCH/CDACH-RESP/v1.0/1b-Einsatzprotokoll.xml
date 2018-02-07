@@ -602,7 +602,7 @@
 					<templateId root="2.16.756.5.30.1.1.10.3.43" />
 					<code code="1100003" codeSystem="2.16.756.5.30.1.143.5.1"
 						displayName="Administrativ" codeSystemName="IVR Codesystem RESP" />
-					<title> Adminsitrativ					</title>
+					<title>Adminsitrativ</title>
 					<text>
 						<table>
 							<tbody>
@@ -632,7 +632,7 @@
 					<templateId root="2.16.756.5.30.1.1.10.3.41" />
 					<code code="1100005" codeSystem="2.16.756.5.30.1.143.5.1"
 						displayName="Anamnese" codeSystemName="IVR Codesystem RESP" />
-					<title> Anamnese					</title>
+					<title>Anamnese</title>
 					<text>
 						<table>
 							<tbody>

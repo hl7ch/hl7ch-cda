@@ -446,7 +446,7 @@
 					<templateId root="2.16.756.5.30.1.1.10.3.43" />
 					<code code="1100003" codeSystem="2.16.756.5.30.1.143.5.1"
 						displayName="Administrativ" codeSystemName="IVR Codesystem RESP" />
-					<title>Adminsitrativ</title>
+					<title>Administrativ</title>
 					<text> -                    </text>
 				</section>
 			</component>
