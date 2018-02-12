@@ -20,8 +20,8 @@ History:
 
 	<!-- CDA-CH V2 specification (optional, but informative template id). -->
 	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
-	<!-- CDA-CH V2 ART-DECOR model - structuredBody. -->
-	<templateId root="2.16.756.5.30.1.1.10.1.9"/>
+	<!-- CDA-CH V2 ART-DECOR model - structuredBody enhanced. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.14"/>
 	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
 	<templateId root="2.16.840.1.113883.10.12.2"/>
 	<!-- HL7 CDA R2 (2005). -->
