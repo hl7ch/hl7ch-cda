@@ -35,7 +35,7 @@ History:
 		<translation code="373942005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Discharge summary"/>
 	</code>
 
-	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
+	<!-- Document title according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<title>Kurzbericht bei Spitalentlassung</title>
 
 	<!-- Document creation timestamp according to CDA-CH v2.0 and case study "hip joint replacement". -->
