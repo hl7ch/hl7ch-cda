@@ -12,6 +12,7 @@ Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, for CDA-C
 Updated by Nico Ehinger, ELCA SA, code refactoring
 Updated by Tony Schaller, medshare GmbH and HL7 affiliate Switzerland, revised for CDA-CH Body templates and language dependent rendering
 Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rendering
+Updated by Tony Schaller, medshare GmbH, revised for tfoot and CDA-CH V2
 
 ********************************************************
 -->
@@ -66,7 +67,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 				<xsl:element name="link">
 					<xsl:attribute name="rel">stylesheet</xsl:attribute>
 					<xsl:attribute name="type">text/css</xsl:attribute>
-					<xsl:attribute name="href">../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.css</xsl:attribute>
+					<xsl:attribute name="href">../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.css</xsl:attribute>
 				</xsl:element>
 				<xsl:apply-templates select="/processing-instruction('xml-stylesheet')"/>
 			</head>
@@ -546,6 +547,14 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 		<span style="font-weight:bold; ">
 			<xsl:apply-templates/>
 		</span>
+	</xsl:template>
+	<xsl:template match="n1:tfoot/*/n1:td">
+		<xsl:variable name="numColumns">
+			<xsl:value-of select="count(ancestor::n1:table/*/*/n1:th)"/>
+		</xsl:variable>
+		<td colspan="{$numColumns}">
+			<xsl:apply-templates/>
+		</td>
 	</xsl:template>
 
 	<!--  RenderMultiMedia	-->
@@ -1197,43 +1206,7 @@ Updated by Tony Schaller, medshare GmbH, revised for base64 embedded object rend
 							</td>
 						</tr>
 					</xsl:otherwise>
-		</xsl:choose>
-<!--
-				<tr>
-					<th>
-						<xsl:call-template name="getRecipientType">
-							<xsl:with-param name="typeCode" select="@typeCode"/>
-						</xsl:call-template>
-					</th>
-					<td>
-						<xsl:if test="n1:intendedRecipient/n1:informationRecipient">
-							<xsl:call-template name="getName">
-								<xsl:with-param name="name" select="n1:intendedRecipient/n1:informationRecipient/n1:name"/>
-							</xsl:call-template>
-						</xsl:if>
-						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
-							<xsl:call-template name="getName">
-								<xsl:with-param name="name" select="n1:intendedRecipient/n1:receivedOrganization/n1:name"/>
-							</xsl:call-template>
-						</xsl:if>
-					</td>
-				</tr>
-				<tr>
-					<th class="empty"/>
-					<td>
-						<xsl:if test="n1:intendedRecipient/n1:informationRecipient">
-							<xsl:call-template name="getContactInfo">
-								<xsl:with-param name="contact" select="n1:intendedRecipient"/>
-							</xsl:call-template>
-						</xsl:if>
-						<xsl:if test="n1:intendedRecipient/n1:receivedOrganization">
-							<xsl:call-template name="getContactInfo">
-								<xsl:with-param name="contact" select="n1:intendedRecipient/n1:receivedOrganization"/>
-							</xsl:call-template>
-						</xsl:if>
-					</td>
-				</tr>
--->				
+				</xsl:choose>
 			</xsl:for-each>
 		</table>
 	</xsl:template>
