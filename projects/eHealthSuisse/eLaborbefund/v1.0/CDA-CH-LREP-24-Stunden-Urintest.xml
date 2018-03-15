@@ -6,6 +6,7 @@ Beispiel meldepflichtige Labormeldung gemäss CDA-CH-LRPH V1.0 - HIV Nachweis
 History:
 2016.07.15: Tony Schaller, medshare GmbH (Erster Entwurf)
 2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN to the current one)
+2018.03.15: Tony Schaller, medshare GmbH: Update to make it valid for CDA-CH v2.0 (2017)
 
 ********************************************************
 -->
@@ -16,95 +17,201 @@ History:
 	CDA Header
 	********************************************************
 	-->
+	<!-- CDA-CH V2 (2017) realm. -->
 	<realmCode code='CHE'/>
+
+	<!-- CDA R2 (2005) type code. -->
 	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
-	<!-- Parent Templates -->
-	<!-- IHE Laboratory Report Summary Specification (IHE XD-LAB) -->
-	<templateId root='1.3.6.1.4.1.19376.1.3.3'/>
-	<!-- CDA-CH -->
-	<templateId root='2.16.756.5.30.1.1.1.1' />
-	<!-- Swiss Laboratory Report V1 - (CDA-CH-LREP) -->
+
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
+	<!-- CDA-CH V2 ART-DECOR model - structuredBody. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.9"/>
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2"/>
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1"/>
+
+	<!-- CDA-CH-LREP / Laboratory Reports V1 specification. This is an informational reference, only. -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.9.1'/>
-	<id extension='F9DC0A26-E16F-4B70-80B6-9B77150AC183' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
-	<code code='11502-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='LABORATORY REPORT.TOTAL'/>
+	<!-- CDA-CH-LREP / Laboratory Reports V1 ART-DECOR model. -->
+	<templateId root='2.16.756.5.30.1.1.10.1.10'/>
+	<!-- Exchange format according to the Swiss EPR -->
+	<templateId root='2.16.756.5.30.1.127.1.4'/>
+	<!-- Sharing Laboratory Reports (XD-LAB) Content Module, IHE PaLM Technical Framework Revision 7.0 - July 5, 2016. -->
+	<templateId root='1.3.6.1.4.1.19376.1.3.3'/>
+
+	<!-- Document id according to CDA-CH v2.0. -->
+	<id root='F9DC0A26-E16F-4B70-80B6-9B77150AC183'/>
+
+	<!-- Document code according to CDA-CH-LREP-GR. -->
+	<code code='11502-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='LABORATORY REPORT.TOTAL'>
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<translation code="4241000179101" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Laboratory report"/>
+	</code>
+
+	<!-- Document title according to CDA-CH-LREP-GR. -->
 	<title>Laborbefund - Multidisziplinäre Befunde</title>
-	<effectiveTime value='20160715'/>
-	<confidentialityCode code='R' codeSystem='2.16.840.1.113883.5.25'/>
-	<languageCode code='de-CH'/>
-	<setId extension='F9DC0A26-E16F-4B70-80B6-9B77150AC183' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
-	<versionNumber value='1'/>
+
+	<!-- Document creation timestamp according to CDA-CH v2.0. -->
+	<effectiveTime value='201803062057+0100'/>
+
+	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
+	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+
+	<!-- Document code according to CDA-CH v2.0. -->
+	<languageCode code="de-CH"/>
+
+	<!--
+	Document setId and versionNumber according to CDA-CH v2.0.
+	This document is a new version of the one created for CDA-CH v1.2
+	-->
+	<setId root="F9DC0A26-E16F-4B70-80B6-9B77150AC183"/>
+	<versionNumber value="2"/>
+
+	<!-- Human patient according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<recordTarget>
 		<patientRole>
-			<id root="2.999" extension="123456"/>
+			<!-- The patient's id. -->
+			<id extension="8733" root="2.16.756.888888.3.1"/>
+			<id extension="278364" root="2.16.756.555555.3.1"/>
+			<!-- The patient's address - also according to eCH-0010. -->
 			<addr use="HP">
 				<streetName>Leidensweg</streetName>
 				<houseNumber>10</houseNumber>
-				<postalCode>9876</postalCode>
+				<postalCode>9999</postalCode>
 				<city>Specimendorf</city>
+				<country>CH</country>
 			</addr>
+			<!-- The patient's means of communication: phone home private.-->
 			<telecom use="HP" value="tel:+41.32.685.12.34"/>
-			<telecom use="PUB" value="tel:+41.32.123.77.88"/>
+			<!-- The patient's means of communication: phone work place.-->
+			<telecom use="WP" value="tel:+41.32.123.77.88"/>
+			<!-- The patient's means of communication: public eMail address.-->
+			<telecom use="PUB" value="mailto:max.muster@sampledomain.ch"/>
 			<patient>
-				<name>
+				<!-- The patient's name - also according to eCH-0011. -->
+				<name use="L">
 					<given>Max</given>
 					<family>MUSTER</family>
 				</name>
-				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
-				<birthTime value="19480611"/>
+				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
+				<!-- The patient's birthdate. -->
+				<birthTime value="19381212"/>
 			</patient>
+
+			<!-- The organization who took care of the patient in the same context with the current CDA document. -->
 			<providerOrganization>
+				<!-- The organization's id (GLN). -->
 				<id extension="7605555555555" root="2.51.1.3"/>
-				<name>Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Kantonales Spital, Klinik für Chirurgie und Orthopädie</name>
 			</providerOrganization>
 		</patientRole>
 	</recordTarget>
+
+	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<author>
-		<functionCode code='TASST' codeSystem='2.16.756.5.30.2.1.1.1'/>
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode nullFlavor='NAV'>
+			<originalText>Laboratory technician</originalText>
+			<translation code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+		</functionCode>
+		<!-- Timestamp of the authorship. -->
 		<time value='20120117'/>
 		<assignedAuthor>
+			<!-- The author's id (GLN). -->
 			<id extension='7606666666666' root='2.51.1.3'/>
-			<addr use='WP'>
+			<!-- The author's main address. -->
+			<addr use="PUB">
 				<streetName>Spalenring</streetName>
 				<houseNumber>145/147</houseNumber>
 				<postalCode>4002</postalCode>
 				<city>Basel</city>
+				<country>CH</country>
 			</addr>
+			<!-- The author's main phone.-->
 			<telecom use='PUB' value='tel:+41.61.486.11.11'/>
-			<telecom use='PUB' value='fax:+41.61.486.11.12'/>
+			<!-- The author's main eMail address.-->
+			<telecom use='PUB' value='mailto:info@viollier.ch'/>
+			<!-- The author is a device. -->
 			<assignedAuthoringDevice>
 				<softwareName>Viollier LIS</softwareName>
 			</assignedAuthoringDevice>
+			<!-- The author's organization. -->
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id extension='7606666666666' root='2.51.1.3'/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Labor Viollier</name>
+				<!-- The author's main phone.-->
+				<telecom use='PUB' value='tel:+41.61.486.11.11'/>
+				<!-- The author's main eMail address.-->
+				<telecom use='PUB' value='mailto:info@viollier.ch'/>
+				<!-- The author's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Spalenring</streetName>
+					<houseNumber>145/147</houseNumber>
+					<postalCode>4002</postalCode>
+					<city>Basel</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
 		</assignedAuthor>
 	</author>
+	<!-- The custodian is not known to the laboratory. -->
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id nullFlavor='NASK' />
-				<name nullFlavor='NASK' />
-				<telecom nullFlavor='NASK' />
-				<addr nullFlavor='NASK' >
-					<streetName nullFlavor='NASK' />
+				<id extension='7606666666666' root='2.51.1.3'/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Labor Viollier</name>
+				<!-- The custodian's main phone nr.-->
+				<telecom use='PUB' value='tel:+41.61.486.11.11'/>
+				<!-- The author's main eMail address.-->
+				<addr use="PUB">
+					<streetName>Spalenring</streetName>
+					<houseNumber>145/147</houseNumber>
+					<postalCode>4002</postalCode>
+					<city>Basel</city>
+					<country>CH</country>
 				</addr>
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
+	<!-- The main recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH-LREP Recipient -->
+		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
 		<!-- IHE XD-LAB: Intended Recipient -->
 		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.4'/>
-		<!-- Beabsichtigter Empfänger PRCP=Primary recipient-->
+		<!-- PRCP=Primary recipient-->
 		<intendedRecipient>
+			<!-- The addressee's address - also according to eCH-0010. -->
 			<addr use="WP">
 				<streetName>Spitalstr.</streetName>
 				<houseNumber>23</houseNumber>
 				<postalCode>8888</postalCode>
 				<city>Musterhausen</city>
+				<country>CH</country>
 			</addr>
-			<telecom use="PUB" value="tel:+41.32.211.11.11"/>
-			<telecom use="PUB" value="fax:+41.32.211.11.54"/>
-			<telecom use="PUB" value="http:www.kantonales-spital.ch"/>
-			<informationRecipient>
+			<!-- The addressee's phone number.-->
+			<telecom use='PUB' value='tel:+41.32.211.11.11'/>
+			<receivedOrganization>
+				<!-- The addressee's name. -->
 				<name>Kantonales Spital, Aerztliche Leitung, Klinik für Orthopädie</name>
-			</informationRecipient>
+				<!-- The addressee's phone number.-->
+				<telecom use='PUB' value='tel:+41.32.211.11.11'/>
+				<!-- The addressee's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
 		</intendedRecipient>
 	</informationRecipient>
 	<!--
@@ -121,9 +228,11 @@ History:
 			-->
 			<component>
 				<section>
+					<!-- CDA-CH-LREP: Laboratory Speciality Section -->
+					<templateId root='2.16.756.5.30.1.1.10.3.3' />
 					<!-- IHE XD-LAB: Laboratory Speciality Section -->
 					<templateId root='1.3.6.1.4.1.19376.1.3.3.2.1' />
-					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
+					<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='MICROBIOLOGY STUDIES'/>
 					<title>Laborbefund</title>
 					<text>
 						<table>
@@ -279,7 +388,7 @@ History:
 										Zeitraum der Entnahme:
 									</td>
 									<td>
-										13.07.2016 09:00 - 14.07.2016 09:00
+										<content ID='speccol'>13.07.2016 09:00 - 14.07.2016 09:00</content>
 									</td>
 								</tr>
 								<tr>
@@ -287,7 +396,7 @@ History:
 										Zeitpunkt Auftragseingang:
 									</td>
 									<td>
-										14.07.2016 15:34
+										<content ID='specrcv'>14.07.2016 15:34</content>
 									</td>
 								</tr>
 								<tr>
@@ -295,7 +404,7 @@ History:
 										Zeitpunkt des Nachweises:
 									</td>
 									<td>
-										15.07.2016 16:34
+										<content ID='report'>15.07.2016 16:34</content>
 									</td>
 								</tr>
 								<tr>
@@ -312,9 +421,10 @@ History:
 						Bemerkungen: Keine
 					</text>
 					<entry typeCode='DRIV'>
-						<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
-						<templateId root='1.3.6.1.4.1.19376.1.3.1' />
 						<act classCode='ACT' moodCode='EVN'>
+
+							<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
+							<templateId root='1.3.6.1.4.1.19376.1.3.1' />
 
 							<code code='18725-2' codeSystem='2.16.840.1.113883.6.1' displayName='MICROBIOLOGY STUDIES'/>
 							<statusCode code='completed' />
@@ -323,8 +433,10 @@ History:
 							<entryRelationship typeCode='COMP'>
 								<procedure classCode='PROC' moodCode='EVN'>
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
-									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1'
-									codeSystemName='LOINC' displayName='Collection date'/>
+									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Collection date of Unspecified specimen'/>
+									<text>
+										<reference value='#speccol'/>
+									</text>
 									<effectiveTime>
 										<low value="201607130900+0200"/>
 										<high value="201607140900+0200"/>
@@ -333,7 +445,7 @@ History:
 										<participantRole classCode='SPEC'>
 											<id extension='0F55642B-E3DB-48B2-92FA-B05E44D28C23' root='2.16.756.5.30.1.1.1.1.3.3.1'/>
 											<playingEntity>
-												<code code='LOINC' codeSystem='2.16.756.5.30.2.1.1.10'/>
+												<code code='LOINC' codeSystem='2.16.756.5.30.2.1.1.10' codeSystemName="CDA-CH Material"/>
 											</playingEntity>
 										</participantRole>
 									</participant>
@@ -341,8 +453,11 @@ History:
 									<entryRelationship typeCode='COMP'>
 										<act classCode='ACT' moodCode='EVN'>
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
-											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2'
-											codeSystemName='IHEActCode' displayName='Receive Time'/>
+											<id nullFlavor='ASKU' />
+											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2' codeSystemName='IHEActCode' displayName='Receive Time'/>
+											<text>
+												<reference value='#specrcv'/>
+											</text>
 											<effectiveTime value='201607141534+0200'/>
 										</act>
 									</entryRelationship>
@@ -362,7 +477,10 @@ History:
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
 									<id root='2.16.756.5.30.1.129.1.2.1' extension='12-3456' />
 									<statusCode code='completed'/>
-									<effectiveTime value='201607151634+0200'/>
+									<effectiveTime>
+										<low value='201607151634+0200' />
+										<high value='201607151634+0200' />
+									</effectiveTime>
 
 									<!-- Resultat 1 -->
 									<component typeCode='COMP'>
