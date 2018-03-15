@@ -160,7 +160,7 @@ History:
 			</representedOrganization>
 		</assignedAuthor>
 	</author>
-	<!-- The custodian is not known to the laboratory. -->
+	<!-- The custodian is the sender of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
