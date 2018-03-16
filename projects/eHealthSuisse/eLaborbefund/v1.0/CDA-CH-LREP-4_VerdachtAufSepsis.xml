@@ -1,0 +1,2588 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+********************************************************
+CDA-CH-LREP Sample
+Case Study no. 4: Suspected sepsis
+
+History:
+2018.03.16: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+
+********************************************************
+-->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!--
+	********************************************************
+	CDA Header
+	********************************************************
+	-->
+	<!-- CDA-CH V2 (2018) realm. -->
+	<realmCode code='CHE'/>
+
+	<!-- CDA R2 (2005) type code. -->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
+	<!-- CDA-CH V2 ART-DECOR model - structuredBody. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.9"/>
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2"/>
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1"/>
+
+	<!-- CDA-CH-LREP / Laboratory Reports V1 specification. This is an informational reference, only. -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.9.1'/>
+	<!-- CDA-CH-LREP / Laboratory Reports V1 ART-DECOR model. -->
+	<templateId root='2.16.756.5.30.1.1.10.1.10'/>
+	<!-- Exchange format according to the Swiss EPR -->
+	<templateId root='2.16.756.5.30.1.127.1.4'/>
+	<!-- Sharing Laboratory Reports (XD-LAB) Content Module, IHE PaLM Technical Framework Revision 7.0 - July 5, 2018. -->
+	<templateId root='1.3.6.1.4.1.19376.1.3.3'/>
+
+	<!-- Document id according to CDA-CH v2.0. -->
+	<id root='441D2AD5-C8B9-4213-98E0-9BC879618B3F'/>
+
+	<!-- Document code according to CDA-CH-LREP-GR. -->
+	<code code='11502-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='LABORATORY REPORT.TOTAL'>
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<translation code="4241000179101" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Laboratory report"/>
+	</code>
+
+	<!-- Document title according to CDA-CH-LREP-GR. -->
+	<title>Laborbefund - Multidisziplinäre Befunde</title>
+
+	<!-- Document creation timestamp according to CDA-CH v2.0. -->
+	<effectiveTime value='201803161047+0100'/>
+
+	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
+	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+
+	<!-- Document code according to CDA-CH v2.0. -->
+	<languageCode code="de-CH"/>
+
+	<!--
+	Document setId and versionNumber according to CDA-CH v2.0.
+	This document is a new version of the one created for CDA-CH v1.2
+	-->
+	<setId root="441D2AD5-C8B9-4213-98E0-9BC879618B3F"/>
+	<versionNumber value="1"/>
+
+	<!-- Human patient according to CDA-CH v2.0 and case study. -->
+	<recordTarget>
+		<patientRole>
+			<!-- The patient's id. -->
+			<id extension="23541654" root="2.999"/>
+			<!-- The patient's address - also according to eCH-0010. -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Specimendorf</city>
+				<country>CH</country>
+			</addr>
+			<!-- The patient's means of communication: phone home private.-->
+			<telecom use="HP" value="tel:+41.32.685.12.34"/>
+			<!-- The patient's means of communication: phone work place.-->
+			<telecom use="WP" value="tel:+41.32.123.77.88"/>
+			<!-- The patient's means of communication: public eMail address.-->
+			<telecom use="PUB" value="mailto:klebsiella.keller@sampledomain.ch"/>
+			<patient>
+				<!-- The patient's name - also according to eCH-0011. -->
+				<name use="L">
+					<given>Klebsiella</given>
+					<family>Keller</family>
+				</name>
+				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Male" />
+				<!-- The patient's birthdate. -->
+				<birthTime value="20120215"/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study. -->
+	<author>
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
+		<!-- Timestamp of the authorship. -->
+		<time value="201803161047+0100"/>
+		<assignedAuthor>
+			<!-- The author's id (GLN). -->
+			<id extension="7605555555555" root="2.51.1.3"/>
+			<!-- The author's address - also according to eCH-0010. -->
+			<addr use="PUB">
+				<streetName>Spitalstr.</streetName>
+				<houseNumber>23</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+				<country>CH</country>
+			</addr>
+			<!-- The author's means of communication: phone work place.-->
+			<telecom value="tel:+41.32.211.11.11" use="PUB"/>
+			<!-- The author's main eMail address.-->
+			<telecom use='PUB' value='mailto:info@regionalspital-zugersee.ch'/>
+			<!-- The author is a person. -->
+			<assignedPerson>
+				<!-- The author's name - also according to eCH-0011. -->
+				<name use="L">
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<given>Theo</given>
+					<family>Klug</family>
+				</name>
+			</assignedPerson>
+			<!-- The author's organization. -->
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id extension="7605555555555" root="2.51.1.3"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Regionalspital Zugersee</name>
+				<!-- The author's means of communication: phone work place.-->
+				<telecom value="tel:+41.32.211.11.11" use="PUB"/>
+				<!-- The author's means of communication: fax work place.-->
+				<telecom value="fax:+41.32.211.11.54" use="WP"/>
+				<!-- The author's means of communication: website work place.-->
+				<telecom value="http:www.regionalspital-zugersee.ch" use="WP"/>
+				<!-- The author's address - also according to eCH-0010. -->
+				<addr use="PUB">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<author>
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode nullFlavor='NAV'>
+			<originalText>Laboratory technician</originalText>
+			<translation code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+		</functionCode>
+		<!-- Timestamp of the authorship. -->
+		<time value='201803150945+0100'/>
+		<assignedAuthor>
+			<!-- The author's id (GLN). -->
+			<id extension="7604444444444" root="2.51.1.3"/>
+			<!-- The author's main address. -->
+			<addr use="PUB">
+				<streetName>Laborstrasse</streetName>
+				<houseNumber>23</houseNumber>
+				<postalCode>9999</postalCode>
+				<city>Analyzerstadt</city>
+				<country>CH</country>
+			</addr>
+			<!-- The author's main phone.-->
+			<telecom use='PUB' value='tel:+41.58.656.78.89'/>
+			<!-- The author's main eMail address.-->
+			<telecom use='PUB' value='mailto:pipette@Labor.ch'/>
+			<assignedAuthoringDevice>
+				<softwareName>LIS</softwareName>
+			</assignedAuthoringDevice>
+			<!-- The author's organization. -->
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id extension="7609999999999" root="2.51.1.3"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Labor Pipette</name>
+				<!-- The author's main phone.-->
+				<telecom use='PUB' value='tel:+41.58.656.78.89'/>
+				<!-- The author's main eMail address.-->
+				<telecom use='PUB' value='mailto:pipette@labor.ch'/>
+				<!-- The author's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Laborstrasse</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>9999</postalCode>
+					<city>Analyzerstadt</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!-- The organization's id (GLN). -->
+				<id extension="7605555555555" root="2.51.1.3"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Regionalspital Zugersee</name>
+				<!-- The author's main phone.-->
+				<telecom value="tel:+41.32.211.11.11" use="PUB"/>
+				<!-- The author's address - also according to eCH-0010. -->
+				<addr use="PUB">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
+	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH-LREP Recipient -->
+		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
+		<!-- IHE XD-LAB: Intended Recipient -->
+		<templateId root='1.3.6.1.4.1.19376.1.3.3.1.4'/>
+		<!-- PRCP=Primary recipient-->
+		<intendedRecipient>
+			<!-- The addressee's address - also according to eCH-0010. -->
+			<addr use="WP">
+				<streetName>Doktorgasse</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Musterhausen</city>
+				<country>CH</country>
+			</addr>
+			<!-- The addressee's phone number.-->
+			<telecom value="tel:+41.32.211.11.11" use="PUB"/>
+			<receivedOrganization>
+				<!-- The addressee's name. -->
+				<name use="L">Regionalspital Zugersee</name>
+				<!-- The addressee's phone number.-->
+				<telecom value="tel:+41.32.211.11.11" use="PUB"/>
+				<!-- The addressee's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Spitalstr.</streetName>
+					<houseNumber>23</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Musterhausen</city>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<!--
+			********************************************************
+			Mikrobiologie - Blutkultur 1
+			********************************************************
+			-->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.3" />
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+					<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbiology studies"/>
+					<title>Laborbefund - Mikrobiologie</title>
+					<text>Auftragsnummer: 2222 (Blutkultur 1)<br/>Befundstatus: Endgültiger Befund<br/>
+						<br/>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Pos.</th>
+									<th>Zeile</th>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Einheit</th>
+									<th>Interpretation</th>
+									<th>Referenz</th>
+									<th>Interpretation Referenz</th>
+									<th>Codesystem</th>
+									<th>Code</th>
+									<th>Original Name</th>
+									<th>Kommentar</th>
+									<th>Probenentnahme</th>
+									<th>Probeneingang</th>
+									<th>Resultat erhalten</th>
+									<th>Ausführende Person</th>
+									<th>Autor</th>
+									<th>Proben-Material</th>
+									<th>Entnahmeort</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td/>
+									<td>1</td>
+									<td>Blutkultur 1: Anaerobe Flasche</td>
+									<td>
+										<content ID="lss_18725-2_observation_12">Streptococcus parasanguinis (organism)</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>17934-1</td>
+									<td>Bacteria identified in Blood by Anaerobe culture</td>
+									<td>
+										<content ID="lss_18725-2_comment_12"/>
+									</td>
+									<td>
+										<content ID="lss_18725-2_collectiondate_12">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>2</td>
+									<td>Blutkultur 1: Aerobe Flasche</td>
+									<td>
+										<content ID="lss_18725-2_observation_11">Kein Wachstum</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>17928-3</td>
+									<td>Bacteria identified in Blood by Aerobe culture</td>
+									<td>
+										<content ID="lss_18725-2_comment_11"/>
+									</td>
+									<td>
+										<content ID="lss_18725-2_collectiondate_11">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbiology studies"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="20180316094500+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="17928-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Aerobe culture">
+												<originalText>Blutkultur 1: Aerobe Flasche</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18725-2_observation_11"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="264868006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No growth (qualifier value)">
+												<originalText>Kein Wachstum</originalText>
+											</value>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="17934-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Anaerobe culture">
+												<originalText>Blutkultur 1: Anaerobe Flasche</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18725-2_observation_12"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="113990002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Streptococcus parasanguinis (organism)"/>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
+									<text>
+										<reference value="#lss_18725-2_collectiondate_12"/>
+									</text>
+									<effectiveTime value="20180316081000+0100"/>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id nullFlavor="NA"/>
+											<playingEntity>
+												<code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
+													<originalText>Blutkultur</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+								</procedure>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Antibiogramm - Blutkultur 1
+			********************************************************
+			-->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.3" />
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+					<code code="18769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbial susceptibility tests"/>
+					<title>Laborbefund - Antibiogramme</title>
+					<text>Auftragsnummer: 2222 (Blutkultur 1)<br/>Befundstatus: Endgültiger Befund<br/>
+						<br/>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Pos.</th>
+									<th>Zeile</th>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Einheit</th>
+									<th>Interpretation</th>
+									<th>Referenz</th>
+									<th>Interpretation Referenz</th>
+									<th>Codesystem</th>
+									<th>Code</th>
+									<th>Original Name</th>
+									<th>Kommentar</th>
+									<th>Probenentnahme</th>
+									<th>Probeneingang</th>
+									<th>Resultat erhalten</th>
+									<th>Ausführende Person</th>
+									<th>Autor</th>
+									<th>Proben-Material</th>
+									<th>Entnahmeort</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td/>
+									<td>1</td>
+									<td>Erythromycin</td>
+									<td>
+										<content ID="lss_18769-0_observation_1">2</content>
+									</td>
+									<td>mg/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>233-7</td>
+									<td>Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_1"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_1">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>2</td>
+									<td>Vancomycin</td>
+									<td>
+										<content ID="lss_18769-0_value_2">&lt;2 mg/L</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>524-9</td>
+									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_2"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_2">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>3</td>
+									<td>Co-Amoxiclav</td>
+									<td>
+										<content ID="lss_18769-0_observation_3"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18862-3</td>
+									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_3"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_3">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>4</td>
+									<td>Clindamycin</td>
+									<td>
+										<content ID="lss_18769-0_observation_4"/>
+									</td>
+									<td/>
+									<td>Resistent</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18908-4</td>
+									<td>Clindamycin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_4"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_4">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>5</td>
+									<td>Levofloxacin</td>
+									<td>
+										<content ID="lss_18769-0_observation_5"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>20629-2</td>
+									<td>Levofloxacin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_5"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_5">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>6</td>
+									<td>Ceftriaxon</td>
+									<td>
+										<content ID="lss_18769-0_observation_6"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18895-3</td>
+									<td>Ceftriaxone [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_6"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_6">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>7</td>
+									<td>Penicillin</td>
+									<td>
+										<content ID="lss_18769-0_observation_7"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18964-7</td>
+									<td>Penicillin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_7"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_7">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>8</td>
+									<td>Amoxicillin</td>
+									<td>
+										<content ID="lss_18769-0_observation_8"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18861-5</td>
+									<td>Amoxicillin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_8"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_8">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>9</td>
+									<td>Erythromycin</td>
+									<td>
+										<content ID="lss_18769-0_observation_9"/>
+									</td>
+									<td/>
+									<td>Resistent</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18919-1</td>
+									<td>Erythromycin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_9"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_9">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>10</td>
+									<td>Vancomycin</td>
+									<td>
+										<content ID="lss_18769-0_observation_10"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>19000-9</td>
+									<td>Vancomycin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_10"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_10">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<code code="18769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbial susceptibility tests"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="20180316094500+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18964-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Penicillin [Susceptibility]">
+												<originalText>Penicillin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_7"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18861-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin [Susceptibility]">
+												<originalText>Amoxicillin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_8"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18862-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin+Clavulanate [Susceptibility]">
+												<originalText>Co-Amoxiclav</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_3"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18895-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Ceftriaxone [Susceptibility]">
+												<originalText>Ceftriaxon</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_6"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18919-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythromycin [Susceptibility]">
+												<originalText>Erythromycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_9"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Resistant">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="233-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Erythromycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_1"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="2" unit="mg/L"/>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18908-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clindamycin [Susceptibility]">
+												<originalText>Clindamycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_4"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Resistant">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="20629-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Levofloxacin [Susceptibility]">
+												<originalText>Levofloxacin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_5"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="19000-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility]">
+												<originalText>Vancomycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_10"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="524-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Vancomycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_2"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="ED">&amp;lt;2 mg/L<reference value="#lss_18769-0_value_2"/>
+											</value>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
+									<text>
+										<reference value="#lss_18769-0_collectiondate_10"/>
+									</text>
+									<effectiveTime value="20180316081000+0100"/>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id nullFlavor="NA"/>
+											<playingEntity>
+												<code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
+													<originalText>Blutkultur</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+								</procedure>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Mikrobiologie - Blutkultur 2
+			********************************************************
+			-->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.3" />
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+					<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbiology studies"/>
+					<title>Laborbefund - Mikrobiologie</title>
+					<text>Auftragsnummer: 2243 (Blutkultur 2)<br/>Befundstatus: Endgültiger Befund<br/>
+						<br/>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Pos.</th>
+									<th>Zeile</th>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Einheit</th>
+									<th>Interpretation</th>
+									<th>Referenz</th>
+									<th>Interpretation Referenz</th>
+									<th>Codesystem</th>
+									<th>Code</th>
+									<th>Original Name</th>
+									<th>Kommentar</th>
+									<th>Probenentnahme</th>
+									<th>Probeneingang</th>
+									<th>Resultat erhalten</th>
+									<th>Ausführende Person</th>
+									<th>Autor</th>
+									<th>Proben-Material</th>
+									<th>Entnahmeort</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td/>
+									<td>1</td>
+									<td>Blutkultur 2: Aerobe Flasche</td>
+									<td>
+										<content ID="lss_18725-2_observation_21">Enterococcus faecium (organism)</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>17928-3</td>
+									<td>Bacteria identified in Blood by Aerobe culture</td>
+									<td>
+										<content ID="lss_18725-2_comment_21"/>
+									</td>
+									<td>
+										<content ID="lss_18725-2_collectiondate_21">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>2</td>
+									<td>Blutkultur 2: Anaerobe Flasche</td>
+									<td>
+										<content ID="lss_18725-2_observation_22">Kein Wachstum</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>17934-1</td>
+									<td>Bacteria identified in Blood by Anaerobe culture</td>
+									<td>
+										<content ID="lss_18725-2_comment_22"/>
+									</td>
+									<td>
+										<content ID="lss_18725-2_collectiondate_22">16.03.2018 08:10</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbiology studies"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="20180316094500+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="17928-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Aerobe culture">
+												<originalText>Blutkultur 2: Aerobe Flasche</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18725-2_observation_21"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="90272000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Enterococcus faecium (organism)"/>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="17934-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Anaerobe culture">
+												<originalText>Blutkultur 2: Anaerobe Flasche</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18725-2_observation_22"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="264868006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No growth (qualifier value)">
+												<originalText>Kein Wachstum</originalText>
+											</value>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
+									<text>
+										<reference value="#lss_18725-2_collectiondate_21"/>
+									</text>
+									<effectiveTime value="20180316081000+0100"/>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id nullFlavor="NA"/>
+											<playingEntity>
+												<code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
+													<originalText>Blutkultur</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+								</procedure>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!--
+			********************************************************
+			Antibiogramm - Blutkultur 1
+			********************************************************
+			-->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.3" />
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+					<code code="18769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbial susceptibility tests"/>
+					<title>Laborbefund - Antibiogramme</title>
+					<text>Auftragsnummer: 2243 (Blutkultur 2)<br/>Befundstatus: Endgültiger Befund<br/>
+						<br/>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Pos.</th>
+									<th>Zeile</th>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Einheit</th>
+									<th>Interpretation</th>
+									<th>Referenz</th>
+									<th>Interpretation Referenz</th>
+									<th>Codesystem</th>
+									<th>Code</th>
+									<th>Original Name</th>
+									<th>Kommentar</th>
+									<th>Probenentnahme</th>
+									<th>Probeneingang</th>
+									<th>Resultat erhalten</th>
+									<th>Ausführende Person</th>
+									<th>Autor</th>
+									<th>Proben-Material</th>
+									<th>Entnahmeort</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td/>
+									<td>1</td>
+									<td>Imipenem</td>
+									<td>
+										<content ID="lss_18769-0_observation_1a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18932-4</td>
+									<td>Imipenem [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_1a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_1a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>2</td>
+									<td>Imipenem</td>
+									<td>
+										<content ID="lss_18769-0_value_2a">&lt;1 mg/L</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>279-0</td>
+									<td>Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_2a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_2a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>3</td>
+									<td>Vancomycin</td>
+									<td>
+										<content ID="lss_18769-0_observation_3a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>19000-9</td>
+									<td>Vancomycin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_3a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_3a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>4</td>
+									<td>Teicoplanin</td>
+									<td>
+										<content ID="lss_18769-0_observation_4a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18989-4</td>
+									<td>Teicoplanin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_4a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_4a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>5</td>
+									<td>Co-Amoxiclav</td>
+									<td>
+										<content ID="lss_18769-0_observation_5a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18862-3</td>
+									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_5a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_5a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>6</td>
+									<td>Vancomycin</td>
+									<td>
+										<content ID="lss_18769-0_value_6a">&lt;0.5 mg/L</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>524-9</td>
+									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_6a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_6a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>7</td>
+									<td>Amoxicillin</td>
+									<td>
+										<content ID="lss_18769-0_observation_7a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>18861-5</td>
+									<td>Amoxicillin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_7a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_7a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>8</td>
+									<td>Levofloxacin</td>
+									<td>
+										<content ID="lss_18769-0_observation_8a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>20629-2</td>
+									<td>Levofloxacin [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_8a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_8a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>9</td>
+									<td>Teicoplanin</td>
+									<td>
+										<content ID="lss_18769-0_observation_9a"/>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>484-6</td>
+									<td>Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_9a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_9a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>10</td>
+									<td>Levofloxacin</td>
+									<td>
+										<content ID="lss_18769-0_observation_10a">2</content>
+									</td>
+									<td>mg/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>20396-8</td>
+									<td>Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_10a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_10a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>11</td>
+									<td>Linezolid</td>
+									<td>
+										<content ID="lss_18769-0_observation_11a"/>
+									</td>
+									<td/>
+									<td>Sensibel</td>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>29258-1</td>
+									<td>Linezolid [Susceptibility]</td>
+									<td>
+										<content ID="lss_18769-0_comment_11a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_11a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>12</td>
+									<td>Linezolid</td>
+									<td>
+										<content ID="lss_18769-0_observation_12a">2</content>
+									</td>
+									<td>mg/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>29254-0</td>
+									<td>Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>
+										<content ID="lss_18769-0_comment_12a"/>
+									</td>
+									<td>
+										<content ID="lss_18769-0_collectiondate_12a">16.03.2018 08:40</content>
+									</td>
+									<td/>
+									<td>16.03.2018 09:45</td>
+									<td>Pipette Mover am 16.03.2018 09:45</td>
+									<td>Pipette Documenter am 16.03.2018 09:45</td>
+									<td>Blutkultur</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<code code="18769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbial susceptibility tests"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="20180316094500+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18861-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin [Susceptibility]">
+												<originalText>Amoxicillin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_7a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18862-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin+Clavulanate [Susceptibility]">
+												<originalText>Co-Amoxiclav</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_5a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18932-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Imipenem [Susceptibility]">
+												<originalText>Imipenem</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_1a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="279-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Imipenem</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_2a"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="ED">&amp;lt;1 mg/L<reference value="#lss_18769-0_value_2a"/>
+											</value>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="20629-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Levofloxacin [Susceptibility]">
+												<originalText>Levofloxacin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_8a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="20396-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Levofloxacin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_10a"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="2" unit="mg/L"/>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="19000-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility]">
+												<originalText>Vancomycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_3a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="524-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Vancomycin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_6a"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="ED">&amp;lt;0.5 mg/L<reference value="#lss_18769-0_value_6a"/>
+											</value>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="18989-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Teicoplanin [Susceptibility]">
+												<originalText>Teicoplanin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_4a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="484-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Teicoplanin</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_9a"/>
+											</text>
+											<statusCode code="completed"/>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="29258-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Linezolid [Susceptibility]">
+												<originalText>Linezolid</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_11a"/>
+											</text>
+											<statusCode code="completed"/>
+											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
+												<originalText>sensibel</originalText>
+											</interpretationCode>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="29254-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)">
+												<originalText>Linezolid</originalText>
+											</code>
+											<text>
+												<reference value="#lss_18769-0_observation_12a"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="2" unit="mg/L"/>
+											<performer typeCode="PRF">
+												<time value="20180316094500+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
+									<text>
+										<reference value="#lss_18769-0_collectiondate_12a"/>
+									</text>
+									<effectiveTime value="20180316084000+0100"/>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id nullFlavor="NA"/>
+											<playingEntity>
+												<code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
+													<originalText>Blutkultur</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+								</procedure>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
