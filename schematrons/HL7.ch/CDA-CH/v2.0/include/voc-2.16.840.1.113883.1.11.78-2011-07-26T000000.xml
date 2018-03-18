@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
-    <valueSet xmlns="" id="2.16.840.1.113883.1.11.78" name="ObservationInterpretation" displayName="ObservationInterpretation" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.78" name="ObservationInterpretation" displayName="ObservationInterpretation" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachlrep-">
         <desc language="en-US">
             <b>description: </b>
             <p>One or more codes specifying a rough qualitative interpretation of the observation, such as "normal", "abnormal", "below normal", "change up", "resistant", "susceptible", etc.</p>

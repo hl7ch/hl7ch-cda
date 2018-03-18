@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
-    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.27" name="EprDocumentTypeCode" displayName="EprDocumentTypeCode" statusCode="final" versionLabel="201704.2-beta" effectiveDate="2017-12-20T00:00:00" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.27" name="EprDocumentTypeCode" displayName="EprDocumentTypeCode" statusCode="final" versionLabel="201704.2-beta" effectiveDate="2017-12-20T00:00:00" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="cdachlrep-">
         <desc language="de-CH">Typ des Dokumentes (2.16.756.5.30.1.127.3.10.1.27) gemäss Anhang 3 der Verordnungen zum EPDG.<br clear="none"/>
             <br clear="none"/>Der Code definiert den Typ eines Dokuments (z.B.&#160; Austrittsbericht, Labor-Bericht). Jeder Dokumenten-Typ sollte genau einer Dokumentenklasse zugeordnet sein.<br clear="none"/>
         </desc>

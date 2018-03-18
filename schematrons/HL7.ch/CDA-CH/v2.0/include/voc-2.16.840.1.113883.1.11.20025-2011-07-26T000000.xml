@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
-    <valueSet xmlns="" id="2.16.840.1.113883.1.11.20025" name="ActStatusCompleted" displayName="ActStatusCompleted" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.20025" name="ActStatusCompleted" displayName="ActStatusCompleted" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachlrep-">
         <desc language="en-US">
             <b>description: </b>
             <p>An Act that has terminated normally after all of its constituents have been performed.</p>
