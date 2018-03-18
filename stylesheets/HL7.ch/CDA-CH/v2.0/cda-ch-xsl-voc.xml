@@ -155,10 +155,10 @@ History:
   <text language="it" value="Consent" displayName="Dichiarazione di consenso"/>
   <text language="en" value="Consent" displayName="Consent"/>
 
-  <text language="de" value="Custodian" displayName="Verwaltende Organisation"/>
-	<text language="fr" value="Custodian" displayName="Organisme de gestion"/>
-  <text language="it" value="Custodian" displayName="Organismo di gestione"/>
-  <text language="en" value="Custodian" displayName="Custodian"/>
+  <text language="de" value="Custodian" displayName="Absender"/>
+	<text language="fr" value="Custodian" displayName="Expéditeur"/>
+  <text language="it" value="Custodian" displayName="Mittente"/>
+  <text language="en" value="Custodian" displayName="Sender"/>
 
   <text language="de" value="Author" displayName="Autor"/>
 	<text language="fr" value="Author" displayName="Auteur"/>
@@ -270,10 +270,10 @@ History:
   <text language="it" value="2.16.756.5.31" displayName="Vecchio n. AVS"/>
   <text language="en" value="2.16.756.5.31" displayName="Old Swiss SSN"/>
 
-  <text language="de" value="2.16.756.5.32" displayName="Neue AHV Nr"/>
-  <text language="fr" value="2.16.756.5.32" displayName="No AVS nouveau"/>
-  <text language="it" value="2.16.756.5.32" displayName="Nuovo n. AVS"/>
-  <text language="en" value="2.16.756.5.32" displayName="New Swiss SSN"/>
+  <text language="de" value="2.16.756.5.32" displayName="AHV Nr"/>
+  <text language="fr" value="2.16.756.5.32" displayName="No AVS"/>
+  <text language="it" value="2.16.756.5.32" displayName="n. AVS"/>
+  <text language="en" value="2.16.756.5.32" displayName="Swiss SSN"/>
 
   <text language="de" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva numero claim"/>
   <text language="fr" value="2.16.756.5.30.1.100.3.1.1" displayName="Numéro de sinistre Suva"/>
