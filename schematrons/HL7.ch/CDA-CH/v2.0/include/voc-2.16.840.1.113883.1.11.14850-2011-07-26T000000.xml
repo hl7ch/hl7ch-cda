@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.14850" name="MultipartMediaType" displayName="MultipartMediaType" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>Multipart Media Type</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.79" identifierName="Media&#160;Type"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="multipart/x-hl7-cda-level-one" codeSystem="2.16.840.1.113883.5.79" displayName="CDA Level 1 Multipart" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

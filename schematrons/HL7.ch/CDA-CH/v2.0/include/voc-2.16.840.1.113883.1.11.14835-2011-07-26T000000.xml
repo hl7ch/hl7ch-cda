@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.14835" name="AudioMediaType" displayName="AudioMediaType" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>Audio media type.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.79" identifierName="Media&#160;Type"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="audio/basic" codeSystem="2.16.840.1.113883.5.79" displayName="Basic Audio" level="1" type="L"/>
+            <concept code="audio/k32adpcm" codeSystem="2.16.840.1.113883.5.79" displayName="K32ADPCM Audio" level="1" type="L"/>
+            <concept code="audio/mpeg" codeSystem="2.16.840.1.113883.5.79" displayName="MPEG audio layer 3 MP3 Audio" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>
