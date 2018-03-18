@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" name="EprDocumentTypeCode" displayName="EprDocumentTypeCode" versionLabel="201704.1-beta" id="2.16.756.5.30.1.127.3.10.1.27" statusCode="final" effectiveDate="2017-10-02T13:39:26" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
+<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.27" name="EprDocumentTypeCode" displayName="EprDocumentTypeCode" statusCode="final" versionLabel="201704.2-beta" effectiveDate="2017-12-20T00:00:00" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
         <desc language="de-CH">Typ des Dokumentes (2.16.756.5.30.1.127.3.10.1.27) gemäss Anhang 3 der Verordnungen zum EPDG.<br clear="none"/>
             <br clear="none"/>Der Code definiert den Typ eines Dokuments (z.B.&#160; Austrittsbericht, Labor-Bericht). Jeder Dokumenten-Typ sollte genau einer Dokumentenklasse zugeordnet sein.<br clear="none"/>
         </desc>
@@ -48,7 +48,13 @@
                 <designation language="de-CH" type="preferred" displayName="Rezept"/>
                 <designation language="fr-CH" type="preferred" displayName="Ordonnance"/>
                 <designation language="it-CH" type="preferred" displayName="Ricetta medica"/>
-                <designation language="en-US" type="preferred" displayName="Prescription for Medication"/>
+                <designation language="en-US" type="preferred" displayName="Drug prescription"/>
+            </concept>
+            <concept code="1371000195104" codeSystem="2.16.840.1.113883.6.96" displayName="Non-drug prescription record (record artifact)" level="0" type="L">
+                <designation language="en-US" type="preferred" displayName="Non-drug prescription"/>
+                <designation language="de-CH" type="preferred" displayName="Nicht-Arzneimittelbezogene Verordnung"/>
+                <designation language="fr-CH" type="preferred" displayName="Ordonnance nonmédicamenteuse"/>
+                <designation language="it-CH" type="preferred" displayName="Richiesta di prestazione sanitaria"/>
             </concept>
             <concept code="275670009" codeSystem="2.16.840.1.113883.6.96" displayName="Prescription exemption certificate (record artifact)" level="0" type="L">
                 <designation language="de-CH" type="preferred" displayName="Dispensation"/>
@@ -57,10 +63,16 @@
                 <designation language="en-US" type="preferred" displayName="Medication Dispensation "/>
             </concept>
             <concept code="1221000195109" codeSystem="2.16.840.1.113883.6.96" displayName="Medication Comment (record artifact)" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="medication comment"/>
+                <designation language="de-CH" type="preferred" displayName="Kommentar zu Medikation"/>
                 <designation language="fr-CH" type="preferred" displayName="Commentaire sur la médication"/>
                 <designation language="it-CH" type="preferred" displayName="Commento alla terapia farmacologica"/>
                 <designation language="en-US" type="preferred" displayName="Medication Comment"/>
+            </concept>
+            <concept code="761931002" codeSystem="2.16.840.1.113883.6.96" displayName="Medication treatment plan report (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Therapieentscheid "/>
+                <designation language="en-US" type="preferred" displayName="Medication Treatment Plan"/>
+                <designation language="fr-CH" type="preferred" displayName="Plan de traitement pharmacologique"/>
+                <designation language="it-CH" type="preferred" displayName="Programma di trattamento farmacologico"/>
             </concept>
             <concept code="721915006" codeSystem="2.16.840.1.113883.6.96" displayName="Admission request document (record artifact)" level="0" type="L">
                 <designation language="de-CH" type="preferred" displayName="Zuweisungsschreiben/Einweisungsschreiben"/>
@@ -131,7 +143,7 @@
             <concept code="721631001" codeSystem="2.16.840.1.113883.6.96" displayName="Bone marrow pathology biopsy report (record artifact)" level="0" type="L">
                 <designation language="de-CH" type="preferred" displayName="Knochenmark-Biopsie-Befund"/>
                 <designation language="fr-CH" type="preferred" displayName="Rapport de la biopsie de la moelle osseuse"/>
-                <designation language="it-CH" type="preferred" displayName="Referto di biopsia del midollo osseoBone marrow Pathology biopsy report"/>
+                <designation language="it-CH" type="preferred" displayName="Referto di biopsia del midollo osseo"/>
                 <designation language="en-US" type="preferred" displayName="Bone marrow Pathology biopsy report"/>
             </concept>
             <concept code="721968000" codeSystem="2.16.840.1.113883.6.96" displayName="Cardiac catheterization report (record artifact)" level="0" type="L">
@@ -223,6 +235,12 @@
                 <designation language="de-CH" type="preferred" displayName="Audit trail"/>
                 <designation language="it-CH" type="preferred" displayName="Audit trail"/>
                 <designation language="en-US" type="preferred" displayName="Audit trail"/>
+            </concept>
+            <concept code="721963009" codeSystem="2.16.840.1.113883.6.96" displayName="Order (record artifact)" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Auftrag"/>
+                <designation language="fr-CH" type="preferred" displayName="Demande"/>
+                <designation language="it-CH" type="preferred" displayName="Ordine"/>
+                <designation language="en-US" type="preferred" displayName="Order"/>
             </concept>
         </conceptList>
     </valueSet>

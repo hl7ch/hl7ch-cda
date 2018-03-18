@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" name="EprDocumentPracticeSettingCode" displayName="EprDocumentPracticeSettingCode" versionLabel="201704.1-beta" id="2.16.756.5.30.1.127.3.10.1.18" statusCode="final" effectiveDate="2017-10-02T11:10:59" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
+<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.18" name="EprDocumentPracticeSettingCode" displayName="EprDocumentPracticeSettingCode" statusCode="final" versionLabel="201704.2-beta" effectiveDate="2018-01-31T14:12:50" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
         <desc language="de-CH">Medizinische Fachrichtung der in dem Dokument erfassten Daten gemäss Anhang 3 EPDV-EDI, Kapitel 2.9.<br clear="none"/>
             <br clear="none"/>Dieses Attribut soll den Inhalt eines Dokumentes einer medizinischen Fachrichtung zuordnen. Es ist denkbar, dass der Patient mit dieser Information eine Hilfestellung erhält zum Setzen oder Verändern der Vertraulichkeitsstufe von Dokumenten, welche relevant ist für die Zugriffssteuerung. <br clear="none"/>
         </desc>

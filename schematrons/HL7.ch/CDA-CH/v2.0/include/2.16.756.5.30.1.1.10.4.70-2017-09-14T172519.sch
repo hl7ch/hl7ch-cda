@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]" id="d346817e3239-false-d393261e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]" id="d893516e3657-false-d1444667e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="string(@classCode)=('OBS')">(cdach_entry_InabilityToWorkObservation): The value for @classCode SHALL be 'OBS'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="string(@moodCode)=('EVN')">(cdach_entry_InabilityToWorkObservation): The value for @moodCode SHALL be 'EVN'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'])&gt;=1">(cdach_entry_InabilityToWorkObservation): element hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] is mandatory [min 1x].</assert>
@@ -38,7 +38,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70']
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70']" id="d346817e3242-false-d393356e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70']" id="d893516e3660-false-d1444776e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="string(@root)=('2.16.756.5.30.1.1.10.4.70')">(cdach_entry_InabilityToWorkObservation): The value for @root SHALL be '2.16.756.5.30.1.1.10.4.70'.</assert>
@@ -48,7 +48,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']" id="d346817e3244-false-d393371e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']" id="d893516e3662-false-d1444791e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="string(@root)=('1.3.6.1.4.1.19376.1.5.3.1.4.13')">(cdach_entry_InabilityToWorkObservation): The value for @root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.4.13'.</assert>
@@ -58,7 +58,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:code[(@code='X-IATWRK' and @codeSystem='2.16.840.1.113883.6.1') or @nullFlavor]
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:code[(@code='X-IATWRK' and @codeSystem='2.16.840.1.113883.6.1') or @nullFlavor]" id="d346817e3246-false-d393386e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:code[(@code='X-IATWRK' and @codeSystem='2.16.840.1.113883.6.1') or @nullFlavor]" id="d893516e3664-false-d1444806e0">
         <extends rule="CD"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="@nullFlavor or (@code='X-IATWRK' and @codeSystem='2.16.840.1.113883.6.1' and @displayName='Inability to work' and @codeSystemName='LOINC')">(cdach_entry_InabilityToWorkObservation): The element value SHALL be one of 'code 'X-IATWRK' codeSystem '2.16.840.1.113883.6.1' displayName='Inability to work' codeSystemName='LOINC''.</assert>
@@ -68,7 +68,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime" id="d346817e3250-false-d393402e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime" id="d893516e3668-false-d1444822e0">
         <extends rule="IVL_TS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -77,7 +77,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime/hl7:low
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime/hl7:low" id="d346817e3253-false-d393420e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime/hl7:low" id="d893516e3671-false-d1444840e0">
         <extends rule="IVXB_TS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVXB_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVXB_TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -86,7 +86,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime/hl7:high
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime/hl7:high" id="d346817e3256-false-d393430e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:effectiveTime/hl7:high" id="d893516e3674-false-d1444850e0">
         <extends rule="IVXB_TS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVXB_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVXB_TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -95,7 +95,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.70
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:value
 Item: (cdach_entry_InabilityToWorkObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:value" id="d346817e3259-false-d393440e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:value" id="d893516e3677-false-d1444860e0">
         <extends rule="PQ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PQ' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_entry_InabilityToWorkObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PQ", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.4.70" test="not(@value) or matches(@value, '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(cdach_entry_InabilityToWorkObservation): @value is not a valid PQ number <value-of select="@value"/>
@@ -154,31 +154,178 @@ Item: (chpalm_entry_LaboratoryPerformer)
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity
-Item: (chpalm_other_AssignedEntityWithNameAddrTelecom)
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
 -->
     <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:addr)&gt;=1">(chpalm_other_AssignedEntityWithNameAddrTelecom): element hl7:addr is required [min 1x].</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:telecom)&gt;=1">(chpalm_other_AssignedEntityWithNameAddrTelecom): element hl7:telecom is required [min 1x].</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:assignedPerson)&lt;=1">(chpalm_other_AssignedEntityWithNameAddrTelecom): element hl7:assignedPerson appears too often [max 1x].</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:representedOrganization)&lt;=1">(chpalm_other_AssignedEntityWithNameAddrTelecom): element hl7:representedOrganization appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)])&lt;=1">(cdach_other_AssignedEntityCompilationNameAddrTelecom): element hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:addr)&gt;=1">(cdach_other_AssignedEntityCompilationNameAddrTelecom): element hl7:addr is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:telecom)&gt;=1">(cdach_other_AssignedEntityCompilationNameAddrTelecom): element hl7:telecom is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:assignedPerson)&lt;=1">(cdach_other_AssignedEntityCompilationNameAddrTelecom): element hl7:assignedPerson appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:representedOrganization)&lt;=1">(cdach_other_AssignedEntityCompilationNameAddrTelecom): element hl7:representedOrganization appears too often [max 1x].</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)]
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)]">
+        <let name="theCode" value="@code"/>
+        <let name="theCodeSystem" value="@codeSystem"/>
+        <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@nullFlavor or exists(doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(cdach_other_AssignedEntityCompilationNameAddrTelecom): The element value SHALL be one of '2.16.756.5.30.1.127.3.10.1.1.3 EprAuthorRole (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@displayName">(cdach_other_AssignedEntityCompilationNameAddrTelecom): attribute @displayName SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @displayName SHALL be of data type 'st'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@code">(cdach_other_AssignedEntityCompilationNameAddrTelecom): attribute @code SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@code) or (string-length(@code)&gt;0 and not(matches(@code,'\s')))">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @code SHALL be of data type 'cs'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="string(@codeSystemName)=('SNOMED CT')">(cdach_other_AssignedEntityCompilationNameAddrTelecom): The value for @codeSystemName SHALL be 'SNOMED CT'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @codeSystemName SHALL be of data type 'st'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="string(@codeSystem)=('2.16.840.1.113883.6.96')">(cdach_other_AssignedEntityCompilationNameAddrTelecom): The value for @codeSystem SHALL be '2.16.840.1.113883.6.96'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@code='133932002') or (originalText/text())">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Other Caregivers description MUST be declared in the originalText element.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="count(hl7:originalText)&lt;=1">(cdach_other_AssignedEntityCompilationNameAddrTelecom): element hl7:originalText appears too often [max 1x].</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)]/hl7:originalText
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
+-->
+
+<!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)]/hl7:translation
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:code[@codeSystem='2.16.840.1.113883.6.96' or concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem)]/hl7:translation">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@displayName">(cdach_other_AssignedEntityCompilationNameAddrTelecom): attribute @displayName SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @displayName SHALL be of data type 'st'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@code">(cdach_other_AssignedEntityCompilationNameAddrTelecom): attribute @code SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@code) or (string-length(@code)&gt;0 and not(matches(@code,'\s')))">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @code SHALL be of data type 'cs'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@codeSystemName">(cdach_other_AssignedEntityCompilationNameAddrTelecom): attribute @codeSystemName SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @codeSystemName SHALL be of data type 'st'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="@codeSystem">(cdach_other_AssignedEntityCompilationNameAddrTelecom): attribute @codeSystem SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.17" test="not(@codeSystem) or matches(@codeSystem,'^[0-2](\.(0|[1-9]\d*))*$')">(cdach_other_AssignedEntityCompilationNameAddrTelecom): Attribute @codeSystem SHALL be of data type 'oid'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr
-Item: (chpalm_other_AssignedEntityWithNameAddrTelecom)
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
 -->
 
 <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr">
+        <assert role="error" see="eCH-0007" test="not(upper-case(country/text())='CH') or (upper-case(state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetName)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:houseNumber)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:houseNumber appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:additionalLocator)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:additionalLocator appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:postBox)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postBox appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:state)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:state appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:city)&gt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:city)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:postalCode)&gt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:postalCode)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:country)&gt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:country)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country appears too often [max 1x].</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:streetAddressLine
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:streetAddressLine">
+        <assert role="error" see="eCH-0010 V7.0, section 5.12 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:streetAddressLine
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:streetAddressLine">
+        <assert role="error" see="eCH-0010 V7.0, section 5.12 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:streetName
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:streetName">
+        <assert role="error" see="eCH-0010 V7.0, section 5.13 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:houseNumber
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:houseNumber">
+        <assert role="error" see="eCH-0010 V7.0, section 5.14 " test="string-length(text()) &lt; 31">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 30 characters</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:additionalLocator
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:additionalLocator">
+        <assert role="error" see="eCH-0010 V7.0, section 5.15 " test="string-length(text()) &lt; 31">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 30 characters</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:postBox
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:postBox">
+        <assert role="error" see="eCH-0010 V7.0, section 5.16 " test="string-length(text()) &lt; 9">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 8 characters</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:state
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+
+<!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:city
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+
+<!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:postalCode
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+
+<!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
+Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:country
+Item: (cdach_other_AddressInformationCompilation-eCH-0010)
+-->
+    <rule context="*[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:addr/hl7:country">
+        <assert role="error" see="eCH-0010 V7.0, section 5.24.2 " test="string-length(text()) &lt; 3">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 2 characters</assert>
+    </rule>
+
+   <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:telecom
-Item: (chpalm_other_AssignedEntityWithNameAddrTelecom)
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:assignedPerson
-Item: (chpalm_other_AssignedEntityWithNameAddrTelecom)
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
 -->
 
 <!--
@@ -328,7 +475,7 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.17
 Context: *[hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]]/hl7:observation[@classCode='OBS'][@moodCode='EVN'][hl7:templateId[@root='2.16.756.5.30.1.1.10.4.70'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.13']]/hl7:performer[@typeCode='PRF'][hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.7']]/hl7:assignedEntity/hl7:representedOrganization
-Item: (chpalm_other_AssignedEntityWithNameAddrTelecom)
+Item: (cdach_other_AssignedEntityCompilationNameAddrTelecom)
 -->
 
 <!--

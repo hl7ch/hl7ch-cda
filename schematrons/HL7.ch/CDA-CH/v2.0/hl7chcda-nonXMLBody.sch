@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-    <title>Scenario: nonXMLBody - CDA-CH v2.0 - nonXMLBody (2.16.756.5.30.1.127.77.2.4.3)</title>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions" queryBinding="xslt2">
+    <title>Scenario: NonXMLBody - CDA-CH - NonXMLBody (2.16.756.5.30.1.127.77.2.4.3)</title>
     <ns uri="urn:hl7-org:v3" prefix="hl7"/>
     <ns uri="urn:hl7-org:v3" prefix="cda"/>
     <ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
@@ -104,6 +104,7 @@
         <include href="include/DTr1_TS.DATE.FULL.sch"/>
         <include href="include/DTr1_TS.DATE.MIN.sch"/>
         <include href="include/DTr1_TS.DATETIME.MIN.sch"/>
+        <include href="include/DTr1_TS.DATETIMETZ.MIN.sch"/>
         <include href="include/DTr1_TS.EPSOS.TZ.sch"/>
         <include href="include/DTr1_TS.IPS.TZ.sch"/>
         <include href="include/DTr1_TS.EPSOS.TZ.OPT.sch"/>
@@ -125,7 +126,7 @@
         <include href="include/DTr1_URL.NL.EXTENDED.sch"/>
     </pattern>
 
-   <!-- Include the project schematrons related to scenario nonXMLBody -->
+   <!-- Include the project schematrons related to scenario NonXMLBody -->
 
 <!-- CDA-CHv2.0-nonXMLBody -->
     <include href="include/2.16.756.5.30.1.1.10.1.12-2017-11-09T113007.sch"/>
@@ -137,7 +138,6 @@
 
 <!-- cdach_header_OrderReference -->
     <include href="include/2.16.756.5.30.1.1.10.2.16-2017-03-09T163005.sch"/>
-    <include href="include/2.16.756.5.30.1.1.10.2.16-2017-03-09T163005-closed.sch"/>
    <!-- cdach_header_PatientContact -->
     <include href="include/2.16.756.5.30.1.1.10.2.43-2017-09-12T172838.sch"/>
    <!-- cdach_header_HealthService -->

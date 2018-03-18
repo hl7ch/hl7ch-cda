@@ -13,14 +13,14 @@
     <assert role="error" test="count(*[self::hl7:reference or self::hl7:thumbnail][@validTimeLow or @validTimeHigh or @updateMode])=0" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-7-ED: no history or updateMode</assert>
     <assert role="error" test="not(@value or xml) or not(@charset)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-8-ED: no charset for value or xml</assert>
     <assert role="error" test="not(hl7:translation) or hl7:thumbnail[not(hl7:translation)]" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-9-ED: no nested translations</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(@mediaType))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-10-ED: no mediaType if null</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(@charset))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-11-ED: no charset if null</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(@language))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-12-ED: no language if null</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(@compression))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-13-ED: no compression if null</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(@integrityCheck))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-14-ED: no integrityCheck if null</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(@integrityCheckAlgorithm))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-15-ED: no integrityCheckAlgorithm if null</assert>
+    <assert role="error" test="not(@nullFlavor and @mediaType) or @mediaType = 'text/plain'" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-10-ED: no mediaType if null</assert>
+    <assert role="error" test="not(@nullFlavor and @charset)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-11-ED: no charset if null</assert>
+    <assert role="error" test="not(@nullFlavor and @language)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-12-ED: no language if null</assert>
+    <assert role="error" test="not(@nullFlavor and @compression)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-13-ED: no compression if null</assert>
+    <assert role="error" test="not(@nullFlavor and @integrityCheck)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-14-ED: no integrityCheck if null</assert>
+    <assert role="error" test="not(@nullFlavor and @integrityCheckAlgorithm) or @integrityCheckAlgorithm = 'SHA-1'" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-15-ED: no integrityCheckAlgorithm if null</assert>
     <assert role="error" test="not(@nullFlavor) or (not(hl7:thumbnail) or hl7:thumbnail/@nullFlavor)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-16-ED: no thumbnail if null</assert>
-    <assert role="error" test="not(@nullFlavor) or (@nullFlavor and not(hl7:translation))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-17-ED: no translation if null</assert>
+    <assert role="error" test="not(@nullFlavor and hl7:translation)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_ED">dtr1-17-ED: no translation if null</assert>
     
     <!-- http://www.ietf.org/rfc/rfc3066.txt
         Language-Tag = Primary-subtag *( "-" Subtag ) 
