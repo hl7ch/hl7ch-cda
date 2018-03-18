@@ -275,12 +275,12 @@ History:
   <text language="it" value="2.16.756.5.32" displayName="n. AVS"/>
   <text language="en" value="2.16.756.5.32" displayName="Swiss SSN"/>
 
-  <text language="de" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva numero claim"/>
+  <text language="de" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva Schadennummer"/>
   <text language="fr" value="2.16.756.5.30.1.100.3.1.1" displayName="Numéro de sinistre Suva"/>
   <text language="it" value="2.16.756.5.30.1.100.3.1.1" displayName="Numero claim Suva"/>
   <text language="en" value="2.16.756.5.30.1.100.3.1.1" displayName="Suva claim No."/>
   
-  <text language="de" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva Numero cliente"/>
+  <text language="de" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva Kundennummer"/>
   <text language="fr" value="2.16.756.5.30.1.100.3.7.1" displayName="Numéro client Suva"/>
   <text language="it" value="2.16.756.5.30.1.100.3.7.1" displayName="Numero cliente Suva"/>
   <text language="en" value="2.16.756.5.30.1.100.3.7.1" displayName="Suva customer No."/>
