@@ -7,6 +7,7 @@ History:
 2016.07.15: Tony Schaller, medshare GmbH (Erster Entwurf)
 2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN to the current one)
 2018.03.15: Tony Schaller, medshare GmbH: Update to make it valid for CDA-CH v2.0 (2017)
+2018.03.15: Tony Schaller, medshare GmbH: Adding a previous observation (used as proof of concept for Schematrons, only)
 
 ********************************************************
 -->
@@ -491,6 +492,17 @@ History:
 											<statusCode code='completed'/>
 											<value xsi:type='PQ' value='52.7' unit='ml/min' />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' displayName='Low' codeSystemName='ObservationInterpretation'/>
+											<!-- Previous observation obtained for the same patient, test, same method, same unit -->
+											<!-- (used as proof of concept for Schematrons, only) -->
+											<entryRelationship typeCode="REFR">
+												<observation classCode='OBS' moodCode='EVN'>
+													<code code='2164-2' displayName='CREATININE CLEARANCE' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+													<statusCode code='completed'/>
+													<effectiveTime value="201605021003+0200"/>
+													<value xsi:type='PQ' value='50.3' unit='ml/min' />
+													<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' displayName='Low' codeSystemName='ObservationInterpretation'/>
+												</observation>
+											</entryRelationship>
 										</observation>
 									</component>
 

@@ -5,7 +5,7 @@ CDA-CH-LREP Sample
 Case Study no. 2: Suspected whooping cough
 
 History:
-2018.03.16: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
 
 ********************************************************
 -->
@@ -262,11 +262,6 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
-			********************************************************
-			Serologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -305,23 +300,23 @@ History:
 									<td>1</td>
 									<td>CRP</td>
 									<td>
-										<content ID="lss_a0040188-bb62-48d0-83bd-a428ec9c1502_observation_1">14.0</content>
+										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_observation_1">14.0</content>
 									</td>
 									<td>mg/L</td>
 									<td/>
-									<td>0 - 10</td>
+									<td>0 - 10 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>48421-2</td>
 									<td>C reactive protein [Mass/volume] in Capillary blood</td>
 									<td>
-										<content ID="lss_a0040188-bb62-48d0-83bd-a428ec9c1502_comment_1">Referenzbereich bei Vollblut</content>
+										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_comment_1">Referenzbereich bei Vollblut</content>
 									</td>
 									<td>
-										<content ID="lss_a0040188-bb62-48d0-83bd-a428ec9c1502_collectiondate_1">15.03.2018 10:30</content>
+										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_collectiondate_1">15.03.2018 10:30</content>
 									</td>
 									<td>
-										<content ID="lss_a0040188-bb62-48d0-83bd-a428ec9c1502_specimenreceiveddate_1">15.03.2018 10:30</content>
+										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_specimenreceiveddate_1">15.03.2018 10:30</content>
 									</td>
 									<td>15.03.2018 10:30</td>
 									<td>Heidi Sticht am 15.03.2018 10:30</td>
@@ -350,7 +345,7 @@ History:
 												<translation code="1245.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="C-reaktives Protein (CRP), qn"/>
 											</code>
 											<text>
-												<reference value="#lss_a0040188-bb62-48d0-83bd-a428ec9c1502_observation_1"/>
+												<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="14.0" unit="mg/L"/>
@@ -395,7 +390,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>Referenzbereich bei Vollblut<reference value="#lss_a0040188-bb62-48d0-83bd-a428ec9c1502_comment_1"/>
+													<text>Referenzbereich bei Vollblut<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_comment_1"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -403,8 +398,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/L">
-														<low value="0" unit="mg/L"/>
-														<high value="10" unit="mg/L"/>
+														<low value="0"/>
+														<high value="10"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -418,7 +413,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_a0040188-bb62-48d0-83bd-a428ec9c1502_collectiondate_1"/>
+										<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20180315103000+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -440,7 +435,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_a0040188-bb62-48d0-83bd-a428ec9c1502_specimenreceiveddate_1"/>
+												<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20180315103000+0100"/>
 										</act>
@@ -451,11 +446,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Differenzialblutbild
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -492,25 +482,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>1</td>
-									<td/>
+									<td>Eosinophile Granulozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_1">0.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_1">2.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>0 - 1</td>
+									<td>2 - 4 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>707-0</td>
-									<td>Basophils/100 leukocytes in Blood by Manual count</td>
+									<td>714-6</td>
+									<td>Eosinophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_1"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_1">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_1">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_1">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_1">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -521,25 +511,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>2</td>
-									<td/>
+									<td>Monozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_2">3.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_2">4.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>3 - 5</td>
+									<td>3 - 7 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>764-1</td>
-									<td>Band form neutrophils/100 leukocytes in Blood by Manual count</td>
+									<td>744-3</td>
+									<td>Monocytes/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_2"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_2">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_2">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_2">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_2">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -550,25 +540,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>3</td>
-									<td/>
+									<td>Segmentkernige neutrophile Granulozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_3">44.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_3">39.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>20 - 40</td>
+									<td>40 - 70 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>737-7</td>
-									<td>Lymphocytes/100 leukocytes in Blood by Manual count</td>
+									<td>769-0</td>
+									<td>Segmented neutrophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_3"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_3">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_3">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_3">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_3">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -579,25 +569,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>4</td>
-									<td/>
+									<td>Stabkernige neutrophile Granulozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_4">4.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_4">3.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>3 - 7</td>
+									<td>3 - 5 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>744-3</td>
-									<td>Monocytes/100 leukocytes in Blood by Manual count</td>
+									<td>764-1</td>
+									<td>Band form neutrophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_4"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_4">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_4">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_4">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_4">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -608,25 +598,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>5</td>
-									<td/>
+									<td>Basophile Granulozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_5">8.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_5">0.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td/>
+									<td>0 - 1 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>33835-0</td>
-									<td>Lymphocytes Plasmacytoid/100 leukocytes in Blood by Manual count</td>
+									<td>707-0</td>
+									<td>Basophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_5"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_5">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_5">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_5">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_5">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -637,25 +627,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>6</td>
-									<td/>
+									<td>Lymphozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_6">39.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_6">44.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>40 - 70</td>
+									<td>20 - 40 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>769-0</td>
-									<td>Segmented neutrophils/100 leukocytes in Blood by Manual count</td>
+									<td>737-7</td>
+									<td>Lymphocytes/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_6"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_6">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_6">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_6">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_6">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -666,25 +656,25 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>7</td>
-									<td/>
+									<td>Reaktive Lymphozyten, plasmazytoide Lymphozyten</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_7">2.0</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_7">8.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>2 - 4</td>
+									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>714-6</td>
-									<td>Eosinophils/100 leukocytes in Blood by Manual count</td>
+									<td>33835-0</td>
+									<td>Lymphocytes Plasmacytoid/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_comment_7"/>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_7">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_7">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_7">15.03.2018 11:15</content>
+										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_7">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -709,10 +699,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Segmented neutrophils/100 leukocytes in Blood by Manual count">
+												<originalText>Segmentkernige neutrophile Granulozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_6"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="39.0" unit="%"/>
@@ -755,8 +746,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="%">
-														<low value="40" unit="%"/>
-														<high value="70" unit="%"/>
+														<low value="40"/>
+														<high value="70"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -767,10 +758,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="764-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Band form neutrophils/100 leukocytes in Blood by Manual count">
+												<originalText>Stabkernige neutrophile Granulozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_2"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="3.0" unit="%"/>
@@ -813,8 +805,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="%">
-														<low value="3" unit="%"/>
-														<high value="5" unit="%"/>
+														<low value="3"/>
+														<high value="5"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -825,10 +817,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="737-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lymphocytes/100 leukocytes in Blood by Manual count">
+												<originalText>Lymphozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_3"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="44.0" unit="%"/>
@@ -871,8 +864,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="%">
-														<low value="20" unit="%"/>
-														<high value="40" unit="%"/>
+														<low value="20"/>
+														<high value="40"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -883,10 +876,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="33835-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lymphocytes Plasmacytoid/100 leukocytes in Blood by Manual count">
+												<originalText>Reaktive Lymphozyten, plasmazytoide Lymphozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_5"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="8.0" unit="%"/>
@@ -932,10 +926,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="714-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Eosinophils/100 leukocytes in Blood by Manual count">
+												<originalText>Eosinophile Granulozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_7"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2.0" unit="%"/>
@@ -978,8 +973,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="%">
-														<low value="2" unit="%"/>
-														<high value="4" unit="%"/>
+														<low value="2"/>
+														<high value="4"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -990,10 +985,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="707-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Basophils/100 leukocytes in Blood by Manual count">
+												<originalText>Basophile Granulozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_1"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.0" unit="%"/>
@@ -1036,8 +1032,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="%">
-														<low value="0" unit="%"/>
-														<high value="1" unit="%"/>
+														<low value="0"/>
+														<high value="1"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1048,10 +1044,11 @@ History:
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
 											<code code="744-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Monocytes/100 leukocytes in Blood by Manual count">
+												<originalText>Monozyten</originalText>
 												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_observation_4"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="4.0" unit="%"/>
@@ -1094,8 +1091,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="%">
-														<low value="3" unit="%"/>
-														<high value="7" unit="%"/>
+														<low value="3"/>
+														<high value="7"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1109,7 +1106,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_collectiondate_7"/>
+										<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_7"/>
 									</text>
 									<effectiveTime value="20180315111500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -1131,7 +1128,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_cda4e956-a620-4249-ba1f-4daeb5dad26c_specimenreceiveddate_7"/>
+												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_7"/>
 											</text>
 											<effectiveTime value="20180315111500+0100"/>
 										</act>
@@ -1142,11 +1139,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Molekularbiologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -1185,7 +1177,7 @@ History:
 									<td>1</td>
 									<td/>
 									<td>
-										<content ID="lss_f583f119-d193-49db-9220-529e2abb5a16_observation_1">Ja</content>
+										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_observation_1">Ja</content>
 									</td>
 									<td/>
 									<td/>
@@ -1195,13 +1187,13 @@ History:
 									<td>23826-1</td>
 									<td>Bordetella pertussis DNA [Presence] in Unspecified specimen by NAA with probe detection</td>
 									<td>
-										<content ID="lss_f583f119-d193-49db-9220-529e2abb5a16_comment_1"/>
+										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_f583f119-d193-49db-9220-529e2abb5a16_collectiondate_1">15.03.2018 11:15</content>
+										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_collectiondate_1">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss_f583f119-d193-49db-9220-529e2abb5a16_specimenreceiveddate_1">15.03.2018 11:15</content>
+										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_specimenreceiveddate_1">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -1229,7 +1221,7 @@ History:
 												<translation code="3368.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Bordetella pertussis, Nukleinsäureamplifikation inkl. Amplifikat-Nachweis"/>
 											</code>
 											<text>
-												<reference value="#lss_f583f119-d193-49db-9220-529e2abb5a16_observation_1"/>
+												<reference value="#lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="true"/>
@@ -1284,7 +1276,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_f583f119-d193-49db-9220-529e2abb5a16_collectiondate_1"/>
+										<reference value="#lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20180315111500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -1306,7 +1298,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_f583f119-d193-49db-9220-529e2abb5a16_specimenreceiveddate_1"/>
+												<reference value="#lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20180315111500+0100"/>
 										</act>

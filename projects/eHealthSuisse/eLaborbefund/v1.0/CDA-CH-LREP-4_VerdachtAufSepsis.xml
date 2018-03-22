@@ -5,7 +5,7 @@ CDA-CH-LREP Sample
 Case Study no. 4: Suspected sepsis
 
 History:
-2018.03.16: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
 
 ********************************************************
 -->
@@ -263,11 +263,6 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
-			********************************************************
-			Mikrobiologie - Blutkultur 1
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -306,7 +301,7 @@ History:
 									<td>1</td>
 									<td>Blutkultur 1: Anaerobe Flasche</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_observation_1">Streptococcus parasanguinis (organism)</content>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_1">Streptococcus parasanguinis (organism)</content>
 									</td>
 									<td/>
 									<td/>
@@ -316,13 +311,13 @@ History:
 									<td>17934-1</td>
 									<td>Bacteria identified in Blood by Anaerobe culture</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_comment_1"/>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_collectiondate_1">16.03.2018 08:10</content>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_collectiondate_1">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -335,7 +330,7 @@ History:
 									<td>2</td>
 									<td>Blutkultur 1: Aerobe Flasche</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_observation_2">Kein Wachstum</content>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_2">Kein Wachstum</content>
 									</td>
 									<td/>
 									<td/>
@@ -345,13 +340,13 @@ History:
 									<td>17928-3</td>
 									<td>Bacteria identified in Blood by Aerobe culture</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_comment_2"/>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_collectiondate_2">16.03.2018 08:10</content>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_collectiondate_2">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_8409fff1-d369-4753-b6e8-4c8de444b09f_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -379,7 +374,7 @@ History:
 												<originalText>Blutkultur 1: Aerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss_8409fff1-d369-4753-b6e8-4c8de444b09f_observation_2"/>
+												<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="264868006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No growth (qualifier value)">
@@ -430,7 +425,7 @@ History:
 												<originalText>Blutkultur 1: Anaerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss_8409fff1-d369-4753-b6e8-4c8de444b09f_observation_1"/>
+												<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="113990002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Streptococcus parasanguinis (organism)"/>
@@ -479,7 +474,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_8409fff1-d369-4753-b6e8-4c8de444b09f_collectiondate_2"/>
+										<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_collectiondate_2"/>
 									</text>
 									<effectiveTime value="20180316081000+0100"/>
 									<participant typeCode="PRD">
@@ -498,7 +493,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_8409fff1-d369-4753-b6e8-4c8de444b09f_specimenreceiveddate_2"/>
+												<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_specimenreceiveddate_2"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>
@@ -509,11 +504,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Antibiogramm - Blutkultur 1
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -550,25 +540,25 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Clindamycin</td>
+									<td>Ceftriaxon</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_1"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_1"/>
 									</td>
 									<td/>
-									<td>Resistent</td>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18908-4</td>
-									<td>Clindamycin [Susceptibility]</td>
+									<td>18895-3</td>
+									<td>Ceftriaxone [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_1"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_1">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_1">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -579,25 +569,25 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Vancomycin</td>
+									<td>Clindamycin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_2"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_2"/>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td>Resistent</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>19000-9</td>
-									<td>Vancomycin [Susceptibility]</td>
+									<td>18908-4</td>
+									<td>Clindamycin [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_2"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_2">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_2">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -608,25 +598,25 @@ History:
 								<tr>
 									<td/>
 									<td>3</td>
-									<td>Co-Amoxiclav</td>
+									<td>Vancomycin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_3"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_3"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18862-3</td>
-									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
+									<td>19000-9</td>
+									<td>Vancomycin [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_3"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_3">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_3">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_3">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_3">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -639,23 +629,23 @@ History:
 									<td>4</td>
 									<td>Erythromycin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_4"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_4">2</content>
 									</td>
+									<td>mg/L</td>
 									<td/>
-									<td>Resistent</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18919-1</td>
-									<td>Erythromycin [Susceptibility]</td>
+									<td>233-7</td>
+									<td>Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_4"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_4">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_4">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_4">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_4">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -666,25 +656,25 @@ History:
 								<tr>
 									<td/>
 									<td>5</td>
-									<td>Penicillin</td>
+									<td>Levofloxacin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_5"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_5"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18964-7</td>
-									<td>Penicillin [Susceptibility]</td>
+									<td>20629-2</td>
+									<td>Levofloxacin [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_5"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_5">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_5">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_5">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_5">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -695,25 +685,25 @@ History:
 								<tr>
 									<td/>
 									<td>6</td>
-									<td>Amoxicillin</td>
+									<td>Co-Amoxiclav</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_6"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_6"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18861-5</td>
-									<td>Amoxicillin [Susceptibility]</td>
+									<td>18862-3</td>
+									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_6"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_6">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_6">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_6">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_6">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -724,25 +714,25 @@ History:
 								<tr>
 									<td/>
 									<td>7</td>
-									<td>Vancomycin</td>
+									<td>Erythromycin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_value_7">&lt;2 mg/L</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_7"/>
 									</td>
 									<td/>
-									<td/>
+									<td>Resistent</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>524-9</td>
-									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18919-1</td>
+									<td>Erythromycin [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_7"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_7">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_7">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_7">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_7">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -753,25 +743,25 @@ History:
 								<tr>
 									<td/>
 									<td>8</td>
-									<td>Erythromycin</td>
+									<td>Amoxicillin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_8">2</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_8"/>
 									</td>
-									<td>mg/L</td>
 									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>233-7</td>
-									<td>Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18861-5</td>
+									<td>Amoxicillin [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_8"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_8">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_8">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_8">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_8">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -782,25 +772,25 @@ History:
 								<tr>
 									<td/>
 									<td>9</td>
-									<td>Levofloxacin</td>
+									<td>Penicillin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_9"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_9"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>20629-2</td>
-									<td>Levofloxacin [Susceptibility]</td>
+									<td>18964-7</td>
+									<td>Penicillin [Susceptibility]</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_9"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_9">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_9">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_9">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_9">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -811,25 +801,25 @@ History:
 								<tr>
 									<td/>
 									<td>10</td>
-									<td>Ceftriaxon</td>
+									<td>Vancomycin</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_10"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_value_10">&lt;2 mg/L</content>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18895-3</td>
-									<td>Ceftriaxone [Susceptibility]</td>
+									<td>524-9</td>
+									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_comment_10"/>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_10">16.03.2018 08:10</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_10">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_10">16.03.2018 09:45</content>
+										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_10">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -857,7 +847,7 @@ History:
 												<originalText>Penicillin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_5"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -908,7 +898,7 @@ History:
 												<originalText>Amoxicillin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_6"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -959,7 +949,7 @@ History:
 												<originalText>Co-Amoxiclav</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_3"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1010,7 +1000,7 @@ History:
 												<originalText>Ceftriaxon</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_10"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1061,7 +1051,7 @@ History:
 												<originalText>Erythromycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_4"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Resistant">
@@ -1112,7 +1102,7 @@ History:
 												<originalText>Erythromycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_8"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2" unit="mg/L"/>
@@ -1161,7 +1151,7 @@ History:
 												<originalText>Clindamycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_1"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Resistant">
@@ -1212,7 +1202,7 @@ History:
 												<originalText>Levofloxacin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_9"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1263,7 +1253,7 @@ History:
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_2"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1314,10 +1304,10 @@ History:
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_observation_7"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">&amp;lt;2 mg/L<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_value_7"/>
+											<value xsi:type="ED">&amp;lt;2 mg/L<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_value_10"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316094500+0100"/>
@@ -1364,7 +1354,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_collectiondate_10"/>
+										<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_10"/>
 									</text>
 									<effectiveTime value="20180316081000+0100"/>
 									<participant typeCode="PRD">
@@ -1383,7 +1373,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_51a6d123-2466-4a21-afb1-420fb02b0800_specimenreceiveddate_10"/>
+												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_10"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>
@@ -1394,11 +1384,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Mikrobiologie - Blutkultur 2
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -1435,25 +1420,25 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Blutkultur 2: Anaerobe Flasche</td>
+									<td>Blutkultur 2: Aerobe Flasche</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_observation_1">Kein Wachstum</content>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_1">Enterococcus faecium (organism)</content>
 									</td>
 									<td/>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>17934-1</td>
-									<td>Bacteria identified in Blood by Anaerobe culture</td>
+									<td>17928-3</td>
+									<td>Bacteria identified in Blood by Aerobe culture</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_comment_1"/>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_collectiondate_1">16.03.2018 08:10</content>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_collectiondate_1">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1464,25 +1449,25 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Blutkultur 2: Aerobe Flasche</td>
+									<td>Blutkultur 2: Anaerobe Flasche</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_observation_2">Enterococcus faecium (organism)</content>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_2">Kein Wachstum</content>
 									</td>
 									<td/>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>17928-3</td>
-									<td>Bacteria identified in Blood by Aerobe culture</td>
+									<td>17934-1</td>
+									<td>Bacteria identified in Blood by Anaerobe culture</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_comment_2"/>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_collectiondate_2">16.03.2018 08:10</content>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_collectiondate_2">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1510,7 +1495,7 @@ History:
 												<originalText>Blutkultur 2: Aerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_observation_2"/>
+												<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="90272000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Enterococcus faecium (organism)"/>
@@ -1559,7 +1544,7 @@ History:
 												<originalText>Blutkultur 2: Anaerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_observation_1"/>
+												<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="264868006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No growth (qualifier value)">
@@ -1610,7 +1595,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_collectiondate_2"/>
+										<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_collectiondate_2"/>
 									</text>
 									<effectiveTime value="20180316081000+0100"/>
 									<participant typeCode="PRD">
@@ -1629,7 +1614,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_d7b7f5ba-899c-47c4-a210-a28b697a1d0a_specimenreceiveddate_2"/>
+												<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_specimenreceiveddate_2"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>
@@ -1640,11 +1625,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Antibiogramm - Blutkultur 1
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -1681,25 +1661,25 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Teicoplanin</td>
+									<td>Co-Amoxiclav</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_1"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_1"/>
 									</td>
 									<td/>
-									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>484-6</td>
-									<td>Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18862-3</td>
+									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_1"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_1">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_1">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1710,25 +1690,25 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Levofloxacin</td>
+									<td>Teicoplanin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_2">2</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_2"/>
 									</td>
-									<td>mg/L</td>
 									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>20396-8</td>
-									<td>Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18989-4</td>
+									<td>Teicoplanin [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_2"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_2">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_2">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1739,25 +1719,25 @@ History:
 								<tr>
 									<td/>
 									<td>3</td>
-									<td>Imipenem</td>
+									<td>Vancomycin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_3"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_3"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18932-4</td>
-									<td>Imipenem [Susceptibility]</td>
+									<td>19000-9</td>
+									<td>Vancomycin [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_3"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_3">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_3">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_3">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_3">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1768,25 +1748,25 @@ History:
 								<tr>
 									<td/>
 									<td>4</td>
-									<td>Teicoplanin</td>
+									<td>Imipenem</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_4"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_4">&lt;1 mg/L</content>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18989-4</td>
-									<td>Teicoplanin [Susceptibility]</td>
+									<td>279-0</td>
+									<td>Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_4"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_4">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_4">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_4">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_4">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1797,25 +1777,25 @@ History:
 								<tr>
 									<td/>
 									<td>5</td>
-									<td>Vancomycin</td>
+									<td>Linezolid</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_5"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_5"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>19000-9</td>
-									<td>Vancomycin [Susceptibility]</td>
+									<td>29258-1</td>
+									<td>Linezolid [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_5"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_5">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_5">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_5">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_5">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1826,25 +1806,25 @@ History:
 								<tr>
 									<td/>
 									<td>6</td>
-									<td>Linezolid</td>
+									<td>Amoxicillin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_6">2</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_6"/>
 									</td>
-									<td>mg/L</td>
 									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>29254-0</td>
-									<td>Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18861-5</td>
+									<td>Amoxicillin [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_6"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_6">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_6">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_6">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_6">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1855,25 +1835,25 @@ History:
 								<tr>
 									<td/>
 									<td>7</td>
-									<td>Co-Amoxiclav</td>
+									<td>Levofloxacin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_7"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_7"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18862-3</td>
-									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
+									<td>20629-2</td>
+									<td>Levofloxacin [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_7"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_7">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_7">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_7">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_7">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1886,23 +1866,23 @@ History:
 									<td>8</td>
 									<td>Imipenem</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_value_8">&lt;1 mg/L</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_8"/>
 									</td>
 									<td/>
-									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>279-0</td>
-									<td>Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18932-4</td>
+									<td>Imipenem [Susceptibility]</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_8"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_8">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_8">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_8">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_8">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1913,25 +1893,25 @@ History:
 								<tr>
 									<td/>
 									<td>9</td>
-									<td>Linezolid</td>
+									<td>Teicoplanin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_9"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_9"/>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>29258-1</td>
-									<td>Linezolid [Susceptibility]</td>
+									<td>484-6</td>
+									<td>Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_9"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_9">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_9">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_9">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_9">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1942,25 +1922,25 @@ History:
 								<tr>
 									<td/>
 									<td>10</td>
-									<td>Vancomycin</td>
+									<td>Levofloxacin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_value_10">&lt;0.5 mg/L</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_10">2</content>
 									</td>
-									<td/>
+									<td>mg/L</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>524-9</td>
-									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>20396-8</td>
+									<td>Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_10"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_10">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_10">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_10">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_10">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1971,25 +1951,25 @@ History:
 								<tr>
 									<td/>
 									<td>11</td>
-									<td>Amoxicillin</td>
+									<td>Linezolid</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_11"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_11">2</content>
 									</td>
+									<td>mg/L</td>
 									<td/>
-									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18861-5</td>
-									<td>Amoxicillin [Susceptibility]</td>
+									<td>29254-0</td>
+									<td>Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_11"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_11"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_11">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_11">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_11">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_11">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -2000,25 +1980,25 @@ History:
 								<tr>
 									<td/>
 									<td>12</td>
-									<td>Levofloxacin</td>
+									<td>Vancomycin</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_12"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_12">&lt;0.5 mg/L</content>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>20629-2</td>
-									<td>Levofloxacin [Susceptibility]</td>
+									<td>524-9</td>
+									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_comment_12"/>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_12"/>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_12">16.03.2018 08:40</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_12">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_12">16.03.2018 09:45</content>
+										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_12">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -2046,7 +2026,7 @@ History:
 												<originalText>Amoxicillin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_11"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2097,7 +2077,7 @@ History:
 												<originalText>Co-Amoxiclav</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_7"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2148,7 +2128,7 @@ History:
 												<originalText>Imipenem</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_3"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2199,10 +2179,10 @@ History:
 												<originalText>Imipenem</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_8"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">&amp;lt;1 mg/L<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_value_8"/>
+											<value xsi:type="ED">&amp;lt;1 mg/L<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_4"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316094500+0100"/>
@@ -2249,7 +2229,7 @@ History:
 												<originalText>Levofloxacin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_12"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2300,7 +2280,7 @@ History:
 												<originalText>Levofloxacin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_2"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2" unit="mg/L"/>
@@ -2349,7 +2329,7 @@ History:
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_5"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2400,10 +2380,10 @@ History:
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_10"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_12"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">&amp;lt;0.5 mg/L<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_value_10"/>
+											<value xsi:type="ED">&amp;lt;0.5 mg/L<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_12"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316094500+0100"/>
@@ -2450,7 +2430,7 @@ History:
 												<originalText>Teicoplanin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_4"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2501,7 +2481,7 @@ History:
 												<originalText>Teicoplanin</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_1"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<performer typeCode="PRF">
@@ -2549,7 +2529,7 @@ History:
 												<originalText>Linezolid</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_9"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2600,7 +2580,7 @@ History:
 												<originalText>Linezolid</originalText>
 											</code>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_observation_6"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_11"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2" unit="mg/L"/>
@@ -2649,7 +2629,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_collectiondate_12"/>
+										<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_12"/>
 									</text>
 									<effectiveTime value="20180316084000+0100"/>
 									<participant typeCode="PRD">
@@ -2668,7 +2648,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_bb71e7a2-78f7-4463-ac21-e12db0d0dfc8_specimenreceiveddate_12"/>
+												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_12"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>

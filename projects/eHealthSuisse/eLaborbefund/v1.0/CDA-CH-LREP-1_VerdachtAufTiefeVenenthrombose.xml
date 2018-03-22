@@ -5,7 +5,7 @@ CDA-CH-LREP Sample
 Case Study no. 1: Suspected deep venous thrombosis
 
 History:
-2018.03.15: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
 
 ********************************************************
 -->
@@ -262,11 +262,6 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
-			********************************************************
-			Hämatologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -303,25 +298,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>1</td>
-									<td>LYM%</td>
+									<td>PDW</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_1">35.1</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_1">11.6</content>
 									</td>
-									<td>%</td>
+									<td>fL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>736-9</td>
-									<td>Lymphocytes/100 leukocytes in Blood by Automated count</td>
+									<td>32207-3</td>
+									<td>Platelet distribution width [Entitic volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_1"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_1">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_1">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_1">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_1">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -334,7 +329,7 @@ History:
 									<td>2</td>
 									<td>HCT</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_2">39.2</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_2">39.2</content>
 									</td>
 									<td>%</td>
 									<td/>
@@ -344,13 +339,13 @@ History:
 									<td>4544-3</td>
 									<td>Hematocrit [Volume Fraction] of Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_2"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_2">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_2">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_2">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_2">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -361,25 +356,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>3</td>
-									<td>MXD%</td>
+									<td>MCV</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_3">12.4</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_3">91.4</content>
 									</td>
-									<td>%</td>
+									<td>fL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32155-4</td>
-									<td>Basophils+Eosinophils+Monocytes/100 leukocytes in Blood by Automated count</td>
+									<td>787-2</td>
+									<td>MCV [Entitic volume] by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_3"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_3">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_3">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_3">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_3">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -390,25 +385,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>4</td>
-									<td>MCH</td>
+									<td>RBC</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_4">34.7</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_4">4.29</content>
 									</td>
-									<td>pg</td>
+									<td>10*6/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>785-6</td>
-									<td>MCH [Entitic mass] by Automated count</td>
+									<td>789-8</td>
+									<td>Erythrocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_4"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_4">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_4">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_4">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_4">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -421,7 +416,7 @@ History:
 									<td>5</td>
 									<td>MCHC</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_5">34.7</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_5">34.7</content>
 									</td>
 									<td>g/dL</td>
 									<td/>
@@ -431,13 +426,13 @@ History:
 									<td>786-4</td>
 									<td>MCHC [Mass/volume] by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_5"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_5">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_5">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_5">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_5">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -448,25 +443,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>6</td>
-									<td>P_LCR</td>
+									<td>MXD%</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_6">24.1</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_6">12.4</content>
 									</td>
 									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
-									<td/>
-									<td/>
-									<td/>
+									<td>LOINC</td>
+									<td>32155-4</td>
+									<td>Basophils+Eosinophils+Monocytes/100 leukocytes in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_6"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_6">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_6">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_6">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_6">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -477,25 +472,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>7</td>
-									<td>LYM#</td>
+									<td>NEUT%</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_7">2.7</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_7">52.5</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>731-0</td>
-									<td>Lymphocytes [#/volume] in Blood by Automated count</td>
+									<td>770-8</td>
+									<td>Neutrophils/100 leukocytes in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_7"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_7">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_7">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_7">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_7">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -506,25 +501,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>8</td>
-									<td>HGB</td>
+									<td>NEUT#</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_8">13.6</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_8">4.0</content>
 									</td>
-									<td>g/dL</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>718-7</td>
-									<td>Hemoglobin [Mass/volume] in Blood</td>
+									<td>751-8</td>
+									<td>Neutrophils [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_8"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_8">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_8">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_8">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_8">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -535,25 +530,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>9</td>
-									<td>NEUT#</td>
+									<td>MPV</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_9">4.0</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_9">9.6</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>fL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>751-8</td>
-									<td>Neutrophils [#/volume] in Blood by Automated count</td>
+									<td>32623-1</td>
+									<td>Platelet mean volume [Entitic volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_9"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_9">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_9">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_9">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_9">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -564,25 +559,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>10</td>
-									<td>WBC</td>
+									<td>MCH</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_10">7.6</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_10">34.7</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>pg</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>6690-2</td>
-									<td>Leukocytes [#/volume] in Blood by Automated count</td>
+									<td>785-6</td>
+									<td>MCH [Entitic mass] by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_10"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_10">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_10">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_10">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_10">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -593,25 +588,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>11</td>
-									<td>RDW_SD</td>
+									<td>P_LCR</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_11">45.8</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_11">24.1</content>
 									</td>
-									<td>fL</td>
+									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
-									<td>LOINC</td>
-									<td>21000-5</td>
-									<td>Erythrocyte distribution width [Entitic volume] by Automated count</td>
+									<td/>
+									<td/>
+									<td/>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_11"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_11"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_11">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_11">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_11">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_11">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -622,25 +617,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>12</td>
-									<td>RDW_CV</td>
+									<td>LYM#</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_12">12.7</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_12">2.7</content>
 									</td>
-									<td>%</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>788-0</td>
-									<td>Erythrocyte distribution width [Ratio] by Automated count</td>
+									<td>731-0</td>
+									<td>Lymphocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_12"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_12"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_12">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_12">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_12">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_12">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -651,25 +646,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>13</td>
-									<td>NEUT%</td>
+									<td>RDW_CV</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_13">52.5</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_13">12.7</content>
 									</td>
 									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>770-8</td>
-									<td>Neutrophils/100 leukocytes in Blood by Automated count</td>
+									<td>788-0</td>
+									<td>Erythrocyte distribution width [Ratio] by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_13"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_13"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_13">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_13">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_13">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_13">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -680,25 +675,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>14</td>
-									<td>MXD#</td>
+									<td>TCC</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_14">0.9</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_14">2.36</content>
 									</td>
 									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32154-7</td>
-									<td>Basophils+Eosinophils+Monocytes [#/volume] in Blood by Automated count</td>
+									<td>777-3</td>
+									<td>Platelets [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_14"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_14"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_14">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_14">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_14">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_14">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -709,25 +704,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>15</td>
-									<td>MCV</td>
+									<td>WBC</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_15">91.4</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_15">7.6</content>
 									</td>
-									<td>fL</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>787-2</td>
-									<td>MCV [Entitic volume] by Automated count</td>
+									<td>6690-2</td>
+									<td>Leukocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_15"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_15"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_15">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_15">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_15">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_15">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -738,25 +733,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>16</td>
-									<td>PDW</td>
+									<td>MXD#</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_16">11.6</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_16">0.9</content>
 									</td>
-									<td>fL</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32207-3</td>
-									<td>Platelet distribution width [Entitic volume] in Blood by Automated count</td>
+									<td>32154-7</td>
+									<td>Basophils+Eosinophils+Monocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_16"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_16"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_16">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_16">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_16">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_16">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -767,25 +762,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>17</td>
-									<td>MPV</td>
+									<td>LYM%</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_17">9.6</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_17">35.1</content>
 									</td>
-									<td>fL</td>
+									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32623-1</td>
-									<td>Platelet mean volume [Entitic volume] in Blood by Automated count</td>
+									<td>736-9</td>
+									<td>Lymphocytes/100 leukocytes in Blood by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_17"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_17"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_17">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_17">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_17">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_17">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -796,25 +791,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>18</td>
-									<td>TCC</td>
+									<td>HGB</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_18">2.36</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_18">13.6</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>g/dL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>777-3</td>
-									<td>Platelets [#/volume] in Blood by Automated count</td>
+									<td>718-7</td>
+									<td>Hemoglobin [Mass/volume] in Blood</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_18"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_18"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_18">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_18">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_18">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_18">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -825,25 +820,25 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>19</td>
-									<td>RBC</td>
+									<td>RDW_SD</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_19">4.29</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_19">45.8</content>
 									</td>
-									<td>10*6/uL</td>
+									<td>fL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>789-8</td>
-									<td>Erythrocytes [#/volume] in Blood by Automated count</td>
+									<td>21000-5</td>
+									<td>Erythrocyte distribution width [Entitic volume] by Automated count</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_comment_19"/>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_19"/>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_19">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_19">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_19">09.03.2016 10:15</content>
+										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_19">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -872,7 +867,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_19"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="4.29" unit="10*6/uL"/>
@@ -922,7 +917,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_10"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_15"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="7.6" unit="10*3/uL"/>
@@ -972,7 +967,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_18"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_14"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2.36" unit="10*3/uL"/>
@@ -1022,7 +1017,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_8"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_18"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="13.6" unit="g/dL"/>
@@ -1072,7 +1067,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_2"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="39.2" unit="%"/>
@@ -1122,7 +1117,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_15"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="91.4" unit="fL"/>
@@ -1172,7 +1167,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_4"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="34.7" unit="pg"/>
@@ -1222,7 +1217,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_5"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="34.7" unit="g/dL"/>
@@ -1272,7 +1267,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_1"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_17"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="35.1" unit="%"/>
@@ -1322,7 +1317,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_3"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="12.4" unit="%"/>
@@ -1372,7 +1367,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_13"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="52.5" unit="%"/>
@@ -1422,7 +1417,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_7"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_12"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2.7" unit="10*3/uL"/>
@@ -1472,7 +1467,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_14"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_16"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.9" unit="10*3/uL"/>
@@ -1522,7 +1517,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_9"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="4.0" unit="10*3/uL"/>
@@ -1572,7 +1567,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_11"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_19"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="45.8" unit="fL"/>
@@ -1622,7 +1617,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_12"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_13"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="12.7" unit="%"/>
@@ -1672,7 +1667,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_16"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="11.6" unit="fL"/>
@@ -1722,7 +1717,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_17"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="9.6" unit="fL"/>
@@ -1772,7 +1767,7 @@ History:
 												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_observation_6"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_11"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="24.1" unit="%"/>
@@ -1821,7 +1816,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_collectiondate_19"/>
+										<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_19"/>
 									</text>
 									<effectiveTime value="20160309101500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -1843,7 +1838,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_e1924b5e-f255-44ae-9855-e4aa4e475683_specimenreceiveddate_19"/>
+												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_19"/>
 											</text>
 											<effectiveTime value="20160309101500+0100"/>
 										</act>
@@ -1854,11 +1849,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Serologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -1897,23 +1887,23 @@ History:
 									<td>1</td>
 									<td>CRP</td>
 									<td>
-										<content ID="lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_observation_1">14.0</content>
+										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_observation_1">14.0</content>
 									</td>
 									<td>mg/L</td>
 									<td/>
-									<td>0 - 10</td>
+									<td>0 - 10 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>48421-2</td>
 									<td>C reactive protein [Mass/volume] in Capillary blood</td>
 									<td>
-										<content ID="lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_comment_1">Referenzbereich bei Vollblut</content>
+										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_comment_1">Referenzbereich bei Vollblut</content>
 									</td>
 									<td>
-										<content ID="lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_collectiondate_1">09.03.2016 10:15</content>
+										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_collectiondate_1">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_specimenreceiveddate_1">09.03.2016 10:15</content>
+										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_specimenreceiveddate_1">09.03.2016 10:15</content>
 									</td>
 									<td>15.03.2018 10:30</td>
 									<td>Heidi Sticht am 15.03.2018 10:30</td>
@@ -1942,7 +1932,7 @@ History:
 												<translation code="1245.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="C-reaktives Protein (CRP), qn"/>
 											</code>
 											<text>
-												<reference value="#lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_observation_1"/>
+												<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="14.0" unit="mg/L"/>
@@ -1987,7 +1977,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>Referenzbereich bei Vollblut<reference value="#lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_comment_1"/>
+													<text>Referenzbereich bei Vollblut<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_comment_1"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -1995,8 +1985,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/L">
-														<low value="0" unit="mg/L"/>
-														<high value="10" unit="mg/L"/>
+														<low value="0"/>
+														<high value="10"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -2010,7 +2000,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_collectiondate_1"/>
+										<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20160309101500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -2032,7 +2022,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_6fbe9c5a-f789-466a-bd8d-7bcda1865356_specimenreceiveddate_1"/>
+												<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20160309101500+0100"/>
 										</act>
@@ -2043,11 +2033,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Gerinnung
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -2086,23 +2071,23 @@ History:
 									<td>1</td>
 									<td>D-Dimer</td>
 									<td>
-										<content ID="lss_ed84a3dc-620c-412d-9dc3-226d46612f60_observation_1">0.9</content>
+										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_observation_1">0.9</content>
 									</td>
 									<td>ug/mL</td>
 									<td/>
-									<td>0 - 0.5</td>
+									<td>0 - 0.5 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>71427-9</td>
 									<td>Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay</td>
 									<td>
-										<content ID="lss_ed84a3dc-620c-412d-9dc3-226d46612f60_comment_1">Referenzbereich bei &lt;50J. Alter × 0.01 µg/mL</content>
+										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_comment_1">Referenzbereich bei &lt;50J. Alter × 0.01 µg/mL</content>
 									</td>
 									<td>
-										<content ID="lss_ed84a3dc-620c-412d-9dc3-226d46612f60_collectiondate_1">09.03.2016 10:15</content>
+										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_collectiondate_1">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss_ed84a3dc-620c-412d-9dc3-226d46612f60_specimenreceiveddate_1">09.03.2016 10:15</content>
+										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_specimenreceiveddate_1">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 18:27</td>
 									<td>Pipette Mover am 09.03.2016 18:27</td>
@@ -2131,7 +2116,7 @@ History:
 												<translation code="1260.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="D-Dimere, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_ed84a3dc-620c-412d-9dc3-226d46612f60_observation_1"/>
+												<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.9" unit="ug/mL"/>
@@ -2176,7 +2161,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>Referenzbereich bei &amp;lt;50J. Alter × 0.01 µg/mL<reference value="#lss_ed84a3dc-620c-412d-9dc3-226d46612f60_comment_1"/>
+													<text>Referenzbereich bei &amp;lt;50J. Alter × 0.01 µg/mL<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_comment_1"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -2184,8 +2169,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/L">
-														<low value="0" unit="mg/L"/>
-														<high value="0.5" unit="mg/L"/>
+														<low value="0"/>
+														<high value="0.5"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -2199,7 +2184,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_ed84a3dc-620c-412d-9dc3-226d46612f60_collectiondate_1"/>
+										<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20160309101500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -2221,7 +2206,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_ed84a3dc-620c-412d-9dc3-226d46612f60_specimenreceiveddate_1"/>
+												<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20160309101500+0100"/>
 										</act>

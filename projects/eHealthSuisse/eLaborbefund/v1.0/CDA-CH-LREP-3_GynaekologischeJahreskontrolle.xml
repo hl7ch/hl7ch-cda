@@ -5,7 +5,7 @@ CDA-CH-LREP Sample
 Case Study no. 3: Annual gynecological check
 
 History:
-2018.03.16: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
 
 ********************************************************
 -->
@@ -262,11 +262,6 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
-			********************************************************
-			Molekularbiologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -303,9 +298,9 @@ History:
 								<tr>
 									<td>3136.00</td>
 									<td>1</td>
-									<td>HPV 18 - 45</td>
+									<td>HPV andere Hochrisikotypen</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_observation_1">Nein</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_observation_1">Nein</content>
 									</td>
 									<td/>
 									<td/>
@@ -315,13 +310,13 @@ History:
 									<td>21440-3</td>
 									<td>Human papilloma virus 16+18+31+33+35+45+51+52+56 DNA [Presence] in Cervix by Probe</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_comment_1"/>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_collectiondate_1">14.03.2018 09:30</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_collectiondate_1">14.03.2018 09:30</content>
 									</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_specimenreceiveddate_1">15.03.2018 13:20</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_specimenreceiveddate_1">15.03.2018 13:20</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -332,9 +327,9 @@ History:
 								<tr>
 									<td>3136.00</td>
 									<td>2</td>
-									<td>HPV andere Hochrisikotypen</td>
+									<td>HPV 18 - 45</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_observation_2">Nein</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_observation_2">Nein</content>
 									</td>
 									<td/>
 									<td/>
@@ -344,13 +339,13 @@ History:
 									<td>21440-3</td>
 									<td>Human papilloma virus 16+18+31+33+35+45+51+52+56 DNA [Presence] in Cervix by Probe</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_comment_2"/>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_collectiondate_2">14.03.2018 09:30</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_collectiondate_2">14.03.2018 09:30</content>
 									</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_specimenreceiveddate_2">15.03.2018 13:20</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_specimenreceiveddate_2">15.03.2018 13:20</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -363,7 +358,7 @@ History:
 									<td>3</td>
 									<td>HPV 16</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_observation_3">Nein</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_observation_3">Nein</content>
 									</td>
 									<td/>
 									<td/>
@@ -373,13 +368,13 @@ History:
 									<td>21440-3</td>
 									<td>Human papilloma virus 16+18+31+33+35+45+51+52+56 DNA [Presence] in Cervix by Probe</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_comment_3"/>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_collectiondate_3">14.03.2018 09:30</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_collectiondate_3">14.03.2018 09:30</content>
 									</td>
 									<td>
-										<content ID="lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_specimenreceiveddate_3">15.03.2018 13:20</content>
+										<content ID="lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_specimenreceiveddate_3">15.03.2018 13:20</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -408,7 +403,7 @@ History:
 												<translation code="3136.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Papillomavirus, humanes (HPV), DNA-Amplifikation inkl. Amplifikat-Nachweis, ql, sowie Typisierung"/>
 											</code>
 											<text>
-												<reference value="#lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_observation_3"/>
+												<reference value="#lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="false"/>
@@ -464,7 +459,7 @@ History:
 												<translation code="3136.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Papillomavirus, humanes (HPV), DNA-Amplifikation inkl. Amplifikat-Nachweis, ql, sowie Typisierung"/>
 											</code>
 											<text>
-												<reference value="#lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_observation_1"/>
+												<reference value="#lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="false"/>
@@ -520,7 +515,7 @@ History:
 												<translation code="3136.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Papillomavirus, humanes (HPV), DNA-Amplifikation inkl. Amplifikat-Nachweis, ql, sowie Typisierung"/>
 											</code>
 											<text>
-												<reference value="#lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_observation_2"/>
+												<reference value="#lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="false"/>
@@ -575,7 +570,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_collectiondate_3"/>
+										<reference value="#lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_collectiondate_3"/>
 									</text>
 									<effectiveTime value="20180314093000+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -597,7 +592,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_9f7a307c-0559-4693-9281-dc6e0ee2dc43_specimenreceiveddate_3"/>
+												<reference value="#lss1_4f1e805d-60f7-4a08-b204-021fbc06ef56_specimenreceiveddate_3"/>
 											</text>
 											<effectiveTime value="20180315132000+0100"/>
 										</act>
@@ -608,11 +603,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Hämatologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -651,23 +641,23 @@ History:
 									<td>1</td>
 									<td>Hämoglobin</td>
 									<td>
-										<content ID="lss_41710035-ac71-4be5-8569-433d49b62bb3_observation_1">11.7</content>
+										<content ID="lss2_dc3a3175-b401-4726-a40c-79e558090086_observation_1">11.7</content>
 									</td>
 									<td>mg/dl</td>
 									<td/>
-									<td>12.3 - 16.4</td>
+									<td>12.3 - 16.4 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>717-9</td>
 									<td>Hemoglobin [Presence] in Blood</td>
 									<td>
-										<content ID="lss_41710035-ac71-4be5-8569-433d49b62bb3_comment_1"/>
+										<content ID="lss2_dc3a3175-b401-4726-a40c-79e558090086_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_41710035-ac71-4be5-8569-433d49b62bb3_collectiondate_1">14.03.2018 09:40</content>
+										<content ID="lss2_dc3a3175-b401-4726-a40c-79e558090086_collectiondate_1">14.03.2018 09:40</content>
 									</td>
 									<td>
-										<content ID="lss_41710035-ac71-4be5-8569-433d49b62bb3_specimenreceiveddate_1">15.03.2018 13:40</content>
+										<content ID="lss2_dc3a3175-b401-4726-a40c-79e558090086_specimenreceiveddate_1">15.03.2018 13:40</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -696,7 +686,7 @@ History:
 												<translation code="1396.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämoglobin mittels manueller Bestimmung"/>
 											</code>
 											<text>
-												<reference value="#lss_41710035-ac71-4be5-8569-433d49b62bb3_observation_1"/>
+												<reference value="#lss2_dc3a3175-b401-4726-a40c-79e558090086_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="11.7" unit="mg/dl"/>
@@ -739,8 +729,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="12.3" unit="mg/dl"/>
-														<high value="16.4" unit="mg/dl"/>
+														<low value="12.3"/>
+														<high value="16.4"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -754,7 +744,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_41710035-ac71-4be5-8569-433d49b62bb3_collectiondate_1"/>
+										<reference value="#lss2_dc3a3175-b401-4726-a40c-79e558090086_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20180314094000+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -776,7 +766,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_41710035-ac71-4be5-8569-433d49b62bb3_specimenreceiveddate_1"/>
+												<reference value="#lss2_dc3a3175-b401-4726-a40c-79e558090086_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20180315134000+0100"/>
 										</act>
@@ -787,11 +777,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Zytologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -830,23 +815,23 @@ History:
 									<td>1</td>
 									<td>Leukozyten im Urin</td>
 									<td>
-										<content ID="lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_observation_1">75</content>
+										<content ID="lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_observation_1">75</content>
 									</td>
 									<td>/ul</td>
 									<td/>
-									<td>0 - 75</td>
+									<td>0 - 75 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>60026-2</td>
 									<td>Leukocyte esterase [Presence] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_comment_1"/>
+										<content ID="lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_collectiondate_1">14.03.2018 09:25</content>
+										<content ID="lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_collectiondate_1">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_specimenreceiveddate_1">15.03.2018 13:25</content>
+										<content ID="lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_specimenreceiveddate_1">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -875,7 +860,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_observation_1"/>
+												<reference value="#lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="75" unit="/ul"/>
@@ -918,8 +903,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="/ul">
-														<low value="0" unit="/ul"/>
-														<high value="75" unit="/ul"/>
+														<low value="0"/>
+														<high value="75"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -933,7 +918,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_collectiondate_1"/>
+										<reference value="#lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20180314092500+0100"/>
 									<participant typeCode="PRD">
@@ -952,7 +937,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_28c9714e-5af7-44ca-bbaa-f41018cbc0a2_specimenreceiveddate_1"/>
+												<reference value="#lss3_b3b53ae9-c790-4a27-83e0-dc0ea8a4ac6d_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20180315132500+0100"/>
 										</act>
@@ -963,11 +948,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Chemie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -1004,25 +984,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>1</td>
-									<td>pH im Urin</td>
+									<td>Keton im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_1">6</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_1">0.0</content>
 									</td>
+									<td>mg/dl</td>
 									<td/>
-									<td/>
-									<td>0.5 - 8.0</td>
+									<td>0.0 - 10.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>50560-2</td>
-									<td>pH of Urine by Automated test strip</td>
+									<td>50557-8</td>
+									<td>Ketones [Mass/volume] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_1"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_1">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_1">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_1">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_1">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1033,25 +1013,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>2</td>
-									<td>Bilirubin im Urin</td>
+									<td>Urinfarbe</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_2">0.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_value_2">dark yellow</content>
 									</td>
-									<td>mg/dl</td>
 									<td/>
-									<td>0.0 - 0.5</td>
+									<td/>
+									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>53327-3</td>
-									<td>Bilirubin.total [Mass/volume] in Urine by Automated test strip</td>
+									<td>5778-6</td>
+									<td>Color of Urine</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_2"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_2">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_2">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_2">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_2">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1062,25 +1042,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>3</td>
-									<td>Urobilinogen im Urin</td>
+									<td>Protein im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_3">0.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_3">50.0</content>
 									</td>
 									<td>mg/dl</td>
 									<td/>
-									<td>0.0 - 2.0</td>
+									<td>0.0 - 10.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>50563-6</td>
-									<td>Urobilinogen [Mass/volume] in Urine by Automated test strip</td>
+									<td>50561-0</td>
+									<td>Protein [Mass/volume] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_3"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_3">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_3">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_3">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_3">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1091,25 +1071,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>4</td>
-									<td>Protein / Creatinin im Urin</td>
+									<td>Blut im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_4">200.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_4">0.06</content>
 									</td>
-									<td>mg/g{Cre}</td>
+									<td>g/dl</td>
 									<td/>
-									<td>0.0 - 80.0</td>
+									<td>0.0 - 0.03 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>2890-2</td>
-									<td>Protein/Creatinine [Mass Ratio] in Urine</td>
+									<td>50559-4</td>
+									<td>Hemoglobin [Mass/volume] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_4"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_4">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_4">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_4">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_4">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1120,25 +1100,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>5</td>
-									<td>Protein im Urin</td>
+									<td>Urobilinogen im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_5">50.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_5">0.0</content>
 									</td>
 									<td>mg/dl</td>
 									<td/>
-									<td>0.0 - 10.0</td>
+									<td>0.0 - 2.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>50561-0</td>
-									<td>Protein [Mass/volume] in Urine by Automated test strip</td>
+									<td>50563-6</td>
+									<td>Urobilinogen [Mass/volume] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_5"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_5">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_5">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_5">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_5">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1147,27 +1127,27 @@ History:
 									<td/>
 								</tr>
 								<tr>
-									<td>1740.01</td>
+									<td>1659.01</td>
 									<td>6</td>
-									<td>Nitrit im Urin</td>
+									<td>SS-Test</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_value_6">1+</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_value_6">positiv</content>
 									</td>
 									<td/>
 									<td/>
-									<td>Nein</td>
+									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>50558-6</td>
-									<td>Nitrite [Presence] in Urine by Automated test strip</td>
+									<td>2118-8</td>
+									<td>Choriogonadotropin (pregnancy test) [Presence] in Serum or Plasma</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_6"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_6">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_6">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_6">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_6">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1178,25 +1158,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>7</td>
-									<td>Blut im Urin</td>
+									<td>pH im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_7">0.06</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_7">6</content>
 									</td>
-									<td>g/dl</td>
 									<td/>
-									<td>0.0 - 0.03</td>
+									<td/>
+									<td>0.5 - 8.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>50559-4</td>
-									<td>Hemoglobin [Mass/volume] in Urine by Automated test strip</td>
+									<td>50560-2</td>
+									<td>pH of Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_7"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_7">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_7">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_7">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_7">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1207,25 +1187,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>8</td>
-									<td>Glucose im Urin</td>
+									<td>Nitrit im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_8">0.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_value_8">1+</content>
 									</td>
-									<td>mg/dl</td>
 									<td/>
-									<td>0.0 - 30.0</td>
+									<td/>
+									<td>Nein</td>
 									<td/>
 									<td>LOINC</td>
-									<td>50559-4</td>
-									<td>Hemoglobin [Mass/volume] in Urine by Automated test strip</td>
+									<td>50558-6</td>
+									<td>Nitrite [Presence] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_8"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_8">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_8">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_8">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_8">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1236,25 +1216,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>9</td>
-									<td>Urinfarbe</td>
+									<td>Protein / Creatinin im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_value_9">dark yellow</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_9">200.0</content>
 									</td>
+									<td>mg/g{Cre}</td>
 									<td/>
-									<td/>
-									<td/>
+									<td>0.0 - 80.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>5778-6</td>
-									<td>Color of Urine</td>
+									<td>2890-2</td>
+									<td>Protein/Creatinine [Mass Ratio] in Urine</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_9"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_9">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_9">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_9">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_9">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1265,25 +1245,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>10</td>
-									<td>Keton im Urin</td>
+									<td>Glucose im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_10">0.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_10">0.0</content>
 									</td>
 									<td>mg/dl</td>
 									<td/>
-									<td>0.0 - 10.0</td>
+									<td>0.0 - 30.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>50557-8</td>
-									<td>Ketones [Mass/volume] in Urine by Automated test strip</td>
+									<td>53328-1</td>
+									<td>Glucose [Mass/volume] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_10"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_10">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_10">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_10">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_10">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1294,25 +1274,25 @@ History:
 								<tr>
 									<td>1740.01</td>
 									<td>11</td>
-									<td>Creatinin im Urin</td>
+									<td>Bilirubin im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_11">300.0</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_11">0.0</content>
 									</td>
 									<td>mg/dl</td>
 									<td/>
-									<td>10.0 - 300.0</td>
+									<td>0.0 - 0.5 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>2161-8</td>
-									<td>Creatinine [Mass/volume] in Urine</td>
+									<td>53327-3</td>
+									<td>Bilirubin.total [Mass/volume] in Urine by Automated test strip</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_11"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_11"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_11">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_11">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_11">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_11">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1321,27 +1301,27 @@ History:
 									<td/>
 								</tr>
 								<tr>
-									<td>1659.01</td>
+									<td>1740.01</td>
 									<td>12</td>
-									<td>SS-Test</td>
+									<td>Creatinin im Urin</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_value_12">positiv</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_12">300.0</content>
 									</td>
+									<td>mg/dl</td>
 									<td/>
-									<td/>
-									<td/>
+									<td>10.0 - 300.0 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>2118-8</td>
-									<td>Choriogonadotropin (pregnancy test) [Presence] in Serum or Plasma</td>
+									<td>2161-8</td>
+									<td>Creatinine [Mass/volume] in Urine</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_comment_12"/>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_comment_12"/>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_12">14.03.2018 09:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_12">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_12">15.03.2018 13:25</content>
+										<content ID="lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_12">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -1370,10 +1350,10 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_6"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">1+<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_value_6"/>
+											<value xsi:type="ED">1+<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_value_8"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316102800+0100"/>
@@ -1427,7 +1407,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_1"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="INT" value="6"/>
@@ -1470,8 +1450,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ">
-														<low value="0.5" unit="1"/>
-														<high value="8.0" unit="1"/>
+														<low value="0.5"/>
+														<high value="8.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1486,7 +1466,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_5"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="50.0" unit="mg/dl"/>
@@ -1529,8 +1509,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="0.0" unit="mg/dl"/>
-														<high value="10.0" unit="mg/dl"/>
+														<low value="0.0"/>
+														<high value="10.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1540,12 +1520,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
-											<code code="50559-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hemoglobin [Mass/volume] in Urine by Automated test strip">
+											<code code="53328-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Glucose [Mass/volume] in Urine by Automated test strip">
 												<originalText>Glucose im Urin</originalText>
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_8"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.0" unit="mg/dl"/>
@@ -1588,8 +1568,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="0.0" unit="mg/dl"/>
-														<high value="30.0" unit="mg/dl"/>
+														<low value="0.0"/>
+														<high value="30.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1604,7 +1584,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_10"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.0" unit="mg/dl"/>
@@ -1647,8 +1627,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="0.0" unit="mg/dl"/>
-														<high value="10.0" unit="mg/dl"/>
+														<low value="0.0"/>
+														<high value="10.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1663,7 +1643,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_2"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_11"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.0" unit="mg/dl"/>
@@ -1706,8 +1686,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="0.0" unit="mg/dl"/>
-														<high value="0.5" unit="mg/dl"/>
+														<low value="0.0"/>
+														<high value="0.5"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1722,7 +1702,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_3"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.0" unit="mg/dl"/>
@@ -1765,8 +1745,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="0.0" unit="mg/dl"/>
-														<high value="2.0" unit="mg/dl"/>
+														<low value="0.0"/>
+														<high value="2.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1781,7 +1761,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_7"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.06" unit="g/dl"/>
@@ -1824,8 +1804,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="g/dl">
-														<low value="0.0" unit="g/dl"/>
-														<high value="0.03" unit="g/dl"/>
+														<low value="0.0"/>
+														<high value="0.03"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1840,7 +1820,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_11"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_12"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="300.0" unit="mg/dl"/>
@@ -1883,8 +1863,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/dl">
-														<low value="10.0" unit="mg/dl"/>
-														<high value="300.0" unit="mg/dl"/>
+														<low value="10.0"/>
+														<high value="300.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1899,7 +1879,7 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_4"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="200.0" unit="mg/g{Cre}"/>
@@ -1942,8 +1922,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="mg/g{Cre}">
-														<low value="0.0" unit="mg/g{Cre}"/>
-														<high value="80.0" unit="mg/g{Cre}"/>
+														<low value="0.0"/>
+														<high value="80.0"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -1958,10 +1938,10 @@ History:
 												<translation code="1740.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin-Teilstatus, 5-10 Parameter"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_9"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">dark yellow<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_value_9"/>
+											<value xsi:type="ED">dark yellow<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_value_2"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316102800+0100"/>
@@ -2009,10 +1989,10 @@ History:
 												<translation code="1659.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Human Choriongonadotropin (HCG), ql, Schwangerschaftstest"/>
 											</code>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_observation_12"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">positiv<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_value_12"/>
+											<value xsi:type="ED">positiv<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_value_6"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316102800+0100"/>
@@ -2059,7 +2039,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_collectiondate_12"/>
+										<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_collectiondate_12"/>
 									</text>
 									<effectiveTime value="20180314092500+0100"/>
 									<participant typeCode="PRD">
@@ -2078,7 +2058,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_c641cf2a-66ec-40d0-81df-87269173b40f_specimenreceiveddate_12"/>
+												<reference value="#lss4_d1ae4da4-272f-4e72-b201-72ae359a147e_specimenreceiveddate_12"/>
 											</text>
 											<effectiveTime value="20180315132500+0100"/>
 										</act>
@@ -2089,11 +2069,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Mikrobiologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -2130,9 +2105,9 @@ History:
 								<tr>
 									<td>3330.00</td>
 									<td>1</td>
-									<td>McConkey Agar</td>
+									<td>Norfloxacin Agar</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_value_1">Kein Wachstum</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_value_1">Kein Wachstum</content>
 									</td>
 									<td/>
 									<td/>
@@ -2142,13 +2117,13 @@ History:
 									<td>17970-5</td>
 									<td>Bacteria # 2 identified in Urine by Culture</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_comment_1"/>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_collectiondate_1">14.03.2018 09:25</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_collectiondate_1">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_specimenreceiveddate_1">15.03.2018 13:25</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_specimenreceiveddate_1">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2159,25 +2134,25 @@ History:
 								<tr>
 									<td>3330.00</td>
 									<td>2</td>
-									<td>Norfloxacin Agar</td>
+									<td>Cled Agar</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_value_2">Kein Wachstum</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_observation_2">-</content>
 									</td>
+									<td>/ml</td>
 									<td/>
-									<td/>
-									<td/>
+									<td>0 - 10000 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>17970-5</td>
 									<td>Bacteria # 2 identified in Urine by Culture</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_comment_2"/>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_collectiondate_2">14.03.2018 09:25</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_collectiondate_2">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_specimenreceiveddate_2">15.03.2018 13:25</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_specimenreceiveddate_2">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2188,25 +2163,25 @@ History:
 								<tr>
 									<td>3330.00</td>
 									<td>3</td>
-									<td>Cled Agar</td>
+									<td>McConkey Agar</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_observation_3">-</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_value_3">Kein Wachstum</content>
 									</td>
-									<td>/ml</td>
 									<td/>
-									<td>0 - 10000</td>
+									<td/>
+									<td/>
 									<td/>
 									<td>LOINC</td>
 									<td>17970-5</td>
 									<td>Bacteria # 2 identified in Urine by Culture</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_comment_3"/>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_collectiondate_3">14.03.2018 09:25</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_collectiondate_3">14.03.2018 09:25</content>
 									</td>
 									<td>
-										<content ID="lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_specimenreceiveddate_3">15.03.2018 13:25</content>
+										<content ID="lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_specimenreceiveddate_3">15.03.2018 13:25</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2235,7 +2210,7 @@ History:
 												<translation code="3330.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin, Eintauch-Objektträger, negativ oder positiv"/>
 											</code>
 											<text>
-												<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_observation_3"/>
+												<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="-1" unit="/ml"/>
@@ -2278,8 +2253,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="/ml">
-														<low value="0" unit="/ml"/>
-														<high value="10000" unit="/ml"/>
+														<low value="0"/>
+														<high value="10000"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -2294,10 +2269,10 @@ History:
 												<translation code="3330.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin, Eintauch-Objektträger, negativ oder positiv"/>
 											</code>
 											<text>
-												<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_observation_1"/>
+												<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">Kein Wachstum<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_value_1"/>
+											<value xsi:type="ED">Kein Wachstum<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_value_3"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316102800+0100"/>
@@ -2345,10 +2320,10 @@ History:
 												<translation code="3330.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Urin, Eintauch-Objektträger, negativ oder positiv"/>
 											</code>
 											<text>
-												<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_observation_2"/>
+												<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">Kein Wachstum<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_value_2"/>
+											<value xsi:type="ED">Kein Wachstum<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_value_1"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316102800+0100"/>
@@ -2395,7 +2370,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_collectiondate_3"/>
+										<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_collectiondate_3"/>
 									</text>
 									<effectiveTime value="20180314092500+0100"/>
 									<participant typeCode="PRD">
@@ -2414,7 +2389,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_11024a54-825f-4bfe-81ad-c22d5a4e8eb6_specimenreceiveddate_3"/>
+												<reference value="#lss5_72778399-4ef8-4a03-874e-b5d9164ea9bb_specimenreceiveddate_3"/>
 											</text>
 											<effectiveTime value="20180315132500+0100"/>
 										</act>
@@ -2425,11 +2400,6 @@ History:
 					</entry>
 				</section>
 			</component>
-			<!--
-			********************************************************
-			Serologie
-			********************************************************
-			-->
 			<component>
 				<section>
 					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
@@ -2464,85 +2434,85 @@ History:
 							</thead>
 							<tbody>
 								<tr>
-									<td>3549.00</td>
-									<td>1</td>
-									<td>Toxoplasma gondii IgG</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_1">-</content>
-									</td>
-									<td>[iU]/mL</td>
-									<td/>
-									<td>0 - 1</td>
-									<td/>
-									<td>LOINC</td>
-									<td>5388-4</td>
-									<td>Toxoplasma gondii IgG Ab [Units/volume] in Serum or Plasma by Immunoassay</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_1"/>
-									</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_1">14.03.2018 09:31</content>
-									</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_1">15.03.2018 13:31</content>
-									</td>
-									<td>16.03.2018 10:28</td>
-									<td>Pipette Mover am 16.03.2018 10:28</td>
-									<td>Pipette Documenter am 16.03.2018 15:08</td>
-									<td>Serum</td>
-									<td/>
-								</tr>
-								<tr>
-									<td>3009.00</td>
-									<td>2</td>
-									<td>CMV Cytomegalovirus IgG</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_2">-</content>
-									</td>
-									<td>{index}</td>
-									<td/>
-									<td>0.0 - 0.9</td>
-									<td/>
-									<td>LOINC</td>
-									<td>5124-3</td>
-									<td>Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_2"/>
-									</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_2">14.03.2018 09:31</content>
-									</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_2">15.03.2018 13:31</content>
-									</td>
-									<td>16.03.2018 10:28</td>
-									<td>Pipette Mover am 16.03.2018 10:28</td>
-									<td>Pipette Documenter am 16.03.2018 15:08</td>
-									<td>Serum</td>
-									<td/>
-								</tr>
-								<tr>
 									<td>3178.00</td>
-									<td>3</td>
+									<td>1</td>
 									<td>Varizellen Zoster IgG</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_3">150</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_1">150</content>
 									</td>
 									<td>TODO</td>
 									<td/>
-									<td>0 - 135</td>
+									<td>0 - 135 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>5403-1</td>
 									<td>Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunoassay</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_3"/>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_3">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_1">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_3">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_1">15.03.2018 13:31</content>
+									</td>
+									<td>16.03.2018 10:28</td>
+									<td>Pipette Mover am 16.03.2018 10:28</td>
+									<td>Pipette Documenter am 16.03.2018 15:08</td>
+									<td>Serum</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>3481.00</td>
+									<td>2</td>
+									<td>Treponema pallidum (TPHA)</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_2">-</content>
+									</td>
+									<td>{titer}</td>
+									<td/>
+									<td>0 - 80 null</td>
+									<td/>
+									<td>LOINC</td>
+									<td>34382-2</td>
+									<td>Treponema pallidum Ab [Titer] in Serum by Immunofluorescence</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_2"/>
+									</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_2">14.03.2018 09:31</content>
+									</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_2">15.03.2018 13:31</content>
+									</td>
+									<td>16.03.2018 10:28</td>
+									<td>Pipette Mover am 16.03.2018 10:28</td>
+									<td>Pipette Documenter am 16.03.2018 15:08</td>
+									<td>Serum</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>3094.00</td>
+									<td>3</td>
+									<td>HIV Typ 1 + 2 Combo</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_3">Nein</content>
+									</td>
+									<td/>
+									<td/>
+									<td>Nein</td>
+									<td/>
+									<td>LOINC</td>
+									<td>75666-8</td>
+									<td>HIV 1+2 Ab and HIV1 p24 Ag [Identifier] in Serum, Plasma or Blood by Rapid immunoassay</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_3"/>
+									</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_3">14.03.2018 09:31</content>
+									</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_3">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2555,23 +2525,23 @@ History:
 									<td>4</td>
 									<td>beta-HCG qn.</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_4">70000</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_4">70000</content>
 									</td>
 									<td>[iU]/L</td>
 									<td/>
-									<td>50 - 500</td>
+									<td>50 - 500 null</td>
 									<td/>
 									<td>LOINC</td>
 									<td>21198-7</td>
 									<td>Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_4">50 500 IU/l 1 - 2 Wochen<br/>100 - 5000 IU/l 2 - 3 Wochen<br/>500 - 10000 IU/l 3 - 4 Wochen<br/>1000 - 50000 IU/l 4 - 5 Wochen<br/>10000 - 100000 IU/l 5 - 6 Wochen<br/> 15000 - 200000 IU/l 6 - 8 Wochen<br/>10000 - 100000 IU/l 2 - 3 Monate</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_4">50 500 IU/l 1 - 2 Wochen<br/>100 - 5000 IU/l 2 - 3 Wochen<br/>500 - 10000 IU/l 3 - 4 Wochen<br/>1000 - 50000 IU/l 4 - 5 Wochen<br/>10000 - 100000 IU/l 5 - 6 Wochen<br/> 15000 - 200000 IU/l 6 - 8 Wochen<br/>10000 - 100000 IU/l 2 - 3 Monate</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_4">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_4">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_4">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_4">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2584,7 +2554,7 @@ History:
 									<td>5</td>
 									<td>HBs-Antigen</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_5">Nein</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_5">Nein</content>
 									</td>
 									<td/>
 									<td/>
@@ -2594,13 +2564,13 @@ History:
 									<td>5195-3</td>
 									<td>Hepatitis B virus surface Ag [Presence] in Serum</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_5"/>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_5">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_5">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_5">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_5">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2609,56 +2579,56 @@ History:
 									<td/>
 								</tr>
 								<tr>
-									<td>3094.00</td>
+									<td>3549.00</td>
 									<td>6</td>
-									<td>HIV Typ 1 + 2 Combo</td>
+									<td>Toxoplasma gondii IgG</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_6">Nein</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_6">-</content>
+									</td>
+									<td>[iU]/mL</td>
+									<td/>
+									<td>0 - 1 null</td>
+									<td/>
+									<td>LOINC</td>
+									<td>5388-4</td>
+									<td>Toxoplasma gondii IgG Ab [Units/volume] in Serum or Plasma by Immunoassay</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_6"/>
+									</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_6">14.03.2018 09:31</content>
+									</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_6">15.03.2018 13:31</content>
+									</td>
+									<td>16.03.2018 10:28</td>
+									<td>Pipette Mover am 16.03.2018 10:28</td>
+									<td>Pipette Documenter am 16.03.2018 15:08</td>
+									<td>Serum</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>1288.00</td>
+									<td>7</td>
+									<td>Antikörper Suchtest (Indir. Coombs-Test)</td>
+									<td>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_7">Nein</content>
 									</td>
 									<td/>
 									<td/>
 									<td>Nein</td>
 									<td/>
 									<td>LOINC</td>
-									<td>75666-8</td>
-									<td>HIV 1+2 Ab and HIV1 p24 Ag [Identifier] in Serum, Plasma or Blood by Rapid immunoassay</td>
+									<td>1008-2</td>
+									<td>Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_6"/>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_6">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_7">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_6">15.03.2018 13:31</content>
-									</td>
-									<td>16.03.2018 10:28</td>
-									<td>Pipette Mover am 16.03.2018 10:28</td>
-									<td>Pipette Documenter am 16.03.2018 15:08</td>
-									<td>Serum</td>
-									<td/>
-								</tr>
-								<tr>
-									<td>3167.00</td>
-									<td>7</td>
-									<td>Rubella IgG</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_7">-</content>
-									</td>
-									<td>[iU]/mL</td>
-									<td/>
-									<td>0 - 10</td>
-									<td/>
-									<td>LOINC</td>
-									<td>5334-8</td>
-									<td>Rubella virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_7"/>
-									</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_7">14.03.2018 09:31</content>
-									</td>
-									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_7">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_7">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2671,7 +2641,7 @@ History:
 									<td>8</td>
 									<td>Anti HBc IgG/IgM</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_8">Ja</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_8">Ja</content>
 									</td>
 									<td/>
 									<td/>
@@ -2681,13 +2651,13 @@ History:
 									<td>51914-0</td>
 									<td>Hepatitis B virus core IgG+IgM Ab [Presence] in Serum</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_8"/>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_8">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_8">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_8">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_8">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2696,27 +2666,27 @@ History:
 									<td/>
 								</tr>
 								<tr>
-									<td>1288.00</td>
+									<td>3009.00</td>
 									<td>9</td>
-									<td>Antikörper Suchtest (Indir. Coombs-Test)</td>
+									<td>CMV Cytomegalovirus IgG</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_9">Nein</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_9">-</content>
 									</td>
+									<td>{index}</td>
 									<td/>
-									<td/>
-									<td>Nein</td>
+									<td>0.0 - 0.9 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>1008-2</td>
-									<td>Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma</td>
+									<td>5124-3</td>
+									<td>Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_9"/>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_9">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_9">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_9">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_9">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2725,27 +2695,27 @@ History:
 									<td/>
 								</tr>
 								<tr>
-									<td>3481.00</td>
+									<td>3167.00</td>
 									<td>10</td>
-									<td>Treponema pallidum (TPHA)</td>
+									<td>Rubella IgG</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_10">-</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_10">-</content>
 									</td>
-									<td>{titer}</td>
+									<td>[iU]/mL</td>
 									<td/>
-									<td>0 - 80</td>
+									<td>0 - 10 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>34382-2</td>
-									<td>Treponema pallidum Ab [Titer] in Serum by Immunofluorescence</td>
+									<td>5334-8</td>
+									<td>Rubella virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_10"/>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_10">14.03.2018 09:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_10">14.03.2018 09:31</content>
 									</td>
 									<td>
-										<content ID="lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_10">15.03.2018 13:31</content>
+										<content ID="lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_10">15.03.2018 13:31</content>
 									</td>
 									<td>16.03.2018 10:28</td>
 									<td>Pipette Mover am 16.03.2018 10:28</td>
@@ -2774,7 +2744,7 @@ History:
 												<translation code="1425.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Human Choriongonadotropin (HCG), qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_4"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="70000" unit="[iU]/L"/>
@@ -2819,7 +2789,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>50 500 IU/l 1 - 2 Wochen&lt;br />100 - 5000 IU/l 2 - 3 Wochen&lt;br />500 - 10000 IU/l 3 - 4 Wochen&lt;br />1000 - 50000 IU/l 4 - 5 Wochen&lt;br />10000 - 100000 IU/l 5 - 6 Wochen&lt;br /> 15000 - 200000 IU/l 6 - 8 Wochen&lt;br />10000 - 100000 IU/l 2 - 3 Monate<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_comment_4"/>
+													<text>50 500 IU/l 1 - 2 Wochen&lt;br />100 - 5000 IU/l 2 - 3 Wochen&lt;br />500 - 10000 IU/l 3 - 4 Wochen&lt;br />1000 - 50000 IU/l 4 - 5 Wochen&lt;br />10000 - 100000 IU/l 5 - 6 Wochen&lt;br /> 15000 - 200000 IU/l 6 - 8 Wochen&lt;br />10000 - 100000 IU/l 2 - 3 Monate<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_comment_4"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -2827,8 +2797,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="[iU]/L">
-														<low value="50" unit="[iU]/L"/>
-														<high value="500" unit="[iU]/L"/>
+														<low value="50"/>
+														<high value="500"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -2843,7 +2813,7 @@ History:
 												<translation code="3549.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Human Choriongonadotropin (HCG), qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_1"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="-1" unit="[iU]/mL"/>
@@ -2886,8 +2856,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="[iU]/mL">
-														<low value="0" unit="[iU]/L"/>
-														<high value="1" unit="[iU]/L"/>
+														<low value="0"/>
+														<high value="1"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -2902,7 +2872,7 @@ History:
 												<translation code="3167.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Rubellavirus, Ig oder IgG, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_7"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="-1" unit="[iU]/mL"/>
@@ -2945,8 +2915,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="[iU]/mL">
-														<low value="0" unit="[iU]/L"/>
-														<high value="10" unit="[iU]/L"/>
+														<low value="0"/>
+														<high value="10"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -2961,7 +2931,7 @@ History:
 												<translation code="3065.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hepatitis-B-Virus, HBs-Antigen-Nachweis, ql"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_5"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="false"/>
@@ -3017,7 +2987,7 @@ History:
 												<translation code="3054.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hepatitis-B-Virus, HBc Ig, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_8"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="true"/>
@@ -3073,7 +3043,7 @@ History:
 												<translation code="3009.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Cytomegalievirus, Ig oder IgG, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_2"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="-1" unit="{index}"/>
@@ -3116,8 +3086,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="{index}">
-														<low value="0.0" unit="{index}"/>
-														<high value="0.9" unit="{index}"/>
+														<low value="0.0"/>
+														<high value="0.9"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -3132,7 +3102,7 @@ History:
 												<translation code="3481.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Treponema, TPHA/TPPA, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_10"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="-1" unit="{titer}"/>
@@ -3175,8 +3145,8 @@ History:
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
 													<value xsi:type="IVL_PQ" unit="{titer}">
-														<low value="0" unit="{titer}"/>
-														<high value="80" unit="{titer}"/>
+														<low value="0"/>
+														<high value="80"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -3191,7 +3161,7 @@ History:
 												<translation code="3178.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Varizella-Zoster-Virus, Ig oder IgG, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_3"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="150" unit="TODO"/>
@@ -3233,9 +3203,9 @@ History:
 											</author>
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
-													<value xsi:type="IVL_PQ" unit="{titer}">
-														<low value="0" unit="{titer}"/>
-														<high value="135" unit="{titer}"/>
+													<value xsi:type="IVL_PQ" unit="TODO">
+														<low value="0"/>
+														<high value="135"/>
 													</value>
 													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 												</observationRange>
@@ -3250,7 +3220,7 @@ History:
 												<translation code="3094.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Varizella-Zoster-Virus, Ig oder IgG, qn"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_6"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="false"/>
@@ -3306,7 +3276,7 @@ History:
 												<translation code="1288.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Erythrozyten-Alloantikörper"/>
 											</code>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_observation_9"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="false"/>
@@ -3361,7 +3331,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_collectiondate_10"/>
+										<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_collectiondate_10"/>
 									</text>
 									<effectiveTime value="20180314093100+0100"/>
 									<participant typeCode="PRD">
@@ -3380,7 +3350,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss_fcc4e47c-ff43-40d4-bc95-04ff0c7e7d71_specimenreceiveddate_10"/>
+												<reference value="#lss6_3c58c800-4fd8-4cbe-8fd3-ad51e84c8bc2_specimenreceiveddate_10"/>
 											</text>
 											<effectiveTime value="20180315133100+0100"/>
 										</act>

@@ -5,7 +5,7 @@ CDA-CH-LREP Sample
 Case Study no. 5: Biological monitoring SUVA
 
 History:
-2018.03.18: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
 
 ********************************************************
 -->
@@ -248,260 +248,405 @@ History:
 	-->
 	<component>
 		<structuredBody>
-			<!--
-			********************************************************
-			Mikrobiologie - Toxikologie
-			********************************************************
-			-->
 			<component>
-        <section>
-          <templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
-          <templateId root="2.16.756.5.30.1.1.10.3.3"/>
-          <code code="18728-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Toxicology studies"/>
-          <title>Laborbefund - Toxikologie</title>
-          <text>Auftragsnummer: 12.747.542<br/>Befundstatus: Endgültiger Befund<br/><br/><table border="1" width="100%"><thead><tr><th>Pos.</th><th>Zeile</th><th>Beobachtung</th><th>Resultat</th><th>Einheit</th><th>Interpretation</th><th>Referenz</th><th>Interpretation Referenz</th><th>Codesystem</th><th>Code</th><th>Original Name</th><th>Kommentar</th><th>Probenentnahme</th><th>Probeneingang</th><th>Resultat erhalten</th><th>Ausführende Person</th><th>Autor</th><th>Proben-Material</th><th>Entnahmeort</th></tr></thead><tbody><tr><td>1492.00</td><td>1</td><td>Kobalt</td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_observation_1">17.3</content></td><td>nmol/L</td><td/><td/><td/><td>LOINC</td><td>34268-3</td><td>Cobalt [Moles/volume] in Urine</td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_comment_1"/></td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_collectiondate_1">16.03.2018 08:40</content></td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_specimenreceiveddate_1">18.03.2018 09:45</content></td><td>18.03.2018 10:28</td><td>Pipette Mover am 18.03.2018 10:28</td><td>Pipette Documenter am 18.03.2018 10:28</td><td>Urin</td><td/></tr><tr><td>1582.00</td><td>2</td><td>Nickel</td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_observation_2">53.6</content></td><td>nmol/L</td><td/><td/><td/><td>LOINC</td><td>34343-4</td><td>Nickel [Moles/volume] in Urine</td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_comment_2"/></td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_collectiondate_2">16.03.2018 08:40</content></td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_specimenreceiveddate_2">18.03.2018 09:45</content></td><td>18.03.2018 10:28</td><td>Pipette Mover am 18.03.2018 10:28</td><td>Pipette Documenter am 18.03.2018 10:28</td><td>Urin</td><td/></tr><tr><td>1233.00</td><td>3</td><td>Chrom</td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_observation_3">10.6</content></td><td>nmol/L</td><td/><td/><td/><td>LOINC</td><td>42219-6</td><td>Chromium [Moles/volume] in Urine</td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_comment_3"/></td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_collectiondate_3">16.03.2018 08:40</content></td><td><content ID="lss_aa96c813-04c9-443a-9e38-f668a83310c4_specimenreceiveddate_3">18.03.2018 09:45</content></td><td>18.03.2018 10:28</td><td>Pipette Mover am 18.03.2018 10:28</td><td>Pipette Documenter am 18.03.2018 10:28</td><td>Urin</td><td/></tr></tbody></table></text>
-          <entry typeCode="DRIV">
-            <act classCode="ACT" moodCode="EVN">
-              <templateId root="1.3.6.1.4.1.19376.1.3.1"/>
-              <code code="18728-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Toxicology studies"/>
-              <statusCode code="completed"/>
-              <entryRelationship typeCode="COMP">
-                <organizer classCode="BATTERY" moodCode="EVN">
-                  <templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
-                  <statusCode code="completed"/>
-                  <effectiveTime value="20180318102800+0100"/>
-                  <component typeCode="COMP">
-                    <observation classCode="OBS" moodCode="EVN">
-                      <templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
-                      <code code="42219-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chromium [Moles/volume] in Urine">
-                        <originalText>Chrom</originalText>
-                        <translation code="1233.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Chrom mittels AAS"/>
-                      </code>
-                      <text><reference value="#lss_aa96c813-04c9-443a-9e38-f668a83310c4_observation_3"/></text>
-                      <statusCode code="completed"/>
-                      <value xsi:type="PQ" value="10.6" unit="nmol/L"/>
-                      <performer typeCode="PRF">
-                        <time value="20180318102800+0100"/>
-                        <assignedEntity>
-                          <id root="2.51.1.3" extension="7602323232323"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Mover</family></name>
-                          </assignedPerson>
-                        </assignedEntity>
-                      </performer>
-                      <author typeCode="AUT">
-                        <functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
-                        <time xsi:type="IVL_TS" value="20180318102800+0100"/>
-                        <assignedAuthor>
-                          <id root="2.51.1.3" extension="7608888888888"/>
-                          <addr use="PUB"><streetName>Rathaus</streetName><houseNumber></houseNumber><postalCode>8888</postalCode><city>Musterhausen</city><country>CHE</country></addr>
-                          <telecom value="tel:+41.99.999.99.99" use="PUB"/>
-                          <telecom value="mailto:info@lab.ch" use="PUB"/>
-                          <telecom value="http://www.lab.ch" use="PUB"/>
-                          <telecom value="fax:+41.99.999.99.98" use="PUB"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Documenter</family></name>
-                          </assignedPerson>
-                        </assignedAuthor>
-                      </author>
-                    </observation>
-                  </component>
-                  <component typeCode="COMP">
-                    <observation classCode="OBS" moodCode="EVN">
-                      <templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
-                      <code code="34268-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cobalt [Moles/volume] in Urine">
-                        <originalText>Kobalt</originalText>
-                        <translation code="1492.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Kobalt mittels AAS"/>
-                      </code>
-                      <text><reference value="#lss_aa96c813-04c9-443a-9e38-f668a83310c4_observation_1"/></text>
-                      <statusCode code="completed"/>
-                      <value xsi:type="PQ" value="17.3" unit="nmol/L"/>
-                      <performer typeCode="PRF">
-                        <time value="20180318102800+0100"/>
-                        <assignedEntity>
-                          <id root="2.51.1.3" extension="7602323232323"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Mover</family></name>
-                          </assignedPerson>
-                        </assignedEntity>
-                      </performer>
-                      <author typeCode="AUT">
-                        <functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
-                        <time xsi:type="IVL_TS" value="20180318102800+0100"/>
-                        <assignedAuthor>
-                          <id root="2.51.1.3" extension="7608888888888"/>
-                          <addr use="PUB"><streetName>Rathaus</streetName><houseNumber></houseNumber><postalCode>8888</postalCode><city>Musterhausen</city><country>CHE</country></addr>
-                          <telecom value="tel:+41.99.999.99.99" use="PUB"/>
-                          <telecom value="mailto:info@lab.ch" use="PUB"/>
-                          <telecom value="http://www.lab.ch" use="PUB"/>
-                          <telecom value="fax:+41.99.999.99.98" use="PUB"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Documenter</family></name>
-                          </assignedPerson>
-                        </assignedAuthor>
-                      </author>
-                    </observation>
-                  </component>
-                  <component typeCode="COMP">
-                    <observation classCode="OBS" moodCode="EVN">
-                      <templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
-                      <code code="34343-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Nickel [Moles/volume] in Urine">
-                        <originalText>Nickel</originalText>
-                        <translation code="1582.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Nickel mittels AAS"/>
-                      </code>
-                      <text><reference value="#lss_aa96c813-04c9-443a-9e38-f668a83310c4_observation_2"/></text>
-                      <statusCode code="completed"/>
-                      <value xsi:type="PQ" value="53.6" unit="nmol/L"/>
-                      <performer typeCode="PRF">
-                        <time value="20180318102800+0100"/>
-                        <assignedEntity>
-                          <id root="2.51.1.3" extension="7602323232323"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Mover</family></name>
-                          </assignedPerson>
-                        </assignedEntity>
-                      </performer>
-                      <author typeCode="AUT">
-                        <functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
-                        <time xsi:type="IVL_TS" value="20180318102800+0100"/>
-                        <assignedAuthor>
-                          <id root="2.51.1.3" extension="7608888888888"/>
-                          <addr use="PUB"><streetName>Rathaus</streetName><houseNumber></houseNumber><postalCode>8888</postalCode><city>Musterhausen</city><country>CHE</country></addr>
-                          <telecom value="tel:+41.99.999.99.99" use="PUB"/>
-                          <telecom value="mailto:info@lab.ch" use="PUB"/>
-                          <telecom value="http://www.lab.ch" use="PUB"/>
-                          <telecom value="fax:+41.99.999.99.98" use="PUB"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Documenter</family></name>
-                          </assignedPerson>
-                        </assignedAuthor>
-                      </author>
-                    </observation>
-                  </component>
-                </organizer>
-              </entryRelationship>
-              <entryRelationship typeCode="COMP">
-                <procedure classCode="PROC" moodCode="EVN">
-                  <templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
-                  <code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
-                  <text><reference value="#lss_aa96c813-04c9-443a-9e38-f668a83310c4_collectiondate_3"/></text>
-                  <effectiveTime value="20180316084000+0100"/>
-                  <participant typeCode="PRD">
-                    <participantRole classCode="SPEC">
-                      <id nullFlavor="NA"/>
-                      <playingEntity>
-                        <code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
-                          <originalText>Urin</originalText>
-                        </code>
-                      </playingEntity>
-                    </participantRole>
-                  </participant>
-                  <entryRelationship typeCode="COMP">
-                    <act classCode="ACT" moodCode="EVN">
-                      <templateId root="1.3.6.1.4.1.19376.1.3.1.3"/>
-                      <id nullFlavor="ASKU"/>
-                      <code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
-                      <text><reference value="#lss_aa96c813-04c9-443a-9e38-f668a83310c4_specimenreceiveddate_3"/></text>
-                      <effectiveTime value="20180318094500+0100"/>
-                    </act>
-                  </entryRelationship>
-                </procedure>
-              </entryRelationship>
-            </act>
-          </entry>
-        </section>
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+					<templateId root="2.16.756.5.30.1.1.10.3.3"/>
+					<code code="18728-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Toxicology studies"/>
+					<title>Laborbefund - Toxikologie</title>
+					<text>Auftragsnummer: 12.747.542<br/>Befundstatus: Endgültiger Befund<br/>
+						<br/>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Pos.</th>
+									<th>Zeile</th>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Einheit</th>
+									<th>Interpretation</th>
+									<th>Referenz</th>
+									<th>Interpretation Referenz</th>
+									<th>Codesystem</th>
+									<th>Code</th>
+									<th>Original Name</th>
+									<th>Kommentar</th>
+									<th>Probenentnahme</th>
+									<th>Probeneingang</th>
+									<th>Resultat erhalten</th>
+									<th>Ausführende Person</th>
+									<th>Autor</th>
+									<th>Proben-Material</th>
+									<th>Entnahmeort</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1510.00</td>
+									<td>1</td>
+									<td>Kreatinin</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_1">15.3</content>
+									</td>
+									<td>mmol/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>14683-7</td>
+									<td>Creatinine [Moles/volume] in Urine</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_comment_1"/>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_collectiondate_1">16.03.2018 08:40</content>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_specimenreceiveddate_1">18.03.2018 09:45</content>
+									</td>
+									<td>18.03.2018 10:28</td>
+									<td>Pipette Mover am 18.03.2018 10:28</td>
+									<td>Pipette Documenter am 18.03.2018 10:28</td>
+									<td>Urin</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>1492.00</td>
+									<td>2</td>
+									<td>Kobalt</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_2">17.3</content>
+									</td>
+									<td>nmol/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>34268-3</td>
+									<td>Cobalt [Moles/volume] in Urine</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_comment_2"/>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_collectiondate_2">16.03.2018 08:40</content>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_specimenreceiveddate_2">18.03.2018 09:45</content>
+									</td>
+									<td>18.03.2018 10:28</td>
+									<td>Pipette Mover am 18.03.2018 10:28</td>
+									<td>Pipette Documenter am 18.03.2018 10:28</td>
+									<td>Urin</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>1233.00</td>
+									<td>3</td>
+									<td>Chrom</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_3">10.6</content>
+									</td>
+									<td>nmol/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>42219-6</td>
+									<td>Chromium [Moles/volume] in Urine</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_comment_3"/>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_collectiondate_3">16.03.2018 08:40</content>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_specimenreceiveddate_3">18.03.2018 09:45</content>
+									</td>
+									<td>18.03.2018 10:28</td>
+									<td>Pipette Mover am 18.03.2018 10:28</td>
+									<td>Pipette Documenter am 18.03.2018 10:28</td>
+									<td>Urin</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>1582.00</td>
+									<td>4</td>
+									<td>Nickel</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_4">53.6</content>
+									</td>
+									<td>nmol/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>34343-4</td>
+									<td>Nickel [Moles/volume] in Urine</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_comment_4"/>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_collectiondate_4">16.03.2018 08:40</content>
+									</td>
+									<td>
+										<content ID="lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_specimenreceiveddate_4">18.03.2018 09:45</content>
+									</td>
+									<td>18.03.2018 10:28</td>
+									<td>Pipette Mover am 18.03.2018 10:28</td>
+									<td>Pipette Documenter am 18.03.2018 10:28</td>
+									<td>Urin</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<code code="18728-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Toxicology studies"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="20180318102800+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="42219-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chromium [Moles/volume] in Urine">
+												<originalText>Chrom</originalText>
+												<translation code="1233.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Chrom mittels AAS"/>
+											</code>
+											<text>
+												<reference value="#lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_3"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="10.6" unit="nmol/L"/>
+											<performer typeCode="PRF">
+												<time value="20180318102800+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180318102800+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="34268-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cobalt [Moles/volume] in Urine">
+												<originalText>Kobalt</originalText>
+												<translation code="1492.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Kobalt mittels AAS"/>
+											</code>
+											<text>
+												<reference value="#lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_2"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="17.3" unit="nmol/L"/>
+											<performer typeCode="PRF">
+												<time value="20180318102800+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180318102800+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="34343-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Nickel [Moles/volume] in Urine">
+												<originalText>Nickel</originalText>
+												<translation code="1582.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Nickel mittels AAS"/>
+											</code>
+											<text>
+												<reference value="#lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_4"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="53.6" unit="nmol/L"/>
+											<performer typeCode="PRF">
+												<time value="20180318102800+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180318102800+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="14683-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Creatinine [Moles/volume] in Urine">
+												<originalText>Kreatinin</originalText>
+												<translation code="1510.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Kreatinin, in einer weiteren Körperflüssigkeit"/>
+											</code>
+											<text>
+												<reference value="#lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_observation_1"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="15.3" unit="mmol/L"/>
+											<performer typeCode="PRF">
+												<time value="20180318102800+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7602323232323"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Mover</family>
+														</name>
+													</assignedPerson>
+												</assignedEntity>
+											</performer>
+											<author typeCode="AUT">
+												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<time xsi:type="IVL_TS" value="20180318102800+0100"/>
+												<assignedAuthor>
+													<id root="2.51.1.3" extension="7608888888888"/>
+													<addr use="PUB">
+														<streetName>Rathaus</streetName>
+														<houseNumber></houseNumber>
+														<postalCode>8888</postalCode>
+														<city>Musterhausen</city>
+														<country>CHE</country>
+													</addr>
+													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+													<telecom value="mailto:info@lab.ch" use="PUB"/>
+													<telecom value="http://www.lab.ch" use="PUB"/>
+													<telecom value="fax:+41.99.999.99.98" use="PUB"/>
+													<assignedPerson>
+														<name>
+															<given>Pipette</given>
+															<family>Documenter</family>
+														</name>
+													</assignedPerson>
+												</assignedAuthor>
+											</author>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
+									<text>
+										<reference value="#lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_collectiondate_4"/>
+									</text>
+									<effectiveTime value="20180316084000+0100"/>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id nullFlavor="NA"/>
+											<playingEntity>
+												<code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
+													<originalText>Urin</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode="COMP">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.3"/>
+											<id nullFlavor="ASKU"/>
+											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
+											<text>
+												<reference value="#lss1_bd660e00-2f1c-4254-8f16-5ce18690c9fa_specimenreceiveddate_4"/>
+											</text>
+											<effectiveTime value="20180318094500+0100"/>
+										</act>
+									</entryRelationship>
+								</procedure>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
 			</component>
-			<!--
-			********************************************************
-			Mikrobiologie - Chemie
-			********************************************************
-			-->
-			<component>
-        <section>
-          <templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
-          <templateId root="2.16.756.5.30.1.1.10.3.3"/>
-          <code code="18719-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chemistry studies"/>
-          <title>Laborbefund - Chemie</title>
-          <text>Auftragsnummer: 12.747.542<br/>Befundstatus: Endgültiger Befund<br/><br/><table border="1" width="100%"><thead><tr><th>Pos.</th><th>Zeile</th><th>Beobachtung</th><th>Resultat</th><th>Einheit</th><th>Interpretation</th><th>Referenz</th><th>Interpretation Referenz</th><th>Codesystem</th><th>Code</th><th>Original Name</th><th>Kommentar</th><th>Probenentnahme</th><th>Probeneingang</th><th>Resultat erhalten</th><th>Ausführende Person</th><th>Autor</th><th>Proben-Material</th><th>Entnahmeort</th></tr></thead><tbody><tr><td>1510.00</td><td>1</td><td>Kreatinin</td><td><content ID="lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_observation_1">15.3</content></td><td>mmol/L</td><td/><td/><td/><td>LOINC</td><td>14683-7</td><td>Creatinine [Moles/volume] in Urine</td><td><content ID="lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_comment_1"/></td><td><content ID="lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_collectiondate_1">16.03.2018 08:40</content></td><td><content ID="lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_specimenreceiveddate_1">18.03.2018 09:45</content></td><td>18.03.2018 10:28</td><td>Pipette Mover am 18.03.2018 10:28</td><td>Pipette Documenter am 18.03.2018 10:28</td><td>Urin</td><td/></tr></tbody></table></text>
-          <entry typeCode="DRIV">
-            <act classCode="ACT" moodCode="EVN">
-              <templateId root="1.3.6.1.4.1.19376.1.3.1"/>
-              <code code="18719-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chemistry studies"/>
-              <statusCode code="completed"/>
-              <entryRelationship typeCode="COMP">
-                <organizer classCode="BATTERY" moodCode="EVN">
-                  <templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
-                  <statusCode code="completed"/>
-                  <effectiveTime value="20180318102800+0100"/>
-                  <component typeCode="COMP">
-                    <observation classCode="OBS" moodCode="EVN">
-                      <templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
-                      <code code="14683-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Creatinine [Moles/volume] in Urine">
-                        <originalText>Kreatinin</originalText>
-                        <translation code="1510.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Kreatinin, in einer weiteren Körperflüssigkeit"/>
-                      </code>
-                      <text><reference value="#lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_observation_1"/></text>
-                      <statusCode code="completed"/>
-                      <value xsi:type="PQ" value="15.3" unit="mmol/L"/>
-                      <performer typeCode="PRF">
-                        <time value="20180318102800+0100"/>
-                        <assignedEntity>
-                          <id root="2.51.1.3" extension="7602323232323"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Mover</family></name>
-                          </assignedPerson>
-                        </assignedEntity>
-                      </performer>
-                      <author typeCode="AUT">
-                        <functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
-                        <time xsi:type="IVL_TS" value="20180318102800+0100"/>
-                        <assignedAuthor>
-                          <id root="2.51.1.3" extension="7608888888888"/>
-                          <addr use="PUB"><streetName>Rathaus</streetName><houseNumber></houseNumber><postalCode>8888</postalCode><city>Musterhausen</city><country>CHE</country></addr>
-                          <telecom value="tel:+41.99.999.99.99" use="PUB"/>
-                          <telecom value="mailto:info@lab.ch" use="PUB"/>
-                          <telecom value="http://www.lab.ch" use="PUB"/>
-                          <telecom value="fax:+41.99.999.99.98" use="PUB"/>
-                          <assignedPerson>
-                            <name><given>Pipette</given><family>Documenter</family></name>
-                          </assignedPerson>
-                        </assignedAuthor>
-                      </author>
-                    </observation>
-                  </component>
-                </organizer>
-              </entryRelationship>
-              <entryRelationship typeCode="COMP">
-                <procedure classCode="PROC" moodCode="EVN">
-                  <templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
-                  <code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
-                  <text><reference value="#lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_collectiondate_1"/></text>
-                  <effectiveTime value="20180316084000+0100"/>
-                  <participant typeCode="PRD">
-                    <participantRole classCode="SPEC">
-                      <id nullFlavor="NA"/>
-                      <playingEntity>
-                        <code code="LOINC" codeSystem="2.16.756.5.30.2.1.1.10" codeSystemName="CDA-CH Material">
-                          <originalText>Urin</originalText>
-                        </code>
-                      </playingEntity>
-                    </participantRole>
-                  </participant>
-                  <entryRelationship typeCode="COMP">
-                    <act classCode="ACT" moodCode="EVN">
-                      <templateId root="1.3.6.1.4.1.19376.1.3.1.3"/>
-                      <id nullFlavor="ASKU"/>
-                      <code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
-                      <text><reference value="#lss_35fa5f8d-c704-4d28-b9e9-76ad764cbc7c_specimenreceiveddate_1"/></text>
-                      <effectiveTime value="20180318094500+0100"/>
-                    </act>
-                  </entryRelationship>
-                </procedure>
-              </entryRelationship>
-            </act>
-          </entry>
-        </section>
-        			</component>
 		</structuredBody>
 	</component>
 </ClinicalDocument>
