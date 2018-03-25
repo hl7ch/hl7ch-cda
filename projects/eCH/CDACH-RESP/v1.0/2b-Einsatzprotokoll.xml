@@ -36,6 +36,7 @@
 	<setId root="662E3C16-0AAC-11E8-BA89-0ED5F89F718B" />
 	<versionNumber value="2" />
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.1" />
 		<patientRole>
 			<id extension="MU43221" root="2.16.756.5.30.1.143.20" />
 			<patient>
@@ -56,6 +57,7 @@
 	</recordTarget>
 	<!-- Rettungssanitäterin -->
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.9.23" />
 		<functionCode displayName="Andere Gesundheitsfachperson"
 			code="223366009" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
 			<translation code="133932002" displayName="Betreuer"
@@ -79,6 +81,7 @@
 		</assignedEntity>
 	</informant>
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3" />
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- cdachresp-dataelement-61 aufgebotene Organisation -->
@@ -89,6 +92,7 @@
 		</assignedCustodian>
 	</custodian>
 	<informationRecipient typeCode="PRCP">
+		<templateId root="2.16.756.5.30.1.1.10.2.4" />
 		<intendedRecipient>
 			<id root="2.51.1.3" extension="7601000404268" />
 			<informationRecipient>

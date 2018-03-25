@@ -42,6 +42,7 @@
 	<setId root="658AB5EA-1F63-11E6-B6BA-3E1D05DEFE78" />
 	<versionNumber value="2" />
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.1" />
 		<patientRole>
 			<!-- cdachresp-dataelement-135 navs13 -->
 			<id root="2.16.756.5.32" extension="7560123123499" />
@@ -73,6 +74,7 @@
 	</recordTarget>
 	<!-- Rettungssanitäterin -->
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.9.23" />
 		<functionCode displayName="Andere Gesundheitsfachperson"
 			code="223366009" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96">
 			<translation code="133932002" displayName="Betreuer"
@@ -114,6 +116,7 @@
 		</assignedEntity>
 	</informant>
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3" />
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- cdachresp-dataelement-61 aufgebotene Organisation -->
@@ -124,6 +127,7 @@
 		</assignedCustodian>
 	</custodian>
 	<informationRecipient typeCode="PRCP">
+		<templateId root="2.16.756.5.30.1.1.10.2.4" />	
 		<intendedRecipient>
 			<id root="2.51.1.3" extension="7601000404268" />
 			<informationRecipient>
@@ -641,7 +645,8 @@
 								</tr>
 								<tr>
 									<td ID="anamnesis">Hat sich beim Spazieren im Wald schlecht gefühlt und
-										ist abgesessen.									</td>
+										ist abgesessen.
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -652,7 +657,8 @@
 								</tr>
 								<tr>
 									<td ID="symptom">Starke Schmerzen in der Brust und im linken Oberarm
-										verspürt									</td>
+										verspürt
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -660,7 +666,8 @@
 							<caption>Allergien</caption>
 							<item>Baumpollen </item>
 							<item>bekannte Unverträglichkeitsreaktion auf einzelne
-								Medikamente							</item>
+								Medikamente
+							</item>
 						</list>
 						<list>
 							<caption>preMedication</caption>
@@ -669,12 +676,14 @@
 						<list>
 							<caption>Medizinische Vorgeschichte</caption>
 							<item>Herzvorfall vor 4 Jahren, behandelt im Triemli, seit dem
-								Aspirin cardio							</item>
+								Aspirin cardio
+							</item>
 						</list>
 						<list>
 							<caption>Weitere</caption>
 							<item>Seit dem Frühstück um ca.08:00 Uhr hat er nichts mehr
-								gegessen							</item>
+								gegessen
+							</item>
 							<item>Peter Muster hat keine Patientenverfügung erstellt </item>
 							<item>es sind keine anderen medizinische Probleme bekannt</item>
 						</list>
@@ -789,7 +798,8 @@
 								</tr>
 								<tr>
 									<td ID="diagnose1">akuten transmuralen Myokardinfarkts der Vorderwand,
-										ACS/STEMI VW									</td>
+										ACS/STEMI VW
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -846,7 +856,8 @@
 						displayName="Massnahmen" codeSystemName="IVR Codesystem RESP" />
 					<title>Massnahmen</title>
 					<text> Infusion gelegt und verabreichen ihm um 12:30 eine erste
-						Dosis von 2 Hüben Nitrolingual-Spray					</text>
+						Dosis von 2 Hüben Nitrolingual-Spray
+					</text>
 				</section>
 			</component>
 			<component>
@@ -894,7 +905,8 @@
 								</tr>
 								<tr>
 									<td ID="statusdischarge">der Zustand des Patienten hat sich im Verlauf des
-										Einsatzes verbessert									</td>
+										Einsatzes verbessert
+									</td>
 								</tr>
 							</tbody>
 						</table>
