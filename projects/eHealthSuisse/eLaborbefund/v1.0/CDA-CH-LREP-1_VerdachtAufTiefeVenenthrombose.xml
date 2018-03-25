@@ -70,6 +70,8 @@ History:
 
 	<!-- Human patient according to CDA-CH v2.0 and case study. -->
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.58"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
 		<patientRole>
 			<!-- The patient's id. -->
 			<id extension="2132" root="2.999"/>
@@ -103,6 +105,8 @@ History:
 
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study. -->
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode nullFlavor='NAV'>
 			<originalText>Laboratory technician</originalText>
@@ -135,7 +139,7 @@ History:
 			<!-- The author's organization. -->
 			<representedOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7609999999999" root="2.51.1.3"/>
+				<id extension="7609999999999" root="2.51.1.3412"/>
 				<!-- The organization's name - also according to eCH-0011. -->
 				<name use="L">Praxis Dr. med. Mustermann</name>
 				<!-- The author's main phone.-->
@@ -154,6 +158,8 @@ History:
 		</assignedAuthor>
 	</author>
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode nullFlavor='NAV'>
 			<originalText>Laboratory technician</originalText>
@@ -182,7 +188,7 @@ History:
 			<!-- The author's organization. -->
 			<representedOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7609999999999" root="2.51.1.3"/>
+				<id extension="7609999999999" root="2.51.1.3412"/>
 				<!-- The organization's name - also according to eCH-0011. -->
 				<name use="L">Einsendelabor Pipette</name>
 				<!-- The author's main phone.-->
@@ -202,6 +208,8 @@ History:
 	</author>
 	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.60"/>
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- The organization's id (GLN). -->
@@ -223,6 +231,8 @@ History:
 	</custodian>
 	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
 	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH V2 Recipient -->
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
 		<!-- CDA-CH-LREP Recipient -->
 		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
 		<!-- IHE XD-LAB: Intended Recipient -->
@@ -298,25 +308,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>1</td>
-									<td>PDW</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_1">11.6</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_1">HGB</content>
 									</td>
-									<td>fL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_1">13.6</content>
+									</td>
+									<td>g/dL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32207-3</td>
-									<td>Platelet distribution width [Entitic volume] in Blood by Automated count</td>
+									<td>718-7</td>
+									<td>Hemoglobin [Mass/volume] in Blood</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_1"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_1">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_1">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_1">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_1">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -327,25 +339,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>2</td>
-									<td>HCT</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_2">39.2</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_2">MCHC</content>
 									</td>
-									<td>%</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_2">34.7</content>
+									</td>
+									<td>g/dL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>4544-3</td>
-									<td>Hematocrit [Volume Fraction] of Blood by Automated count</td>
+									<td>786-4</td>
+									<td>MCHC [Mass/volume] by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_2"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_2">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_2">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_2">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_2">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -356,25 +370,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>3</td>
-									<td>MCV</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_3">91.4</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_3">MXD%</content>
 									</td>
-									<td>fL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_3">12.4</content>
+									</td>
+									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>787-2</td>
-									<td>MCV [Entitic volume] by Automated count</td>
+									<td>32155-4</td>
+									<td>Basophils+Eosinophils+Monocytes/100 leukocytes in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_3"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_3">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_3">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_3">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_3">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -385,25 +401,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>4</td>
-									<td>RBC</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_4">4.29</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_4">RDW_CV</content>
 									</td>
-									<td>10*6/uL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_4">12.7</content>
+									</td>
+									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>789-8</td>
-									<td>Erythrocytes [#/volume] in Blood by Automated count</td>
+									<td>788-0</td>
+									<td>Erythrocyte distribution width [Ratio] by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_4"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_4">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_4">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_4">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_4">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -414,25 +432,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>5</td>
-									<td>MCHC</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_5">34.7</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_5">PDW</content>
 									</td>
-									<td>g/dL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_5">11.6</content>
+									</td>
+									<td>fL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>786-4</td>
-									<td>MCHC [Mass/volume] by Automated count</td>
+									<td>32207-3</td>
+									<td>Platelet distribution width [Entitic volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_5"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_5">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_5">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_5">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_5">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -443,25 +463,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>6</td>
-									<td>MXD%</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_6">12.4</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_6">TCC</content>
 									</td>
-									<td>%</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_6">2.36</content>
+									</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32155-4</td>
-									<td>Basophils+Eosinophils+Monocytes/100 leukocytes in Blood by Automated count</td>
+									<td>777-3</td>
+									<td>Platelets [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_6"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_6">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_6">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_6">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_6">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -472,25 +494,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>7</td>
-									<td>NEUT%</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_7">52.5</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_7">P_LCR</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_7">24.1</content>
 									</td>
 									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
-									<td>LOINC</td>
-									<td>770-8</td>
-									<td>Neutrophils/100 leukocytes in Blood by Automated count</td>
+									<td/>
+									<td/>
+									<td/>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_7"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_7">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_7">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_7">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_7">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -501,25 +525,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>8</td>
-									<td>NEUT#</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_8">4.0</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_8">HCT</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_8">39.2</content>
+									</td>
+									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>751-8</td>
-									<td>Neutrophils [#/volume] in Blood by Automated count</td>
+									<td>4544-3</td>
+									<td>Hematocrit [Volume Fraction] of Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_8"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_8">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_8">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_8">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_8">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -530,9 +556,11 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>9</td>
-									<td>MPV</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_9">9.6</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_9">MPV</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_9">9.6</content>
 									</td>
 									<td>fL</td>
 									<td/>
@@ -542,13 +570,13 @@ History:
 									<td>32623-1</td>
 									<td>Platelet mean volume [Entitic volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_9"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_9">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_9">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_9">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_9">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -559,25 +587,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>10</td>
-									<td>MCH</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_10">34.7</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_10">RDW_SD</content>
 									</td>
-									<td>pg</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_10">45.8</content>
+									</td>
+									<td>fL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>785-6</td>
-									<td>MCH [Entitic mass] by Automated count</td>
+									<td>21000-5</td>
+									<td>Erythrocyte distribution width [Entitic volume] by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_10"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_10">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_10">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_10">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_10">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -588,25 +618,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>11</td>
-									<td>P_LCR</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_11">24.1</content>
-									</td>
-									<td>%</td>
-									<td/>
-									<td/>
-									<td/>
-									<td/>
-									<td/>
-									<td/>
-									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_11"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_11">MCV</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_11">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_11">91.4</content>
+									</td>
+									<td>fL</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>787-2</td>
+									<td>MCV [Entitic volume] by Automated count</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_11"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_11">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_11">09.03.2016 10:15</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_11">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -617,25 +649,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>12</td>
-									<td>LYM#</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_12">2.7</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_12">MXD#</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_12">0.9</content>
 									</td>
 									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>731-0</td>
-									<td>Lymphocytes [#/volume] in Blood by Automated count</td>
+									<td>32154-7</td>
+									<td>Basophils+Eosinophils+Monocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_12"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_12"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_12">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_12">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_12">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_12">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -646,25 +680,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>13</td>
-									<td>RDW_CV</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_13">12.7</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_13">LYM%</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_13">35.1</content>
 									</td>
 									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>788-0</td>
-									<td>Erythrocyte distribution width [Ratio] by Automated count</td>
+									<td>736-9</td>
+									<td>Lymphocytes/100 leukocytes in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_13"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_13"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_13">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_13">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_13">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_13">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -675,25 +711,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>14</td>
-									<td>TCC</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_14">2.36</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_14">RBC</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_14">4.29</content>
+									</td>
+									<td>10*6/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>777-3</td>
-									<td>Platelets [#/volume] in Blood by Automated count</td>
+									<td>789-8</td>
+									<td>Erythrocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_14"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_14"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_14">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_14">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_14">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_14">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -704,25 +742,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>15</td>
-									<td>WBC</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_15">7.6</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_15">NEUT#</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_15">4.0</content>
 									</td>
 									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>6690-2</td>
-									<td>Leukocytes [#/volume] in Blood by Automated count</td>
+									<td>751-8</td>
+									<td>Neutrophils [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_15"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_15"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_15">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_15">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_15">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_15">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -733,25 +773,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>16</td>
-									<td>MXD#</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_16">0.9</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_16">MCH</content>
 									</td>
-									<td>10*3/uL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_16">34.7</content>
+									</td>
+									<td>pg</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>32154-7</td>
-									<td>Basophils+Eosinophils+Monocytes [#/volume] in Blood by Automated count</td>
+									<td>785-6</td>
+									<td>MCH [Entitic mass] by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_16"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_16"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_16">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_16">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_16">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_16">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -762,25 +804,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>17</td>
-									<td>LYM%</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_17">35.1</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_17">NEUT%</content>
+									</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_17">52.5</content>
 									</td>
 									<td>%</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>736-9</td>
-									<td>Lymphocytes/100 leukocytes in Blood by Automated count</td>
+									<td>770-8</td>
+									<td>Neutrophils/100 leukocytes in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_17"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_17"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_17">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_17">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_17">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_17">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -791,25 +835,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>18</td>
-									<td>HGB</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_18">13.6</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_18">LYM#</content>
 									</td>
-									<td>g/dL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_18">2.7</content>
+									</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>718-7</td>
-									<td>Hemoglobin [Mass/volume] in Blood</td>
+									<td>731-0</td>
+									<td>Lymphocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_18"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_18"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_18">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_18">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_18">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_18">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -820,25 +866,27 @@ History:
 								<tr>
 									<td>1372.01</td>
 									<td>19</td>
-									<td>RDW_SD</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_19">45.8</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_19">WBC</content>
 									</td>
-									<td>fL</td>
+									<td>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_value_19">7.6</content>
+									</td>
+									<td>10*3/uL</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>21000-5</td>
-									<td>Erythrocyte distribution width [Entitic volume] by Automated count</td>
+									<td>6690-2</td>
+									<td>Leukocytes [#/volume] in Blood by Automated count</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_comment_19"/>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_comment_19"/>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_19">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_19">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_19">09.03.2016 10:15</content>
+										<content ID="lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_19">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 10:25</td>
 									<td>Heidi Sticht am 09.03.2016 10:25</td>
@@ -852,22 +900,25 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18723-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hematology studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20160309102500+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="789-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythrocytes [#/volume] in Blood by Automated count">
 												<originalText>RBC</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_4"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_14"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="4.29" unit="10*6/uL"/>
@@ -884,7 +935,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -895,7 +947,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -912,12 +964,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="6690-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Leukocytes [#/volume] in Blood by Automated count">
 												<originalText>WBC</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_15"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_19"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="7.6" unit="10*3/uL"/>
@@ -934,7 +987,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -945,7 +999,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -962,12 +1016,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="777-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Platelets [#/volume] in Blood by Automated count">
 												<originalText>TCC</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_14"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2.36" unit="10*3/uL"/>
@@ -984,7 +1039,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -995,7 +1051,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1012,12 +1068,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="718-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hemoglobin [Mass/volume] in Blood">
 												<originalText>HGB</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_18"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="13.6" unit="g/dL"/>
@@ -1034,7 +1091,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1045,7 +1103,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1062,12 +1120,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="4544-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hematocrit [Volume Fraction] of Blood by Automated count">
 												<originalText>HCT</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_2"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="39.2" unit="%"/>
@@ -1084,7 +1143,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1095,7 +1155,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1112,12 +1172,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="787-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MCV [Entitic volume] by Automated count">
 												<originalText>MCV</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_3"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_11"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="91.4" unit="fL"/>
@@ -1134,7 +1195,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1145,7 +1207,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1162,12 +1224,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="785-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MCH [Entitic mass] by Automated count">
 												<originalText>MCH</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_10"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_16"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="34.7" unit="pg"/>
@@ -1184,7 +1247,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1195,7 +1259,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1212,12 +1276,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="786-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MCHC [Mass/volume] by Automated count">
 												<originalText>MCHC</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_5"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="34.7" unit="g/dL"/>
@@ -1234,7 +1299,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1245,7 +1311,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1262,12 +1328,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="736-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lymphocytes/100 leukocytes in Blood by Automated count">
 												<originalText>LYM%</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_17"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_13"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="35.1" unit="%"/>
@@ -1284,7 +1351,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1295,7 +1363,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1312,12 +1380,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="32155-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Basophils+Eosinophils+Monocytes/100 leukocytes in Blood by Automated count">
 												<originalText>MXD%</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_6"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="12.4" unit="%"/>
@@ -1334,7 +1403,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1345,7 +1415,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1362,12 +1432,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="770-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Neutrophils/100 leukocytes in Blood by Automated count">
 												<originalText>NEUT%</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_7"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_17"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="52.5" unit="%"/>
@@ -1384,7 +1455,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1395,7 +1467,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1412,12 +1484,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="731-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lymphocytes [#/volume] in Blood by Automated count">
 												<originalText>LYM#</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_12"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_18"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2.7" unit="10*3/uL"/>
@@ -1434,7 +1507,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1445,7 +1519,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1462,12 +1536,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="32154-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Basophils+Eosinophils+Monocytes [#/volume] in Blood by Automated count">
 												<originalText>MXD#</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_16"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_12"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.9" unit="10*3/uL"/>
@@ -1484,7 +1559,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1495,7 +1571,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1512,12 +1588,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="751-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Neutrophils [#/volume] in Blood by Automated count">
 												<originalText>NEUT#</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_8"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_15"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="4.0" unit="10*3/uL"/>
@@ -1534,7 +1611,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1545,7 +1623,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1562,12 +1640,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="21000-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythrocyte distribution width [Entitic volume] by Automated count">
 												<originalText>RDW_SD</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_19"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="45.8" unit="fL"/>
@@ -1584,7 +1663,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1595,7 +1675,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1612,12 +1692,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="788-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythrocyte distribution width [Ratio] by Automated count">
 												<originalText>RDW_CV</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_13"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="12.7" unit="%"/>
@@ -1634,7 +1715,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1645,7 +1727,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1662,12 +1744,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="32207-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Platelet distribution width [Entitic volume] in Blood by Automated count">
 												<originalText>PDW</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_1"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="11.6" unit="fL"/>
@@ -1684,7 +1767,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1695,7 +1779,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1712,12 +1796,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="32623-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Platelet mean volume [Entitic volume] in Blood by Automated count">
 												<originalText>MPV</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_9"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="9.6" unit="fL"/>
@@ -1734,7 +1819,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1745,7 +1831,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1762,12 +1848,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
-											<code nullFlavor="ASKU">
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
+											<code nullFlavor="NAV">
 												<originalText>P_LCR</originalText>
-												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
+												<translation code="1372.01" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Hämatogramm III mittels automatisierter Methode: Hämatogramm II, plus 3 Leukozyten-Subpopulationen"/>
 											</code>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_observation_11"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="24.1" unit="%"/>
@@ -1784,7 +1871,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
@@ -1795,7 +1883,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1816,7 +1904,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_collectiondate_19"/>
+										<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_collectiondate_19"/>
 									</text>
 									<effectiveTime value="20160309101500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -1838,7 +1926,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss1_8f4cb19e-8db2-46d0-a8cc-07d0f9c51c4c_specimenreceiveddate_19"/>
+												<reference value="#lss1_a6fafa45-bf7f-43ed-8de4-a78d1d9a3ed3_specimenreceiveddate_19"/>
 											</text>
 											<effectiveTime value="20160309101500+0100"/>
 										</act>
@@ -1885,9 +1973,11 @@ History:
 								<tr>
 									<td>1245.00</td>
 									<td>1</td>
-									<td>CRP</td>
 									<td>
-										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_observation_1">14.0</content>
+										<content ID="lss2_92cb692b-6097-436f-849f-8ed4f4044a76_observation_1">CRP</content>
+									</td>
+									<td>
+										<content ID="lss2_92cb692b-6097-436f-849f-8ed4f4044a76_value_1">14.0</content>
 									</td>
 									<td>mg/L</td>
 									<td/>
@@ -1897,13 +1987,13 @@ History:
 									<td>48421-2</td>
 									<td>C reactive protein [Mass/volume] in Capillary blood</td>
 									<td>
-										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_comment_1">Referenzbereich bei Vollblut</content>
+										<content ID="lss2_92cb692b-6097-436f-849f-8ed4f4044a76_comment_1">Referenzbereich bei Vollblut</content>
 									</td>
 									<td>
-										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_collectiondate_1">09.03.2016 10:15</content>
+										<content ID="lss2_92cb692b-6097-436f-849f-8ed4f4044a76_collectiondate_1">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_specimenreceiveddate_1">09.03.2016 10:15</content>
+										<content ID="lss2_92cb692b-6097-436f-849f-8ed4f4044a76_specimenreceiveddate_1">09.03.2016 10:15</content>
 									</td>
 									<td>15.03.2018 10:30</td>
 									<td>Heidi Sticht am 15.03.2018 10:30</td>
@@ -1917,22 +2007,25 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18727-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Serology studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180315103000+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="48421-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="C reactive protein [Mass/volume] in Capillary blood">
 												<originalText>CRP</originalText>
-												<translation code="1245.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="C-reaktives Protein (CRP), qn"/>
+												<translation code="1245.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="C-reaktives Protein (CRP), qn"/>
 											</code>
 											<text>
-												<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_observation_1"/>
+												<reference value="#lss2_92cb692b-6097-436f-849f-8ed4f4044a76_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="14.0" unit="mg/L"/>
@@ -1949,7 +2042,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315103000+0100"/>
@@ -1960,7 +2054,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -1977,7 +2071,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>Referenzbereich bei Vollblut<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_comment_1"/>
+													<text>Referenzbereich bei Vollblut<reference value="#lss2_92cb692b-6097-436f-849f-8ed4f4044a76_comment_1"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -2000,7 +2094,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_collectiondate_1"/>
+										<reference value="#lss2_92cb692b-6097-436f-849f-8ed4f4044a76_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20160309101500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -2022,7 +2116,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss2_2062361c-b51b-4ecd-ba0f-b73268569fc4_specimenreceiveddate_1"/>
+												<reference value="#lss2_92cb692b-6097-436f-849f-8ed4f4044a76_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20160309101500+0100"/>
 										</act>
@@ -2069,9 +2163,11 @@ History:
 								<tr>
 									<td>1260.00</td>
 									<td>1</td>
-									<td>D-Dimer</td>
 									<td>
-										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_observation_1">0.9</content>
+										<content ID="lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_observation_1">D-Dimer</content>
+									</td>
+									<td>
+										<content ID="lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_value_1">0.9</content>
 									</td>
 									<td>ug/mL</td>
 									<td/>
@@ -2081,13 +2177,13 @@ History:
 									<td>71427-9</td>
 									<td>Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay</td>
 									<td>
-										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_comment_1">Referenzbereich bei &lt;50J. Alter × 0.01 µg/mL</content>
+										<content ID="lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_comment_1">Referenzbereich bei &lt;50J. Alter × 0.01 µg/mL</content>
 									</td>
 									<td>
-										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_collectiondate_1">09.03.2016 10:15</content>
+										<content ID="lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_collectiondate_1">09.03.2016 10:15</content>
 									</td>
 									<td>
-										<content ID="lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_specimenreceiveddate_1">09.03.2016 10:15</content>
+										<content ID="lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_specimenreceiveddate_1">09.03.2016 10:15</content>
 									</td>
 									<td>09.03.2016 18:27</td>
 									<td>Pipette Mover am 09.03.2016 18:27</td>
@@ -2101,22 +2197,25 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18720-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Coagulation studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20160309182700+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="71427-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay">
 												<originalText>D-Dimer</originalText>
-												<translation code="1260.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="D-Dimere, qn"/>
+												<translation code="1260.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="D-Dimere, qn"/>
 											</code>
 											<text>
-												<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_observation_1"/>
+												<reference value="#lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.9" unit="ug/mL"/>
@@ -2133,7 +2232,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20160309182700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2142,7 +2244,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2161,7 +2263,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>Referenzbereich bei &amp;lt;50J. Alter × 0.01 µg/mL<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_comment_1"/>
+													<text>Referenzbereich bei &amp;lt;50J. Alter × 0.01 µg/mL<reference value="#lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_comment_1"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -2184,7 +2286,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_collectiondate_1"/>
+										<reference value="#lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20160309101500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -2206,7 +2308,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss3_55babc25-fdfc-4e3e-8578-f4786f9b0206_specimenreceiveddate_1"/>
+												<reference value="#lss3_5cdf8dd7-04fd-4504-91bf-0981d9667650_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20160309101500+0100"/>
 										</act>

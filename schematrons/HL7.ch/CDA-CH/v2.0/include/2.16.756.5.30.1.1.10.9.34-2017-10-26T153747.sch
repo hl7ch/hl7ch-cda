@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name" id="d1559089e10395-false-d2004180e0">
+    <rule context="//hl7:name" id="d130e9923-false-d188565e0">
         <extends rule="PN"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@use)=('L') or not(@use)">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @use SHALL be 'L'.</assert>
@@ -25,7 +25,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:prefix
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:prefix" id="d1559089e10401-false-d2004220e0">
+    <rule context="//hl7:name/hl7:prefix" id="d130e9929-false-d188605e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('AC')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'AC'.</assert>
@@ -35,7 +35,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:family" id="d1559089e10407-false-d2004234e0">
+    <rule context="//hl7:name/hl7:family" id="d130e9935-false-d188619e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
@@ -46,7 +46,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:family" id="d1559089e10413-false-d2004251e0">
+    <rule context="//hl7:name/hl7:family" id="d130e9941-false-d188636e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('BR')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'BR'.</assert>
@@ -56,7 +56,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:given" id="d1559089e10419-false-d2004265e0">
+    <rule context="//hl7:name/hl7:given" id="d130e9947-false-d188650e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
@@ -67,7 +67,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:given" id="d1559089e10425-false-d2004282e0">
+    <rule context="//hl7:name/hl7:given" id="d130e9953-false-d188667e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('CL')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'CL'.</assert>
@@ -77,7 +77,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name" id="d1559089e10431-false-d2004296e0">
+    <rule context="//hl7:name" id="d130e9959-false-d188681e0">
         <extends rule="PN"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@use)=('P')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @use SHALL be 'P'.</assert>
@@ -87,7 +87,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:prefix
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:prefix" id="d1559089e10437-false-d2004322e0">
+    <rule context="//hl7:name/hl7:prefix" id="d130e9965-false-d188707e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('TITLE')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'TITLE'.</assert>
@@ -97,7 +97,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:family" id="d1559089e10443-false-d2004336e0">
+    <rule context="//hl7:name/hl7:family" id="d130e9971-false-d188721e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
@@ -108,7 +108,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:given" id="d1559089e10449-false-d2004353e0">
+    <rule context="//hl7:name/hl7:given" id="d130e9977-false-d188738e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
@@ -119,7 +119,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name" id="d1559089e10456-false-d2004370e0">
+    <rule context="//hl7:name" id="d130e9984-false-d188755e0">
         <extends rule="PN"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@use)=('ASGN')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @use SHALL be 'ASGN'.</assert>
@@ -129,7 +129,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:prefix
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:prefix" id="d1559089e10462-false-d2004396e0">
+    <rule context="//hl7:name/hl7:prefix" id="d130e9990-false-d188781e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('TITLE')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'TITLE'.</assert>
@@ -139,7 +139,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:family" id="d1559089e10468-false-d2004410e0">
+    <rule context="//hl7:name/hl7:family" id="d130e9996-false-d188795e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
@@ -150,7 +150,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
 Context: //hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="//hl7:name/hl7:given" id="d1559089e10474-false-d2004427e0">
+    <rule context="//hl7:name/hl7:given" id="d130e10002-false-d188812e0">
         <extends rule="ENXP"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>

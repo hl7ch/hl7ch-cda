@@ -4,28 +4,30 @@ Template derived pattern
 ===========================================
 ID: 2.16.756.5.30.1.1.10.2.57
 Name: Recipient
-Description:  The laboratory report MUST contain at least one receiver. This can be a person or an institution. If the document is created for internal use, the recipient can include the same information as author or custodian.  In case of health care professionals the declaration is as for custodian.  For patients or other persons, the declaration is as for recordTarget or author. 
+Description:  The laboratory report MUST contain at least one receiver. This can be a person or an institution. If the document is created for internal use, the recipient can include the same information as author or custodian. In case of health care professionals the declaration is as for custodian. For patients or other persons, the declaration is as for recordTarget or author. 
 -->
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="template-2.16.756.5.30.1.1.10.2.57-2016-05-23T000000">
     <title>Recipient</title>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]
 Item: (cdachlrep_header_Recipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]" id="d1559089e1446-false-d1909788e0">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']])&gt;=1">(cdachlrep_header_Recipient): element hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']] is required [min 1x].</assert>
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]" id="d130e1454-false-d131653e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']])&gt;=1">(cdachlrep_header_Recipient): element hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']] is required [min 1x].</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]
 Item: (cdachlrep_header_Recipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]" id="d1559089e1471-false-d1909878e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]" id="d130e1531-false-d131745e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="@typeCode">(cdachlrep_header_Recipient): attribute @typeCode SHALL be present.</assert>
         <let name="theAttValue" value="distinct-values(tokenize(normalize-space(@typeCode),' '))"/>
         <let name="theAttCheck" value="distinct-values(doc('include/voc-2.16.840.1.113883.1.11.19366-DYNAMIC.xml')/*/valueSet/conceptList/concept[@code = $theAttValue]/@code)"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="not(@typeCode) or count($theAttValue) = count($theAttCheck)">(cdachlrep_header_Recipient): The value for typeCode SHALL be selected from value set '2.16.840.1.113883.1.11.19366' x_InformationRecipient (DYNAMIC).</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'])&gt;=1">(cdachlrep_header_Recipient): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'])&lt;=1">(cdachlrep_header_Recipient): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'])&gt;=1">(cdachlrep_header_Recipient): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'])&lt;=1">(cdachlrep_header_Recipient): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4'])&gt;=1">(cdachlrep_header_Recipient): element hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4'] is mandatory [min 1x].</assert>
@@ -35,30 +37,40 @@ Item: (cdachlrep_header_Recipient)
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57']
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']
 Item: (cdachlrep_header_Recipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57']" id="d1559089e1490-false-d1909972e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']" id="d130e1544-false-d131850e0">
+        <extends rule="II"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_Recipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="string(@root)=('2.16.756.5.30.1.1.10.2.4')">(cdachlrep_header_Recipient): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.4'.</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57']
+Item: (cdachlrep_header_Recipient)
+-->
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57']" id="d130e1549-false-d131865e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_Recipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="string(@root)=('2.16.756.5.30.1.1.10.2.57')">(cdachlrep_header_Recipient): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.57'.</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']
 Item: (cdachlrep_header_Recipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']" id="d1559089e1495-false-d1909987e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']" id="d130e1554-false-d131880e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_Recipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="string(@root)=('1.3.6.1.4.1.19376.1.3.3.1.4')">(cdachlrep_header_Recipient): The value for @root SHALL be '1.3.6.1.4.1.19376.1.3.3.1.4'.</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]
 Item: (cdachlrep_header_Recipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]" id="d1559089e1501-false-d1910038e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]" id="d130e1560-false-d131931e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="hl7:informationRecipient[not(@nullFlavor)] or hl7:receivedOrganization[not(@nullFlavor)]">(cdachlrep_header_Recipient): Either the recipients person or organization MUST be declared.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:addr)&gt;=1">(cdachlrep_header_Recipient): element hl7:addr is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="count(hl7:telecom)&gt;=1">(cdachlrep_header_Recipient): element hl7:telecom is required [min 1x].</assert>
@@ -68,17 +80,17 @@ Item: (cdachlrep_header_Recipient)
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr
 Item: (cdachlrep_header_Recipient)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr">
-        <assert role="error" see="eCH-0007" test="not(upper-case(country/text())='CH') or (upper-case(state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr">
+        <assert role="error" see="eCH-0007" test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetName)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
@@ -96,116 +108,116 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine">
         <assert role="error" see="eCH-0010 V7.0, section 5.12 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetAddressLine">
         <assert role="error" see="eCH-0010 V7.0, section 5.12 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetName
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetName
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetName">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:streetName">
         <assert role="error" see="eCH-0010 V7.0, section 5.13 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:houseNumber
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:houseNumber
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:houseNumber">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:houseNumber">
         <assert role="error" see="eCH-0010 V7.0, section 5.14 " test="string-length(text()) &lt; 31">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 30 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:additionalLocator
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:additionalLocator
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:additionalLocator">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:additionalLocator">
         <assert role="error" see="eCH-0010 V7.0, section 5.15 " test="string-length(text()) &lt; 31">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 30 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:postBox
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:postBox
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:postBox">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:postBox">
         <assert role="error" see="eCH-0010 V7.0, section 5.16 " test="string-length(text()) &lt; 9">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 8 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:state
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:state
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:city
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:city
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:postalCode
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:postalCode
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:country
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:country
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:country">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:addr/hl7:country">
         <assert role="error" see="eCH-0010 V7.0, section 5.24.2 " test="string-length(text()) &lt; 3">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 2 characters</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:telecom
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:telecom
 Item: (cdachlrep_header_Recipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:telecom" id="d1559089e1518-false-d1910293e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:telecom" id="d130e1571-false-d132186e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.57" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_Recipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient
 Item: (cdachlrep_header_Recipient)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="count(hl7:name)&gt;=1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:name is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="count(hl7:name)&lt;=1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:name appears too often [max 1x].</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@use)=('L') or not(@use)">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @use SHALL be 'L'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="count(hl7:family)&gt;=1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:family is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="count(hl7:given)&gt;=1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:given is required [min 1x].</assert>
@@ -213,139 +225,139 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('AC')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'AC'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier) or string-length(@qualifier)&gt;0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('BR')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'BR'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier) or string-length(@qualifier)&gt;0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('CL')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'CL'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@use)=('P')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @use SHALL be 'P'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('TITLE')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'TITLE'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier) or string-length(@qualifier)&gt;0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier) or string-length(@qualifier)&gt;0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@use)=('ASGN')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @use SHALL be 'ASGN'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:prefix">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="string(@qualifier)=('TITLE')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for @qualifier SHALL be 'TITLE'.</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:family">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier) or string-length(@qualifier)&gt;0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.34
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given
 Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:informationRecipient/hl7:name/hl7:given">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.34" test="not(@qualifier) or string-length(@qualifier)&gt;0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.57
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization
 Item: (cdachlrep_header_Recipient)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="count(hl7:name)&gt;=1">(cdach_other_OrganizationCompilationWithNameAddrTelecom): element hl7:name is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="count(hl7:telecom)&gt;=1">(cdach_other_OrganizationCompilationWithNameAddrTelecom): element hl7:telecom is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="count(hl7:addr)&gt;=1">(cdach_other_OrganizationCompilationWithNameAddrTelecom): element hl7:addr is required [min 1x].</assert>
@@ -353,10 +365,10 @@ Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:id
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:id
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:id">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:id">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="@extension">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @extension SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="@root">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @root SHALL be present.</assert>
@@ -365,29 +377,29 @@ Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:name
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:name
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:telecom
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:telecom
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr">
-        <assert role="error" see="eCH-0007" test="not(upper-case(country/text())='CH') or (upper-case(state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr">
+        <assert role="error" see="eCH-0007" test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetName)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
@@ -405,82 +417,82 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine">
         <assert role="error" see="eCH-0010 V7.0, section 5.12 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetAddressLine">
         <assert role="error" see="eCH-0010 V7.0, section 5.12 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetName
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetName
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetName">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:streetName">
         <assert role="error" see="eCH-0010 V7.0, section 5.13 " test="string-length(text()) &lt; 151">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 150 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:houseNumber
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:houseNumber
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:houseNumber">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:houseNumber">
         <assert role="error" see="eCH-0010 V7.0, section 5.14 " test="string-length(text()) &lt; 31">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 30 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:additionalLocator
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:additionalLocator
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:additionalLocator">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:additionalLocator">
         <assert role="error" see="eCH-0010 V7.0, section 5.15 " test="string-length(text()) &lt; 31">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 30 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:postBox
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:postBox
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:postBox">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:postBox">
         <assert role="error" see="eCH-0010 V7.0, section 5.16 " test="string-length(text()) &lt; 9">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 8 characters</assert>
     </rule>
 
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:state
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:state
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:city
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:city
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:postalCode
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:postalCode
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
 
 <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.35
-Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:country
+Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:country
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:country">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.57'] and hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.4']]/hl7:intendedRecipient[not(@nullFlavor)]/hl7:receivedOrganization/hl7:addr/hl7:country">
         <assert role="error" see="eCH-0010 V7.0, section 5.24.2 " test="string-length(text()) &lt; 3">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0010 restricts the content length to max. 2 characters</assert>
     </rule>
 </pattern>

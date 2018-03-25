@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]" id="d1559089e2493-false-d1910916e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]" id="d130e2379-false-d136572e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']])&lt;=1">(cdach_header_DataEnterer): element hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']] appears too often [max 1x].</assert>
     </rule>
    <!--
@@ -21,7 +21,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]" id="d1559089e2512-false-d1911020e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]" id="d130e2399-false-d136676e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'])&gt;=1">(cdach_header_DataEnterer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'])&lt;=1">(cdach_header_DataEnterer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:time)&lt;=1">(cdach_header_DataEnterer): element hl7:time appears too often [max 1x].</assert>
@@ -33,7 +33,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']" id="d1559089e2515-false-d1911100e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']" id="d130e2402-false-d136756e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DataEnterer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="string(@root)=('2.16.756.5.30.1.1.10.2.7')">(cdach_header_DataEnterer): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.7'.</assert>
@@ -43,7 +43,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:time
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:time" id="d1559089e2517-false-d1911114e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:time" id="d130e2404-false-d136770e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DataEnterer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.7" test="not(*)">(cdach_header_DataEnterer): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
@@ -88,7 +88,7 @@ Item: (cdach_other_AssignedEntityCompilationId)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.12" test="@nullFlavor or exists(doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(cdach_other_AssignedEntityCompilationId): The element value SHALL be one of '2.16.756.5.30.1.127.3.10.1.1.3 EprAuthorRole (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.12" test="@nullFlavor or exists(doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(cdach_other_AssignedEntityCompilationId): The element value SHALL be one of '2.16.756.5.30.1.127.3.10.1.1.3 EprAuthorRole (DYNAMIC)'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.12" test="@displayName">(cdach_other_AssignedEntityCompilationId): attribute @displayName SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.12" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_AssignedEntityCompilationId): Attribute @displayName SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.12" test="@code">(cdach_other_AssignedEntityCompilationId): attribute @code SHALL be present.</assert>
@@ -134,7 +134,7 @@ Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
     <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:assignedEntity/hl7:addr">
-        <assert role="error" see="eCH-0007" test="not(upper-case(country/text())='CH') or (upper-case(state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
+        <assert role="error" see="eCH-0007" test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetName)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
@@ -438,7 +438,7 @@ Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl
 Item: (cdach_other_AddressInformationCompilation-eCH-0010)
 -->
     <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:assignedEntity/hl7:representedOrganization/hl7:addr">
-        <assert role="error" see="eCH-0007" test="not(upper-case(country/text())='CH') or (upper-case(state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
+        <assert role="error" see="eCH-0007" test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetAddressLine)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.35" test="count(hl7:streetName)&lt;=1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>

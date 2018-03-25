@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.304
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]
 Item: (CDAObservationMedia)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]" id="d893516e6486-false-d1500838e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]" id="d189909e6080-false-d772130e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="string(@classCode)=('OBS') or not(@classCode)">(CDAObservationMedia): The value for @classCode SHALL be 'OBS'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="string(@moodCode)=('EVN') or not(@moodCode)">(CDAObservationMedia): The value for @moodCode SHALL be 'EVN'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="count(hl7:templateId[@root='2.16.840.1.113883.10.12.304'])&gt;=1">(CDAObservationMedia): element hl7:templateId[@root='2.16.840.1.113883.10.12.304'] is required [min 1x].</assert>
@@ -34,7 +34,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.304
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:templateId[@root='2.16.840.1.113883.10.12.304']
 Item: (CDAObservationMedia)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:templateId[@root='2.16.840.1.113883.10.12.304']" id="d893516e6489-false-d1501381e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:templateId[@root='2.16.840.1.113883.10.12.304']" id="d189909e6083-false-d772673e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservationMedia): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="string(@root)=('2.16.840.1.113883.10.12.304')">(CDAObservationMedia): The value for @root SHALL be '2.16.840.1.113883.10.12.304'.</assert>
@@ -44,7 +44,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.304
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:id
 Item: (CDAObservationMedia)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:id" id="d893516e6491-false-d1501395e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:id" id="d189909e6085-false-d772687e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservationMedia): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -53,7 +53,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.304
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:languageCode
 Item: (CDAObservationMedia)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:languageCode" id="d893516e6492-false-d1501408e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:languageCode" id="d189909e6086-false-d772700e0">
         <extends rule="CS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservationMedia): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -62,7 +62,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.304
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:value
 Item: (CDAObservationMedia)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:value" id="d893516e6496-false-d1501421e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:value" id="d189909e6090-false-d772713e0">
         <extends rule="ED"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservationMedia): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -95,7 +95,7 @@ Item: (CDASubjectBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.320" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10310-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASubjectBody): The element value SHALL be one of '2.16.840.1.113883.1.11.10310 TargetAwareness (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.320" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10310-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASubjectBody): The element value SHALL be one of '2.16.840.1.113883.1.11.10310 TargetAwareness (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -121,7 +121,7 @@ Item: (CDASubjectBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.320" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.19563-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASubjectBody): The element value SHALL be one of '2.16.840.1.113883.1.11.19563 PersonalRelationshipRoleType (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.320" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.19563-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASubjectBody): The element value SHALL be one of '2.16.840.1.113883.1.11.19563 PersonalRelationshipRoleType (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -163,7 +163,7 @@ Item: (CDASubjectBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.320" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASubjectBody): The element value SHALL be one of '2.16.840.1.113883.1.11.1 AdministrativeGender (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.320" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASubjectBody): The element value SHALL be one of '2.16.840.1.113883.1.11.1 AdministrativeGender (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -226,7 +226,7 @@ Item: (CDASpecimen)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.322" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASpecimen): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.322" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] | completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDASpecimen): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -281,7 +281,7 @@ Item: (CDAPerformerBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.323" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16543-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAPerformerBody): The element value SHALL be one of '2.16.840.1.113883.1.11.16543 ParticipationMode (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.323" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16543-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAPerformerBody): The element value SHALL be one of '2.16.840.1.113883.1.11.16543 ParticipationMode (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -380,7 +380,7 @@ Item: (CDAAuthorBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAAuthorBody): The element value SHALL be one of '2.16.840.1.113883.1.11.10267 ParticipationFunction (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAAuthorBody): The element value SHALL be one of '2.16.840.1.113883.1.11.10267 ParticipationFunction (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -398,8 +398,8 @@ Item: (CDAAuthorBody)
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="string(@classCode)=('ASSIGNED') or not(@classCode)">(CDAAuthorBody): The value for @classCode SHALL be 'ASSIGNED'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="count(hl7:id)&gt;=1">(CDAAuthorBody): element hl7:id is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="count(hl7:code[@codeSystem='2.16.840.1.113883.5.111' or @nullFlavor])&lt;=1">(CDAAuthorBody): element hl7:code[@codeSystem='2.16.840.1.113883.5.111' or @nullFlavor] appears too often [max 1x].</assert>
-        <let name="elmcount" value="count(hl7:assignedPerson|hl7:assignedAuthoringDevice)"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="$elmcount&lt;=1">(CDAAuthorBody): choice (hl7:assignedPerson or hl7:assignedAuthoringDevice) contains too many elements [max 1x]</assert>
+        <let name="elmcount" value="count(hl7:assignedPerson | hl7:assignedAuthoringDevice)"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="$elmcount&lt;=1">(CDAAuthorBody): choice (hl7:assignedPerson  or  hl7:assignedAuthoringDevice) contains too many elements [max 1x]</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.318" test="count(hl7:representedOrganization)&lt;=1">(CDAAuthorBody): element hl7:representedOrganization appears too often [max 1x].</assert>
     </rule>
 
@@ -480,7 +480,7 @@ Item: (CDADevice)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.315" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDADevice): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.315" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] | completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDADevice): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -644,9 +644,9 @@ Item: (CDAinformantBody)
     <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:informant">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.319" test="string(@typeCode)=('INF') or not(@typeCode)">(CDAinformantBody): The value for @typeCode SHALL be 'INF'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.319" test="string(@contextControlCode)=('OP') or not(@contextControlCode)">(CDAinformantBody): The value for @contextControlCode SHALL be 'OP'.</assert>
-        <let name="elmcount" value="count(hl7:assignedEntity|hl7:relatedEntity)"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.319" test="$elmcount&gt;=1">(CDAinformantBody): choice (hl7:assignedEntity or hl7:relatedEntity) does not contain enough elements [min 1x]</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.319" test="$elmcount&lt;=1">(CDAinformantBody): choice (hl7:assignedEntity or hl7:relatedEntity) contains too many elements [max 1x]</assert>
+        <let name="elmcount" value="count(hl7:assignedEntity | hl7:relatedEntity)"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.319" test="$elmcount&gt;=1">(CDAinformantBody): choice (hl7:assignedEntity  or  hl7:relatedEntity) does not contain enough elements [min 1x]</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.319" test="$elmcount&lt;=1">(CDAinformantBody): choice (hl7:assignedEntity  or  hl7:relatedEntity) contains too many elements [max 1x]</assert>
     </rule>
 
    <!--
@@ -882,7 +882,7 @@ Item: (CDARelatedEntity)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.316" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.19563-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDARelatedEntity): The element value SHALL be one of '2.16.840.1.113883.1.11.19563 PersonalRelationshipRoleType (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.316" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.19563-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDARelatedEntity): The element value SHALL be one of '2.16.840.1.113883.1.11.19563 PersonalRelationshipRoleType (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -963,7 +963,7 @@ Item: (CDAParticipantBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10310-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAParticipantBody): The element value SHALL be one of '2.16.840.1.113883.1.11.10310 TargetAwareness (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10310-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAParticipantBody): The element value SHALL be one of '2.16.840.1.113883.1.11.10310 TargetAwareness (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -974,8 +974,8 @@ Item: (CDAParticipantBody)
     <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:participant/hl7:participantRole">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="string(@classCode)=('ROL') or not(@classCode)">(CDAParticipantBody): The value for @classCode SHALL be 'ROL'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="count(hl7:code[@codeSystem='2.16.840.1.113883.5.111' or @nullFlavor])&lt;=1">(CDAParticipantBody): element hl7:code[@codeSystem='2.16.840.1.113883.5.111' or @nullFlavor] appears too often [max 1x].</assert>
-        <let name="elmcount" value="count(hl7:playingDevice|hl7:playingEntity)"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="$elmcount&lt;=1">(CDAParticipantBody): choice (hl7:playingDevice or hl7:playingEntity) contains too many elements [max 1x]</assert>
+        <let name="elmcount" value="count(hl7:playingDevice | hl7:playingEntity)"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="$elmcount&lt;=1">(CDAParticipantBody): choice (hl7:playingDevice  or  hl7:playingEntity) contains too many elements [max 1x]</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="count(hl7:scopingEntity)&lt;=1">(CDAParticipantBody): element hl7:scopingEntity appears too often [max 1x].</assert>
     </rule>
 
@@ -1034,7 +1034,7 @@ Item: (CDADevice)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.315" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDADevice): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.315" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] | completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDADevice): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -1076,7 +1076,7 @@ Item: (CDAPlayingEntity)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.313" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAPlayingEntity): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.313" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] | completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAPlayingEntity): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -1124,7 +1124,7 @@ Item: (CDAParticipantBody)
         <let name="theCode" value="@code"/>
         <let name="theCodeSystem" value="@codeSystem"/>
         <let name="theCodeSystemVersion" value="@codeSystemVersion"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] or completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAParticipantBody): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.321" test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.16040-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion] | completeCodeSystem[@codeSystem=$theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(CDAParticipantBody): The element value SHALL be one of '2.16.840.1.113883.1.11.16040 EntityCode (DYNAMIC)'.</assert>
     </rule>
 
    <!--
@@ -1139,7 +1139,7 @@ Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.30
 Item: (CDAObservationMedia)
 -->
     <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] | hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] | hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] | hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] | hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] | hl7:procedure[hl7:templateId[@root='2.16.840.1.113883.10.12.306']] | hl7:regionOfInterest[hl7:templateId[@root='2.16.840.1.113883.10.12.307']] | hl7:substanceAdministration[hl7:templateId[@root='2.16.840.1.113883.10.12.308']] | hl7:supply[hl7:templateId[@root='2.16.840.1.113883.10.12.309']]]">
-        <extends rule="d893516e6521-false-d1504404e0"/>
+        <extends rule="d189909e6115-false-d775696e0"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.304" test="@typeCode">(CDAObservationMedia): attribute @typeCode SHALL be present.</assert>
         <let name="theAttValue" value="distinct-values(tokenize(normalize-space(@typeCode),' '))"/>
         <let name="theAttCheck" value="distinct-values(doc('include/voc-2.16.840.1.113883.1.11.19447-DYNAMIC.xml')/*/valueSet/conceptList/concept[@code = $theAttValue]/@code)"/>
@@ -1168,10 +1168,10 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.300
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]]/hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]/hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] | hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] | hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] | hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] | hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] | hl7:procedure[hl7:templateId[@root='2.16.840.1.113883.10.12.306']] | hl7:regionOfInterest[hl7:templateId[@root='2.16.840.1.113883.10.12.307']] | hl7:substanceAdministration[hl7:templateId[@root='2.16.840.1.113883.10.12.308']] | hl7:supply[hl7:templateId[@root='2.16.840.1.113883.10.12.309']]]
 Item: (CDAClinicalStatement)
 -->
-    <rule id="d893516e6521-false-d1504404e0" abstract="true">
-        <let name="elmcount" value="count(hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']]|hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']]|hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']]|hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]|hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']]|hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']]|hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']]|hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']]|hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']])"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.300" test="$elmcount&gt;=1">(CDAClinicalStatement): choice (hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] or hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] or hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] or hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] or hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] or hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']] or hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']] or hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']] or hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']]) does not contain enough elements [min 1x]</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.300" test="$elmcount&lt;=1">(CDAClinicalStatement): choice (hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] or hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] or hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] or hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] or hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] or hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']] or hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']] or hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']] or hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']]) contains too many elements [max 1x]</assert>
+    <rule id="d189909e6115-false-d775696e0" abstract="true">
+        <let name="elmcount" value="count(hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] | hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] | hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] | hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] | hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] | hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']] | hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']] | hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']] | hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']])"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.300" test="$elmcount&gt;=1">(CDAClinicalStatement): choice (hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']]  or  hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']]  or  hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']]  or  hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]  or  hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']]  or  hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']]  or  hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']]  or  hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']]  or  hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']]) does not contain enough elements [min 1x]</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.300" test="$elmcount&lt;=1">(CDAClinicalStatement): choice (hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']]  or  hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']]  or  hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']]  or  hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']]  or  hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']]  or  hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']]  or  hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']]  or  hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']]  or  hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']]) contains too many elements [max 1x]</assert>
     </rule>
 
    <!--
@@ -1191,9 +1191,9 @@ Item: (CDAReference)
         <let name="theAttCheck" value="distinct-values(doc('include/voc-2.16.840.1.113883.1.11.19000-DYNAMIC.xml')/*/valueSet/conceptList/concept[@code = $theAttValue]/@code)"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.324" test="not(@typeCode) or count($theAttValue) = count($theAttCheck)">(CDAReference): The value for typeCode SHALL be selected from value set '2.16.840.1.113883.1.11.19000' x_ActRelationshipExternalReference (DYNAMIC).</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.324" test="count(hl7:seperatableInd)&lt;=1">(CDAReference): element hl7:seperatableInd appears too often [max 1x].</assert>
-        <let name="elmcount" value="count(hl7:externalAct|hl7:externalObservation|hl7:externalProcedure|hl7:externalDocument)"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.324" test="$elmcount&gt;=1">(CDAReference): choice (hl7:externalAct or hl7:externalObservation or hl7:externalProcedure or hl7:externalDocument) does not contain enough elements [min 1x]</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.324" test="$elmcount&lt;=1">(CDAReference): choice (hl7:externalAct or hl7:externalObservation or hl7:externalProcedure or hl7:externalDocument) contains too many elements [max 1x]</assert>
+        <let name="elmcount" value="count(hl7:externalAct | hl7:externalObservation | hl7:externalProcedure | hl7:externalDocument)"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.324" test="$elmcount&gt;=1">(CDAReference): choice (hl7:externalAct  or  hl7:externalObservation  or  hl7:externalProcedure  or  hl7:externalDocument) does not contain enough elements [min 1x]</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.324" test="$elmcount&lt;=1">(CDAReference): choice (hl7:externalAct  or  hl7:externalObservation  or  hl7:externalProcedure  or  hl7:externalDocument) contains too many elements [max 1x]</assert>
     </rule>
 
    <!--

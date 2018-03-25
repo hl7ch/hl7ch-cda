@@ -5,11 +5,12 @@ Template derived pattern
 ID: 2.16.756.5.30.1.1.10.4.18
 Name: Multimedia Embedded Content
 Description: 
-      Multimedia objects (e.g., PDF representations of the CDA document, pictures, Reiber diagrams, electrophoresis, etc.) MAY be integrated into a CDA document, either by reference to external multimedia objects or by means of XML embedding. 
-      This template defines only the embedding of multimedia objects in the CDA document. References to external documents can be created with the ExternalDocument template. 
-      For embedding in XML, the multimedia objects Base-64 must be encoded. 
-      Due to the amount of data, only light objects should be embedded. 
-      Heavy objects should be integrated using links to external documents.
+       Multimedia objects (e.g., PDF representations of the CDA document, pictures, Reiber diagrams, electrophoresis, etc.) MAY be integrated into a CDA document, either by reference to external multimedia objects or by means of XML embedding. 
+       This template defines only the embedding of multimedia objects in the CDA document. References to external documents can be created with the ExternalDocument template. 
+       For embedding in XML, the multimedia objects Base-64 must be encoded. 
+       Due to the amount of data, only light objects should be embedded. 
+       Heavy objects should be integrated using links to external documents. 
+    
 -->
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="template-2.16.756.5.30.1.1.10.4.18-2017-03-24T162741">
     <title>Multimedia Embedded Content</title>
@@ -24,7 +25,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.18
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]
 Item: (chpalm_entry_MultimediaEmbeddedContent)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]" id="d1559089e5343-false-d1913517e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]" id="d130e5235-false-d149940e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="@ID">(chpalm_entry_MultimediaEmbeddedContent): attribute @ID SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="not(@ID) or string-length(@ID)&gt;0">(chpalm_entry_MultimediaEmbeddedContent): Attribute @ID SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'])&gt;=1">(chpalm_entry_MultimediaEmbeddedContent): element hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] is mandatory [min 1x].</assert>
@@ -43,7 +44,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.18
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18']
 Item: (chpalm_entry_MultimediaEmbeddedContent)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18']" id="d1559089e5351-false-d1913594e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18']" id="d130e5243-false-d150017e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_MultimediaEmbeddedContent): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="string(@root)=('2.16.756.5.30.1.1.10.4.18')">(chpalm_entry_MultimediaEmbeddedContent): The value for @root SHALL be '2.16.756.5.30.1.1.10.4.18'.</assert>
@@ -53,7 +54,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.18
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']
 Item: (chpalm_entry_MultimediaEmbeddedContent)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']" id="d1559089e5356-false-d1913609e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']" id="d130e5248-false-d150032e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_MultimediaEmbeddedContent): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="string(@root)=('2.16.756.5.30.1.1.10.4.83')">(chpalm_entry_MultimediaEmbeddedContent): The value for @root SHALL be '2.16.756.5.30.1.1.10.4.83'.</assert>
@@ -63,7 +64,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.18
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:id
 Item: (chpalm_entry_MultimediaEmbeddedContent)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:id" id="d1559089e5361-false-d1913623e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:id" id="d130e5253-false-d150046e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_MultimediaEmbeddedContent): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="@extension">(chpalm_entry_MultimediaEmbeddedContent): attribute @extension SHALL be present.</assert>
@@ -76,7 +77,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.18
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:languageCode
 Item: (chpalm_entry_MultimediaEmbeddedContent)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:languageCode" id="d1559089e5379-false-d1913650e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:languageCode" id="d130e5271-false-d150073e0">
         <extends rule="CS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_MultimediaEmbeddedContent): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -85,7 +86,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.18
 Context: *[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:value
 Item: (chpalm_entry_MultimediaEmbeddedContent)
 -->
-    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:value" id="d1559089e5388-false-d1913663e0">
+    <rule context="*[hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]]/hl7:observationMedia[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.18'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.4.83']]/hl7:value" id="d130e5280-false-d150086e0">
         <extends rule="ED"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_MultimediaEmbeddedContent): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.18" test="string(@representation)=('B64')">(chpalm_entry_MultimediaEmbeddedContent): The value for @representation SHALL be 'B64'.</assert>

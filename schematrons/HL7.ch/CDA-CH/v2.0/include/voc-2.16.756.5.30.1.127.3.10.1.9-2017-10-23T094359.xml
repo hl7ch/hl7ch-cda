@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions">
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
     <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.9" name="EprDocumentFormatCode" displayName="EprDocumentFormatCode" statusCode="final" versionLabel="201704.2-beta" effectiveDate="2017-10-23T09:43:59" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
         <desc language="de-CH">Format des Dokumentes gemäss Anhang 3 EPDV-EDI, Kapitel 2.5. <br clear="none"/>
             <br clear="none"/>Dieser eindeutige Code definiert das Format des XDS Dokumentes. Zusammen mit dem mimeType, sollte es dem potentiellen Konsumenten genügend Informationen liefern, ob er in der Lage ist, das Dokument zu verarbeiten.</desc>

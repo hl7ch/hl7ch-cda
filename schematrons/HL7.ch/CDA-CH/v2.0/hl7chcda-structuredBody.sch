@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions" queryBinding="xslt2">
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
     <title>Scenario: StructuredBody - CDA-CH - StructuredBody (2.16.756.5.30.1.127.77.2.4.2)</title>
     <ns uri="urn:hl7-org:v3" prefix="hl7"/>
     <ns uri="urn:hl7-org:v3" prefix="cda"/>
@@ -136,14 +136,34 @@
 
    <!-- Include schematrons from templates with explicit * or ** context (but no representing templates), only those used in scenario template -->
 
-<!-- cdach_header_OrderReference -->
+<!-- cdach_header_Patient -->
+    <include href="include/2.16.756.5.30.1.1.10.2.1-2017-09-05T151806.sch"/>
+   <!-- cdach_header_DocumentReplacement -->
+    <include href="include/2.16.756.5.30.1.1.10.2.13-2017-03-28T211124.sch"/>
+   <!-- cdach_header_InsuranceCard -->
+    <include href="include/2.16.756.5.30.1.1.10.2.14-2017-03-28T211101.sch"/>
+   <!-- cdach_header_Insurance -->
+    <include href="include/2.16.756.5.30.1.1.10.2.15-2017-03-28T211007.sch"/>
+   <!-- cdach_header_OrderReference -->
     <include href="include/2.16.756.5.30.1.1.10.2.16-2017-03-09T163005.sch"/>
+   <!-- cdach_header_Custodian -->
+    <include href="include/2.16.756.5.30.1.1.10.2.3-2017-10-13T090036.sch"/>
+   <!-- cdach_header_InformationRecipient -->
+    <include href="include/2.16.756.5.30.1.1.10.2.4-2017-09-08T202058.sch"/>
+   <!-- cdach_header_Employer -->
+    <include href="include/2.16.756.5.30.1.1.10.2.40-2017-09-12T141910.sch"/>
    <!-- cdach_header_PatientContact -->
     <include href="include/2.16.756.5.30.1.1.10.2.43-2017-09-12T172838.sch"/>
    <!-- cdach_header_HealthService -->
     <include href="include/2.16.756.5.30.1.1.10.2.46-2017-10-16T103501.sch"/>
+   <!-- cdach_header_LegalAuthenticator -->
+    <include href="include/2.16.756.5.30.1.1.10.2.5-2017-09-12T195551.sch"/>
+   <!-- cdach_header_Authenticator -->
+    <include href="include/2.16.756.5.30.1.1.10.2.6-2017-03-28T211146.sch"/>
    <!-- cdach_header_DataEnterer -->
     <include href="include/2.16.756.5.30.1.1.10.2.7-2017-03-09T151238.sch"/>
+   <!-- cdach_other_Author -->
+    <include href="include/2.16.756.5.30.1.1.10.9.23-2017-09-05T130824.sch"/>
    <!-- cdach_other_Performer -->
     <include href="include/2.16.756.5.30.1.1.10.9.31-2017-10-12T075018.sch"/>
 </schema>

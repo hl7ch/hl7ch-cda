@@ -136,24 +136,82 @@
 
    <!-- Include schematrons from templates with explicit * or ** context (but no representing templates), only those used in scenario template -->
 
-<!-- cdach_header_OrderReference -->
+<!-- cdach_header_DocumentReplacement -->
+    <include href="include/2.16.756.5.30.1.1.10.2.13-2017-03-28T211124.sch"/>
+   <!-- cdach_header_InsuranceCard -->
+    <include href="include/2.16.756.5.30.1.1.10.2.14-2017-03-28T211101.sch"/>
+   <!-- cdach_header_Insurance -->
+    <include href="include/2.16.756.5.30.1.1.10.2.15-2017-03-28T211007.sch"/>
+   <!-- cdach_header_OrderReference -->
     <include href="include/2.16.756.5.30.1.1.10.2.16-2017-03-09T163005.sch"/>
+   <!-- chpalm_header_RecordTargetNonHumanSubject -->
+    <include href="include/2.16.756.5.30.1.1.10.2.26-2017-03-16T112846.sch"/>
+   <!-- chpalm_header_RecordTargetHumanPatientWithNonHumanSubject -->
+    <include href="include/2.16.756.5.30.1.1.10.2.27-2017-03-16T232558.sch"/>
+   <!-- chpalm_header_DocumentationOfLaboratoryPerformer -->
+    <include href="include/2.16.756.5.30.1.1.10.2.28-2017-03-16T235000.sch"/>
    <!-- cdach_header_HealthService -->
     <include href="include/2.16.756.5.30.1.1.10.2.46-2017-10-16T103501.sch"/>
    <!-- cdachlrep_header_Recipient -->
     <include href="include/2.16.756.5.30.1.1.10.2.57-2016-05-23T000000.sch"/>
+   <!-- cdachlrep_header_Patient -->
+    <include href="include/2.16.756.5.30.1.1.10.2.58-2016-05-23T000000.sch"/>
+   <!-- cdachlrep_header_Author -->
+    <include href="include/2.16.756.5.30.1.1.10.2.59-2016-05-23T000000.sch"/>
+   <!-- cdachlrep_header_Custodian -->
+    <include href="include/2.16.756.5.30.1.1.10.2.60-2016-05-23T000000.sch"/>
+   <!-- cdachlrep_header_LegalAuthenticator -->
+    <include href="include/2.16.756.5.30.1.1.10.2.61-2016-05-23T000000.sch"/>
    <!-- cdach_header_DataEnterer -->
     <include href="include/2.16.756.5.30.1.1.10.2.7-2017-03-09T151238.sch"/>
+   <!-- chpalm_section_LaboratorySpecialty -->
+    <include href="include/2.16.756.5.30.1.1.10.3.3-2017-03-16T235718.sch"/>
    <!-- chpcc_section_VitalSignsCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.4-2017-03-28T225328.sch"/>
    <!-- cdach_section_OriginalRepresentation -->
     <include href="include/2.16.756.5.30.1.1.10.3.45-2018-02-08T085327.sch"/>
    <!-- Studiessummary -->
     <include href="include/2.16.756.5.30.1.1.10.3.46-2015-12-14T000000.sch"/>
+   <!-- chpalm_section_LaboratoryReportItem -->
+    <include href="include/2.16.756.5.30.1.1.10.3.5-2017-03-20T212750.sch"/>
+   <!-- chpalm_entry_SpecimenCollection -->
+    <include href="include/2.16.756.5.30.1.1.10.4.11-2017-03-24T161841.sch"/>
+   <!-- chpalm_entry_SpecimenReceived -->
+    <include href="include/2.16.756.5.30.1.1.10.4.12-2017-03-24T162004.sch"/>
+   <!-- chpalm_entry_NotificationOrganizer -->
+    <include href="include/2.16.756.5.30.1.1.10.4.13-2017-03-24T162113.sch"/>
+   <!-- chpalm_entry_NotifiableCondition -->
+    <include href="include/2.16.756.5.30.1.1.10.4.14-2017-03-24T162211.sch"/>
+   <!-- chpalm_entry_CaseIdentification -->
+    <include href="include/2.16.756.5.30.1.1.10.4.15-2017-03-24T162425.sch"/>
+   <!-- chpalm_entry_OutbreakIdentification -->
+    <include href="include/2.16.756.5.30.1.1.10.4.16-2017-03-24T162521.sch"/>
+   <!-- chpalm_entry_LaboratoryIsolateOrganizer -->
+    <include href="include/2.16.756.5.30.1.1.10.4.17-2017-03-24T162622.sch"/>
    <!-- chpalm_entry_MultimediaEmbeddedContent -->
     <include href="include/2.16.756.5.30.1.1.10.4.18-2017-03-24T162741.sch"/>
+   <!-- chpalm_entry_LaboratoryBatteryOrganizer -->
+    <include href="include/2.16.756.5.30.1.1.10.4.19-2017-03-24T162835.sch"/>
+   <!-- chpcc_entry_AnnotationComments -->
+    <include href="include/2.16.756.5.30.1.1.10.4.2-2017-03-24T164730.sch"/>
+   <!-- cdach_entry_VitalSignsOrganizer -->
+    <include href="include/2.16.756.5.30.1.1.10.4.20-2017-03-28T225052.sch"/>
+   <!-- chpcc_entry_VitalSignsObservation -->
+    <include href="include/2.16.756.5.30.1.1.10.4.21-2017-03-24T164839.sch"/>
+   <!-- chpalm_entry_PreviousObservation -->
+    <include href="include/2.16.756.5.30.1.1.10.4.22-2017-03-24T162935.sch"/>
    <!-- cdach_entry_ExternalDocument -->
     <include href="include/2.16.756.5.30.1.1.10.4.29-2017-03-28T210513.sch"/>
+   <!-- chpalm_entry_LaboratoryObservation -->
+    <include href="include/2.16.756.5.30.1.1.10.4.3-2017-03-21T103818.sch"/>
+   <!-- chpalm_entry_LaboratoryReportDataProcessingEntry -->
+    <include href="include/2.16.756.5.30.1.1.10.4.4-2017-03-21T104101.sch"/>
+   <!-- chpalm_entry_NonHumanSubject -->
+    <include href="include/2.16.756.5.30.1.1.10.4.5-2017-03-21T104222.sch"/>
+   <!-- chpalm_entry_LaboratoryPerformer -->
+    <include href="include/2.16.756.5.30.1.1.10.4.7-2017-03-21T104644.sch"/>
+   <!-- chpalm_entry_LaboratoryResultsValidator -->
+    <include href="include/2.16.756.5.30.1.1.10.4.8-2017-03-21T105038.sch"/>
    <!-- cdach_entry_ObservationMedia -->
     <include href="include/2.16.756.5.30.1.1.10.4.83-2018-02-08T095556.sch"/>
    <!-- Gestationalage -->

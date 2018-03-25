@@ -68,10 +68,12 @@ History:
 	This document is a new version of the one created for CDA-CH v1.2
 	-->
 	<setId root="F9DC0A26-E16F-4B70-80B6-9B77150AC183"/>
-	<versionNumber value="2"/>
+	<versionNumber value="1"/>
 
 	<!-- Human patient according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.58"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
 		<patientRole>
 			<!-- The patient's id. -->
 			<id extension="8733" root="2.16.756.888888.3.1"/>
@@ -114,6 +116,8 @@ History:
 
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode nullFlavor='NAV'>
 			<originalText>Laboratory technician</originalText>
@@ -163,6 +167,8 @@ History:
 	</author>
 	<!-- The custodian is the sender of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.60"/>
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<id extension='7606666666666' root='2.51.1.3'/>
@@ -183,6 +189,8 @@ History:
 	</custodian>
 	<!-- The main recipient of the document according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH V2 Recipient -->
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
 		<!-- CDA-CH-LREP Recipient -->
 		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
 		<!-- IHE XD-LAB: Intended Recipient -->
@@ -249,7 +257,7 @@ History:
 								</tr>
 								<tr>
 									<td>
-										Kreatinin-Clearance
+										<content ID='obs1'>Kreatinin-Clearance</content>
 									</td>
 									<td>
 										52.7 ml/min
@@ -424,6 +432,9 @@ History:
 					<entry typeCode='DRIV'>
 						<act classCode='ACT' moodCode='EVN'>
 
+							<!-- CDA-CH-LREP: Laboratory Report Data Processing Entry -->
+							<templateId root='2.16.756.5.30.1.1.10.4.4' />
+
 							<!-- IHE XD-LAB: Laboratory Report Data Processing Entry -->
 							<templateId root='1.3.6.1.4.1.19376.1.3.1' />
 
@@ -433,14 +444,15 @@ History:
 							<!-- IHE XD-LAB: Specimen Collection -->
 							<entryRelationship typeCode='COMP'>
 								<procedure classCode='PROC' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.10.4.11' />
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.2'/>
 									<code code='33882-2' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Collection date of Unspecified specimen'/>
 									<text>
 										<reference value='#speccol'/>
 									</text>
 									<effectiveTime>
-										<low value="201607130900+0200"/>
-										<high value="201607140900+0200"/>
+										<low value="20160713090000+0200"/>
+										<high value="20160714090100+0200"/>
 									</effectiveTime>
 									<participant typeCode='PRD'>
 										<participantRole classCode='SPEC'>
@@ -453,6 +465,7 @@ History:
 									<!-- IHE XD-LAB: Specimen Received -->
 									<entryRelationship typeCode='COMP'>
 										<act classCode='ACT' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.10.4.12' />
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.3'/>
 											<id nullFlavor='ASKU' />
 											<code code='SPRECEIVE' codeSystem='1.3.5.1.4.1.19376.1.5.3.2' codeSystemName='IHEActCode' displayName='Receive Time'/>
@@ -475,20 +488,25 @@ History:
 							-->
 							<entryRelationship typeCode='COMP'>
 								<organizer classCode='BATTERY' moodCode='EVN'>
+									<templateId root='2.16.756.5.30.1.1.10.4.19' />
 									<templateId root='1.3.6.1.4.1.19376.1.3.1.4' />
 									<id root='2.16.756.5.30.1.129.1.2.1' extension='12-3456' />
 									<statusCode code='completed'/>
 									<effectiveTime>
-										<low value='201607151634+0200' />
-										<high value='201607151634+0200' />
+										<low value='20160715163400+0200' />
+										<high value='20160715163500+0200' />
 									</effectiveTime>
 
 									<!-- Resultat 1 -->
 									<component typeCode='COMP'>
 										<!-- IHE XD-LAB: Laboratory Observation -->
 										<observation classCode='OBS' moodCode='EVN'>
+											<templateId root='2.16.756.5.30.1.1.10.4.3' />
 											<templateId root='1.3.6.1.4.1.19376.1.3.1.6' />
 											<code code='2164-2' displayName='CREATININE CLEARANCE' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
+											<text>
+												<reference value='#obs1'/>
+											</text>
 											<statusCode code='completed'/>
 											<value xsi:type='PQ' value='52.7' unit='ml/min' />
 											<interpretationCode code='L' codeSystem='2.16.840.1.113883.5.83' displayName='Low' codeSystemName='ObservationInterpretation'/>
@@ -496,6 +514,7 @@ History:
 											<!-- (used as proof of concept for Schematrons, only) -->
 											<entryRelationship typeCode="REFR">
 												<observation classCode='OBS' moodCode='EVN'>
+													<templateId root='2.16.756.5.30.1.1.10.4.22' />
 													<code code='2164-2' displayName='CREATININE CLEARANCE' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'/>
 													<statusCode code='completed'/>
 													<effectiveTime value="201605021003+0200"/>

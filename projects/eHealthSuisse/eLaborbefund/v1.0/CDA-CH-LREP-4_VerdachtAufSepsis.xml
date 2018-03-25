@@ -70,6 +70,8 @@ History:
 
 	<!-- Human patient according to CDA-CH v2.0 and case study. -->
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.58"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
 		<patientRole>
 			<!-- The patient's id. -->
 			<id extension="23541654" root="2.999"/>
@@ -103,6 +105,8 @@ History:
 
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study. -->
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
 		<!-- Timestamp of the authorship. -->
@@ -155,6 +159,8 @@ History:
 		</assignedAuthor>
 	</author>
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode nullFlavor='NAV'>
 			<originalText>Laboratory technician</originalText>
@@ -203,6 +209,8 @@ History:
 	</author>
 	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.60"/>
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- The organization's id (GLN). -->
@@ -224,6 +232,8 @@ History:
 	</custodian>
 	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
 	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH V2 Recipient -->
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
 		<!-- CDA-CH-LREP Recipient -->
 		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
 		<!-- IHE XD-LAB: Intended Recipient -->
@@ -299,25 +309,27 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Blutkultur 1: Anaerobe Flasche</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_1">Streptococcus parasanguinis (organism)</content>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_observation_1">Blutkultur 1: Aerobe Flasche</content>
+									</td>
+									<td>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_value_1">Kein Wachstum</content>
 									</td>
 									<td/>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>17934-1</td>
-									<td>Bacteria identified in Blood by Anaerobe culture</td>
+									<td>17928-3</td>
+									<td>Bacteria identified in Blood by Aerobe culture</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_comment_1"/>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_collectiondate_1">16.03.2018 08:10</content>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_collectiondate_1">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -328,25 +340,27 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Blutkultur 1: Aerobe Flasche</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_2">Kein Wachstum</content>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_observation_2">Blutkultur 1: Anaerobe Flasche</content>
+									</td>
+									<td>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_value_2">Streptococcus parasanguinis (organism)</content>
 									</td>
 									<td/>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>17928-3</td>
-									<td>Bacteria identified in Blood by Aerobe culture</td>
+									<td>17934-1</td>
+									<td>Bacteria identified in Blood by Anaerobe culture</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_comment_2"/>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_collectiondate_2">16.03.2018 08:10</content>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_collectiondate_2">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss1_3db08570-2604-4dc2-9033-229ad68f43b7_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss1_60ed49f5-2c31-4c4b-9804-824028940e42_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -360,21 +374,24 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbiology studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180316094500+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="17928-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Aerobe culture">
 												<originalText>Blutkultur 1: Aerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_2"/>
+												<reference value="#lss1_60ed49f5-2c31-4c4b-9804-824028940e42_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="264868006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No growth (qualifier value)">
@@ -393,7 +410,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -402,7 +422,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -421,11 +441,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="17934-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Anaerobe culture">
 												<originalText>Blutkultur 1: Anaerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_observation_1"/>
+												<reference value="#lss1_60ed49f5-2c31-4c4b-9804-824028940e42_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="113990002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Streptococcus parasanguinis (organism)"/>
@@ -442,7 +463,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -451,7 +475,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -474,7 +498,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_collectiondate_2"/>
+										<reference value="#lss1_60ed49f5-2c31-4c4b-9804-824028940e42_collectiondate_2"/>
 									</text>
 									<effectiveTime value="20180316081000+0100"/>
 									<participant typeCode="PRD">
@@ -493,7 +517,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss1_3db08570-2604-4dc2-9033-229ad68f43b7_specimenreceiveddate_2"/>
+												<reference value="#lss1_60ed49f5-2c31-4c4b-9804-824028940e42_specimenreceiveddate_2"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>
@@ -540,25 +564,27 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Ceftriaxon</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_1"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_1">Vancomycin</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_1"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18895-3</td>
-									<td>Ceftriaxone [Susceptibility]</td>
+									<td>19000-9</td>
+									<td>Vancomycin [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_1"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_1">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_1">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -569,25 +595,27 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Clindamycin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_2"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_2">Penicillin</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_2"/>
 									</td>
 									<td/>
-									<td>Resistent</td>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18908-4</td>
-									<td>Clindamycin [Susceptibility]</td>
+									<td>18964-7</td>
+									<td>Penicillin [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_2"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_2">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_2">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -598,25 +626,27 @@ History:
 								<tr>
 									<td/>
 									<td>3</td>
-									<td>Vancomycin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_3"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_3">Ceftriaxon</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_3"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>19000-9</td>
-									<td>Vancomycin [Susceptibility]</td>
+									<td>18895-3</td>
+									<td>Ceftriaxone [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_3"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_3">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_3">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_3">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_3">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -627,25 +657,27 @@ History:
 								<tr>
 									<td/>
 									<td>4</td>
-									<td>Erythromycin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_4">2</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_4">Vancomycin</content>
 									</td>
-									<td>mg/L</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_4">&lt;2 mg/L</content>
+									</td>
+									<td/>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>233-7</td>
-									<td>Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>524-9</td>
+									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_4"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_4">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_4">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_4">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_4">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -656,25 +688,27 @@ History:
 								<tr>
 									<td/>
 									<td>5</td>
-									<td>Levofloxacin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_5"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_5">Clindamycin</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_5"/>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td>Resistent</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>20629-2</td>
-									<td>Levofloxacin [Susceptibility]</td>
+									<td>18908-4</td>
+									<td>Clindamycin [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_5"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_5">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_5">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_5">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_5">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -685,25 +719,27 @@ History:
 								<tr>
 									<td/>
 									<td>6</td>
-									<td>Co-Amoxiclav</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_6"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_6">Erythromycin</content>
 									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_6">2</content>
+									</td>
+									<td>mg/L</td>
 									<td/>
-									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18862-3</td>
-									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
+									<td>233-7</td>
+									<td>Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_6"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_6">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_6">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_6">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_6">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -714,9 +750,11 @@ History:
 								<tr>
 									<td/>
 									<td>7</td>
-									<td>Erythromycin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_7"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_7">Erythromycin</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_7"/>
 									</td>
 									<td/>
 									<td>Resistent</td>
@@ -726,13 +764,13 @@ History:
 									<td>18919-1</td>
 									<td>Erythromycin [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_7"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_7">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_7">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_7">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_7">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -743,9 +781,11 @@ History:
 								<tr>
 									<td/>
 									<td>8</td>
-									<td>Amoxicillin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_8"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_8">Amoxicillin</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_8"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
@@ -755,13 +795,13 @@ History:
 									<td>18861-5</td>
 									<td>Amoxicillin [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_8"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_8">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_8">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_8">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_8">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -772,25 +812,27 @@ History:
 								<tr>
 									<td/>
 									<td>9</td>
-									<td>Penicillin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_9"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_9">Co-Amoxiclav</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_9"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18964-7</td>
-									<td>Penicillin [Susceptibility]</td>
+									<td>18862-3</td>
+									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_9"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_9">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_9">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_9">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_9">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -801,25 +843,27 @@ History:
 								<tr>
 									<td/>
 									<td>10</td>
-									<td>Vancomycin</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_value_10">&lt;2 mg/L</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_10">Levofloxacin</content>
+									</td>
+									<td>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_10"/>
 									</td>
 									<td/>
-									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>524-9</td>
-									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>20629-2</td>
+									<td>Levofloxacin [Susceptibility]</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_comment_10"/>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_10">16.03.2018 08:10</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_10">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_10">16.03.2018 09:45</content>
+										<content ID="lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_10">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -833,21 +877,24 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbial susceptibility tests"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180316094500+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18964-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Penicillin [Susceptibility]">
 												<originalText>Penicillin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_9"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -866,7 +913,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -875,7 +925,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -894,11 +944,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18861-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin [Susceptibility]">
 												<originalText>Amoxicillin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_8"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -917,7 +968,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -926,7 +980,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -945,11 +999,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18862-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin+Clavulanate [Susceptibility]">
 												<originalText>Co-Amoxiclav</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_6"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -968,7 +1023,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -977,7 +1035,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -996,11 +1054,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18895-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Ceftriaxone [Susceptibility]">
 												<originalText>Ceftriaxon</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_1"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1019,7 +1078,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1028,7 +1090,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1047,11 +1109,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18919-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythromycin [Susceptibility]">
 												<originalText>Erythromycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_7"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Resistant">
@@ -1070,7 +1133,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1079,7 +1145,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1098,11 +1164,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="233-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythromycin [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Erythromycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_4"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2" unit="mg/L"/>
@@ -1119,7 +1186,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1128,7 +1198,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1147,11 +1217,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18908-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clindamycin [Susceptibility]">
 												<originalText>Clindamycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_2"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Resistant">
@@ -1170,7 +1241,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1179,7 +1253,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1198,11 +1272,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="20629-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Levofloxacin [Susceptibility]">
 												<originalText>Levofloxacin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_5"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1221,7 +1296,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1230,7 +1308,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1249,11 +1327,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="19000-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility]">
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_3"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -1272,7 +1351,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1281,7 +1363,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1300,14 +1382,15 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="524-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_observation_10"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">&amp;lt;2 mg/L<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_value_10"/>
+											<value xsi:type="ED">&amp;lt;2 mg/L<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_value_4"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316094500+0100"/>
@@ -1322,7 +1405,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1331,7 +1417,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1354,7 +1440,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_collectiondate_10"/>
+										<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_collectiondate_10"/>
 									</text>
 									<effectiveTime value="20180316081000+0100"/>
 									<participant typeCode="PRD">
@@ -1373,7 +1459,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss2_56706d3d-ae48-4ebe-9d42-2652e72e5cc2_specimenreceiveddate_10"/>
+												<reference value="#lss2_b42c79e9-5fb8-4390-ab79-a51ba900a318_specimenreceiveddate_10"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>
@@ -1420,9 +1506,11 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Blutkultur 2: Aerobe Flasche</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_1">Enterococcus faecium (organism)</content>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_observation_1">Blutkultur 2: Aerobe Flasche</content>
+									</td>
+									<td>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_value_1">Enterococcus faecium (organism)</content>
 									</td>
 									<td/>
 									<td/>
@@ -1432,13 +1520,13 @@ History:
 									<td>17928-3</td>
 									<td>Bacteria identified in Blood by Aerobe culture</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_comment_1"/>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_collectiondate_1">16.03.2018 08:10</content>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_collectiondate_1">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1449,9 +1537,11 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Blutkultur 2: Anaerobe Flasche</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_2">Kein Wachstum</content>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_observation_2">Blutkultur 2: Anaerobe Flasche</content>
+									</td>
+									<td>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_value_2">Kein Wachstum</content>
 									</td>
 									<td/>
 									<td/>
@@ -1461,13 +1551,13 @@ History:
 									<td>17934-1</td>
 									<td>Bacteria identified in Blood by Anaerobe culture</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_comment_2"/>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_collectiondate_2">16.03.2018 08:10</content>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_collectiondate_2">16.03.2018 08:10</content>
 									</td>
 									<td>
-										<content ID="lss3_d5599089-1fa2-40ac-aa3c-13266472e150_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1481,21 +1571,24 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbiology studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180316094500+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="17928-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Aerobe culture">
 												<originalText>Blutkultur 2: Aerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_1"/>
+												<reference value="#lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="90272000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Enterococcus faecium (organism)"/>
@@ -1512,7 +1605,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1521,7 +1617,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1540,11 +1636,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="17934-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bacteria identified in Blood by Anaerobe culture">
 												<originalText>Blutkultur 2: Anaerobe Flasche</originalText>
 											</code>
 											<text>
-												<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_observation_2"/>
+												<reference value="#lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="CD" code="264868006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No growth (qualifier value)">
@@ -1563,7 +1660,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1572,7 +1672,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1595,7 +1695,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_collectiondate_2"/>
+										<reference value="#lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_collectiondate_2"/>
 									</text>
 									<effectiveTime value="20180316081000+0100"/>
 									<participant typeCode="PRD">
@@ -1614,7 +1714,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss3_d5599089-1fa2-40ac-aa3c-13266472e150_specimenreceiveddate_2"/>
+												<reference value="#lss3_7272c0b3-ad4d-4805-a1d3-ca581a7184e2_specimenreceiveddate_2"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>
@@ -1661,25 +1761,27 @@ History:
 								<tr>
 									<td/>
 									<td>1</td>
-									<td>Co-Amoxiclav</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_1"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_1">Levofloxacin</content>
 									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_1">2</content>
+									</td>
+									<td>mg/L</td>
 									<td/>
-									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18862-3</td>
-									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
+									<td>20396-8</td>
+									<td>Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_1"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_1">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_1">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_1">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_1">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1690,25 +1792,27 @@ History:
 								<tr>
 									<td/>
 									<td>2</td>
-									<td>Teicoplanin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_2"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_2">Amoxicillin</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_2"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18989-4</td>
-									<td>Teicoplanin [Susceptibility]</td>
+									<td>18861-5</td>
+									<td>Amoxicillin [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_2"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_2">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_2">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_2">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_2">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1719,25 +1823,27 @@ History:
 								<tr>
 									<td/>
 									<td>3</td>
-									<td>Vancomycin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_3"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_3">Levofloxacin</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_3"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>19000-9</td>
-									<td>Vancomycin [Susceptibility]</td>
+									<td>20629-2</td>
+									<td>Levofloxacin [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_3"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_3">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_3">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_3">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_3">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1748,25 +1854,27 @@ History:
 								<tr>
 									<td/>
 									<td>4</td>
-									<td>Imipenem</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_4">&lt;1 mg/L</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_4">Vancomycin</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_4"/>
 									</td>
 									<td/>
-									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>279-0</td>
-									<td>Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>19000-9</td>
+									<td>Vancomycin [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_4"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_4">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_4">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_4">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_4">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1777,25 +1885,27 @@ History:
 								<tr>
 									<td/>
 									<td>5</td>
-									<td>Linezolid</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_5"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_5">Vancomycin</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_5">&lt;0.5 mg/L</content>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>29258-1</td>
-									<td>Linezolid [Susceptibility]</td>
+									<td>524-9</td>
+									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_5"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_5">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_5">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_5">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_5">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1806,25 +1916,27 @@ History:
 								<tr>
 									<td/>
 									<td>6</td>
-									<td>Amoxicillin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_6"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_6">Linezolid</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_6"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18861-5</td>
-									<td>Amoxicillin [Susceptibility]</td>
+									<td>29258-1</td>
+									<td>Linezolid [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_6"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_6">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_6">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_6">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_6">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1835,25 +1947,27 @@ History:
 								<tr>
 									<td/>
 									<td>7</td>
-									<td>Levofloxacin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_7"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_7">Co-Amoxiclav</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_7"/>
 									</td>
 									<td/>
 									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>20629-2</td>
-									<td>Levofloxacin [Susceptibility]</td>
+									<td>18862-3</td>
+									<td>Amoxicillin+Clavulanate [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_7"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_7">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_7">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_7">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_7">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1864,25 +1978,27 @@ History:
 								<tr>
 									<td/>
 									<td>8</td>
-									<td>Imipenem</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_8"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_8">Teicoplanin</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_8"/>
 									</td>
 									<td/>
-									<td>Sensibel</td>
+									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>18932-4</td>
-									<td>Imipenem [Susceptibility]</td>
+									<td>484-6</td>
+									<td>Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_8"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_8"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_8">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_8">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_8">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_8">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1893,25 +2009,27 @@ History:
 								<tr>
 									<td/>
 									<td>9</td>
-									<td>Teicoplanin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_9"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_9">Imipenem</content>
+									</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_9"/>
 									</td>
 									<td/>
-									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>484-6</td>
-									<td>Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18932-4</td>
+									<td>Imipenem [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_9"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_9"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_9">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_9">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_9">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_9">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1922,25 +2040,27 @@ History:
 								<tr>
 									<td/>
 									<td>10</td>
-									<td>Levofloxacin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_10">2</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_10">Imipenem</content>
 									</td>
-									<td>mg/L</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_10">&lt;1 mg/L</content>
+									</td>
+									<td/>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>20396-8</td>
-									<td>Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>279-0</td>
+									<td>Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_10"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_10"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_10">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_10">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_10">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_10">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1951,25 +2071,27 @@ History:
 								<tr>
 									<td/>
 									<td>11</td>
-									<td>Linezolid</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_11">2</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_11">Teicoplanin</content>
 									</td>
-									<td>mg/L</td>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_11"/>
+									</td>
 									<td/>
+									<td>Sensibel</td>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>29254-0</td>
-									<td>Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>18989-4</td>
+									<td>Teicoplanin [Susceptibility]</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_11"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_11"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_11">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_11">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_11">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_11">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -1980,25 +2102,27 @@ History:
 								<tr>
 									<td/>
 									<td>12</td>
-									<td>Vancomycin</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_12">&lt;0.5 mg/L</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_12">Linezolid</content>
 									</td>
-									<td/>
+									<td>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_12">2</content>
+									</td>
+									<td>mg/L</td>
 									<td/>
 									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>524-9</td>
-									<td>Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
+									<td>29254-0</td>
+									<td>Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_comment_12"/>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_comment_12"/>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_12">16.03.2018 08:40</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_12">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_12">16.03.2018 09:45</content>
+										<content ID="lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_12">16.03.2018 09:45</content>
 									</td>
 									<td>16.03.2018 09:45</td>
 									<td>Pipette Mover am 16.03.2018 09:45</td>
@@ -2012,21 +2136,24 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microbial susceptibility tests"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180316094500+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18861-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin [Susceptibility]">
 												<originalText>Amoxicillin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_6"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2045,7 +2172,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2054,7 +2184,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2073,11 +2203,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18862-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Amoxicillin+Clavulanate [Susceptibility]">
 												<originalText>Co-Amoxiclav</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_1"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2096,7 +2227,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2105,7 +2239,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2124,11 +2258,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18932-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Imipenem [Susceptibility]">
 												<originalText>Imipenem</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_8"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_9"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2147,7 +2282,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2156,7 +2294,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2175,14 +2313,15 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="279-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Imipenem [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Imipenem</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_4"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">&amp;lt;1 mg/L<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_4"/>
+											<value xsi:type="ED">&amp;lt;1 mg/L<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_10"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316094500+0100"/>
@@ -2197,7 +2336,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2206,7 +2348,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2225,11 +2367,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="20629-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Levofloxacin [Susceptibility]">
 												<originalText>Levofloxacin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_7"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2248,7 +2391,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2257,7 +2403,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2276,11 +2422,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="20396-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Levofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Levofloxacin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_10"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2" unit="mg/L"/>
@@ -2297,7 +2444,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2306,7 +2456,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2325,11 +2475,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="19000-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility]">
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_3"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2348,7 +2499,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2357,7 +2511,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2376,14 +2530,15 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="524-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Vancomycin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_12"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="ED">&amp;lt;0.5 mg/L<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_value_12"/>
+											<value xsi:type="ED">&amp;lt;0.5 mg/L<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_value_5"/>
 											</value>
 											<performer typeCode="PRF">
 												<time value="20180316094500+0100"/>
@@ -2398,7 +2553,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2407,7 +2565,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2426,11 +2584,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="18989-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Teicoplanin [Susceptibility]">
 												<originalText>Teicoplanin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_2"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_11"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2449,7 +2608,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2458,7 +2620,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2477,11 +2639,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="484-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Teicoplanin [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Teicoplanin</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_9"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_8"/>
 											</text>
 											<statusCode code="completed"/>
 											<performer typeCode="PRF">
@@ -2497,7 +2660,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2506,7 +2672,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2525,11 +2691,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="29258-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Linezolid [Susceptibility]">
 												<originalText>Linezolid</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_5"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7ObservationInterpretation" displayName="Susceptible">
@@ -2548,7 +2715,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2557,7 +2727,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2576,11 +2746,12 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="29254-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Linezolid [Susceptibility] by Minimum inhibitory concentration (MIC)">
 												<originalText>Linezolid</originalText>
 											</code>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_observation_11"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_observation_12"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2" unit="mg/L"/>
@@ -2597,7 +2768,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180316094500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -2606,7 +2780,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -2629,7 +2803,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_collectiondate_12"/>
+										<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_collectiondate_12"/>
 									</text>
 									<effectiveTime value="20180316084000+0100"/>
 									<participant typeCode="PRD">
@@ -2648,7 +2822,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss4_dac91c49-29c8-454a-ac2a-66966a7a5262_specimenreceiveddate_12"/>
+												<reference value="#lss4_860d777c-de4c-416b-991a-e595ec0088dd_specimenreceiveddate_12"/>
 											</text>
 											<effectiveTime value="20180316094500+0100"/>
 										</act>

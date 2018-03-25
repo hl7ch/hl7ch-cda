@@ -70,6 +70,8 @@ History:
 
 	<!-- Human patient according to CDA-CH v2.0 and case study. -->
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.58"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
 		<patientRole>
 			<!-- The patient's id. -->
 			<id extension="3541" root="2.999"/>
@@ -103,6 +105,8 @@ History:
 
 	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study. -->
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode nullFlavor='NAV'>
 			<originalText>Laboratory technician</originalText>
@@ -154,6 +158,8 @@ History:
 		</assignedAuthor>
 	</author>
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.59"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
 		<functionCode nullFlavor='NAV'>
 			<originalText>Laboratory technician</originalText>
@@ -202,6 +208,8 @@ History:
 	</author>
 	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.60"/>
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- The organization's id (GLN). -->
@@ -223,6 +231,8 @@ History:
 	</custodian>
 	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
 	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH V2 Recipient -->
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
 		<!-- CDA-CH-LREP Recipient -->
 		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
 		<!-- IHE XD-LAB: Intended Recipient -->
@@ -298,9 +308,11 @@ History:
 								<tr>
 									<td>1245.00</td>
 									<td>1</td>
-									<td>CRP</td>
 									<td>
-										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_observation_1">14.0</content>
+										<content ID="lss1_99045d61-5d63-4ad0-92dd-21d207587be7_observation_1">CRP</content>
+									</td>
+									<td>
+										<content ID="lss1_99045d61-5d63-4ad0-92dd-21d207587be7_value_1">14.0</content>
 									</td>
 									<td>mg/L</td>
 									<td/>
@@ -310,13 +322,13 @@ History:
 									<td>48421-2</td>
 									<td>C reactive protein [Mass/volume] in Capillary blood</td>
 									<td>
-										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_comment_1">Referenzbereich bei Vollblut</content>
+										<content ID="lss1_99045d61-5d63-4ad0-92dd-21d207587be7_comment_1">Referenzbereich bei Vollblut</content>
 									</td>
 									<td>
-										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_collectiondate_1">15.03.2018 10:30</content>
+										<content ID="lss1_99045d61-5d63-4ad0-92dd-21d207587be7_collectiondate_1">15.03.2018 10:30</content>
 									</td>
 									<td>
-										<content ID="lss1_7f190204-b29d-40dd-83b4-81c814d58da1_specimenreceiveddate_1">15.03.2018 10:30</content>
+										<content ID="lss1_99045d61-5d63-4ad0-92dd-21d207587be7_specimenreceiveddate_1">15.03.2018 10:30</content>
 									</td>
 									<td>15.03.2018 10:30</td>
 									<td>Heidi Sticht am 15.03.2018 10:30</td>
@@ -330,22 +342,25 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18727-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Serology studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180315103000+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="48421-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="C reactive protein [Mass/volume] in Capillary blood">
 												<originalText>CRP</originalText>
-												<translation code="1245.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="C-reaktives Protein (CRP), qn"/>
+												<translation code="1245.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="C-reaktives Protein (CRP), qn"/>
 											</code>
 											<text>
-												<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_observation_1"/>
+												<reference value="#lss1_99045d61-5d63-4ad0-92dd-21d207587be7_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="14.0" unit="mg/L"/>
@@ -362,7 +377,8 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode nullFlavor="ASKU">
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315103000+0100"/>
@@ -373,7 +389,7 @@ History:
 														<houseNumber>2</houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.32.234.55.66" use="PUB"/>
 													<telecom value="mailto:praxis@drmustermann.ch" use="PUB"/>
@@ -390,7 +406,7 @@ History:
 													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
 													<templateId root="2.16.840.1.113883.10.20.1.40"/>
 													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
-													<text>Referenzbereich bei Vollblut<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_comment_1"/>
+													<text>Referenzbereich bei Vollblut<reference value="#lss1_99045d61-5d63-4ad0-92dd-21d207587be7_comment_1"/>
 													</text>
 													<statusCode code="completed"/>
 												</act>
@@ -413,7 +429,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_collectiondate_1"/>
+										<reference value="#lss1_99045d61-5d63-4ad0-92dd-21d207587be7_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20180315103000+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -435,7 +451,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss1_7f190204-b29d-40dd-83b4-81c814d58da1_specimenreceiveddate_1"/>
+												<reference value="#lss1_99045d61-5d63-4ad0-92dd-21d207587be7_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20180315103000+0100"/>
 										</act>
@@ -482,25 +498,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>1</td>
-									<td>Eosinophile Granulozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_1">2.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_1">Segmentkernige neutrophile Granulozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_1">39.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>2 - 4 null</td>
+									<td>40 - 70 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>714-6</td>
-									<td>Eosinophils/100 leukocytes in Blood by Manual count</td>
+									<td>769-0</td>
+									<td>Segmented neutrophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_1"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_1">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_1">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_1">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_1">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -511,25 +529,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>2</td>
-									<td>Monozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_2">4.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_2">Stabkernige neutrophile Granulozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_2">3.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>3 - 7 null</td>
+									<td>3 - 5 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>744-3</td>
-									<td>Monocytes/100 leukocytes in Blood by Manual count</td>
+									<td>764-1</td>
+									<td>Band form neutrophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_2"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_2">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_2">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_2">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_2">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -540,25 +560,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>3</td>
-									<td>Segmentkernige neutrophile Granulozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_3">39.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_3">Monozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_3">4.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>40 - 70 null</td>
+									<td>3 - 7 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>769-0</td>
-									<td>Segmented neutrophils/100 leukocytes in Blood by Manual count</td>
+									<td>744-3</td>
+									<td>Monocytes/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_3"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_3">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_3">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_3">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_3">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -569,25 +591,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>4</td>
-									<td>Stabkernige neutrophile Granulozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_4">3.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_4">Eosinophile Granulozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_4">2.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>3 - 5 null</td>
+									<td>2 - 4 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>764-1</td>
-									<td>Band form neutrophils/100 leukocytes in Blood by Manual count</td>
+									<td>714-6</td>
+									<td>Eosinophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_4"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_4"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_4">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_4">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_4">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_4">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -598,25 +622,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>5</td>
-									<td>Basophile Granulozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_5">0.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_5">Lymphozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_5">44.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>0 - 1 null</td>
+									<td>20 - 40 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>707-0</td>
-									<td>Basophils/100 leukocytes in Blood by Manual count</td>
+									<td>737-7</td>
+									<td>Lymphocytes/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_5"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_5"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_5">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_5">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_5">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_5">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -627,25 +653,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>6</td>
-									<td>Lymphozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_6">44.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_6">Reaktive Lymphozyten, plasmazytoide Lymphozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_6">8.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td>20 - 40 null</td>
+									<td/>
 									<td/>
 									<td>LOINC</td>
-									<td>737-7</td>
-									<td>Lymphocytes/100 leukocytes in Blood by Manual count</td>
+									<td>33835-0</td>
+									<td>Lymphocytes Plasmacytoid/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_6"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_6"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_6">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_6">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_6">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_6">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -656,25 +684,27 @@ History:
 								<tr>
 									<td>1266.00</td>
 									<td>7</td>
-									<td>Reaktive Lymphozyten, plasmazytoide Lymphozyten</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_7">8.0</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_7">Basophile Granulozyten</content>
+									</td>
+									<td>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_value_7">0.0</content>
 									</td>
 									<td>%</td>
 									<td/>
-									<td/>
+									<td>0 - 1 null</td>
 									<td/>
 									<td>LOINC</td>
-									<td>33835-0</td>
-									<td>Lymphocytes Plasmacytoid/100 leukocytes in Blood by Manual count</td>
+									<td>707-0</td>
+									<td>Basophils/100 leukocytes in Blood by Manual count</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_comment_7"/>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_comment_7"/>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_7">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_7">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_7">15.03.2018 11:15</content>
+										<content ID="lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_7">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -688,22 +718,25 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18768-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cell counts+Differential studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180315153700+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="769-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Segmented neutrophils/100 leukocytes in Blood by Manual count">
 												<originalText>Segmentkernige neutrophile Granulozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_3"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="39.0" unit="%"/>
@@ -720,7 +753,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -729,7 +765,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -757,12 +793,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="764-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Band form neutrophils/100 leukocytes in Blood by Manual count">
 												<originalText>Stabkernige neutrophile Granulozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_4"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="3.0" unit="%"/>
@@ -779,7 +816,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -788,7 +828,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -816,12 +856,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="737-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lymphocytes/100 leukocytes in Blood by Manual count">
 												<originalText>Lymphozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_6"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_5"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="44.0" unit="%"/>
@@ -838,7 +879,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -847,7 +891,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -875,12 +919,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="33835-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Lymphocytes Plasmacytoid/100 leukocytes in Blood by Manual count">
 												<originalText>Reaktive Lymphozyten, plasmazytoide Lymphozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_7"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_6"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="8.0" unit="%"/>
@@ -897,7 +942,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -906,7 +954,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -925,12 +973,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="714-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Eosinophils/100 leukocytes in Blood by Manual count">
 												<originalText>Eosinophile Granulozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_1"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="2.0" unit="%"/>
@@ -947,7 +996,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -956,7 +1008,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -984,12 +1036,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="707-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Basophils/100 leukocytes in Blood by Manual count">
 												<originalText>Basophile Granulozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_5"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_7"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="0.0" unit="%"/>
@@ -1006,7 +1059,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1015,7 +1071,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1043,12 +1099,13 @@ History:
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="744-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Monocytes/100 leukocytes in Blood by Manual count">
 												<originalText>Monozyten</originalText>
-												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
+												<translation code="1266.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Differentialblutbild, Ausstrich, mikroskopisch"/>
 											</code>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_observation_2"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="4.0" unit="%"/>
@@ -1065,7 +1122,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1074,7 +1134,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1106,7 +1166,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_collectiondate_7"/>
+										<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_collectiondate_7"/>
 									</text>
 									<effectiveTime value="20180315111500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -1128,7 +1188,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss2_62ce58e2-90f4-4c72-9586-6d8b9d9789ab_specimenreceiveddate_7"/>
+												<reference value="#lss2_997fd76a-9815-40d6-986c-faa5a9c2d9c0_specimenreceiveddate_7"/>
 											</text>
 											<effectiveTime value="20180315111500+0100"/>
 										</act>
@@ -1175,9 +1235,11 @@ History:
 								<tr>
 									<td>3368.00</td>
 									<td>1</td>
-									<td/>
 									<td>
-										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_observation_1">Ja</content>
+										<content ID="lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_observation_1"/>
+									</td>
+									<td>
+										<content ID="lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_value_1">Ja</content>
 									</td>
 									<td/>
 									<td/>
@@ -1187,13 +1249,13 @@ History:
 									<td>23826-1</td>
 									<td>Bordetella pertussis DNA [Presence] in Unspecified specimen by NAA with probe detection</td>
 									<td>
-										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_comment_1"/>
+										<content ID="lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_collectiondate_1">15.03.2018 11:15</content>
+										<content ID="lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_collectiondate_1">15.03.2018 11:15</content>
 									</td>
 									<td>
-										<content ID="lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_specimenreceiveddate_1">15.03.2018 11:15</content>
+										<content ID="lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_specimenreceiveddate_1">15.03.2018 11:15</content>
 									</td>
 									<td>15.03.2018 15:37</td>
 									<td>Pipette Mover am 15.03.2018 15:37</td>
@@ -1207,21 +1269,24 @@ History:
 					<entry typeCode="DRIV">
 						<act classCode="ACT" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
 							<code code="18718-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cell marker studies"/>
 							<statusCode code="completed"/>
 							<entryRelationship typeCode="COMP">
 								<organizer classCode="BATTERY" moodCode="EVN">
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
 									<statusCode code="completed"/>
 									<effectiveTime value="20180315153700+0100"/>
 									<component typeCode="COMP">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
 											<code code="23826-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bordetella pertussis DNA [Presence] in Unspecified specimen by NAA with probe detection">
-												<translation code="3368.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss Analysis List" displayName="Bordetella pertussis, Nukleinsäureamplifikation inkl. Amplifikat-Nachweis"/>
+												<translation code="3368.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Bordetella pertussis, Nukleinsäureamplifikation inkl. Amplifikat-Nachweis"/>
 											</code>
 											<text>
-												<reference value="#lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_observation_1"/>
+												<reference value="#lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="BL" value="true"/>
@@ -1238,7 +1303,10 @@ History:
 												</assignedEntity>
 											</performer>
 											<author typeCode="AUT">
-												<functionCode code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												<functionCode nullFlavor="NAV">
+													<originalText>Laborfachperson</originalText>
+													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
+												</functionCode>
 												<time xsi:type="IVL_TS" value="20180315153700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
@@ -1247,7 +1315,7 @@ History:
 														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
-														<country>CHE</country>
+														<country>CH</country>
 													</addr>
 													<telecom value="tel:+41.99.999.99.99" use="PUB"/>
 													<telecom value="mailto:info@lab.ch" use="PUB"/>
@@ -1276,7 +1344,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_collectiondate_1"/>
+										<reference value="#lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_collectiondate_1"/>
 									</text>
 									<effectiveTime value="20180315111500+0100"/>
 									<approachSiteCode nullFlavor="ASKU">
@@ -1298,7 +1366,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss3_77193d08-82a3-4426-bcf8-23622e8d8bc8_specimenreceiveddate_1"/>
+												<reference value="#lss3_f949bbf4-6142-4388-8501-22e6a95c5d45_specimenreceiveddate_1"/>
 											</text>
 											<effectiveTime value="20180315111500+0100"/>
 										</act>
