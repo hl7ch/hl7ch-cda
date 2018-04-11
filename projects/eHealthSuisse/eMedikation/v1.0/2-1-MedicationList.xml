@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ************************************************************ -->
 <!-- Fallbeispiel -->
-<!-- 2.1 eCurrentMedication based on IHE MTP ITEMS -->
+<!-- 2.1 Medication List based -->
 <!-- History: -->
 <!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
 <!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
 <!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
+<!-- 2018.04.11: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation of ordonnace) -->
 <!-- ************************************************************ -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
 	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
@@ -16,53 +17,80 @@
 
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
 
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4" />
+
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2" />
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1" />
+	<!-- Exchange format according to the Swiss EPR -->
+	<templateId root="2.16.756.5.30.1.127.1.4" />
+
 	<!-- IHE PCC -->
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
 
 	<!-- IHE PHARM PML -->
 	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.5" />
 
-	<!-- CDA-CH -->
-	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH" />
+	<!-- CDA-CH-PHARM Medication List -->
+	<templateId root="2.16.756.5.30.1.1.10.1.13" />
 
-	<!-- CDA-CH-PHARM eCurrentMedication-V1 -->
-	<templateId root="2.16.756.5.30.1.1.10.1.3" />
-
-	<!-- id of this eCurrentMedication -->
-	<id root="17931678-20b4-11e6-b67b-9e71128cae77" />
+	<!-- id of this Medication List -->
+	<id root="17931678-20B4-11E6-B67B-9E71128CAE77" />
 
 	<!-- IHE PHARM PML -->
 	<code code="56445-0" codeSystem="2.16.840.1.113883.6.1"
-		codeSystemName="LOINC" displayName="Medication summary Document" />
+		codeSystemName="LOINC" displayName="Medication summary">
+		<translation code="721912009" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Medication summary" />
+	</code>
 
-	<title>eCurrentMedication</title>
+	<title>Medikationsliste</title>
 
-  <effectiveTime value="20120204135500+0100" />
-
+	<effectiveTime value="20120204135500+0100" />
 
 	<confidentialityCode code="1051000195109"
-		codeSystem="2.16.840.1.113883.6.96" displayName="Normal" />
+		codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+		displayName="Normal">
+	</confidentialityCode>
 
 	<languageCode code="de-CH" />
 
+	<!-- Document setId and versionNumber according to CDA-CH v2.0. -->
+	<setId root="17931678-20B4-11E6-B67B-9E71128CAE77" />
+	<versionNumber value="1" />
+
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.1" />
 		<patientRole>
-			<id nullFlavor="NI" />
+			<!-- The patient's id. -->
+			<id extension="11111111" root="2.999" />
 			<patient>
 				<name>
 					<family>Wegmüller</family>
 					<given>Monika</given>
 				</name>
-				<administrativeGenderCode nullFlavor="NI" />
-				<birthTime value="1943" />
+				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<administrativeGenderCode code="F"
+					codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender"
+					displayName="Female" />
+				<birthTime value="19430515" />
 			</patient>
 		</patientRole>
 	</recordTarget>
 
 	<author>
-		<time value="20111129110000+0100" />
+		<templateId root="2.16.756.5.30.1.1.10.9.23" />
+
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 
+			2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Physician" />
+
+		<time value="20120204135500+0100" />
 		<assignedAuthor>
-			<id nullFlavor="NI" />
+			<id extension="7601000234438" root="2.51.1.3" />
 			<assignedPerson>
 				<name>
 					<given>Familien</given>
@@ -70,47 +98,48 @@
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<id nullFlavor="NI" />
+				<id extension="7601000234438" root="2.51.1.3" />
 				<name>Hauszarzt</name>
 				<telecom nullFlavor="NI" />
 				<addr>
 					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
 					<postalCode>8005</postalCode>
 					<city>Zürich</city>
+					<country>CH</country>
 				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>
 
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3" />
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7601000000000" root="2.51.1.3" />
+				<id extension="7601000234438" root="2.51.1.3" />
 				<name>Hausarzt</name>
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
 
+	<informationRecipient typeCode='PRCP'>
+		<templateId root="2.16.756.5.30.1.1.10.2.4" />
+		<intendedRecipient>
+			<addr>
+				<streetAddressLine>Wiesenstr. 12</streetAddressLine>
+				<postalCode>8003</postalCode>
+				<city>Zürich</city>
+				<country>CH</country>
+			</addr>
+		</intendedRecipient>
+	</informationRecipient>
 
-	<legalAuthenticator>
-		<time value="20111129110000+0100" />
-		<signatureCode code="S" />
-		<assignedEntity>
-			<id nullFlavor="NI" />
-			<assignedPerson>
-				<name>
-					<family>Hausarzt</family>
-				</name>
-			</assignedPerson>
-		</assignedEntity>
-	</legalAuthenticator>
 
 	<component contextConductionInd='true'>
 		<structuredBody>
 			<component>
 				<section>
-					<!-- CH-PHARM eCurrentMedication -->
-					<templateId root="2.16.756.5.30.1.1.10.3.9" />
+					<!-- CH-PHARM Medication List Section -->
+					<templateId root="2.16.756.5.30.1.1.10.3.44" />
 
 					<!-- IHE PHARM PML -->
 					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.5" />
@@ -118,7 +147,7 @@
 					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1"
 						codeSystemName="LOINC" displayName="History of medication use" />
 
-					<title>eCurrentMedication</title>
+					<title>Medikamentenliste</title>
 
 					<text>
 						<table>
@@ -140,20 +169,20 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr ID="pml.1">
-									<td ID="pml.1.brandedmedication">Triatec</td>
-									<td ID="pml.1.ingredient">Ramipril</td>
-									<td ID="pml.1.packageform">Tbl</td>
-									<td ID="pml.1.dosequantity">2.5 mg</td>
-									<td ID="pml.1.dosageintakemode">Morgens 1/2 Tablette nehmen</td>
-									<td ID="pml.1.dosagemorning">0.5</td>
-									<td ID="pml.1.dosagelunch">0</td>
-									<td ID="pml.1.dosageevening">0</td>
-									<td ID="pml.1.dosagenight">0</td>
-									<td ID="pml.1.routecode">oral</td>
-									<td ID="pml.1.note"></td>
-									<td ID="pml.1.datefromto"></td>
-									<td ID="pml.1.reason">Bluthochdruck</td>
+								<tr ID="mtp.1">
+									<td ID="mtp.1.brandedmedication">Triatec</td>
+									<td ID="mtp.1.ingredient">Ramipril</td>
+									<td ID="mtp.1.packageform">Tbl</td>
+									<td ID="mtp.1.dosequantity">2.5 mg</td>
+									<td ID="mtp.1.dosageintakemode">Morgens 1/2 Tablette nehmen</td>
+									<td ID="mtp.1.dosagemorning">0.5</td>
+									<td ID="mtp.1.dosagelunch">0</td>
+									<td ID="mtp.1.dosageevening">0</td>
+									<td ID="mtp.1.dosagenight">0</td>
+									<td ID="mtp.1.routecode">oral</td>
+									<td ID="mtp.1.note"></td>
+									<td ID="mtp.1.datefromto"></td>
+									<td ID="mtp.1.reason">Bluthochdruck</td>
 								</tr>
 							</tbody>
 						</table>
@@ -177,10 +206,10 @@
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
 
 							<!-- ID of mtp item, PCC TF2 6.3.4.16.6 -->
-							<id root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+							<id root="C9F758A1-296C-4710-84D4-E181DB8C7478" />
 
 							<text>
-								<reference value="#pml.1" />
+								<reference value="#mtp.1" />
 							</text>
 							<statusCode code="completed" />
 							<effectiveTime xsi:type="IVL_TS">
@@ -189,15 +218,14 @@
 							<effectiveTime operator='A' xsi:type='EIVL_TS'>
 								<event code='ACM' />
 							</effectiveTime>
-							<routeCode code="PO" displayName="Oral"
-								codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" />
+							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+								displayName="Oral use" />
 							<doseQuantity>
 								<center value="0.5">
 								</center>
 							</doseQuantity>
 							<consumable>
-								<manufacturedProduct classCode="MANU"
-									xmlns:pharm="urn:ihe:pharm:medication">
+								<manufacturedProduct classCode="MANU">
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
 									<templateId root="2.16.840.1.113883.10.20.1.53" />
 									<manufacturedMaterial classCode="MMAT"
@@ -209,11 +237,11 @@
 										<code code="C09AA05" codeSystem="2.16.840.1.113883.6.73"
 											codeSystemName="ATC WHO" displayName="ramipril">
 											<originalText>
-												<reference value="#pml.1.ingredient" />
+												<reference value="#mtp.1.ingredient" />
 											</originalText>
 										</code>
 										<name>TRIATEC Tabl 2.5 mg</name>
-										<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1"
 											displayName="Tablet" />
 										<pharm:asContent classCode="CONT">
 											<pharm:containerPackagedMedicine
@@ -252,21 +280,19 @@
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.41" />
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1"
-										displayName="Problem" />
+										displayName="Problem" codeSystemName='LOINC' />
+									<text>
+										<reference value="#mtp.1.reason" />
+									</text>
 									<statusCode code="completed" />
-									<value xsi:type="CD" nullFlavor="OTH">
-										<originalText>
-											<reference value="#pml.1.reason" />
-										</originalText>
-									</value>
 								</observation>
 							</entryRelationship>
 							<entryRelationship typeCode="COMP">
 								<substanceAdministration moodCode="INT"
 									classCode="SBADM">
-									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.11" />
+									<templateId root="2.16.756.5.30.1.1.10.4.37" />
 									<text>
-										<reference value="#pml.1.dosageintakemode" />
+										<reference value="#mtp.1.dosageintakemode" />
 									</text>
 									<consumable>
 										<manufacturedProduct>
@@ -277,22 +303,100 @@
 							</entryRelationship>
 							<entryRelationship typeCode="COMP">
 								<act classCode="ACT" moodCode="EVN">
-									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
+									<templateId root="2.16.756.5.30.1.1.10.4.2" />
 									<templateId root="2.16.840.1.113883.10.20.1.40" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
 									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
 										codeSystemName="LOINC" displayName="Annotation comment" />
 									<text>
-										<reference value="#pml.1.note" />
+										<reference value="#mtp.1.note" />
 									</text>
 									<statusCode code="completed" />
 								</act>
 							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+					<!-- DIS -->
+					<entry>
+						<supply classCode="SPLY" moodCode="EVN">
+
+							<!-- CH-PHARM-DispenseItemEntryContentModule -->
+							<templateId root="2.16.756.5.30.1.1.10.4.42" />
+
+							<!-- IHE PARM DIS 6.3.4.5.1 -->
+							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.4" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+							<templateId root="2.16.840.1.113883.10.20.1.34" />
+
+							<!-- ID of dis item, IHE PARM DIS 6.3.4.5.3.3 -->
+							<id root="488BD23A-20C6-11E6-B67B-9E71128CAE77" />
+
+							<text>
+								<reference value="#dis.1" />
+							</text>
+
+							<quantity unit="1" value="1" />
+							<product>
+								<manufacturedProduct classCode="MANU"
+									xmlns:pharm="urn:ihe:pharm:medication">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<manufacturedMaterial classCode="MMAT"
+										determinerCode="KIND">
+										<!-- CH-PHARM Manufactured Material Content Module -->
+										<templateId root="2.16.756.5.30.1.1.10.4.33" />
+										<!-- Medicine Entry Module -->
+										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
+										<code code="C09AA05" codeSystem="2.16.840.1.113883.6.73"
+											codeSystemName="ATC WHO" displayName="ramipril">
+											<originalText>
+												<reference value="#mtp.1.ingredient" />
+											</originalText>
+										</code>
+										<name>TRIATEC Tabl 2.5 mg</name>
+										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+											displayName="Tablet" />
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedMedicine
+												classCode="CONT" determinerCode="INSTANCE">
+												<!-- National medicinal product code (package-level) -->
+												<pharm:code code="7680538751228" codeSystem="2.51.1.1"
+													codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 100 Stk" />
+												<!-- Brand name (package) -->
+												<pharm:name>TRIATEC Tabl 2.5 mg</pharm:name>
+												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+													displayName="Tablet" />
+												<pharm:capacityQuantity value="20" />
+											</pharm:containerPackagedMedicine>
+										</pharm:asContent>
+										<pharm:ingredient classCode="ACTI"
+											xmlns:pharm="urn:ihe:pharm:medication">
+											<pharm:quantity>
+												<pharm:numerator unit="mg" value="2.5"
+													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+													xsi:type="pharm:PQ" />
+												<pharm:denominator unit="1" value="1"
+													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+													xsi:type="pharm:PQ" />
+											</pharm:quantity>
+											<pharm:ingredient classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="C09AA05" codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="ATC WHO" displayName="ramipril" />
+												<pharm:name>ramipril</pharm:name>
+											</pharm:ingredient>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</product>
 							<entryRelationship typeCode='REFR'>
 								<substanceAdministration classCode='SBADM'
 									moodCode='INT'>
-									<id root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.10' />
+									<templateId root='2.16.756.5.30.1.1.10.4.45' />
+									<id root="C9F758A1-296C-4710-84D4-E181DB8C7478" />
 									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
-										displayName=' Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
+										displayName='Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
 									<consumable>
 										<manufacturedProduct>
 											<manufacturedMaterial nullFlavor='NA' />
@@ -300,12 +404,12 @@
 									</consumable>
 									<reference typeCode="XCRPT">
 										<externalDocument>
-											<id root="658ab5ea-1f63-11e6-b6ba-3e1d05defe78" />
+											<id root="C9F758A1-296C-4710-84D4-E181DB8C7478" />
 										</externalDocument>
 									</reference>
 								</substanceAdministration>
 							</entryRelationship>
-						</substanceAdministration>
+						</supply>
 					</entry>
 				</section>
 			</component>
