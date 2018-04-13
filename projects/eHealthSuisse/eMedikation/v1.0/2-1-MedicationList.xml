@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ************************************************************ -->
-<!-- Fallbeispiel -->
-<!-- 2.1 Medication List based -->
+<!-- Fallbeispiel (extended)-->
+<!-- 2.6 Medication Card based -->
 <!-- History: -->
-<!-- 2016.06.18: Oliver Egger, ahdis gmbh (Document Creation) -->
-<!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
-<!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
-<!-- 2018.04.11: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation of ordonnace) -->
+<!-- 2018.04.13: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation of ordonnace) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
@@ -34,7 +31,7 @@
 	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.5" />
 
 	<!-- CDA-CH-PHARM Medication List -->
-	<templateId root="2.16.756.5.30.1.1.10.1.13" />
+	<templateId root="2.16.756.5.30.1.1.10.1.3" />
 
 	<!-- id of this Medication List -->
 	<id root="17931678-20B4-11E6-B67B-9E71128CAE77" />
@@ -42,11 +39,11 @@
 	<!-- IHE PHARM PML -->
 	<code code="56445-0" codeSystem="2.16.840.1.113883.6.1"
 		codeSystemName="LOINC" displayName="Medication summary">
-		<translation code="721912009" codeSystem="2.16.840.1.113883.6.96"
-			codeSystemName="SNOMED CT" displayName="Medication summary" />
+		<translation code="736378000" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Medication management plan" /> <!-- TOOD register in art-decor -->
 	</code>
 
-	<title>Medikationsliste</title>
+	<title>Medikationsplan</title>
 
 	<effectiveTime value="20120204135500+0100" />
 

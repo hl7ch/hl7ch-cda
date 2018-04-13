@@ -230,7 +230,7 @@
 									<event code='ACV' />
 								</comp>
 							</effectiveTime>
-														<!-- 3 Monate -> 90 Tage * 1 Tablette / 30 Tablette -> 3 Packungen, 
+							<!-- 3 Monate -> 90 Tage * 1 Tablette / 30 Tablette -> 3 Packungen, 
 								repeatNumber=2 -->
 							<repeatNumber value='2' />
 							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
