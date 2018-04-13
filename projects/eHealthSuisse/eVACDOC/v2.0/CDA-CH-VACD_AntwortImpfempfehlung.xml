@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************************
+Swiss eVACDOC - Immunization Recommendation Response from a CDSS
+
+History:
+2014.04.03: Tony Schaller, medshare GmbH: Dokument erstellt im Einklang mit den Schematronregeln
+2014.06.04: Tony Schaller, medshare GmbH: Abgabe CDA-CH-VACD
+2014.11.11: Tony Schaller, medshare GmbH: Korrekturen zur besseren Validierung
+2015.02.09: Tony Schaller, medshare GmbH: Anpassung auf neues Medikationstemplate
+2015.09.16: Tony Schaller, medshare GmbH: Anpassung auf Update CDA-CH-VACD
+2015.10.13: Tony Schaller, medshare GmbH: Korrekur OID CDA-CH-VACD
+2015.11.11: Tony Schaller, medshare GmbH: Generiert mit eHealth Connector
+2016.05.29: Tony Schaller, medshare GmbH: realmCode CHE added
+2017.02.03: Tony Schaller, medshare GmbH: Changing deprecated OID for GS1 GLN and GTIN to the current ones
+2018.04.14: Tony Schaller, medshare GmbH: Update to CDA-CH-VACD V2 (2018)
+
+******************************************************** -->
+<?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+	<!-- CDA-CH V2 (2017) realm. -->
+	<realmCode code='CHE'/>
+
+	<!-- CDA R2 (2005) type code. -->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
+	<!-- CDA-CH V2 ART-DECOR model - structuredBody. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.9"/>
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2"/>
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1"/>
+
+	<!-- CDA-CH-VACD V2 (2018) / CDA-CH-VACD / eVACDOC V2 specification. This is an informational reference, only. -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.5.2'/>
+	<!-- CDA-CH-VACD / Immunization Recommendation Response ART-DECOR model. -->
+	<templateId root='2.16.756.5.30.1.1.10.1.18'/>
+	<!-- Exchange format according to the Swiss EPR is not present, because this document will not be published in the Swiss EPR -->
+	<!-- Immunization Content (IC) Content Module, IHE PCC Technical Framework Revision 11.0 - November 11, 2016. -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'/>
+	<!-- Medical Documents Specification, IHE PCC Technical Framework Revision 11.0 - November 11, 2016. -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
+
+	<!-- Document id according to CDA-CH v2.0. -->
+	<id root="D91FA15C-AC8E-426A-BE0C-2624202E6D45"/>
+
+	<!-- Document code according to CDA-CH-VACD. -->
+	<code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF IMMUNIZATIONS">
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<translation code="41000179103" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Immunization record"/>
+	</code>
+
+	<!-- Document title according to CDA-CH-VACD. -->
+	<title>Impfempfehlung</title>
+
+	<!-- Document creation timestamp according to CDA-CH v2.0. -->
+	<effectiveTime value="20180604"/>
+
+	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
+	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+
+	<!-- Document language code according to CDA-CH v2.0. -->
+	<languageCode code="de-CH"/>
+
+	<!--
+	Document setId and versionNumber according to CDA-CH v2.0.
+	This document is a new version of the one created for CDA-CH v1.2
+	-->
+	<setId root="4a6413ca-aa60-09a6-5aa5-8d534c7c9e0d"/>
+	<versionNumber value="2"/>
+
+	<!-- Masked patient according to CDA-CH v2.0 and case study. -->
+	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.69"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
+		<patientRole>
+			<!-- The patient's id. -->
+			<id root="2.999" extension="898989"/>
+			<addr use="HP">
+				<city>Specimendorf</city>
+				<postalCode>9876</postalCode>
+				<country>CH</country>
+			</addr>
+			<patient>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Female" />
+				<birthTime value="20040404"/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study. -->
+	<author>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+			<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+		</functionCode>
+		<!-- Timestamp of the authorship. -->
+		<time value="20180604"/>
+		<assignedAuthor>
+			<!-- The author's id (GLN). -->
+			<id root="2.51.1.3" extension="7608888888888"/>
+			<!-- The author is a person. -->
+			<assignedPerson>
+				<!-- The person's name - also according to eCH-0011. -->
+				<name use="L">
+					<given>Pieks</given>
+					<family>Ratschlag</family>
+					<prefix qualifier="AC">Prof.</prefix>
+				</name>
+			</assignedPerson>
+			<!-- The author's organization. -->
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7607777777777"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">CDSS AG</name>
+				<!-- The organization's main phone.-->
+				<telecom value="tel:+41.99.999.99.99" use="WP"/>
+				<!-- The organization's main eMail address.-->
+				<telecom value="mailto:info@cdss.ch" use="WP"/>
+				<!-- The organization's main Website.-->
+				<telecom value="http://www.cdss.ch" use="WP"/>
+				<!-- The organization's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Rathaus</streetName>
+					<houseNumber></houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+
+	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
+	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7607777777777"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">CDSS AG</name>
+				<!-- The organization's main phone.-->
+				<telecom value="tel:+41.99.999.99.99" use="WP"/>
+				<!-- The organization's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Rathaus</streetName>
+					<houseNumber></houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
+	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH V2 Recipient -->
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
+		<!-- CDA-CH-VACD Recipient -->
+		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
+		<!-- PRCP=Primary recipient-->
+		<intendedRecipient>
+			<receivedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7608888888888"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Gruppenpraxis CH</name>
+				<!-- The organization's main phone.-->
+				<telecom value="tel:+41.32.234.55.66" use="PUB"/>
+				<!-- The organization's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+
+	<!-- Information about the legal authenticator of a CDA document according to CDA-CH v2.0 and case study. -->
+	<legalAuthenticator>
+		<templateId root="2.16.756.5.30.1.1.10.2.5"/>
+		<!-- Timestamp of the signature. -->
+		<time value="20180604"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<!-- The legal authenticator's id (GLN). -->
+			<id root="2.51.1.3" extension="7608888888888"/>
+			<!-- A legal authenticator MUST be a person. -->
+			<assignedPerson>
+				<!-- The person's name - also according to eCH-0011. -->
+				<name use="L">
+					<given>Pieks</given>
+					<family>Ratschlag</family>
+					<prefix qualifier="AC">Prof.</prefix>
+				</name>
+			</assignedPerson>
+			<!-- The legal authenticator's organization. -->
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7607777777777"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">CDSS AG</name>
+				<!-- The organization's main phone.-->
+				<telecom value="tel:+41.99.999.99.99" use="PUB"/>
+				<!-- The organization's main eMail address.-->
+				<telecom value="mailto:info@cdss.ch" use="WP"/>
+				<!-- The organization's main Website.-->
+				<telecom value="http://www.cdss.ch" use="WP"/>
+				<!-- The organization's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Rathaus</streetName>
+					<houseNumber></houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+
+	<!-- Order reference according to CDA-CH v2.0 and case study. -->
+	<inFulfillmentOf>
+		<order>
+			<id root="915E364D-85A7-4216-B477-1058AB8854FA"/>
+		</order>
+	</inFulfillmentOf>
+
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.47"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.23"/>
+					<templateId root="2.16.840.1.113883.10.20.1.6"/>
+					<code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF IMMUNIZATIONS"/>
+					<title>Impfungen</title>
+					<text>
+						<content ID="noknowniz1">Es sind keine Impfungen bekannt.</content>
+					</text>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+							<templateId root="2.16.840.1.113883.10.20.1.24"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
+							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a64132a-aa60-09a6-7e37-8d534c7c9e0d"/>
+							<code code="182904002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Drug Treatment Unknown"/>
+							<text>
+								<reference value="#noknowniz1"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20180604"/>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id nullFlavor="NAV"/>
+									<manufacturedMaterial>
+										<code nullFlavor="NAV"/>
+										<name nullFlavor="NAV"/>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="19830615"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.48"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.18.3.1"/>
+					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="TREATMENT PLAN"/>
+					<title>Impfplan</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Impfstoff Handelsname</th>
+									<th>Hersteller</th>
+									<th>Zeitraum</th>
+									<th>Impfung gegen</th>
+									<th>Impfempfehlung vom</th>
+									<th>Impfempfehlung durch</th>
+									<th>EKIF Empfehlungskategorie</th>
+									<th>Kommentar</th>
+									<th>Referenz</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID="irs10">BOOSTRIX Polio Inj Susp</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td>04.06.2015 - 11.11.2018</td>
+									<td>
+										<content ID="irs11">Diphterie</content>, <content ID="irs12">Tetanus</content>, <content ID="irs13">Keuchhusten</content>, <content ID="irs14">Kinderlähmung</content>
+									</td>
+									<td>04.06.2018</td>
+									<td>Prof. Pieks Ratschlag</td>
+									<td>
+										<content ID="irs15">Empfohlene Basisimpfungen</content>
+									</td>
+									<td/>
+									<td>
+										<linkHtml href="http://www.bag.admin.ch/ekif/04423/04428/index.html">Schweizerischer Impfplan</linkHtml>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="irs20">MMRVAXPRO Trockensub c Solv</content>
+									</td>
+									<td>Sanofi Pasteur MSD AG</td>
+									<td>04.06.2015 - 11.11.2018</td>
+									<td>
+										<content ID="irs21">Masern</content>, <content ID="irs22">Mumps</content>, <content ID="irs23">Röteln</content>
+									</td>
+									<td>04.06.2018</td>
+									<td>Prof. Pieks Ratschlag</td>
+									<td>
+										<content ID="irs24">Empfohlene Basisimpfungen</content>
+									</td>
+									<td/>
+									<td>
+										<linkHtml href="http://www.bag.admin.ch/ekif/04423/04428/index.html">Schweizerischer Impfplan</linkHtml>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="irs30">ENGERIX B 20 Inj Susp Erw</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td>04.06.2015 - 11.11.2018</td>
+									<td>
+										<content ID="irs31">Hepatitis B</content>
+									</td>
+									<td>04.06.2018</td>
+									<td>Prof. Pieks Ratschlag</td>
+									<td>
+										<content ID="irs32">Empfohlene Basisimpfungen</content>
+									</td>
+									<td/>
+									<td>
+										<linkHtml href="http://www.bag.admin.ch/ekif/04423/04428/index.html">Schweizerischer Impfplan</linkHtml>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="irs40">GARDASIL Inj Susp m Nad o SD</content>
+									</td>
+									<td>Sanofi Pasteur MSD AG</td>
+									<td>04.06.2015 - 11.11.2018</td>
+									<td>
+										<content ID="irs41">Papilloma-Virus</content>
+									</td>
+									<td>04.06.2018</td>
+									<td>Prof. Pieks Ratschlag</td>
+									<td>
+										<content ID="irs42">Empfohlene Basisimpfungen</content>
+									</td>
+									<td/>
+									<td>
+										<linkHtml href="http://www.bag.admin.ch/ekif/04423/04428/index.html">Schweizerischer Impfplan</linkHtml>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="PRP" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.25"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
+							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a6416d6-aa60-09a6-3763-cb8b18c1d388"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#irs10"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20180604"/>
+								<high value="20181111"/>
+							</effectiveTime>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680006370012"/>
+									<manufacturedMaterial>
+										<code code="J07CA02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>BOOSTRIX Polio Inj Susp</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Pieks</given>
+											<family>Ratschlag</family>
+											<prefix qualifier="AC">Prof.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7607777777777"/>
+										<name use="L">CDSS AG</name>
+										<telecom value="tel:+41.99.999.99.99" use="WP"/>
+										<telecom value="mailto:info@cdss.ch" use="WP"/>
+										<telecom value="http://www.cdss.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Rathaus</streetName>
+											<houseNumber></houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641596-aa60-09a6-a65a-8d534c7c9e0d"/>
+									<code code="127786006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Tetanus"/>
+									<text>
+										<reference value="#irs12"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a6416d6-aa60-09a6-d47d-8d534c7c9e0d"/>
+									<code code="72093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Kinderlähmung"/>
+									<text>
+										<reference value="#irs14"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641636-aa60-09a6-e24e-8d534c7c9e0d"/>
+									<code code="39343008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Keuchhusten"/>
+									<text>
+										<reference value="#irs13"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641500-aa60-09a6-57c5-8d534c7c9e0d"/>
+									<code code="76668005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diphterie"/>
+									<text>
+										<reference value="#irs11"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.29"/>
+									<templateId root="2.16.840.1.113883.10.20.1.36"/>
+									<id root="2.16.756.5.30.1.1.1.1.3.5.1"/>
+									<text>
+									<reference value="http://www.bag.admin.ch/ekif/04423/04428/index.html"/>Schweizerischer Impfplan</text>
+								</externalDocument>
+							</reference>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#irs15"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="PRP" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.25"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
+							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641942-aa60-09a6-e12e-cb8b18c1d388"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#irs20"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20180604"/>
+								<high value="20181111"/>
+							</effectiveTime>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680007030014"/>
+									<manufacturedMaterial>
+										<code code="J07BD52" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>MMRVAXPRO Trockensub c Solv</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">Sanofi Pasteur MSD AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Pieks</given>
+											<family>Ratschlag</family>
+											<prefix qualifier="AC">Prof.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7607777777777"/>
+										<name use="L">CDSS AG</name>
+										<telecom value="tel:+41.99.999.99.99" use="WP"/>
+										<telecom value="mailto:info@cdss.ch" use="WP"/>
+										<telecom value="http://www.cdss.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Rathaus</streetName>
+											<houseNumber></houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641942-aa60-09a6-6f26-8d534c7c9e0d"/>
+									<code code="82314000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Röteln"/>
+									<text>
+										<reference value="#irs23"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a64180c-aa60-09a6-a99a-8d534c7c9e0d"/>
+									<code code="47435007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Masern"/>
+									<text>
+										<reference value="#irs21"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a6418ac-aa60-09a6-0260-8d534c7c9e0d"/>
+									<code code="50583002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mumps"/>
+									<text>
+										<reference value="#irs22"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.29"/>
+									<templateId root="2.16.840.1.113883.10.20.1.36"/>
+									<id root="2.16.756.5.30.1.1.1.1.3.5.1"/>
+									<text>
+									<reference value="http://www.bag.admin.ch/ekif/04423/04428/index.html"/>Schweizerischer Impfplan</text>
+								</externalDocument>
+							</reference>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#irs24"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="PRP" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.25"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
+							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641a78-aa60-09a6-5af5-cb8b18c1d388"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#irs30"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20180604"/>
+								<high value="20181111"/>
+							</effectiveTime>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680005340016"/>
+									<manufacturedMaterial>
+										<code code="J07BC01" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>ENGERIX B 20 Inj Susp Erw</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Pieks</given>
+											<family>Ratschlag</family>
+											<prefix qualifier="AC">Prof.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7607777777777"/>
+										<name use="L">CDSS AG</name>
+										<telecom value="tel:+41.99.999.99.99" use="WP"/>
+										<telecom value="mailto:info@cdss.ch" use="WP"/>
+										<telecom value="http://www.cdss.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Rathaus</streetName>
+											<houseNumber></houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641a78-aa60-09a6-7847-8d534c7c9e0d"/>
+									<code code="16584000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hepatitis B"/>
+									<text>
+										<reference value="#irs31"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.29"/>
+									<templateId root="2.16.840.1.113883.10.20.1.36"/>
+									<id root="2.16.756.5.30.1.1.1.1.3.5.1"/>
+									<text>
+									<reference value="http://www.bag.admin.ch/ekif/04423/04428/index.html"/>Schweizerischer Impfplan</text>
+								</externalDocument>
+							</reference>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#irs32"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="PRP" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.25"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
+							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641bb8-aa60-09a6-1a51-cb8b18c1d388"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#irs40"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20180604"/>
+								<high value="20181111"/>
+							</effectiveTime>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680577350031"/>
+									<manufacturedMaterial>
+										<code code="J07BM01" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>GARDASIL Inj Susp m Nad o SD</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">Sanofi Pasteur MSD AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Pieks</given>
+											<family>Ratschlag</family>
+											<prefix qualifier="AC">Prof.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7607777777777"/>
+										<name use="L">CDSS AG</name>
+										<telecom value="tel:+41.99.999.99.99" use="WP"/>
+										<telecom value="mailto:info@cdss.ch" use="WP"/>
+										<telecom value="http://www.cdss.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Rathaus</streetName>
+											<houseNumber></houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641bb8-aa60-09a6-3eb3-8d534c7c9e0d"/>
+									<code code="428570002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Papilloma-Virus"/>
+									<text>
+										<reference value="#irs41"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.29"/>
+									<templateId root="2.16.840.1.113883.10.20.1.36"/>
+									<id root="2.16.756.5.30.1.1.1.1.3.5.1"/>
+									<text>
+									<reference value="http://www.bag.admin.ch/ekif/04423/04428/index.html"/>Schweizerischer Impfplan</text>
+								</externalDocument>
+							</reference>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#irs42"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.2"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+					<title>Kommentar</title>
+					<text>
+						<content ID="k1">Der Impfplan 2014 empfiehlt bei nicht oder unvollständig geimpften Personen:<br/>Diphterie, Tetanus, Keuchhusten (bis 16 Jahre), Kinderlähmung, Masern Mumps und Röteln sowie Varizellen und Hepatitis B sowie humane PapillomaViren.</content>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.40"/>
+							<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+							<text>
+								<reference value="#k1"/>
+							</text>
+							<statusCode code="completed"/>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

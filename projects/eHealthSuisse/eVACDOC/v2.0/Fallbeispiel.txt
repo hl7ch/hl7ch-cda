@@ -1,0 +1,48 @@
+Fallbeispiel:
+-------------
+Schulabgängerin für die Schularztuntersuchung in einer Sprechstunde bei einem Hausarzt. 
+Sie heisst 'Sesuna Tigrinja', ist Asylantin, 14 jährig und stammt aus Eritrea. 
+Bei Frage nach Impfausweis meint sie, dieser sei in Eritrea. Sie hätte dort Impfungen gemacht. 
+Es lässt sich allerdings nicht eruieren, welche Impfungen sie bekommen hatte und ob auch wirklich 
+eine Grundimmunisierung vollständig durchgeführt wurde. Der Impfstatus ist damit unklar.
+Der Hausarzt muss daher bei der Patientin in ihrem eigenen Interesse eine Grundimmunisierung aller Impfungen, 
+welche in der Schweiz empfohlen sind, durchführen.
+Dazu wird eine Anfrage an einen Impcheckservice (CDSS) gemacht. Die Antwort liefert die empfohlenen 
+Impfungen gemäss EKIF (Eidgenössische Kommission für Impffragen). 
+
+1. CDA-CH-VACD_AnfrageImpfempfehlung.xml
+----------------------------------------
+Kommentar: Es handelt sich im vorliegenden Dokument um ein Muster aus einer Hausarztpraxis mit den Angaben, welche erwartet werden können.
+Problemliste: keine Angabe   (gesundes Mädchen in der Pubertät)
+Bisherige Krankheiten: keine Angabe (keine chronischen Erkrankungen, keine Erkrankungen von Relevanz für eine Impfung)
+Allergien und Unverträglichkeiten: keine Angabe  (keine bekannt)
+Codierte Resultate: Keine Angabe
+Codierte Vitalzeichen: Keine Angabe
+Laborbefund: Keine Angabe
+Impfplan: keine Angaben (in der eKG führt man nicht schon den ganzen Impfplan auf, sondern macht die nächste Impfung ab. Ev könnte ein Impfplan vom Impfcheck ausgefüllt werden und in der KG hinterlegt werden). 
+
+2. CDA-CH-VACD_AnwortImpfempfehlung.xml
+---------------------------------------
+Der Impfplan 2014 empfiehlt bei nicht oder unvollständig geimpften Personen: 
+Diphterie, Tetanus, Keuchhusten (bis 16 Jahre), Kinderlähmung, Masern Mumps und Röteln sowie Varizellen und Hepatitis B sowie humane PapillomaViren. 
+Die Antwort des CDSS enthält deshalb folgende Impfungen:
+- Boostrix Polio (Diphterie, Tetanus, Keuchhusten, Kinderlähmung)  GTIN 7680006810013; Pharmacode  2819951
+- MMR (Masern, Mumps, Röteln) GTIN 7680007030014; Pharmacode  3764904
+- Engerix (Hepatitis B)  GTIN 7680005340016; Pharmacode  2506726
+- Gardasil (Papilloma-Virus) GTIN 7680577350031; Pharmacode  3748199
+
+3. CDA-CH-VACD_VerabreichteImpfung.xml
+--------------------------------------
+Die Schulabgängerin wird geimpft mit:
+- Boostrix Polio (Diphterie, Tetanus, Keuchhusten, Kinderlähmung)  GTIN 7680006810013; Pharmacode  2819951
+- MMR (Masen, Mumps, Röteln) GTIN 7680007030014; Pharmacode  3764904
+- Engerix (Hepatitis B)  GTIN 7680005340016; Pharmacode  2506726
+- Gardasil (Papilloma-Virus) GTIN 7680577350031; Pharmacode  3748199
+
+4. CDA-CH-VACD_Impfausweis.xml
+------------------------------
+Der Impfausweis enthält alle Impfungen (im Fallbeispiel nun identisch mit den Verabreichten Impfungen):
+- Boostrix Polio (Diphterie, Tetanus, Keuchhusten, Kinderlähmung)  GTIN 7680006810013; Pharmacode  2819951
+- MMR (Masen, Mumps, Röteln) GTIN 7680007030014; Pharmacode  3764904
+- Engerix (Hepatitis B)  GTIN 7680005340016; Pharmacode  2506726
+- Gardasil (Papilloma-Virus) GTIN 7680577350031; Pharmacode  3748199
