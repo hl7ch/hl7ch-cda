@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ************************************************************ -->
 <!-- Fallbeispiel -->
-<!-- 2.4 eAbgabeAnwendungsDokument based on IHE DIS -->
+<!-- 2.4 Medication Dispense based on IHE DIS -->
 <!-- History: -->
 <!-- 2016.07.11: Oliver Egger, ahdis gmbh (Document Creation) -->
 <!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
 <!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
+<!-- 2018.04.13: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation 
+	of ordonnace) -->
 <!-- ************************************************************ -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
 	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
@@ -16,51 +18,80 @@
 
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
 
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4" />
+
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2" />
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1" />
+	<!-- Exchange format according to the Swiss EPR -->
+	<templateId root="2.16.756.5.30.1.127.1.4" />
 	<!-- IHE PCC -->
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
 
 	<!-- IHE PARM DIS -->
 	<templateId root="1.3.6.1.4.1.19376.1.9.1.1.3" />
 
-	<!-- CDA-CH -->
-	<templateId root="2.16.756.5.30.1.1.1.1" extension="CDA-CH" />
-
-	<!-- CDA-CH-PHARM eAbgabe -->
+	<!-- CDA-CH-PHARM Medication Dispense -->
 	<templateId root="2.16.756.5.30.1.1.10.1.5" />
 
-	<!-- id of the eAbgabeAwendung -->
-	<id root="d8143fea-4778-11e6-beb8-9e71128cae77" />
+
+	<!-- id of the Dispense -->
+	<id root="D8143FEA-4778-11E6-BEB8-9E71128CAE77" />
 
 	<!-- IHE PHARM DIS -->
-	<code code="60593-1" codeSystem="2.16.840.1.113883.6.1"
-		codeSystemName="LOINC" displayName="Medication dispensed" />
-	<title>eAbgabeDokument</title>
+	<code code='60593-1' displayName='Medication dispensed.extended'
+		codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'>
+		<!-- Mapping to the Swiss EPR XDS.b metadata according to the Value-Set 
+			EprDocumentTypeCode (201704.1-beta; 2.16.756.5.30.1.127.3.10.1.27) -->
+		<translation code="275670009" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Medication Dispensation" />
+	</code>
+	<title>Abgabe</title>
 
 	<effectiveTime value="20120204140000+0100" />
 
 	<confidentialityCode code="1051000195109"
-		codeSystem="2.16.840.1.113883.6.96" displayName="Normal" />
+		codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+		displayName="Normal" />
 
 	<languageCode code="de-CH" />
 
+	<!-- Document setId and versionNumber according to CDA-CH v2.0. -->
+	<setId root="D8143FEA-4778-11E6-BEB8-9E71128CAE77" />
+	<versionNumber value="1" />
+
+
 	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.1" />
 		<patientRole>
-			<id nullFlavor="NI" />
+			<!-- The patient's id. -->
+			<id extension="11111111" root="2.999" />
 			<patient>
 				<name>
 					<family>Wegmüller</family>
 					<given>Monika</given>
 				</name>
-				<administrativeGenderCode nullFlavor="NI" />
-				<birthTime value="1943" />
+				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<administrativeGenderCode code="F"
+					codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender"
+					displayName="Female" />
+				<birthTime value="19430515" />
 			</patient>
 		</patientRole>
 	</recordTarget>
 
 	<author>
+		<templateId root="2.16.756.5.30.1.1.10.9.23" />
+
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 
+			2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Physician" />
 		<time value="20120204140000+0100" />
 		<assignedAuthor>
-			<id nullFlavor="NI" />
+			<id extension="7601000234438" root="2.51.1.3" />
 			<assignedPerson>
 				<name>
 					<given>Familien</given>
@@ -68,46 +99,58 @@
 				</name>
 			</assignedPerson>
 			<representedOrganization>
-				<id nullFlavor="NI" />
+				<id extension="7601000234438" root="2.51.1.3" />
 				<name>Hauszarzt</name>
 				<telecom nullFlavor="NI" />
 				<addr>
 					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
 					<postalCode>8005</postalCode>
 					<city>Zürich</city>
+					<country>CH</country>
 				</addr>
 			</representedOrganization>
 		</assignedAuthor>
 	</author>
 
 	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3" />
 		<assignedCustodian>
 			<representedCustodianOrganization>
-				<id extension="7601000000000" root="2.51.1.3" />
+				<id extension="7601000234438" root="2.51.1.3" />
 				<name>Hausarzt</name>
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
 
+	<informationRecipient typeCode='PRCP'>
+		<templateId root="2.16.756.5.30.1.1.10.2.4" />
+		<intendedRecipient>
+			<addr>
+				<streetAddressLine>Wiesenstr. 12</streetAddressLine>
+				<postalCode>8003</postalCode>
+				<city>Zürich</city>
+				<country>CH</country>
+			</addr>
+		</intendedRecipient>
+	</informationRecipient>
 
 	<component contextConductionInd='true'>
 		<structuredBody>
 			<component>
 				<section>
-					<!-- DIS -->
-					<templateId root="2.16.840.1.113883.10.20.1.8" />
+					<!-- IHE DIS -->
 					<templateId root="1.3.6.1.4.1.19376.1.9.1.2.3" />
 
 					<!-- DispenseSectionContentModule -->
 					<templateId root="2.16.756.5.30.1.1.10.3.11" />
 
-					<!-- id of the eAbgabeAwendung -->
-					<id root="d8143fea-4778-11e6-beb8-9e71128cae77" />
+					<!-- id of the Medication Dispense -->
+					<id root="D8143FEA-4778-11E6-BEB8-9E71128CAE77" />
 
 
-					<code code="60590-7" codeSystem="2.16.840.1.113883.6.1"
-						codeSystemName="LOINC" displayName="MEDICATION DISPENSED.BRIEF" />
-					<title>Abgabe von Medikamenten</title>
+					<code code='60590-7' displayName='Medication dispensed.brief'
+						codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' />
+					<title>Abgabe eines Medikaments</title>
 					<text>
 						<table>
 							<thead>
@@ -160,12 +203,12 @@
 							<templateId root="2.16.756.5.30.1.1.10.4.42" />
 
 							<!-- IHE PARM DIS 6.3.4.5.1 -->
-							<templateId root="2.16.840.1.113883.10.20.1.34" />
-							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
 							<templateId root="1.3.6.1.4.1.19376.1.9.1.3.4" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+							<templateId root="2.16.840.1.113883.10.20.1.34" />
 
 							<!-- ID of dis item, IHE PARM DIS 6.3.4.5.3.3 -->
-							<id root="d8143fea-4778-11e6-beb8-9e71128cae77" />
+							<id root="D8143FEA-4778-11E6-BEB8-9E71128CAE77" />
 
 							<text>
 								<reference value="#dis.1" />
@@ -190,7 +233,7 @@
 											</originalText>
 										</code>
 										<name>BELOC ZOK Ret Tabl 50 mg</name>
-										<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+										<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1"
 											displayName="Tablet" />
 										<pharm:asContent classCode="CONT">
 											<pharm:containerPackagedMedicine
@@ -200,7 +243,7 @@
 													codeSystemName="GTIN" displayName="BELOC ZOK Ret Tabl 50 mg 30 Stk" />
 												<!-- Brand name (package) -->
 												<pharm:name>BELOC ZOK Ret Tabl 50 mg</pharm:name>
-												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
+												<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1"
 													displayName="Tablet" />
 												<pharm:capacityQuantity value="30" />
 											</pharm:containerPackagedMedicine>
@@ -229,7 +272,8 @@
 								<substanceAdministration classCode='SBADM'
 									moodCode='INT'>
 									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.10' />
-									<id root="17931678-20b4-11e6-b67b-9e71128cae77" />
+									<templateId root='2.16.756.5.30.1.1.10.4.45' />
+									<id root="17931678-20B4-11E6-B67B-9E71128CCA77" />
 									<code code='MTPItem' codeSystem='1.3.6.1.4.1.19376.1.9.2.2'
 										displayName='Medication Treatment Plan Item' codeSystemName='IHE Pharmacy Item Type List' />
 									<consumable>
@@ -239,52 +283,74 @@
 									</consumable>
 									<reference typeCode="XCRPT">
 										<externalDocument>
-											<id root="17931678-20b4-11e6-b67b-9e71128cae77" />
+											<id root="17931678-20B4-11E6-B67B-9E71128CCA77" />
 										</externalDocument>
 									</reference>
 								</substanceAdministration>
 							</entryRelationship>
 							<!-- dosage insruction -->
 							<entryRelationship typeCode='COMP'>
-								<!-- morgens 1 stück -->
-								<sequenceNumber value='1' />
 								<substanceAdministration classCode='SBADM'
 									moodCode='INT'>
-									<effectiveTime xsi:type='EIVL_TS'>
-										<event code='ACM' />
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.6' />
+
+									<!-- split dosing -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+
+									<effectiveTime xsi:type="IVL_TS">
+										<low value="20120204" />
 									</effectiveTime>
-									<doseQuantity>
-										<center value="1" />
-									</doseQuantity>
+									<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+										displayName="Oral use" />
 									<consumable>
 										<manufacturedProduct>
-											<manufacturedMaterial nullFlavor="NA" />
+											<manufacturedMaterial nullFlavor='NA' />
 										</manufacturedProduct>
 									</consumable>
-								</substanceAdministration>
-							</entryRelationship>
-							<entryRelationship typeCode='COMP'>
-								<!-- abends 0.5 stück -->
-								<sequenceNumber value='2' />
-								<substanceAdministration classCode='SBADM'
-									moodCode='INT'>
-									<effectiveTime xsi:type='EIVL_TS'>
-										<event code='ACV' />
-									</effectiveTime>
-									<doseQuantity>
-										<center value="0.5" />
-									</doseQuantity>
-									<consumable>
-										<manufacturedProduct>
-											<manufacturedMaterial nullFlavor="NA" />
-										</manufacturedProduct>
-									</consumable>
+
+									<!-- dosage insruction -->
+									<entryRelationship typeCode='COMP'>
+										<!-- morgens 1 stück -->
+										<sequenceNumber value='1' />
+										<substanceAdministration classCode='SBADM'
+											moodCode='INT'>
+											<effectiveTime xsi:type='EIVL_TS'>
+												<event code='ACM' />
+											</effectiveTime>
+											<doseQuantity>
+												<center value="1" />
+											</doseQuantity>
+											<consumable>
+												<manufacturedProduct>
+													<manufacturedMaterial nullFlavor="NA" />
+												</manufacturedProduct>
+											</consumable>
+										</substanceAdministration>
+									</entryRelationship>
+									<entryRelationship typeCode='COMP'>
+										<!-- abends 0.5 stück -->
+										<sequenceNumber value='2' />
+										<substanceAdministration classCode='SBADM'
+											moodCode='INT'>
+											<effectiveTime xsi:type='EIVL_TS'>
+												<event code='ACV' />
+											</effectiveTime>
+											<doseQuantity>
+												<center value="0.5" />
+											</doseQuantity>
+											<consumable>
+												<manufacturedProduct>
+													<manufacturedMaterial nullFlavor="NA" />
+												</manufacturedProduct>
+											</consumable>
+										</substanceAdministration>
+									</entryRelationship>
 								</substanceAdministration>
 							</entryRelationship>
 							<entryRelationship typeCode="COMP">
 								<substanceAdministration moodCode="INT"
 									classCode="SBADM">
-									<templateId root="2.16.756.5.30.1.1.1.1.3.10.2.10.10.4.11" />
+									<templateId root="2.16.756.5.30.1.1.10.4.37" />
 									<text>
 										<reference value="#dis.1.dosageintakemode" />
 									</text>
@@ -297,8 +363,9 @@
 							</entryRelationship>
 							<entryRelationship typeCode="COMP">
 								<act classCode="ACT" moodCode="EVN">
-									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
+									<templateId root="2.16.756.5.30.1.1.10.4.2" />
 									<templateId root="2.16.840.1.113883.10.20.1.40" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
 									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
 										codeSystemName="LOINC" displayName="Annotation comment" />
 									<text>
