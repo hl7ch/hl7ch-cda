@@ -33,9 +33,9 @@ History:
 	<!-- HL7 CDA R2 (2005). -->
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
-	<!-- CDA-CH-LREP / Laboratory Reports V1 specification. This is an informational reference, only. -->
+	<!-- CDA-CH-LREP / General Laboratory Reports V1 specification. This is an informational reference, only. -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.9.1'/>
-	<!-- CDA-CH-LREP / Laboratory Reports V1 ART-DECOR model. -->
+	<!-- CDA-CH-LREP / General Laboratory Reports V1 ART-DECOR model. -->
 	<templateId root='2.16.756.5.30.1.1.10.1.10'/>
 	<!-- Exchange format according to the Swiss EPR -->
 	<templateId root='2.16.756.5.30.1.127.1.4'/>
@@ -60,7 +60,7 @@ History:
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
-	<!-- Document code according to CDA-CH v2.0. -->
+	<!-- Document language code according to CDA-CH v2.0. -->
 	<languageCode code="de-CH"/>
 
 	<!--
@@ -176,7 +176,7 @@ History:
 				<name use="L">Labor Viollier</name>
 				<!-- The custodian's main phone nr.-->
 				<telecom use='PUB' value='tel:+41.61.486.11.11'/>
-				<!-- The author's main eMail address.-->
+				<!-- The organization's main eMail address.-->
 				<addr use="PUB">
 					<streetName>Spalenring</streetName>
 					<houseNumber>145/147</houseNumber>

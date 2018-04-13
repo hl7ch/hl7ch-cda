@@ -6,6 +6,7 @@ Case Study no. 5: Biological monitoring SUVA
 
 History:
 2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
+2018.04.14: Tony Schaller, medshare GmbH: Update to make it valid against the latest Schematron Rules, generated from ART-DECOR
 
 ********************************************************
 -->
@@ -31,9 +32,9 @@ History:
 	<!-- HL7 CDA R2 (2005). -->
 	<templateId root="2.16.840.1.113883.10.12.1"/>
 
-	<!-- CDA-CH-LREP / Laboratory Reports V1 specification. This is an informational reference, only. -->
+	<!-- CDA-CH-LREP / General Laboratory Reports V1 specification. This is an informational reference, only. -->
 	<templateId root='2.16.756.5.30.1.1.1.1.3.9.1'/>
-	<!-- CDA-CH-LREP / Laboratory Reports V1 ART-DECOR model. -->
+	<!-- CDA-CH-LREP / General Laboratory Reports V1 ART-DECOR model. -->
 	<templateId root='2.16.756.5.30.1.1.10.1.10'/>
 	<!-- Exchange format according to the Swiss EPR -->
 	<templateId root='2.16.756.5.30.1.127.1.4'/>
@@ -58,7 +59,7 @@ History:
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
 
-	<!-- Document code according to CDA-CH v2.0. -->
+	<!-- Document language code according to CDA-CH v2.0. -->
 	<languageCode code="de-CH"/>
 
 	<!--
@@ -151,6 +152,7 @@ History:
 			</representedOrganization>
 		</assignedAuthor>
 	</author>
+
 	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
 	<custodian>
 		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
@@ -161,9 +163,9 @@ History:
 				<id extension="7609999999999" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
 				<name use="L">Labor Pipette</name>
-				<!-- The author's main phone.-->
+				<!-- The organization's main phone.-->
 				<telecom use='PUB' value='tel:+41.58.656.78.89'/>
-				<!-- The author's address - also according to eCH-0010. -->
+				<!-- The organization's address - also according to eCH-0010. -->
 				<addr use="PUB">
 					<streetName>Laborstrasse</streetName>
 					<houseNumber>23</houseNumber>
@@ -174,6 +176,7 @@ History:
 			</representedCustodianOrganization>
 		</assignedCustodian>
 	</custodian>
+
 	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
 	<informationRecipient typeCode='PRCP'>
 		<!-- CDA-CH V2 Recipient -->
