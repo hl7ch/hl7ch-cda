@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.16866" name="ActPriority" displayName="ActPriority" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachvacd-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.</p>
+            <p>
+                <i>Discussion:</i> This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.7" identifierName="Act&#160;Priority"/>
+        <publishingAuthority name="eHealth Suisse">
+            <addrLine>Schwarzenburgstrasse 165</addrLine>
+            <addrLine>CH-3003 Bern</addrLine>
+            <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="A" codeSystem="2.16.840.1.113883.5.7" displayName="ASAP" level="0" type="L"/>
+            <concept code="CR" codeSystem="2.16.840.1.113883.5.7" displayName="callback results" level="0" type="L"/>
+            <concept code="EL" codeSystem="2.16.840.1.113883.5.7" displayName="elective" level="0" type="L"/>
+            <concept code="EM" codeSystem="2.16.840.1.113883.5.7" displayName="emergency" level="0" type="L"/>
+            <concept code="P" codeSystem="2.16.840.1.113883.5.7" displayName="preop" level="0" type="L"/>
+            <concept code="PRN" codeSystem="2.16.840.1.113883.5.7" displayName="as needed" level="0" type="L"/>
+            <concept code="R" codeSystem="2.16.840.1.113883.5.7" displayName="routine" level="0" type="L"/>
+            <concept code="RR" codeSystem="2.16.840.1.113883.5.7" displayName="rush reporting" level="0" type="L"/>
+            <concept code="S" codeSystem="2.16.840.1.113883.5.7" displayName="stat" level="0" type="L"/>
+            <concept code="T" codeSystem="2.16.840.1.113883.5.7" displayName="timing critical" level="0" type="L"/>
+            <concept code="UD" codeSystem="2.16.840.1.113883.5.7" displayName="use as directed" level="0" type="L"/>
+            <concept code="UR" codeSystem="2.16.840.1.113883.5.7" displayName="urgent" level="0" type="L"/>
+            <concept code="CS" codeSystem="2.16.840.1.113883.5.7" displayName="callback for scheduling" level="0" type="S"/>
+            <concept code="CSP" codeSystem="2.16.840.1.113883.5.7" displayName="callback placer for scheduling" level="1" type="L"/>
+            <concept code="CSR" codeSystem="2.16.840.1.113883.5.7" displayName="contact recipient for scheduling" level="1" type="L"/>
+            <concept code="EL" codeSystem="2.16.840.1.113883.5.7" displayName="elective" level="0" type="L"/>
+            <concept code="EM" codeSystem="2.16.840.1.113883.5.7" displayName="emergency" level="0" type="L"/>
+            <concept code="R" codeSystem="2.16.840.1.113883.5.7" displayName="routine" level="0" type="L"/>
+            <concept code="UR" codeSystem="2.16.840.1.113883.5.7" displayName="urgent" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="1.3.6.1.4.1.12559.11.10.1.3.1.42.1" name="epSOSHealthcareProfessionalRoles" displayName="epSOSHealthcareProfessionalRoles" effectiveDate="2017-11-07T14:06:20" officialReleaseDate="2017-11-07T14:06:20" statusCode="active" versionLabel="201711" url="http://art-decor.org/decor/services/" ident="epsos-" referencedFrom="cdachvacd-">
+        <desc language="en-US">epSOSHealthcareProfessionalRoles</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.2.9.6.2.7" identifierName="ISCO"/>
+        <publishingAuthority name="eHealth Suisse">
+            <addrLine>Schwarzenburgstrasse 165</addrLine>
+            <addrLine>CH-3003 Bern</addrLine>
+            <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="22" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Health professionals" level="0" type="L">
+                <desc language="en-US">Health professionals</desc>
+                <designation language="en-GB" displayName="Health professionals" type="fsn">Health professionals</designation>
+            </concept>
+            <concept code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical doctors" level="0" type="L">
+                <desc language="en-US">Medical doctors</desc>
+                <designation language="en-GB" displayName="Medical doctors" type="fsn">Medical doctors</designation>
+            </concept>
+            <concept code="2211" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Generalist medical practitioners" level="0" type="L">
+                <desc language="en-US">Generalist medical practitioners</desc>
+                <designation language="en-GB" displayName="Generalist medical practitioners" type="fsn">Generalist medical practitioners</designation>
+            </concept>
+            <concept code="2212" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Specialist medical practitioners" level="0" type="L">
+                <desc language="en-US">Specialist medical practitioners</desc>
+                <designation language="en-GB" displayName="Specialist medical practitioners" type="fsn">Specialist medical practitioners</designation>
+            </concept>
+            <concept code="222" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Nursing and midwifery professionals" level="0" type="L">
+                <desc language="en-US">Nursing and midwifery professionals</desc>
+                <designation language="en-GB" displayName="Nursing and midwifery professionals" type="fsn">Nursing and midwifery professionals</designation>
+            </concept>
+            <concept code="2221" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Nursing professionals" level="0" type="L">
+                <desc language="en-US">Nursing professionals</desc>
+                <designation language="en-GB" displayName="Nursing professionals" type="fsn">Nursing professionals</designation>
+            </concept>
+            <concept code="2222" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Midwifery professionals" level="0" type="L">
+                <desc language="en-US">Midwifery professionals</desc>
+                <designation language="en-GB" displayName="Midwifery professionals" type="fsn">Midwifery professionals</designation>
+            </concept>
+            <concept code="223" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Traditional and complementary medicine professionals" level="0" type="L">
+                <desc language="en-US">Traditional and complementary medicine professionals</desc>
+                <designation language="en-GB" displayName="Traditional and complementary medicine professionals" type="fsn">Traditional and complementary medicine professionals</designation>
+            </concept>
+            <concept code="224" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Paramedical practitioners" level="0" type="L">
+                <desc language="en-US">Paramedical practitioners</desc>
+                <designation language="en-GB" displayName="Paramedical practitioners" type="fsn">Paramedical practitioners</designation>
+            </concept>
+            <concept code="225" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Veterinarians" level="0" type="L">
+                <desc language="en-US">Veterinarians</desc>
+                <designation language="en-GB" displayName="Veterinarians" type="fsn">Veterinarians</designation>
+            </concept>
+            <concept code="226" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Other health professionals" level="0" type="L">
+                <desc language="en-US">Other health professionals</desc>
+                <designation language="en-GB" displayName="Other health professionals" type="fsn">Other health professionals</designation>
+            </concept>
+            <concept code="2261" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Dentists" level="0" type="L">
+                <desc language="en-US">Dentists</desc>
+                <designation language="en-GB" displayName="Dentists" type="fsn">Dentists</designation>
+            </concept>
+            <concept code="2262" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Pharmacists" level="0" type="L">
+                <desc language="en-US">Pharmacists</desc>
+                <designation language="en-GB" displayName="Pharmacists" type="fsn">Pharmacists</designation>
+            </concept>
+            <concept code="2263" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Environmental and occupational health and hygiene professionals" level="0" type="L">
+                <desc language="en-US">Environmental and occupational health and hygiene professionals</desc>
+                <designation language="en-GB" displayName="Environmental and occupational health and hygiene professionals" type="fsn">Environmental and occupational health and hygiene professionals</designation>
+            </concept>
+            <concept code="2264" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Physiotherapists" level="0" type="L">
+                <desc language="en-US">Physiotherapists</desc>
+                <designation language="en-GB" displayName="Physiotherapists" type="fsn">Physiotherapists</designation>
+            </concept>
+            <concept code="2265" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Dieticians and nutritionists" level="0" type="L">
+                <desc language="en-US">Dieticians and nutritionists</desc>
+                <designation language="en-GB" displayName="Dieticians and nutritionists" type="fsn">Dieticians and nutritionists</designation>
+            </concept>
+            <concept code="2266" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Audiologists and speech therapists" level="0" type="L">
+                <desc language="en-US">Audiologists and speech therapists</desc>
+                <designation language="en-GB" displayName="Audiologists and speech therapists" type="fsn">Audiologists and speech therapists</designation>
+            </concept>
+            <concept code="2267" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Optometrists and ophthalmic opticians" level="0" type="L">
+                <desc language="en-US">Optometrists and ophthalmic opticians</desc>
+                <designation language="en-GB" displayName="Optometrists and ophthalmic opticians" type="fsn">Optometrists and ophthalmic opticians</designation>
+            </concept>
+            <concept code="2269" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Health professionals not elsewhere classified" level="0" type="L">
+                <desc language="en-US">Health professionals not elsewhere classified</desc>
+                <designation language="en-GB" displayName="Health professionals not elsewhere classified" type="fsn">Health professionals not elsewhere classified</designation>
+            </concept>
+            <concept code="32" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Health associate professionals" level="0" type="L">
+                <desc language="en-US">Health associate professionals</desc>
+                <designation language="en-GB" displayName="Health associate professionals" type="fsn">Health associate professionals</designation>
+            </concept>
+            <concept code="321" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical and pharmaceutical technicians" level="0" type="L">
+                <desc language="en-US">Medical and pharmaceutical technicians</desc>
+                <designation language="en-GB" displayName="Medical and pharmaceutical technicians" type="fsn">Medical and pharmaceutical technicians</designation>
+            </concept>
+            <concept code="3211" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical imaging and therapeutic equipment technicians" level="0" type="L">
+                <desc language="en-US">Medical imaging and therapeutic equipment technicians</desc>
+                <designation language="en-GB" displayName="Medical imaging and therapeutic equipment technicians" type="fsn">Medical imaging and therapeutic equipment technicians</designation>
+            </concept>
+            <concept code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical and pathology laboratory technicians" level="0" type="L">
+                <desc language="en-US">Medical and pathology laboratory technicians</desc>
+                <designation language="en-GB" displayName="Medical and pathology laboratory technicians" type="fsn">Medical and pathology laboratory technicians</designation>
+            </concept>
+            <concept code="3213" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Pharmaceutical technicians and assistants" level="0" type="L">
+                <desc language="en-US">Pharmaceutical technicians and assistants</desc>
+                <designation language="en-GB" displayName="Pharmaceutical technicians and assistants" type="fsn">Pharmaceutical technicians and assistants</designation>
+            </concept>
+            <concept code="3214" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical and dental prosthetic technicians" level="0" type="L">
+                <desc language="en-US">Medical and dental prosthetic technicians</desc>
+                <designation language="en-GB" displayName="Medical and dental prosthetic technicians" type="fsn">Medical and dental prosthetic technicians</designation>
+            </concept>
+            <concept code="322" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Nursing and midwifery associate professionals" level="0" type="L">
+                <desc language="en-US">Nursing and midwifery associate professionals</desc>
+                <designation language="en-GB" displayName="Nursing and midwifery associate professionals" type="fsn">Nursing and midwifery associate professionals</designation>
+            </concept>
+            <concept code="3221" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Nursing associate professionals" level="0" type="L">
+                <desc language="en-US">Nursing associate professionals</desc>
+                <designation language="en-GB" displayName="Nursing associate professionals" type="fsn">Nursing associate professionals</designation>
+            </concept>
+            <concept code="3222" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Midwifery associate professionals" level="0" type="L">
+                <desc language="en-US">Midwifery associate professionals</desc>
+                <designation language="en-GB" displayName="Midwifery associate professionals" type="fsn">Midwifery associate professionals</designation>
+            </concept>
+            <concept code="323" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Traditional and complementary medicine associate professionals" level="0" type="L">
+                <desc language="en-US">Traditional and complementary medicine associate professionals</desc>
+                <designation language="en-GB" displayName="Traditional and complementary medicine associate professionals" type="fsn">Traditional and complementary medicine associate professionals</designation>
+            </concept>
+            <concept code="325" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Other health associate professionals" level="0" type="L">
+                <desc language="en-US">Other health associate professionals</desc>
+                <designation language="en-GB" displayName="Other health associate professionals" type="fsn">Other health associate professionals</designation>
+            </concept>
+            <concept code="3251" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Dental assistants and therapists" level="0" type="L">
+                <desc language="en-US">Dental assistants and therapists</desc>
+                <designation language="en-GB" displayName="Dental assistants and therapists" type="fsn">Dental assistants and therapists</designation>
+            </concept>
+            <concept code="3252" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical records and health information technicians" level="0" type="L">
+                <desc language="en-US">Medical records and health information technicians</desc>
+                <designation language="en-GB" displayName="Medical records and health information technicians" type="fsn">Medical records and health information technicians</designation>
+            </concept>
+            <concept code="3253" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Community health workers" level="0" type="L">
+                <desc language="en-US">Community health workers</desc>
+                <designation language="en-GB" displayName="Community health workers" type="fsn">Community health workers</designation>
+            </concept>
+            <concept code="3254" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Dispensing opticians" level="0" type="L">
+                <desc language="en-US">Dispensing opticians</desc>
+                <designation language="en-GB" displayName="Dispensing opticians" type="fsn">Dispensing opticians</designation>
+            </concept>
+            <concept code="3255" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Physiotherapy technicians and assistants" level="0" type="L">
+                <desc language="en-US">Physiotherapy technicians and assistants</desc>
+                <designation language="en-GB" displayName="Physiotherapy technicians and assistants" type="fsn">Physiotherapy technicians and assistants</designation>
+            </concept>
+            <concept code="3256" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Medical assistants" level="0" type="L">
+                <desc language="en-US">Medical assistants</desc>
+                <designation language="en-GB" displayName="Medical assistants" type="fsn">Medical assistants</designation>
+            </concept>
+            <concept code="3257" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Environmental and occupational health inspectors and associates" level="0" type="L">
+                <desc language="en-US">Environmental and occupational health inspectors and associates</desc>
+                <designation language="en-GB" displayName="Environmental and occupational health inspectors and associates" type="fsn">Environmental and occupational health inspectors and associates</designation>
+            </concept>
+            <concept code="3258" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Ambulance workers" level="0" type="L">
+                <desc language="en-US">Ambulance workers</desc>
+                <designation language="en-GB" displayName="Ambulance workers" type="fsn">Ambulance workers</designation>
+            </concept>
+            <concept code="3259" codeSystem="2.16.840.1.113883.2.9.6.2.7" displayName="Health associate professionals not elsewhere classified" level="0" type="L">
+                <desc language="en-US">Health associate professionals not elsewhere classified</desc>
+                <designation language="en-GB" displayName="Health associate professionals not elsewhere classified" type="fsn">Health associate professionals not elsewhere classified</designation>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>
