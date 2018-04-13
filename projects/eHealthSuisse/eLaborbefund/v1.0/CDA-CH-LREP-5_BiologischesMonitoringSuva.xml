@@ -290,44 +290,13 @@ History:
 							</thead>
 							<tbody>
 								<tr>
-									<td>1233.00</td>
+									<td>1492.00</td>
 									<td>1</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_1">Chrom</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_1">Kobalt</content>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_value_1">10.6</content>
-									</td>
-									<td>nmol/L</td>
-									<td/>
-									<td/>
-									<td/>
-									<td>LOINC</td>
-									<td>42219-6</td>
-									<td>Chromium [Moles/volume] in Urine</td>
-									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_comment_1"/>
-									</td>
-									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_collectiondate_1">16.03.2018 08:40</content>
-									</td>
-									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_specimenreceiveddate_1">18.03.2018 09:45</content>
-									</td>
-									<td>18.03.2018 10:28</td>
-									<td>Pipette Mover am 18.03.2018 10:28</td>
-									<td>Pipette Documenter am 18.03.2018 10:28</td>
-									<td>Urin</td>
-									<td/>
-								</tr>
-								<tr>
-									<td>1492.00</td>
-									<td>2</td>
-									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_2">Kobalt</content>
-									</td>
-									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_value_2">17.3</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_value_1">17.3</content>
 									</td>
 									<td>nmol/L</td>
 									<td/>
@@ -337,13 +306,13 @@ History:
 									<td>34268-3</td>
 									<td>Cobalt [Moles/volume] in Urine</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_comment_2"/>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_comment_1"/>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_collectiondate_2">16.03.2018 08:40</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_collectiondate_1">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_specimenreceiveddate_2">18.03.2018 09:45</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_specimenreceiveddate_1">18.03.2018 09:45</content>
 									</td>
 									<td>18.03.2018 10:28</td>
 									<td>Pipette Mover am 18.03.2018 10:28</td>
@@ -353,12 +322,12 @@ History:
 								</tr>
 								<tr>
 									<td>1510.00</td>
-									<td>3</td>
+									<td>2</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_3">Kreatinin</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_2">Kreatinin</content>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_value_3">15.3</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_value_2">15.3</content>
 									</td>
 									<td>mmol/L</td>
 									<td/>
@@ -368,13 +337,13 @@ History:
 									<td>14683-7</td>
 									<td>Creatinine [Moles/volume] in Urine</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_comment_3"/>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_comment_2"/>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_collectiondate_3">16.03.2018 08:40</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_collectiondate_2">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_specimenreceiveddate_3">18.03.2018 09:45</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_specimenreceiveddate_2">18.03.2018 09:45</content>
 									</td>
 									<td>18.03.2018 10:28</td>
 									<td>Pipette Mover am 18.03.2018 10:28</td>
@@ -384,12 +353,12 @@ History:
 								</tr>
 								<tr>
 									<td>1582.00</td>
-									<td>4</td>
+									<td>3</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_4">Nickel</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_3">Nickel</content>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_value_4">53.6</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_value_3">53.6</content>
 									</td>
 									<td>nmol/L</td>
 									<td/>
@@ -399,13 +368,44 @@ History:
 									<td>34343-4</td>
 									<td>Nickel [Moles/volume] in Urine</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_comment_4"/>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_comment_3"/>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_collectiondate_4">16.03.2018 08:40</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_collectiondate_3">16.03.2018 08:40</content>
 									</td>
 									<td>
-										<content ID="lss1_8a7b39ce-4240-42d9-966b-abcb34518965_specimenreceiveddate_4">18.03.2018 09:45</content>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_specimenreceiveddate_3">18.03.2018 09:45</content>
+									</td>
+									<td>18.03.2018 10:28</td>
+									<td>Pipette Mover am 18.03.2018 10:28</td>
+									<td>Pipette Documenter am 18.03.2018 10:28</td>
+									<td>Urin</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>1233.00</td>
+									<td>4</td>
+									<td>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_4">Chrom</content>
+									</td>
+									<td>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_value_4">10.6</content>
+									</td>
+									<td>nmol/L</td>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>42219-6</td>
+									<td>Chromium [Moles/volume] in Urine</td>
+									<td>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_comment_4"/>
+									</td>
+									<td>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_collectiondate_4">16.03.2018 08:40</content>
+									</td>
+									<td>
+										<content ID="lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_specimenreceiveddate_4">18.03.2018 09:45</content>
 									</td>
 									<td>18.03.2018 10:28</td>
 									<td>Pipette Mover am 18.03.2018 10:28</td>
@@ -437,7 +437,7 @@ History:
 												<translation code="1233.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Chrom mittels AAS"/>
 											</code>
 											<text>
-												<reference value="#lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_1"/>
+												<reference value="#lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_4"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="10.6" unit="nmol/L"/>
@@ -491,7 +491,7 @@ History:
 												<translation code="1492.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Kobalt mittels AAS"/>
 											</code>
 											<text>
-												<reference value="#lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_2"/>
+												<reference value="#lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_1"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="17.3" unit="nmol/L"/>
@@ -545,7 +545,7 @@ History:
 												<translation code="1582.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Nickel mittels AAS"/>
 											</code>
 											<text>
-												<reference value="#lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_4"/>
+												<reference value="#lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_3"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="53.6" unit="nmol/L"/>
@@ -599,7 +599,7 @@ History:
 												<translation code="1510.00" codeSystem="2.16.756.5.30.1.129.1.3" codeSystemName="Swiss analysis list (AL)" displayName="Kreatinin, in einer weiteren Körperflüssigkeit"/>
 											</code>
 											<text>
-												<reference value="#lss1_8a7b39ce-4240-42d9-966b-abcb34518965_observation_3"/>
+												<reference value="#lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_observation_2"/>
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="15.3" unit="mmol/L"/>
@@ -651,7 +651,7 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.3.1.2"/>
 									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Collection date of Unspecified specimen"/>
 									<text>
-										<reference value="#lss1_8a7b39ce-4240-42d9-966b-abcb34518965_collectiondate_4"/>
+										<reference value="#lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_collectiondate_4"/>
 									</text>
 									<effectiveTime value="20180316084000+0100"/>
 									<participant typeCode="PRD">
@@ -670,7 +670,7 @@ History:
 											<id nullFlavor="ASKU"/>
 											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Receive Time"/>
 											<text>
-												<reference value="#lss1_8a7b39ce-4240-42d9-966b-abcb34518965_specimenreceiveddate_4"/>
+												<reference value="#lss1_5a902bc2-b341-489d-8ed6-afebb741ab56_specimenreceiveddate_4"/>
 											</text>
 											<effectiveTime value="20180318094500+0100"/>
 										</act>
