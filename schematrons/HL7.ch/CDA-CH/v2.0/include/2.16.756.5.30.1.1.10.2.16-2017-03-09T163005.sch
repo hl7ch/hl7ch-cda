@@ -19,40 +19,40 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.16
 Context: *[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]
 Item: (cdach_header_OrderReference)
 -->
-    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]" id="d130e593-false-d129925e0">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'])&gt;=1">(cdach_header_OrderReference): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'] is mandatory [min 1x].</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'])&lt;=1">(cdach_header_OrderReference): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'] appears too often [max 1x].</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:order)&gt;=1">(cdach_header_OrderReference): element hl7:order is required [min 1x].</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:order)&lt;=1">(cdach_header_OrderReference): element hl7:order appears too often [max 1x].</assert>
+    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]" id="d523664e1390-false-d1041503e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'])&gt;=1">(cdach_header_OrderReference): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'])&lt;=1">(cdach_header_OrderReference): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16'] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:order)&gt;=1">(cdach_header_OrderReference): element hl7:order is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:order)&lt;=1">(cdach_header_OrderReference): element hl7:order appears too often [max 1x].</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.16
 Context: *[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']
 Item: (cdach_header_OrderReference)
 -->
-    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']" id="d130e596-false-d129953e0">
+    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']" id="d523664e1393-false-d1041531e0">
         <extends rule="II"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_OrderReference): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="string(@root)=('2.16.756.5.30.1.1.10.2.16')">(cdach_header_OrderReference): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.16'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_OrderReference): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="string(@root)=('2.16.756.5.30.1.1.10.2.16')">(cdach_header_OrderReference): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.16'.</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.16
 Context: *[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:order
 Item: (cdach_header_OrderReference)
 -->
-    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:order" id="d130e598-false-d129967e0">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:id)&gt;=1">(cdach_header_OrderReference): element hl7:id is required [min 1x].</assert>
+    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:order" id="d523664e1395-false-d1041545e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="count(hl7:id)&gt;=1">(cdach_header_OrderReference): element hl7:id is required [min 1x].</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.2.16
 Context: *[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:order/hl7:id
 Item: (cdach_header_OrderReference)
 -->
-    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:order/hl7:id" id="d130e599-false-d129980e0">
+    <rule context="*[hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]]/hl7:inFulfillmentOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.16']]/hl7:order/hl7:id" id="d523664e1396-false-d1041558e0">
         <extends rule="II"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_OrderReference): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="not(@extension) or string-length(@extension)&gt;0">(cdach_header_OrderReference): Attribute @extension SHALL be of data type 'st'</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="@root">(cdach_header_OrderReference): attribute @root SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.16" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_header_OrderReference): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_OrderReference): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="@root">(cdach_header_OrderReference): attribute @root SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_header_OrderReference): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.16" test="not(@extension) or string-length(@extension)&gt;0">(cdach_header_OrderReference): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 </pattern>

@@ -168,7 +168,7 @@
     <include href="include/2.16.756.5.30.1.1.10.3.2-2017-03-28T225351.sch"/>
    <!-- chpcc_section_VitalSignsCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.4-2017-03-28T225328.sch"/>
-   <!-- cdach_section_OriginalRepresentation -->
+   <!-- cdach_section_OriginalRepresentationCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.45-2018-02-08T085327.sch"/>
    <!-- chpcc_entry_AnnotationComments -->
     <include href="include/2.16.756.5.30.1.1.10.4.2-2017-03-24T164730.sch"/>

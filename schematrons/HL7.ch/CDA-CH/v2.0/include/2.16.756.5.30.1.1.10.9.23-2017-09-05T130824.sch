@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]" id="d189909e4161-false-d724837e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]" id="d523664e4757-false-d1059117e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']])&gt;=1">(cdach_other_Author): element hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']] is required [min 1x].</assert>
     </rule>
    <!--
@@ -21,7 +21,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]" id="d189909e4203-false-d724933e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]" id="d523664e4840-false-d1059213e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23'])&gt;=1">(cdach_other_Author): element hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23'])&lt;=1">(cdach_other_Author): element hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor])&gt;=1">(cdach_other_Author): element hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor] is required [min 1x].</assert>
@@ -36,7 +36,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']" id="d189909e4206-false-d725025e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']" id="d523664e4845-false-d1059305e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="string(@root)=('2.16.756.5.30.1.1.10.9.23')">(cdach_other_Author): The value for @root SHALL be '2.16.756.5.30.1.1.10.9.23'.</assert>
@@ -46,7 +46,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d189909e4208-false-d725042e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d523664e4850-false-d1059322e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -55,45 +55,35 @@ Item: (cdach_other_Author)
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@nullFlavor or exists(doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem][not(@codeSystemVersion) or @codeSystemVersion=$theCodeSystemVersion]])">(cdach_other_Author): The element value SHALL be one of '2.16.756.5.30.1.127.3.10.1.1.3 EprAuthorRole (DYNAMIC)'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@nullFlavor) or @nullFlavor=('NAV')">(cdach_other_Author): The null value '<value-of select="@nullFlavor"/>' for @code SHALL be selected from the set of valid null flavors defined for this attribute or those associated with Value Set 2.16.756.5.30.1.127.3.10.1.1.3 EprAuthorRole (DYNAMIC).</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@nullFlavor) or string-length(@nullFlavor)&gt;0">(cdach_other_Author): Attribute @nullFlavor SHALL be of data type 'st'</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_Author): Attribute @displayName SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@code) or (string-length(@code)&gt;0 and not(matches(@code,'\s')))">(cdach_other_Author): Attribute @code SHALL be of data type 'cs'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="string(@codeSystem)=('2.16.840.1.113883.6.96') or not(@codeSystem)">(cdach_other_Author): The value for @codeSystem SHALL be '2.16.840.1.113883.6.96'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="string(@codeSystemName)=('SNOMED CT') or not(@codeSystemName)">(cdach_other_Author): The value for @codeSystemName SHALL be 'SNOMED CT'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_other_Author): Attribute @codeSystemName SHALL be of data type 'st'</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="string(@codeSystem)=('2.16.840.1.113883.6.96') or not(@codeSystem)">(cdach_other_Author): The value for @codeSystem SHALL be '2.16.840.1.113883.6.96'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_Author): Attribute @displayName SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(@code and @codeSystem) or (@nullFlavor='NAV')">(cdach_other_Author): Either a code with its code system or nullFlavor='NAV' is required.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@nullFlavor) or (hl7:originalText)">(cdach_other_Author): Other Caregivers description MUST be declared in the originalText element in case of nullFlavor.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:originalText)&lt;=1">(cdach_other_Author): element hl7:originalText appears too often [max 1x].</assert>
-    </rule>
-   <!--
-Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
-Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]/hl7:originalText
-Item: (cdach_other_Author)
--->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]/hl7:originalText" id="d189909e4237-false-d725100e0">
-        <extends rule="ED"/>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]/hl7:translation
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]/hl7:translation" id="d189909e4240-false-d725110e0">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@displayName">(cdach_other_Author): attribute @displayName SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_Author): Attribute @displayName SHALL be of data type 'st'</assert>
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:functionCode[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.127.3.10.1.1.3-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]/hl7:translation" id="d523664e4914-false-d1059373e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@code">(cdach_other_Author): attribute @code SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@code) or (string-length(@code)&gt;0 and not(matches(@code,'\s')))">(cdach_other_Author): Attribute @code SHALL be of data type 'cs'</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@codeSystemName">(cdach_other_Author): attribute @codeSystemName SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_other_Author): Attribute @codeSystemName SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@codeSystem">(cdach_other_Author): attribute @codeSystem SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@codeSystem) or matches(@codeSystem,'^[0-2](\.(0|[1-9]\d*))*$')">(cdach_other_Author): Attribute @codeSystem SHALL be of data type 'oid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@codeSystemName">(cdach_other_Author): attribute @codeSystemName SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_other_Author): Attribute @codeSystemName SHALL be of data type 'st'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@displayName">(cdach_other_Author): attribute @displayName SHALL be present.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_Author): Attribute @displayName SHALL be of data type 'st'</assert>
     </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:time
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:time" id="d189909e4247-false-d725144e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:time" id="d523664e4929-false-d1059407e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(*)">(cdach_other_Author): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
@@ -103,7 +93,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor" id="d189909e4250-false-d725198e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor" id="d523664e4935-false-d1059461e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(assignedAuthoringDevice/softwareName) or (representedOrganization)">(cdach_other_Author): For device authors the element representedOrganization is REQUIRED.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:id)&gt;=1">(cdach_other_Author): element hl7:id is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="count(hl7:id)&lt;=1">(cdach_other_Author): element hl7:id appears too often [max 1x].</assert>
@@ -119,12 +109,12 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:id
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:id" id="d189909e4253-false-d725312e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:id" id="d523664e4940-false-d1059575e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="string(@nullFlavor)=('NAV') or not(@nullFlavor)">(cdach_other_Author): The value for @nullFlavor SHALL be 'NAV'.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_Author): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="string(@root)=('2.51.1.3') or not(@root)">(cdach_other_Author): The value for @root SHALL be '2.51.1.3'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_Author): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(@root='2.51.1.3' and @extension) or (@nullFlavor='NAV')">(cdach_other_Author): Either the GS1 GLN or nullFlavor='NAV' is REQUIRED</assert>
     </rule>
    <!--
@@ -132,13 +122,12 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:id
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:id" id="d189909e4271-false-d725334e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:id" id="d523664e4971-false-d1059597e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@extension">(cdach_other_Author): attribute @extension SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_Author): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="@root">(cdach_other_Author): attribute @root SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@root) or (string-length(@root)&gt;0 and not(matches(@root,'\s')))">(cdach_other_Author): Attribute @root SHALL be of data type 'cs'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_Author): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 
    <!--
@@ -254,7 +243,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.23
 Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:telecom
 Item: (cdach_other_Author)
 -->
-    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:telecom" id="d189909e4283-false-d725542e0">
+    <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:telecom" id="d523664e4995-false-d1059802e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.23" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_Author): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -459,10 +448,9 @@ Context: *[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:au
 Item: (cdach_other_OrganizationCompilationWithName)
 -->
     <rule context="*[hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]]/hl7:author[hl7:templateId[@root='2.16.756.5.30.1.1.10.9.23']]/hl7:assignedAuthor/hl7:representedOrganization/hl7:id">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="@extension">(cdach_other_OrganizationCompilationWithName): attribute @extension SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithName): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="@root">(cdach_other_OrganizationCompilationWithName): attribute @root SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_other_OrganizationCompilationWithName): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithName): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 
    <!--

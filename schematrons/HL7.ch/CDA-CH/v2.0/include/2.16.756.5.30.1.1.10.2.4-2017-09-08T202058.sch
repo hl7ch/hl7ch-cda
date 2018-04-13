@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.4
 Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]
 Item: (cdach_header_InformationRecipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]" id="d189909e1700-false-d708386e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]" id="d523664e2034-false-d1042284e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="count(hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']])&gt;=1">(cdach_header_InformationRecipient): element hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']] is required [min 1x].</assert>
     </rule>
    <!--
@@ -21,7 +21,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.4
 Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]
 Item: (cdach_header_InformationRecipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]" id="d189909e1742-false-d708474e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]" id="d523664e2076-false-d1042372e0">
         <let name="theAttValue" value="distinct-values(tokenize(normalize-space(@typeCode),' '))"/>
         <let name="theAttCheck" value="distinct-values(doc('include/voc-2.16.840.1.113883.1.11.19366-DYNAMIC.xml')/*/valueSet/conceptList/concept[@code = $theAttValue]/@code)"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="not(@typeCode) or count($theAttValue) = count($theAttCheck)">(cdach_header_InformationRecipient): The value for typeCode SHALL be selected from value set '2.16.840.1.113883.1.11.19366' x_InformationRecipient (DYNAMIC).</assert>
@@ -35,7 +35,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.4
 Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']
 Item: (cdach_header_InformationRecipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']" id="d189909e1767-false-d708554e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']" id="d523664e2101-false-d1042452e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InformationRecipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="string(@root)=('2.16.756.5.30.1.1.10.2.4')">(cdach_header_InformationRecipient): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.4'.</assert>
@@ -45,7 +45,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.4
 Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient
 Item: (cdach_header_InformationRecipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient" id="d189909e1769-false-d708605e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient" id="d523664e2103-false-d1042503e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="count(hl7:informationRecipient)&lt;=1">(cdach_header_InformationRecipient): element hl7:informationRecipient appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="count(hl7:receivedOrganization)&lt;=1">(cdach_header_InformationRecipient): element hl7:receivedOrganization appears too often [max 1x].</assert>
     </rule>
@@ -54,13 +54,12 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.4
 Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:id
 Item: (cdach_header_InformationRecipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:id" id="d189909e1770-false-d708674e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:id" id="d523664e2104-false-d1042572e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InformationRecipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="@extension">(cdach_header_InformationRecipient): attribute @extension SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="not(@extension) or string-length(@extension)&gt;0">(cdach_header_InformationRecipient): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="@root">(cdach_header_InformationRecipient): attribute @root SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_header_InformationRecipient): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="not(@extension) or string-length(@extension)&gt;0">(cdach_header_InformationRecipient): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 
    <!--
@@ -176,7 +175,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.4
 Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:telecom
 Item: (cdach_header_InformationRecipient)
 -->
-    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:telecom" id="d189909e1782-false-d708882e0">
+    <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:telecom" id="d523664e2116-false-d1042777e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.2.4" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InformationRecipient): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -352,10 +351,9 @@ Context: *[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2
 Item: (cdach_other_OrganizationCompilationWithName)
 -->
     <rule context="*[hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]]/hl7:informationRecipient[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.4']]/hl7:intendedRecipient/hl7:receivedOrganization/hl7:id">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="@extension">(cdach_other_OrganizationCompilationWithName): attribute @extension SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithName): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="@root">(cdach_other_OrganizationCompilationWithName): attribute @root SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_other_OrganizationCompilationWithName): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.756.5.30.1.1.10.9.24" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithName): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 
    <!--
