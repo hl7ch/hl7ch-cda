@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-    <title>Scenario: GeneralReport - CDA-CH-LREP - general report (2.16.756.5.30.1.1.1.1.3.9.77.1.4.2)</title>
+    <title>Scenario: GeneralReport - CDA-CH-LREP - General Laboratory Report (2.16.756.5.30.1.1.1.1.3.9.77.1.4.2)</title>
     <ns uri="urn:hl7-org:v3" prefix="hl7"/>
     <ns uri="urn:hl7-org:v3" prefix="cda"/>
     <ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
@@ -164,15 +164,15 @@
     <include href="include/2.16.756.5.30.1.1.10.2.61-2016-05-23T000000.sch"/>
    <!-- cdach_header_DataEnterer -->
     <include href="include/2.16.756.5.30.1.1.10.2.7-2017-03-09T151238.sch"/>
-   <!-- chpalm_section_LaboratorySpecialty -->
+   <!-- chpalm_section_LaboratorySpecialtyCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.3-2017-03-16T235718.sch"/>
    <!-- chpcc_section_VitalSignsCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.4-2017-03-28T225328.sch"/>
-   <!-- cdach_section_OriginalRepresentation -->
+   <!-- cdach_section_OriginalRepresentationCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.45-2018-02-08T085327.sch"/>
-   <!-- Studiessummary -->
+   <!-- chpcc_section_OtherRelevantObservationsCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.46-2015-12-14T000000.sch"/>
-   <!-- chpalm_section_LaboratoryReportItem -->
+   <!-- chpalm_section_LaboratoryReportItemCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.5-2017-03-20T212750.sch"/>
    <!-- chpalm_entry_SpecimenCollection -->
     <include href="include/2.16.756.5.30.1.1.10.4.11-2017-03-24T161841.sch"/>
@@ -214,7 +214,7 @@
     <include href="include/2.16.756.5.30.1.1.10.4.8-2017-03-21T105038.sch"/>
    <!-- cdach_entry_ObservationMedia -->
     <include href="include/2.16.756.5.30.1.1.10.4.83-2018-02-08T095556.sch"/>
-   <!-- Gestationalage -->
+   <!-- chpcc_entry_GestationalAgeAtBirth -->
     <include href="include/2.16.756.5.30.1.1.10.4.84-2015-12-15T000000.sch"/>
    <!-- cdach_other_Performer -->
     <include href="include/2.16.756.5.30.1.1.10.9.31-2017-10-12T075018.sch"/>

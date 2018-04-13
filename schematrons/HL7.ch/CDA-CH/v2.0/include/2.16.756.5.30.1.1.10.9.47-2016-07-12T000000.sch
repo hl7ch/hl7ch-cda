@@ -13,12 +13,12 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.47
 Context: //hl7:id
 Item: (cdachlrep_header_AssignedEntityForLaboratory)
 -->
-    <rule context="//hl7:id" id="d130e10158-false-d188939e0">
+    <rule context="//hl7:id" id="d523664e10418-false-d719838e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_AssignedEntityForLaboratory): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="string(@nullFlavor)=('NAV') or not(@nullFlavor)">(cdachlrep_header_AssignedEntityForLaboratory): The value for @nullFlavor SHALL be 'NAV'.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="not(@extension) or string-length(@extension)&gt;0">(cdachlrep_header_AssignedEntityForLaboratory): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="string(@root)=('2.51.1.3') or not(@root)">(cdachlrep_header_AssignedEntityForLaboratory): The value for @root SHALL be '2.51.1.3'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="not(@extension) or string-length(@extension)&gt;0">(cdachlrep_header_AssignedEntityForLaboratory): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="(@root='2.51.1.3' and @extension) or (@nullFlavor='NAV')">(cdachlrep_header_AssignedEntityForLaboratory): Either the GS1 GLN or nullFlavor='NAV' is required.</assert>
     </rule>
 
@@ -135,7 +135,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.47
 Context: //hl7:telecom
 Item: (cdachlrep_header_AssignedEntityForLaboratory)
 -->
-    <rule context="//hl7:telecom" id="d130e10191-false-d189145e0">
+    <rule context="//hl7:telecom" id="d523664e10451-false-d720044e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_AssignedEntityForLaboratory): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -313,10 +313,9 @@ Context: //hl7:representedOrganization/hl7:id
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
     <rule context="//hl7:representedOrganization/hl7:id">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="@extension">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @extension SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="@root">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @root SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 
    <!--

@@ -4,11 +4,7 @@ Template derived pattern
 ===========================================
 ID: 2.16.756.5.30.1.1.10.4.9
 Name: Responsible Party - participant Containment
-Description:  External laboratory that has delivered the results. The following applies:  
-       The external laboratory MUST be declared, including its responsible person. 
-       All persons and organizations, MUST according to XD-LAB contain name, addr and telecom. 
-       
-    
+Description:  External laboratory that has delivered the results. The following applies:  The external laboratory MUST be declared, including its responsible person. All persons and organizations, MUST according to XD-LAB contain name, addr and telecom.
 -->
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="template-2.16.756.5.30.1.1.10.4.9-2017-03-21T105340">
     <title>Responsible Party - participant Containment</title>
@@ -17,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.9
 Context: //hl7:participantRole
 Item: (chpalm_entry_ParticipantBodyResponsibleParty)
 -->
-    <rule context="//hl7:participantRole" id="d130e8993-false-d181955e0">
+    <rule context="//hl7:participantRole" id="d523664e8937-false-d712712e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.9" test="count(hl7:addr)&gt;=1">(chpalm_entry_ParticipantBodyResponsibleParty): element hl7:addr is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.9" test="count(hl7:telecom)&gt;=1">(chpalm_entry_ParticipantBodyResponsibleParty): element hl7:telecom is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.9" test="count(hl7:playingEntity)&gt;=1">(chpalm_entry_ParticipantBodyResponsibleParty): element hl7:playingEntity is required [min 1x].</assert>
@@ -137,7 +133,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.9
 Context: //hl7:participantRole/hl7:telecom
 Item: (chpalm_entry_ParticipantBodyResponsibleParty)
 -->
-    <rule context="//hl7:participantRole/hl7:telecom" id="d130e9001-false-d182185e0">
+    <rule context="//hl7:participantRole/hl7:telecom" id="d523664e8941-false-d712942e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.4.9" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_ParticipantBodyResponsibleParty): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

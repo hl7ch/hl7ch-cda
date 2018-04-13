@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.61
 Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]
 Item: (cdachlrep_header_LegalAuthenticator)
 -->
-    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]" id="d130e2180-false-d135254e0">
+    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]" id="d523664e2356-false-d663350e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="count(hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']])&lt;=1">(cdachlrep_header_LegalAuthenticator): element hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']] appears too often [max 1x].</assert>
     </rule>
    <!--
@@ -21,7 +21,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.61
 Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]
 Item: (cdachlrep_header_LegalAuthenticator)
 -->
-    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]" id="d130e2213-false-d135362e0">
+    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]" id="d523664e2389-false-d663458e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'])&gt;=1">(cdachlrep_header_LegalAuthenticator): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'])&lt;=1">(cdachlrep_header_LegalAuthenticator): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5'])&gt;=1">(cdachlrep_header_LegalAuthenticator): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5'] is mandatory [min 1x].</assert>
@@ -38,7 +38,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.61
 Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61']
 Item: (cdachlrep_header_LegalAuthenticator)
 -->
-    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61']" id="d130e2218-false-d135470e0">
+    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61']" id="d523664e2394-false-d663566e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_LegalAuthenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="string(@root)=('2.16.756.5.30.1.1.10.2.61')">(cdachlrep_header_LegalAuthenticator): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.61'.</assert>
@@ -48,7 +48,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.61
 Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']
 Item: (cdachlrep_header_LegalAuthenticator)
 -->
-    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']" id="d130e2223-false-d135485e0">
+    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']" id="d523664e2399-false-d663581e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_LegalAuthenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="string(@root)=('2.16.756.5.30.1.1.10.2.5')">(cdachlrep_header_LegalAuthenticator): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.5'.</assert>
@@ -58,7 +58,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.61
 Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:time
 Item: (cdachlrep_header_LegalAuthenticator)
 -->
-    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:time" id="d130e2228-false-d135499e0">
+    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:time" id="d523664e2404-false-d663595e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_LegalAuthenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="not(*)">(cdachlrep_header_LegalAuthenticator): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
@@ -68,7 +68,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.61
 Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:signatureCode[(@code='S' and @codeSystem='2.16.840.1.113883.1.11.10282') or @code=doc('include/voc-2.16.840.1.113883.1.11.10282-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]
 Item: (cdachlrep_header_LegalAuthenticator)
 -->
-    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:signatureCode[(@code='S' and @codeSystem='2.16.840.1.113883.1.11.10282') or @code=doc('include/voc-2.16.840.1.113883.1.11.10282-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]" id="d130e2234-false-d135515e0">
+    <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:signatureCode[(@code='S' and @codeSystem='2.16.840.1.113883.1.11.10282') or @code=doc('include/voc-2.16.840.1.113883.1.11.10282-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]" id="d523664e2410-false-d663611e0">
         <extends rule="CS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.61" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_LegalAuthenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -111,8 +111,8 @@ Item: (cdachlrep_header_AssignedEntityForLaboratory)
 -->
     <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:assignedEntity/hl7:id">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="string(@nullFlavor)=('NAV') or not(@nullFlavor)">(cdachlrep_header_AssignedEntityForLaboratory): The value for @nullFlavor SHALL be 'NAV'.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="not(@extension) or string-length(@extension)&gt;0">(cdachlrep_header_AssignedEntityForLaboratory): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="string(@root)=('2.51.1.3') or not(@root)">(cdachlrep_header_AssignedEntityForLaboratory): The value for @root SHALL be '2.51.1.3'.</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="not(@extension) or string-length(@extension)&gt;0">(cdachlrep_header_AssignedEntityForLaboratory): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="(@root='2.51.1.3' and @extension) or (@nullFlavor='NAV')">(cdachlrep_header_AssignedEntityForLaboratory): Either the GS1 GLN or nullFlavor='NAV' is required.</assert>
     </rule>
 
@@ -404,10 +404,9 @@ Context: *[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
     <rule context="*[hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]]/hl7:legalAuthenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.61'] and hl7:templateId[@root='2.16.756.5.30.1.1.10.2.5']]/hl7:assignedEntity/hl7:representedOrganization/hl7:id">
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="@extension">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @extension SHALL be present.</assert>
-        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="@root">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @root SHALL be present.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @root SHALL be of data type 'uid'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.27" test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'</assert>
     </rule>
 
    <!--

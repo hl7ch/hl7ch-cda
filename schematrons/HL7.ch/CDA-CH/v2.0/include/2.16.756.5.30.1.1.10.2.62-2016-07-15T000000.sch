@@ -34,7 +34,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.62
 Context: //hl7:title[not(@nullFlavor)]
 Item: (cdachlrep_header_DocumentTitle)
 -->
-    <rule context="//hl7:title[not(@nullFlavor)]" id="d130e2338-false-d136512e0">
+    <rule context="//hl7:title[not(@nullFlavor)]" id="d523664e2514-false-d664605e0">
         <extends rule="ST"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.62" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ST' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_DocumentTitle): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="languageCode" value="substring(/hl7:ClinicalDocument/hl7:languageCode/@code,1,2)"/>
