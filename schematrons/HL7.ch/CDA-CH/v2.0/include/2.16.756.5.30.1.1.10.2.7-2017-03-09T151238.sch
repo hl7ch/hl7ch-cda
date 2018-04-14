@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]" id="d130e2470-false-d458319e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]" id="d130e2470-false-d460517e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']])&lt;=1">(cdach_header_DataEnterer): element hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']] appears too often [max 1x].</assert>
     </rule>
    <!--
@@ -21,7 +21,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]" id="d130e2490-false-d458427e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]" id="d130e2490-false-d460625e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'])&gt;=1">(cdach_header_DataEnterer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'])&lt;=1">(cdach_header_DataEnterer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="count(hl7:time)&lt;=1">(cdach_header_DataEnterer): element hl7:time appears too often [max 1x].</assert>
@@ -33,7 +33,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']" id="d130e2493-false-d458509e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']" id="d130e2493-false-d460707e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DataEnterer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="string(@root)=('2.16.756.5.30.1.1.10.2.7')">(cdach_header_DataEnterer): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.7'.</assert>
@@ -43,7 +43,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.7
 Context: *[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:time
 Item: (cdach_header_DataEnterer)
 -->
-    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:time" id="d130e2495-false-d458523e0">
+    <rule context="*[hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]]/hl7:dataEnterer[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.7']]/hl7:time" id="d130e2495-false-d460721e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DataEnterer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.7" test="not(*)">(cdach_header_DataEnterer): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>

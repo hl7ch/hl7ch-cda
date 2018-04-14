@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
 Context: //hl7:id
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
-    <rule context="//hl7:id" id="d130e10921-false-d517911e0">
+    <rule context="//hl7:id" id="d130e11706-false-d520324e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_OrganizationCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.27" test="@root">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @root SHALL be present.</assert>
@@ -25,7 +25,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
 Context: //hl7:name
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
-    <rule context="//hl7:name" id="d130e10930-false-d517932e0">
+    <rule context="//hl7:name" id="d130e11715-false-d520345e0">
         <extends rule="ON"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ON' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_OrganizationCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ON", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -34,7 +34,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.27
 Context: //hl7:telecom
 Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
-    <rule context="//hl7:telecom" id="d130e10933-false-d517942e0">
+    <rule context="//hl7:telecom" id="d130e11718-false-d520355e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_OrganizationCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

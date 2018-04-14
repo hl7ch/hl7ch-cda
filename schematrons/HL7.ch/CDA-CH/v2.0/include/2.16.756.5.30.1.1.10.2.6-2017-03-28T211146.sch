@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.6
 Context: *[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]
 Item: (cdach_header_Authenticator)
 -->
-    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]" id="d130e1949-false-d453324e0">
+    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]" id="d130e1949-false-d455522e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6'])&gt;=1">(cdach_header_Authenticator): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6'])&lt;=1">(cdach_header_Authenticator): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="count(hl7:time)&gt;=1">(cdach_header_Authenticator): element hl7:time is required [min 1x].</assert>
@@ -34,7 +34,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.6
 Context: *[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']
 Item: (cdach_header_Authenticator)
 -->
-    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']" id="d130e1954-false-d453422e0">
+    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']" id="d130e1954-false-d455620e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Authenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="string(@root)=('2.16.756.5.30.1.1.10.2.6')">(cdach_header_Authenticator): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.6'.</assert>
@@ -44,7 +44,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.6
 Context: *[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:time
 Item: (cdach_header_Authenticator)
 -->
-    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:time" id="d130e1959-false-d453436e0">
+    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:time" id="d130e1959-false-d455634e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Authenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="not(*)">(cdach_header_Authenticator): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
@@ -54,7 +54,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.6
 Context: *[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:signatureCode[@code='S' or @code=doc('include/voc-2.16.840.1.113883.1.11.10282-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]
 Item: (cdach_header_Authenticator)
 -->
-    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:signatureCode[@code='S' or @code=doc('include/voc-2.16.840.1.113883.1.11.10282-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]" id="d130e1965-false-d453452e0">
+    <rule context="*[hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]]/hl7:authenticator[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.6']]/hl7:signatureCode[@code='S' or @code=doc('include/voc-2.16.840.1.113883.1.11.10282-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]" id="d130e1965-false-d455650e0">
         <extends rule="CS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.6" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Authenticator): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>

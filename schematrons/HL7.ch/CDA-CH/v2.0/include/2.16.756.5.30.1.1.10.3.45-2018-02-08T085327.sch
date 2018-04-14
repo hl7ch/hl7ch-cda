@@ -30,7 +30,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]" id="d523664e3328-false-d668379e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]" id="d130e3331-false-d146424e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="hl7:text/hl7:renderMultiMedia/@referencedObject=hl7:entry/hl7:observationMedia[hl7:templateId/@root='2.16.756.5.30.1.1.10.4.83']/@ID">(cdach_section_OriginalRepresentationCoded): The referenced multimedia object MUST be declared in an entry of the same section.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="hl7:entry/hl7:observationMedia[hl7:templateId/@root='2.16.756.5.30.1.1.10.4.83']/hl7:value/@mediaType='application/pdf'">(cdach_section_OriginalRepresentationCoded): The referenced multimedia object MUST have the mime type set tp 'application/pdf'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45'])&gt;=1">(cdach_section_OriginalRepresentationCoded): element hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45'] is mandatory [min 1x].</assert>
@@ -50,7 +50,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']" id="d523664e3333-false-d668448e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']" id="d130e3336-false-d146493e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="string(@root)=('2.16.756.5.30.1.1.10.3.45')">(cdach_section_OriginalRepresentationCoded): The value for @root SHALL be '2.16.756.5.30.1.1.10.3.45'.</assert>
@@ -60,7 +60,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:id
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:id" id="d523664e3338-false-d668462e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:id" id="d130e3341-false-d146507e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="@root">(cdach_section_OriginalRepresentationCoded): attribute @root SHALL be present.</assert>
@@ -72,7 +72,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:code[(@code='55108-5' and @codeSystem='2.16.840.1.113883.6.1')]
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:code[(@code='55108-5' and @codeSystem='2.16.840.1.113883.6.1')]" id="d523664e3356-false-d668484e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:code[(@code='55108-5' and @codeSystem='2.16.840.1.113883.6.1')]" id="d130e3359-false-d146529e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="@nullFlavor or (@code='55108-5' and @codeSystem='2.16.840.1.113883.6.1' and @displayName='Clinical presentation' and @codeSystemName='LOINC')">(cdach_section_OriginalRepresentationCoded): The element value SHALL be one of 'code '55108-5' codeSystem '2.16.840.1.113883.6.1' displayName='Clinical presentation' codeSystemName='LOINC''.</assert>
@@ -82,7 +82,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:title[not(@nullFlavor)]
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:title[not(@nullFlavor)]" id="d523664e3361-false-d668500e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:title[not(@nullFlavor)]" id="d130e3364-false-d146545e0">
         <extends rule="ST"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ST' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="languageCode" value="substring(ancestor::hl7:ClinicalDocument/hl7:languageCode/@code,1,2)"/>
@@ -96,7 +96,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)]
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)]" id="d523664e3398-false-d668510e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)]" id="d130e3401-false-d146555e0">
         <extends rule="SD.TEXT"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='SD.TEXT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SD.TEXT", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="count(hl7:renderMultiMedia[not(@nullFlavor)])&gt;=1">(cdach_section_OriginalRepresentationCoded): element hl7:renderMultiMedia[not(@nullFlavor)] is mandatory [min 1x].</assert>
@@ -107,7 +107,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.3.45
 Context: *[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)]/hl7:renderMultiMedia[not(@nullFlavor)]
 Item: (cdach_section_OriginalRepresentationCoded)
 -->
-    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)]/hl7:renderMultiMedia[not(@nullFlavor)]" id="d523664e3403-false-d668530e0">
+    <rule context="*[hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root='2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)]/hl7:renderMultiMedia[not(@nullFlavor)]" id="d130e3406-false-d146575e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.3.45" test="@referencedObject">(cdach_section_OriginalRepresentationCoded): attribute @referencedObject SHALL be present.</assert>
     </rule>
 

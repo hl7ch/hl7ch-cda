@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]" id="d523664e7417-false-d1099332e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]" id="d526078e7417-false-d1101746e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="string(@classCode)=('OBS')">(CDAObservation): The value for @classCode SHALL be 'OBS'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="@moodCode">(CDAObservation): attribute @moodCode SHALL be present.</assert>
         <let name="theAttValue" value="distinct-values(tokenize(normalize-space(@moodCode),' '))"/>
@@ -44,7 +44,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:templateId[@root='2.16.840.1.113883.10.12.303']
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:templateId[@root='2.16.840.1.113883.10.12.303']" id="d523664e7424-false-d1099971e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:templateId[@root='2.16.840.1.113883.10.12.303']" id="d526078e7424-false-d1102385e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="string(@root)=('2.16.840.1.113883.10.12.303')">(CDAObservation): The value for @root SHALL be '2.16.840.1.113883.10.12.303'.</assert>
@@ -54,7 +54,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:id
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:id" id="d523664e7426-false-d1099985e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:id" id="d526078e7426-false-d1102399e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -63,7 +63,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:code[@codeSystem=doc('include/voc-2.16.840.1.113883.1.11.16226-DYNAMIC.xml')//valueSet[1]/completeCodeSystem/@codeSystem or concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.16226-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:code[@codeSystem=doc('include/voc-2.16.840.1.113883.1.11.16226-DYNAMIC.xml')//valueSet[1]/completeCodeSystem/@codeSystem or concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.16226-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d523664e7427-false-d1099998e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:code[@codeSystem=doc('include/voc-2.16.840.1.113883.1.11.16226-DYNAMIC.xml')//valueSet[1]/completeCodeSystem/@codeSystem or concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.16226-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d526078e7427-false-d1102412e0">
         <extends rule="CD"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -76,7 +76,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:derivationExpr
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:derivationExpr" id="d523664e7431-false-d1100019e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:derivationExpr" id="d526078e7431-false-d1102433e0">
         <extends rule="ST"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ST' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -85,7 +85,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:text
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:text" id="d523664e7432-false-d1100029e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:text" id="d526078e7432-false-d1102443e0">
         <extends rule="ED"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -94,7 +94,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:statusCode[@code=doc('include/voc-2.16.840.1.113883.1.11.15933-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:statusCode[@code=doc('include/voc-2.16.840.1.113883.1.11.15933-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code or @nullFlavor]" id="d523664e7433-false-d1100042e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:statusCode[@code=doc('include/voc-2.16.840.1.113883.1.11.15933-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code or @nullFlavor]" id="d526078e7433-false-d1102456e0">
         <extends rule="CS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -107,7 +107,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:effectiveTime
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:effectiveTime" id="d523664e7437-false-d1100063e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:effectiveTime" id="d526078e7437-false-d1102477e0">
         <extends rule="IVL_TS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -116,7 +116,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:priorityCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.16866-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:priorityCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.16866-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d523664e7438-false-d1100076e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:priorityCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.16866-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d526078e7438-false-d1102490e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -129,7 +129,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:repeatNumber
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:repeatNumber" id="d523664e7443-false-d1100097e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:repeatNumber" id="d526078e7443-false-d1102511e0">
         <extends rule="IVL_INT"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_INT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_INT", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -138,7 +138,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:languageCode
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:languageCode" id="d523664e7444-false-d1100110e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:languageCode" id="d526078e7444-false-d1102524e0">
         <extends rule="CS"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -147,7 +147,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:value
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:value" id="d523664e7448-false-d1100123e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:value" id="d526078e7448-false-d1102537e0">
         <extends rule="ANY"/>
     </rule>
    <!--
@@ -155,7 +155,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:interpretationCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.78-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:interpretationCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.78-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d523664e7449-false-d1100133e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:interpretationCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.78-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d526078e7449-false-d1102547e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -168,7 +168,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:methodCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.14079-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:methodCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.14079-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d523664e7453-false-d1100157e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:methodCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.14079-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d526078e7453-false-d1102571e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -181,7 +181,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:targetSiteCode[@codeSystem='2.16.840.1.113883.5.1052' or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:targetSiteCode[@codeSystem='2.16.840.1.113883.5.1052' or @nullFlavor]" id="d523664e7457-false-d1100179e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:targetSiteCode[@codeSystem='2.16.840.1.113883.5.1052' or @nullFlavor]" id="d526078e7457-false-d1102593e0">
         <extends rule="CD"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="@nullFlavor or (@codeSystem='2.16.840.1.113883.5.1052')">(CDAObservation): The element value SHALL be one of 'codeSystem '2.16.840.1.113883.5.1052''.</assert>
@@ -1259,7 +1259,7 @@ Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.11
 Item: (CDAObservation)
 -->
     <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] | hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] | hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] | hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] | hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] | hl7:procedure[hl7:templateId[@root='2.16.840.1.113883.10.12.306']] | hl7:regionOfInterest[hl7:templateId[@root='2.16.840.1.113883.10.12.307']] | hl7:substanceAdministration[hl7:templateId[@root='2.16.840.1.113883.10.12.308']] | hl7:supply[hl7:templateId[@root='2.16.840.1.113883.10.12.309']]]">
-        <extends rule="d523664e7483-false-d1103168e0"/>
+        <extends rule="d526078e7483-false-d1105582e0"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="@typeCode">(CDAObservation): attribute @typeCode SHALL be present.</assert>
         <let name="theAttValue" value="distinct-values(tokenize(normalize-space(@typeCode),' '))"/>
         <let name="theAttCheck" value="distinct-values(doc('include/voc-2.16.840.1.113883.1.11.19447-DYNAMIC.xml')/*/valueSet/conceptList/concept[@code = $theAttValue]/@code)"/>
@@ -1288,7 +1288,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.300
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] | hl7:encounter[hl7:templateId[@root='2.16.840.1.113883.10.12.302']] | hl7:observation[hl7:templateId[@root='2.16.840.1.113883.10.12.303']] | hl7:observationMedia[hl7:templateId[@root='2.16.840.1.113883.10.12.304']] | hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] | hl7:procedure[hl7:templateId[@root='2.16.840.1.113883.10.12.306']] | hl7:regionOfInterest[hl7:templateId[@root='2.16.840.1.113883.10.12.307']] | hl7:substanceAdministration[hl7:templateId[@root='2.16.840.1.113883.10.12.308']] | hl7:supply[hl7:templateId[@root='2.16.840.1.113883.10.12.309']]]
 Item: (CDAClinicalStatement)
 -->
-    <rule id="d523664e7483-false-d1103168e0" abstract="true">
+    <rule id="d526078e7483-false-d1105582e0" abstract="true">
         <let name="elmcount" value="count(hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']] | hl7:encounter[@classCode='ENC'][hl7:templateId[@root='2.16.840.1.113883.10.12.302']] | hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']] | hl7:observationMedia[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.304']] | hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']] | hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']] | hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']] | hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']] | hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']])"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.300" test="$elmcount&gt;=1">(CDAClinicalStatement): choice (hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']]  or  hl7:encounter[@classCode='ENC'][hl7:templateId[@root='2.16.840.1.113883.10.12.302']]  or  hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]  or  hl7:observationMedia[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.304']]  or  hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']]  or  hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']]  or  hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']]  or  hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']]  or  hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']]) does not contain enough elements [min 1x]</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.300" test="$elmcount&lt;=1">(CDAClinicalStatement): choice (hl7:act[hl7:templateId[@root='2.16.840.1.113883.10.12.301']]  or  hl7:encounter[@classCode='ENC'][hl7:templateId[@root='2.16.840.1.113883.10.12.302']]  or  hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]  or  hl7:observationMedia[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.304']]  or  hl7:organizer[hl7:templateId[@root='2.16.840.1.113883.10.12.305']]  or  hl7:procedure[@classCode='PROC'][hl7:templateId[@root='2.16.840.1.113883.10.12.306']]  or  hl7:regionOfInterest[@classCode='ROIOVL'][@moodCode='EVN'][hl7:templateId[@root='2.16.840.1.113883.10.12.307']]  or  hl7:substanceAdministration[@classCode='SBADM'][hl7:templateId[@root='2.16.840.1.113883.10.12.308']]  or  hl7:supply[@classCode='SPLY'][hl7:templateId[@root='2.16.840.1.113883.10.12.309']]) contains too many elements [max 1x]</assert>
@@ -1573,7 +1573,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']" id="d523664e7502-false-d1107811e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']" id="d526078e7502-false-d1110225e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="string(@typeCode)=('REFV')">(CDAObservation): The value for @typeCode SHALL be 'REFV'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="count(hl7:observationRange)&gt;=1">(CDAObservation): element hl7:observationRange is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="count(hl7:observationRange)&lt;=1">(CDAObservation): element hl7:observationRange appears too often [max 1x].</assert>
@@ -1583,7 +1583,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange" id="d523664e7504-false-d1107831e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange" id="d526078e7504-false-d1110245e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="string(@classCode)=('OBS') or not(@classCode)">(CDAObservation): The value for @classCode SHALL be 'OBS'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="string(@moodCode)=('EVN.CRT') or not(@moodCode)">(CDAObservation): The value for @moodCode SHALL be 'EVN.CRT'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="count(hl7:code[@codeSystem='2.16.840.1.113883.5.4' or @nullFlavor])&lt;=1">(CDAObservation): element hl7:code[@codeSystem='2.16.840.1.113883.5.4' or @nullFlavor] appears too often [max 1x].</assert>
@@ -1596,7 +1596,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:code[@codeSystem='2.16.840.1.113883.5.4' or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:code[@codeSystem='2.16.840.1.113883.5.4' or @nullFlavor]" id="d523664e7507-false-d1107878e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:code[@codeSystem='2.16.840.1.113883.5.4' or @nullFlavor]" id="d526078e7507-false-d1110292e0">
         <extends rule="CD"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="@nullFlavor or (@codeSystem='2.16.840.1.113883.5.4')">(CDAObservation): The element value SHALL be one of 'codeSystem '2.16.840.1.113883.5.4''.</assert>
@@ -1606,7 +1606,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:text
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:text" id="d523664e7509-false-d1107894e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:text" id="d526078e7509-false-d1110308e0">
         <extends rule="ED"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -1615,7 +1615,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:value
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:value" id="d523664e7510-false-d1107904e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:value" id="d526078e7510-false-d1110318e0">
         <extends rule="ANY"/>
     </rule>
    <!--
@@ -1623,7 +1623,7 @@ Template derived rules for ID: 2.16.840.1.113883.10.12.303
 Context: *[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:interpretationCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.78-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (CDAObservation)
 -->
-    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:interpretationCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.78-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d523664e7511-false-d1107914e0">
+    <rule context="*[hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]]/hl7:observation[@classCode='OBS'][hl7:templateId[@root='2.16.840.1.113883.10.12.303']]/hl7:referenceRange[@typeCode='REFV']/hl7:observationRange/hl7:interpretationCode[concat(@code,@codeSystem)=doc('include/voc-2.16.840.1.113883.1.11.78-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d526078e7511-false-d1110328e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--hl7chcda-?id=2.16.840.1.113883.10.12.303" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(CDAObservation): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>

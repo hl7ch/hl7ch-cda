@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.27
 Context: //hl7:code[(@code='LOINC' and @codeSystem='2.16.756.5.30.2.1.1.10')]
 Item: (chpalm_entry_SpecimenType)
 -->
-    <rule context="//hl7:code[(@code='LOINC' and @codeSystem='2.16.756.5.30.2.1.1.10')]" id="d130e6462-false-d486139e0">
+    <rule context="//hl7:code[(@code='LOINC' and @codeSystem='2.16.756.5.30.2.1.1.10')]" id="d130e6723-false-d488552e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_SpecimenType): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="string(@code)=('LOINC')">(chpalm_entry_SpecimenType): The value for @code SHALL be 'LOINC'.</assert>
@@ -28,7 +28,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.27
 Context: //hl7:code
 Item: (chpalm_entry_SpecimenType)
 -->
-    <rule context="//hl7:code" id="d130e6476-false-d486171e0">
+    <rule context="//hl7:code" id="d130e6737-false-d488584e0">
         <extends rule="CD"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_SpecimenType): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="@code">(chpalm_entry_SpecimenType): attribute @code SHALL be present.</assert>
@@ -45,7 +45,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.27
 Context: //hl7:code/hl7:qualifier
 Item: (chpalm_entry_SpecimenType)
 -->
-    <rule context="//hl7:code/hl7:qualifier" id="d130e6506-false-d486213e0">
+    <rule context="//hl7:code/hl7:qualifier" id="d130e6767-false-d488626e0">
         <extends rule="CR"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CR' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_SpecimenType): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CR", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -54,7 +54,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.27
 Context: //hl7:code/hl7:qualifier/hl7:name
 Item: (chpalm_entry_SpecimenType)
 -->
-    <rule context="//hl7:code/hl7:qualifier/hl7:name" id="d130e6511-false-d486231e0">
+    <rule context="//hl7:code/hl7:qualifier/hl7:name" id="d130e6772-false-d488644e0">
         <extends rule="CV"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CV' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_SpecimenType): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CV", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -63,7 +63,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.27
 Context: //hl7:code/hl7:qualifier/hl7:value
 Item: (chpalm_entry_SpecimenType)
 -->
-    <rule context="//hl7:code/hl7:qualifier/hl7:value" id="d130e6513-false-d486241e0">
+    <rule context="//hl7:code/hl7:qualifier/hl7:value" id="d130e6774-false-d488654e0">
         <extends rule="CD"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.27" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_SpecimenType): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

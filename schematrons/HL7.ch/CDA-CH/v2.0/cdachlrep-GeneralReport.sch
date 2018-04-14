@@ -174,6 +174,10 @@
     <include href="include/2.16.756.5.30.1.1.10.3.46-2015-12-14T000000.sch"/>
    <!-- chpalm_section_LaboratoryReportItemCoded -->
     <include href="include/2.16.756.5.30.1.1.10.3.5-2017-03-20T212750.sch"/>
+   <!-- chpcc_section_CurrentPregnancyCoded -->
+    <include href="include/2.16.756.5.30.1.1.10.3.53-2018-03-30T002034.sch"/>
+   <!-- chpcc_entry_PregnancyObservationDeliveryDate -->
+    <include href="include/2.16.756.5.30.1.1.10.4.102-2015-12-15T000000.sch"/>
    <!-- chpalm_entry_SpecimenCollection -->
     <include href="include/2.16.756.5.30.1.1.10.4.11-2017-03-24T161841.sch"/>
    <!-- chpalm_entry_SpecimenReceived -->
@@ -216,6 +220,8 @@
     <include href="include/2.16.756.5.30.1.1.10.4.83-2018-02-08T095556.sch"/>
    <!-- chpcc_entry_GestationalAgeAtBirth -->
     <include href="include/2.16.756.5.30.1.1.10.4.84-2015-12-15T000000.sch"/>
+   <!-- chpcc_entry_PregnancyObservation -->
+    <include href="include/2.16.756.5.30.1.1.10.4.92-2015-12-15T000000.sch"/>
    <!-- cdach_other_Performer -->
     <include href="include/2.16.756.5.30.1.1.10.9.31-2017-10-12T075018.sch"/>
 </schema>

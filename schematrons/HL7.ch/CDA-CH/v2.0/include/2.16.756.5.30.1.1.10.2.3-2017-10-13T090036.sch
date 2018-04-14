@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]" id="d130e1267-false-d449706e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]" id="d130e1267-false-d451904e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']])&gt;=1">(cdach_header_Custodian): element hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']] is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']])&lt;=1">(cdach_header_Custodian): element hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']] appears too often [max 1x].</assert>
     </rule>
@@ -22,7 +22,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]" id="d130e1320-false-d449749e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]" id="d130e1320-false-d451947e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3'])&gt;=1">(cdach_header_Custodian): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3'])&lt;=1">(cdach_header_Custodian): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:assignedCustodian)&gt;=1">(cdach_header_Custodian): element hl7:assignedCustodian is required [min 1x].</assert>
@@ -33,7 +33,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']" id="d130e1325-false-d449790e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']" id="d130e1325-false-d451988e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="string(@root)=('2.16.756.5.30.1.1.10.2.3')">(cdach_header_Custodian): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.3'.</assert>
@@ -43,7 +43,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian" id="d130e1330-false-d449817e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian" id="d130e1330-false-d452015e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:representedCustodianOrganization)&gt;=1">(cdach_header_Custodian): element hl7:representedCustodianOrganization is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:representedCustodianOrganization)&lt;=1">(cdach_header_Custodian): element hl7:representedCustodianOrganization appears too often [max 1x].</assert>
     </rule>
@@ -52,7 +52,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization" id="d130e1332-false-d449859e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization" id="d130e1332-false-d452057e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:id[not(@nullFlavor)])&gt;=1">(cdach_header_Custodian): element hl7:id[not(@nullFlavor)] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:name)&gt;=1">(cdach_header_Custodian): element hl7:name is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="count(hl7:name)&lt;=1">(cdach_header_Custodian): element hl7:name appears too often [max 1x].</assert>
@@ -62,7 +62,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:id[not(@nullFlavor)]
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:id[not(@nullFlavor)]" id="d130e1334-false-d449903e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:id[not(@nullFlavor)]" id="d130e1334-false-d452101e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="@root">(cdach_header_Custodian): attribute @root SHALL be present.</assert>
@@ -74,7 +74,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:name
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:name" id="d130e1352-false-d449924e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:name" id="d130e1352-false-d452122e0">
         <extends rule="ON"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ON' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ON", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>
@@ -83,7 +83,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.3
 Context: *[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:telecom
 Item: (cdach_header_Custodian)
 -->
-    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:telecom" id="d130e1358-false-d449934e0">
+    <rule context="*[hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian/hl7:representedCustodianOrganization/hl7:telecom" id="d130e1358-false-d452132e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.3" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

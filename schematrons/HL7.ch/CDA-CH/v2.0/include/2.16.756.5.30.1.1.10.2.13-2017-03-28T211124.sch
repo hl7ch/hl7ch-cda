@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.13
 Context: *[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]
 Item: (cdach_header_DocumentReplacement)
 -->
-    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]" id="d130e580-false-d447412e0">
+    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]" id="d130e580-false-d449610e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="string(@typeCode)=('RPLC')">(cdach_header_DocumentReplacement): The value for @typeCode SHALL be 'RPLC'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13'])&gt;=1">(cdach_header_DocumentReplacement): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13'])&lt;=1">(cdach_header_DocumentReplacement): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13'] appears too often [max 1x].</assert>
@@ -31,7 +31,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.13
 Context: *[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']
 Item: (cdach_header_DocumentReplacement)
 -->
-    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']" id="d130e598-false-d447444e0">
+    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']" id="d130e598-false-d449642e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DocumentReplacement): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="string(@root)=('2.16.756.5.30.1.1.10.2.13')">(cdach_header_DocumentReplacement): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.13'.</assert>
@@ -41,7 +41,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.13
 Context: *[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument
 Item: (cdach_header_DocumentReplacement)
 -->
-    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument" id="d130e600-false-d447458e0">
+    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument" id="d130e600-false-d449656e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="count(hl7:id[not(@nullFlavor)])&gt;=1">(cdach_header_DocumentReplacement): element hl7:id[not(@nullFlavor)] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="count(hl7:id[not(@nullFlavor)])&lt;=1">(cdach_header_DocumentReplacement): element hl7:id[not(@nullFlavor)] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="count(hl7:setId[not(@nullFlavor)])&gt;=1">(cdach_header_DocumentReplacement): element hl7:setId[not(@nullFlavor)] is mandatory [min 1x].</assert>
@@ -54,7 +54,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.13
 Context: *[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:id[not(@nullFlavor)]
 Item: (cdach_header_DocumentReplacement)
 -->
-    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:id[not(@nullFlavor)]" id="d130e603-false-d447494e0">
+    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:id[not(@nullFlavor)]" id="d130e603-false-d449692e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DocumentReplacement): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="@root">(cdach_header_DocumentReplacement): attribute @root SHALL be present.</assert>
@@ -67,7 +67,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.13
 Context: *[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:setId[not(@nullFlavor)]
 Item: (cdach_header_DocumentReplacement)
 -->
-    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:setId[not(@nullFlavor)]" id="d130e610-false-d447518e0">
+    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:setId[not(@nullFlavor)]" id="d130e610-false-d449716e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DocumentReplacement): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="not(@extension)">(cdach_header_DocumentReplacement): attribute @extension MAY NOT be present.</assert>
@@ -81,7 +81,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.13
 Context: *[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:versionNumber[not(@nullFlavor)]
 Item: (cdach_header_DocumentReplacement)
 -->
-    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:versionNumber[not(@nullFlavor)]" id="d130e619-false-d447542e0">
+    <rule context="*[hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]]/hl7:relatedDocument[@typeCode='RPLC'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.13']]/hl7:parentDocument/hl7:versionNumber[not(@nullFlavor)]" id="d130e619-false-d449740e0">
         <extends rule="INT"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='INT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_DocumentReplacement): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:INT", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.13" test="not(@value) or matches(@value, '^-?[1-9]\d*$|^+?\d*$')">(cdach_header_DocumentReplacement): @value is not a valid INT number <value-of select="@value"/>

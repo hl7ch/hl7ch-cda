@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.9
 Context: //hl7:participantRole
 Item: (chpalm_entry_ParticipantBodyResponsibleParty)
 -->
-    <rule context="//hl7:participantRole" id="d130e8401-false-d502938e0">
+    <rule context="//hl7:participantRole" id="d130e9186-false-d505351e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.9" test="count(hl7:addr)&gt;=1">(chpalm_entry_ParticipantBodyResponsibleParty): element hl7:addr is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.9" test="count(hl7:telecom)&gt;=1">(chpalm_entry_ParticipantBodyResponsibleParty): element hl7:telecom is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.9" test="count(hl7:playingEntity)&gt;=1">(chpalm_entry_ParticipantBodyResponsibleParty): element hl7:playingEntity is required [min 1x].</assert>
@@ -133,7 +133,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.9
 Context: //hl7:participantRole/hl7:telecom
 Item: (chpalm_entry_ParticipantBodyResponsibleParty)
 -->
-    <rule context="//hl7:participantRole/hl7:telecom" id="d130e8405-false-d503168e0">
+    <rule context="//hl7:participantRole/hl7:telecom" id="d130e9190-false-d505581e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.9" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_ParticipantBodyResponsibleParty): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

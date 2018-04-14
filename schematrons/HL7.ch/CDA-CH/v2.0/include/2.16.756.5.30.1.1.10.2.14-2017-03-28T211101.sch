@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]" id="d130e708-false-d447647e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]" id="d130e708-false-d449845e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="string(@typeCode)=('HLD')">(cdach_header_InsuranceCard): The value for @typeCode SHALL be 'HLD'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14'])&gt;=1">(cdach_header_InsuranceCard): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14'])&lt;=1">(cdach_header_InsuranceCard): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14'] appears too often [max 1x].</assert>
@@ -33,7 +33,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']" id="d130e712-false-d447714e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']" id="d130e712-false-d449912e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InsuranceCard): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="string(@root)=('2.16.756.5.30.1.1.10.2.14')">(cdach_header_InsuranceCard): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.14'.</assert>
@@ -43,7 +43,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time" id="d130e714-false-d447728e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time" id="d130e714-false-d449926e0">
         <extends rule="IVL_TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InsuranceCard): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="count(hl7:low)&gt;=1">(cdach_header_InsuranceCard): element hl7:low is required [min 1x].</assert>
@@ -56,7 +56,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time/hl7:low
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time/hl7:low" id="d130e717-false-d447758e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time/hl7:low" id="d130e717-false-d449956e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InsuranceCard): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="not(*)">(cdach_header_InsuranceCard): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
@@ -67,7 +67,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time/hl7:high
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time/hl7:high" id="d130e719-false-d447775e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:time/hl7:high" id="d130e719-false-d449973e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InsuranceCard): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="not(*)">(cdach_header_InsuranceCard): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
@@ -77,7 +77,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:associatedEntity[@classCode='POLHOLD'][hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']]
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:associatedEntity[@classCode='POLHOLD'][hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']]" id="d130e722-false-d447813e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:associatedEntity[@classCode='POLHOLD'][hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']]" id="d130e722-false-d450011e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="string(@classCode)=('POLHOLD')">(cdach_header_InsuranceCard): The value for @classCode SHALL be 'POLHOLD'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="count(hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1'])&gt;=1">(cdach_header_InsuranceCard): element hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1'] is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="count(hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1'])&lt;=1">(cdach_header_InsuranceCard): element hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1'] appears too often [max 1x].</assert>
@@ -89,7 +89,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.14
 Context: *[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:associatedEntity[@classCode='POLHOLD'][hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']]/hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']
 Item: (cdach_header_InsuranceCard)
 -->
-    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:associatedEntity[@classCode='POLHOLD'][hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']]/hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']" id="d130e724-false-d447873e0">
+    <rule context="*[hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]]/hl7:participant[@typeCode='HLD'][hl7:templateId[@root='2.16.756.5.30.1.1.10.2.14']]/hl7:associatedEntity[@classCode='POLHOLD'][hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']]/hl7:id[@root='2.16.756.5.30.1.123.100.1.1.1']" id="d130e724-false-d450071e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_InsuranceCard): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.2.14" test="string(@root)=('2.16.756.5.30.1.123.100.1.1.1')">(cdach_header_InsuranceCard): The value for @root SHALL be '2.16.756.5.30.1.123.100.1.1.1'.</assert>

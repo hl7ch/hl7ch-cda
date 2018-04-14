@@ -19,7 +19,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.28
 Context: *[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]
 Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
-    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]" id="d523664e1330-false-d658756e0">
+    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]" id="d130e1333-false-d136801e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28'])&gt;=1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28'])&lt;=1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="count(hl7:serviceEvent)&gt;=1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:serviceEvent is required [min 1x].</assert>
@@ -30,7 +30,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.28
 Context: *[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']
 Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
-    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']" id="d523664e1331-false-d658823e0">
+    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']" id="d130e1334-false-d136868e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_DocumentationOfLaboratoryPerformer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="string(@root)=('2.16.756.5.30.1.1.10.2.28')">(chpalm_header_DocumentationOfLaboratoryPerformer): The value for @root SHALL be '2.16.756.5.30.1.1.10.2.28'.</assert>
@@ -40,7 +40,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.28
 Context: *[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent
 Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
-    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent" id="d523664e1333-false-d658876e0">
+    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent" id="d130e1336-false-d136921e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="count(hl7:effectiveTime)&lt;=1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:effectiveTime appears too often [max 1x].</assert>
     </rule>
    <!--
@@ -48,7 +48,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.28
 Context: *[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent/hl7:effectiveTime
 Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
-    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent/hl7:effectiveTime" id="d523664e1334-false-d658934e0">
+    <rule context="*[hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root='2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent/hl7:effectiveTime" id="d130e1337-false-d136979e0">
         <extends rule="IVL_TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.28" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_DocumentationOfLaboratoryPerformer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

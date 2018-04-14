@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.47
 Context: //hl7:id
 Item: (cdachlrep_header_AssignedEntityForLaboratory)
 -->
-    <rule context="//hl7:id" id="d523664e10418-false-d719838e0">
+    <rule context="//hl7:id" id="d130e10899-false-d201435e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_AssignedEntityForLaboratory): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="string(@nullFlavor)=('NAV') or not(@nullFlavor)">(cdachlrep_header_AssignedEntityForLaboratory): The value for @nullFlavor SHALL be 'NAV'.</assert>
@@ -135,7 +135,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.47
 Context: //hl7:telecom
 Item: (cdachlrep_header_AssignedEntityForLaboratory)
 -->
-    <rule context="//hl7:telecom" id="d523664e10451-false-d720044e0">
+    <rule context="//hl7:telecom" id="d130e10932-false-d201641e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.9.47" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_AssignedEntityForLaboratory): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
     </rule>

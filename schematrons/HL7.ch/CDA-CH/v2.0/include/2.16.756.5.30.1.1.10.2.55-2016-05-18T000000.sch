@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.55
 Context: //hl7:templateId[@root='2.16.756.5.30.1.1.1.1.3.9.1']
 Item: (cdachlrep_header_TemplateIdsCdaChLrepV1)
 -->
-    <rule context="//hl7:templateId[@root='2.16.756.5.30.1.1.1.1.3.9.1']" id="d523664e1494-false-d659525e0">
+    <rule context="//hl7:templateId[@root='2.16.756.5.30.1.1.1.1.3.9.1']" id="d130e1497-false-d137570e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.55" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_TemplateIdsCdaChLrepV1): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.55" test="string(@root)=('2.16.756.5.30.1.1.1.1.3.9.1')">(cdachlrep_header_TemplateIdsCdaChLrepV1): The value for @root SHALL be '2.16.756.5.30.1.1.1.1.3.9.1'.</assert>
@@ -23,7 +23,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.55
 Context: //hl7:templateId[@root='2.16.756.5.30.1.127.1.4']
 Item: (cdachlrep_header_TemplateIdsCdaChLrepV1)
 -->
-    <rule context="//hl7:templateId[@root='2.16.756.5.30.1.127.1.4']" id="d523664e1502-false-d659540e0">
+    <rule context="//hl7:templateId[@root='2.16.756.5.30.1.127.1.4']" id="d130e1505-false-d137585e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.55" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_TemplateIdsCdaChLrepV1): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.55" test="string(@root)=('2.16.756.5.30.1.127.1.4')">(cdachlrep_header_TemplateIdsCdaChLrepV1): The value for @root SHALL be '2.16.756.5.30.1.127.1.4'.</assert>
@@ -33,7 +33,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.2.55
 Context: //hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3']
 Item: (cdachlrep_header_TemplateIdsCdaChLrepV1)
 -->
-    <rule context="//hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3']" id="d523664e1510-false-d659555e0">
+    <rule context="//hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3']" id="d130e1513-false-d137600e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.55" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachlrep_header_TemplateIdsCdaChLrepV1): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachlrep-?id=2.16.756.5.30.1.1.10.2.55" test="string(@root)=('1.3.6.1.4.1.19376.1.3.3')">(cdachlrep_header_TemplateIdsCdaChLrepV1): The value for @root SHALL be '1.3.6.1.4.1.19376.1.3.3'.</assert>

@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.101
 Context: *[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]
 Item: (chpcc_entry_ImmunizationPerformer)
 -->
-    <rule context="*[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]" id="d130e4506-false-d468548e0">
+    <rule context="*[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]" id="d130e4767-false-d470961e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101'])&gt;=1">(chpcc_entry_ImmunizationPerformer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101'])&lt;=1">(chpcc_entry_ImmunizationPerformer): element hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="count(hl7:time)&gt;=1">(chpcc_entry_ImmunizationPerformer): element hl7:time is required [min 1x].</assert>
@@ -26,7 +26,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.101
 Context: *[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']
 Item: (chpcc_entry_ImmunizationPerformer)
 -->
-    <rule context="*[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']" id="d130e4519-false-d468635e0">
+    <rule context="*[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']" id="d130e4780-false-d471048e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_ImmunizationPerformer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="string(@root)=('2.16.756.5.30.1.1.10.4.101')">(chpcc_entry_ImmunizationPerformer): The value for @root SHALL be '2.16.756.5.30.1.1.10.4.101'.</assert>
@@ -36,7 +36,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.101
 Context: *[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]/hl7:time
 Item: (chpcc_entry_ImmunizationPerformer)
 -->
-    <rule context="*[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]/hl7:time" id="d130e4521-false-d468649e0">
+    <rule context="*[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.101']]/hl7:time" id="d130e4782-false-d471062e0">
         <extends rule="TS.CH.TZ"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_ImmunizationPerformer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.101" test="not(*)">(chpcc_entry_ImmunizationPerformer): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>

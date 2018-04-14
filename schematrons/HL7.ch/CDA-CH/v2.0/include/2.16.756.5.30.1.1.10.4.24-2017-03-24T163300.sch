@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.24
 Context: //hl7:participantRole[@classCode='SPEC']
 Item: (chpalm_entry_ParticipantBodySpecimenCollection)
 -->
-    <rule context="//hl7:participantRole[@classCode='SPEC']" id="d130e6406-false-d485932e0">
+    <rule context="//hl7:participantRole[@classCode='SPEC']" id="d130e6667-false-d488345e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.24" test="string(@classCode)=('SPEC')">(chpalm_entry_ParticipantBodySpecimenCollection): The value for @classCode SHALL be 'SPEC'.</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.24" test="count(hl7:id)&gt;=1">(chpalm_entry_ParticipantBodySpecimenCollection): element hl7:id is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.24" test="count(hl7:id)&lt;=1">(chpalm_entry_ParticipantBodySpecimenCollection): element hl7:id appears too often [max 1x].</assert>
@@ -25,7 +25,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.24
 Context: //hl7:participantRole[@classCode='SPEC']/hl7:id
 Item: (chpalm_entry_ParticipantBodySpecimenCollection)
 -->
-    <rule context="//hl7:participantRole[@classCode='SPEC']/hl7:id" id="d130e6410-false-d485965e0">
+    <rule context="//hl7:participantRole[@classCode='SPEC']/hl7:id" id="d130e6671-false-d488378e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.24" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_entry_ParticipantBodySpecimenCollection): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.24" test="string(@nullFlavor)=('NA') or not(@nullFlavor)">(chpalm_entry_ParticipantBodySpecimenCollection): The value for @nullFlavor SHALL be 'NA'.</assert>

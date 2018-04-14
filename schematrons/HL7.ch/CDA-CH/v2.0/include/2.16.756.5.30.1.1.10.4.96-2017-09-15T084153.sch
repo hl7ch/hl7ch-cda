@@ -13,7 +13,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.96
 Context: *[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]
 Item: (FreeTemplate74)
 -->
-    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]" id="d130e9476-false-d508745e0">
+    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]" id="d130e10261-false-d511158e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="count(hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']])&gt;=1">(FreeTemplate74): element hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']] is required [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="count(hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']])&lt;=1">(FreeTemplate74): element hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']] appears too often [max 1x].</assert>
     </rule>
@@ -22,7 +22,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.96
 Context: *[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]
 Item: (FreeTemplate74)
 -->
-    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]" id="d130e9489-false-d508767e0">
+    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]" id="d130e10274-false-d511180e0">
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96'])&gt;=1">(FreeTemplate74): element hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96'] is mandatory [min 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="count(hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96'])&lt;=1">(FreeTemplate74): element hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96'] appears too often [max 1x].</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="count(hl7:code[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.1.11.70-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor])&gt;=1">(FreeTemplate74): element hl7:code[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.1.11.70-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor] is required [min 1x].</assert>
@@ -35,7 +35,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.96
 Context: *[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']
 Item: (FreeTemplate74)
 -->
-    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']" id="d130e9492-false-d508814e0">
+    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']" id="d130e10277-false-d511227e0">
         <extends rule="II"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(FreeTemplate74): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="string(@root)=('2.16.756.5.30.1.1.10.4.96')">(FreeTemplate74): The value for @root SHALL be '2.16.756.5.30.1.1.10.4.96'.</assert>
@@ -45,7 +45,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.4.96
 Context: *[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:code[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.1.11.70-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]
 Item: (FreeTemplate74)
 -->
-    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:code[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.1.11.70-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d130e9494-false-d508831e0">
+    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:code[concat(@code,@codeSystem)=doc('include/voc-2.16.756.5.30.1.1.11.70-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code,@codeSystem) or @nullFlavor]" id="d130e10279-false-d511244e0">
         <extends rule="CE"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.4.96" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(FreeTemplate74): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <let name="theCode" value="@code"/>
@@ -66,7 +66,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.14
 Context: *[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:text[not(@nullFlavor)]
 Item: (cdach_other_TextElementWithReferenceToNarrativeText)
 -->
-    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:text[not(@nullFlavor)]" id="d508832e45-false-d508879e0">
+    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:text[not(@nullFlavor)]" id="d511245e45-false-d511292e0">
         <extends rule="ED"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_TextElementWithReferenceToNarrativeText): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.14" test="count(hl7:reference[not(@nullFlavor)])&gt;=1">(cdach_other_TextElementWithReferenceToNarrativeText): element hl7:reference[not(@nullFlavor)] is mandatory [min 1x].</assert>
@@ -77,7 +77,7 @@ Template derived rules for ID: 2.16.756.5.30.1.1.10.9.14
 Context: *[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:text[not(@nullFlavor)]/hl7:reference[not(@nullFlavor)]
 Item: (cdach_other_TextElementWithReferenceToNarrativeText)
 -->
-    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:text[not(@nullFlavor)]/hl7:reference[not(@nullFlavor)]" id="d508832e46-false-d508899e0">
+    <rule context="*[hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]]/hl7:criterion[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.96']]/hl7:text[not(@nullFlavor)]/hl7:reference[not(@nullFlavor)]" id="d511245e46-false-d511312e0">
         <extends rule="TEL"/>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.14" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_TextElementWithReferenceToNarrativeText): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
         <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachvacd-?id=2.16.756.5.30.1.1.10.9.14" test="@value">(cdach_other_TextElementWithReferenceToNarrativeText): attribute @value SHALL be present.</assert>

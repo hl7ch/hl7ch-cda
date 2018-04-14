@@ -226,6 +226,8 @@
     <include href="include/2.16.756.5.30.1.1.10.4.90-2015-12-15T000000.sch"/>
    <!-- chpcc_entry_AllergiesAndIntolerancesConcern -->
     <include href="include/2.16.756.5.30.1.1.10.4.91-2015-12-15T000000.sch"/>
+   <!-- chpcc_entry_PregnancyObservation -->
+    <include href="include/2.16.756.5.30.1.1.10.4.92-2015-12-15T000000.sch"/>
    <!-- chpcc_entry_ImmunizationRecommendation -->
     <include href="include/2.16.756.5.30.1.1.10.4.93-2015-12-15T000000.sch"/>
    <!-- chpcc_entry_ManufacturedProduct -->
