@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************************
+Sample Swiss eVACDOC - Vaccination Record
+
+History:
+2018.04.14: Tony Schaller, medshare GmbH: Initial creation according to CDA-CH-VACD V2 (2018)
+
+******************************************************** -->
+<?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+	<!-- CDA-CH V2 (2017) realm. -->
+	<realmCode code='CHE'/>
+
+	<!-- CDA R2 (2005) type code. -->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+
+	<!-- CDA-CH V2 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
+	<!-- CDA-CH V2 ART-DECOR model - structuredBody. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.9"/>
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2"/>
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1"/>
+
+	<!-- CDA-CH-VACD V2 (2018) / CDA-CH-VACD / eVACDOC V2 specification. This is an informational reference, only. -->
+	<templateId root='2.16.756.5.30.1.1.1.1.3.5.2'/>
+	<!-- CDA-CH-VACD / Vaccination Record ART-DECOR model. -->
+	<templateId root='2.16.756.5.30.1.1.10.1.19'/>
+	<!-- Exchange format according to the Swiss EPR -->
+	<templateId root='2.16.756.5.30.1.127.1.4'/>
+	<!-- Immunization Content (IC) Content Module, IHE PCC Technical Framework Revision 11.0 - November 11, 2016. -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'/>
+	<!-- Medical Documents Specification, IHE PCC Technical Framework Revision 11.0 - November 11, 2016. -->
+	<templateId root='1.3.6.1.4.1.19376.1.5.3.1.1.1'/>
+
+	<!-- Document id according to CDA-CH v2.0. -->
+	<id root="8D985B75-36AC-4826-B2B8-6BBFA873DA96"/>
+	<!-- Document code according to CDA-CH-VACD. -->
+	<code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF IMMUNIZATIONS">
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<translation code="41000179103" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Immunization record"/>
+	</code>
+
+	<!-- Document title according to CDA-CH-VACD. -->
+	<title>Impfdossier</title>
+
+	<!-- Document creation timestamp according to CDA-CH v2.0. -->
+	<effectiveTime value="20180604"/>
+
+	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
+	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+
+	<!-- Document language code according to CDA-CH v2.0. -->
+	<languageCode code="de-CH"/>
+
+	<!--
+	Document setId and versionNumber according to CDA-CH v2.0.
+	This document is a new version of the one created for CDA-CH v1.2
+	-->
+	<setId root="8D985B75-36AC-4826-B2B8-6BBFA873DA96"/>
+	<versionNumber value="1"/>
+
+	<!-- Human patient according to CDA-CH v2.0 and case study. -->
+	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.68"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
+		<patientRole>
+			<!-- The patient's id. -->
+			<id root="2.999" extension="898989"/>
+			<!-- The patient's address - also according to eCH-0010. -->
+			<addr use="HP">
+				<streetName>Leidensweg</streetName>
+				<houseNumber>10</houseNumber>
+				<city>Specimendorf</city>
+				<postalCode>9876</postalCode>
+				<country>CH</country>
+			</addr>
+			<patient>
+				<!-- The patient's name - also according to eCH-0011. -->
+				<name use="L">
+					<given>Sesuna</given>
+					<family>Tigrinja</family>
+				</name>
+				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Female" />
+				<!-- The patient's birthdate. -->
+				<birthTime value="20040404"/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+
+	<!-- Information about the author of a CDA document according to CDA-CH v2.0 and case study. -->
+	<author>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
+		<!-- The author's role according to the Swiss EPR XDS.b metadata. (EprAuthorRole, 2.16.756.5.30.1.127.3.10.1.1.3) -->
+		<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+			<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+		</functionCode>
+		<!-- Timestamp of the authorship. -->
+		<time value="20180604"/>
+		<assignedAuthor>
+			<!-- The author's id (GLN). -->
+			<id root="2.51.1.3" extension="7608888888888"/>
+			<!-- The author is a person. -->
+			<assignedPerson>
+				<!-- The person's name - also according to eCH-0011. -->
+				<name use="L">
+					<given>Allzeit</given>
+					<family>Bereit</family>
+					<prefix qualifier="AC">Dr. med.</prefix>
+				</name>
+			</assignedPerson>
+			<!-- The author's organization. -->
+			<representedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7608888888888"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Gruppenpraxis CH</name>
+				<!-- The author's main phone.-->
+				<telecom value="tel:+41.32.234.55.66" use="PUB"/>
+				<!-- The author's main eMail address.-->
+				<telecom value="mailto:bereit@gruppenpraxis.ch" use="PUB"/>
+				<!-- The author's main Website.-->
+				<telecom value="http://www.gruppenpraxis.ch" use="PUB"/>
+				<!-- The author's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+
+	<!-- The custodian is the sender of the document according to CDA-CH v2.0. -->
+	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7608888888888"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Gruppenpraxis CH</name>
+				<!-- The organization's main phone.-->
+				<telecom value="tel:+41.32.234.55.66" use="PUB"/>
+				<!-- The organization's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<!-- The main recipient of the document according to CDA-CH v2.0 and case study. -->
+	<informationRecipient typeCode='PRCP'>
+		<!-- CDA-CH V2 Recipient -->
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
+		<!-- CDA-CH-VACD Recipient -->
+		<templateId root='2.16.756.5.30.1.1.10.2.57'/>
+		<!-- PRCP=Primary recipient-->
+		<intendedRecipient>
+			<receivedOrganization>
+				<!-- The organization's id (GLN). -->
+				<id root="2.51.1.3" extension="7608888888888"/>
+				<!-- The organization's name - also according to eCH-0011. -->
+				<name use="L">Gruppenpraxis CH</name>
+				<!-- The organization's main phone.-->
+				<telecom value="tel:+41.32.234.55.66" use="PUB"/>
+				<!-- The organization's address - also according to eCH-0010. -->
+				<addr use="WP">
+					<streetName>Doktorgasse</streetName>
+					<houseNumber>2</houseNumber>
+					<city>Musterhausen</city>
+					<postalCode>8888</postalCode>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+
+	<!--
+	********************************************************
+	CDA Body
+	********************************************************
+	-->
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.47"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.23"/>
+					<templateId root="2.16.840.1.113883.10.20.1.6"/>
+					<code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF IMMUNIZATIONS"/>
+					<title>Impfungen</title>
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Impfstoff Handelsname</th>
+									<th>Hersteller</th>
+									<th>Lot-Nr</th>
+									<th>Datum</th>
+									<th>Impfung gegen</th>
+									<th>Impfung erfolgt durch</th>
+									<th>Impfung dokumentiert durch</th>
+									<th>EKIF Empfehlungskategorie</th>
+									<th>Bemerkung</th>
+								</tr>
+								<tr>
+									<td>
+										<content ID="is10">BOOSTRIX Polio Inj Susp</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td/>
+									<td>04.06.2018</td>
+									<td>
+										<content ID="is11">Diphterie</content>, <content ID="is12">Tetanus</content>, <content ID="is13">Keuchhusten</content>, <content ID="is14">Kinderlähmung</content>
+									</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>
+										<content ID="is15">Empfohlene Basisimpfungen</content>
+									</td>
+									<td>
+										<content ID="is16">Anlässlich Schularztuntersuchung</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="is20">MMRVAXPRO Trockensub c Solv</content>
+									</td>
+									<td>Sanofi Pasteur MSD AG</td>
+									<td/>
+									<td>04.06.2018</td>
+									<td>
+										<content ID="is21">Masern</content>, <content ID="is22">Mumps</content>, <content ID="is23">Röteln</content>
+									</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>
+										<content ID="is24">Empfohlene Basisimpfungen</content>
+									</td>
+									<td>
+										<content ID="is25">Anlässlich Schularztuntersuchung</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="is30">ENGERIX B 20 Inj Susp Erw</content>
+									</td>
+									<td>GlaxoSmithKline AG</td>
+									<td/>
+									<td>04.06.2018</td>
+									<td>
+										<content ID="is31">Hepatitis B</content>
+									</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>
+										<content ID="is32">Empfohlene Basisimpfungen</content>
+									</td>
+									<td>
+										<content ID="is33">Anlässlich Schularztuntersuchung</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="is40">GARDASIL Inj Susp m Nad o SD</content>
+									</td>
+									<td>Sanofi Pasteur MSD AG</td>
+									<td/>
+									<td>04.06.2018</td>
+									<td>
+										<content ID="is41">Papilloma-Virus</content>
+									</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>Dr. med. Allzeit Bereit</td>
+									<td>
+										<content ID="is42">Empfohlene Basisimpfungen</content>
+									</td>
+									<td>
+										<content ID="is43">Anlässlich Schularztuntersuchung</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+							<templateId root="2.16.840.1.113883.10.20.1.24"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
+							<id root="4a641cee-aa60-09a6-b0ab-8d534c7c9e0d"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#is10"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20180604"/>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680006370012"/>
+									<manufacturedMaterial>
+										<code code="J07CA02" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>BOOSTRIX Polio Inj Susp</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<time value="20180604"/>
+								<assignedEntity>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.40"/>
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+									<text>
+										<reference value="#is16"/>
+									</text>
+									<statusCode code="completed"/>
+								</act>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a641d8e-aa60-09a6-b7fb-8d534c7c9e0d"/>
+									<code code="76668005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diphterie"/>
+									<text>
+										<reference value="#is11"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a64209a-aa60-09a6-d5fd-8d534c7c9e0d"/>
+									<code code="127786006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Tetanus"/>
+									<text>
+										<reference value="#is12"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a642130-aa60-09a6-a82a-8d534c7c9e0d"/>
+									<code code="39343008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Keuchhusten"/>
+									<text>
+										<reference value="#is13"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a6421d0-aa60-09a6-e59e-8d534c7c9e0d"/>
+									<code code="72093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Kinderlähmung"/>
+									<text>
+										<reference value="#is14"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#is15"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+							<templateId root="2.16.840.1.113883.10.20.1.24"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
+							<id root="4a642270-aa60-09a6-45f4-8d534c7c9e0d"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#is20"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20180604"/>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680007030014"/>
+									<manufacturedMaterial>
+										<code code="J07BD52" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>MMRVAXPRO Trockensub c Solv</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">Sanofi Pasteur MSD AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<time value="20180604"/>
+								<assignedEntity>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.40"/>
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+									<text>
+										<reference value="#is25"/>
+									</text>
+									<statusCode code="completed"/>
+								</act>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a642306-aa60-09a6-5575-8d534c7c9e0d"/>
+									<code code="47435007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Masern"/>
+									<text>
+										<reference value="#is21"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a6423a6-aa60-09a6-0d20-8d534c7c9e0d"/>
+									<code code="50583002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mumps"/>
+									<text>
+										<reference value="#is22"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a64243c-aa60-09a6-9c89-8d534c7c9e0d"/>
+									<code code="82314000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Röteln"/>
+									<text>
+										<reference value="#is23"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#is24"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+							<templateId root="2.16.840.1.113883.10.20.1.24"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
+							<id root="4a6424dc-aa60-09a6-89b8-8d534c7c9e0d"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#is30"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20180604"/>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680005340016"/>
+									<manufacturedMaterial>
+										<code code="J07BC01" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>ENGERIX B 20 Inj Susp Erw</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">GlaxoSmithKline AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<time value="20180604"/>
+								<assignedEntity>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.40"/>
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+									<text>
+										<reference value="#is33"/>
+									</text>
+									<statusCode code="completed"/>
+								</act>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a64257c-aa60-09a6-8708-8d534c7c9e0d"/>
+									<code code="16584000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hepatitis B"/>
+									<text>
+										<reference value="#is31"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#is32"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+							<templateId root="2.16.840.1.113883.10.20.1.24"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
+							<id root="4a642612-aa60-09a6-c80c-8d534c7c9e0d"/>
+							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#is40"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime value="20180604"/>
+							<priorityCode nullFlavor="UNK"/>
+							<routeCode nullFlavor="NA"/>
+							<doseQuantity nullFlavor="UNK"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct>
+									<templateId root="2.16.756.5.30.1.1.10.4.94"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.53"/>
+									<id root="2.51.1.1" extension="7680577350031"/>
+									<manufacturedMaterial>
+										<code code="J07BM01" codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+										<name>GARDASIL Inj Susp m Nad o SD</name>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name use="L">Sanofi Pasteur MSD AG</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<performer>
+								<time value="20180604"/>
+								<assignedEntity>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<author>
+								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
+								</functionCode>
+								<time value="20180604"/>
+								<assignedAuthor>
+									<id root="2.51.1.3" extension="7608888888888"/>
+									<assignedPerson>
+										<name use="L">
+											<given>Allzeit</given>
+											<family>Bereit</family>
+											<prefix qualifier="AC">Dr. med.</prefix>
+										</name>
+									</assignedPerson>
+									<representedOrganization>
+										<id root="2.51.1.3" extension="7608888888888"/>
+										<name use="L">Gruppenpraxis CH</name>
+										<telecom value="tel:+41.32.234.55.66" use="WP"/>
+										<telecom value="fax:+41.32.234.55.67" use="WP"/>
+										<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+										<telecom value="http://www.gruppenpraxis.ch" use="WP"/>
+										<addr use="WP">
+											<streetName>Doktorgasse</streetName>
+											<houseNumber>2</houseNumber>
+											<city>Musterhausen</city>
+											<postalCode>8888</postalCode>
+											<country>CH</country>
+										</addr>
+									</representedOrganization>
+								</assignedAuthor>
+							</author>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+									<templateId root="2.16.840.1.113883.10.20.1.40"/>
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+									<text>
+										<reference value="#is43"/>
+									</text>
+									<statusCode code="completed"/>
+								</act>
+							</entryRelationship>
+							<entryRelationship typeCode="RSON" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
+									<id root="4a6426b2-aa60-09a6-37d3-8d534c7c9e0d"/>
+									<code code="428570002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Papilloma-Virus"/>
+									<text>
+										<reference value="#is41"/>
+									</text>
+									<statusCode code="completed"/>
+								</observation>
+							</entryRelationship>
+							<precondition>
+								<criterion>
+									<templateId root="2.16.756.5.30.1.1.10.4.96"/>
+									<code code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen"/>
+									<text>
+										<reference value="#is42"/>
+									</text>
+								</criterion>
+							</precondition>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.25"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6"/>
+					<templateId root="2.16.840.1.113883.10.20.1.11"/>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+					<title>Problemliste</title>
+					<text>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Bereich</th>
+									<th>Leiden</th>
+									<th>Von</th>
+									<th>Bis</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Komplikationsrisiken</td>
+									<td>
+										<content ID="ap1">Schweres Asthma: bei verlängerter oder häufiger Behandlung mit oralen Steroiden</content>
+									</td>
+									<td>12.01.2014</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.90"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+							<templateId root="2.16.840.1.113883.10.20.1.27"/>
+							<id root="975b8190-7754-0776-cc7c-8b1126624cbc"/>
+							<code nullFlavor="NA"/>
+							<text>Komplikationsrisiken</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20140112"/>
+								<high nullFlavor="UNK"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="2.16.756.5.30.1.1.10.4.97"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+									<templateId root="2.16.840.1.113883.10.20.1.28"/>
+									<id root="9759ad8e-7754-0776-ae9a-e74525dc3a64"/>
+									<code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem">
+										<originalText>
+											<reference value="#ap1"/>
+										</originalText>
+									</code>
+									<text>
+										<reference value="#ap1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20140112"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="114004" codeSystem="2.16.756.5.30.1.127.3.3.1" displayName="Schweres Asthma: bei verlängerter oder häufiger Behandlung mit oralen Steroiden"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.50"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.8"/>
+					<code code="11348-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PAST ILLNESS"/>
+					<title>Bisherige Krankheiten</title>
+					<text>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Bereich</th>
+									<th>Leiden</th>
+									<th>Von</th>
+									<th>Bis</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Windpocken</td>
+									<td>
+										<content ID="hipi1">H/O: chickenpox</content>
+									</td>
+									<td>14.12.2012</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.90"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.27"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+							<id root="975b8370-7754-0776-9b19-8b1126624cbc"/>
+							<code nullFlavor="NA"/>
+							<text>Windpocken</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20181031"/>
+								<high nullFlavor="UNK"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<templateId root="2.16.756.5.30.1.1.10.4.97"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+									<templateId root="2.16.840.1.113883.10.20.1.28"/>
+									<id root="9759b180-7754-0776-03f0-e74525dc3a64"/>
+									<code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem">
+										<originalText>
+											<reference value="#hipi1"/>
+										</originalText>
+									</code>
+									<text>
+										<reference value="#hipi1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20121214"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="38907003" codeSystem="2.16.840.1.113883.6.96" displayName="H/O: chickenpox"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.51"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.13"/>
+					<templateId root="2.16.840.1.113883.10.20.1.2"/>
+					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="ALLERGIES, ADVERSE REACTIONS, ALERTS"/>
+					<title>Allergien und Unverträglichkeiten</title>
+					<text>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Bereich</th>
+									<th>Allergie</th>
+									<th>Von</th>
+									<th>Bis</th>
+									<th>Kommentar</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Hühnereiweiss</td>
+									<td>
+										<content ID="ar11">Egg protein (substance)</content>
+									</td>
+									<td>13.12.2012</td>
+									<td/>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.91"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3"/>
+							<templateId root="2.16.840.1.113883.10.20.1.27"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+							<id root="975b84a6-7754-0776-e83e-8b1126624cbc"/>
+							<code nullFlavor="NA"/>
+							<text>Hühnereiweiss</text>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20121213"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6"/>
+									<templateId root="2.16.840.1.113883.10.20.1.28"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+									<id root="9759b220-7754-0776-c86c-e74525dc3a64"/>
+									<code code="DINT" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7ActCode" displayName="Drug Intolerance">
+										<originalText>
+											<reference value="#ar1"/>
+										</originalText>
+									</code>
+									<text>
+										<reference value="#ar1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20121213"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="303300008" codeSystem="2.16.840.1.113883.6.96" displayName="Egg protein (substance)"/>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.46"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.28"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.27"/>
+					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests/laboratory data"/>
+					<title>Weitere relevante Beobachtungen</title>
+					<text>Gestationsalter bei der Geburt des Patienten: <content ID="gestage">38 Wochen, 6 Tage</content>
+					</text>
+					<entry typeCode="DRIV">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.84"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="975b85a0-7754-0776-d92d-8b1126624cbc"/>
+							<code code="49052-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Gestational age in days"/>
+							<text>
+								<reference value="#gestage"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NA"/>
+							<value xsi:type="PQ" value="272.0" unit="d"/>
+						</observation>
+					</entry>
+					<entry typeCode="DRIV">
+						<procedure classCode="PROC" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
+							<templateId root="2.16.840.1.113883.10.20.1.29"/>
+							<id root="975b85a0-7754-0776-d92d-8b1126624cbc"/>
+							<code nullFlavor="NA"/>
+							<text>
+								<reference nullFlavor="NA"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NA"/>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.3"/>
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+					<code code="18727-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SEROLOGY STUDIES"/>
+					<title>Laborbefund - Serologie</title>
+					<text>Auftragsnummer: Unbekannt<br />Befundstatus: Endgültiger Befund<br />
+						<br />
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Zeile</th>
+									<th>Beobachtung</th>
+									<th>Resultat</th>
+									<th>Einheit</th>
+									<th>Interpretation</th>
+									<th>Referenz</th>
+									<th>Interpretation Referenz</th>
+									<th>Codesystem</th>
+									<th>Code</th>
+									<th>Original Name</th>
+									<th>Kommentar</th>
+									<th>Probenentnahme</th>
+									<th>Probeneingang</th>
+									<th>Resultat erhalten</th>
+									<th>Ausführende Person</th>
+									<th>Autor</th>
+									<th>Proben-Material</th>
+									<th>Entnahmeort</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td/>
+									<td>
+										<content ID="lss_18727-8_observation_1">120.0</content>
+									</td>
+									<td>g/L</td>
+									<td>Normal</td>
+									<td>100 - 130 g/L</td>
+									<td/>
+									<td>LOINC</td>
+									<td>718-7</td>
+									<td>Hemoglobin [Mass/volume] in Blood</td>
+									<td>
+										<content ID="lss_18727-8_comment_1"/>
+									</td>
+									<td>
+										<content ID="lss_18727-8_collectiondate_1"/>
+									</td>
+									<td/>
+									<td/>
+									<td>Unbekannt am 01.02.2018 00:00</td>
+									<td/>
+									<td/>
+									<td/>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td/>
+									<td>
+										<content ID="lss_18727-8_observation_2">Negative; Pathogen couldn't be determined in specimen</content>
+									</td>
+									<td/>
+									<td/>
+									<td/>
+									<td/>
+									<td>LOINC</td>
+									<td>22502-9</td>
+									<td>Measles virus Ab.IgG</td>
+									<td>
+										<content ID="lss_18727-8_comment_2"/>
+									</td>
+									<td>
+										<content ID="lss_18727-8_collectiondate_2"/>
+									</td>
+									<td/>
+									<td/>
+									<td>Unbekannt am 01.02.2018 00:00</td>
+									<td/>
+									<td/>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.4"/>
+							<templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+							<code code="18727-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SEROLOGY STUDIES"/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="201802010000+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="718-7" codeSystem="2.16.840.1.113883.6.1" displayName="Hemoglobin [Mass/volume] in Blood"/>
+											<text>
+												<reference value="#lss_18727-8_observation_1"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="PQ" value="120.0" unit="g/L"/>
+											<interpretationCode code="N" codeSystem="2.16.756.5.30.1.127.3.2.20121101.3" displayName="Normal"/>
+											<performer typeCode="PRF">
+												<templateId root="2.16.756.5.30.1.1.10.4.7"/>
+												<time value="201802010000+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7605555555555"/>
+													<representedOrganization>
+														<id root="2.51.1.3" extension="7605555555555"/>
+														<name>Labor Pipette</name>
+														<telecom value="tel:+41.32.555.55.55" use="WP"/>
+														<telecom value="mailto:demo@labor-pipette.ch" use="WP"/>
+														<telecom value="http://labor-pipette.ch" use="WP"/>
+														<addr use="WP">
+															<streetAddressLine>Analyzergasse</streetAddressLine>
+															<postalCode>8888</postalCode>
+															<city>Musterhausen</city>
+															<country>CHE</country>
+														</addr>
+													</representedOrganization>
+												</assignedEntity>
+											</performer>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<act classCode="ACT" moodCode="EVN">
+													<templateId root="2.16.756.5.30.1.1.10.4.2"/>
+													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+													<templateId root="2.16.840.1.113883.10.20.1.40"/>
+													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+													<text>
+														<reference value="#lss_18727-8_comment_1"/>
+													</text>
+													<statusCode code="completed"/>
+												</act>
+											</entryRelationship>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low value="100" unit="g/L"/>
+														<high value="130" unit="g/L"/>
+													</value>
+													<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.19"/>
+									<statusCode code="completed"/>
+									<effectiveTime value="201802010000+0100"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="2.16.756.5.30.1.1.10.4.3"/>
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<code code="22502-9" codeSystem="2.16.840.1.113883.6.1" displayName="Measles virus Ab.IgG"/>
+											<text>
+												<reference value="#lss_18727-8_observation_2"/>
+											</text>
+											<statusCode code="completed"/>
+											<value xsi:type="CD" code="NEG" codeSystem="2.16.756.5.30.1.127.3.2.20121101.3" codeSystemName="Interpretationscode zu Melde-Verordnung EDI" displayName="Negative; Pathogen couldn't be determined in specimen"/>
+											<interpretationCode nullFlavor="NA"/>
+											<performer typeCode="PRF">
+												<time value="201802010000+0100"/>
+												<assignedEntity>
+													<id root="2.51.1.3" extension="7605555555555"/>
+													<representedOrganization>
+														<id root="2.51.1.3" extension="7605555555555"/>
+														<name>Labor Pipette</name>
+														<telecom value="tel:+41.32.555.55.55" use="WP"/>
+														<telecom value="mailto:demo@labor-pipette.ch" use="WP"/>
+														<telecom value="http://labor-pipette.ch" use="WP"/>
+														<addr use="WP">
+															<streetAddressLine>Analyzergasse</streetAddressLine>
+															<postalCode>8888</postalCode>
+															<city>Musterhausen</city>
+															<country>CHE</country>
+														</addr>
+													</representedOrganization>
+												</assignedEntity>
+											</performer>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<act classCode="ACT" moodCode="EVN">
+													<templateId root="2.16.756.5.30.1.1.10.4.2"/>
+													<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+													<templateId root="2.16.840.1.113883.10.20.1.40"/>
+													<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+													<text>
+														<reference value="#lss_18727-8_comment_2"/>
+													</text>
+													<statusCode code="completed"/>
+												</act>
+											</entryRelationship>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.53"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4"/>
+					<code code="10162-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PREGNANCIES"/>
+					<title>Schwangerschaft</title>
+					<text>
+						<content ID="hop1">Voraussichtlicher Geburtstermin: 11.04.2018</content>
+					</text>
+					<entry typeCode="DRIV">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.92"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="975b88de-7754-0776-0920-8b1126624cbc"/>
+							<code code="11778-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="DELIVERY DATE (CLINICAL ESTIMATE)"/>
+							<text>
+								<reference value="#hop1"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="UNK"/>
+							<value xsi:type="TS" value="20180411"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.2"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+					<title>Kommentar</title>
+					<text>
+						<content ID="k1">Der Impfplan 2014 empfiehlt bei nicht oder unvollständig geimpften Personen:<br /> Diphterie, Tetanus, Keuchhusten (bis 16 Jahre), Kinderlähmung, Masern Mumps und Röteln sowie Varizellen und Hepatitis B sowie humane PapillomaViren.</content><br />
+						<br />
+						<content ID="k2">Dieses Impfdossier hat keinen Anspruch auf medizinische Sinnhaftigkeit. Es dient einzig dazu, alle technisch möglichen Elemente in einem eImpfdossier darzustellen.</content>
+					</text>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.2"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.40"/>
+							<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+							<text>
+								<reference value="#k1"/>
+							</text>
+							<statusCode code="completed"/>
+						</act>
+					</entry>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.2"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+							<templateId root="2.16.840.1.113883.10.20.1.40"/>
+							<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+							<text>
+								<reference value="#k2"/>
+							</text>
+							<statusCode code="completed"/>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
