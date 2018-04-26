@@ -43,8 +43,8 @@
 	<!-- IHE PHARM PML -->
 	<code code="56445-0" codeSystem="2.16.840.1.113883.6.1"
 		codeSystemName="LOINC" displayName="Medication summary">
-		<translation code="736378000" codeSystem="2.16.840.1.113883.6.96"
-			codeSystemName="SNOMED CT" displayName="Medication management plan" />
+		<translation code="721912009" codeSystem="2.16.840.1.113883.6.96"
+			codeSystemName="SNOMED CT" displayName="Medication summary" /> 
 	</code>
 
 	<title>Medikationsplan</title>
