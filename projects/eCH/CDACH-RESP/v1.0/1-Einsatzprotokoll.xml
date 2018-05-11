@@ -10,8 +10,8 @@
 	Use Case 1) -->
 <!-- 2018-02-05: Oliver Egger, ahdis gmbh (Fixing schematron error) -->
 <!-- ************************************************************ -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
-<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm"
 	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
 	<realmCode code="CHE" />

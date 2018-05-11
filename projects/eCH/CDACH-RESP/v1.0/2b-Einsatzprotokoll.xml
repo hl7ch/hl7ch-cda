@@ -4,8 +4,8 @@
 <!-- http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-RESP_(specification)#Use_case_2_-_Prim.C3.A4reinsatz_mit_unbekanntem_Patienten -->
 <!-- 2018.02.07: Oliver Egger, ahdis gmbh (Document Creation) -->
 <!-- ************************************************************ -->
-<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch.xsl'?>
-<ClinicalDocument xmlns:pharm="urn:ihe:pharm:medication"
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
+<ClinicalDocument xmlns:pharm="urn:ihe:pharm"
 	xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:hl7-org:v3 ../../../../schemas/PHARM/schemas/cda/extendedschemas/CDA_extended_pharmacy.xsd">
 	<realmCode code="CHE" />
