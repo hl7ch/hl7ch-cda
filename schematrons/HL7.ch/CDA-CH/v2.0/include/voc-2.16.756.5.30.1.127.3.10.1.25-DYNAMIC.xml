@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valueSets>
    <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:xhtml="http://www.w3.org/1999/xhtml"
              xmlns:hl7="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:pharm="urn:ihe:pharm"
              id="2.16.756.5.30.1.127.3.10.1.25"
              name="EprGender"
              displayName="EprGender"
@@ -12,7 +12,7 @@
              effectiveDate="2018-01-31T14:14:25"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
-             referencedFrom="cdachvacd-">
+             referencedFrom="cdachemed-">
       <desc language="de-CH">Geschlecht der Patientin oder des Patienten gemäss Anhang 3 EPDV-EDI, Kapitel 2.10.<br clear="none"/>
             </desc>
       <desc language="en-US">Patient’s gender as per Annex 3  EPRO-FDHA, Chapter 2.10.<br clear="none"/>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:hl7="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:pharm="urn:ihe:pharm"
+             id="2.16.840.1.113883.1.11.16621"
+             name="ActSubstanceAdminSubstitutionCode"
+             displayName="ActSubstanceAdminSubstitutionCode"
+             effectiveDate="2014-03-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1360-20160323"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachemed-">
+      <desc language="en-US">
+                <p>
+                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1070"
+                        identifierName="Substance Admin Substitution"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="E"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="equivalent"
+                  level="1"
+                  type="S"/>
+                <concept code="EC"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="equivalent composition"
+                  level="2"
+                  type="S"/>
+                <concept code="BC"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="brand composition"
+                  level="3"
+                  type="L"/>
+                <concept code="G"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="generic composition"
+                  level="3"
+                  type="L"/>
+                <concept code="TE"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="therapeutic alternative"
+                  level="2"
+                  type="S"/>
+                <concept code="TB"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="therapeutic brand"
+                  level="3"
+                  type="L"/>
+                <concept code="TG"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="therapeutic generic"
+                  level="3"
+                  type="L"/>
+                <concept code="F"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="formulary"
+                  level="1"
+                  type="L"/>
+                <concept code="N"
+                  codeSystem="2.16.840.1.113883.5.1070"
+                  displayName="none"
+                  level="1"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

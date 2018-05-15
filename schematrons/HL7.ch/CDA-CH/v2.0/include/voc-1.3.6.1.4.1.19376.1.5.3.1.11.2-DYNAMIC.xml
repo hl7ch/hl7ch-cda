@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valueSets>
    <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:xhtml="http://www.w3.org/1999/xhtml"
              xmlns:hl7="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:pharm="urn:ihe:pharm"
              name="ProblemStatusObservation_value"
              displayName="ProblemStatusObservation_value"
              versionLabel="2014"
@@ -12,7 +12,7 @@
              statusCode="final"
              url="https://art-decor.ihe-europe.net/decor/services/"
              ident="IHE-PCC-"
-             referencedFrom="cdachvacd-">
+             referencedFrom="ch-pharm-">
       <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED Clinical Terms"/>
       <publishingAuthority name="eHealth Suisse">
                 <addrLine>Schwarzenburgstrasse 165</addrLine>

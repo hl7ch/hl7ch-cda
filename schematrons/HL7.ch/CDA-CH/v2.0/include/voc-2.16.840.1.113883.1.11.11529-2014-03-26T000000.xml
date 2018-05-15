@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:hl7="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:pharm="urn:ihe:pharm"
+             id="2.16.840.1.113883.1.11.11529"
+             name="ActClassObservation"
+             displayName="ActClassObservation"
+             effectiveDate="2014-03-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1360-20160323"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachemed-">
+      <desc language="en-US">
+                <p>
+                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+                <b>description: </b>
+                <p>
+                    <b>Description:</b> An act that is intended to result in new information about a subject. The main difference between Observations and other Acts is that Observations have a value attribute. The <b>code</b> attribute of Observation and the <b>value</b> attribute of Observation must be considered in combination to determine the semantics of the observation.</p>
+                <p>
+                    <b>Discussion:</b>
+                </p>
+                <p>Structurally, many observations are name-value-pairs, where the Observation.code (inherited from Act) is the name and the Observation.value is the value of the property. Such a construct is also known as a variable (a named feature that can assume a value) hence, the Observation class is always used to hold generic name-value-pairs or variables, even though the variable valuation may not be the result of an elaborate observation method. It may be a simple answer to a question or it may be an assertion or setting of a parameter.</p>
+                <p>As with all Act statements, Observation statements describe what was done, and in the case of Observations, this includes a description of what was actually observed (results or answers); and those results or answers are part of the observation and not split off into other objects.</p>
+                <p>The method of action is asserted by the Observation classCode or its subclasses at the least granular level, by the Observation.code attribute value at the medium level of granularity, and by the attribute value of observation.methodCode when a finer level of granularity is required. The method in whole or in part may also appear in the attribute value of Observation.value when using coded data types to express the value of the attribute. Relevant aspects of methodology may also be restated in value when the results themselves imply or state a methodology.</p>
+                <p>An observation may consist of component observations each having their own Observation.code and Observation.value. In this case, the composite observation may not have an Observation.value for itself. For instance, a white blood cell count consists of the sub-observations for the counts of the various granulocytes, lymphocytes and other normal or abnormal blood cells (e.g., blasts). The overall white blood cell count Observation itself may therefore not have a value by itself (even though it could have one, e.g., the sum total of white blood cells). Thus, as long as an Act
+                    is essentially an Act of recognizing and noting information about a subject, it is an Observation, regardless of whether it has a simple value by itself or whether it has sub-observations.</p>
+                <p>Even though observations are professional acts (see Act) and as such are intentional actions, this does not require that every possible outcome of an observation be pondered in advance of it being actually made. For instance, differential white blood cell counts (WBC) rarely show blasts, but if they do, this is part of the WBC observation even though blasts might not be predefined in the structure of a normal WBC.</p>
+                <p>Clinical documents commonly have Subjective and Objective findings, both of which are kinds of Observations. In addition, clinical documents commonly contain Assessments, which are also kinds of Observations. Thus, the establishment of a diagnosis is an Observation.</p>
+                <p>
+                    <b>Examples:</b>
+                </p>
+                <ul>
+                    <li>
+                        <p>Recording the results of a Family History Assessment</p>
+                    </li>
+                    <li>
+                        <p>Laboratory test and associated result</p>
+                    </li>
+                    <li>
+                        <p>Physical exam test and associated result</p>
+                    </li>
+                    <li>
+                        <p>Device temperature</p>
+                    </li>
+                    <li>
+                        <p>Soil lead level</p>
+                    </li>
+                </ul>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.6" identifierName="ActClass"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="OBS"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="observation"
+                  level="0"
+                  type="S"/>
+                <concept code="_ActClassROI"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="ActClassROI"
+                  level="1"
+                  type="A"/>
+                <concept code="ROIBND"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="bounded ROI"
+                  level="2"
+                  type="L"/>
+                <concept code="ROIOVL"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="overlay ROI"
+                  level="2"
+                  type="L"/>
+                <concept code="_SubjectPhysicalPosition"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="subject physical position"
+                  level="1"
+                  type="A"/>
+                <concept code="_SubjectBodyPosition"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="subject body position"
+                  level="2"
+                  type="A"/>
+                <concept code="LLD"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="left lateral decubitus"
+                  level="3"
+                  type="L"/>
+                <concept code="PRN"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="prone"
+                  level="3"
+                  type="L"/>
+                <concept code="RLD"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="right lateral decubitus"
+                  level="3"
+                  type="L"/>
+                <concept code="SFWL"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="Semi-Fowler's"
+                  level="3"
+                  type="L"/>
+                <concept code="SIT"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="sitting"
+                  level="3"
+                  type="L"/>
+                <concept code="STN"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="standing"
+                  level="3"
+                  type="L"/>
+                <concept code="SUP"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="supine"
+                  level="3"
+                  type="S"/>
+                <concept code="RTRD"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="reverse trendelenburg"
+                  level="4"
+                  type="L"/>
+                <concept code="TRD"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="trendelenburg"
+                  level="4"
+                  type="L"/>
+                <concept code="ALRT"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="detected issue"
+                  level="1"
+                  type="L"/>
+                <concept code="BATTERY"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="battery"
+                  level="1"
+                  type="L"/>
+                <concept code="CLNTRL"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="clinical trial"
+                  level="1"
+                  type="L"/>
+                <concept code="CNOD"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="Condition Node"
+                  level="1"
+                  type="L"/>
+                <concept code="COND"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="Condition"
+                  level="1"
+                  type="S"/>
+                <concept code="CASE"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="public health case"
+                  level="2"
+                  type="S"/>
+                <concept code="OUTB"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="outbreak"
+                  level="3"
+                  type="L"/>
+                <concept code="DGIMG"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="diagnostic image"
+                  level="1"
+                  type="L"/>
+                <concept code="GEN"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="genomic observation"
+                  level="1"
+                  type="S"/>
+                <concept code="DETPOL"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="determinant peptide"
+                  level="2"
+                  type="L"/>
+                <concept code="EXP"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="expression level"
+                  level="2"
+                  type="L"/>
+                <concept code="LOC"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="locus"
+                  level="2"
+                  type="L"/>
+                <concept code="PHN"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="phenotype"
+                  level="2"
+                  type="L"/>
+                <concept code="POL"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="polypeptide"
+                  level="2"
+                  type="L"/>
+                <concept code="SEQ"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="bio sequence"
+                  level="2"
+                  type="L"/>
+                <concept code="SEQVAR"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="bio sequence variation"
+                  level="2"
+                  type="L"/>
+                <concept code="INVSTG"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="investigation"
+                  level="1"
+                  type="L"/>
+                <concept code="OBSSER"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="observation series"
+                  level="1"
+                  type="S"/>
+                <concept code="OBSCOR"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="correlated observation sequences"
+                  level="2"
+                  type="L"/>
+                <concept code="POS"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="position"
+                  level="1"
+                  type="S"/>
+                <concept code="POSACC"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="position accuracy"
+                  level="2"
+                  type="L"/>
+                <concept code="POSCOORD"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="position coordinate"
+                  level="2"
+                  type="L"/>
+                <concept code="SPCOBS"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="specimen observation ActClassSpecObs"
+                  level="1"
+                  type="L"/>
+                <concept code="VERIF"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="Verification"
+                  level="1"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valueSets>
    <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:xhtml="http://www.w3.org/1999/xhtml"
              xmlns:hl7="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:pharm="urn:ihe:pharm"
              id="2.16.756.5.30.1.127.3.10.1.27"
              name="EprDocumentTypeCode"
              displayName="EprDocumentTypeCode"
@@ -13,7 +12,7 @@
              effectiveDate="2017-12-20T00:00:00"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
-             referencedFrom="cdachlrep-">
+             referencedFrom="cdachemed-">
       <desc language="de-CH">Typ des Dokumentes (2.16.756.5.30.1.127.3.10.1.27) gemäss Anhang 3 der Verordnungen zum EPDG.<br clear="none"/>
                 <br clear="none"/>Der Code definiert den Typ eines Dokuments (z.B.  Austrittsbericht, Labor-Bericht). Jeder Dokumenten-Typ sollte genau einer Dokumentenklasse zugeordnet sein.<br clear="none"/>
             </desc>
@@ -27,9 +26,10 @@
                 <br clear="none"/>Il codice definisce il tipo di documento (p. es. rapporto di dimissione, rapporto di laboratorio). Ciascun tipo di documento dovrebbe essere associato a una sola classe di documenti.<br clear="none"/>
             </desc>
       <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED Clinical Terms"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
             </publishingAuthority>
       <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
       <conceptList>

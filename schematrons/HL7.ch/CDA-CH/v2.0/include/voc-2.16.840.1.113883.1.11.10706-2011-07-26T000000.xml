@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:hl7="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:pharm="urn:ihe:pharm"
+             id="2.16.840.1.113883.1.11.10706"
+             name="TimingEvent"
+             displayName="TimingEvent"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachemed-">
+      <sourceCodeSystem id="2.16.840.1.113883.5.139" identifierName="TimingEvent"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="AC"
+                  level="0"
+                  type="L"/>
+                <concept code="ACD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="ACD"
+                  level="0"
+                  type="L"/>
+                <concept code="ACM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="ACM"
+                  level="0"
+                  type="L"/>
+                <concept code="ACV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="ACV"
+                  level="0"
+                  type="L"/>
+                <concept code="C"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="C"
+                  level="0"
+                  type="S"/>
+                <concept code="CD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="CD"
+                  level="1"
+                  type="L"/>
+                <concept code="CM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="CM"
+                  level="1"
+                  type="L"/>
+                <concept code="CV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="CV"
+                  level="1"
+                  type="L"/>
+                <concept code="HS"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="HS"
+                  level="0"
+                  type="L"/>
+                <concept code="IC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="IC"
+                  level="0"
+                  type="L"/>
+                <concept code="ICD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="ICD"
+                  level="0"
+                  type="L"/>
+                <concept code="ICM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="ICM"
+                  level="0"
+                  type="L"/>
+                <concept code="ICV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="ICV"
+                  level="0"
+                  type="L"/>
+                <concept code="PC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="PC"
+                  level="0"
+                  type="L"/>
+                <concept code="PCD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="PCD"
+                  level="0"
+                  type="L"/>
+                <concept code="PCM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="PCM"
+                  level="0"
+                  type="L"/>
+                <concept code="PCV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="PCV"
+                  level="0"
+                  type="L"/>
+                <concept code="WAKE"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="WAKE"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>
