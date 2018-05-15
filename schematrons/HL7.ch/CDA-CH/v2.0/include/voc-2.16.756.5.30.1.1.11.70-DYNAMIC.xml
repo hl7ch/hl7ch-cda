@@ -1,17 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.756.5.30.1.1.11.70" name="Empfehlungskategorien" displayName="Swiss Vaccination Plan Recommendation Category" effectiveDate="2017-06-12T14:21:51" statusCode="draft" url="http://art-decor.org/decor/services/" ident="ch-pcc-" referencedFrom="ch-palm-">
-        <sourceCodeSystem id="2.16.756.5.30.1.127.3.3.4" identifierName="ehealthsuisse-codesystem-4"/>
-        <publishingAuthority name="eHealth Suisse">
-            <addrLine>Schwarzenburgstrasse 165</addrLine>
-            <addrLine>CH-3003 Bern</addrLine>
-            <addrLine type="uri">www.e-health-suisse.ch</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <concept code="41501" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Basisimpfungen" level="0" type="L"/>
-            <concept code="41502" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene ergänzende Impfungen" level="0" type="L"/>
-            <concept code="41503" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Empfohlene Impfungen für Risikogruppen" level="0" type="L"/>
-            <concept code="41504" codeSystem="2.16.756.5.30.1.127.3.3.4" displayName="Impfungen ohne Empfehlungen" level="0" type="L"/>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xhtml="http://www.w3.org/1999/xhtml"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.1.11.70"
+             name="SwissVaccinationPlanRecommendationCategory"
+             displayName="Swiss Vaccination Plan Recommendation Category"
+             effectiveDate="2018-04-19T00:00:00"
+             statusCode="pending"
+             officialReleaseDate="2018-04-19T00:00:00"
+             versionLabel="2018"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-pcc-"
+             referencedFrom="cdachvacd-">
+      <sourceCodeSystem id="2.16.756.5.30.1.127.3.3.4"
+                        identifierName="ehealthsuisse-codesystem-4"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="41501"
+                  codeSystem="2.16.756.5.30.1.127.3.3.4"
+                  displayName="REC_BASE"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" displayName="Empfohlene Basisimpfungen"/>
+                    <designation language="fr-CH" displayName="Vaccinations recommandées de base"/>
+                    <designation language="it-CH" displayName="Vaccinazioni raccomandate di base"/>
+                </concept>
+                <concept code="41502"
+                  codeSystem="2.16.756.5.30.1.127.3.3.4"
+                  displayName="REC_COMPL"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" displayName="Empfohlene ergänzende Impfungen"/>
+                    <designation language="fr-CH"
+                         displayName="Vaccinations recommandées complémentaires"/>
+                    <designation language="it-CH" displayName="Vaccinazioni raccomandate complementari"/>
+                </concept>
+                <concept code="41504"
+                  codeSystem="2.16.756.5.30.1.127.3.3.4"
+                  displayName="REC_NONE"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" displayName="Impfungen ohne Empfehlungen"/>
+                    <designation language="fr-CH"
+                         displayName="Vaccinations sans recommandation d’utilisation"/>
+                    <designation language="it-CH"
+                         displayName="Vaccinazioni senza raccomandazione d’utilizzo"/>
+                </concept>
+                <concept code="41503"
+                  codeSystem="2.16.756.5.30.1.127.3.3.4"
+                  displayName="REC_RISK"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" displayName="Empfohlene Impfungen für Risikogruppen"/>
+                    <designation language="fr-CH"
+                         displayName="Vaccinations recommandées à des groupes à risque"/>
+                    <designation language="it-CH"
+                         displayName="Vaccinazioni raccomandate a die gruppi a rischio"/>
+                </concept>
+            </conceptList>
+   </valueSet>
 </valueSets>

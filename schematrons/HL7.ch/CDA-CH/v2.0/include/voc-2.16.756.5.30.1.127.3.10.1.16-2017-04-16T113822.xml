@@ -1,75 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.16" name="EprDocumentMimeType" displayName="EprDocumentMimeType" statusCode="final" versionLabel="201704.0-stable" effectiveDate="2017-04-16T11:38:22" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
-        <desc language="de-CH">MIME Typ des Dokumentes gemäss Anhang 3 EPDG, Kapitel 2.8.<br clear="none"/>
-        </desc>
-        <desc language="en-US">MIME type of the document as per Annex 3&#160; EPRO-FDHA, Chapter 2.8.<br clear="none"/>
-        </desc>
-        <desc language="fr-CH">MIME Type du document selon l'annexe 3 ODEP-DFI, chapitre 2.8.<br clear="none"/>
-        </desc>
-        <desc language="it-CH">Tipo MIME del documento secondo l'allegato 3 OCIP-DFI, capitolo 2.8.<br clear="none"/>
-        </desc>
-        <sourceCodeSystem id="2.16.840.1.113883.5.79" identifierName="Media&#160;Type"/>
-        <publishingAuthority name="medshare GmbH">
-            <addrLine>Buchshaldenstrasse 2</addrLine>
-            <addrLine>CH-3661 Uetendorf</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <concept code="application/dicom" codeSystem="2.16.840.1.113883.5.79" displayName="DICOM" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="DICOM"/>
-                <designation language="fr-CH" type="preferred" displayName="DICOM"/>
-                <designation language="it-CH" type="preferred" displayName="DICOM"/>
-            </concept>
-            <concept code="application/pdf" codeSystem="2.16.840.1.113883.5.79" displayName="PDF" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="PDF"/>
-                <designation language="fr-CH" type="preferred" displayName="PDF"/>
-                <designation language="it-CH" type="preferred" displayName="PDF"/>
-            </concept>
-            <concept code="audio/mpeg" codeSystem="2.16.840.1.113883.5.79" displayName="MPEG audio layer 3" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="MPEG audio layer 3"/>
-                <designation language="fr-CH" type="preferred" displayName="MPEG audio layer 3"/>
-                <designation language="it-CH" type="preferred" displayName="MPEG audio layer 3"/>
-            </concept>
-            <concept code="image/gif" codeSystem="2.16.840.1.113883.5.79" displayName="GIF Graphics Interchange Format" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="GIF Graphics Interchange Format"/>
-                <designation language="fr-CH" type="preferred" displayName="GIF Graphics Interchange Format"/>
-                <designation language="it-CH" type="preferred" displayName="GIF Graphics Interchange Format"/>
-            </concept>
-            <concept code="image/jpeg" codeSystem="2.16.840.1.113883.5.79" displayName="JPEG Image" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="JPEG Image"/>
-                <designation language="fr-CH" type="preferred" displayName="JPEG Image"/>
-                <designation language="it-CH" type="preferred" displayName="JPEG Image"/>
-            </concept>
-            <concept code="image/png" codeSystem="2.16.840.1.113883.5.79" displayName="PNG Portable Network Graphics" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="PNG Portable Network Graphics"/>
-                <designation language="fr-CH" type="preferred" displayName="PNG Portable Network Graphics"/>
-                <designation language="it-CH" type="preferred" displayName="PNG Portable Network Graphics"/>
-            </concept>
-            <concept code="image/tiff" codeSystem="2.16.840.1.113883.5.79" displayName="TIFF Image" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="TIFF Image"/>
-                <designation language="fr-CH" type="preferred" displayName="TIFF Image"/>
-                <designation language="it-CH" type="preferred" displayName="TIFF Image"/>
-            </concept>
-            <concept code="multipart/x-hl7-cda-level1" codeSystem="2.16.840.1.113883.5.79" displayName="CDA Level 1 Multipart" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="CDA Level 1 Multipart"/>
-                <designation language="fr-CH" type="preferred" displayName="CDA Level 1 Multipart"/>
-                <designation language="it-CH" type="preferred" displayName="CDA Level 1 Multipart"/>
-            </concept>
-            <concept code="text/plain" codeSystem="2.16.840.1.113883.5.79" displayName="Plain Text" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="Plain Text"/>
-                <designation language="fr-CH" type="preferred" displayName="Plain Text"/>
-                <designation language="it-CH" type="preferred" displayName="Plain Text"/>
-            </concept>
-            <concept code="text/xml" codeSystem="2.16.840.1.113883.5.79" displayName="XML-Text" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="XML-Text"/>
-                <designation language="fr-CH" type="preferred" displayName="XML-Text"/>
-                <designation language="it-CH" type="preferred" displayName="XML-Text"/>
-            </concept>
-            <concept code="video/mpeg" codeSystem="2.16.840.1.113883.5.79" displayName="MPEG Video" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="MPEG Video"/>
-                <designation language="fr-CH" type="preferred" displayName="MPEG Video"/>
-                <designation language="it-CH" type="preferred" displayName="MPEG Video"/>
-            </concept>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.127.3.10.1.16"
+             name="EprDocumentMimeType"
+             displayName="EprDocumentMimeType"
+             statusCode="final"
+             versionLabel="201704.0-stable"
+             effectiveDate="2017-04-16T11:38:22"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">MIME Typ des Dokumentes gemäss Anhang 3 EPDG, Kapitel 2.8.<br clear="none"/>
+            </desc>
+      <desc language="en-US">MIME type of the document as per Annex 3  EPRO-FDHA, Chapter 2.8.<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">MIME Type du document selon l'annexe 3 ODEP-DFI, chapitre 2.8.<br clear="none"/>
+            </desc>
+      <desc language="it-CH">Tipo MIME del documento secondo l'allegato 3 OCIP-DFI, capitolo 2.8.<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.79" identifierName="Media Type"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="application/dicom"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="DICOM"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="DICOM"/>
+                    <designation language="fr-CH" type="preferred" displayName="DICOM"/>
+                    <designation language="it-CH" type="preferred" displayName="DICOM"/>
+                </concept>
+                <concept code="application/pdf"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="PDF"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="PDF"/>
+                    <designation language="fr-CH" type="preferred" displayName="PDF"/>
+                    <designation language="it-CH" type="preferred" displayName="PDF"/>
+                </concept>
+                <concept code="audio/mpeg"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="MPEG audio layer 3"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="MPEG audio layer 3"/>
+                    <designation language="fr-CH" type="preferred" displayName="MPEG audio layer 3"/>
+                    <designation language="it-CH" type="preferred" displayName="MPEG audio layer 3"/>
+                </concept>
+                <concept code="image/gif"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="GIF Graphics Interchange Format"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="GIF Graphics Interchange Format"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="GIF Graphics Interchange Format"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="GIF Graphics Interchange Format"/>
+                </concept>
+                <concept code="image/jpeg"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="JPEG Image"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="JPEG Image"/>
+                    <designation language="fr-CH" type="preferred" displayName="JPEG Image"/>
+                    <designation language="it-CH" type="preferred" displayName="JPEG Image"/>
+                </concept>
+                <concept code="image/png"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="PNG Portable Network Graphics"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="PNG Portable Network Graphics"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="PNG Portable Network Graphics"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="PNG Portable Network Graphics"/>
+                </concept>
+                <concept code="image/tiff"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="TIFF Image"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="TIFF Image"/>
+                    <designation language="fr-CH" type="preferred" displayName="TIFF Image"/>
+                    <designation language="it-CH" type="preferred" displayName="TIFF Image"/>
+                </concept>
+                <concept code="multipart/x-hl7-cda-level1"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="CDA Level 1 Multipart"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="CDA Level 1 Multipart"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="CDA Level 1 Multipart"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="CDA Level 1 Multipart"/>
+                </concept>
+                <concept code="text/plain"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="Plain Text"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Plain Text"/>
+                    <designation language="fr-CH" type="preferred" displayName="Plain Text"/>
+                    <designation language="it-CH" type="preferred" displayName="Plain Text"/>
+                </concept>
+                <concept code="text/xml"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="XML-Text"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="XML-Text"/>
+                    <designation language="fr-CH" type="preferred" displayName="XML-Text"/>
+                    <designation language="it-CH" type="preferred" displayName="XML-Text"/>
+                </concept>
+                <concept code="video/mpeg"
+                  codeSystem="2.16.840.1.113883.5.79"
+                  displayName="MPEG Video"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="MPEG Video"/>
+                    <designation language="fr-CH" type="preferred" displayName="MPEG Video"/>
+                    <designation language="it-CH" type="preferred" displayName="MPEG Video"/>
+                </concept>
+            </conceptList>
+   </valueSet>
 </valueSets>

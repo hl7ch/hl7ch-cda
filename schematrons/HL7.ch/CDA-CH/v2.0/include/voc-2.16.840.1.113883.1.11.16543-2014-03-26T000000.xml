@@ -1,35 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.840.1.113883.1.11.16543" name="ParticipationMode" displayName="ParticipationMode" effectiveDate="2014-03-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1360-20160323" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
-        <desc language="en-US">
-            <p>
-                <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
-            <b>description: </b>
-            <p>Identifies the primary means by which an Entity participates in an Act.</p>
-        </desc>
-        <sourceCodeSystem id="2.16.840.1.113883.5.1064" identifierName="Participation&#160;Mode"/>
-        <publishingAuthority name="medshare GmbH">
-            <addrLine>Buchshaldenstrasse 2</addrLine>
-            <addrLine>CH-3661 Uetendorf</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <concept code="PHYSICAL" codeSystem="2.16.840.1.113883.5.1064" displayName="physical presence" level="0" type="L"/>
-            <concept code="REMOTE" codeSystem="2.16.840.1.113883.5.1064" displayName="remote presence" level="0" type="L"/>
-            <concept code="VERBAL" codeSystem="2.16.840.1.113883.5.1064" displayName="verbal" level="0" type="S"/>
-            <concept code="DICTATE" codeSystem="2.16.840.1.113883.5.1064" displayName="dictated" level="1" type="L"/>
-            <concept code="FACE" codeSystem="2.16.840.1.113883.5.1064" displayName="face-to-face" level="1" type="L"/>
-            <concept code="PHONE" codeSystem="2.16.840.1.113883.5.1064" displayName="telephone" level="1" type="L"/>
-            <concept code="VIDEOCONF" codeSystem="2.16.840.1.113883.5.1064" displayName="videoconferencing" level="1" type="L"/>
-            <concept code="WRITTEN" codeSystem="2.16.840.1.113883.5.1064" displayName="written" level="0" type="S"/>
-            <concept code="FAXWRIT" codeSystem="2.16.840.1.113883.5.1064" displayName="telefax" level="1" type="L"/>
-            <concept code="HANDWRIT" codeSystem="2.16.840.1.113883.5.1064" displayName="handwritten" level="1" type="L"/>
-            <concept code="MAILWRIT" codeSystem="2.16.840.1.113883.5.1064" displayName="mail" level="1" type="L"/>
-            <concept code="ONLINEWRIT" codeSystem="2.16.840.1.113883.5.1064" displayName="online written" level="1" type="S"/>
-            <concept code="EMAILWRIT" codeSystem="2.16.840.1.113883.5.1064" displayName="email" level="2" type="L"/>
-            <concept code="TYPEWRIT" codeSystem="2.16.840.1.113883.5.1064" displayName="typewritten" level="1" type="L"/>
-            <concept code="ELECTRONIC" codeSystem="2.16.840.1.113883.5.1064" displayName="electronic data" level="0" type="L"/>
-            <concept code="PHYSICAL" codeSystem="2.16.840.1.113883.5.1064" displayName="physical presence" level="0" type="L"/>
-            <concept code="VERBAL" codeSystem="2.16.840.1.113883.5.1064" displayName="verbal" level="0" type="S"/>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.840.1.113883.1.11.16543"
+             name="ParticipationMode"
+             displayName="ParticipationMode"
+             effectiveDate="2014-03-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1360-20160323"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="hl7chcda-">
+      <desc language="en-US">
+                <p>
+                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+                <b>description: </b>
+                <p>Identifies the primary means by which an Entity participates in an Act.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1064" identifierName="Participation Mode"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="PHYSICAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="physical presence"
+                  level="0"
+                  type="L"/>
+                <concept code="REMOTE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="remote presence"
+                  level="0"
+                  type="L"/>
+                <concept code="VERBAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="verbal"
+                  level="0"
+                  type="S"/>
+                <concept code="DICTATE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="dictated"
+                  level="1"
+                  type="L"/>
+                <concept code="FACE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="face-to-face"
+                  level="1"
+                  type="L"/>
+                <concept code="PHONE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="telephone"
+                  level="1"
+                  type="L"/>
+                <concept code="VIDEOCONF"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="videoconferencing"
+                  level="1"
+                  type="L"/>
+                <concept code="WRITTEN"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="written"
+                  level="0"
+                  type="S"/>
+                <concept code="FAXWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="telefax"
+                  level="1"
+                  type="L"/>
+                <concept code="HANDWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="handwritten"
+                  level="1"
+                  type="L"/>
+                <concept code="MAILWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="mail"
+                  level="1"
+                  type="L"/>
+                <concept code="ONLINEWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="online written"
+                  level="1"
+                  type="S"/>
+                <concept code="EMAILWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="email"
+                  level="2"
+                  type="L"/>
+                <concept code="TYPEWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="typewritten"
+                  level="1"
+                  type="L"/>
+                <concept code="ELECTRONIC"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="electronic data"
+                  level="0"
+                  type="L"/>
+                <concept code="PHYSICAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="physical presence"
+                  level="0"
+                  type="L"/>
+                <concept code="VERBAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="verbal"
+                  level="0"
+                  type="S"/>
+            </conceptList>
+   </valueSet>
 </valueSets>

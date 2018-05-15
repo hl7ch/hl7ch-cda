@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.840.1.113883.1.11.19700" name="ObservationIntoleranceType" displayName="ObservationIntoleranceType" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachvacd-">
-        <desc language="en-US">
-            <b>description: </b>
-            <p>Hypersensitivity resulting in an adverse reaction upon exposure to an agent.</p>
-        </desc>
-        <sourceCodeSystem id="2.16.840.1.113883.5.4" identifierName="Act&#160;Code"/>
-        <publishingAuthority name="eHealth Suisse">
-            <addrLine>Schwarzenburgstrasse 165</addrLine>
-            <addrLine>CH-3003 Bern</addrLine>
-            <addrLine type="uri">www.e-health-suisse.ch</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <concept code="OINT" codeSystem="2.16.840.1.113883.5.4" displayName="intolerance" level="0" type="S"/>
-            <concept code="ALG" codeSystem="2.16.840.1.113883.5.4" displayName="Allergy" level="1" type="S"/>
-            <concept code="DINT" codeSystem="2.16.840.1.113883.5.4" displayName="Drug Intolerance" level="1" type="S"/>
-            <concept code="EINT" codeSystem="2.16.840.1.113883.5.4" displayName="Environmental Intolerance" level="1" type="S"/>
-            <concept code="FINT" codeSystem="2.16.840.1.113883.5.4" displayName="Food Intolerance" level="1" type="S"/>
-            <concept code="NAINT" codeSystem="2.16.840.1.113883.5.4" displayName="Non-Allergy Intolerance" level="1" type="S"/>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xhtml="http://www.w3.org/1999/xhtml"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.840.1.113883.1.11.19700"
+             name="ObservationIntoleranceType"
+             displayName="ObservationIntoleranceType"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachvacd-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>Hypersensitivity resulting in an adverse reaction upon exposure to an agent.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.4" identifierName="Act Code"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="OINT"
+                  codeSystem="2.16.840.1.113883.5.4"
+                  displayName="intolerance"
+                  level="0"
+                  type="S"/>
+                <concept code="ALG"
+                  codeSystem="2.16.840.1.113883.5.4"
+                  displayName="Allergy"
+                  level="1"
+                  type="S"/>
+                <concept code="DINT"
+                  codeSystem="2.16.840.1.113883.5.4"
+                  displayName="Drug Intolerance"
+                  level="1"
+                  type="S"/>
+                <concept code="EINT"
+                  codeSystem="2.16.840.1.113883.5.4"
+                  displayName="Environmental Intolerance"
+                  level="1"
+                  type="S"/>
+                <concept code="FINT"
+                  codeSystem="2.16.840.1.113883.5.4"
+                  displayName="Food Intolerance"
+                  level="1"
+                  type="S"/>
+                <concept code="NAINT"
+                  codeSystem="2.16.840.1.113883.5.4"
+                  displayName="Non-Allergy Intolerance"
+                  level="1"
+                  type="S"/>
+            </conceptList>
+   </valueSet>
 </valueSets>

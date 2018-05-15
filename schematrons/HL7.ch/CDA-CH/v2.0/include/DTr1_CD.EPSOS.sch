@@ -4,7 +4,12 @@
     Status: draft
     TODO: check for codes/codesystems in translations
 -->
-<rule xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="CD.EPSOS">
+<rule xmlns="http://purl.oclc.org/dsdl/schematron"
+      abstract="true"
+      id="CD.EPSOS">
     <extends rule="CD"/>
-    <assert role="error" test="descendant-or-self::*[not(@code) or @displayName]" see="https://art-decor.org/mediawiki/index.php?title=DTr1_CD.EPSOS">dtr1-1-CD.EPSOS: attribute @displayName is required on all codes and translations thereof</assert>
+    
+    <assert role="error"
+           test="descendant-or-self::*[not(@code) or @displayName]"
+           see="https://art-decor.org/mediawiki/index.php?title=DTr1_CD.EPSOS">dtr1-1-CD.EPSOS: attribute @displayName is required on all codes and translations thereof</assert>
 </rule>

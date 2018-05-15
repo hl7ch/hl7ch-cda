@@ -1,27 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.840.1.113883.1.11.10609" name="NullFlavor" displayName="NullFlavor" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachlrep-">
-        <sourceCodeSystem id="2.16.840.1.113883.5.1008" identifierName="Null&#160;Flavor"/>
-        <publishingAuthority name="medshare GmbH">
-            <addrLine>Buchshaldenstrasse 2</addrLine>
-            <addrLine>CH-3661 Uetendorf</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <exception code="NI" codeSystem="2.16.840.1.113883.5.1008" displayName="NoInformation" level="0" type="S"/>
-            <exception code="INV" codeSystem="2.16.840.1.113883.5.1008" displayName="invalid" level="1" type="S"/>
-            <exception code="DER" codeSystem="2.16.840.1.113883.5.1008" displayName="derived" level="2" type="L"/>
-            <exception code="OTH" codeSystem="2.16.840.1.113883.5.1008" displayName="other" level="2" type="S"/>
-            <exception code="NINF" codeSystem="2.16.840.1.113883.5.1008" displayName="negative infinity" level="3" type="L"/>
-            <exception code="PINF" codeSystem="2.16.840.1.113883.5.1008" displayName="positive infinity" level="3" type="L"/>
-            <exception code="UNC" codeSystem="2.16.840.1.113883.5.1008" displayName="un-encoded" level="2" type="L"/>
-            <exception code="MSK" codeSystem="2.16.840.1.113883.5.1008" displayName="masked" level="1" type="L"/>
-            <exception code="NA" codeSystem="2.16.840.1.113883.5.1008" displayName="not applicable" level="1" type="L"/>
-            <exception code="UNK" codeSystem="2.16.840.1.113883.5.1008" displayName="unknown" level="1" type="S"/>
-            <exception code="ASKU" codeSystem="2.16.840.1.113883.5.1008" displayName="asked but unknown" level="2" type="S"/>
-            <exception code="NAV" codeSystem="2.16.840.1.113883.5.1008" displayName="temporarily unavailable" level="3" type="L"/>
-            <exception code="NASK" codeSystem="2.16.840.1.113883.5.1008" displayName="not asked" level="2" type="L"/>
-            <exception code="QS" codeSystem="2.16.840.1.113883.5.1008" displayName="Sufficient Quantity" level="2" type="L"/>
-            <exception code="TRC" codeSystem="2.16.840.1.113883.5.1008" displayName="trace" level="2" type="L"/>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xhtml="http://www.w3.org/1999/xhtml"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.840.1.113883.1.11.10609"
+             name="NullFlavor"
+             displayName="NullFlavor"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachlrep-">
+      <sourceCodeSystem id="2.16.840.1.113883.5.1008" identifierName="Null Flavor"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <exception code="NI"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="NoInformation"
+                    level="0"
+                    type="S"/>
+                <exception code="INV"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="invalid"
+                    level="1"
+                    type="S"/>
+                <exception code="DER"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="derived"
+                    level="2"
+                    type="L"/>
+                <exception code="OTH"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="other"
+                    level="2"
+                    type="S"/>
+                <exception code="NINF"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="negative infinity"
+                    level="3"
+                    type="L"/>
+                <exception code="PINF"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="positive infinity"
+                    level="3"
+                    type="L"/>
+                <exception code="UNC"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="un-encoded"
+                    level="2"
+                    type="L"/>
+                <exception code="MSK"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="masked"
+                    level="1"
+                    type="L"/>
+                <exception code="NA"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="not applicable"
+                    level="1"
+                    type="L"/>
+                <exception code="UNK"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="unknown"
+                    level="1"
+                    type="S"/>
+                <exception code="ASKU"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="asked but unknown"
+                    level="2"
+                    type="S"/>
+                <exception code="NAV"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="temporarily unavailable"
+                    level="3"
+                    type="L"/>
+                <exception code="NASK"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="not asked"
+                    level="2"
+                    type="L"/>
+                <exception code="QS"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="Sufficient Quantity"
+                    level="2"
+                    type="L"/>
+                <exception code="TRC"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="trace"
+                    level="2"
+                    type="L"/>
+            </conceptList>
+   </valueSet>
 </valueSets>

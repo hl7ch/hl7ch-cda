@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.2" name="EprDocumentAvailabilityStatus" displayName="EprDocumentAvailabilityStatus" statusCode="cancelled" versionLabel="20170415" effectiveDate="2017-04-16T12:36:00" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
-        <desc language="de-CH">Verfügbarkeitsstatus des Dokumentes (2.16.756.5.30.1.127.3.10.1.2)<br clear="none"/>
-            <br clear="none"/>Ein XDS Dokument hat immer einen Verfügbarkeitsstatus.<br clear="none"/>Entweder approved (genehmigt) oder deprecated (überholt).<br clear="none"/>
-        </desc>
-        <sourceCodeSystem id="2.16.756.5.30.1.127.77.10.5.1" identifierName="ch-epr-codesystem-1"/>
-        <publishingAuthority name="medshare GmbH">
-            <addrLine>Buchshaldenstrasse 2</addrLine>
-            <addrLine>CH-3661 Uetendorf</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <concept code="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" codeSystem="2.16.756.5.30.1.127.77.10.5.1" displayName="Approved" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="genehmigt"/>
-                <designation language="fr-CH" type="preferred" displayName="approuvé"/>
-                <designation language="it-CH" type="preferred" displayName="approvato"/>
-                <designation language="en-US" type="preferred" displayName="Approved"/>
-            </concept>
-            <concept code="urn:oasis:names:tc:ebxml-regrep:StatusType:Deprecated" codeSystem="2.16.756.5.30.1.127.77.10.5.1" displayName="Deprecated" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="veraltet"/>
-                <designation language="fr-CH" type="preferred" displayName="caduc"/>
-                <designation language="it-CH" type="preferred" displayName="obsoleto"/>
-                <designation language="en-US" type="preferred" displayName="Deprecated"/>
-            </concept>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.127.3.10.1.2"
+             name="EprDocumentAvailabilityStatus"
+             displayName="EprDocumentAvailabilityStatus"
+             statusCode="cancelled"
+             versionLabel="20170415"
+             effectiveDate="2017-04-16T12:36:00"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Verfügbarkeitsstatus des Dokumentes (2.16.756.5.30.1.127.3.10.1.2)<br clear="none"/>
+                <br clear="none"/>Ein XDS Dokument hat immer einen Verfügbarkeitsstatus.<br clear="none"/>Entweder approved (genehmigt) oder deprecated (überholt).<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.756.5.30.1.127.77.10.5.1" identifierName="ch-epr-codesystem-1"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved"
+                  codeSystem="2.16.756.5.30.1.127.77.10.5.1"
+                  displayName="Approved"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="genehmigt"/>
+                    <designation language="fr-CH" type="preferred" displayName="approuvé"/>
+                    <designation language="it-CH" type="preferred" displayName="approvato"/>
+                    <designation language="en-US" type="preferred" displayName="Approved"/>
+                </concept>
+                <concept code="urn:oasis:names:tc:ebxml-regrep:StatusType:Deprecated"
+                  codeSystem="2.16.756.5.30.1.127.77.10.5.1"
+                  displayName="Deprecated"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="veraltet"/>
+                    <designation language="fr-CH" type="preferred" displayName="caduc"/>
+                    <designation language="it-CH" type="preferred" displayName="obsoleto"/>
+                    <designation language="en-US" type="preferred" displayName="Deprecated"/>
+                </concept>
+            </conceptList>
+   </valueSet>
 </valueSets>

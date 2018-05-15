@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<codeSystems xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <codeSystem xmlns="" ref="2.16.756.5.30.1.126.3.1" name="CHOP" displayName="CHOP"/>
+<codeSystems>
+   <codeSystem ref="2.16.756.5.30.1.126.3.1" name="CHOP" displayName="CHOP"/>
 </codeSystems>

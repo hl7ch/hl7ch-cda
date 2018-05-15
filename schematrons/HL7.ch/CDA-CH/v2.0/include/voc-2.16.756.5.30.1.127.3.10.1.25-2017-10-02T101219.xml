@@ -1,38 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" name="EprGender" displayName="EprGender" versionLabel="201704.1-beta" id="2.16.756.5.30.1.127.3.10.1.25" statusCode="deprecated" effectiveDate="2017-10-02T10:12:19" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
-        <desc language="de-CH">Geschlecht der Patientin oder des Patienten gemäss Anhang 3 EPDV-EDI, Kapitel 2.10.<br clear="none"/>
-        </desc>
-        <desc language="en-US">Patient’s gender as per Annex 3&#160; EPRO-FDHA, Chapter 2.10.<br clear="none"/>
-        </desc>
-        <desc language="fr-CH">Sexe du patient selon l'annexe 3 ODEP-DFI, chapitre 2.10.<br clear="none"/>
-        </desc>
-        <desc language="it-CH">Sesso del paziente secondo l'allegato 3 OCIP-DFI, capitolo 2.10.<br clear="none"/>
-        </desc>
-        <sourceCodeSystem id="2.16.840.1.113883.5.1" identifierName="Administrative&#160;Gender"/>
-        <publishingAuthority name="medshare GmbH">
-            <addrLine>Buchshaldenstrasse 2</addrLine>
-            <addrLine>CH-3661 Uetendorf</addrLine>
-        </publishingAuthority>
-        <conceptList>
-            <concept code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Female" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="Weiblich"/>
-                <designation language="fr-CH" type="preferred" displayName="Féminin"/>
-                <designation language="it-CH" type="preferred" displayName="Femminile"/>
-                <designation language="en-US" type="preferred" displayName="Female"/>
-            </concept>
-            <concept code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="Männlich"/>
-                <designation language="fr-CH" type="preferred" displayName="Masculin"/>
-                <designation language="it-CH" type="preferred" displayName="Maschile"/>
-                <designation language="en-US" type="preferred" displayName="Male"/>
-            </concept>
-            <concept code="UN" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Undifferentiated" level="0" type="L">
-                <designation language="de-CH" type="preferred" displayName="Andere"/>
-                <designation language="fr-CH" type="preferred" displayName="Autre"/>
-                <designation language="it-CH" type="preferred" displayName="Altro"/>
-                <designation language="en-US" type="preferred" displayName="Other"/>
-            </concept>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             name="EprGender"
+             displayName="EprGender"
+             versionLabel="201704.1-beta"
+             id="2.16.756.5.30.1.127.3.10.1.25"
+             statusCode="deprecated"
+             effectiveDate="2017-10-02T10:12:19"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Geschlecht der Patientin oder des Patienten gemäss Anhang 3 EPDV-EDI, Kapitel 2.10.<br clear="none"/>
+            </desc>
+      <desc language="en-US">Patient’s gender as per Annex 3  EPRO-FDHA, Chapter 2.10.<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">Sexe du patient selon l'annexe 3 ODEP-DFI, chapitre 2.10.<br clear="none"/>
+            </desc>
+      <desc language="it-CH">Sesso del paziente secondo l'allegato 3 OCIP-DFI, capitolo 2.10.<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1" identifierName="Administrative Gender"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="F"
+                  codeSystem="2.16.840.1.113883.5.1"
+                  codeSystemName="AdministrativeGender"
+                  displayName="Female"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Weiblich"/>
+                    <designation language="fr-CH" type="preferred" displayName="Féminin"/>
+                    <designation language="it-CH" type="preferred" displayName="Femminile"/>
+                    <designation language="en-US" type="preferred" displayName="Female"/>
+                </concept>
+                <concept code="M"
+                  codeSystem="2.16.840.1.113883.5.1"
+                  codeSystemName="AdministrativeGender"
+                  displayName="Male"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Männlich"/>
+                    <designation language="fr-CH" type="preferred" displayName="Masculin"/>
+                    <designation language="it-CH" type="preferred" displayName="Maschile"/>
+                    <designation language="en-US" type="preferred" displayName="Male"/>
+                </concept>
+                <concept code="UN"
+                  codeSystem="2.16.840.1.113883.5.1"
+                  codeSystemName="AdministrativeGender"
+                  displayName="Undifferentiated"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Andere"/>
+                    <designation language="fr-CH" type="preferred" displayName="Autre"/>
+                    <designation language="it-CH" type="preferred" displayName="Altro"/>
+                    <designation language="en-US" type="preferred" displayName="Other"/>
+                </concept>
+            </conceptList>
+   </valueSet>
 </valueSets>

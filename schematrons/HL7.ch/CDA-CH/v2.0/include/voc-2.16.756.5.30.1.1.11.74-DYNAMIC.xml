@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.756.5.30.1.1.11.74" name="Sonderfaellebeiproblemen" displayName="Special Case Problems" effectiveDate="2017-06-12T14:29:21" statusCode="draft" url="http://art-decor.org/decor/services/" ident="ch-pcc-" referencedFrom="ch-palm-">
-        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms"/>
-        <publishingAuthority name="eHealth Suisse">
-            <addrLine>Schwarzenburgstrasse 165</addrLine>
-            <addrLine>CH-3003 Bern</addrLine>
-            <addrLine type="uri">www.e-health-suisse.ch</addrLine>
-        </publishingAuthority>
-        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
-        <conceptList>
-            <concept code="160243008" codeSystem="2.16.840.1.113883.6.96" displayName="No Significant Medical History" level="0" type="L"/>
-            <concept code="160245001" codeSystem="2.16.840.1.113883.6.96" displayName="No current problems or disability" level="0" type="L"/>
-            <concept code="396782006" codeSystem="2.16.840.1.113883.6.96" displayName="History of Past Illness unknown" level="0" type="L"/>
-            <concept code="407559004" codeSystem="2.16.840.1.113883.6.96" displayName="Family History Unknown" level="0" type="L"/>
-        </conceptList>
-    </valueSet>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xhtml="http://www.w3.org/1999/xhtml"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.1.11.74"
+             name="SpecialCaseProblems"
+             displayName="Special Case Problems"
+             effectiveDate="2018-04-19T00:00:00"
+             statusCode="pending"
+             officialReleaseDate="2018-04-19T00:00:00"
+             versionLabel="2018"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-pcc-"
+             referencedFrom="cdachvacd-">
+      <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED Clinical Terms"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="160243008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="No Significant Medical History"
+                  level="0"
+                  type="L"/>
+                <concept code="160245001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="No current problems or disability"
+                  level="0"
+                  type="L"/>
+                <concept code="396782006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="History of Past Illness unknown"
+                  level="0"
+                  type="L"/>
+                <concept code="407559004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Family History Unknown"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
 </valueSets>
