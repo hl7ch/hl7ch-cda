@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ex="urn:h7-org/v3-example"
-   xmlns="urn:ihe:pharm:medication" xmlns:hl7v3="urn:hl7-org:v3"
-   targetNamespace="urn:ihe:pharm:medication"
+   xmlns="urn:ihe:pharm" xmlns:hl7v3="urn:hl7-org:v3"
+   targetNamespace="urn:ihe:pharm"
            elementFormDefault="qualified"><!--
 *****************************************************************************************************************
 * XML schema for message type COCT_MT230100UV.
@@ -37,6 +37,8 @@
 *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 *  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 *  SUCH DAMAGE.
+*
+*  16.5.2018 OE: Changed namespace from urn:ihe:pharm:medication to urn:ihe:pharm, http://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_Suppl_PRE.pdf, Appendix B1
 *
 ********************************************************************************************************************
 	  --><xs:annotation>

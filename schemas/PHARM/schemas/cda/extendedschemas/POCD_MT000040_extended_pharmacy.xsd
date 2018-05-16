@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema xmlns:mif="urn:hl7-org:v3/mif" xmlns="urn:hl7-org:v3" xmlns:pharm="urn:ihe:pharm:medication" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+<xs:schema xmlns:mif="urn:hl7-org:v3/mif" xmlns="urn:hl7-org:v3" xmlns:pharm="urn:ihe:pharm" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
 	<!--
 *****************************************************************************************************************
 * XML schema for message type POCD_MT000040.
@@ -28,6 +28,7 @@
 *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 *  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 *  SUCH DAMAGE.
+*  16.5.2018 OE: Changed namespace from urn:ihe:pharm:medication to urn:ihe:pharm, http://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_Suppl_PRE.pdf, Appendix B1
 *
 ********************************************************************************************************************
 	  -->
@@ -36,7 +37,7 @@
 			RoseTreeToMIFStaticModel.xsl version: 1.1 StaticMifToXsd.xsl version
 			2.0</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="urn:ihe:pharm:medication" schemaLocation="COCT_MT230100UV_ext_pharmacy.xsd"/>
+	<xs:import namespace="urn:ihe:pharm" schemaLocation="COCT_MT230100UV_ext_pharmacy.xsd"/>
 	<xs:include schemaLocation="../coreschemas/infrastructureRoot.xsd"/>
 	<xs:include schemaLocation="../coreschemas/datatypes.xsd"/>
 	<xs:include schemaLocation="../coreschemas/voc.xsd"/>
