@@ -29,7 +29,7 @@ Updated by Tony Schaller, medshare GmbH, revised for tfoot and CDA-CH V2
 	<xsl:output method="html" indent="yes" version="4.01" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.01//EN"/>
 
 	<xsl:variable name="stylesheetVersion">
-		<xsl:value-of select="'2.0.20180318'"/>
+		<xsl:value-of select="'2.0.20180528'"/>
 	</xsl:variable>
 
 	<!-- The following variables are designed to be overwritten in a project specific xsl that imports the current cda-ch.xsl an example can be found in suva-emedidoc.xsl -->
