@@ -89,7 +89,7 @@ History:
 			<!-- The organization who took care of the patient in the same context with the current CDA document. -->
 			<providerOrganization>
 				<!-- The organization's id (GLN). -->
-				<id extension="7608888888888" root="2.51.1.3"/>
+				<id extension="7601000201041" root="2.51.1.3"/>
 				<!-- The organization's name - also according to eCH-0011. -->
 				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit</name>
 			</providerOrganization>
@@ -105,7 +105,7 @@ History:
 		<time value="201710031609+0100"/>
 		<assignedAuthor>
 			<!-- The author's id (GLN). -->
-			<id extension="7608888888888" root="2.51.1.3"/>
+			<id extension="7601000201041" root="2.51.1.3"/>
 			<!-- The author is a person. -->
 			<assignedPerson>
 				<!-- The author's name - also according to eCH-0011. -->
@@ -167,7 +167,7 @@ History:
 		<assignedCustodian>
 			<representedCustodianOrganization>
 				<!-- The custodian's id (GLN).  -->
-				<id extension="7608888888888" root="2.51.1.3"/>
+				<id extension="7601000201041" root="2.51.1.3"/>
 				<!-- The custodian's name. -->
 				<name use="L">Gruppenpraxis CH, Dr. med. Allzeit Bereit, Facharzt für Allgemeine Medizin</name>
 				<!-- The custodian's address - also according to eCH-0010. -->
@@ -209,7 +209,7 @@ History:
 		<signatureCode code="S"/>
 		<assignedEntity>
 			<!-- The assigned entity's id (including the assigned person's id). -->
-			<id extension="7607777777777" root="2.51.1.3"/>
+			<id extension="7601000618627" root="2.51.1.3"/>
 			<assignedPerson>
 				<!-- The person's legal name (with required family and given name). -->
 				<name use="L">
