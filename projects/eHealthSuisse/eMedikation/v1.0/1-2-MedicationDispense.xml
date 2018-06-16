@@ -8,6 +8,7 @@
 <!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
 <!-- 2018.03.05: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation 
 	of ordonnace) -->
+<!-- 2018.06.16: Tony Schaller, medshare GmbH (Refactoring for better validation results: Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -131,6 +132,12 @@
 				<city>Zürich</city>
 				<country>CH</country>
 			</addr>
+			<informationRecipient>
+				<name>
+					<family>Wegmüller</family>
+					<given>Monika</given>
+				</name>
+			</informationRecipient>
 		</intendedRecipient>
 	</informationRecipient>
 
@@ -229,7 +236,7 @@
 										<code code="C09AA05" codeSystem="2.16.840.1.113883.6.73"
 											codeSystemName="ATC WHO" displayName="ramipril">
 											<originalText>
-												<reference value="#mtp.1.ingredient" />
+												<reference value="#dis.1.ingredient" />
 											</originalText>
 										</code>
 										<name>TRIATEC Tabl 2.5 mg</name>
@@ -252,10 +259,10 @@
 											<pharm:quantity>
 												<pharm:numerator unit="mg" value="2.5"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-													xsi:type="pharm:PQ" />
+													xsi:type="PQ" />
 												<pharm:denominator unit="1" value="1"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-													xsi:type="pharm:PQ" />
+													xsi:type="PQ" />
 											</pharm:quantity>
 											<pharm:ingredient classCode="MMAT"
 												determinerCode="KIND">

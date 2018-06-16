@@ -12,6 +12,7 @@ History:
 2016.05.29: Tony Schaller, medshare GmbH: realmCode CHE added
 2017.02.03: Tony Schaller, medshare GmbH: Changing deprecated OID for GS1 GLN and GTIN to the current ones
 2018.04.14: Tony Schaller, medshare GmbH: Update to CDA-CH-VACD V2 (2018)
+2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 
 ******************************************************** -->
 <?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl"?>
@@ -66,7 +67,7 @@ History:
 	Document setId and versionNumber according to CDA-CH v2.0.
 	This document is a new version of the one created for CDA-CH v1.2
 	-->
-	<setId root="4a640f7e-aa60-09a6-6eb6-8d534c7c9e0d"/>
+	<setId root="4A640F7E-AA60-09A6-6EB6-8D534C7C9E0D"/>
 	<versionNumber value="2"/>
 
 	<!-- Masked patient according to CDA-CH v2.0 and case study. -->
@@ -172,7 +173,6 @@ History:
 				<!-- The addressee's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Rathaus</streetName>
-					<houseNumber></houseNumber>
 					<city>Musterhausen</city>
 					<postalCode>8888</postalCode>
 					<country>CH</country>

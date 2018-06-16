@@ -13,6 +13,7 @@ History:
 2016.05.29: Tony Schaller, medshare GmbH: realmCode CHE added
 2017.02.03: Tony Schaller, medshare GmbH: Changing deprecated OID for GS1 GLN and GTIN to the current ones
 2018.04.14: Tony Schaller, medshare GmbH: Update to CDA-CH-VACD V2 (2018)
+2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 
 ******************************************************** -->
 <?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl"?>
@@ -67,7 +68,7 @@ History:
 	Document setId and versionNumber according to CDA-CH v2.0.
 	This document is a new version of the one created for CDA-CH v1.2
 	-->
-	<setId root="4a641c4e-aa60-09a6-7f17-cb8b18c1d388"/>
+	<setId root="4A641C4E-AA60-09A6-7F17-CB8B18C1D388"/>
 	<versionNumber value="2"/>
 
 	<!-- Human patient according to CDA-CH v2.0 and case study. -->
@@ -307,7 +308,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641cee-aa60-09a6-b0ab-8d534c7c9e0d"/>
+							<id root="4A641CEE-AA60-09A6-B0AB-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is10"/>
@@ -405,7 +406,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641d8e-aa60-09a6-b7fb-8d534c7c9e0d"/>
+									<id root="4A641D8E-AA60-09A6-B7FB-8D534C7C9E0D"/>
 									<code code="76668005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diphterie"/>
 									<text>
 										<reference value="#is11"/>
@@ -416,7 +417,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64209a-aa60-09a6-d5fd-8d534c7c9e0d"/>
+									<id root="4A64209A-AA60-09A6-D5FD-8D534C7C9E0D"/>
 									<code code="127786006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Tetanus"/>
 									<text>
 										<reference value="#is12"/>
@@ -427,7 +428,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a642130-aa60-09a6-a82a-8d534c7c9e0d"/>
+									<id root="4A642130-AA60-09A6-A82A-8D534C7C9E0D"/>
 									<code code="39343008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Keuchhusten"/>
 									<text>
 										<reference value="#is13"/>
@@ -438,7 +439,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6421d0-aa60-09a6-e59e-8d534c7c9e0d"/>
+									<id root="4A6421D0-AA60-09A6-E59E-8D534C7C9E0D"/>
 									<code code="72093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Kinderlähmung"/>
 									<text>
 										<reference value="#is14"/>
@@ -462,7 +463,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a642270-aa60-09a6-45f4-8d534c7c9e0d"/>
+							<id root="4A642270-AA60-09A6-45F4-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is20"/>
@@ -560,7 +561,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a642306-aa60-09a6-5575-8d534c7c9e0d"/>
+									<id root="4A642306-AA60-09A6-5575-8D534C7C9E0D"/>
 									<code code="47435007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Masern"/>
 									<text>
 										<reference value="#is21"/>
@@ -571,7 +572,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6423a6-aa60-09a6-0d20-8d534c7c9e0d"/>
+									<id root="4A6423A6-AA60-09A6-0D20-8D534C7C9E0D"/>
 									<code code="50583002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mumps"/>
 									<text>
 										<reference value="#is22"/>
@@ -582,7 +583,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64243c-aa60-09a6-9c89-8d534c7c9e0d"/>
+									<id root="4A64243C-AA60-09A6-9C89-8D534C7C9E0D"/>
 									<code code="82314000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Röteln"/>
 									<text>
 										<reference value="#is23"/>
@@ -606,7 +607,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a6424dc-aa60-09a6-89b8-8d534c7c9e0d"/>
+							<id root="4A6424DC-AA60-09A6-89B8-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is30"/>
@@ -704,7 +705,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64257c-aa60-09a6-8708-8d534c7c9e0d"/>
+									<id root="4A64257C-AA60-09A6-8708-8D534C7C9E0D"/>
 									<code code="16584000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hepatitis B"/>
 									<text>
 										<reference value="#is31"/>
@@ -728,7 +729,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a642612-aa60-09a6-c80c-8d534c7c9e0d"/>
+							<id root="4A642612-AA60-09A6-C80C-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is40"/>
@@ -826,7 +827,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6426b2-aa60-09a6-37d3-8d534c7c9e0d"/>
+									<id root="4A6426B2-AA60-09A6-37D3-8D534C7C9E0D"/>
 									<code code="428570002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Papilloma-Virus"/>
 									<text>
 										<reference value="#is41"/>

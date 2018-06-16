@@ -7,6 +7,7 @@
 <!-- 2016.09.15: Oliver Egger, ahdis gmbh (Adaption to August 2016) -->
 <!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
 <!-- 2018.04.11: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation of ordonnace) -->
+<!-- 2018.06.16: Tony Schaller, medshare GmbH (Refactoring for better validation results: Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -132,6 +133,12 @@
 				<city>Zürich</city>
 				<country>CH</country>
 			</addr>
+			<informationRecipient>
+				<name>
+					<family>Wegmüller</family>
+					<given>Monika</given>
+				</name>
+			</informationRecipient>
 		</intendedRecipient>
 	</informationRecipient>
 
@@ -232,7 +239,8 @@
 								</substanceAdministration>
 							</entryRelationship>
 
-							<!-- One or more Pharmaceutical Advice Concern entries -->
+							<!-- TODO: Curre3ntly Schematron allows only one concern entry
+							One or more Pharmaceutical Advice Concern entries
 							<entryRelationship typeCode='REFR'
 								inversionInd='false'>
 								<act classCode='ACT' moodCode='EVN'>
@@ -245,7 +253,7 @@
 
 									<code nullFlavor='NA' />
 									<text>
-										<reference value="#padv1" />
+										<reference value="#padv.1" />
 									</text>
 									<statusCode code='active' />
 									<effectiveTime>
@@ -262,24 +270,25 @@
 											<code code='282291009' displayName='Diagnosis'
 												codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' />
 											<text>
-												<reference value="#padv1" />
+												<reference value="#padv.1" />
 											</text>
 											<statusCode code='completed' />
 											<effectiveTime>
 												<low value='20120204140000+0100' />
 											</effectiveTime>
-											<value xsi:type='CD'>
+											<value xsi:type='CD' nullFlavor="NAV">
 												<originalText>
-													<reference value="#padv1" />
+													<reference value="#padv.1" />
 												</originalText>
 											</value>
-											<!-- Typ 
+											<!-/- Typ 
 											<interpretationCode code='2'
-												codeSystem='2.16.756.5.30.1.127.77.4.11.3' displayName="Intervention"></interpretationCode> -->
+												codeSystem='2.16.756.5.30.1.127.77.4.11.3' displayName="Intervention"></interpretationCode> -/->
 										</observation>
 									</entryRelationship>
 								</act>
 							</entryRelationship>
+ 							-->
 
 						</observation>
 					</entry>

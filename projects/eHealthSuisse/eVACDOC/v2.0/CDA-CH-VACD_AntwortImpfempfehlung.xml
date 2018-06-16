@@ -13,6 +13,7 @@ History:
 2016.05.29: Tony Schaller, medshare GmbH: realmCode CHE added
 2017.02.03: Tony Schaller, medshare GmbH: Changing deprecated OID for GS1 GLN and GTIN to the current ones
 2018.04.14: Tony Schaller, medshare GmbH: Update to CDA-CH-VACD V2 (2018)
+2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 
 ******************************************************** -->
 <?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl"?>
@@ -67,7 +68,7 @@ History:
 	Document setId and versionNumber according to CDA-CH v2.0.
 	This document is a new version of the one created for CDA-CH v1.2
 	-->
-	<setId root="4a6413ca-aa60-09a6-5aa5-8d534c7c9e0d"/>
+	<setId root="4A6413CA-AA60-09A6-5AA5-8D534C7C9E0D"/>
 	<versionNumber value="2"/>
 
 	<!-- Masked patient according to CDA-CH v2.0 and case study. -->
@@ -125,7 +126,6 @@ History:
 				<!-- The organization's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Rathaus</streetName>
-					<houseNumber></houseNumber>
 					<city>Musterhausen</city>
 					<postalCode>8888</postalCode>
 					<country>CH</country>
@@ -148,7 +148,6 @@ History:
 				<!-- The organization's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Rathaus</streetName>
-					<houseNumber></houseNumber>
 					<city>Musterhausen</city>
 					<postalCode>8888</postalCode>
 					<country>CH</country>
@@ -217,7 +216,6 @@ History:
 				<!-- The organization's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Rathaus</streetName>
-					<houseNumber></houseNumber>
 					<city>Musterhausen</city>
 					<postalCode>8888</postalCode>
 					<country>CH</country>
@@ -401,7 +399,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
 							<templateId root="2.16.840.1.113883.10.20.1.25"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a6416d6-aa60-09a6-3763-cb8b18c1d388"/>
+							<id root="4A6416D6-AA60-09A6-3763-CB8B18C1D388"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#irs10"/>
@@ -451,8 +449,7 @@ History:
 										<telecom value="http://www.cdss.ch" use="WP"/>
 										<addr use="WP">
 											<streetName>Rathaus</streetName>
-											<houseNumber></houseNumber>
-											<city>Musterhausen</city>
+																	<city>Musterhausen</city>
 											<postalCode>8888</postalCode>
 											<country>CH</country>
 										</addr>
@@ -462,7 +459,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641596-aa60-09a6-a65a-8d534c7c9e0d"/>
+									<id root="4A641596-AA60-09A6-A65A-8D534C7C9E0D"/>
 									<code code="127786006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Tetanus"/>
 									<text>
 										<reference value="#irs12"/>
@@ -473,7 +470,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6416d6-aa60-09a6-d47d-8d534c7c9e0d"/>
+									<id root="4A6416D6-AA60-09A6-D47D-8D534C7C9E0D"/>
 									<code code="72093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Kinderlähmung"/>
 									<text>
 										<reference value="#irs14"/>
@@ -484,7 +481,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641636-aa60-09a6-e24e-8d534c7c9e0d"/>
+									<id root="4A641636-AA60-09A6-E24E-8D534C7C9E0D"/>
 									<code code="39343008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Keuchhusten"/>
 									<text>
 										<reference value="#irs13"/>
@@ -495,7 +492,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641500-aa60-09a6-57c5-8d534c7c9e0d"/>
+									<id root="4A641500-AA60-09A6-57C5-8D534C7C9E0D"/>
 									<code code="76668005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diphterie"/>
 									<text>
 										<reference value="#irs11"/>
@@ -528,7 +525,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
 							<templateId root="2.16.840.1.113883.10.20.1.25"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641942-aa60-09a6-e12e-cb8b18c1d388"/>
+							<id root="4A641942-AA60-09A6-E12E-CB8B18C1D388"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#irs20"/>
@@ -578,8 +575,7 @@ History:
 										<telecom value="http://www.cdss.ch" use="WP"/>
 										<addr use="WP">
 											<streetName>Rathaus</streetName>
-											<houseNumber></houseNumber>
-											<city>Musterhausen</city>
+																	<city>Musterhausen</city>
 											<postalCode>8888</postalCode>
 											<country>CH</country>
 										</addr>
@@ -589,7 +585,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641942-aa60-09a6-6f26-8d534c7c9e0d"/>
+									<id root="4A641942-AA60-09A6-6F26-8D534C7C9E0D"/>
 									<code code="82314000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Röteln"/>
 									<text>
 										<reference value="#irs23"/>
@@ -600,7 +596,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64180c-aa60-09a6-a99a-8d534c7c9e0d"/>
+									<id root="4A64180C-AA60-09A6-A99A-8D534C7C9E0D"/>
 									<code code="47435007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Masern"/>
 									<text>
 										<reference value="#irs21"/>
@@ -611,7 +607,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6418ac-aa60-09a6-0260-8d534c7c9e0d"/>
+									<id root="4A6418AC-AA60-09A6-0260-8D534C7C9E0D"/>
 									<code code="50583002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mumps"/>
 									<text>
 										<reference value="#irs22"/>
@@ -644,7 +640,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
 							<templateId root="2.16.840.1.113883.10.20.1.25"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641a78-aa60-09a6-5af5-cb8b18c1d388"/>
+							<id root="4A641A78-AA60-09A6-5AF5-CB8B18C1D388"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#irs30"/>
@@ -694,8 +690,7 @@ History:
 										<telecom value="http://www.cdss.ch" use="WP"/>
 										<addr use="WP">
 											<streetName>Rathaus</streetName>
-											<houseNumber></houseNumber>
-											<city>Musterhausen</city>
+																	<city>Musterhausen</city>
 											<postalCode>8888</postalCode>
 											<country>CH</country>
 										</addr>
@@ -705,7 +700,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641a78-aa60-09a6-7847-8d534c7c9e0d"/>
+									<id root="4A641A78-AA60-09A6-7847-8D534C7C9E0D"/>
 									<code code="16584000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hepatitis B"/>
 									<text>
 										<reference value="#irs31"/>
@@ -738,7 +733,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12.2"/>
 							<templateId root="2.16.840.1.113883.10.20.1.25"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.93"/>
-							<id root="2.16.756.5.30.1.1.1.1.3.5" extension="4a641bb8-aa60-09a6-1a51-cb8b18c1d388"/>
+							<id root="4A641BB8-AA60-09A6-1A51-CB8B18C1D388"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#irs40"/>
@@ -788,8 +783,7 @@ History:
 										<telecom value="http://www.cdss.ch" use="WP"/>
 										<addr use="WP">
 											<streetName>Rathaus</streetName>
-											<houseNumber></houseNumber>
-											<city>Musterhausen</city>
+																	<city>Musterhausen</city>
 											<postalCode>8888</postalCode>
 											<country>CH</country>
 										</addr>
@@ -799,7 +793,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641bb8-aa60-09a6-3eb3-8d534c7c9e0d"/>
+									<id root="4A641BB8-AA60-09A6-3EB3-8D534C7C9E0D"/>
 									<code code="428570002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Papilloma-Virus"/>
 									<text>
 										<reference value="#irs41"/>

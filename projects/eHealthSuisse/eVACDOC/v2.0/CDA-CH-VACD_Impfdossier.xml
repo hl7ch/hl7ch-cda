@@ -4,6 +4,7 @@ Sample Swiss eVACDOC - Vaccination Record
 
 History:
 2018.04.14: Tony Schaller, medshare GmbH: Initial creation according to CDA-CH-VACD V2 (2018)
+2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 
 ******************************************************** -->
 <?xml-stylesheet type="text/xsl" href="../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl"?>
@@ -298,7 +299,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="4a641cee-aa60-09a6-b0ab-8d534c7c9e0d"/>
+							<id root="4A641CEE-AA60-09A6-B0AB-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is10"/>
@@ -396,7 +397,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a641d8e-aa60-09a6-b7fb-8d534c7c9e0d"/>
+									<id root="4A641D8E-AA60-09A6-B7FB-8D534C7C9E0D"/>
 									<code code="76668005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diphterie"/>
 									<text>
 										<reference value="#is11"/>
@@ -407,7 +408,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64209a-aa60-09a6-d5fd-8d534c7c9e0d"/>
+									<id root="4A64209A-AA60-09A6-D5FD-8D534C7C9E0D"/>
 									<code code="127786006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Tetanus"/>
 									<text>
 										<reference value="#is12"/>
@@ -418,7 +419,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a642130-aa60-09a6-a82a-8d534c7c9e0d"/>
+									<id root="4A642130-AA60-09A6-A82A-8D534C7C9E0D"/>
 									<code code="39343008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Keuchhusten"/>
 									<text>
 										<reference value="#is13"/>
@@ -429,7 +430,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6421d0-aa60-09a6-e59e-8d534c7c9e0d"/>
+									<id root="4A6421D0-AA60-09A6-E59E-8D534C7C9E0D"/>
 									<code code="72093006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Kinderlähmung"/>
 									<text>
 										<reference value="#is14"/>
@@ -453,7 +454,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="4a642270-aa60-09a6-45f4-8d534c7c9e0d"/>
+							<id root="4A642270-AA60-09A6-45F4-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is20"/>
@@ -551,7 +552,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a642306-aa60-09a6-5575-8d534c7c9e0d"/>
+									<id root="4A642306-AA60-09A6-5575-8D534C7C9E0D"/>
 									<code code="47435007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Masern"/>
 									<text>
 										<reference value="#is21"/>
@@ -562,7 +563,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6423a6-aa60-09a6-0d20-8d534c7c9e0d"/>
+									<id root="4A6423A6-AA60-09A6-0D20-8D534C7C9E0D"/>
 									<code code="50583002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mumps"/>
 									<text>
 										<reference value="#is22"/>
@@ -573,7 +574,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64243c-aa60-09a6-9c89-8d534c7c9e0d"/>
+									<id root="4A64243C-AA60-09A6-9C89-8D534C7C9E0D"/>
 									<code code="82314000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Röteln"/>
 									<text>
 										<reference value="#is23"/>
@@ -597,7 +598,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="4a6424dc-aa60-09a6-89b8-8d534c7c9e0d"/>
+							<id root="4A6424DC-AA60-09A6-89B8-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is30"/>
@@ -695,7 +696,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a64257c-aa60-09a6-8708-8d534c7c9e0d"/>
+									<id root="4A64257C-AA60-09A6-8708-8D534C7C9E0D"/>
 									<code code="16584000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hepatitis B"/>
 									<text>
 										<reference value="#is31"/>
@@ -719,7 +720,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
 							<templateId root="2.16.840.1.113883.10.20.1.24"/>
 							<templateId root="2.16.756.5.30.1.1.10.4.89"/>
-							<id root="4a642612-aa60-09a6-c80c-8d534c7c9e0d"/>
+							<id root="4A642612-AA60-09A6-C80C-8D534C7C9E0D"/>
 							<code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 							<text>
 								<reference value="#is40"/>
@@ -817,7 +818,7 @@ History:
 							<entryRelationship typeCode="RSON" inversionInd="false">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.95"/>
-									<id root="4a6426b2-aa60-09a6-37d3-8d534c7c9e0d"/>
+									<id root="4A6426B2-AA60-09A6-37D3-8D534C7C9E0D"/>
 									<code code="428570002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Papilloma-Virus"/>
 									<text>
 										<reference value="#is41"/>
@@ -846,7 +847,7 @@ History:
 					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
 					<title>Problemliste</title>
 					<text>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Bereich</th>
@@ -873,7 +874,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
 							<templateId root="2.16.840.1.113883.10.20.1.27"/>
-							<id root="975b8190-7754-0776-cc7c-8b1126624cbc"/>
+							<id root="975B8190-7754-0776-CC7C-8B1126624CBC"/>
 							<code nullFlavor="NA"/>
 							<text>Komplikationsrisiken</text>
 							<statusCode code="completed"/>
@@ -886,7 +887,7 @@ History:
 									<templateId root="2.16.756.5.30.1.1.10.4.97"/>
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
 									<templateId root="2.16.840.1.113883.10.20.1.28"/>
-									<id root="9759ad8e-7754-0776-ae9a-e74525dc3a64"/>
+									<id root="9759AD8E-7754-0776-AE9A-E74525DC3A64"/>
 									<code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem">
 										<originalText>
 											<reference value="#ap1"/>
@@ -913,7 +914,7 @@ History:
 					<code code="11348-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PAST ILLNESS"/>
 					<title>Bisherige Krankheiten</title>
 					<text>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Bereich</th>
@@ -940,7 +941,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
 							<templateId root="2.16.840.1.113883.10.20.1.27"/>
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
-							<id root="975b8370-7754-0776-9b19-8b1126624cbc"/>
+							<id root="975B8370-7754-0776-9B19-8B1126624CBC"/>
 							<code nullFlavor="NA"/>
 							<text>Windpocken</text>
 							<statusCode code="completed"/>
@@ -953,7 +954,7 @@ History:
 									<templateId root="2.16.756.5.30.1.1.10.4.97"/>
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
 									<templateId root="2.16.840.1.113883.10.20.1.28"/>
-									<id root="9759b180-7754-0776-03f0-e74525dc3a64"/>
+									<id root="9759B180-7754-0776-03F0-E74525DC3A64"/>
 									<code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem">
 										<originalText>
 											<reference value="#hipi1"/>
@@ -981,7 +982,7 @@ History:
 					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="ALLERGIES, ADVERSE REACTIONS, ALERTS"/>
 					<title>Allergien und Unverträglichkeiten</title>
 					<text>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Bereich</th>
@@ -1010,7 +1011,7 @@ History:
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3"/>
 							<templateId root="2.16.840.1.113883.10.20.1.27"/>
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
-							<id root="975b84a6-7754-0776-e83e-8b1126624cbc"/>
+							<id root="975B84A6-7754-0776-E83E-8B1126624CBC"/>
 							<code nullFlavor="NA"/>
 							<text>Hühnereiweiss</text>
 							<statusCode code="active"/>
@@ -1022,14 +1023,14 @@ History:
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6"/>
 									<templateId root="2.16.840.1.113883.10.20.1.28"/>
 									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
-									<id root="9759b220-7754-0776-c86c-e74525dc3a64"/>
+									<id root="9759B220-7754-0776-C86C-E74525DC3A64"/>
 									<code code="DINT" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7ActCode" displayName="Drug Intolerance">
 										<originalText>
-											<reference value="#ar1"/>
+											<reference value="#ar11"/>
 										</originalText>
 									</code>
 									<text>
-										<reference value="#ar1"/>
+										<reference value="#ar11"/>
 									</text>
 									<statusCode code="completed"/>
 									<effectiveTime>
@@ -1055,7 +1056,7 @@ History:
 						<observation classCode="OBS" moodCode="EVN">
 							<templateId root="2.16.756.5.30.1.1.10.4.84"/>
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-							<id root="975b85a0-7754-0776-d92d-8b1126624cbc"/>
+							<id root="975B85A0-7754-0776-D92D-8B1126624CBC"/>
 							<code code="49052-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Gestational age in days"/>
 							<text>
 								<reference value="#gestage"/>
@@ -1069,7 +1070,7 @@ History:
 						<procedure classCode="PROC" moodCode="EVN">
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
 							<templateId root="2.16.840.1.113883.10.20.1.29"/>
-							<id root="975b85a0-7754-0776-d92d-8b1126624cbc"/>
+							<id root="975B85A0-7754-0776-D92D-8B1126624CBC"/>
 							<code nullFlavor="NA"/>
 							<text>
 								<reference nullFlavor="NA"/>
@@ -1088,7 +1089,7 @@ History:
 					<title>Laborbefund - Serologie</title>
 					<text>Auftragsnummer: Unbekannt<br />Befundstatus: Endgültiger Befund<br />
 						<br />
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Zeile</th>
@@ -1189,7 +1190,7 @@ History:
 											</text>
 											<statusCode code="completed"/>
 											<value xsi:type="PQ" value="120.0" unit="g/L"/>
-											<interpretationCode code="N" codeSystem="2.16.756.5.30.1.127.3.2.20121101.3" displayName="Normal"/>
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" displayName="Normal"/>
 											<performer typeCode="PRF">
 												<templateId root="2.16.756.5.30.1.1.10.4.7"/>
 												<time value="201802010000+0100"/>
@@ -1305,7 +1306,7 @@ History:
 							<templateId root="2.16.756.5.30.1.1.10.4.92"/>
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5"/>
 							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-							<id root="975b88de-7754-0776-0920-8b1126624cbc"/>
+							<id root="975B88DE-7754-0776-0920-8B1126624CBC"/>
 							<code code="11778-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="DELIVERY DATE (CLINICAL ESTIMATE)"/>
 							<text>
 								<reference value="#hop1"/>

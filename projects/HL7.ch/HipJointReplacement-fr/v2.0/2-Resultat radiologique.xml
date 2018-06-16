@@ -5,6 +5,7 @@ CDA-CH V2.0 Sample
 
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
+2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 
 ********************************************************
 -->
@@ -127,9 +128,9 @@ History:
 				<!-- The author's means of communication: fax work place.-->
 				<telecom value="fax:+41.32.456.99.99" use="WP"/>
 				<!-- The author's means of communication: eMail work place.-->
-				<telecom value="mailto:rodiag@rodiag_institut.ch" use="WP"/>
+				<telecom value="mailto:rodiag@rodiag-institut.ch" use="WP"/>
 				<!-- The author's means of communication: website work place.-->
-				<telecom value="http:www.rodiag_institut.ch" use="WP"/>
+				<telecom value="http://www.rodiag-institut.ch" use="WP"/>
 				<!-- The author's address - also according to eCH-0010. -->
 				<addr use="WP">
 					<streetName>Rue de la radio</streetName>

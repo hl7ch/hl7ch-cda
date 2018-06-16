@@ -7,6 +7,7 @@ Case Study no. 3: Annual gynecological check
 History:
 2018.03.22: Tony Schaller, medshare GmbH: Sample creation according to CDA-CH-LREP General Report
 2018.04.14: Tony Schaller, medshare GmbH: Update to make it valid against the latest Schematron Rules, generated from ART-DECOR
+2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 
 ********************************************************
 -->
@@ -283,7 +284,7 @@ History:
 					<title>Laborbefund - Molekularbiologie</title>
 					<text>Auftragsnummer: 2222<br/>Befundstatus: Endgültiger Befund<br/>
 						<br/>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Pos.</th>
@@ -451,7 +452,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -511,7 +511,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -571,7 +570,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -644,7 +642,7 @@ History:
 					<title>Laborbefund - Hämatologie</title>
 					<text>Auftragsnummer: 2222<br/>Befundstatus: Endgültiger Befund<br/>
 						<br/>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Pos.</th>
@@ -750,7 +748,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -826,7 +823,7 @@ History:
 					<title>Laborbefund - Zytologie</title>
 					<text>Auftragsnummer: 2222<br/>Befundstatus: Endgültiger Befund<br/>
 						<br/>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Pos.</th>
@@ -932,7 +929,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1005,7 +1001,7 @@ History:
 					<title>Laborbefund - Chemie</title>
 					<text>Auftragsnummer: 2222<br/>Befundstatus: Endgültiger Befund<br/>
 						<br/>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Pos.</th>
@@ -1227,7 +1223,7 @@ History:
 									</td>
 									<td/>
 									<td/>
-									<td>0.5 - 8 1TODO</td>
+									<td>0.5 - 8</td>
 									<td/>
 									<td>LOINC</td>
 									<td>50560-2</td>
@@ -1453,7 +1449,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1513,7 +1508,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1532,7 +1526,7 @@ History:
 											</author>
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
-													<value xsi:type="IVL_PQ" unit="1TODO">
+													<value xsi:type="IVL_PQ" unit="1">
 														<low value="0.5"/>
 														<high value="8"/>
 													</value>
@@ -1576,7 +1570,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1639,7 +1632,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1702,7 +1694,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1765,7 +1756,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1828,7 +1818,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1891,7 +1880,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -1954,7 +1942,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2017,7 +2004,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2081,7 +2067,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2136,7 +2121,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2200,7 +2184,7 @@ History:
 					<title>Laborbefund - Mikrobiologie</title>
 					<text>Auftragsnummer: 2222<br/>Befundstatus: Endgültiger Befund<br/>
 						<br/>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Pos.</th>
@@ -2370,7 +2354,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2435,7 +2418,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2491,7 +2473,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -2555,7 +2536,7 @@ History:
 					<title>Laborbefund - Serologie</title>
 					<text>Auftragsnummer: 2222<br/>Befundstatus: Endgültiger Befund<br/>
 						<br/>
-						<table border="1" width="100%">
+						<table width="100%">
 							<thead>
 								<tr>
 									<th>Pos.</th>
@@ -2868,9 +2849,9 @@ History:
 									<td>
 										<content ID="lss6_2cf52696-bb33-470e-b564-1c2a9289fda0_value_10">150</content>
 									</td>
-									<td>TODO</td>
+									<td></td>
 									<td/>
-									<td>0 - 135 TODO</td>
+									<td>0 - 135</td>
 									<td/>
 									<td>LOINC</td>
 									<td>5403-1</td>
@@ -2940,7 +2921,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3013,7 +2993,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3076,7 +3055,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3139,7 +3117,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3199,7 +3176,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3259,7 +3235,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3322,7 +3297,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3362,7 +3336,7 @@ History:
 												<reference value="#lss6_2cf52696-bb33-470e-b564-1c2a9289fda0_observation_10"/>
 											</text>
 											<statusCode code="completed"/>
-											<value xsi:type="PQ" value="150" unit="TODO"/>
+											<value xsi:type="PQ" value="150" unit="1"/>
 											<performer typeCode="PRF">
 												<time value="20180316102800+0100"/>
 												<assignedEntity>
@@ -3385,7 +3359,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3404,7 +3377,7 @@ History:
 											</author>
 											<referenceRange typeCode="REFV">
 												<observationRange classCode="OBS" moodCode="EVN.CRT">
-													<value xsi:type="IVL_PQ" unit="TODO">
+													<value xsi:type="IVL_PQ" unit="1">
 														<low value="0"/>
 														<high value="135"/>
 													</value>
@@ -3448,7 +3421,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
@@ -3508,7 +3480,6 @@ History:
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
 														<streetName>Rathaus</streetName>
-														<houseNumber></houseNumber>
 														<postalCode>8888</postalCode>
 														<city>Musterhausen</city>
 														<country>CH</country>
