@@ -10,3 +10,6 @@ For CDA R2 you need the following coreschemas:
 - datatypes-base.xsd
 - NarrativeBlock.xsd
 - voc.xsd
+
+For IHE PHARM extensions (pharm: namespace etc.), you need to validate using CDA_extPHARM.xsd instead of CDA.xsd. 
+The corresponding extensions are located in the extPHARM directory.
