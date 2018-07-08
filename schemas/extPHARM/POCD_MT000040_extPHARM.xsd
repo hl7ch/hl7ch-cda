@@ -742,11 +742,13 @@ History:
 				<xs:element name="manufacturedMaterial" type="hl7v3:POCD_MT000040.Material"/>
 			</xs:choice>
 			<xs:element name="manufacturerOrganization" type="hl7v3:POCD_MT000040.Organization" minOccurs="0"/>
+			<!-- IHE Pharmacy extension -->
 			<xs:element ref="pharm:subjectOf1" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element ref="pharm:subjectOf2" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element ref="pharm:subjectOf3" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element ref="pharm:subjectOf4" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element ref="pharm:subjectOf5" minOccurs="0"/>
+			<!-- end of IHE Pharmacy extension -->
 		</xs:sequence>
 		<xs:attribute name="nullFlavor" type="hl7v3:NullFlavor" use="optional"/>
 		<xs:attribute name="classCode" type="hl7v3:RoleClassManufacturedProduct" use="optional" fixed="MANU"/>
@@ -758,11 +760,14 @@ History:
 			<xs:element name="templateId" type="hl7v3:II" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="code" type="hl7v3:CE" minOccurs="0"/>
 			<xs:element name="name" type="hl7v3:EN" minOccurs="0"/>
+			<!-- IHE Pharmacy extension -->
 			<xs:element ref="pharm:desc" minOccurs="0"/>
 			<xs:element ref="pharm:riskCode" minOccurs="0"/>
 			<xs:element ref="pharm:handlingCode" minOccurs="0"/>
 			<xs:element ref="pharm:formCode" minOccurs="0"/>
+			<!-- end of IHE Pharmacy extension -->
 			<xs:element name="lotNumberText" type="hl7v3:ST" minOccurs="0"/>
+			<!-- IHE Pharmacy extension -->
 			<xs:element ref="pharm:expirationTime" minOccurs="0"/>
 			<xs:element ref="pharm:stabilityTime" minOccurs="0"/>
 			<xs:element ref="pharm:asDistributedProduct" minOccurs="0" maxOccurs="unbounded"/>
@@ -771,6 +776,7 @@ History:
 			<xs:element ref="pharm:asSpecializedKind" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element ref="pharm:part" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element ref="pharm:ingredient" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- end of IHE Pharmacy extension -->
 		</xs:sequence>
 		<xs:attribute name="nullFlavor" type="hl7v3:NullFlavor" use="optional"/>
 		<xs:attribute name="classCode" type="hl7v3:EntityClassManufacturedMaterial" use="optional" fixed="MMAT"/>
