@@ -9,6 +9,7 @@ History:
 2005.08.25 mcraig
 2013.05.17 Tony Schaller, medshare GmbH, Switzerland (re-formatted cr/lf)
 2013.05.18 Tony Schaller, medshare GmbH, Switzerland (namespaces added)
+2018.07.08 Tony Schaller, medshare GmbH, Switzerland (ELGA extensions incorporated)
 
 *******************************************************************************
 -->
@@ -587,6 +588,14 @@ History:
 			<xs:enumeration value="PCD"/>
 			<xs:enumeration value="PCM"/>
 			<xs:enumeration value="PCV"/>
+			<xs:enumeration value="CM"/>
+			<xs:enumeration value="CD"/>
+			<xs:enumeration value="CV"/>
+			<!--
+			ELGA extensions
+			added: CM, CD, CV
+			Author: ELGA GmbH, 2014
+			-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="URLScheme">
@@ -604,6 +613,12 @@ History:
 			<xs:enumeration value="nfs"/>
 			<xs:enumeration value="tel"/>
 			<xs:enumeration value="telnet"/>
+			<xs:enumeration value="me"/>
+			<!--
+			ELGA extensions
+			added: me
+			Author: ELGA GmbH, 2014
+			-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
