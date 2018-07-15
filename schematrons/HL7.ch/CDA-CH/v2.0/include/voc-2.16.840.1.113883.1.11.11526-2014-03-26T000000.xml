@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets>
-   <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:hl7="urn:hl7-org:v3"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:pharm="urn:ihe:pharm"
-             id="2.16.840.1.113883.1.11.11526"
-             name="HumanLanguage"
-             displayName="HumanLanguage"
-             effectiveDate="2014-03-26T00:00:00"
-             statusCode="final"
-             versionLabel="DEFN=UV=VO=1360-20160323"
-             url="http://art-decor.org/decor/services/"
-             ident="ad2bbr-"
-             referencedFrom="cdachemed-">
-      <desc language="en-US">
-                <p>
-                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
-                <b>description: </b>
-                <p>Codes for the representation of the names of human languages.</p>
-            </desc>
-      <sourceCodeSystem id="2.16.840.1.113883.6.121"
-                        identifierName="Tags for the Identification of Languages"/>
-      <publishingAuthority name="eHealth Suisse">
-                <addrLine>Schwarzenburgstrasse 165</addrLine>
-                <addrLine>CH-3003 Bern</addrLine>
-                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
-            </publishingAuthority>
-      <completeCodeSystem codeSystem="2.16.840.1.113883.6.121"
-                          codeSystemName="Tags for the Identification of Languages"/>
-   </valueSet>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.11526" name="HumanLanguage" displayName="HumanLanguage" effectiveDate="2014-03-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1360-20160323" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachlrep-">
+        <desc language="en-US">
+            <p>
+                <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+            <b>description: </b>
+            <p>Codes for the representation of the names of human languages.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.6.121" identifierName="Tags&#160;for&#160;the&#160;Identification&#160;of&#160;Languages"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <completeCodeSystem codeSystem="2.16.840.1.113883.6.121" codeSystemName="Tags&#160;for&#160;the&#160;Identification&#160;of&#160;Languages"/>
+    </valueSet>
 </valueSets>

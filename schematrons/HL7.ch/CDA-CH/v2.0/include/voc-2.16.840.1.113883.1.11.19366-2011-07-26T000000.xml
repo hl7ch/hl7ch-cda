@@ -1,39 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets>
-   <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:xhtml="http://www.w3.org/1999/xhtml"
-             xmlns:hl7="urn:hl7-org:v3"
-             id="2.16.840.1.113883.1.11.19366"
-             name="x_InformationRecipient"
-             displayName="x_InformationRecipient"
-             effectiveDate="2011-07-26T00:00:00"
-             statusCode="final"
-             versionLabel="DEFN=UV=VO=1099-20110726"
-             url="http://art-decor.org/decor/services/"
-             ident="ad2bbr-"
-             referencedFrom="cdachlrep-">
-      <desc language="en-US">
-                <b>description: </b>
-                <p>Used to represent participant(s) who should receive a copy of a document.</p>
-            </desc>
-      <sourceCodeSystem id="2.16.840.1.113883.5.90" identifierName="ParticipationType"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
-            </publishingAuthority>
-      <conceptList>
-                <concept code="PRCP"
-                  codeSystem="2.16.840.1.113883.5.90"
-                  displayName="primary information recipient"
-                  level="0"
-                  type="L"/>
-                <concept code="TRC"
-                  codeSystem="2.16.840.1.113883.5.90"
-                  displayName="tracker"
-                  level="0"
-                  type="L"/>
-            </conceptList>
-   </valueSet>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.19366" name="x_InformationRecipient" displayName="x_InformationRecipient" effectiveDate="2011-07-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1099-20110726" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="cdachlrep-">
+        <desc language="en-US">
+            <b>description: </b>
+            <p>Used to represent participant(s) who should receive a copy of a document.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.90" identifierName="ParticipationType"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="PRCP" codeSystem="2.16.840.1.113883.5.90" displayName="primary information recipient" level="0" type="L"/>
+            <concept code="TRC" codeSystem="2.16.840.1.113883.5.90" displayName="tracker" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
 </valueSets>

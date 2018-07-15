@@ -6,8 +6,7 @@
 -->
 <rule xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="CR">
     <extends rule="ANY"/>
-    <assert test="(@nullFlavor or *) and not(@nullFlavor and *)"
-           see="https://art-decor.org/mediawiki/index.php?title=DTr1_CR">dtr1-1-CR: null or value</assert>
+    <assert test="(@nullFlavor or *) and not(@nullFlavor and *)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_CR">dtr1-1-CR: null or value</assert>
     
     <!-- Abstract datatypes 2.15.1
         The literal form for the UUID is defined according to the original specification of the UUID. However, because the HL7 UIDs are case sensitive, 

@@ -1,132 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets>
-   <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:xhtml="http://www.w3.org/1999/xhtml"
-             xmlns:hl7="urn:hl7-org:v3"
-             id="2.16.756.5.30.1.1.11.5"
-             name="VitalSignsObservation"
-             displayName="Vital Signs Observation"
-             statusCode="pending"
-             effectiveDate="2018-04-19T00:00:00"
-             versionLabel="2018"
-             url="http://art-decor.org/decor/services/"
-             ident="ch-pcc-"
-             referencedFrom="cdachlrep-">
-      <desc language="de-CH">IHE PCC TF VOL2 6.3.4.22.2</desc>
-      <sourceCodeSystem id="2.16.840.1.113883.6.1"
-                        identifierName="Logical Observation Identifier Names and Codes"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
-            </publishingAuthority>
-      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
-      <conceptList>
-                <concept code="2710-2"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Oxygen saturation (deprecated)"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Sauerstoffsättigung (veraltet)<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="59408-5"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Oxygen saturation in Arterial blood by Pulse oximetry"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Sauerstoffsättigung im arteriellen Blut durch Pulsoximetrie<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="3141-9"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Body weight Measured"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Körpergewicht (gewogen)<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8287-5"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Head Occipital-frontal circumference by Tape measure"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Kopfumfang okzipitofrontal (gemessen)<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8302-2"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Body height"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Körpergrösse<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8306-3"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Body height --lying"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Körpergrösse im Liegen<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8310-5"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Body temperature"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Körpertemperatur<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8462-4"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Diastolic blood pressure"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Intravaskulärer diastolischer Druck<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8480-6"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Systolic blood pressure"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Intravaskulärer systolischer Druck<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="8867-4"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Heart rate"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Herzfrequenz<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="9279-1"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Respiratory rate"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Atemfrequenz<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="19996-8"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Oxygen/Inspired gas Respiratory system --on ventilator"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Inspiratorischer Sauerstoffanteil (auf Beatmungsgerät)<br clear="none"/>
-                    </desc>
-                </concept>
-                <concept code="19994-3"
-                  codeSystem="2.16.840.1.113883.6.1"
-                  displayName="Oxygen/Inspired gas setting"
-                  level="0"
-                  type="L">
-                    <desc language="de-CH">Inspiratorischer Sauerstoffanteil (Einstellung am Beatmungsgerät)<br clear="none"/>
-                    </desc>
-                </concept>
-            </conceptList>
-   </valueSet>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.11.5" name="VitalSignsObservation" displayName="Vital Signs Observation" statusCode="pending" effectiveDate="2018-04-19T00:00:00" versionLabel="2018" url="http://art-decor.org/decor/services/" ident="ch-pcc-" referencedFrom="cdachlrep-">
+        <desc language="de-CH">IHE PCC TF VOL2 6.3.4.22.2</desc>
+        <sourceCodeSystem id="2.16.840.1.113883.6.1" identifierName="Logical&#160;Observation&#160;Identifier&#160;Names&#160;and&#160;Codes"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+        <conceptList>
+            <concept code="2710-2" codeSystem="2.16.840.1.113883.6.1" displayName="Oxygen saturation (deprecated)" level="0" type="L">
+                <desc language="de-CH">Sauerstoffsättigung (veraltet)<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="59408-5" codeSystem="2.16.840.1.113883.6.1" displayName="Oxygen saturation in Arterial blood by Pulse oximetry" level="0" type="L">
+                <desc language="de-CH">Sauerstoffsättigung im arteriellen Blut durch Pulsoximetrie<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="3141-9" codeSystem="2.16.840.1.113883.6.1" displayName="Body weight Measured" level="0" type="L">
+                <desc language="de-CH">Körpergewicht (gewogen)<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8287-5" codeSystem="2.16.840.1.113883.6.1" displayName="Head Occipital-frontal circumference by Tape measure" level="0" type="L">
+                <desc language="de-CH">Kopfumfang okzipitofrontal (gemessen)<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8302-2" codeSystem="2.16.840.1.113883.6.1" displayName="Body height" level="0" type="L">
+                <desc language="de-CH">Körpergrösse<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8306-3" codeSystem="2.16.840.1.113883.6.1" displayName="Body height --lying" level="0" type="L">
+                <desc language="de-CH">Körpergrösse im Liegen<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8310-5" codeSystem="2.16.840.1.113883.6.1" displayName="Body temperature" level="0" type="L">
+                <desc language="de-CH">Körpertemperatur<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8462-4" codeSystem="2.16.840.1.113883.6.1" displayName="Diastolic blood pressure" level="0" type="L">
+                <desc language="de-CH">Intravaskulärer diastolischer Druck<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8480-6" codeSystem="2.16.840.1.113883.6.1" displayName="Systolic blood pressure" level="0" type="L">
+                <desc language="de-CH">Intravaskulärer systolischer Druck<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="8867-4" codeSystem="2.16.840.1.113883.6.1" displayName="Heart rate" level="0" type="L">
+                <desc language="de-CH">Herzfrequenz<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="9279-1" codeSystem="2.16.840.1.113883.6.1" displayName="Respiratory rate" level="0" type="L">
+                <desc language="de-CH">Atemfrequenz<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="19996-8" codeSystem="2.16.840.1.113883.6.1" displayName="Oxygen/Inspired gas Respiratory system --on ventilator" level="0" type="L">
+                <desc language="de-CH">Inspiratorischer Sauerstoffanteil (auf Beatmungsgerät)<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="19994-3" codeSystem="2.16.840.1.113883.6.1" displayName="Oxygen/Inspired gas setting" level="0" type="L">
+                <desc language="de-CH">Inspiratorischer Sauerstoffanteil (Einstellung am Beatmungsgerät)<br clear="none"/>
+                </desc>
+            </concept>
+        </conceptList>
+    </valueSet>
 </valueSets>
