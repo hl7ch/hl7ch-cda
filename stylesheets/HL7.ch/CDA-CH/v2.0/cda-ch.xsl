@@ -29,7 +29,7 @@ Updated by Tony Schaller, medshare GmbH, revised for tfoot and CDA-CH V2
 	<xsl:output method="html" indent="yes" version="4.01" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.01//EN"/>
 
 	<xsl:variable name="stylesheetVersion">
-		<xsl:value-of select="'2.0.20180528'"/>
+		<xsl:value-of select="'2.0.20180716'"/>
 	</xsl:variable>
 
 	<!-- The following variables are designed to be overwritten in a project specific xsl that imports the current cda-ch.xsl an example can be found in suva-emedidoc.xsl -->
@@ -213,7 +213,10 @@ Updated by Tony Schaller, medshare GmbH, revised for tfoot and CDA-CH V2
 				<hr/>
 				<xsl:call-template name="bottomline"/>
 				<hr/>
-				<i><small>Rendered by cda-ch.xsl, v<xsl:value-of select="$stylesheetVersion"/></small></i>
+				<i>
+					<small>Rendered by cda-ch.xsl, v<xsl:value-of select="$stylesheetVersion"/>
+					</small>
+				</i>
 			</body>
 		</html>
 	</xsl:template>
@@ -1090,7 +1093,24 @@ Updated by Tony Schaller, medshare GmbH, revised for tfoot and CDA-CH V2
 								<xsl:with-param name="contact" select="n1:assignedAuthor"/>
 							</xsl:call-template>
 						</xsl:if>
-						<xsl:if test="n1:assignedAuthor/n1:representedOrganization">
+						<xsl:variable name="testContent1">
+							<xsl:for-each select="n1:assignedAuthor/n1:representedOrganization/n1:addr/*">
+								<xsl:value-of select="./text()"/>
+							</xsl:for-each>
+							<xsl:for-each select="n1:assignedAuthor/n1:representedOrganization/n1:telecom">
+								<xsl:value-of select="@value"/>
+							</xsl:for-each>
+						</xsl:variable>
+						<xsl:variable name="testContent2">
+							<xsl:for-each select="n1:assignedAuthor/n1:addr/*">
+								<xsl:value-of select="./text()"/>
+							</xsl:for-each>
+							<xsl:for-each select="n1:assignedAuthor/n1:telecom">
+								<xsl:value-of select="@value"/>
+							</xsl:for-each>
+						</xsl:variable>
+						<xsl:variable name="contactInfoEqual" select="$testContent1=$testContent2"/>
+						<xsl:if test="not($contactInfoEqual)">
 							<xsl:call-template name="getContactInfo">
 								<xsl:with-param name="contact" select="n1:assignedAuthor/n1:representedOrganization"/>
 							</xsl:call-template>
