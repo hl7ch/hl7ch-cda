@@ -10,14 +10,14 @@
   <templateId root="2.16.840.1.113883.10.20.3"/>
   <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
   <templateId root="1.3.6.1.4.1.19376.1.3.3"/>
-  <id root="2.16.756.5.30.1.1.1.1" extension="617939dc-2176-9f1a-31b3-ecda5e1b510f"/>
+  <id root="2.16.756.5.30.1.1.1.1" extension="61794db4-2176-9f1a-2b52-ecda5e1b510f"/>
   <code code="11502-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="LABORATORY REPORT.TOTAL"/>
   <title>Laborbefund für Qualitätskontrolle</title>
   <effectiveTime value="20171123"/>
   <confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Normal (qualifier value)"/>
   <languageCode code="de-CH"/>
   <setId root="2.16.756.5.30.1.1.1.1" extension="617939dc-2176-9f1a-31b3-ecda5e1b510f"/>
-  <versionNumber value="1"/>
+  <versionNumber value="2"/>
   <recordTarget typeCode="RCT">
     <templateId root="1.3.6.1.4.1.19376.1.3.3.1.2"/>
     <patientRole classCode="PAT">
@@ -129,6 +129,11 @@
       <id root="2.51.1.3" extension="21051980"/>
     </order>
   </inFulfillmentOf>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id root="2.16.756.5.30.1.1.1.1" extension="617939dc-2176-9f1a-31b3-ecda5e1b510f"/>
+    </parentDocument>
+  </relatedDocument>
   <component>
     <structuredBody>
       <component>
@@ -199,6 +204,7 @@
                       <statusCode code="completed"/>
                       <value xsi:type="ED">trübe<reference value="#lss1_18725-2_value_1"/></value>
                       <interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
+                      <interpretationCode code="POS" codeSystem="2.16.840.1.113883.5.83"/>
                       <entryRelationship typeCode="SUBJ" inversionInd="true">
                         <act classCode="ACT" moodCode="EVN">
                           <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>

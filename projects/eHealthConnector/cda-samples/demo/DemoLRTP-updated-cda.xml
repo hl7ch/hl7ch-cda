@@ -10,14 +10,14 @@
   <templateId root="2.16.840.1.113883.10.20.3"/>
   <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
   <templateId root="1.3.6.1.4.1.19376.1.3.3"/>
-  <id root="2.16.756.5.30.1.1.1.1" extension="61e8101e-21e4-9f1a-57d5-024ec8030987"/>
+  <id root="2.16.756.5.30.1.1.1.1" extension="61e82202-21e4-9f1a-ca5c-024ec8030987"/>
   <code code="11502-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="LABORATORY REPORT.TOTAL"/>
   <title>Laboratory Report in the Transplantation Process</title>
   <effectiveTime value="20171123"/>
   <confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Normal (qualifier value)"/>
   <languageCode code="en"/>
   <setId root="2.16.756.5.30.1.1.1.1" extension="61e8101e-21e4-9f1a-57d5-024ec8030987"/>
-  <versionNumber value="1"/>
+  <versionNumber value="2"/>
   <recordTarget>
     <patientRole>
       <id root="2.16.756.5.30.1.129.1.1.1" extension="LR-2012-0001"/>
@@ -114,6 +114,11 @@
       <code code="LDON" codeSystem="2.16.756.5.30.1.129.1.1.4" displayName="Living donor"/>
     </serviceEvent>
   </documentationOf>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id root="2.16.756.5.30.1.1.1.1" extension="61e8101e-21e4-9f1a-57d5-024ec8030987"/>
+    </parentDocument>
+  </relatedDocument>
   <component>
     <structuredBody>
       <component>
@@ -269,6 +274,37 @@
           <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="ANNOTATION COMMENT"/>
           <title>Comment</title>
           <text>All information in this document are fictitious. They are exclusively used for the demonstration of the eHealth Connector Convenience API.</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="1.3.6.1.4.1.19376.1.3.3.2.1"/>
+          <code code="18724-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HLA studies"/>
+          <title>Laboratory report</title>
+          <text>A2610 HLA Antigen test negative.</text>
+          <entry typeCode="DRIV">
+            <templateId root="1.3.6.1.4.1.19376.1.3.1"/>
+            <act classCode="ACT" moodCode="EVN">
+              <code xsi:type="CE" code="18724-5" codeSystem="2.16.840.1.113883.6.1" displayName="HLA studies"/>
+              <statusCode code="completed"/>
+              <entryRelationship typeCode="COMP">
+                <organizer classCode="BATTERY" moodCode="EVN">
+                  <templateId root="1.3.6.1.4.1.19376.1.3.1.4"/>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20171124081500+0100"/>
+                  <component typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="1.3.6.1.4.1.19376.1.3.1.6"/>
+                      <code code="A11" codeSystem="2.16.756.5.30.1.129.1.1.8" codeSystemName="LOINC" displayName="A11 HLA-Antigene"/>
+                      <statusCode code="completed"/>
+                      <value xsi:type="BL" value="true"/>
+                      <interpretationCode code="NEG" codeSystem="2.16.840.1.113883.5.83"/>
+                    </observation>
+                  </component>
+                </organizer>
+              </entryRelationship>
+            </act>
+          </entry>
         </section>
       </component>
     </structuredBody>
