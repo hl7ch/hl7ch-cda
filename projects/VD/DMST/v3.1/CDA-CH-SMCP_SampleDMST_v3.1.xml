@@ -1,0 +1,2959 @@
+<!-- ********************************************************
+Sozial medical care plan V3.0
+Document médico-social de transmission (DMST) V3.1
+
+History:
+2018.12.24: Tony Schaller, medshare GmbH (Migration from DMST 2.1 to DMST 3.1; still incomplete, but valid against Schematron draft from ART-DECOR)
+
+******************************************************** -->
+<?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
+<?xml-stylesheet type='text/css' href='../../../../stylesheets/VD/DMST/v1.0/vd.css'?>
+<ClinicalDocument xmlns='urn:hl7-org:v3' xmlns:hl7="urn:hl7-org:v3" xmlns:pharm="urn:ihe:pharm" xmlns:voc='urn:hl7-org:v3/voc' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='urn:hl7-org:v3 CDA.xsd'>
+	<!--
+	********************************************************
+	CDA Header
+	******************************************************** -->
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.25 Document Realm -->
+	<realmCode code='CHE' />
+
+	<!-- 1 … 1	M hl7:typeId -->
+	<typeId root='2.16.840.1.113883.1.3' extension='POCD_HD000040'/>
+
+	<!-- 1 … 1	M from 2.16.756.5.30.1.1.10.2.18 Document Template Ids CDA-CH v2.0 - structuredBody -->
+	<!-- CDA-CH v2.0 specification (optional, but informative template id). -->
+	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
+	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
+	<templateId root="2.16.840.1.113883.10.12.2"/>
+	<!-- HL7 CDA R2 (2005). -->
+	<templateId root="2.16.840.1.113883.10.12.1"/>
+
+	<!-- 1 … 1	M from 2.16.756.5.30.1.1.10.2.84 Document Template Ids CDA-CH-SMCP V2 -->
+	<!-- CDA-CH-SMCP Social-medical care plan specification. This is an informational reference, only. -->
+	<templateId root="2.16.756.5.30.1.1.1.1.3.6.3"/>
+	<!-- CDA-CH-SMCP Social-medical care plan ART-DECOR model. -->
+	<templateId root="2.16.756.5.30.1.1.10.1.11"/>
+	<!-- IHE Patient Plan of Care, Trial Implementation of October 4, 2013. -->
+	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.20.1.1"/>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.23 Document Id -->
+	<id root='1E75E900-91D8-474D-A32F-89729FB5DDDC' />
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.83 Document Code -->
+	<!-- IHE PPOC defines the document code -->
+	<code code='56447-6' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Plan of Care Note'>
+		<!-- Mapping to the Swiss EPR XDS.b metadata -->
+		<translation code='721915006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Admission request'/>
+	</code>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.73 Document Title -->
+	<!-- The document title must read as specified, regarding the documents language:
+	[de]: 'Sozial-medizinischer Pflegeverlegungsbericht'
+	[fr]: 'Document médico-social de transmission'
+	[en]: 'Social-medical care plan'
+	-->
+	<title>Document médico-social de transmission</title>
+
+	<!-- 1 … 1	M	hl7:effectiveTime -->
+	<!-- DMST v3: 0.3 Le -->
+	<effectiveTime value='201812241553+0200'/>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.19 Document Confidentiality Code -->
+	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.22 Document Language -->
+	<languageCode code="fr-CH"/>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.20 Document Set Id and Version Number -->
+	<setId root="1E75E900-91D8-474D-A32F-89729FB5DDDC"/>
+	<versionNumber value="1"/>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.76 Patient -->
+	<recordTarget>
+		<templateId root="2.16.756.5.30.1.1.10.2.76"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.1"/>
+		<patientRole>
+			<!-- DMST v3: 1.10 N° AVS -->
+			<id extension='756.1234.5678.90' root='2.16.756.5.32'/>
+			<id extension='63871' root='2.16.756.5.48.1.1.4.1'/>
+			<addr use='HP'>
+				<!-- DMST v3: 1.6 Adresse du domicile -->
+				<streetName>Chemin du calvaire</streetName>
+				<houseNumber>10</houseNumber>
+				<postalCode>9876</postalCode>
+				<city>Hameau des malades</city>
+				<country>CH</country>
+			</addr>
+			<!-- DMST v3: 1.7 Sans domicile fixe
+			<addr use='HP' nullFlavor="NI" />
+			-->
+			<!-- DMST v3: 1.8 Tel principal -->
+			<telecom use='HP' value='tel:+41.32.685.12.34'/>
+			<!-- DMST v3: 1.9 Tel secondaire -->
+			<telecom use='PUB' value='tel:+41.32.123.77.88'/>
+			<!-- DMST v3: 1.14 Email -->
+			<telecom use='PUB' value='mailto:jean.dupont@sampledomain.ch'/>
+			<patient>
+				<name>
+					<!-- DMST v3: 1.2 Prénom -->
+					<given>Jean</given>
+					<!-- DMST v3: 1.1 Nom -->
+					<family>Dupont</family>
+				</name>
+				<!-- DMST v3: 1.3 Sexe -->
+				<administrativeGenderCode code='M' codeSystem='2.16.840.1.113883.5.1'/>
+				<!-- DMST v3: 1.5 Date de naissance -->
+				<birthTime value='19480611'/>
+				<!-- DMST v3: 1.4 Etat civil -->
+				<maritalStatusCode code='M' codeSystem='2.16.840.1.113883.1.11.12212' codeSystemName='MaritalStatus' displayName='Married' />
+				<!-- DMST v3: 1.16 Religion / Confession -->
+				<religiousAffiliationCode nullFlavor='OTH'>
+					<!-- TODO: XSL anpassen, damit das angezeigt wird -->
+					<originalText>
+						catholique
+					</originalText>
+				</religiousAffiliationCode>
+				<languageCommunication>
+					<!-- DMST v3: 1.15 Langue maternelle -->
+					<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.2.5'/>
+					<templateId root='2.16.756.5.30.1.1.10.2.39'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.1'/>
+					<languageCode code='de'/>
+					<modeCode code='ESP' codeSystem='2.16.840.1.113883.5.60' codeSystemName='LanguageAbilityMode' displayName='Expressed spoken' />
+					<proficiencyLevelCode code='E' codeSystem='2.16.840.1.113883.5.61' codeSystemName='LanguageAbilityProficiency' displayName='Excellent' />
+					<preferenceInd value='true'/>
+				</languageCommunication>
+				<languageCommunication>
+					<!-- DMST v3: 1.17 Communication en français -->
+					<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.2.6'/>
+					<templateId root='2.16.756.5.30.1.1.10.2.39'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.1'/>
+					<languageCode code='fr'/>
+					<modeCode code='RSP' codeSystem='2.16.840.1.113883.5.60' codeSystemName='LanguageAbilityMode' displayName='Received spoken' />
+					<proficiencyLevelCode code='F' codeSystem='2.16.840.1.113883.5.61' codeSystemName='LanguageAbilityProficiency' displayName='Fair'>
+						<originalText>Compréhension en français suffisant.</originalText>
+					</proficiencyLevelCode>
+					<preferenceInd value='false'/>
+				</languageCommunication>
+				<languageCommunication>
+					<!-- DMST v3: 1.17 Communication en français -->
+					<templateId root='2.16.756.5.30.1.1.1.1.3.6.3.10.2.6'/>
+					<templateId root='2.16.756.5.30.1.1.10.2.39'/>
+					<templateId root='1.3.6.1.4.1.19376.1.5.3.1.2.1'/>
+					<languageCode code='fr'/>
+					<modeCode code='ESP' codeSystem='2.16.840.1.113883.5.60' codeSystemName='LanguageAbilityMode' displayName='Expressed spoken' />
+					<proficiencyLevelCode code='P' codeSystem='2.16.840.1.113883.5.61' codeSystemName='LanguageAbilityProficiency' displayName='Fair'>
+						<originalText>Ne sait pas parler en français.</originalText>
+					</proficiencyLevelCode>
+					<preferenceInd value='false'/>
+				</languageCommunication>
+			</patient>
+		</patientRole>
+	</recordTarget>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.74 Author -->
+	<author>
+		<templateId root="2.16.756.5.30.1.1.10.2.74"/>
+		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
+		<functionCode code='309343006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Physician'/>
+		<time value='201812241553+0200'/>
+		<assignedAuthor>
+			<id extension='7608888888888' root='2.51.1.3'/>
+			<addr use='WP'>
+				<streetName>Rue de l’hôpital</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Guérison-ville</city>
+				<country>CH</country>
+			</addr>
+			<!-- DMST v3: 0.4 No de tél. -->
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<!-- DMST v3: 0.5 No de fax -->
+			<telecom use='PUB' value='fax:+41.32.234.66.77'/>
+			<!-- DMST v3: 0.6 Email -->
+			<telecom use='PUB' value='mailto:gueri@cabinet-medical.ch'/>
+			<telecom use='PUB' value='http://www.cabinet-medical.ch'/>
+			<assignedPerson>
+				<!-- DMST v3: 0.1 Adressé par -->
+				<name>
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+					<suffix>Spécialiste de médecine générale</suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Cabinet Médical CH</name>
+				<addr use='WP'>
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+
+	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.7 Data Enterer -->
+	<!-- TODO -->
+
+	<!-- 1 … 1	R	from 2.16.756.5.30.1.1.10.2.3 Custodian -->
+	<custodian>
+		<templateId root="2.16.756.5.30.1.1.10.2.3"/>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension='7608888888888' root='2.51.1.3'/>
+				<name>Cabinet Médical CH</name>
+				<addr use='WP'>
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+					<country>CH</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.75 Recipient -->
+	<informationRecipient typeCode="PRCP">
+		<templateId root="2.16.756.5.30.1.1.10.2.4"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.75"/>
+		<intendedRecipient>
+			<id extension='7606666666666' root='2.51.1.3'/>
+			<receivedOrganization>
+				<!-- DMST v3: 0.2 Adressé à -->
+				<name>EMS Guérison-ville</name>
+				<!-- DMST: 0.4 No de tél. -->
+				<telecom use='PUB' value='tel:+41.32.234.22.33'/>
+				<!-- DMST: 0.5 No de fax -->
+				<telecom use='PUB' value='fax:+41.32.234.22.44'/>
+				<telecom use='PUB' value='mailto:info@ems-guerison-ville.ch'/>
+				<telecom use='PUB' value='http://www.ems-guerison-ville.ch'/>
+				<addr use='WP'>
+					<streetAddressLine>Chemin de soins</streetAddressLine>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+					<country>CH</country>
+				</addr>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+
+	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.82 Legal Authenticator -->
+	<legalAuthenticator>
+		<templateId root="2.16.756.5.30.1.1.10.2.82"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.5"/>
+		<!-- DMST v3: 18.3 Le -->
+		<time value='201812241553+0200'/>
+		<signatureCode code='S'/>
+		<assignedEntity>
+			<id extension='7608888888888' root='2.51.1.3'/>
+			<addr use='WP'>
+				<streetName>Rue de l’hôpital</streetName>
+				<houseNumber>2</houseNumber>
+				<postalCode>8888</postalCode>
+				<city>Guérison-ville</city>
+				<country>CH</country>
+			</addr>
+			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
+			<!-- DMST v3: 18.2 Document validé par -->
+			<assignedPerson>
+				<name>
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<given>Théodore</given>
+					<family>Guéri</family>
+					<!-- DMST v3: 18.4 Fonction -->
+					<suffix qualifier="PR">Spécialiste de médecine générale </suffix>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<name>Cabinet Médical CH</name>
+				<addr use='WP'>
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+					<country>CH</country>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+
+	<!-- 0 … *		from 2.16.756.5.30.1.1.10.2.6 Authenticator -->
+	<!-- TODO -->
+
+	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.16 Order Reference - inFulfillmentOf -->
+	<!-- TODO -->
+
+	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.46 Health Service - documentationOf -->
+	<!-- TODO -->
+
+	<!-- 1 … 1	R	from 2.16.756.5.30.1.1.10.2.77 Insurance - Illness -->
+	<participant typeCode="COV">
+		<!-- DMST v3: 2.1 Assurance Maladie -->
+		<templateId root="2.16.756.5.30.1.1.10.2.77"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.15"/>
+		<associatedEntity classCode="PAYOR">
+			<!-- DMST v3: 2.1.2 Maladie (N° assuré) -->
+			<id extension="23.253-m" root="2.999"/>
+			<code code="832.10" codeSystem="2.16.756.5.30.2.1.1.11" codeSystemName="ins-laws" displayName="Federal Act on Health Insurance (HIA)"/>
+			<scopingOrganization>
+				<!-- DMST v3: 2.1.1 Maladie (Caisse) -->
+				<id root="2.51.1.3" extension="7607777777777"/>
+				<name>NousPaieronsTous assurances</name>
+				<telecom nullFlavor="NASK"/>
+				<addr use="WP">
+					<streetName>rue payant</streetName>
+					<houseNumber>89</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+					<country>CH</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.78 Insurance - Accident -->
+	<!-- TODO -->
+
+	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.79 Insurance - Complementary -->
+	<!-- TODO -->
+
+	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.80 Employer -->
+	<!-- TODO -->
+
+	<!-- 2 … *		from 2.16.756.5.30.1.1.10.2.81 Patient Contact -->
+	<participant typeCode="IND">
+		<!-- DMST v3: 6a Réseau - Famille, entourage et Proches aidants -->
+		<templateId root="2.16.756.5.30.1.1.10.2.81"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.43"/>
+		<templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4"/>
+		<!-- DMST v3: 6.7 Contact urgence: associatedEntity/@classCode='ECON' -->
+		<associatedEntity classCode="PRS">
+			<!-- DMST v3: 6.3 Lien avec la personne -->
+			<!-- DMST v3: 6.6 Rôle -->
+			<!-- DMST v3: 6.8 Vit avec la personne: code/@code='DOMPART' -->
+			<code code="DAUC" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7RoleCode" displayName="daughter"/>
+			<!-- DMST v3: 6.4 Adresse du domicile -->
+			<addr use="HP">
+				<postalCode>6780</postalCode>
+				<city>Airolo</city>
+				<country>CH</country>
+			</addr>
+			<!-- DMST v3: 6.5 Téléphone -->
+			<telecom use="HP" value="tel:+41.32.999.99.99"/>
+			<associatedPerson>
+				<name>
+					<!-- DMST v3: 6.1 Nom -->
+					<family>FILLE</family>
+					<!-- DMST v3: 6.2 Prénom -->
+					<given>Josephine</given>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<participant typeCode="IND">
+		<!-- DMST v3: 6b Réseau - Professionnels -->
+		<templateId root="2.16.756.5.30.1.1.10.2.81"/>
+		<templateId root="2.16.756.5.30.1.1.10.2.43"/>
+		<templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4"/>
+		<associatedEntity classCode="CAREGIVER">
+			<!-- DMST: 2.1 Représentant thérapeutique -->
+			<id root="2.51.1.3" extension="7608888888888"/>
+			<!-- DMST v3: 6.11 Rôle -->
+			<code code="HPOWATT" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7RoleCode" displayName="healthcare power of attorney"/>
+			<associatedPerson>
+				<name>
+					<prefix qualifier="AC">Dr. med.</prefix>
+					<!-- DMST v3: 6.10 Prénom -->
+					<given>Théodore</given>
+					<!-- DMST v3: 6.9 Nom -->
+					<family>Guéri</family>
+				</name>
+			</associatedPerson>
+			<scopingOrganization>
+				<name>Cabinet Médical CH</name>
+				<!-- DMST v3: 6.13 Téléphone -->
+				<telecom use="PUB" value="tel:+41.32.234.22.33"/>
+				<telecom use="PUB" value="fax:+41.32.234.22.44"/>
+				<telecom use="PUB" value="mailto:info@ems-guerison-ville.ch"/>
+				<telecom use="PUB" value="http:www.ems-guerison-ville.ch"/>
+				<!-- DMST v3: 6.12 Adresse -->
+				<addr use="WP">
+					<streetName>Rue de l’hôpital</streetName>
+					<houseNumber>2</houseNumber>
+					<postalCode>8888</postalCode>
+					<city>Guérison-ville</city>
+					<country>CH</country>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+
+	<!-- 0 … *		from 2.16.756.5.30.1.1.10.2.13 Document Replacement - relatedDocument -->
+	<!-- TODO -->
+
+	<!--
+	********************************************************
+	CDA Body
+	******************************************************** -->
+	<component>
+		<structuredBody>
+
+			<!--
+			********************************************************
+			1. Required Assessments Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.54"/>
+					<templateId root="2.16.756.5.30.1.1.10.3.20"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.13.2.4"/>
+					<code code="51848-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Evaluation note"/>
+					<title>Evaluation</title>
+					<!-- DMST v3: TODO -->
+					<text>TODO</text>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			2. Required Medical Devices Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.55"/>
+					<templateId root="2.16.756.5.30.1.1.10.3.21"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.5"/>
+					<templateId root="2.16.840.1.11383.10.20.1.7"/>
+					<code code="46264-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medical device use"/>
+					<title>Dispositifs médicaux</title>
+					<text>Aucune information sur des dispositifs médicaux.</text>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			3. Conditional Review of Systems Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.56"/>
+					<templateId root="2.16.756.5.30.1.1.10.3.22"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.18"/>
+					<code code="10187-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Review of systems Narrative - Reported"/>
+					<title>Bilan de santé</title>
+					<text>
+						Bilan de santé au moment de l'évaluation (somatique &amp; psychique):
+						<table>
+							<tbody>
+								<tr>
+									<th>Manifestation</th>
+									<th>Descriptions / Actions</th>
+								</tr>
+								<tr>
+									<td>
+										Respiration
+									</td>
+									<td>
+										<content ID='dmst_14.1' >
+											Patient eupnéique en air ambiant avec O2 Saturation à 97%. Normocard et normotendu.
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Alimentation, hydratation, état nutritionnel
+									</td>
+									<td>
+										<content ID='dmst_14.2' >
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Elimination
+									</td>
+									<td>
+										<content ID='dmst_14.3' >
+											Colostomie
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Etat de la peau, plaies, cicatrices
+									</td>
+									<td>
+										<content ID='dmst_14.4' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Mobilité (chute posture, coordination)
+									</td>
+									<td>
+										<content ID='dmst_14.5' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Addictions
+									</td>
+									<td>
+										<content ID='dmst_14.6' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Douleur
+									</td>
+									<td>
+										<content ID='dmst_14.7' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Humeur (tristesse, anxiété, etc.)
+									</td>
+									<td>
+										<content ID='dmst_14.8' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Fugue, déambulation, errance
+									</td>
+									<td>
+										<content ID='dmst_14.9' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Sommeil, fatigue
+									</td>
+									<td>
+										<content ID='dmst_14.10' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Violence envers soi-même ou autrui
+									</td>
+									<td>
+										<content ID='dmst_14.11' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Etat cognitif
+									</td>
+									<td>
+										<content ID='dmst_14.12' >
+
+										</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Autres (cardiaque, neurologique, etc.)
+									</td>
+									<td>
+										<content ID='dmst_14.13' >
+
+										</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<!-- DMST v3: 14.1 Respiration -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="8D941CFD-BE67-4138-8763-4FDF5B811B35"/>
+							<code code="11412-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Physical findings of Respiratory system Narrative"/>
+							<text>
+								<reference value="#dmst_14.1"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.2 Alimentation, hydratation, état nutritionnel -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="B8C03913-F3B3-477C-9872-851C021A4300"/>
+							<code code="28141-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body nutrition deficit/Alimentation, hydratation"/>
+							<text>
+								<reference value="#dmst_14.2"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.3 Elimination -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="D6A609AF-BAB5-4EC3-B3A4-23DAB0BBF02D"/>
+							<code code="57046-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Elimination status"/>
+							<text>
+								<reference value="#dmst_14.3"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.4 Etat de la peau, plaies, cicatrices -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="AA66C8A8-21D1-4C08-B3C6-5DC9C07AD475"/>
+							<code code="8709-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Physical findings of Skin"/>
+							<text>
+								<reference value="#dmst_14.4"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.5 Mobilité (chute posture, coordination) -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="3EBD8554-7B23-43CB-817D-B35328C89D49"/>
+							<code code="71108-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Mobility"/>
+							<text>
+								<reference value="#dmst_14.5"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.6 Addictions -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="C618C4AB-8F26-4A07-BEF8-23F203CC388D"/>
+							<code code="32709003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Addiction"/>
+							<text>
+								<reference value="#dmst_14.6"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.7 Douleur -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="AD612FCE-C108-42F7-9208-01E9A27C76A7"/>
+							<code code="56842-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chronic pain assessment Narrative"/>
+							<text>
+								<reference value="#dmst_14.7"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.8 Humeur (tristesse, anxiété, etc.) -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="CA1B150B-F48D-4D9F-A8DE-095C45B2CFF3"/>
+							<code code="365086004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Humor"/>
+							<text>
+								<reference value="#dmst_14.8"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.9 Fugue, déambulation, errance -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="1DB5F045-2921-488A-AEF1-BACCE612C14E"/>
+							<code code="14.9" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" codeSystemName="dmst-v31-fnr" displayName="Fugue, perambulation, wandering"/>
+							<text>
+								<reference value="#dmst_14.9"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.10 Sommeil, fatigue -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="1DADF23A-2490-4667-A369-F008891A6F61"/>
+							<code code="14.10" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" codeSystemName="dmst-v31-fnr" displayName="Sleep, tiredness"/>
+							<text>
+								<reference value="#dmst_14.10"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.11 Violence envers soi-même ou autrui -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="B0198874-3D9A-4649-B7B0-4964BC3128F6"/>
+							<code code="14.11" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" codeSystemName="dmst-v31-fnr" displayName="Violence towards oneself or others"/>
+							<text>
+								<reference value="#dmst_14.11"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.12 Etat cognitif -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="608BDCCC-8281-4DC4-97E5-C9CBBD66116F"/>
+							<code code="11332-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Cognitive function Narrative"/>
+							<text>
+								<reference value="#dmst_14.12"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+					<entry>
+						<!-- DMST v3: 14.13 Autres (cardiaque, neurologique, etc.) -->
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.109"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<id root="95E381DB-3815-4B4E-9D60-EEBFBCED4647"/>
+							<code code="14.13" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" codeSystemName="dmst-v31-fnr" displayName="Others"/>
+							<text>
+								<reference value="#dmst_14.13"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="NAV"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			4. Conditional Coded Functional Status Assessment Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.57"/>
+					<templateId root="2.16.756.5.30.1.1.10.3.23"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.2.1"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.17"/>
+					<code code='47420-5' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName='Functional status assessment note' />
+					<title>Statut des fonctions</title>
+					<text></text>
+					<component>
+						<section>
+							<templateId root="2.16.756.5.30.1.1.10.3.74"/>
+							<templateId root="2.16.756.5.30.1.1.10.3.39"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.2.2"/>
+							<id root="6F2D4B7A-918D-4AAE-8BFC-AAE3372298D8"/>
+							<code code="38208-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pain severity"/>
+							<title>Gravité de la douleur</title>
+							<text>
+								<content ID='nopainscore'>Aucune information sur la gravité de la douleur.</content>
+							</text>
+							<entry>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.117"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.75"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.1"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<id root="790458E0-C06E-44E6-B8E2-9EDA6E12CF78"/>
+									<code code="38208-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pain severity"/>
+									<text>
+										<reference value="#nopainscore"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NA"/>
+									<value xsi:type="CO" nullFlavor="NA"/>
+								</observation>
+							</entry>
+						</section>
+					</component>
+					<component>
+						<section>
+							<templateId root="2.16.756.5.30.1.1.10.3.75"/>
+							<templateId root="2.16.756.5.30.1.1.10.3.40"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.2.5"/>
+							<id root="8B31C242-F4C1-4E3D-BF7A-4E2EF820A58E"/>
+							<code code="46006-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Physical functioning and structural problems"/>
+							<title>Fonction physique</title>
+							<text>
+								AVQ
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Evaluation</th>
+											<th>Description / Actions mises en place</th>
+										</tr>
+										<tr>
+											<td>
+												S’alimenter, boire
+											</td>
+											<td>
+												<content ID='dmst_8.1_eval'>
+													2 - SUPERVISION
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.1_desc'>
+													Monitoring or indications required
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Bain, douche
+											</td>
+											<td>
+												<content ID='dmst_8.2_eval'>
+													2 - STIMULATION, SURVEILLANCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.2_desc'>
+													Requires sometimes stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												S'habiller
+											</td>
+											<td>
+												<content ID='dmst_8.3_eval'>
+													2 - STIMULATION, SURVEILLANCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.3_desc'>
+													Requires sometimes stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Hygiène personnelle
+											</td>
+											<td>
+												<content ID='dmst_8.4_eval'>
+													2 - SUPERVISION
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.4_desc'>
+													Monitoring or indications required
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Continence urinaire
+											</td>
+											<td>
+												<content ID='dmst_8.5_eval'>
+													2 - STIMULATION, SURVEILLANCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.5_desc'>
+													Requires sometimes stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Continence fécale
+											</td>
+											<td>
+												<content ID='dmst_8.6_eval'>
+													2 - STIMULATION, SURVEILLANCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.6_desc'>
+													Requires sometimes stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Utilisation des toilettes
+											</td>
+											<td>
+												<content ID='dmst_8.7_eval'>
+													2 - SUPERVISION
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_8.7_desc'>
+													Monitoring or indications required
+												</content>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br />
+								AIVQ
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Evaluation</th>
+											<th>Description / Actions mises en place</th>
+										</tr>
+										<tr>
+											<td>
+												Usage du téléphone
+											</td>
+											<td>
+												<content ID='dmst_9.1_eval'>
+													3 - PARTIAL OR IMPORTANT DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.1_desc'>
+													Requires often or always stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Ménage courant
+											</td>
+											<td>
+												<content ID='dmst_9.2_eval'>
+													3 - PARTIAL OR IMPORTANT DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.2_desc'>
+													Requires often or always stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Préparation des repas
+											</td>
+											<td>
+												<content ID='dmst_9.3_eval'>
+													3 - PARTIAL OR IMPORTANT DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.3_desc'>
+													Requires often or always stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Faire les courses
+											</td>
+											<td>
+												<content ID='dmst_9.4_eval'>
+													3 - PARTIAL OR IMPORTANT DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.4_desc'>
+													Requires often or always stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Faire la lessive, entretenir le linge
+											</td>
+											<td>
+												<content ID='dmst_9.5_eval'>
+													3 - PARTIAL OR IMPORTANT DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.5_desc'>
+													Requires often or always stimulation
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Gestion des médicaments
+											</td>
+											<td>
+												<content ID='dmst_9.6_eval'>
+													3 - LIMITED HELP
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.6_desc'>
+													Help required on a few occasions
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Gestion de l’argent et administration
+											</td>
+											<td>
+												<content ID='dmst_9.7_eval'>
+													3 - LIMITED HELP
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.7_desc'>
+													Help required on a few occasions
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Gérer ses liens sociaux
+											</td>
+											<td>
+												<content ID='dmst_9.8_eval'>
+													3 - PARTIAL OR IMPORTANT DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_9.8_desc'>
+													Requires often or always stimulation
+												</content>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br />
+								MOBILITÉ
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Evaluation</th>
+											<th>Description / Actions mises en place</th>
+										</tr>
+										<tr>
+											<td>
+												Transferts (lit-fauteuil-debout)
+											</td>
+											<td>
+												<content ID='dmst_10.1_eval'>
+													4 - TOTAL DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.1_desc'>
+													Done by others
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Déplacement à l'intérieur sur le même étage
+											</td>
+											<td>
+												<content ID='dmst_10.2_eval'>
+													4 - CONSIDERABLE HELP
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.2_desc'>
+													One caregiver help required to support weight (including limbs), but the individual performs itself 50% or more of the activity
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Marcher à l’intérieur sur le même étage
+											</td>
+											<td>
+												<content ID='dmst_10.3_eval'>
+													4 - CONSIDERABLE HELP
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.3_desc'>
+													One caregiver help required to support weight (including limbs), but the individual performs itself 50% or more of the activity
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Se déplacer à l’extérieur
+											</td>
+											<td>
+												<content ID='dmst_10.4_eval'>
+													4 - TOTAL DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.4_desc'>
+													Done by others
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Utilisation des moyens de transports
+											</td>
+											<td>
+												<content ID='dmst_10.5_eval'>
+													4 - TOTAL DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.5_desc'>
+													Done by others
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Monter/descendre les escaliers
+											</td>
+											<td>
+												<content ID='dmst_10.6_eval'>
+													4 - TOTAL DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.6_desc'>
+													Done by others
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Utilisation de l’élévateur (cigogne)
+											</td>
+											<td>
+												<content ID='dmst_10.7_eval'>
+													N - NO
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.7_desc'>
+
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Utilisation des moyens auxiliaires
+											</td>
+											<td>
+												<content ID='dmst_10.8_eval'>
+													4 - TOTAL DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_10.8_desc'>
+													Done by others
+												</content>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br />
+								COMMUNICATION / VISION
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Evaluation</th>
+											<th>Description / Actions mises en place</th>
+										</tr>
+										<tr>
+											<td>
+												Vision
+											</td>
+											<td>
+												<content ID='dmst_11.1_eval'>
+													1 - INDEPENDENT
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_11.1_desc'>
+													Is autonomous
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Audition
+											</td>
+											<td>
+												<content ID='dmst_11.2_eval'>
+													1 - INDEPENDENT
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_11.2_desc'>
+													Is autonomous
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Se faire comprendre
+											</td>
+											<td>
+												<content ID='dmst_11.3_eval'>
+													1 - IS USUALLY UNDERSTOOD
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_11.3_desc'>
+													Difficulty finding its words or to go to the end of its thought; but if one is patient, little or no help needed
+												</content>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br />
+								FONCTIONS COGNITIVES
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Evaluation</th>
+											<th>Description / Actions mises en place</th>
+										</tr>
+										<tr>
+											<td>
+												Mémoire à court terme
+											</td>
+											<td>
+												<content ID='dmst_12.1_eval'>
+													1 - ACTIVE PROBLEM
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_12.1_desc'>
+													Memory problem
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Orientation
+											</td>
+											<td>
+												<content ID='dmst_12.2_eval'>
+													1 - INDEPENDENT
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_12.2_desc'>
+													Is autonomous
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Signes d'état confusionnel
+											</td>
+											<td>
+												<content ID='dmst_12.3_eval'>
+													1 - INDEPENDENT
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_12.3_desc'>
+													Is autonomous
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Comprendre les autres
+											</td>
+											<td>
+												<content ID='dmst_12.4_eval'>
+													1 - INDEPENDENT
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_12.4_desc'>
+													Is autonomous
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Facultés cognitives pour les décisions courantes
+											</td>
+											<td>
+												<content ID='dmst_12.5_eval'>
+													1 - ALTERED INDEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_12.5_desc'>
+													Some difficulties in new situations only
+												</content>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br />
+								Scores
+								<table>
+									<tbody>
+										<tr>
+											<th>Question</th>
+											<th>Evaluation</th>
+											<th>Description / Actions mises en place</th>
+										</tr>
+										<tr>
+											<td>
+												AVQ échelle hiérarchique
+											</td>
+											<td>
+												<content ID='dmst_13.1_eval'>
+													5 - DEPENDENCE
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_13.1_desc'>
+
+												</content>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Echelle de performance cognitive version 2
+											</td>
+											<td>
+												<content ID='dmst_13.2_eval'>
+													5 - MODERATE DECLINE 2
+												</content>
+											</td>
+											<td>
+												<content ID='dmst_13.2_desc'>
+
+												</content>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</text>
+							<entry>
+								<!-- DMST v3: 8.1 S’alimenter, boire -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="36173D9A-9DB5-4C1C-B5BA-6195BD5B529D"/>
+									<code code="45602-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Eating - self-performance"/>
+									<text>
+										<reference value="#dmst_8.1_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" codeSystemName="EvaluationPhysicalMovements" displayName="SUPERVISION"/>
+									<value xsi:type="ST">Monitoring or indications required</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 8.2 Bain, douche -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="1D098BA4-2CA5-4181-87DD-EAA49A0AC980"/>
+									<code code="45608-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bathing - self-performance during 7D assessment period"/>
+									<text>
+										<reference value="#dmst_8.2_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="STIMULATION, SURVEILLANCE"/>
+									<value xsi:type="ST">Requires sometimes stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 8.3 S'habiller -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="27A6C8A6-CD0A-4FC5-B91E-33ED7C5B3563"/>
+									<code code="45600-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Dressing - self-performance during 7D assessment period"/>
+									<text>
+										<reference value="#dmst_8.3_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="STIMULATION, SURVEILLANCE"/>
+									<value xsi:type="ST">Requires sometimes stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 8.4 Hygiène personnelle -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="FF867686-0297-46B4-93DD-468A080FE27A"/>
+									<code code="45606-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal hygiene - self-performance during 7D assessment period"/>
+									<text>
+										<reference value="#dmst_8.4_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" codeSystemName="EvaluationPhysicalMovements" displayName="SUPERVISION"/>
+									<value xsi:type="ST">Monitoring or indications required</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 8.5 Continence urinaire -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="B564A378-2B1E-4BEF-802B-9D6170DAA70E"/>
+									<code code="45619-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bladder continence"/>
+									<text>
+										<reference value="#dmst_8.5_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="STIMULATION, SURVEILLANCE"/>
+									<value xsi:type="ST">Requires sometimes stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 8.6 Continence fécale -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="9B76D127-BEC6-48D2-B5E4-91EBBB006EA9"/>
+									<code code="69667-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bowel continence"/>
+									<text>
+										<reference value="#dmst_8.6_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="STIMULATION, SURVEILLANCE"/>
+									<value xsi:type="ST">Requires sometimes stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 8.7 Utilisation des toilettes -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="67410E41-9375-41C6-9EC8-846202E41A5E"/>
+									<code code="45604-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Toilet use - self-performance during 7D assessment period"/>
+									<text>
+										<reference value="#dmst_8.7_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" codeSystemName="EvaluationPhysicalMovements" displayName="SUPERVISION"/>
+									<value xsi:type="ST">Monitoring or indications required</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.1 Usage du téléphone -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="7779C3A7-7C4C-4891-80DB-F099B26D1025"/>
+									<code code="46490-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Ability to use telephone"/>
+									<text>
+										<reference value="#dmst_9.1_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="PARTIAL OR IMPORTANT DEPENDENCE"/>
+									<value xsi:type="ST">Requires often or always stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.2 Ménage courant -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="9CF034C0-FAC2-4EDC-92EA-5BDC0DD7BC4A"/>
+									<code code="46488-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Housekeeping"/>
+									<text>
+										<reference value="#dmst_9.2_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="PARTIAL OR IMPORTANT DEPENDENCE"/>
+									<value xsi:type="ST">Requires often or always stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.3 Préparation des repas -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="CD7DFBCC-A779-47EF-B347-BB7692F7056E"/>
+									<code code="46485-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Planning &amp; preparing light meals"/>
+									<text>
+										<reference value="#dmst_9.3_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="PARTIAL OR IMPORTANT DEPENDENCE"/>
+									<value xsi:type="ST">Requires often or always stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.4 Faire les courses -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="D648C0A9-8A97-4EDA-884E-7BD78E85B324"/>
+									<code code="46489-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Shopping"/>
+									<text>
+										<reference value="#dmst_9.4_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="PARTIAL OR IMPORTANT DEPENDENCE"/>
+									<value xsi:type="ST">Requires often or always stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.5 Faire la lessive, entretenir le linge -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="3ED53CEB-2F86-4559-95CB-CF57493B8860"/>
+									<code code="46487-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Laundry"/>
+									<text>
+										<reference value="#dmst_9.5_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="PARTIAL OR IMPORTANT DEPENDENCE"/>
+									<value xsi:type="ST">Requires often or always stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.6 Gestion des médicaments -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="94B045E6-EE4C-48E3-8A69-0F5DDD09E438"/>
+									<code code="X-TAKMEDI" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication intake"/>
+									<text>
+										<reference value="#dmst_9.6_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.8" codeSystemName="EvaluationMedicationIntake" displayName="LIMITED HELP"/>
+									<value xsi:type="ST">Help required on a few occasions</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.7 Gestion de l’argent et administration -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="C5EAE400-CDE2-4533-8D74-0D67D35F3549"/>
+									<code code="X-ADMMGT" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Financial and administrative management"/>
+									<text>
+										<reference value="#dmst_9.7_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.8" codeSystemName="EvaluationMedicationIntake" displayName="LIMITED HELP"/>
+									<value xsi:type="ST">Help required on a few occasions</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 9.8 Gérer ses liens sociaux -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="59EE3A9F-634C-4CFD-8DE4-0B4924355D59"/>
+									<code code="X-MGTST" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social life management"/>
+									<text>
+										<reference value="#dmst_9.8_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="PARTIAL OR IMPORTANT DEPENDENCE"/>
+									<value xsi:type="ST">Requires often or always stimulation</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.1 Transferts (lit-fauteuil-debout) -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="91E13311-462E-49F4-86CD-B9DDF71FE0FF"/>
+									<code code="45588-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Bed mobility - self-performance during 7D assessment period"/>
+									<text>
+										<reference value="#dmst_10.1_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="TOTAL DEPENDENCE"/>
+									<value xsi:type="ST">Done by others</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.2 Déplacement à l'intérieur sur le même étage -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="F2F809B8-446A-4952-8677-0FB9C5D231B7"/>
+									<code code="45596-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Locomotion on unit - self-performance during 7D assessment period"/>
+									<text>
+										<reference value="#dmst_10.2_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" codeSystemName="EvaluationPhysicalMovements" displayName="CONSIDERABLE HELP"/>
+									<value xsi:type="ST">One caregiver help required to support weight (including limbs), but the individual performs itself 50% or more of the activity</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.3 Marcher – Performance -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="9F0392CE-8824-4FE2-B6F3-FFD174F4749C"/>
+									<code code="45893-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Self-Performance in walking during this episode"/>
+									<text>
+										<reference value="#dmst_10.3_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" codeSystemName="EvaluationPhysicalMovements" displayName="CONSIDERABLE HELP"/>
+									<value xsi:type="ST">One caregiver help required to support weight (including limbs), but the individual performs itself 50% or more of the activity</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.4 Se déplacer à l’extérieur -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="9AA2EE2F-0D08-4E84-BC00-8F99B57A8B4E"/>
+									<code code="45598-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Self-Performance in walking during this episode"/>
+									<text>
+										<reference value="#dmst_10.4_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="TOTAL DEPENDENCE"/>
+									<value xsi:type="ST">Done by others</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.5 Utilisation des moyens de transports -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="D0B3CD35-D655-4358-A2A5-0A27281DAA05"/>
+									<code code="X-USETRSPT" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Use of transport"/>
+									<text>
+										<reference value="#dmst_10.5_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="TOTAL DEPENDENCE"/>
+									<value xsi:type="ST">Done by others</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.6 Monter/descendre les escaliers -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="77CC02A8-F684-41AA-B157-BE2BEFD73DE4"/>
+									<code code="X-USESTRS" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Use of stairs"/>
+									<text>
+										<reference value="#dmst_10.6_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="TOTAL DEPENDENCE"/>
+									<value xsi:type="ST">Done by others</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.7 Utilisation de l’élévateur (cigogne) -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="A8C8CC67-6002-498B-A942-304D4CFFEBE4"/>
+									<code code="X-USEELVTR" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Use of elevators"/>
+									<text>
+										<reference value="#dmst_10.7_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="N" codeSystem="2.16.756.5.30.1.1.11.1" codeSystemName="StandardCDABodySelektion" displayName="No"/>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 10.8 Utilisation des moyens auxiliaires -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="2F6064D4-F53D-4E45-97C8-5665C952E076"/>
+									<code code="45536-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Uses cane, walker or crutch"/>
+									<text>
+										<reference value="#dmst_10.8_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="TOTAL DEPENDENCE"/>
+									<value xsi:type="ST">Done by others</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 11.1 Vision -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="FC963614-B143-4849-A205-406BE5DF5851"/>
+									<code code="46529-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Sensory status - vision"/>
+									<text>
+										<reference value="#dmst_11.1_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="INDEPENDENT"/>
+									<value xsi:type="ST">Is autonomous</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 11.2 Audition -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="5A956923-C3F5-4EFB-9A72-AD246944923C"/>
+									<code code="46530-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Sensory status - hearing and ability to understand spoken language"/>
+									<text>
+										<reference value="#dmst_11.2_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="INDEPENDENT"/>
+									<value xsi:type="ST">Is autonomous</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 11.3 Se faire comprendre -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="552DD2AC-8C00-480E-ABB3-68EAA3F1A8B9"/>
+									<code code="46531-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Sensory status - speech and oral expression of language"/>
+									<text>
+										<reference value="#dmst_11.3_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.6" codeSystemName="EvaluationUnderstanding" displayName="IS USUALLY UNDERSTOOD"/>
+									<value xsi:type="ST">Difficulty finding its words or to go to the end of its thought; but if one is patient, little or no help needed</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 12.1 Mémoire à court terme -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="C111B7BE-53F2-4D8F-B2AF-9024E6A9DCAA"/>
+									<code code="45483-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Short-term memory OK"/>
+									<text>
+										<reference value="#dmst_12.1_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.10" codeSystemName="EvaluationCognitionMemory" displayName="ACTIVE PROBLEM"/>
+									<value xsi:type="ST">Memory problem</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 12.2 Orientation -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="AA7A8553-ABAD-4C30-BBE1-8766A802BA05"/>
+									<code code="X-ORIENTATION" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Orientation"/>
+									<text>
+										<reference value="#dmst_12.2_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="INDEPENDENT"/>
+									<value xsi:type="ST">Is autonomous</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 12.3 Signes d'état confusionnel -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="E0B39B56-8488-4C3B-B96A-FD39EDC80D0A"/>
+									<code code="42849-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Confusion"/>
+									<text>
+										<reference value="#dmst_12.3_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="INDEPENDENT"/>
+									<value xsi:type="ST">Is autonomous</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 12.4 Comprendre les autres -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="AD7311D8-4E0F-4F4D-947F-63FA506A84DB"/>
+									<code code="57217-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Understanding of verbal content"/>
+									<text>
+										<reference value="#dmst_12.4_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" codeSystemName="EvaluationDailyActivity" displayName="INDEPENDENT"/>
+									<value xsi:type="ST">Is autonomous</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 12.5 Facultés cognitives pour les décisions courantes -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="C41F8D1A-670D-4D95-89A1-817D8ED16D78"/>
+									<code code="54624-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cognitive skills for daily decision making in last 7D"/>
+									<text>
+										<reference value="#dmst_12.5_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.9" codeSystemName="EvaluationCognitiveDecisionAbility" displayName="ALTERED INDEPENDENCE"/>
+									<value xsi:type="ST">Some difficulties in new situations only</value>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 13.1 AVQ échelle hiérarchique -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="55A83319-2732-44B9-8A4F-9EB93BFEF30F"/>
+									<code code="X-AVQSCORE" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="AVQ SCORE"/>
+									<text>
+										<reference value="#dmst_13.1_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="5" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.12" codeSystemName="EvaluationAVQ" displayName="DEPENDENCE"/>
+								</observation>
+							</entry>
+							<entry>
+								<!-- DMST v3: 13.2 Echelle de performance cognitive version 2 -->
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+									<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+									<templateId root="2.16.840.1.113883.10.20.1.31"/>
+									<id root="C473F6C4-BCF7-4091-A071-EF4BE5CED64F"/>
+									<code code="79535-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Applied cognitive score"/>
+									<text>
+										<reference value="#dmst_13.2_eval"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime nullFlavor="NASK"/>
+									<value xsi:type="CD" code="5" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.13" codeSystemName="CognitivePerformanceScale" displayName="MODERATE DECLINE 2"/>
+								</observation>
+							</entry>
+						</section>
+					</component>
+				</section>
+			</component>
+
+			<!--
+			********************************************************
+			5. Optional Coded Social History Section content
+			******************************************************** -->
+			<component>
+				<section>
+					<templateId root="2.16.756.5.30.1.1.10.3.58"/>
+					<templateId root="2.16.756.5.30.1.1.10.3.24"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.16.1"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.16"/>
+					<templateId root="2.16.840.1.113883.10.20.1.15"/>
+					<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social history"/>
+					<title>Anamnèse sociale</title>
+					<text>
+						<content ID='as1'>
+						Monsieur Dupont, 65 ans, vit avec sa femme. Il a une fille au Tessin.<br />Il était autnome et travaillait à temps partiel comme peintre.<br />
+						<br />
+					</content>
+					<table>
+						<tbody>
+							<tr>
+								<th>Question</th>
+								<th>Résultat</th>
+								<th>Informations supplémentaires</th>
+							</tr>
+							<tr>
+								<td>
+									Nationalité
+								</td>
+								<td>
+									<content ID='dmst_1.11_eval'>
+										CH
+									</content>
+								</td>
+								<td>
+									<content ID='dmst_1.11_desc'>
+
+									</content>
+								</td>
+							</tr>
+							<!--
+							<tr>
+							<td>Nationalité:</td>
+							<td>CH</td>
+							<td />
+							</tr>
+							<tr>
+							<td>Pays d'origine:</td>
+							<td>CH</td>
+							<td />
+							</tr>
+							<tr>
+							<td>Commune d'origine:</td>
+							<td>Lausanne</td>
+							<td />
+							</tr>
+							<tr>
+							<td>Patient connu du CMS:</td>
+							<td>Non</td>
+							<td>
+							<content ID='cms1'>
+							</content>
+							</td>
+							</tr>
+							<tr>
+							<td>Profession:</td>
+							<td>
+							<content ID='oc1'>
+							Peintre
+							</content>
+							</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>PLAFA:</td>
+							<td>oui</td>
+							<td>
+							<content ID='oc2'>
+							Date de demande: 03.06.2013; Date de décision: 01.06.2013
+							</content>
+							</td>
+							</tr>
+							<tr>
+							<td>PC:</td>
+							<td>oui</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>API:</td>
+							<td>non</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>AI:</td>
+							<td>démarches en cours</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>OVAM:</td>
+							<td>ne sait pas</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>Statut social:</td>
+							<td>permis</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>Statut salaire:</td>
+							<td>autre</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>Mandat judiciaire:</td>
+							<td>non</td>
+							<td></td>
+							</tr>
+							<tr>
+							<td>Enfant(s) mineur(s) à charge:</td>
+							<td>oui</td>
+							<td></td>
+							</tr>
+							-->
+						</tbody>
+					</table>
+				</text>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.103"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.69"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.4"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+						<templateId root="2.16.840.1.113883.10.20.1.33"/>
+						<id root="303EF45A-C2F6-4BA7-9313-D63AF9124BD3"/>
+						<code code="66476-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Country of citizenship"/>
+						<text>
+							<reference value="#dmst_1.11_eval"/>
+						</text>
+						<statusCode code="completed"/>
+						<value xsi:type="II" root="1.0.3166.2.2.3" extension="CHE"/>
+					</observation>
+				</entry>
+				<!-- TODO weitere entries -->
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		6. Required Active Problems Section content
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.59"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.25"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6"/>
+				<templateId root="2.16.840.1.113883.10.20.1.11"/>
+				<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list - Reported"/>
+				<title>Liste des problèmes</title>
+				<text>
+					TODO
+				</text>
+				<entry>
+					<act classCode="ACT" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.114"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.105"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.90"/>
+						<templateId root="2.16.840.1.113883.10.20.1.27"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+						<id root="6A1C8BCC-5A10-461A-8E72-4442D5F96497"/>
+						<code nullFlavor="NA"/>
+						<effectiveTime>
+							<low nullFlavor="NA"/>
+							<high nullFlavor="NA"/>
+						</effectiveTime>
+						<entryRelationship typeCode="SUBJ">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+								<templateId root="2.16.756.5.30.1.1.10.4.115"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.106"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.97"/>
+								<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+								<templateId root="2.16.840.1.113883.10.20.1.28"/>
+								<id root="2746E91B-B647-43A7-9551-AA180BD1E231"/>
+								<code nullFlavor="NA"/>
+								<text nullFlavor="NA"/>
+								<statusCode code="completed"/>
+								<effectiveTime>
+									<low nullFlavor="NA"/>
+									<high nullFlavor="NA"/>
+								</effectiveTime>
+								<value xsi:type="CD" nullFlavor="NA">
+									<originalText />
+								</value>
+							</observation>
+						</entryRelationship>
+					</act>
+				</entry>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		7. Chief Complaint Section
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.70"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.26"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1"/>
+				<code code="10154-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chief complaint Narrative - Reported"/>
+				<title>Plainte principale</title>
+				<text>Aucune information sur plainte principale.</text>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		8. Required if known Allergies and Intolerances Section content (1.3.6.1.4.1.19376.1.5.3.1.3.13)
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.60"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.6"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.13"/>
+				<templateId root="2.16.840.1.113883.10.20.1.2"/>
+				<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies and adverse reactions Document"/>
+				<title>Allergies et autres réactions indésirables</title>
+				<text>TODO</text>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		9. Required Care Plan Section content
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.61"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.27"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.31"/>
+				<templateId root="2.16.840.1.113883.10.20.1.10"/>
+				<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of care note"/>
+				<title>Attitude</title>
+				<text>
+					<table>
+						<tbody>
+							<tr>
+								<th>Question</th>
+								<th>Résultat</th>
+								<th>Informations supplémentaires</th>
+							</tr>
+							<tr>
+								<td>
+									TODO
+								</td>
+								<td>
+									<content ID='dmst_7.5_eval'>
+										CH
+									</content>
+								</td>
+								<td>
+									<content ID='dmst_7.5_desc'>
+
+									</content>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</text>
+				<entry>
+					<!-- TODO 7.5 Projet de la personne -->
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.107"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+						<id root="9C140FA1-A408-4428-A851-324A4DD98CDB"/>
+						<code code="81334-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal advance care plan"/>
+						<text>
+							<reference value="#dmst_7.5_eval"/>
+						</text>
+						<statusCode code="completed"/>
+						<effectiveTime nullFlavor="NAV"/>
+						<value xsi:type="CD" nullFlavor="NAV"/>
+					</observation>
+				</entry>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		10. Required Provider Orders Section content
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.62"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.28"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.20.2.1"/>
+				<code code="46209-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Provider orders"/>
+				<title>Commandes de traitement</title>
+				<text>TODO</text>
+			</section>
+		</component>
+		<!--
+		********************************************************
+		11. Required Advance Directives Section content (1.3.6.1.4.1.19376.1.5.3.1.3.35)
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.63"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.30"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.35"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.34"/>
+				<templateId root="2.16.840.1.113883.10.20.1.1"/>
+				<code code="42348-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Advance directives"/>
+				<title>Directives anticipées</title>
+				<text>TODO</text>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.113"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.78"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+						<templateId root="2.16.840.1.113883.10.20.1.17"/>
+						<id root="CB8A52C6-DE2A-41E2-B91C-AA2283D8F438"/>
+						<code code="304251008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Resuscitation"/>
+						<text>
+							<reference value="#your_content_id"/>
+						</text>
+						<statusCode code="completed"/>
+						<effectiveTime value="20130423"/>
+						<value xsi:type="BL" value="true"/>
+						<value xsi:type="CD" code="a" codeSystem="2.16.756.5.30.1.112.3.1.201612.5" codeSystemName="accessories" displayName="attached"/>
+						<reference typeCode="REFR">
+							<templateId root="2.16.840.1.113883.10.20.1.36"/>
+							<externalDocument classCode="DOC" moodCode="EVN">
+								<id root="68C4ADCC-5BFA-4C58-B722-A344035DD397"/>
+								<text>
+									<reference value="http://www.medshare.net/fileadmin/user_upload/public_downloads/patientconsent.pdf"/>
+								</text>
+							</externalDocument>
+						</reference>
+					</observation>
+				</entry>
+			</section>
+		</component>
+
+		<!-- *******************************************************
+		12. Coded Results
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.64"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.31"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.28"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.27"/>
+				<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests/laboratory data"/>
+				<title>Résultats</title>
+				<text>Aucune information sur des résultats.</text>
+				<entry>
+					<procedure classCode='PROC' moodCode='INT'>
+						<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.19'/>
+						<templateId root='2.16.840.1.113883.10.20.1.25'/>
+						<code nullFlavor='NA' />
+						<text>
+							<reference nullFlavor='NA' />
+						</text>
+						<statusCode nullFlavor='NA' />
+						<effectiveTime>
+							<low nullFlavor='NA' />
+							<high nullFlavor='NA' />
+						</effectiveTime>
+					</procedure>
+				</entry>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		13. Diet and Nutrition Section
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.65"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.32"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.20.2.2"/>
+				<code code="XX-DietAndNutrition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diet and nutrition"/>
+				<title>Diète et nutrition</title>
+				<text>Aucune information sur diète et nutrition.</text>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		14. Hospital Admission Diagnosis Section
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.66"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.33"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.3"/>
+				<code code="46241-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hospital admission diagnosis Narrative - Reported"/>
+				<title>Diagnostic d'admission</title>
+				<text>Aucune information sur diagnostic d'admission.</text>
+				<entry>
+					<act classCode="ACT" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.114"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.105"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.90"/>
+						<templateId root="2.16.840.1.113883.10.20.1.27"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+						<id root="6A1C8BCC-5A10-461A-8E72-4442D5F96497"/>
+						<code nullFlavor="NA"/>
+						<effectiveTime>
+							<low nullFlavor="NA"/>
+							<high nullFlavor="NA"/>
+						</effectiveTime>
+						<entryRelationship typeCode="SUBJ">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+								<templateId root="2.16.756.5.30.1.1.10.4.115"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.106"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.97"/>
+								<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+								<templateId root="2.16.840.1.113883.10.20.1.28"/>
+								<id root="2746E91B-B647-43A7-9551-AA180BD1E231"/>
+								<code nullFlavor="NA"/>
+								<text nullFlavor="NA"/>
+								<statusCode code="completed"/>
+								<effectiveTime>
+									<low nullFlavor="NA"/>
+									<high nullFlavor="NA"/>
+								</effectiveTime>
+								<value xsi:type="CD" nullFlavor="NA">
+									<originalText/>
+								</value>
+							</observation>
+						</entryRelationship>
+					</act>
+				</entry>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		15. Discharge Diagnosis Section
+		********************************************************-->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.67"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.34"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.7"/>
+				<code code="11535-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hospital discharge Dx"/>
+				<title>Diagnostic de sortie</title>
+				<text>Aucune information sur diagnostic de sortie.</text>
+				<entry>
+					<act classCode="ACT" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.114"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.105"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.90"/>
+						<templateId root="2.16.840.1.113883.10.20.1.27"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+						<id root="6A1C8BCC-5A10-461A-8E72-4442D5F96497"/>
+						<code nullFlavor="NA"/>
+						<effectiveTime>
+							<low nullFlavor="NA"/>
+							<high nullFlavor="NA"/>
+						</effectiveTime>
+						<entryRelationship typeCode="SUBJ">
+							<observation classCode="OBS" moodCode="EVN" negationInd="false">
+								<templateId root="2.16.756.5.30.1.1.10.4.115"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.106"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.97"/>
+								<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+								<templateId root="2.16.840.1.113883.10.20.1.28"/>
+								<id root="2746E91B-B647-43A7-9551-AA180BD1E231"/>
+								<code nullFlavor="NA"/>
+								<text nullFlavor="NA"/>
+								<statusCode code="completed"/>
+								<effectiveTime>
+									<low nullFlavor="NA"/>
+									<high nullFlavor="NA"/>
+								</effectiveTime>
+								<value xsi:type="CD" nullFlavor="NA">
+									<originalText/>
+								</value>
+							</observation>
+						</entryRelationship>
+					</act>
+				</entry>
+			</section>
+		</component>
+
+
+		<!--
+		********************************************************
+		16. Intake and Output Section
+		********************************************************-->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.68"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.35"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.20.2.3"/>
+				<code code="XX-IntakeAndOutput" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Intake and output"/>
+				<title>Injection et sortie des liquides</title>
+				<text>Aucune information sur injection et sortie des liquides.</text>
+			</section>
+		</component>
+
+
+		<!--
+		********************************************************
+		17. Medications (list of active)
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.69"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.36"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19"/>
+				<templateId root="2.16.840.1.113883.10.20.1.8"/>
+				<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication use Narrative"/>
+				<title>Médicaments actifs</title>
+				<text>TODO Narrative text</text>
+				<entry>
+					<substanceAdministration classCode="SBADM" moodCode="INT">
+						<!-- IHE PHARM PRE Required element indicating the Medication Treatment
+						Plan entry content module -->
+						<templateId root="1.3.6.1.4.1.19376.1.9.1.3.2"/>
+						<!-- CCD -->
+						<templateId root="2.16.840.1.113883.10.20.1.24"/>
+						<!-- PCC Medication Entry Content Module -->
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
+						<!-- CH-PHARM Prescription Item Entry Content Module -->
+						<templateId root="2.16.756.5.30.1.1.10.4.43"/>
+						<!-- A normal substanceAdministration act that may not contain any
+						subordinate substanceAdministration acts. -->
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
+						<!-- ID of pre item, PCC TF2 6.3.4.16.6 -->
+						<id root="D41D72BA-2100-11E6-B67B-9E71128CAE77"/>
+						<text>
+							<reference value="#pre.1"/>
+						</text>
+						<statusCode code="completed"/>
+						<effectiveTime xsi:type="IVL_TS">
+							<low value="20120204"/>
+						</effectiveTime>
+						<effectiveTime xsi:type="SXPR_TS" operator="A">
+							<comp xsi:type="EIVL_TS">
+								<event code="ACM"/>
+							</comp>
+							<comp xsi:type="EIVL_TS" operator="I">
+								<event code="ACV"/>
+							</comp>
+						</effectiveTime>
+						<!-- 3 Monate -> 90 Tage * 1 Tablette / 30 Tablette -> 3 Packungen,
+						repeatNumber=2 -->
+						<repeatNumber value="2"/>
+						<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Oral use"/>
+						<consumable>
+							<manufacturedProduct classCode="MANU">
+								<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+								<templateId root="2.16.840.1.113883.10.20.1.53"/>
+								<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+									<templateId root="2.16.756.5.30.1.1.10.4.33"/>
+									<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1"/>
+									<code code="C08CA01" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="amlodipine">
+										<originalText>
+											<reference value="#pre.1.ingredient"/>
+										</originalText>
+									</code>
+									<name>NORVASC Tabl 10 mg</name>
+									<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet"/>
+									<pharm:asContent classCode="CONT">
+										<pharm:containerPackagedMedicine classCode="CONT" determinerCode="INSTANCE">
+											<pharm:code code="7680500440334" codeSystem="2.51.1.1" codeSystemName="GTIN" displayName="NORVASC Tabl 10 mg"/>
+											<pharm:name>NORVASC Tabl 10 mg</pharm:name>
+											<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet"/>
+											<pharm:capacityQuantity value="30"/>
+										</pharm:containerPackagedMedicine>
+									</pharm:asContent>
+									<pharm:ingredient classCode="ACTI">
+										<pharm:quantity>
+											<pharm:numerator unit="mg" value="10" xsi:type="PQ"/>
+											<pharm:denominator value="1" xsi:type="PQ"/>
+										</pharm:quantity>
+										<pharm:ingredient classCode="MMAT" determinerCode="KIND">
+											<pharm:code code="C08CA01" codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC WHO" displayName="amlodipine"/>
+											<pharm:name>amlodipine</pharm:name>
+										</pharm:ingredient>
+									</pharm:ingredient>
+								</manufacturedMaterial>
+							</manufacturedProduct>
+						</consumable>
+						<entryRelationship typeCode="RSON">
+							<observation classCode="OBS" moodCode="EVN">
+								<templateId root="2.16.756.5.30.1.1.10.4.41"/>
+								<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
+								<text>
+									<reference value="#pre.1.reason"/>
+								</text>
+								<statusCode code="completed"/>
+							</observation>
+						</entryRelationship>
+						<entryRelationship typeCode="COMP">
+							<substanceAdministration moodCode="INT" classCode="SBADM">
+								<templateId root="2.16.756.5.30.1.1.10.4.37"/>
+								<text>
+									<reference value="#pre.1.dosageintakemode"/>
+								</text>
+								<consumable>
+									<manufacturedProduct>
+										<manufacturedMaterial nullFlavor="NA"/>
+									</manufacturedProduct>
+								</consumable>
+							</substanceAdministration>
+						</entryRelationship>
+						<entryRelationship typeCode="COMP">
+							<supply moodCode="RQO" classCode="SPLY">
+								<templateId root="1.3.6.1.4.1.19376.1.9.1.3.8"/>
+								<independentInd value="false"/>
+								<quantity unit="1" value="1"/>
+							</supply>
+						</entryRelationship>
+						<entryRelationship typeCode="REFR">
+							<substanceAdministration classCode="SBADM" moodCode="INT">
+								<templateId root="1.3.6.1.4.1.19376.1.9.1.3.10"/>
+								<templateId root="2.16.756.5.30.1.1.10.4.45"/>
+								<id root="5712FFFE-20C6-11E6-B67B-9E71128CAE77"/>
+								<code code="MTPItem" codeSystem="1.3.6.1.4.1.19376.1.9.2.2" displayName="Medication Treatment Plan Item" codeSystemName="IHE Pharmacy Item Type List"/>
+								<consumable>
+									<manufacturedProduct>
+										<manufacturedMaterial nullFlavor="NA"/>
+									</manufacturedProduct>
+								</consumable>
+								<reference typeCode="XCRPT">
+									<externalDocument>
+										<id root="5712FFFE-20C6-11E6-B67B-9E71128CAE77"/>
+									</externalDocument>
+								</reference>
+							</substanceAdministration>
+						</entryRelationship>
+						<!--
+						<entryRelationship typeCode="COMP">
+						<act classCode="ACT" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.2"/>
+						<templateId root="2.16.840.1.113883.10.20.1.40"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+						<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+						<text>
+						<reference value="#pre.1.note"/>
+						</text>
+						<statusCode code="completed"/>
+						</act>
+						</entryRelationship>
+						-->
+					</substanceAdministration>
+				</entry>
+			</section>
+		</component>
+
+		<!--
+		********************************************************
+		18. Capacité de travail
+		********************************************************-->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.71"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.1"/>
+				<code code="X-ATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Ability to Work"/>
+				<title>Capacité de travail</title>
+				<text>TODO Narrative text</text>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.104"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.70"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+						<code code="X-IATWRK" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Inability to work"/>
+						<effectiveTime>
+							<low value="20100201"/>
+							<high nullFlavor="UNK"/>
+						</effectiveTime>
+						<value xsi:type="PQ" value="50" unit="%"/>
+						<performer typeCode="PRF">
+							<templateId root="2.16.756.5.30.1.1.10.4.111"/>
+							<templateId root="2.16.756.5.30.1.1.10.9.31"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.24.3.5"/>
+							<time>
+								<low nullFlavor="NASK"/>
+								<high nullFlavor="NASK"/>
+							</time>
+							<assignedEntity>
+								<id root="2.999" extension="p98457u-"/>
+								<code code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician"/>
+								<addr use="WP">
+									<streetName>Doktorgasse</streetName>
+									<houseNumber>2</houseNumber>
+									<city>Musterhausen</city>
+									<postalCode>8888</postalCode>
+									<country>CH</country>
+								</addr>
+								<telecom value="tel:+41.32.234.55.66" use="WP"/>
+								<telecom value="fax:+41.32.234.55.67" use="WP"/>
+								<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+								<telecom value="http:www.gruppenpraxis.ch" use="WP"/>
+								<assignedPerson>
+									<name>
+										<given>Allzeit</given>
+										<family>Bereit</family>
+										<prefix qualifier="AC">Dr. med.</prefix>
+									</name>
+								</assignedPerson>
+								<representedOrganization>
+									<id root="2.51.1.3" extension="7609999999999"/>
+									<name>Gruppenpraxis CH</name>
+									<telecom value="tel:+41.32.234.55.66" use="WP"/>
+									<telecom value="fax:+41.32.234.55.67" use="WP"/>
+									<telecom value="mailto:bereit@gruppenpraxis.ch" use="WP"/>
+									<telecom value="http:www.gruppenpraxis.ch" use="WP"/>
+									<addr use="WP">
+										<streetName>Doktorgasse</streetName>
+										<houseNumber>2</houseNumber>
+										<city>Musterhausen</city>
+										<postalCode>8888</postalCode>
+										<country>CH</country>
+									</addr>
+								</representedOrganization>
+							</assignedEntity>
+						</performer>
+					</observation>
+				</entry>
+			</section>
+		</component>
+
+		<!-- *******************************************************
+		19. Mode of Arrival – Angaben zum Eintritt
+		******************************************************** -->
+		<component>
+			<section>
+				<templateId root="2.16.756.5.30.1.1.10.3.72"/>
+				<templateId root="2.16.756.5.30.1.1.10.3.38"/>
+				<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.10.3.2"/>
+				<code code="11459-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Transport mode EMS system"/>
+				<title>Mode de transport</title>
+				<text>
+					<table>
+						<tbody>
+							<tr>
+								<th>Question</th>
+								<th>Résultat</th>
+								<th>Informations supplémentaires</th>
+							</tr>
+							<tr>
+								<td>
+									Transfert:
+								</td>
+								<td>
+									<content ID='mt1_1' >
+										23.06.2013
+									</content>
+								</td>
+								<td>
+									<content ID='mt1_2'>transport privé</content>
+								</td>
+							</tr>
+							<!--
+							<tr>
+							<td>
+							Transféré avec:
+							</td>
+							<td>
+							<content ID='mt2_1' >
+							autre, préciser:
+							</content>
+							</td>
+							<td>
+							<content ID='mt2_2' >
+							Verres de contact
+							</content>
+							</td>
+							</tr>
+							<tr>
+							<td>
+
+							</td>
+							<td>
+							<content ID='mt2_3' >
+							Lunettes
+							</content>
+							</td>
+							<td />
+							</tr>
+							<tr>
+							<td>
+							Enveloppe de transfert:
+							</td>
+							<td>
+							<content ID='mt3' >
+							non
+							</content>
+							</td>
+							<td />
+							</tr>
+							<tr>
+							<td>
+							Objet(s) perdu(s):
+							</td>
+							<td>
+							<content ID='mt4_1' >
+							oui
+							</content>
+							</td>
+							<td>
+							<content ID='mt4_2' >
+							Agenda
+							</content>
+							</td>
+							</tr>
+							<tr>
+							<td>
+							Objet(s) en recherche:
+							</td>
+							<td>
+							<content ID='mt5_1' >
+							oui
+							</content>
+							</td>
+							<td>
+							<content ID='mt6_2' >
+							Portemonnaie
+							</content>
+							</td>
+							</tr>
+							-->
+						</tbody>
+					</table>
+				</text>
+				<entry>
+					<act classCode="ACT" moodCode="INT">
+						<templateId root="2.16.756.5.30.1.1.10.4.110"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.77"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.10.4.1"/>
+						<id root="B8970E4B-5C54-44AD-B202-2ED2CD066ADF"/>
+						<code code="50" codeSystem="2.16.840.1.113883.6.102.4.2" codeSystemName="DEEDS4.02" displayName="Walk-in following transport via private transportation">
+							<originalText>transport privé<reference value="#mt1_2"/>
+						</originalText>
+					</code>
+					<text>
+						<reference value="#mt1_1"/>
+					</text>
+					<effectiveTime>
+						<low value="201306231000+0200"/>
+						<high nullFlavor="UNK"/>
+					</effectiveTime>
+					<performer typeCode="PRF">
+						<assignedEntity>
+							<id root="3AD5712F-7941-4CA2-ACC6-C1BA844E0669"/>
+							<assignedPerson>
+								<name>
+									<given>Pierre</given>
+									<family>Taxi</family>
+								</name>
+							</assignedPerson>
+						</assignedEntity>
+					</performer>
+				</act>
+			</entry>
+			<entry>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.756.5.30.1.1.10.4.112"/>
+					<templateId root="2.16.756.5.30.1.1.10.4.71"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+					<id root="54ABD446-791B-410F-BFBD-E7FA861EC695"/>
+					<code code="0.7" codeSystem="2.16.756.5.30.1.112.3.1.201612.1" codeSystemName="CarePlanElements" displayName="Before the transfer, the person was taken care of from … to …"/>
+					<text>
+						<reference value="#mt1_1"/>
+					</text>
+					<statusCode code="completed"/>
+					<effectiveTime xsi:type="IVL_TS">
+						<low value="201306231000+0200"/>
+						<high nullFlavor="UNK"/>
+					</effectiveTime>
+					<value xsi:type="CD" code="N" codeSystem="2.16.756.5.30.2.1.1.3.1" codeSystemName="StandardCDABodySelektion" displayName="Nein/Non"/>
+				</observation>
+			</entry>
+		</section>
+	</component>
+
+
+	<!-- *******************************************************
+	20. Comments
+	******************************************************** -->
+	<component>
+		<section>
+			<templateId root="2.16.756.5.30.1.1.10.3.73"/>
+			<templateId root="2.16.756.5.30.1.1.10.3.2"/>
+			<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment [Interpretation] Narrative"/>
+			<title>Commentaire</title>
+			<text>
+				<content ID='co1'>
+					Aucun commentaire
+				</content>
+			</text>
+			<entry>
+				<act classCode="ACT" moodCode="EVN">
+					<templateId root="2.16.756.5.30.1.1.10.4.2"/>
+					<templateId root="2.16.840.1.113883.10.20.1.40"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+					<code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
+					<text>
+						<reference value="#co1"/>
+					</text>
+					<statusCode code="completed"/>
+				</act>
+			</entry>
+		</section>
+	</component>
+
+</structuredBody>
+</component>
+
+</ClinicalDocument>
