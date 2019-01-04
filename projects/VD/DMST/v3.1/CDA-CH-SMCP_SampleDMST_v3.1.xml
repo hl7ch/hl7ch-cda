@@ -8,7 +8,7 @@ and the corresponding field numbers
 
 History:
 2018.12.24: Tony Schaller, medshare GmbH (Migration from DMST 2.1 to DMST 3.1; still incomplete, but valid against Schematron draft from ART-DECOR)
-2019.01.04: Tony Schaller, medshare GmbH (Migration from DMST 2.1 to DMST 3.1 completed)
+2018.12.31: Tony Schaller, medshare GmbH (Migration from DMST 2.1 to DMST 3.1 completed)
 
 ******************************************************** -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
@@ -61,7 +61,7 @@ History:
 
 	<!-- 1 … 1	M	hl7:effectiveTime -->
 	<!-- DMST v3.1: 0.3 Le -->
-	<effectiveTime value='201901041553+0200'/>
+	<effectiveTime value='201812311553+0200'/>
 
 	<!-- 1 … 1	M	from 2.16.756.5.30.1.1.10.2.19 Document Confidentiality Code -->
 	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
@@ -157,7 +157,7 @@ History:
 		<templateId root="2.16.756.5.30.1.1.10.2.74"/>
 		<templateId root="2.16.756.5.30.1.1.10.9.23"/>
 		<functionCode code='309343006' codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' displayName='Physician'/>
-		<time value='201901041553+0200'/>
+		<time value='201812311553+0200'/>
 		<assignedAuthor>
 			<id extension='7608888888888' root='2.51.1.3'/>
 			<addr use='WP'>
@@ -199,7 +199,7 @@ History:
 	<!-- 0 … 1		from 2.16.756.5.30.1.1.10.2.7 Data Enterer -->
 	<dataEnterer>
 		<templateId root="2.16.756.5.30.1.1.10.2.7"/>
-		<time value="20190104"/>
+		<time value="20181231"/>
 		<assignedEntity>
 			<id root="2.999" extension="0812763"/>
 			<assignedPerson>
@@ -257,7 +257,7 @@ History:
 		<templateId root="2.16.756.5.30.1.1.10.2.82"/>
 		<templateId root="2.16.756.5.30.1.1.10.2.5"/>
 		<!-- DMST v3.1: 19.3 Le -->
-		<time value='201901041553+0200'/>
+		<time value='201812311553+0200'/>
 		<signatureCode code='S'/>
 		<assignedEntity>
 			<id extension='7608888888888' root='2.51.1.3'/>
@@ -269,8 +269,8 @@ History:
 				<country>CH</country>
 			</addr>
 			<telecom use='PUB' value='tel:+41.32.234.55.66'/>
-			<!-- DMST v3.1: 19.2 Document validé par -->
 			<assignedPerson>
+				<!-- DMST v3.1: 19.2 Document validé par -->
 				<name>
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>Théodore</given>
@@ -295,7 +295,7 @@ History:
 	<!-- 0 … *		from 2.16.756.5.30.1.1.10.2.6 Authenticator -->
 	<authenticator>
 		<templateId root="2.16.756.5.30.1.1.10.2.6"/>
-		<time value="20190104"/>
+		<time value="20181231"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
 			<id root="2.51.1.3" extension="7604444444444"/>
@@ -1531,6 +1531,25 @@ History:
 									</tbody>
 								</table>
 							</text>
+							<!-- example for unknown evaluation
+							<entry>
+							<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.756.5.30.1.1.10.4.108"/>
+							<templateId root="2.16.756.5.30.1.1.10.4.76"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+							<templateId root="2.16.840.1.113883.10.20.1.31"/>
+							<id root="36173D9A-9DB5-4C1C-B5BA-6195BD5B529D"/>
+							<code code="45602-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Eating - self-performance"/>
+							<text>
+							<reference value="#dmst_8.1_eval"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime nullFlavor="NASK"/>
+							<value xsi:type="CD" nullFlavor="UNK" />
+							</observation>
+							</entry>
+							-->
 							<entry>
 								<!-- DMST v3.1: 8.1 S’alimenter, boire -->
 								<observation classCode="OBS" moodCode="EVN">
@@ -2509,6 +2528,21 @@ History:
 									</content>
 								</td>
 							</tr>
+							<tr>
+								<td>
+									Projet de la personne
+								</td>
+								<td>
+									<content ID='dmst_7.5_eval'>
+
+									</content>
+								</td>
+								<td>
+									<content ID='dmst_7.5_desc'>
+
+									</content>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 					<br />
@@ -2818,9 +2852,9 @@ History:
 						</text>
 						<statusCode code="completed"/>
 						<effectiveTime nullFlavor="NASK"/>
-						<!-- DMST v3.1: 1.20.1 Code Plan de crise conjoint -->
+						<!-- DMST v3.1: 1.21.1 Code Plan de crise conjoint -->
 						<value xsi:type="BL" value='true' />
-						<!-- DMST v3.1: 1.20.2 Précision Plan de crise conjoint -->
+						<!-- DMST v3.1: 1.21.2 Précision Plan de crise conjoint -->
 						<value xsi:type="CD" code="c" codeSystem="2.16.756.5.30.1.112.3.1.201812.9" codeSystemName="dmst-prec-pcc" displayName="to be considered between the various partners"/>
 					</observation>
 				</entry>
@@ -3083,6 +3117,25 @@ History:
 						<value xsi:type="ST" nullFlavor="NAV"/>
 					</observation>
 				</entry>
+				<entry>
+					<observation classCode="OBS" moodCode="EVN">
+						<templateId root="2.16.756.5.30.1.1.10.4.103"/>
+						<templateId root="2.16.756.5.30.1.1.10.4.69"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.4"/>
+						<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+						<templateId root="2.16.840.1.113883.10.20.1.33"/>
+						<id root="C35F5667-1440-4DA4-BD55-03DECF84B3F8"/>
+						<code code="81334-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal advance care plan"/>
+						<!-- DMST v3.1: 7.5 Projet de la personne -->
+						<text>
+							<reference value="#dmst_7.5_eval"/>
+						</text>
+						<statusCode code="completed"/>
+						<effectiveTime nullFlavor="NASK"/>
+						<value xsi:type="ST" nullFlavor="NAV"/>
+					</observation>
+				</entry>
+
 
 				<entry>
 					<!-- DMST v3.1: 3.1 RI -->
@@ -3388,7 +3441,7 @@ History:
 				<text>
 				Objectifs de soins et d’accompagnement de la personne (y compris la décision de la séance « entretien de réseau »): <br />
 				<content styleCode='Italics' ID='dmst_16.1_eval'>
-					Projet de la personne.
+
 				</content>
 				<br />
 				<br />
@@ -3599,7 +3652,7 @@ History:
 					<templateId root="2.16.756.5.30.1.1.10.4.71"/>
 					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
 					<id root="9C140FA1-A408-4428-A851-324A4DD98CDB"/>
-					<code code="81334-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal advance care plan"/>
+					<code code="16.1" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" codeSystemName="dmst-v31-fnr" displayName="Objectives of care and support of the person"/>
 					<!-- DMST v3.1: 16.1 Objectifs de soins et d’accompagnement de la personne -->
 					<text>
 						<reference value="#dmst_16.1_eval"/>
@@ -3964,6 +4017,30 @@ History:
 					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
 					<templateId root="2.16.840.1.113883.10.20.1.17"/>
 					<id root="CB8A52C6-DE2A-41E2-B91C-AA2283D8F438"/>
+					<code nullFlavor="NAV"/>
+					<text>
+						<reference value="#pv1"/>
+					</text>
+					<statusCode code="completed"/>
+					<effectiveTime value="20160429"/>
+					<!-- DMST v3.1: 1.19.1 Code Directives anticipées -->
+					<value xsi:type="BL" value="true"/>
+					<!-- DMST v3.1: 1.19.2 Précision Directives anticipées -->
+					<value xsi:type="CD" code="d" codeSystem="2.16.756.5.30.1.112.3.1.201812.5" codeSystemName="dmst-prec3" displayName="deposited"/>
+					<!-- DMST v3.1: 1.19.3 Directives anticipées déposées auprès de -->
+					<value xsi:type="ST">john doe</value>
+				</observation>
+			</entry>
+			<entry>
+				<!-- a more detailed example -->
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- DMST v3.1: 1.19 Directives anticipées -->
+					<templateId root="2.16.756.5.30.1.1.10.4.113"/>
+					<templateId root="2.16.756.5.30.1.1.10.4.78"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7"/>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+					<templateId root="2.16.840.1.113883.10.20.1.17"/>
+					<id root="CB8A52C6-DE2A-41E2-B91C-AA2283D8F438"/>
 					<code code="304251008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Resuscitation"/>
 					<text>
 						<reference value="#pv1"/>
@@ -3979,6 +4056,7 @@ History:
 				</observation>
 			</entry>
 			<entry>
+				<!-- another more detailed example -->
 				<observation classCode="OBS" moodCode="EVN">
 					<!-- DMST v3.1: 1.19 Directives anticipées -->
 					<templateId root="2.16.756.5.30.1.1.10.4.113"/>
@@ -4507,7 +4585,7 @@ History:
 				<!-- DMST v3.1: 17.2.1 Transport effectué le -->
 				<!-- DMST v3.1: 17.2.2 Heure du transfert -->
 				<effectiveTime>
-					<low value="201901042034+0100"/>
+					<low value="201812312034+0100"/>
 					<high nullFlavor="UNK"/>
 				</effectiveTime>
 				<performer typeCode="PRF">
