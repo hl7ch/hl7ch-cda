@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Template derived pattern
+===========================================
+ID: 2.16.756.5.30.1.1.10.3.69
+Name: Medications Section - coded
+Description: The medications section shall contain a description of the relevant medications for the patient, e.g., an ambulatory prescription list. It shall include entries for medications as described in the Entry Content Module.
+-->
+<pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="template-2.16.756.5.30.1.1.10.3.69-2017-09-13T211531">
+    <title>Medications Section - coded</title>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+
+<!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]" id="d3165399e3830-false-d3205081e0">
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69']) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69']) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36']) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36']) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19']) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19']) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8'] is required [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8'] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:code[(@code = '10160-0' and @codeSystem = '2.16.840.1.113883.6.1')]) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:code[(@code = '10160-0' and @codeSystem = '2.16.840.1.113883.6.1')] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:code[(@code = '10160-0' and @codeSystem = '2.16.840.1.113883.6.1')]) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:code[(@code = '10160-0' and @codeSystem = '2.16.840.1.113883.6.1')] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:title[not(@nullFlavor)]) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:title[not(@nullFlavor)] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:title[not(@nullFlavor)]) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:title[not(@nullFlavor)] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:text[not(@nullFlavor)]) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:text[not(@nullFlavor)] is mandatory [min 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:text[not(@nullFlavor)]) &lt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:text[not(@nullFlavor)] appears too often [max 1x].</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="count(hl7:entry[hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.7']]]) &gt;= 1">(cdachsmcp_section_MedicationsCoded): element hl7:entry[hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.7']]] is mandatory [min 1x].</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69']
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69']" id="d3165399e3831-false-d3205168e0">
+        <extends rule="II"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="string(@root) = ('2.16.756.5.30.1.1.10.3.69')">(cdachsmcp_section_MedicationsCoded): The value for root SHALL be '2.16.756.5.30.1.1.10.3.69'. Found: "<value-of select="@root"/>"</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36']
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36']" id="d3165399e3833-false-d3205182e0">
+        <extends rule="II"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="string(@root) = ('2.16.756.5.30.1.1.10.3.36')">(cdachsmcp_section_MedicationsCoded): The value for root SHALL be '2.16.756.5.30.1.1.10.3.36'. Found: "<value-of select="@root"/>"</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19']
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19']" id="d3165399e3835-false-d3205196e0">
+        <extends rule="II"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="string(@root) = ('1.3.6.1.4.1.19376.1.5.3.1.3.19')">(cdachsmcp_section_MedicationsCoded): The value for root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.3.19'. Found: "<value-of select="@root"/>"</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']" id="d3165399e3837-false-d3205210e0">
+        <extends rule="II"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="string(@root) = ('2.16.840.1.113883.10.20.1.8')">(cdachsmcp_section_MedicationsCoded): The value for root SHALL be '2.16.840.1.113883.10.20.1.8'. Found: "<value-of select="@root"/>"</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:code[(@code = '10160-0' and @codeSystem = '2.16.840.1.113883.6.1')]
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:code[(@code = '10160-0' and @codeSystem = '2.16.840.1.113883.6.1')]" id="d3165399e3839-false-d3205224e0">
+        <extends rule="CE"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="@nullFlavor or (@code='10160-0' and @codeSystem='2.16.840.1.113883.6.1' and @displayName='History of Medication use Narrative' and @codeSystemName='LOINC')">(cdachsmcp_section_MedicationsCoded): The element value SHALL be one of 'code '10160-0' codeSystem '2.16.840.1.113883.6.1' displayName='History of Medication use Narrative' codeSystemName='LOINC''.</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:title[not(@nullFlavor)]
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:title[not(@nullFlavor)]" id="d3165399e3843-false-d3205239e0">
+        <extends rule="ST"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ST' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+        <let name="languageCode" value="substring(/hl7:ClinicalDocument/hl7:languageCode/@code,1,2)"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="not($languageCode='ge') or (text()='Aktive Medikamente')">(cdachsmcp_section_MedicationsCoded): The German title must read 'Aktive Medikamente'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="not($languageCode='fr') or (text()='Médicaments actifs')">(cdachsmcp_section_MedicationsCoded): The French title must read 'Médicaments actifs'</assert>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="not($languageCode='en') or (text()='Active Medications')">(cdachsmcp_section_MedicationsCoded): The English title must read 'Active Medications'</assert>
+    </rule>
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:text[not(@nullFlavor)]
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:text[not(@nullFlavor)]" id="d3165399e3860-false-d3205248e0">
+        <extends rule="SD.TEXT"/>
+        <assert role="error" see="http://art-decor.org/art-decor/decor-templates--cdachsmcp-?id=2.16.756.5.30.1.1.10.3.69" test="(local-name-from-QName(resolve-QName(@xsi:type,.))='SD.TEXT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdachsmcp_section_MedicationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SD.TEXT", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+    </rule>
+
+   <!--
+Template derived rules for ID: 2.16.756.5.30.1.1.10.3.69
+Context: *[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.69'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.36'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.19'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.8']]/hl7:entry[hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.7']]]
+Item: (cdachsmcp_section_MedicationsCoded)
+-->
+</pattern>

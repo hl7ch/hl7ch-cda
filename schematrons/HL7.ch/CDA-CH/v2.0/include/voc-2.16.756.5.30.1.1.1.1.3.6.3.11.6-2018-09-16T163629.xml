@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.6" name="EvaluationUnderstanding" displayName="Evaluation Understanding" effectiveDate="2018-09-16T16:36:29" statusCode="draft" versionLabel="2018">
+        <desc language="en-US">The original wording of the concept decription is written in fr-CH language.</desc>
+        <sourceCodeSystem id="2.16.756.5.30.1.1.1.1.3.6.3.11.6" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.1.1.1.1.3.6.3.11.6"/>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1008" identifierName="Null&#160;Flavor" canonicalUri="urn:oid:2.16.840.1.113883.5.1008"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="0" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.6" displayName="IS UNDERSTOOD" level="0" type="L">
+                <desc language="en-US">
+          Expresses its ideas without difficulty
+        </desc>
+                <desc language="fr-CH">
+          EST COMPRISE – Exprime ses idées sans difficulté
+        </desc>
+            </concept>
+            <concept code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.6" displayName="IS USUALLY UNDERSTOOD" level="0" type="L">
+                <desc language="en-US">
+          Difficulty finding its words or to go to the end of its thought; but if one is patient, little or no help needed
+        </desc>
+                <desc language="fr-CH">
+          EST HABITUELLEMENT COMPRISE – Difficulté à trouver ses mots ou à aller au bout de sa pensée; mais si on laisse du temps, peu ou pas d’aide requise
+        </desc>
+            </concept>
+            <concept code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.6" displayName="IS OFTEN UNDERSTOOD" level="0" type="L">
+                <desc language="en-US">
+          Difficulty finding its words or to go to the end of its thought; and usually help is needed
+        </desc>
+                <desc language="fr-CH">
+          EST SOUVENT COMPRISE – Difficulté à trouver ses mots ou à aller au bout de sa pensée ; ET aide en général nécessaire
+        </desc>
+            </concept>
+            <concept code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.6" displayName="IS SOMETIMES UNDERSTOOD" level="0" type="L">
+                <desc language="en-US">
+          Limited ability to express concrete demands
+        </desc>
+                <desc language="fr-CH">
+          EST PARFOIS COMPRISE – Capacité limitée à l’expression de demandes concrètes
+        </desc>
+            </concept>
+            <concept code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.6" displayName="IS RARELY OR NEVER UNDERSTOOD" level="0" type="L">
+                <desc language="en-US"/>
+                <desc language="fr-CH">
+          EST RAREMENT OU JAMAIS COMPRISE
+        </desc>
+            </concept>
+            <exception code="NASK" codeSystem="2.16.840.1.113883.5.1008" displayName="not asked" level="0" type="L"/>
+            <exception code="NAV" codeSystem="2.16.840.1.113883.5.1008" displayName="temporarily unavailable" level="0" type="L"/>
+            <exception code="ASKU" codeSystem="2.16.840.1.113883.5.1008" displayName="asked but unknown" level="0" type="L"/>
+            <exception code="UNK" codeSystem="2.16.840.1.113883.5.1008" displayName="unknown" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

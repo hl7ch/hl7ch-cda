@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.11" name="EvaluationDailyActivity" displayName="Evaluation Daily Activity" effectiveDate="2018-09-16T20:12:10" statusCode="draft" versionLabel="2018">
+        <desc language="en-US">The original wording of the concept decription is written in fr-CH language.</desc>
+        <sourceCodeSystem id="2.16.756.5.30.1.1.1.1.3.6.3.11.11" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.1.1.1.1.3.6.3.11.11"/>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1008" identifierName="Null&#160;Flavor" canonicalUri="urn:oid:2.16.840.1.113883.5.1008"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" displayName="INDEPENDENT" level="0" type="L">
+                <desc language="en-US">
+          Is autonomous
+        </desc>
+                <desc language="fr-CH">
+          INDEPENDANT (Fait seul)
+        </desc>
+            </concept>
+            <concept code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" displayName="STIMULATION, SURVEILLANCE" level="0" type="L">
+                <desc language="en-US">
+          Requires sometimes stimulation
+        </desc>
+                <desc language="fr-CH">
+          STIMULATION, SURVEILLANCE (nécessite une stimulation)
+        </desc>
+            </concept>
+            <concept code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" displayName="PARTIAL OR IMPORTANT DEPENDENCE" level="0" type="L">
+                <desc language="en-US">
+          Requires often or always stimulation
+        </desc>
+                <desc language="fr-CH">
+          DEPENDANCE PARTIELLE ou IMPORTANTE (parfois ou toujours aidé)
+        </desc>
+            </concept>
+            <concept code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.11" displayName="TOTAL DEPENDENCE" level="0" type="L">
+                <desc language="en-US">
+          Done by others
+        </desc>
+                <desc language="fr-CH">
+          DEPENDANCE TOTALE (fait par autrui)
+        </desc>
+            </concept>
+            <exception code="NASK" codeSystem="2.16.840.1.113883.5.1008" displayName="not asked" level="0" type="L"/>
+            <exception code="NAV" codeSystem="2.16.840.1.113883.5.1008" displayName="temporarily unavailable" level="0" type="L"/>
+            <exception code="ASKU" codeSystem="2.16.840.1.113883.5.1008" displayName="asked but unknown" level="0" type="L"/>
+            <exception code="UNK" codeSystem="2.16.840.1.113883.5.1008" displayName="unknown" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

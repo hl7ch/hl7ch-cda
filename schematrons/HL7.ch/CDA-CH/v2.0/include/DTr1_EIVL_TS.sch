@@ -8,8 +8,10 @@
     <assert role="error" test="@nullFlavor or (hl7:event)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-1-EIVL_TS: required attributes</assert>
     <assert role="error" test="count(*[self::hl7:offset][@updateMode])=0" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-2-EIVL_TS: no updateMode on EIVL attributes</assert>
     <assert role="error" test="not(hl7:event) or not(hl7:event[@nullFlavor][@code]) or hl7:event[@nullFlavor or @code]" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-3-EIVL_TS: null violation</assert>
-    <assert role="error" test="not(hl7:event/@codeSystem)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-4-EIVL_TS: cannot have codeSystem</assert>
-    <assert role="error" test="not(hl7:event/@codeSystemName)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-5-EIVL_TS: cannot have codeSystemName</assert>
+    <!-- EIVL_TS.event codeSystem has default 2.16.840.1.113883.5.139 -->
+    <assert role="error" test="not(hl7:event/@codeSystem) or hl7:event/@codeSystem = '2.16.840.1.113883.5.139'" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-4-EIVL_TS: cannot have codeSystem</assert>
+    <!-- EIVL_TS.event codeSystemName has default TimingEvent -->
+    <assert role="error" test="not(hl7:event/@codeSystemName) or hl7:event/@codeSystemName = 'TimingEvent'" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-5-EIVL_TS: cannot have codeSystemName</assert>
     <assert role="error" test="not(hl7:event/@codeSystemVersion)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-6-EIVL_TS: cannot have codeSystemVersion</assert>
     <assert role="error" test="not(hl7:event/@displayName)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-7-EIVL_TS: cannot have displayName</assert>
     <assert role="error" test="not(hl7:event/hl7:originalText)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_EIVL_TS">dtr1-8-EIVL_TS: cannot have originalText</assert>

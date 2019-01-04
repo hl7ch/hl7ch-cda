@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.4" name="ReviewOfSystemsElements" displayName="Review Of Systems Elements" effectiveDate="2017-09-15T16:38:17" statusCode="draft" versionLabel="2018">
+        <sourceCodeSystem id="2.16.840.1.113883.6.1" identifierName="Logical&#160;Observation&#160;Identifier&#160;Names&#160;and&#160;Codes" canonicalUri="urn:oid:2.16.840.1.113883.6.1"/>
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms" canonicalUri="urn:oid:2.16.840.1.113883.6.96"/>
+        <sourceCodeSystem id="2.16.756.5.30.1.112.3.1.201812.1" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.1.112.3.1.201812.1"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+        <conceptList>
+            <concept code="11412-4" codeSystem="2.16.840.1.113883.6.1" displayName="Physical findings of Respiratory system Narrative" level="0" type="L">
+                <desc language="en-US">Physical findings of Respiratory system Narrative</desc>
+                <desc language="fr-CH">Respiration</desc>
+            </concept>
+            <concept code="28141-0" codeSystem="2.16.840.1.113883.6.1" displayName="Body nutrition deficit/Alimentation, hydratation" level="0" type="L">
+                <desc language="en-US">Body nutrition deficit/Alimentation, hydratation</desc>
+                <desc language="fr-CH">Alimentation, hydratation, état nutritionnel</desc>
+            </concept>
+            <concept code="57046-5" codeSystem="2.16.840.1.113883.6.1" displayName="Elimination status" level="0" type="L">
+                <desc language="en-US">Elimination status</desc>
+                <desc language="fr-CH">Elimination</desc>
+            </concept>
+            <concept code="8709-8" codeSystem="2.16.840.1.113883.6.1" displayName="Physical findings of Skin" level="0" type="L">
+                <desc language="en-US">Physical findings of Skin</desc>
+                <desc language="fr-CH">Etat de la peau, plaies, cicatrices</desc>
+            </concept>
+            <concept code="71108-5" codeSystem="2.16.840.1.113883.6.1" displayName="Mobility" level="0" type="L">
+                <desc language="en-US">Mobility</desc>
+                <desc language="fr-CH">Mobilité (chute, posture, coordination)</desc>
+            </concept>
+            <concept code="32709003" codeSystem="2.16.840.1.113883.6.96" displayName="Addiction" level="0" type="L">
+                <desc language="en-US">Addiction</desc>
+                <desc language="fr-CH">Addictions</desc>
+            </concept>
+            <concept code="56842-8" codeSystem="2.16.840.1.113883.6.1" displayName="Chronic pain assessment Narrative" level="0" type="L">
+                <desc language="en-US">Chronic pain assessment Narrative</desc>
+                <desc language="fr-CH">Douleur</desc>
+            </concept>
+            <concept code="365086004" codeSystem="2.16.840.1.113883.6.96" displayName="Humor" level="0" type="L">
+                <desc language="en-US">Humor</desc>
+                <desc language="fr-CH">Humeur (tristesse, anxiété, etc.)</desc>
+            </concept>
+            <concept code="14.9" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Fugue, perambulation, wandering" level="0" type="L">
+                <desc language="en-US">Fugue, perambulation, wandering</desc>
+                <desc language="fr-CH">Fugue, déambulation, errance</desc>
+            </concept>
+            <concept code="14.10" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Sleep, tiredness" level="0" type="L">
+                <desc language="en-US">Sleep, tiredness</desc>
+                <desc language="fr-CH">Sommeil, fatigue</desc>
+            </concept>
+            <concept code="14.11" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Violence towards oneself or others" level="0" type="L">
+                <desc language="en-US">Violence towards oneself or others</desc>
+                <desc language="fr-CH">Violence envers soi-même ou autrui</desc>
+            </concept>
+            <concept code="11332-4" codeSystem="2.16.840.1.113883.6.1" displayName="History of Cognitive function Narrative" level="0" type="L">
+                <desc language="en-US">History of Cognitive function Narrative</desc>
+                <desc language="fr-CH">Etat cognitif</desc>
+            </concept>
+            <concept code="14.13" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Others" level="0" type="L">
+                <desc language="en-US">Others</desc>
+                <desc language="fr-CH">Autres (cardiaque, neurologique, etc.)</desc>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

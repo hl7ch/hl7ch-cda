@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.2.1.1.12" name="EmploymentStatus" displayName="Employment Status" effectiveDate="2019-01-02T20:31:21" statusCode="draft" versionLabel="2013" url="http://art-decor.org/decor/services/" ident="hl7chcda-" referencedFrom="cdachsmcp-">
+        <sourceCodeSystem id="2.16.756.5.30.2.1.1.12" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.2.1.1.12"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="u" codeSystem="2.16.756.5.30.2.1.1.12" displayName="unemployed" level="0" type="L">
+                <desc language="de-CH">Arbeitslos</desc>
+                <desc language="fr-CH">chômeur</desc>
+            </concept>
+            <concept code="e" codeSystem="2.16.756.5.30.2.1.1.12" displayName="employed" level="0" type="L">
+                <desc language="de-CH">Erwerbstätig</desc>
+                <desc language="fr-CH">employé</desc>
+            </concept>
+            <concept code="o" codeSystem="2.16.756.5.30.2.1.1.12" displayName="other" level="0" type="L">
+                <desc language="de-CH">Anderes</desc>
+                <desc language="fr-CH">autre</desc>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

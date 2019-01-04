@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.2" name="CarePlanElements" displayName="Care Plan Elements" effectiveDate="2017-09-15T09:22:12" statusCode="draft" versionLabel="2018">
+        <sourceCodeSystem id="2.16.840.1.113883.6.1" identifierName="Logical&#160;Observation&#160;Identifier&#160;Names&#160;and&#160;Codes" canonicalUri="urn:oid:2.16.840.1.113883.6.1"/>
+        <sourceCodeSystem id="2.16.756.5.30.1.112.3.1.201812.1" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.1.112.3.1.201812.1"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="57833-6" codeSystem="2.16.840.1.113883.6.1" displayName="Prescription for medication" level="0" type="L">
+                <desc language="en-US">Prescription for medication</desc>
+                <desc language="fr-CH">Ordonnance<br clear="none"/>
+                </desc>
+            </concept>
+            <concept code="0.7" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Before the transfer, the person was taken care of" level="0" type="L">
+                <desc language="en-US">Before the transfer, the person was taken care of from … to …</desc>
+                <desc language="fr-CH">Avant le transfert, la personne a été prise en charge du … au …</desc>
+            </concept>
+            <concept code="15.1" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Objectives of care and accompanying person" level="0" type="L">
+                <desc language="en-US">Objectives of care and accompanying person</desc>
+                <desc language="fr-CH">Objectifs de soins et d'accompagnement de la personne</desc>
+            </concept>
+            <concept code="15.3" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Continued care and care to be prepared" level="0" type="L">
+                <desc language="en-US">Continued care and care to be prepared</desc>
+                <desc language="fr-CH">Soins à poursuivre et soins à prévoir</desc>
+            </concept>
+            <concept code="15.4.1" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Outpatient follow-up" level="0" type="L">
+                <desc language="en-US">Outpatient follow-up</desc>
+                <desc language="fr-CH">Suivi ambulatoire</desc>
+            </concept>
+            <concept code="15.6" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Planned consultations" level="0" type="L">
+                <desc language="en-US">Planned consultations</desc>
+                <desc language="fr-CH">Consultations planifiées</desc>
+            </concept>
+            <concept code="15.7" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Consultations to be planned" level="0" type="L">
+                <desc language="en-US">Consultations to be planned</desc>
+                <desc language="fr-CH">Consultations à prévoir</desc>
+            </concept>
+            <concept code="16.1" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Objectives of care and support of the person" level="0" type="L">
+                <desc language="en-US">Objectives of care and support of the person</desc>
+                <desc language="fr-CH">Objectifs de soins et d’accompagnement de la personne</desc>
+            </concept>
+            <concept code="16.2.1" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Adhesion to the decision - the person" level="0" type="L">
+                <desc language="en-US">Adhesion to the decision - the person</desc>
+                <desc language="fr-CH">Adhésion à la décision - la personne</desc>
+            </concept>
+            <concept code="16.2.2" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Adhesion to the decision - the entourage" level="0" type="L">
+                <desc language="en-US">Adhesion to the decision - the entourage</desc>
+                <desc language="fr-CH">Adhésion à la décision - l’entourage</desc>
+            </concept>
+            <concept code="16.2.3" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Adhesion to the decision - the professionals" level="0" type="L">
+                <desc language="en-US">Adhesion to the decision - the professionals</desc>
+                <desc language="fr-CH">Adhésion à la décision - les professionnels</desc>
+            </concept>
+            <concept code="16.3" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Care to continue and care to plan" level="0" type="L">
+                <desc language="en-US">Care to continue &amp; care to plan</desc>
+                <desc language="fr-CH">Soins à poursuivre &amp; soins à prévoir</desc>
+            </concept>
+            <concept code="16.4" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Ambulatory follow-up" level="0" type="L">
+                <desc language="en-US">Ambulatory follow-up</desc>
+                <desc language="fr-CH">Suivi ambulatoire</desc>
+            </concept>
+            <concept code="16.6" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Scheduled consultations" level="0" type="L">
+                <desc language="en-US">Scheduled consultations</desc>
+                <desc language="fr-CH">Consultations planifiées</desc>
+            </concept>
+            <concept code="16.7" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Consultations to be planned" level="0" type="L">
+                <desc language="en-US">Consultations to be planned</desc>
+                <desc language="fr-CH">Consultations à prévoir</desc>
+            </concept>
+            <concept code="16.9" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Medical Document (DMT)" level="0" type="L">
+                <desc language="en-US">Medical Document (DMT)</desc>
+                <desc language="fr-CH">Document médical (DMT)</desc>
+            </concept>
+            <concept code="16.10" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Treatment plan" level="0" type="L">
+                <desc language="en-US">Treatment plan</desc>
+                <desc language="fr-CH">Plan de traitement</desc>
+            </concept>
+            <concept code="16.11" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Specific evaluations" level="0" type="L">
+                <desc language="en-US">Specific evaluations</desc>
+                <desc language="fr-CH">Evaluations spécifiques</desc>
+            </concept>
+            <concept code="16.12" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="Other documents" level="0" type="L">
+                <desc language="en-US">Other documents</desc>
+                <desc language="fr-CH">Autres documents</desc>
+            </concept>
+            <concept code="19.1" codeSystem="2.16.756.5.30.1.112.3.1.201812.1" displayName="The person was informed and has agreed" level="0" type="L">
+                <desc language="en-US">The person was informed and has agreed</desc>
+                <desc language="fr-CH">La personne a été informée et a donnée son accord</desc>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

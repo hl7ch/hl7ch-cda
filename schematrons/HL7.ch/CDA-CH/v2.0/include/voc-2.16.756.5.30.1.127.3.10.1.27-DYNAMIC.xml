@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.27" name="xds-typeCo" displayName="EprDocumentTypeCode" effectiveDate="2018-06-13T08:18:20" statusCode="draft" versionLabel="201704.3-beta" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="cdachlrep-">
+    <valueSet xmlns="" id="2.16.756.5.30.1.127.3.10.1.27" name="xds-typeCo" displayName="EprDocumentTypeCode" statusCode="final" versionLabel="201704.3-beta" effectiveDate="2018-06-13T08:18:20" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="cdachsmcp-">
         <desc language="de-CH">Typ des Dokumentes (2.16.756.5.30.1.127.3.10.1.27) gemäss Anhang 3 der Verordnungen zum EPDG.<br clear="none"/>
             <br clear="none"/>Der Code definiert den Typ eines Dokuments (z.B.&#160; Austrittsbericht, Labor-Bericht). Jeder Dokumenten-Typ sollte genau einer Dokumentenklasse zugeordnet sein.<br clear="none"/>
         </desc>
@@ -13,10 +13,12 @@
         <desc language="it-CH">Tipo di documento secondo l'allegato 3 OCIP-DFI, capitolo 2.11. <br clear="none"/>
             <br clear="none"/>Il codice definisce il tipo di documento (p. es. rapporto di dimissione, rapporto di laboratorio). Ciascun tipo di documento dovrebbe essere associato a una sola classe di documenti.<br clear="none"/>
         </desc>
-        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms"/>
-        <publishingAuthority name="medshare GmbH">
-            <addrLine>Buchshaldenstrasse 2</addrLine>
-            <addrLine>CH-3661 Uetendorf</addrLine>
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms" canonicalUri="urn:oid:2.16.840.1.113883.6.96"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
         </publishingAuthority>
         <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
         <conceptList>
@@ -38,7 +40,7 @@
                 <designation language="it-CH" type="preferred" displayName="Passaporto d'emergenza"/>
                 <designation language="en-US" type="preferred" displayName=" Emergency medical identification record"/>
             </concept>
-            <concept code="TODO" codeSystem="2.16.840.1.113883.6.96" displayName="Organ donor card (record artifact)" level="0" type="L">
+            <concept code="772790007" codeSystem="2.16.840.1.113883.6.96" displayName="Organ donor card (record artifact)" level="0" type="L">
                 <designation language="de-CH" type="preferred" displayName="Willensäusserung zur Organspende"/>
                 <designation language="fr-CH" type="preferred" displayName="Volonté sur le don d'organes"/>
                 <designation language="it-CH" type="preferred" displayName="Volontà di donare organi "/>

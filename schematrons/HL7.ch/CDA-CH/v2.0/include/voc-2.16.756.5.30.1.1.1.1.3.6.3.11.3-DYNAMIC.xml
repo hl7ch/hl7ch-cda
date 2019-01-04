@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.3" name="EvaluationElements" displayName="Evaluation Elements" effectiveDate="2017-09-15T11:08:29" statusCode="draft" versionLabel="2018">
+        <sourceCodeSystem id="2.16.840.1.113883.6.1" identifierName="Logical&#160;Observation&#160;Identifier&#160;Names&#160;and&#160;Codes" canonicalUri="urn:oid:2.16.840.1.113883.6.1"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="45602-0" codeSystem="2.16.840.1.113883.6.1" displayName="Eating - self-performance" level="0" type="L">
+                <desc language="en-US">Eating - self-performance<br/>DMST v3.1, field 8.1: S'alimenter, boire</desc>
+                <desc language="fr-CH">S'alimenter, boire</desc>
+            </concept>
+            <concept code="45608-7" codeSystem="2.16.840.1.113883.6.1" displayName="Bathing - self-performance" level="0" type="L">
+                <desc language="en-US">Bathing - self-performance<br/>DMST v3.1, field 8.2: Bain, douche</desc>
+                <desc language="fr-CH">Bain, douche</desc>
+            </concept>
+            <concept code="45600-4" codeSystem="2.16.840.1.113883.6.1" displayName="Dressing - self-performance" level="0" type="L">
+                <desc language="en-US">Dressing - self-performance<br/>DMST v3.1, field 8.3: S'habiller</desc>
+                <desc language="fr-CH">S'habiller</desc>
+            </concept>
+            <concept code="45606-1" codeSystem="2.16.840.1.113883.6.1" displayName="Personal hygiene - self-performance" level="0" type="L">
+                <desc language="en-US">Personal hygiene - self-performance<br/>DMST v3.1, field 8.4: Hygiène personnelle</desc>
+                <desc language="fr-CH">Hygiène personnelle</desc>
+            </concept>
+            <concept code="45619-4" codeSystem="2.16.840.1.113883.6.1" displayName="Bladder continence" level="0" type="L">
+                <desc language="en-US">Bladder continence<br/>DMST v3.1, field 8.5: Continence urinaire</desc>
+                <desc language="fr-CH">Continence urinaire</desc>
+            </concept>
+            <concept code="69667-4" codeSystem="2.16.840.1.113883.6.1" displayName="Bowel continence" level="0" type="L">
+                <desc language="en-US">Bowel continence<br/>DMST v3.1, field 8.6: Continence fécale</desc>
+                <desc language="fr-CH">Continence fécale</desc>
+            </concept>
+            <concept code="45604-6" codeSystem="2.16.840.1.113883.6.1" displayName="Toilet use - self-performance" level="0" type="L">
+                <desc language="en-US">Toilet use - self-performance<br/>DMST v3.1, field 8.7: Utilisation des toilettes</desc>
+                <desc language="fr-CH">Utilisation des toilettes</desc>
+            </concept>
+            <concept code="46490-9" codeSystem="2.16.840.1.113883.6.1" displayName="Ability to use telephone" level="0" type="L">
+                <desc language="en-US">Ability to use telephone<br/>DMST v3.1, field 9.1: Usage du téléphone</desc>
+                <desc language="fr-CH">Usage du téléphone</desc>
+            </concept>
+            <concept code="46488-3" codeSystem="2.16.840.1.113883.6.1" displayName="Housekeeping" level="0" type="L">
+                <desc language="en-US">Housekeeping<br/>DMST v3.1, field 9.2: Ménage courant</desc>
+                <desc language="fr-CH">Ménage courant</desc>
+            </concept>
+            <concept code="46485-9" codeSystem="2.16.840.1.113883.6.1" displayName="Planning &amp; preparing light meals" level="0" type="L">
+                <desc language="en-US">Planning &amp; preparing light meals<br/>DMST v3.1, field 9.3: Préparation des repas</desc>
+                <desc language="fr-CH">Préparation des repas</desc>
+            </concept>
+            <concept code="46489-1" codeSystem="2.16.840.1.113883.6.1" displayName="Shopping" level="0" type="L">
+                <desc language="en-US">Shopping<br/>DMST v3.1, field 9.4: Faire les courses</desc>
+                <desc language="fr-CH">Faire les courses</desc>
+            </concept>
+            <concept code="46487-5" codeSystem="2.16.840.1.113883.6.1" displayName="Laundry" level="0" type="L">
+                <desc language="en-US">Laundry<br/>DMST v3.1, field 9.5: Faire la lessive, entretenir le linge</desc>
+                <desc language="fr-CH">Faire la lessive, entretenir le linge</desc>
+            </concept>
+            <concept code="X-TAKMEDI" codeSystem="2.16.840.1.113883.6.1" displayName="Self-application of medications" level="0" type="L">
+                <desc language="en-US">Self-application of medications<br/>DMST v3.1, field 9.6: Gestion des médicaments</desc>
+                <desc language="fr-CH">Gestion des médicaments</desc>
+            </concept>
+            <concept code="X-ADMMGT" codeSystem="2.16.840.1.113883.6.1" displayName="Administrative management" level="0" type="L">
+                <desc language="en-US">Administrative management<br/>DMST v3.1, field 9.7: Gestion de l’argent – Capacité</desc>
+                <desc language="fr-CH">Gestion de l’argent – Capacité</desc>
+            </concept>
+            <concept code="X-MGTST" codeSystem="2.16.840.1.113883.6.1" displayName="Managing social ties" level="0" type="L">
+                <desc language="en-US">Managing social ties<br/>DMST v3.1, field 9.8: Gérer ses liens sociaux</desc>
+                <desc language="fr-CH">Gérer ses liens sociaux</desc>
+            </concept>
+            <concept code="45588-1" codeSystem="2.16.840.1.113883.6.1" displayName="Bed mobility - self-performance" level="0" type="L">
+                <desc language="en-US">Bed mobility - self-performance<br/>DMST v3.1, field 10.1: Transferts (lit-fauteuil-debout) </desc>
+                <desc language="fr-CH">Transferts (lit - fauteuil - debout)</desc>
+            </concept>
+            <concept code="45596-4" codeSystem="2.16.840.1.113883.6.1" displayName="Locomotion on unit - self-performance" level="0" type="L">
+                <desc language="en-US">Locomotion on unit - self-performance<br/>DMST v3.1, field 10.2: Déplacement à l'intérieur sur le même étage</desc>
+                <desc language="fr-CH">Déplacement à l'intérieur sur le même étage</desc>
+            </concept>
+            <concept code="45893-5" codeSystem="2.16.840.1.113883.6.1" displayName="Self-Performance in walking during this episode" level="0" type="L">
+                <desc language="en-US">Self-Performance in walking during this episode<br/>DMST v3.1, field 10.3: Marcher – Performance</desc>
+                <desc language="fr-CH">Marcher – Performance</desc>
+            </concept>
+            <concept code="45598-0" codeSystem="2.16.840.1.113883.6.1" displayName="Locomotion off unit - self-performance" level="0" type="L">
+                <desc language="en-US">Locomotion off unit - self-performance<br/>DMST v3.1, field 10.4: Se déplacer à l’extérieur</desc>
+                <desc language="fr-CH">Se déplacer à l’extérieur</desc>
+            </concept>
+            <concept code="X-USETRSPT" codeSystem="2.16.840.1.113883.6.1" displayName="Use of transport" level="0" type="L">
+                <desc language="en-US">Use of transport<br/>DMST v3.1, field 10.5: Utilisation des moyens de transports</desc>
+                <desc language="fr-CH">Utilisation des moyens de transports</desc>
+            </concept>
+            <concept code="X-USESTRS" codeSystem="2.16.840.1.113883.6.1" displayName="Use of stairs" level="0" type="L">
+                <desc language="en-US">Use of stairs<br/>DMST v3.1, field 10.6: Monter / descendre les escaliers</desc>
+                <desc language="fr-CH">Monter / descendre les escaliers</desc>
+            </concept>
+            <concept code="X-USEELVTR" codeSystem="2.16.840.1.113883.6.1" displayName="Use of elevators" level="0" type="L">
+                <desc language="en-US">Use of lift<br/>DMST v3.1, field 10.7: Utilisation de l'élévateur (cigogne)</desc>
+                <desc language="fr-CH">Utilisation de l'élévateur (cigogne)</desc>
+            </concept>
+            <concept code="45536-0" codeSystem="2.16.840.1.113883.6.1" displayName="Uses cane, walker or crutch" level="0" type="L">
+                <desc language="en-US">Uses cane, walker or crutch<br/>DMST v3.1, field 10.8: Utilisation des moyens auxiliaires</desc>
+                <desc language="fr-CH">Utilisation des moyens auxiliaires</desc>
+            </concept>
+            <concept code="46529-4" codeSystem="2.16.840.1.113883.6.1" displayName="Sensory status: vision" level="0" type="L">
+                <desc language="en-US">Sensory status: vision<br/>DMST v3.1, field 11.1: Vision</desc>
+                <desc language="fr-CH">Vision</desc>
+            </concept>
+            <concept code="46530-2" codeSystem="2.16.840.1.113883.6.1" displayName="Sensory status - hearing and ability to understand spoken language" level="0" type="L">
+                <desc language="en-US">Sensory status - hearing and ability to understand spoken language<br/>DMST v3.1, field 11.2: Audition</desc>
+                <desc language="fr-CH">Audition</desc>
+            </concept>
+            <concept code="46531-0" codeSystem="2.16.840.1.113883.6.1" displayName="Sensory status - speech and oral expression of language" level="0" type="L">
+                <desc language="en-US">Sensory status - speech and oral expression of language<br/>DMST v3.1, field 11.3: Se faire comprendre</desc>
+                <desc language="fr-CH">Se faire comprendre</desc>
+            </concept>
+            <concept code="45483-5" codeSystem="2.16.840.1.113883.6.1" displayName="Short-term memory OK" level="0" type="L">
+                <desc language="en-US">Short-term memory OK<br/>DMST v3.1, field 12.1: Mémoire à court terme</desc>
+                <desc language="fr-CH">Mémoire à court terme</desc>
+            </concept>
+            <concept code="X-ORIENTATION" codeSystem="2.16.840.1.113883.6.1" displayName="Orientation in space and time" level="0" type="L">
+                <desc language="en-US">Orientation in space and time<br/>DMST v3.1, field 12.2: Orientation</desc>
+                <desc language="fr-CH">Orientation</desc>
+            </concept>
+            <concept code="42849-0" codeSystem="2.16.840.1.113883.6.1" displayName="Confusion" level="0" type="L">
+                <desc language="en-US">Confusion<br/>DMST v3.1, field 12.3: Signes d'état confusionnel</desc>
+                <desc language="fr-CH">Signes d'état confusionnel</desc>
+            </concept>
+            <concept code="57217-2" codeSystem="2.16.840.1.113883.6.1" displayName="Understanding of verbal content" level="0" type="L">
+                <desc language="en-US">Understanding of verbal content<br/>DMST v3.1, field 12.4: Comprendre les autres</desc>
+                <desc language="fr-CH">Comprendre les autres</desc>
+            </concept>
+            <concept code="54624-2" codeSystem="2.16.840.1.113883.6.1" displayName="Cognitive skills for daily decision making in last 7D" level="0" type="L">
+                <desc language="en-US">Cognitive skills for daily decision making in last 7D<br/>DMST v3.1, field 12.5: Facultés cognitives pour les décisions courantes</desc>
+                <desc language="fr-CH">Facultés cognitives pour les décisions courantes</desc>
+            </concept>
+            <concept code="X-AVQSCORE" codeSystem="2.16.840.1.113883.6.1" displayName="AVQ SCORE" level="0" type="L">
+                <desc language="en-US">AVQ SCORE<br/>DMST v3.1, field 13.1: AVQ échelle hiérarchique</desc>
+                <desc language="fr-CH">AVQ échelle hiérarchique</desc>
+            </concept>
+            <concept code="79535-1" codeSystem="2.16.840.1.113883.6.1" displayName="Applied cognitive score" level="0" type="L">
+                <desc language="en-US">Applied cognitive score<br/>DMST v3.1, field 13.2: Echelle de performance cognitive version 2</desc>
+                <desc language="fr-CH">Echelle de performance cognitive version 2</desc>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

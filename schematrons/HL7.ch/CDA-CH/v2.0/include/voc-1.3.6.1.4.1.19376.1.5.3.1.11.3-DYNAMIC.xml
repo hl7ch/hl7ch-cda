@@ -1,66 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets>
-   <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:hl7="urn:hl7-org:v3"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:pharm="urn:ihe:pharm"
-             name="HealthStatus_value"
-             displayName="HealthStatus_value"
-             versionLabel="2014"
-             id="1.3.6.1.4.1.19376.1.5.3.1.11.3"
-             effectiveDate="2016-09-26T14:09:34"
-             statusCode="final"
-             url="https://art-decor.ihe-europe.net/decor/services/"
-             ident="IHE-PCC-"
-             referencedFrom="ch-pharm-">
-      <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED Clinical Terms"/>
-      <publishingAuthority name="eHealth Suisse">
-                <addrLine>Schwarzenburgstrasse 165</addrLine>
-                <addrLine>CH-3003 Bern</addrLine>
-                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
-            </publishingAuthority>
-      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
-      <conceptList>
-                <concept code="81323004"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Alive and well"
-                  level="0"
-                  type="L"/>
-                <concept code="313386006"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="In remission"
-                  level="0"
-                  type="L"/>
-                <concept code="162467007"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Symptom free"
-                  level="0"
-                  type="L"/>
-                <concept code="161901003"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Chronically ill"
-                  level="0"
-                  type="L"/>
-                <concept code="271593001"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Severely ill"
-                  level="0"
-                  type="L"/>
-                <concept code="21134002"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Disabled"
-                  level="0"
-                  type="L"/>
-                <concept code="161045001"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Severely disabled"
-                  level="0"
-                  type="L"/>
-                <concept code="419099009"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Deceased"
-                  level="0"
-                  type="L"/>
-            </conceptList>
-   </valueSet>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" name="HealthStatus_value" displayName="HealthStatus_value" versionLabel="2014" id="1.3.6.1.4.1.19376.1.5.3.1.11.3" effectiveDate="2016-09-26T14:09:34" statusCode="final" url="https://art-decor.ihe-europe.net/decor/services/" ident="IHE-PCC-" referencedFrom="cdachsmcp-">
+        <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED&#160;Clinical&#160;Terms" canonicalUri="urn:oid:2.16.840.1.113883.6.96"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+        <conceptList>
+            <concept code="81323004" codeSystem="2.16.840.1.113883.6.96" displayName="Alive and well" level="0" type="L"/>
+            <concept code="313386006" codeSystem="2.16.840.1.113883.6.96" displayName="In remission" level="0" type="L"/>
+            <concept code="162467007" codeSystem="2.16.840.1.113883.6.96" displayName="Symptom free" level="0" type="L"/>
+            <concept code="161901003" codeSystem="2.16.840.1.113883.6.96" displayName="Chronically ill" level="0" type="L"/>
+            <concept code="271593001" codeSystem="2.16.840.1.113883.6.96" displayName="Severely ill" level="0" type="L"/>
+            <concept code="21134002" codeSystem="2.16.840.1.113883.6.96" displayName="Disabled" level="0" type="L"/>
+            <concept code="161045001" codeSystem="2.16.840.1.113883.6.96" displayName="Severely disabled" level="0" type="L"/>
+            <concept code="419099009" codeSystem="2.16.840.1.113883.6.96" displayName="Deceased" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
 </valueSets>

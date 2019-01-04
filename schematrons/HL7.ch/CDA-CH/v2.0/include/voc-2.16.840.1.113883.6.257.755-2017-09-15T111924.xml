@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.6.257.755" name="ActivityOfDailyLivingScale" displayName="Activity Of Daily Living Scale" effectiveDate="2017-09-15T11:19:24" statusCode="draft" versionLabel="2018">
+        <sourceCodeSystem id="2.16.840.1.113883.6.257.755" identifierName="" canonicalUri="urn:oid:2.16.840.1.113883.6.257.755"/>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1008" identifierName="Null&#160;Flavor" canonicalUri="urn:oid:2.16.840.1.113883.5.1008"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="0" codeSystem="2.16.840.1.113883.6.257.755" displayName="INDEPENDENT" level="0" type="L">
+                <desc language="en-US">
+          No help or oversight -OR- Help/oversight provided only 1 or 2 times during last 7 days<br/>
+          Code Evaluation DMST (Canton of Vaud): 1 (or yes for 'Using the lift')
+        </desc>
+            </concept>
+            <concept code="1" codeSystem="2.16.840.1.113883.6.257.755" displayName="SUPERVISION" level="0" type="L">
+                <desc language="en-US">
+          Oversight, encouragement or cueing provided 3 or more times during last7 days -OR- Supervision (3 or more times) plus physical assistance provided only 1 or 2 times during last 7 days<br/>
+          Code Evaluation DMST (Canton of Vaud): 2
+        </desc>
+            </concept>
+            <concept code="2" codeSystem="2.16.840.1.113883.6.257.755" displayName="LIMITED ASSISTANCE" level="0" type="L">
+                <desc language="en-US">
+          Resident highly involved in activity; received physical help in guided maneuvering of limbs or other nonweight bearing assistance 3 or more times - OR-More help provided only 1 or 2 times during last 7 days<br/>
+          Code Evaluation DMST (Canton of Vaud): 3
+        </desc>
+            </concept>
+            <concept code="3" codeSystem="2.16.840.1.113883.6.257.755" displayName="EXTENSIVE ASSISTANCE" level="0" type="L">
+                <desc language="en-US">
+          While resident performed part of activity, over last 7-day period, help of following type(s) provided 3 or more times: - Weight-bearing support - Full staff performance during part (but not all) of last 7 days<br/>
+          Not used in DMST (Canton of Vaud).
+        </desc>
+            </concept>
+            <concept code="4" codeSystem="2.16.840.1.113883.6.257.755" displayName="TOTAL DEPENDENCE" level="0" type="L">
+                <desc language="en-US">
+          Full staff performance of activity during entire 7 days<br/>
+          Code Evaluation DMST (Canton of Vaud): 4 (or no for 'Using the lift')
+        </desc>
+            </concept>
+            <concept code="8" codeSystem="2.16.840.1.113883.6.257.755" displayName="ACTIVITY DID NOT OCCUR" level="0" type="L">
+                <desc language="en-US">
+          ACTIVITY DID NOT OCCUR during entire 7 days<br/>
+          Not used in DMST (Canton of Vaud).
+        </desc>
+            </concept>
+            <exception code="NASK" codeSystem="2.16.840.1.113883.5.1008" displayName="not asked" level="0" type="L"/>
+            <exception code="NAV" codeSystem="2.16.840.1.113883.5.1008" displayName="temporarily unavailable" level="0" type="L"/>
+            <exception code="ASKU" codeSystem="2.16.840.1.113883.5.1008" displayName="asked but unknown" level="0" type="L"/>
+            <exception code="UNK" codeSystem="2.16.840.1.113883.5.1008" displayName="unknown" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>

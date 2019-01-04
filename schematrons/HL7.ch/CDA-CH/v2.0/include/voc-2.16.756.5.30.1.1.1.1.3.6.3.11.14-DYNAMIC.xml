@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.14" name="ResidencePermits" displayName="Residence permits" effectiveDate="2019-01-02T10:40:49" statusCode="draft" versionLabel="2018">
+        <sourceCodeSystem id="2.16.756.5.30.1.112.3.1.201812.8" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.1.112.3.1.201812.8"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="B" codeSystem="2.16.756.5.30.1.112.3.1.201812.8" displayName="Residence permit" level="0" type="L">
+                <desc language="de-CH">Aufenthaltsbewilligung</desc>
+                <desc language="fr-CH">Autorisation de séjour</desc>
+            </concept>
+            <concept code="C" codeSystem="2.16.756.5.30.1.112.3.1.201812.8" displayName="Settlement permit" level="0" type="L">
+                <desc language="de-CH">Niederlassungsbewilligung</desc>
+                <desc language="fr-CH">Autorisation d’établissement</desc>
+            </concept>
+            <concept code="F" codeSystem="2.16.756.5.30.1.112.3.1.201812.8" displayName="Provisionally admitted" level="0" type="L">
+                <desc language="de-CH">Vorläufig aufgenommen</desc>
+                <desc language="fr-CH">Admis provisoirement</desc>
+            </concept>
+            <concept code="N" codeSystem="2.16.756.5.30.1.112.3.1.201812.8" displayName="Asylum seekers" level="0" type="L">
+                <desc language="de-CH">Asylsuchend</desc>
+                <desc language="fr-CH">Requérants d‘asile</desc>
+            </concept>
+            <concept code="DIS" codeSystem="2.16.756.5.30.1.112.3.1.201812.8" displayName="Dismissal" level="0" type="L">
+                <desc language="de-CH">Nichteintreten</desc>
+                <desc language="fr-CH">Non-Entrée en Matière</desc>
+            </concept>
+            <concept code="NOP" codeSystem="2.16.756.5.30.1.112.3.1.201812.8" displayName="No permission" level="0" type="L">
+                <desc language="de-CH">Keine Bewilligung</desc>
+                <desc language="fr-CH">Sans permis</desc>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

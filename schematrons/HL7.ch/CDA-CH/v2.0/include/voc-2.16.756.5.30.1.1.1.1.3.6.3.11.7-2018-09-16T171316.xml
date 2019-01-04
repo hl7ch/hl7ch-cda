@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.756.5.30.1.1.1.1.3.6.3.11.7" name="EvaluationPhysicalMovements" displayName="Evaluation Physical Movements" effectiveDate="2018-09-16T17:13:16" statusCode="draft" versionLabel="2018">
+        <desc language="en-US">The original wording of the concept decription is written in fr-CH language.</desc>
+        <sourceCodeSystem id="2.16.756.5.30.1.1.1.1.3.6.3.11.7" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.1.1.1.1.3.6.3.11.7"/>
+        <sourceCodeSystem id="2.16.840.1.113883.5.1008" identifierName="Null&#160;Flavor" canonicalUri="urn:oid:2.16.840.1.113883.5.1008"/>
+        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
+            <addrLine>Geschäftsstelle</addrLine>
+            <addrLine>Oberstrasse 222</addrLine>
+            <addrLine>CH-9014 St. Gallen</addrLine>
+            <addrLine type="uri">www.hl7.ch</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="0" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="INDEPENDENCE" level="0" type="L">
+                <desc language="en-US">
+          No physical assistance, preparation or supervision is required during each occurrence
+        </desc>
+                <desc language="fr-CH">
+          INDÉPENDANCE – Aucune aide physique, préparation ou supervision n’est requise au cours de chacune des occurrences
+        </desc>
+            </concept>
+            <concept code="1" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="INDEPENDENCE WITH AID FOR PREPARATION ONLY" level="0" type="L">
+                <desc language="en-US">
+          Once the object or device is at hand, no physical assistance or supervision is required during each occurrence
+        </desc>
+                <desc language="fr-CH">
+          INDÉPENDANCE AVEC AIDE POUR LA PRÉPARATION SEULEMENT – Une fois l’objet ou le dispositif placé à portée de main, aucune aide physique ou supervision n’est requise au cours de chacune des occurrences
+        </desc>
+            </concept>
+            <concept code="2" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="SUPERVISION" level="0" type="L">
+                <desc language="en-US">
+          Monitoring or indications required
+        </desc>
+                <desc language="fr-CH">
+          SUPERVISION – Surveillance ou indications requises
+        </desc>
+            </concept>
+            <concept code="3" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="LIMITED HELP" level="0" type="L">
+                <desc language="en-US">
+          Physical help to guide limb movements or help without weight support
+        </desc>
+                <desc language="fr-CH">
+          AIDE LIMITÉE – Aide physique pour guider les mouvements des membres ou aide sans soutien du poids
+        </desc>
+            </concept>
+            <concept code="4" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="CONSIDERABLE HELP" level="0" type="L">
+                <desc language="en-US">
+          One caregiver help required to support weight (including limbs), but the individual performs itself 50% or more of the activity
+        </desc>
+                <desc language="fr-CH">
+          AIDE CONSIDÉRABLE – Aide d’un seul aidant requise pour soutenir le poids (y compris les membres), mais la personne effectue 50% ou plus de l'activité
+        </desc>
+            </concept>
+            <concept code="5" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="MAXIMUM ASSISTANCE" level="0" type="L">
+                <desc language="en-US">
+          Two or more caregiver help required to support weight (including limbs), OR support required to support weight for more than 50% of activity
+        </desc>
+                <desc language="fr-CH">
+          AIDE MAXIMALE – Aide de deux aidants ou plus requise pour soutenir le poids (y compris les membres), OU aide requise au soutien du poids pour plus de 50% de l'activité
+        </desc>
+            </concept>
+            <concept code="6" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="TOTAL DEPENDENCE" level="0" type="L">
+                <desc language="en-US">
+          Activity done entirely by other persons during each occurrence
+        </desc>
+                <desc language="fr-CH">
+          DÉPENDANCE TOTALE – Activité entièrement effectuée par d’autres personnes au cours de chacune des occurrences
+        </desc>
+            </concept>
+            <concept code="8" codeSystem="2.16.756.5.30.1.1.1.1.3.6.3.11.7" displayName="ACTIVITY DID NOT HAPPEN DURING THE EVALUATION PERIOD" level="0" type="L">
+                <desc language="fr-CH">
+          L'ACTIVITÉ N'A PAS EU LIEU AU COURS DE LA PÉRIODE ÉVALUÉE
+        </desc>
+            </concept>
+            <exception code="NASK" codeSystem="2.16.840.1.113883.5.1008" displayName="not asked" level="0" type="L"/>
+            <exception code="NAV" codeSystem="2.16.840.1.113883.5.1008" displayName="temporarily unavailable" level="0" type="L"/>
+            <exception code="ASKU" codeSystem="2.16.840.1.113883.5.1008" displayName="asked but unknown" level="0" type="L"/>
+            <exception code="UNK" codeSystem="2.16.840.1.113883.5.1008" displayName="unknown" level="0" type="L"/>
+        </conceptList>
+    </valueSet>
+</valueSets>
