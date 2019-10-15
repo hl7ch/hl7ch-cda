@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.4.642.3.1" name="DocumentEntry.sourcePatientInfo.PID-8" displayName="DocumentEntry.sourcePatientInfo.PID-8" statusCode="final" versionLabel="201907.0-stable" effectiveDate="2019-01-25T16:23:42" url="http://art-decor.org/decor/services/" ident="ch-epr-" referencedFrom="hl7chcda-">
+        <desc language="de-CH">Geschlecht der Patientin oder des Patienten gemäss Anhang 3 EPDV-EDI.<br clear="none"/>
+        </desc>
+        <desc language="en-US">Patient’s gender as per Annex 3&#160; EPRO-FDHA.<br clear="none"/>
+        </desc>
+        <desc language="fr-CH">Sexe du patient selon l'annexe 3 ODEP-DFI.<br clear="none"/>
+        </desc>
+        <desc language="it-CH">Sesso del paziente secondo l'allegato 3 OCIP-DFI.<br clear="none"/>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.4.642.1.2" identifierName="ConformanceResourceStatus" canonicalUri="http://hl7.org/fhir/administrative-gender" canonicalUriDSTU2="http://hl7.org/fhir/conformance-resource-status" canonicalUriSTU3="http://hl7.org/fhir/administrative-gender" canonicalUriR4="http://hl7.org/fhir/administrative-gender"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="female" codeSystem="2.16.840.1.113883.4.642.1.2" codeSystemName="AdministrativeGender" displayName="Female" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Weiblich"/>
+                <designation language="fr-CH" type="preferred" displayName="Féminin"/>
+                <designation language="it-CH" type="preferred" displayName="Femminile"/>
+                <designation language="en-US" type="preferred" displayName="Female"/>
+                <designation language="rm-CH" type="preferred" displayName="TODO"/>
+            </concept>
+            <concept code="male" codeSystem="2.16.840.1.113883.4.642.1.2" codeSystemName="AdministrativeGender" displayName="Male" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Männlich"/>
+                <designation language="fr-CH" type="preferred" displayName="Masculin"/>
+                <designation language="it-CH" type="preferred" displayName="Maschile"/>
+                <designation language="en-US" type="preferred" displayName="Male"/>
+                <designation language="rm-CH" type="preferred" displayName="TODO"/>
+            </concept>
+            <concept code="other" codeSystem="2.16.840.1.113883.4.642.1.2" codeSystemName="AdministrativeGender" displayName="Other" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Anderes"/>
+                <designation language="fr-CH" type="preferred" displayName="Autre"/>
+                <designation language="it-CH" type="preferred" displayName="Altro"/>
+                <designation language="en-US" type="preferred" displayName="Other"/>
+                <designation language="rm-CH" type="preferred" displayName="TODO"/>
+            </concept>
+            <concept code="unknown" codeSystem="2.16.840.1.113883.4.642.1.2" codeSystemName="AdministrativeGender" displayName="Unknown" level="0" type="L">
+                <designation language="de-CH" type="preferred" displayName="Unbekannt"/>
+                <designation language="fr-CH" type="preferred" displayName="Inconnu"/>
+                <designation language="it-CH" type="preferred" displayName="Sconosciuto"/>
+                <designation language="en-US" type="preferred" displayName="Unknown"/>
+                <designation language="rm-CH" type="preferred" displayName="TODO"/>
+            </concept>
+        </conceptList>
+    </valueSet>
+</valueSets>

@@ -1,1536 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valueSets>
-   <valueSet xmlns:cda="urn:hl7-org:v3"
-             xmlns:hl7="urn:hl7-org:v3"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:pharm="urn:ihe:pharm"
-             id="2.16.840.1.113883.1.11.14079"
-             name="ObservationMethod"
-             displayName="ObservationMethod"
-             effectiveDate="2014-03-26T00:00:00"
-             statusCode="final"
-             versionLabel="DEFN=UV=VO=1360-20160323"
-             url="http://art-decor.org/decor/services/"
-             ident="ad2bbr-"
-             referencedFrom="cdachemed-">
-      <desc language="en-US">
-                <p>
-                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
-                <b>description: </b>
-                <p>A code that provides additional detail about the means or technique used to ascertain the observation.</p>
-                <p>
-                    <i>Examples:</i> Blood pressure measurement method: arterial puncture vs. sphygmomanometer (Riva-Rocci), sitting vs. supine position, etc.</p>
-                <p>
-                    <i>Constraints:</i> In all observations the method is already partially specified by the Act.code. In this case, the methodCode NEED NOT be used at all. The methodCode MAY still be used to identify this method more clearly in addition to what is implied from the Act.code. However, an information consumer system or process SHOULD NOT depend on this methodCode information for method detail that is implied by the Act.code.</p>
-                <p>If the methodCode is used to express method detail that is also implied by the Act.code, the methodCode MUST NOT be in conflict with the implied method of the Act.code.</p>
-            </desc>
-      <sourceCodeSystem id="2.16.840.1.113883.5.84" identifierName="Observation Method"/>
-      <publishingAuthority name="eHealth Suisse">
-                <addrLine>Schwarzenburgstrasse 165</addrLine>
-                <addrLine>CH-3003 Bern</addrLine>
-                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
-            </publishingAuthority>
-      <conceptList>
-                <concept code="0001"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Complement fixation"
-                  level="0"
-                  type="L"/>
-                <concept code="0002"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Computed axial tomography"
-                  level="0"
-                  type="L"/>
-                <concept code="0003"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="HLAR agar test"
-                  level="0"
-                  type="L"/>
-                <concept code="0004"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Macroscopic observation"
-                  level="0"
-                  type="L"/>
-                <concept code="0005"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Magnetic resonance"
-                  level="0"
-                  type="L"/>
-                <concept code="0006"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Morphometry"
-                  level="0"
-                  type="L"/>
-                <concept code="0007"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Positron emission tomography"
-                  level="0"
-                  type="L"/>
-                <concept code="0008"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="SAMHSA confirmation"
-                  level="0"
-                  type="L"/>
-                <concept code="0009"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="SAMHSA screening"
-                  level="0"
-                  type="L"/>
-                <concept code="0010"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Serum Neutralization"
-                  level="0"
-                  type="L"/>
-                <concept code="0011"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Titration"
-                  level="0"
-                  type="L"/>
-                <concept code="0012"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Ultrasound"
-                  level="0"
-                  type="L"/>
-                <concept code="0013"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="X-ray crystallography"
-                  level="0"
-                  type="L"/>
-                <concept code="0014"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0015"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Buffered acidified plate agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0016"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Card agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0017"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hemagglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0018"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hemagglutination inhibition"
-                  level="0"
-                  type="L"/>
-                <concept code="0019"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Latex agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0020"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Plate agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0021"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Rapid agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0022"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="RBC agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0023"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Rivanol agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0024"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Tube agglutination"
-                  level="0"
-                  type="L"/>
-                <concept code="0025"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bioassay"
-                  level="0"
-                  type="L"/>
-                <concept code="0026"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Animal Inoculation"
-                  level="0"
-                  type="L"/>
-                <concept code="0027"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Cytotoxicity"
-                  level="0"
-                  type="L"/>
-                <concept code="0028"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Embryo infective dose 50"
-                  level="0"
-                  type="L"/>
-                <concept code="0029"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Embryo lethal dose 50"
-                  level="0"
-                  type="L"/>
-                <concept code="0030"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Mouse intercerebral inoculation"
-                  level="0"
-                  type="L"/>
-                <concept code="0031"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bioassay, qualitative"
-                  level="0"
-                  type="L"/>
-                <concept code="0032"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bioassay, quantitative"
-                  level="0"
-                  type="L"/>
-                <concept code="0033"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Chemical method"
-                  level="0"
-                  type="L"/>
-                <concept code="0034"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Differential light absorption chemical test"
-                  level="0"
-                  type="L"/>
-                <concept code="0035"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Dipstick"
-                  level="0"
-                  type="L"/>
-                <concept code="0036"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Dipstick colorimetric laboratory test"
-                  level="0"
-                  type="L"/>
-                <concept code="0037"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Test strip"
-                  level="0"
-                  type="L"/>
-                <concept code="0038"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Chromatography"
-                  level="0"
-                  type="L"/>
-                <concept code="0039"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Affinity chromatography"
-                  level="0"
-                  type="L"/>
-                <concept code="0040"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gas liquid chromatography"
-                  level="0"
-                  type="L"/>
-                <concept code="0041"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="High performance liquid chromatography"
-                  level="0"
-                  type="L"/>
-                <concept code="0042"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Liquid Chromatography"
-                  level="0"
-                  type="L"/>
-                <concept code="0043"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Protein A affinity chromatography"
-                  level="0"
-                  type="L"/>
-                <concept code="0044"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Coagulation"
-                  level="0"
-                  type="L"/>
-                <concept code="0045"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Tilt tube coagulation time"
-                  level="0"
-                  type="L"/>
-                <concept code="0046"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Tilt tube reptilase induced coagulation"
-                  level="0"
-                  type="L"/>
-                <concept code="0047"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Automated count"
-                  level="0"
-                  type="L"/>
-                <concept code="0048"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Manual cell count"
-                  level="0"
-                  type="L"/>
-                <concept code="0049"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Platelet count, Rees-Ecker"
-                  level="0"
-                  type="L"/>
-                <concept code="0050"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Aerobic Culture"
-                  level="0"
-                  type="L"/>
-                <concept code="0051"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Anaerobic Culture"
-                  level="0"
-                  type="L"/>
-                <concept code="0052"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Chicken embryo culture"
-                  level="0"
-                  type="L"/>
-                <concept code="0053"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Delayed secondary enrichment"
-                  level="0"
-                  type="L"/>
-                <concept code="0054"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Microaerophilic Culture"
-                  level="0"
-                  type="L"/>
-                <concept code="0055"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quantitative microbial culture, cup"
-                  level="0"
-                  type="L"/>
-                <concept code="0056"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quantitative microbial culture, droplet"
-                  level="0"
-                  type="L"/>
-                <concept code="0057"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quantitative microbial culture, filter paper"
-                  level="0"
-                  type="L"/>
-                <concept code="0058"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quantitative microbial culture, pad culture"
-                  level="0"
-                  type="L"/>
-                <concept code="0059"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quantitative microbial culture, pour plate"
-                  level="0"
-                  type="L"/>
-                <concept code="0060"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quantitative microbial culture, surface streak"
-                  level="0"
-                  type="L"/>
-                <concept code="0061"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Somatic Cell culture"
-                  level="0"
-                  type="L"/>
-                <concept code="0062"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Agar diffusion"
-                  level="0"
-                  type="L"/>
-                <concept code="0063"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Agar Gel Immunodiffusion"
-                  level="0"
-                  type="L"/>
-                <concept code="0064"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electrophoresis"
-                  level="0"
-                  type="L"/>
-                <concept code="0065"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Agaorse gel electrophoresis"
-                  level="0"
-                  type="L"/>
-                <concept code="0066"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electrophoresis, citrate agar"
-                  level="0"
-                  type="L"/>
-                <concept code="0067"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoelectrophoresis"
-                  level="0"
-                  type="L"/>
-                <concept code="0068"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Polyacrylamide gel electrophoresis"
-                  level="0"
-                  type="L"/>
-                <concept code="0069"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Starch gel electrophoresis"
-                  level="0"
-                  type="L"/>
-                <concept code="0070"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="ELISA"
-                  level="0"
-                  type="L"/>
-                <concept code="0071"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="ELISA, antigen capture"
-                  level="0"
-                  type="L"/>
-                <concept code="0072"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="ELISA, avidin biotin peroxidase complex"
-                  level="0"
-                  type="L"/>
-                <concept code="0073"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Kinetic ELISA"
-                  level="0"
-                  type="L"/>
-                <concept code="0074"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="ELISA, peroxidase-antiperoxidase"
-                  level="0"
-                  type="L"/>
-                <concept code="0075"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API 20 Strep"
-                  level="0"
-                  type="L"/>
-                <concept code="0076"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API 20A"
-                  level="0"
-                  type="L"/>
-                <concept code="0077"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API 20C AUX"
-                  level="0"
-                  type="L"/>
-                <concept code="0078"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API 20E"
-                  level="0"
-                  type="L"/>
-                <concept code="0079"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API 20NE"
-                  level="0"
-                  type="L"/>
-                <concept code="0080"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API 50 CH"
-                  level="0"
-                  type="L"/>
-                <concept code="0081"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API An-IDENT"
-                  level="0"
-                  type="L"/>
-                <concept code="0082"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API Coryne"
-                  level="0"
-                  type="L"/>
-                <concept code="0083"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API Rapid 20E"
-                  level="0"
-                  type="L"/>
-                <concept code="0084"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API Staph"
-                  level="0"
-                  type="L"/>
-                <concept code="0085"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="API ZYM"
-                  level="0"
-                  type="L"/>
-                <concept code="0086"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bacterial identification"
-                  level="0"
-                  type="L"/>
-                <concept code="0087"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="mini VIDAS"
-                  level="0"
-                  type="L"/>
-                <concept code="0088"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Phage susceptibility typing"
-                  level="0"
-                  type="L"/>
-                <concept code="0089"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quad-FERM+"
-                  level="0"
-                  type="L"/>
-                <concept code="0090"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="RAPIDEC Staph"
-                  level="0"
-                  type="L"/>
-                <concept code="0091"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Staphaurex"
-                  level="0"
-                  type="L"/>
-                <concept code="0092"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="VIDAS"
-                  level="0"
-                  type="L"/>
-                <concept code="0093"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Vitek"
-                  level="0"
-                  type="L"/>
-                <concept code="0094"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="VITEK 2"
-                  level="0"
-                  type="L"/>
-                <concept code="0095"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immune stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0096"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunofluorescent antibody, direct"
-                  level="0"
-                  type="L"/>
-                <concept code="0097"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunofluorescent antibody, indirect"
-                  level="0"
-                  type="L"/>
-                <concept code="0098"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoperoxidase, Avidin-Biotin Complex"
-                  level="0"
-                  type="L"/>
-                <concept code="0099"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoperoxidase, Peroxidase anti-peroxidase complex"
-                  level="0"
-                  type="L"/>
-                <concept code="0100"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoperoxidase, Protein A-peroxidase complex"
-                  level="0"
-                  type="L"/>
-                <concept code="0101"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoassay"
-                  level="0"
-                  type="L"/>
-                <concept code="0102"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoassay, qualitative, multiple step"
-                  level="0"
-                  type="L"/>
-                <concept code="0103"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoassay, qualitative, single step"
-                  level="0"
-                  type="L"/>
-                <concept code="0104"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Radioimmunoassay"
-                  level="0"
-                  type="L"/>
-                <concept code="0105"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoassay, semi-quantitative, multiple step"
-                  level="0"
-                  type="L"/>
-                <concept code="0106"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoassay, semi-quantitative, single step"
-                  level="0"
-                  type="L"/>
-                <concept code="0107"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Microscopy"
-                  level="0"
-                  type="L"/>
-                <concept code="0108"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Darkfield microscopy"
-                  level="0"
-                  type="L"/>
-                <concept code="0109"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electron microscopy"
-                  level="0"
-                  type="L"/>
-                <concept code="0110"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electron microscopy tomography"
-                  level="0"
-                  type="L"/>
-                <concept code="0111"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electron microscopy, negative stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0112"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electron microscopy, thick section"
-                  level="0"
-                  type="L"/>
-                <concept code="0113"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Electron microscopy, thin section"
-                  level="0"
-                  type="L"/>
-                <concept code="0114"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Microscopy, Light"
-                  level="0"
-                  type="L"/>
-                <concept code="0115"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Polarizing light microscopy"
-                  level="0"
-                  type="L"/>
-                <concept code="0116"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Scanning electron microscopy"
-                  level="0"
-                  type="L"/>
-                <concept code="0117"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Transmission electron microscopy"
-                  level="0"
-                  type="L"/>
-                <concept code="0118"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Transparent tape direct examination"
-                  level="0"
-                  type="L"/>
-                <concept code="0119"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="3 Self-Sustaining Sequence Replication"
-                  level="0"
-                  type="L"/>
-                <concept code="0120"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Branched Chain DNA"
-                  level="0"
-                  type="L"/>
-                <concept code="0121"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hybridization Protection Assay"
-                  level="0"
-                  type="L"/>
-                <concept code="0122"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immune blot"
-                  level="0"
-                  type="L"/>
-                <concept code="0123"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="In-situ hybridization"
-                  level="0"
-                  type="L"/>
-                <concept code="0124"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Ligase Chain Reaction"
-                  level="0"
-                  type="L"/>
-                <concept code="0125"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Ligation Activated Transcription"
-                  level="0"
-                  type="L"/>
-                <concept code="0126"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Nucleic Acid Probe"
-                  level="0"
-                  type="L"/>
-                <concept code="0128"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Nucleic acid probe with amplification"
-                  level="0"
-                  type="L"/>
-                <concept code="0129"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Nucleic acid probe with target amplification"
-                  level="0"
-                  type="L"/>
-                <concept code="0130"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Nucleic acid reverse transcription"
-                  level="0"
-                  type="L"/>
-                <concept code="0131"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Nucleic Acid Sequence Based Analysis"
-                  level="0"
-                  type="L"/>
-                <concept code="0132"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Polymerase chain reaction"
-                  level="0"
-                  type="L"/>
-                <concept code="0133"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Q-Beta Replicase or probe amplification category method"
-                  level="0"
-                  type="L"/>
-                <concept code="0134"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Restriction Fragment Length Polymorphism"
-                  level="0"
-                  type="L"/>
-                <concept code="0135"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Southern Blot"
-                  level="0"
-                  type="L"/>
-                <concept code="0136"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Strand Displacement Amplification"
-                  level="0"
-                  type="L"/>
-                <concept code="0137"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Transcription Mediated Amplification"
-                  level="0"
-                  type="L"/>
-                <concept code="0138"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Western Blot"
-                  level="0"
-                  type="L"/>
-                <concept code="0139"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Flocculation"
-                  level="0"
-                  type="L"/>
-                <concept code="0140"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immune precipitation"
-                  level="0"
-                  type="L"/>
-                <concept code="0141"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Milk ring test"
-                  level="0"
-                  type="L"/>
-                <concept code="0142"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Precipitin"
-                  level="0"
-                  type="L"/>
-                <concept code="0143"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Acid fast stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0144"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Acid fast stain, fluorochrome"
-                  level="0"
-                  type="L"/>
-                <concept code="0145"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Acid fast stain, Kinyoun's cold carbolfuchsin"
-                  level="0"
-                  type="L"/>
-                <concept code="0146"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Acid fast stain, Ziehl-Neelsen"
-                  level="0"
-                  type="L"/>
-                <concept code="0147"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Acid phosphatase stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0148"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Acridine orange stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0149"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Active brilliant orange KH stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0150"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Alazarin red S stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0151"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Alcian blue stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0152"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Alcian blue with Periodic acid Schiff stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0153"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Argentaffin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0154"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Argentaffin silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0155"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Azure-eosin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0156"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Basic Fuschin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0157"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bennhold stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0158"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bennhold's Congo red stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0159"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bielschowsky stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0160"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bielschowsky's silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0161"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bleach stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0162"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Bodian stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0163"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Brown-Brenn stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0164"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Butyrate-esterase stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0165"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Calcofluor white fluorescent stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0166"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Carbol-fuchsin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0167"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Carmine stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0168"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Churukian-Schenk stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0169"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Congo red stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0170"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Cresyl echt violet stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0171"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Crystal violet stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0172"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="De Galantha stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0173"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Dieterle silver impregnation stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0174"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Fite-Farco stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0175"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Fontana-Masson silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0176"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Fouchet stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0177"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gomori stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0178"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gomori methenamine silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0179"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gomori-Wheatly trichrome stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0180"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gridley stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0181"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Grimelius silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0182"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Grocott stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0183"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Grocott methenamine silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0184"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hale's colloidal ferric oxide stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0185"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hale's colloidal iron stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0186"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hansel stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0187"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Harris regressive hematoxylin and eosin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0188"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Hematoxylin and eosin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0189"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Highman stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0190"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Holzer stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0191"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Iron hematoxylin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0192"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Jones stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0193"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Jones methenamine silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0194"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Kossa stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0195"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Lawson-Van Gieson stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0196"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Loeffler methylene blue stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0197"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Luxol fast blue with cresyl violet stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0198"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Luxol fast blue with Periodic acid-Schiff stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0199"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="MacNeal's tetrachrome blood stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0200"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Mallory-Heidenhain stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0201"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Masson trichrome stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0202"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Mayer mucicarmine stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0203"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Mayers progressive hematoxylin and eosin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0204"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="May-Grunwald Giemsa stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0205"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Methyl green stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0206"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Methyl green pyronin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0207"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Modified Gomori-Wheatly trichrome stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0208"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Modified Masson trichrome stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0209"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Modified trichrome stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0210"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Movat pentachrome stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0211"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Mucicarmine stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0212"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Neutral red stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0213"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Night blue stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0214"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Non-specific esterase stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0215"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Oil red-O stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0216"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Orcein stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0217"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Perls' stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0218"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Phosphotungstic acid-hematoxylin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0219"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Potassium ferrocyanide stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0220"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Prussian blue stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0221"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Putchler modified Bennhold stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0222"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Quinacrine fluorescent stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0223"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Reticulin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0224"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Rhodamine stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0225"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Safranin stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0226"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Schmorl stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0227"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Seiver-Munger stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0228"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0229"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Specific esterase stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0230"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Steiner silver stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0231"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Sudan III stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0232"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Sudan IVI stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0233"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Sulfated alcian blue stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0234"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Supravital stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0235"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Thioflavine-S stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0236"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Three micron Giemsa stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0237"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Vassar-Culling stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0238"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Vital Stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0239"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="von Kossa stain"
-                  level="0"
-                  type="L"/>
-                <concept code="0240"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Antibiotic sensitivity, disk"
-                  level="0"
-                  type="L"/>
-                <concept code="0241"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="BACTEC susceptibility test"
-                  level="0"
-                  type="L"/>
-                <concept code="0242"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Disk dilution"
-                  level="0"
-                  type="L"/>
-                <concept code="0243"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum bactericidal concentration test, macrodilution"
-                  level="0"
-                  type="L"/>
-                <concept code="0244"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum bactericidal concentration test, microdilution"
-                  level="0"
-                  type="L"/>
-                <concept code="0245"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Inhibitory Concentration, macrodilution"
-                  level="0"
-                  type="L"/>
-                <concept code="0246"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Inhibitory Concentration, microdilution"
-                  level="0"
-                  type="L"/>
-                <concept code="0247"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Turbidometric"
-                  level="0"
-                  type="L"/>
-                <concept code="0248"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Refractometric"
-                  level="0"
-                  type="L"/>
-                <concept code="0249"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Thin layer chromatography (TLC)"
-                  level="0"
-                  type="L"/>
-                <concept code="0250"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="EMIT"
-                  level="0"
-                  type="L"/>
-                <concept code="0251"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Flow cytometry (FC)"
-                  level="0"
-                  type="L"/>
-                <concept code="0252"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Radial immunodiffusion (RID)"
-                  level="0"
-                  type="L"/>
-                <concept code="0253"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Fluorescence polarization immunoassay (FPIA)"
-                  level="0"
-                  type="L"/>
-                <concept code="0254"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunofixation electrophoresis (IFE)"
-                  level="0"
-                  type="L"/>
-                <concept code="0255"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Equilibrium dialysis"
-                  level="0"
-                  type="L"/>
-                <concept code="0256"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Kleihauer-Betke acid elution"
-                  level="0"
-                  type="L"/>
-                <concept code="0257"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Anti-complement immunofluorescence (ACIF)"
-                  level="0"
-                  type="L"/>
-                <concept code="0258"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="GC/MS"
-                  level="0"
-                  type="L"/>
-                <concept code="0259"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Nephelometry"
-                  level="0"
-                  type="L"/>
-                <concept code="0260"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="IgE immunoassay antibody"
-                  level="0"
-                  type="L"/>
-                <concept code="0261"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Lymphocyte Microcytotoxicity Assay"
-                  level="0"
-                  type="L"/>
-                <concept code="0262"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Spectrophotometry"
-                  level="0"
-                  type="L"/>
-                <concept code="0263"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Atomic absorption spectrophotometry (AAS)"
-                  level="0"
-                  type="L"/>
-                <concept code="0264"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Ion selective electrode (ISE)"
-                  level="0"
-                  type="L"/>
-                <concept code="0265"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gas chromatography (GC)"
-                  level="0"
-                  type="L"/>
-                <concept code="0266"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Isoelectric focusing (IEF)"
-                  level="0"
-                  type="L"/>
-                <concept code="0267"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunochemiluminescence"
-                  level="0"
-                  type="L"/>
-                <concept code="0268"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Microparticle enzyme immunoassay (MEIA)"
-                  level="0"
-                  type="L"/>
-                <concept code="0269"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="ICP/MS"
-                  level="0"
-                  type="L"/>
-                <concept code="0270"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Immunoradiometric assay (IRMA)"
-                  level="0"
-                  type="L"/>
-                <concept code="0271"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Photo optical clot detection"
-                  level="0"
-                  type="L"/>
-                <concept code="ALGM"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="algorithm"
-                  level="1"
-                  type="S"/>
-                <concept code="BYCL"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="bayesian calculation"
-                  level="2"
-                  type="L"/>
-                <concept code="GINT"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="global introspection"
-                  level="1"
-                  type="L"/>
-                <concept code="ALGM"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="algorithm"
-                  level="0"
-                  type="S"/>
-                <concept code="BYCL"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="bayesian calculation"
-                  level="0"
-                  type="L"/>
-                <concept code="GINT"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="global introspection"
-                  level="0"
-                  type="L"/>
-                <concept code="0272"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Inhibitory Concentration"
-                  level="0"
-                  type="S"/>
-                <concept code="0245"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Inhibitory Concentration, macrodilution"
-                  level="1"
-                  type="L"/>
-                <concept code="0246"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Inhibitory Concentration, microdilution"
-                  level="1"
-                  type="L"/>
-                <concept code="0275a"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Lethal Concentration (MLC)"
-                  level="0"
-                  type="L"/>
-                <concept code="0280"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Susceptibility Testing"
-                  level="0"
-                  type="S"/>
-                <concept code="0240"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Antibiotic sensitivity, disk"
-                  level="1"
-                  type="L"/>
-                <concept code="0241"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="BACTEC susceptibility test"
-                  level="1"
-                  type="L"/>
-                <concept code="0242"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Disk dilution"
-                  level="1"
-                  type="L"/>
-                <concept code="0272"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Inhibitory Concentration"
-                  level="1"
-                  type="S"/>
-                <concept code="0273"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Viral Genotype Susceptibility"
-                  level="1"
-                  type="L"/>
-                <concept code="0274"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Viral Phenotype Susceptibility"
-                  level="1"
-                  type="L"/>
-                <concept code="0275"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Gradient Strip"
-                  level="1"
-                  type="L"/>
-                <concept code="0275a"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Minimum Lethal Concentration (MLC)"
-                  level="1"
-                  type="L"/>
-                <concept code="0276"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Slow Mycobacteria Susceptibility"
-                  level="1"
-                  type="L"/>
-                <concept code="0277"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Serum bactericidal titer"
-                  level="1"
-                  type="L"/>
-                <concept code="0278"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Agar screen"
-                  level="1"
-                  type="L"/>
-                <concept code="0279"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="Disk induction"
-                  level="1"
-                  type="L"/>
-                <concept code="_VerificationMethod"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="VerificationMethod"
-                  level="0"
-                  type="A"/>
-                <concept code="VDOC"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="document verification"
-                  level="1"
-                  type="L"/>
-                <concept code="VREG"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="registry verification"
-                  level="1"
-                  type="L"/>
-                <concept code="VTOKEN"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="electronic token verification"
-                  level="1"
-                  type="L"/>
-                <concept code="VVOICE"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="voice-based verification"
-                  level="1"
-                  type="L"/>
-                <concept code="_GeneticObservationMethod"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="GeneticObservationMethod"
-                  level="0"
-                  type="A"/>
-                <concept code="PCR"
-                  codeSystem="2.16.840.1.113883.5.84"
-                  displayName="PCR"
-                  level="1"
-                  type="L"/>
-            </conceptList>
-   </valueSet>
+<valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <valueSet xmlns="" id="2.16.840.1.113883.1.11.14079" name="ObservationMethod" displayName="ObservationMethod" effectiveDate="2014-03-26T00:00:00" statusCode="final" versionLabel="DEFN=UV=VO=1360-20160323" url="http://art-decor.org/decor/services/" ident="ad2bbr-" referencedFrom="hl7chcda-">
+        <desc language="en-US">
+            <p>
+                <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+            <b>description: </b>
+            <p>A code that provides additional detail about the means or technique used to ascertain the observation.</p>
+            <p>
+                <i>Examples:</i> Blood pressure measurement method: arterial puncture vs. sphygmomanometer (Riva-Rocci), sitting vs. supine position, etc.</p>
+            <p>
+                <i>Constraints:</i> In all observations the method is already partially specified by the Act.code. In this case, the methodCode NEED NOT be used at all. The methodCode MAY still be used to identify this method more clearly in addition to what is implied from the Act.code. However, an information consumer system or process SHOULD NOT depend on this methodCode information for method detail that is implied by the Act.code.</p>
+            <p>If the methodCode is used to express method detail that is also implied by the Act.code, the methodCode MUST NOT be in conflict with the implied method of the Act.code.</p>
+        </desc>
+        <sourceCodeSystem id="2.16.840.1.113883.5.84" identifierName="Observation&#160;Method" canonicalUri="http://terminology.hl7.org/CodeSystem/v3-ObservationMethod" canonicalUriDSTU2="http://hl7.org/fhir/v3/ObservationMethod" canonicalUriSTU3="http://hl7.org/fhir/v3/ObservationMethod" canonicalUriR4="http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
+        </publishingAuthority>
+        <conceptList>
+            <concept code="0001" codeSystem="2.16.840.1.113883.5.84" displayName="Complement fixation" level="0" type="L"/>
+            <concept code="0002" codeSystem="2.16.840.1.113883.5.84" displayName="Computed axial tomography" level="0" type="L"/>
+            <concept code="0003" codeSystem="2.16.840.1.113883.5.84" displayName="HLAR agar test" level="0" type="L"/>
+            <concept code="0004" codeSystem="2.16.840.1.113883.5.84" displayName="Macroscopic observation" level="0" type="L"/>
+            <concept code="0005" codeSystem="2.16.840.1.113883.5.84" displayName="Magnetic resonance" level="0" type="L"/>
+            <concept code="0006" codeSystem="2.16.840.1.113883.5.84" displayName="Morphometry" level="0" type="L"/>
+            <concept code="0007" codeSystem="2.16.840.1.113883.5.84" displayName="Positron emission tomography" level="0" type="L"/>
+            <concept code="0008" codeSystem="2.16.840.1.113883.5.84" displayName="SAMHSA confirmation" level="0" type="L"/>
+            <concept code="0009" codeSystem="2.16.840.1.113883.5.84" displayName="SAMHSA screening" level="0" type="L"/>
+            <concept code="0010" codeSystem="2.16.840.1.113883.5.84" displayName="Serum Neutralization" level="0" type="L"/>
+            <concept code="0011" codeSystem="2.16.840.1.113883.5.84" displayName="Titration" level="0" type="L"/>
+            <concept code="0012" codeSystem="2.16.840.1.113883.5.84" displayName="Ultrasound" level="0" type="L"/>
+            <concept code="0013" codeSystem="2.16.840.1.113883.5.84" displayName="X-ray crystallography" level="0" type="L"/>
+            <concept code="0014" codeSystem="2.16.840.1.113883.5.84" displayName="Agglutination" level="0" type="L"/>
+            <concept code="0015" codeSystem="2.16.840.1.113883.5.84" displayName="Buffered acidified plate agglutination" level="0" type="L"/>
+            <concept code="0016" codeSystem="2.16.840.1.113883.5.84" displayName="Card agglutination" level="0" type="L"/>
+            <concept code="0017" codeSystem="2.16.840.1.113883.5.84" displayName="Hemagglutination" level="0" type="L"/>
+            <concept code="0018" codeSystem="2.16.840.1.113883.5.84" displayName="Hemagglutination inhibition" level="0" type="L"/>
+            <concept code="0019" codeSystem="2.16.840.1.113883.5.84" displayName="Latex agglutination" level="0" type="L"/>
+            <concept code="0020" codeSystem="2.16.840.1.113883.5.84" displayName="Plate agglutination" level="0" type="L"/>
+            <concept code="0021" codeSystem="2.16.840.1.113883.5.84" displayName="Rapid agglutination" level="0" type="L"/>
+            <concept code="0022" codeSystem="2.16.840.1.113883.5.84" displayName="RBC agglutination" level="0" type="L"/>
+            <concept code="0023" codeSystem="2.16.840.1.113883.5.84" displayName="Rivanol agglutination" level="0" type="L"/>
+            <concept code="0024" codeSystem="2.16.840.1.113883.5.84" displayName="Tube agglutination" level="0" type="L"/>
+            <concept code="0025" codeSystem="2.16.840.1.113883.5.84" displayName="Bioassay" level="0" type="L"/>
+            <concept code="0026" codeSystem="2.16.840.1.113883.5.84" displayName="Animal Inoculation" level="0" type="L"/>
+            <concept code="0027" codeSystem="2.16.840.1.113883.5.84" displayName="Cytotoxicity" level="0" type="L"/>
+            <concept code="0028" codeSystem="2.16.840.1.113883.5.84" displayName="Embryo infective dose 50" level="0" type="L"/>
+            <concept code="0029" codeSystem="2.16.840.1.113883.5.84" displayName="Embryo lethal dose 50" level="0" type="L"/>
+            <concept code="0030" codeSystem="2.16.840.1.113883.5.84" displayName="Mouse intercerebral inoculation" level="0" type="L"/>
+            <concept code="0031" codeSystem="2.16.840.1.113883.5.84" displayName="Bioassay, qualitative" level="0" type="L"/>
+            <concept code="0032" codeSystem="2.16.840.1.113883.5.84" displayName="Bioassay, quantitative" level="0" type="L"/>
+            <concept code="0033" codeSystem="2.16.840.1.113883.5.84" displayName="Chemical method" level="0" type="L"/>
+            <concept code="0034" codeSystem="2.16.840.1.113883.5.84" displayName="Differential light absorption chemical test" level="0" type="L"/>
+            <concept code="0035" codeSystem="2.16.840.1.113883.5.84" displayName="Dipstick" level="0" type="L"/>
+            <concept code="0036" codeSystem="2.16.840.1.113883.5.84" displayName="Dipstick colorimetric laboratory test" level="0" type="L"/>
+            <concept code="0037" codeSystem="2.16.840.1.113883.5.84" displayName="Test strip" level="0" type="L"/>
+            <concept code="0038" codeSystem="2.16.840.1.113883.5.84" displayName="Chromatography" level="0" type="L"/>
+            <concept code="0039" codeSystem="2.16.840.1.113883.5.84" displayName="Affinity chromatography" level="0" type="L"/>
+            <concept code="0040" codeSystem="2.16.840.1.113883.5.84" displayName="Gas liquid chromatography" level="0" type="L"/>
+            <concept code="0041" codeSystem="2.16.840.1.113883.5.84" displayName="High performance liquid chromatography" level="0" type="L"/>
+            <concept code="0042" codeSystem="2.16.840.1.113883.5.84" displayName="Liquid Chromatography" level="0" type="L"/>
+            <concept code="0043" codeSystem="2.16.840.1.113883.5.84" displayName="Protein A affinity chromatography" level="0" type="L"/>
+            <concept code="0044" codeSystem="2.16.840.1.113883.5.84" displayName="Coagulation" level="0" type="L"/>
+            <concept code="0045" codeSystem="2.16.840.1.113883.5.84" displayName="Tilt tube coagulation time" level="0" type="L"/>
+            <concept code="0046" codeSystem="2.16.840.1.113883.5.84" displayName="Tilt tube reptilase induced coagulation" level="0" type="L"/>
+            <concept code="0047" codeSystem="2.16.840.1.113883.5.84" displayName="Automated count" level="0" type="L"/>
+            <concept code="0048" codeSystem="2.16.840.1.113883.5.84" displayName="Manual cell count" level="0" type="L"/>
+            <concept code="0049" codeSystem="2.16.840.1.113883.5.84" displayName="Platelet count, Rees-Ecker" level="0" type="L"/>
+            <concept code="0050" codeSystem="2.16.840.1.113883.5.84" displayName="Aerobic Culture" level="0" type="L"/>
+            <concept code="0051" codeSystem="2.16.840.1.113883.5.84" displayName="Anaerobic Culture" level="0" type="L"/>
+            <concept code="0052" codeSystem="2.16.840.1.113883.5.84" displayName="Chicken embryo culture" level="0" type="L"/>
+            <concept code="0053" codeSystem="2.16.840.1.113883.5.84" displayName="Delayed secondary enrichment" level="0" type="L"/>
+            <concept code="0054" codeSystem="2.16.840.1.113883.5.84" displayName="Microaerophilic Culture" level="0" type="L"/>
+            <concept code="0055" codeSystem="2.16.840.1.113883.5.84" displayName="Quantitative microbial culture, cup" level="0" type="L"/>
+            <concept code="0056" codeSystem="2.16.840.1.113883.5.84" displayName="Quantitative microbial culture, droplet" level="0" type="L"/>
+            <concept code="0057" codeSystem="2.16.840.1.113883.5.84" displayName="Quantitative microbial culture, filter paper" level="0" type="L"/>
+            <concept code="0058" codeSystem="2.16.840.1.113883.5.84" displayName="Quantitative microbial culture, pad culture" level="0" type="L"/>
+            <concept code="0059" codeSystem="2.16.840.1.113883.5.84" displayName="Quantitative microbial culture, pour plate" level="0" type="L"/>
+            <concept code="0060" codeSystem="2.16.840.1.113883.5.84" displayName="Quantitative microbial culture, surface streak" level="0" type="L"/>
+            <concept code="0061" codeSystem="2.16.840.1.113883.5.84" displayName="Somatic Cell culture" level="0" type="L"/>
+            <concept code="0062" codeSystem="2.16.840.1.113883.5.84" displayName="Agar diffusion" level="0" type="L"/>
+            <concept code="0063" codeSystem="2.16.840.1.113883.5.84" displayName="Agar Gel Immunodiffusion" level="0" type="L"/>
+            <concept code="0064" codeSystem="2.16.840.1.113883.5.84" displayName="Electrophoresis" level="0" type="L"/>
+            <concept code="0065" codeSystem="2.16.840.1.113883.5.84" displayName="Agaorse gel electrophoresis" level="0" type="L"/>
+            <concept code="0066" codeSystem="2.16.840.1.113883.5.84" displayName="Electrophoresis, citrate agar" level="0" type="L"/>
+            <concept code="0067" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoelectrophoresis" level="0" type="L"/>
+            <concept code="0068" codeSystem="2.16.840.1.113883.5.84" displayName="Polyacrylamide gel electrophoresis" level="0" type="L"/>
+            <concept code="0069" codeSystem="2.16.840.1.113883.5.84" displayName="Starch gel electrophoresis" level="0" type="L"/>
+            <concept code="0070" codeSystem="2.16.840.1.113883.5.84" displayName="ELISA" level="0" type="L"/>
+            <concept code="0071" codeSystem="2.16.840.1.113883.5.84" displayName="ELISA, antigen capture" level="0" type="L"/>
+            <concept code="0072" codeSystem="2.16.840.1.113883.5.84" displayName="ELISA, avidin biotin peroxidase complex" level="0" type="L"/>
+            <concept code="0073" codeSystem="2.16.840.1.113883.5.84" displayName="Kinetic ELISA" level="0" type="L"/>
+            <concept code="0074" codeSystem="2.16.840.1.113883.5.84" displayName="ELISA, peroxidase-antiperoxidase" level="0" type="L"/>
+            <concept code="0075" codeSystem="2.16.840.1.113883.5.84" displayName="API 20 Strep" level="0" type="L"/>
+            <concept code="0076" codeSystem="2.16.840.1.113883.5.84" displayName="API 20A" level="0" type="L"/>
+            <concept code="0077" codeSystem="2.16.840.1.113883.5.84" displayName="API 20C AUX" level="0" type="L"/>
+            <concept code="0078" codeSystem="2.16.840.1.113883.5.84" displayName="API 20E" level="0" type="L"/>
+            <concept code="0079" codeSystem="2.16.840.1.113883.5.84" displayName="API 20NE" level="0" type="L"/>
+            <concept code="0080" codeSystem="2.16.840.1.113883.5.84" displayName="API 50 CH" level="0" type="L"/>
+            <concept code="0081" codeSystem="2.16.840.1.113883.5.84" displayName="API An-IDENT" level="0" type="L"/>
+            <concept code="0082" codeSystem="2.16.840.1.113883.5.84" displayName="API Coryne" level="0" type="L"/>
+            <concept code="0083" codeSystem="2.16.840.1.113883.5.84" displayName="API Rapid 20E" level="0" type="L"/>
+            <concept code="0084" codeSystem="2.16.840.1.113883.5.84" displayName="API Staph" level="0" type="L"/>
+            <concept code="0085" codeSystem="2.16.840.1.113883.5.84" displayName="API ZYM" level="0" type="L"/>
+            <concept code="0086" codeSystem="2.16.840.1.113883.5.84" displayName="Bacterial identification" level="0" type="L"/>
+            <concept code="0087" codeSystem="2.16.840.1.113883.5.84" displayName="mini VIDAS" level="0" type="L"/>
+            <concept code="0088" codeSystem="2.16.840.1.113883.5.84" displayName="Phage susceptibility typing" level="0" type="L"/>
+            <concept code="0089" codeSystem="2.16.840.1.113883.5.84" displayName="Quad-FERM+" level="0" type="L"/>
+            <concept code="0090" codeSystem="2.16.840.1.113883.5.84" displayName="RAPIDEC Staph" level="0" type="L"/>
+            <concept code="0091" codeSystem="2.16.840.1.113883.5.84" displayName="Staphaurex" level="0" type="L"/>
+            <concept code="0092" codeSystem="2.16.840.1.113883.5.84" displayName="VIDAS" level="0" type="L"/>
+            <concept code="0093" codeSystem="2.16.840.1.113883.5.84" displayName="Vitek" level="0" type="L"/>
+            <concept code="0094" codeSystem="2.16.840.1.113883.5.84" displayName="VITEK 2" level="0" type="L"/>
+            <concept code="0095" codeSystem="2.16.840.1.113883.5.84" displayName="Immune stain" level="0" type="L"/>
+            <concept code="0096" codeSystem="2.16.840.1.113883.5.84" displayName="Immunofluorescent antibody, direct" level="0" type="L"/>
+            <concept code="0097" codeSystem="2.16.840.1.113883.5.84" displayName="Immunofluorescent antibody, indirect" level="0" type="L"/>
+            <concept code="0098" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoperoxidase, Avidin-Biotin Complex" level="0" type="L"/>
+            <concept code="0099" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoperoxidase, Peroxidase anti-peroxidase complex" level="0" type="L"/>
+            <concept code="0100" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoperoxidase, Protein A-peroxidase complex" level="0" type="L"/>
+            <concept code="0101" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoassay" level="0" type="L"/>
+            <concept code="0102" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoassay, qualitative, multiple step" level="0" type="L"/>
+            <concept code="0103" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoassay, qualitative, single step" level="0" type="L"/>
+            <concept code="0104" codeSystem="2.16.840.1.113883.5.84" displayName="Radioimmunoassay" level="0" type="L"/>
+            <concept code="0105" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoassay, semi-quantitative, multiple step" level="0" type="L"/>
+            <concept code="0106" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoassay, semi-quantitative, single step" level="0" type="L"/>
+            <concept code="0107" codeSystem="2.16.840.1.113883.5.84" displayName="Microscopy" level="0" type="L"/>
+            <concept code="0108" codeSystem="2.16.840.1.113883.5.84" displayName="Darkfield microscopy" level="0" type="L"/>
+            <concept code="0109" codeSystem="2.16.840.1.113883.5.84" displayName="Electron microscopy" level="0" type="L"/>
+            <concept code="0110" codeSystem="2.16.840.1.113883.5.84" displayName="Electron microscopy tomography" level="0" type="L"/>
+            <concept code="0111" codeSystem="2.16.840.1.113883.5.84" displayName="Electron microscopy, negative stain" level="0" type="L"/>
+            <concept code="0112" codeSystem="2.16.840.1.113883.5.84" displayName="Electron microscopy, thick section" level="0" type="L"/>
+            <concept code="0113" codeSystem="2.16.840.1.113883.5.84" displayName="Electron microscopy, thin section" level="0" type="L"/>
+            <concept code="0114" codeSystem="2.16.840.1.113883.5.84" displayName="Microscopy, Light" level="0" type="L"/>
+            <concept code="0115" codeSystem="2.16.840.1.113883.5.84" displayName="Polarizing light microscopy" level="0" type="L"/>
+            <concept code="0116" codeSystem="2.16.840.1.113883.5.84" displayName="Scanning electron microscopy" level="0" type="L"/>
+            <concept code="0117" codeSystem="2.16.840.1.113883.5.84" displayName="Transmission electron microscopy" level="0" type="L"/>
+            <concept code="0118" codeSystem="2.16.840.1.113883.5.84" displayName="Transparent tape direct examination" level="0" type="L"/>
+            <concept code="0119" codeSystem="2.16.840.1.113883.5.84" displayName="3 Self-Sustaining Sequence Replication" level="0" type="L"/>
+            <concept code="0120" codeSystem="2.16.840.1.113883.5.84" displayName="Branched Chain DNA" level="0" type="L"/>
+            <concept code="0121" codeSystem="2.16.840.1.113883.5.84" displayName="Hybridization Protection Assay" level="0" type="L"/>
+            <concept code="0122" codeSystem="2.16.840.1.113883.5.84" displayName="Immune blot" level="0" type="L"/>
+            <concept code="0123" codeSystem="2.16.840.1.113883.5.84" displayName="In-situ hybridization" level="0" type="L"/>
+            <concept code="0124" codeSystem="2.16.840.1.113883.5.84" displayName="Ligase Chain Reaction" level="0" type="L"/>
+            <concept code="0125" codeSystem="2.16.840.1.113883.5.84" displayName="Ligation Activated Transcription" level="0" type="L"/>
+            <concept code="0126" codeSystem="2.16.840.1.113883.5.84" displayName="Nucleic Acid Probe" level="0" type="L"/>
+            <concept code="0128" codeSystem="2.16.840.1.113883.5.84" displayName="Nucleic acid probe with amplification" level="0" type="L"/>
+            <concept code="0129" codeSystem="2.16.840.1.113883.5.84" displayName="Nucleic acid probe with target amplification" level="0" type="L"/>
+            <concept code="0130" codeSystem="2.16.840.1.113883.5.84" displayName="Nucleic acid reverse transcription" level="0" type="L"/>
+            <concept code="0131" codeSystem="2.16.840.1.113883.5.84" displayName="Nucleic Acid Sequence Based Analysis" level="0" type="L"/>
+            <concept code="0132" codeSystem="2.16.840.1.113883.5.84" displayName="Polymerase chain reaction" level="0" type="L"/>
+            <concept code="0133" codeSystem="2.16.840.1.113883.5.84" displayName="Q-Beta Replicase or probe amplification category method" level="0" type="L"/>
+            <concept code="0134" codeSystem="2.16.840.1.113883.5.84" displayName="Restriction Fragment Length Polymorphism" level="0" type="L"/>
+            <concept code="0135" codeSystem="2.16.840.1.113883.5.84" displayName="Southern Blot" level="0" type="L"/>
+            <concept code="0136" codeSystem="2.16.840.1.113883.5.84" displayName="Strand Displacement Amplification" level="0" type="L"/>
+            <concept code="0137" codeSystem="2.16.840.1.113883.5.84" displayName="Transcription Mediated Amplification" level="0" type="L"/>
+            <concept code="0138" codeSystem="2.16.840.1.113883.5.84" displayName="Western Blot" level="0" type="L"/>
+            <concept code="0139" codeSystem="2.16.840.1.113883.5.84" displayName="Flocculation" level="0" type="L"/>
+            <concept code="0140" codeSystem="2.16.840.1.113883.5.84" displayName="Immune precipitation" level="0" type="L"/>
+            <concept code="0141" codeSystem="2.16.840.1.113883.5.84" displayName="Milk ring test" level="0" type="L"/>
+            <concept code="0142" codeSystem="2.16.840.1.113883.5.84" displayName="Precipitin" level="0" type="L"/>
+            <concept code="0143" codeSystem="2.16.840.1.113883.5.84" displayName="Acid fast stain" level="0" type="L"/>
+            <concept code="0144" codeSystem="2.16.840.1.113883.5.84" displayName="Acid fast stain, fluorochrome" level="0" type="L"/>
+            <concept code="0145" codeSystem="2.16.840.1.113883.5.84" displayName="Acid fast stain, Kinyoun's cold carbolfuchsin" level="0" type="L"/>
+            <concept code="0146" codeSystem="2.16.840.1.113883.5.84" displayName="Acid fast stain, Ziehl-Neelsen" level="0" type="L"/>
+            <concept code="0147" codeSystem="2.16.840.1.113883.5.84" displayName="Acid phosphatase stain" level="0" type="L"/>
+            <concept code="0148" codeSystem="2.16.840.1.113883.5.84" displayName="Acridine orange stain" level="0" type="L"/>
+            <concept code="0149" codeSystem="2.16.840.1.113883.5.84" displayName="Active brilliant orange KH stain" level="0" type="L"/>
+            <concept code="0150" codeSystem="2.16.840.1.113883.5.84" displayName="Alazarin red S stain" level="0" type="L"/>
+            <concept code="0151" codeSystem="2.16.840.1.113883.5.84" displayName="Alcian blue stain" level="0" type="L"/>
+            <concept code="0152" codeSystem="2.16.840.1.113883.5.84" displayName="Alcian blue with Periodic acid Schiff stain" level="0" type="L"/>
+            <concept code="0153" codeSystem="2.16.840.1.113883.5.84" displayName="Argentaffin stain" level="0" type="L"/>
+            <concept code="0154" codeSystem="2.16.840.1.113883.5.84" displayName="Argentaffin silver stain" level="0" type="L"/>
+            <concept code="0155" codeSystem="2.16.840.1.113883.5.84" displayName="Azure-eosin stain" level="0" type="L"/>
+            <concept code="0156" codeSystem="2.16.840.1.113883.5.84" displayName="Basic Fuschin stain" level="0" type="L"/>
+            <concept code="0157" codeSystem="2.16.840.1.113883.5.84" displayName="Bennhold stain" level="0" type="L"/>
+            <concept code="0158" codeSystem="2.16.840.1.113883.5.84" displayName="Bennhold's Congo red stain" level="0" type="L"/>
+            <concept code="0159" codeSystem="2.16.840.1.113883.5.84" displayName="Bielschowsky stain" level="0" type="L"/>
+            <concept code="0160" codeSystem="2.16.840.1.113883.5.84" displayName="Bielschowsky's silver stain" level="0" type="L"/>
+            <concept code="0161" codeSystem="2.16.840.1.113883.5.84" displayName="Bleach stain" level="0" type="L"/>
+            <concept code="0162" codeSystem="2.16.840.1.113883.5.84" displayName="Bodian stain" level="0" type="L"/>
+            <concept code="0163" codeSystem="2.16.840.1.113883.5.84" displayName="Brown-Brenn stain" level="0" type="L"/>
+            <concept code="0164" codeSystem="2.16.840.1.113883.5.84" displayName="Butyrate-esterase stain" level="0" type="L"/>
+            <concept code="0165" codeSystem="2.16.840.1.113883.5.84" displayName="Calcofluor white fluorescent stain" level="0" type="L"/>
+            <concept code="0166" codeSystem="2.16.840.1.113883.5.84" displayName="Carbol-fuchsin stain" level="0" type="L"/>
+            <concept code="0167" codeSystem="2.16.840.1.113883.5.84" displayName="Carmine stain" level="0" type="L"/>
+            <concept code="0168" codeSystem="2.16.840.1.113883.5.84" displayName="Churukian-Schenk stain" level="0" type="L"/>
+            <concept code="0169" codeSystem="2.16.840.1.113883.5.84" displayName="Congo red stain" level="0" type="L"/>
+            <concept code="0170" codeSystem="2.16.840.1.113883.5.84" displayName="Cresyl echt violet stain" level="0" type="L"/>
+            <concept code="0171" codeSystem="2.16.840.1.113883.5.84" displayName="Crystal violet stain" level="0" type="L"/>
+            <concept code="0172" codeSystem="2.16.840.1.113883.5.84" displayName="De Galantha stain" level="0" type="L"/>
+            <concept code="0173" codeSystem="2.16.840.1.113883.5.84" displayName="Dieterle silver impregnation stain" level="0" type="L"/>
+            <concept code="0174" codeSystem="2.16.840.1.113883.5.84" displayName="Fite-Farco stain" level="0" type="L"/>
+            <concept code="0175" codeSystem="2.16.840.1.113883.5.84" displayName="Fontana-Masson silver stain" level="0" type="L"/>
+            <concept code="0176" codeSystem="2.16.840.1.113883.5.84" displayName="Fouchet stain" level="0" type="L"/>
+            <concept code="0177" codeSystem="2.16.840.1.113883.5.84" displayName="Gomori stain" level="0" type="L"/>
+            <concept code="0178" codeSystem="2.16.840.1.113883.5.84" displayName="Gomori methenamine silver stain" level="0" type="L"/>
+            <concept code="0179" codeSystem="2.16.840.1.113883.5.84" displayName="Gomori-Wheatly trichrome stain" level="0" type="L"/>
+            <concept code="0180" codeSystem="2.16.840.1.113883.5.84" displayName="Gridley stain" level="0" type="L"/>
+            <concept code="0181" codeSystem="2.16.840.1.113883.5.84" displayName="Grimelius silver stain" level="0" type="L"/>
+            <concept code="0182" codeSystem="2.16.840.1.113883.5.84" displayName="Grocott stain" level="0" type="L"/>
+            <concept code="0183" codeSystem="2.16.840.1.113883.5.84" displayName="Grocott methenamine silver stain" level="0" type="L"/>
+            <concept code="0184" codeSystem="2.16.840.1.113883.5.84" displayName="Hale's colloidal ferric oxide stain" level="0" type="L"/>
+            <concept code="0185" codeSystem="2.16.840.1.113883.5.84" displayName="Hale's colloidal iron stain" level="0" type="L"/>
+            <concept code="0186" codeSystem="2.16.840.1.113883.5.84" displayName="Hansel stain" level="0" type="L"/>
+            <concept code="0187" codeSystem="2.16.840.1.113883.5.84" displayName="Harris regressive hematoxylin and eosin stain" level="0" type="L"/>
+            <concept code="0188" codeSystem="2.16.840.1.113883.5.84" displayName="Hematoxylin and eosin stain" level="0" type="L"/>
+            <concept code="0189" codeSystem="2.16.840.1.113883.5.84" displayName="Highman stain" level="0" type="L"/>
+            <concept code="0190" codeSystem="2.16.840.1.113883.5.84" displayName="Holzer stain" level="0" type="L"/>
+            <concept code="0191" codeSystem="2.16.840.1.113883.5.84" displayName="Iron hematoxylin stain" level="0" type="L"/>
+            <concept code="0192" codeSystem="2.16.840.1.113883.5.84" displayName="Jones stain" level="0" type="L"/>
+            <concept code="0193" codeSystem="2.16.840.1.113883.5.84" displayName="Jones methenamine silver stain" level="0" type="L"/>
+            <concept code="0194" codeSystem="2.16.840.1.113883.5.84" displayName="Kossa stain" level="0" type="L"/>
+            <concept code="0195" codeSystem="2.16.840.1.113883.5.84" displayName="Lawson-Van Gieson stain" level="0" type="L"/>
+            <concept code="0196" codeSystem="2.16.840.1.113883.5.84" displayName="Loeffler methylene blue stain" level="0" type="L"/>
+            <concept code="0197" codeSystem="2.16.840.1.113883.5.84" displayName="Luxol fast blue with cresyl violet stain" level="0" type="L"/>
+            <concept code="0198" codeSystem="2.16.840.1.113883.5.84" displayName="Luxol fast blue with Periodic acid-Schiff stain" level="0" type="L"/>
+            <concept code="0199" codeSystem="2.16.840.1.113883.5.84" displayName="MacNeal's tetrachrome blood stain" level="0" type="L"/>
+            <concept code="0200" codeSystem="2.16.840.1.113883.5.84" displayName="Mallory-Heidenhain stain" level="0" type="L"/>
+            <concept code="0201" codeSystem="2.16.840.1.113883.5.84" displayName="Masson trichrome stain" level="0" type="L"/>
+            <concept code="0202" codeSystem="2.16.840.1.113883.5.84" displayName="Mayer mucicarmine stain" level="0" type="L"/>
+            <concept code="0203" codeSystem="2.16.840.1.113883.5.84" displayName="Mayers progressive hematoxylin and eosin stain" level="0" type="L"/>
+            <concept code="0204" codeSystem="2.16.840.1.113883.5.84" displayName="May-Grunwald Giemsa stain" level="0" type="L"/>
+            <concept code="0205" codeSystem="2.16.840.1.113883.5.84" displayName="Methyl green stain" level="0" type="L"/>
+            <concept code="0206" codeSystem="2.16.840.1.113883.5.84" displayName="Methyl green pyronin stain" level="0" type="L"/>
+            <concept code="0207" codeSystem="2.16.840.1.113883.5.84" displayName="Modified Gomori-Wheatly trichrome stain" level="0" type="L"/>
+            <concept code="0208" codeSystem="2.16.840.1.113883.5.84" displayName="Modified Masson trichrome stain" level="0" type="L"/>
+            <concept code="0209" codeSystem="2.16.840.1.113883.5.84" displayName="Modified trichrome stain" level="0" type="L"/>
+            <concept code="0210" codeSystem="2.16.840.1.113883.5.84" displayName="Movat pentachrome stain" level="0" type="L"/>
+            <concept code="0211" codeSystem="2.16.840.1.113883.5.84" displayName="Mucicarmine stain" level="0" type="L"/>
+            <concept code="0212" codeSystem="2.16.840.1.113883.5.84" displayName="Neutral red stain" level="0" type="L"/>
+            <concept code="0213" codeSystem="2.16.840.1.113883.5.84" displayName="Night blue stain" level="0" type="L"/>
+            <concept code="0214" codeSystem="2.16.840.1.113883.5.84" displayName="Non-specific esterase stain" level="0" type="L"/>
+            <concept code="0215" codeSystem="2.16.840.1.113883.5.84" displayName="Oil red-O stain" level="0" type="L"/>
+            <concept code="0216" codeSystem="2.16.840.1.113883.5.84" displayName="Orcein stain" level="0" type="L"/>
+            <concept code="0217" codeSystem="2.16.840.1.113883.5.84" displayName="Perls' stain" level="0" type="L"/>
+            <concept code="0218" codeSystem="2.16.840.1.113883.5.84" displayName="Phosphotungstic acid-hematoxylin stain" level="0" type="L"/>
+            <concept code="0219" codeSystem="2.16.840.1.113883.5.84" displayName="Potassium ferrocyanide stain" level="0" type="L"/>
+            <concept code="0220" codeSystem="2.16.840.1.113883.5.84" displayName="Prussian blue stain" level="0" type="L"/>
+            <concept code="0221" codeSystem="2.16.840.1.113883.5.84" displayName="Putchler modified Bennhold stain" level="0" type="L"/>
+            <concept code="0222" codeSystem="2.16.840.1.113883.5.84" displayName="Quinacrine fluorescent stain" level="0" type="L"/>
+            <concept code="0223" codeSystem="2.16.840.1.113883.5.84" displayName="Reticulin stain" level="0" type="L"/>
+            <concept code="0224" codeSystem="2.16.840.1.113883.5.84" displayName="Rhodamine stain" level="0" type="L"/>
+            <concept code="0225" codeSystem="2.16.840.1.113883.5.84" displayName="Safranin stain" level="0" type="L"/>
+            <concept code="0226" codeSystem="2.16.840.1.113883.5.84" displayName="Schmorl stain" level="0" type="L"/>
+            <concept code="0227" codeSystem="2.16.840.1.113883.5.84" displayName="Seiver-Munger stain" level="0" type="L"/>
+            <concept code="0228" codeSystem="2.16.840.1.113883.5.84" displayName="Silver stain" level="0" type="L"/>
+            <concept code="0229" codeSystem="2.16.840.1.113883.5.84" displayName="Specific esterase stain" level="0" type="L"/>
+            <concept code="0230" codeSystem="2.16.840.1.113883.5.84" displayName="Steiner silver stain" level="0" type="L"/>
+            <concept code="0231" codeSystem="2.16.840.1.113883.5.84" displayName="Sudan III stain" level="0" type="L"/>
+            <concept code="0232" codeSystem="2.16.840.1.113883.5.84" displayName="Sudan IVI stain" level="0" type="L"/>
+            <concept code="0233" codeSystem="2.16.840.1.113883.5.84" displayName="Sulfated alcian blue stain" level="0" type="L"/>
+            <concept code="0234" codeSystem="2.16.840.1.113883.5.84" displayName="Supravital stain" level="0" type="L"/>
+            <concept code="0235" codeSystem="2.16.840.1.113883.5.84" displayName="Thioflavine-S stain" level="0" type="L"/>
+            <concept code="0236" codeSystem="2.16.840.1.113883.5.84" displayName="Three micron Giemsa stain" level="0" type="L"/>
+            <concept code="0237" codeSystem="2.16.840.1.113883.5.84" displayName="Vassar-Culling stain" level="0" type="L"/>
+            <concept code="0238" codeSystem="2.16.840.1.113883.5.84" displayName="Vital Stain" level="0" type="L"/>
+            <concept code="0239" codeSystem="2.16.840.1.113883.5.84" displayName="von Kossa stain" level="0" type="L"/>
+            <concept code="0240" codeSystem="2.16.840.1.113883.5.84" displayName="Antibiotic sensitivity, disk" level="0" type="L"/>
+            <concept code="0241" codeSystem="2.16.840.1.113883.5.84" displayName="BACTEC susceptibility test" level="0" type="L"/>
+            <concept code="0242" codeSystem="2.16.840.1.113883.5.84" displayName="Disk dilution" level="0" type="L"/>
+            <concept code="0243" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum bactericidal concentration test, macrodilution" level="0" type="L"/>
+            <concept code="0244" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum bactericidal concentration test, microdilution" level="0" type="L"/>
+            <concept code="0245" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Inhibitory Concentration, macrodilution" level="0" type="L"/>
+            <concept code="0246" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Inhibitory Concentration, microdilution" level="0" type="L"/>
+            <concept code="0247" codeSystem="2.16.840.1.113883.5.84" displayName="Turbidometric" level="0" type="L"/>
+            <concept code="0248" codeSystem="2.16.840.1.113883.5.84" displayName="Refractometric" level="0" type="L"/>
+            <concept code="0249" codeSystem="2.16.840.1.113883.5.84" displayName="Thin layer chromatography (TLC)" level="0" type="L"/>
+            <concept code="0250" codeSystem="2.16.840.1.113883.5.84" displayName="EMIT" level="0" type="L"/>
+            <concept code="0251" codeSystem="2.16.840.1.113883.5.84" displayName="Flow cytometry (FC)" level="0" type="L"/>
+            <concept code="0252" codeSystem="2.16.840.1.113883.5.84" displayName="Radial immunodiffusion (RID)" level="0" type="L"/>
+            <concept code="0253" codeSystem="2.16.840.1.113883.5.84" displayName="Fluorescence polarization immunoassay (FPIA)" level="0" type="L"/>
+            <concept code="0254" codeSystem="2.16.840.1.113883.5.84" displayName="Immunofixation electrophoresis (IFE)" level="0" type="L"/>
+            <concept code="0255" codeSystem="2.16.840.1.113883.5.84" displayName="Equilibrium dialysis" level="0" type="L"/>
+            <concept code="0256" codeSystem="2.16.840.1.113883.5.84" displayName="Kleihauer-Betke acid elution" level="0" type="L"/>
+            <concept code="0257" codeSystem="2.16.840.1.113883.5.84" displayName="Anti-complement immunofluorescence (ACIF)" level="0" type="L"/>
+            <concept code="0258" codeSystem="2.16.840.1.113883.5.84" displayName="GC/MS" level="0" type="L"/>
+            <concept code="0259" codeSystem="2.16.840.1.113883.5.84" displayName="Nephelometry" level="0" type="L"/>
+            <concept code="0260" codeSystem="2.16.840.1.113883.5.84" displayName="IgE immunoassay antibody" level="0" type="L"/>
+            <concept code="0261" codeSystem="2.16.840.1.113883.5.84" displayName="Lymphocyte Microcytotoxicity Assay" level="0" type="L"/>
+            <concept code="0262" codeSystem="2.16.840.1.113883.5.84" displayName="Spectrophotometry" level="0" type="L"/>
+            <concept code="0263" codeSystem="2.16.840.1.113883.5.84" displayName="Atomic absorption spectrophotometry (AAS)" level="0" type="L"/>
+            <concept code="0264" codeSystem="2.16.840.1.113883.5.84" displayName="Ion selective electrode (ISE)" level="0" type="L"/>
+            <concept code="0265" codeSystem="2.16.840.1.113883.5.84" displayName="Gas chromatography (GC)" level="0" type="L"/>
+            <concept code="0266" codeSystem="2.16.840.1.113883.5.84" displayName="Isoelectric focusing (IEF)" level="0" type="L"/>
+            <concept code="0267" codeSystem="2.16.840.1.113883.5.84" displayName="Immunochemiluminescence" level="0" type="L"/>
+            <concept code="0268" codeSystem="2.16.840.1.113883.5.84" displayName="Microparticle enzyme immunoassay (MEIA)" level="0" type="L"/>
+            <concept code="0269" codeSystem="2.16.840.1.113883.5.84" displayName="ICP/MS" level="0" type="L"/>
+            <concept code="0270" codeSystem="2.16.840.1.113883.5.84" displayName="Immunoradiometric assay (IRMA)" level="0" type="L"/>
+            <concept code="0271" codeSystem="2.16.840.1.113883.5.84" displayName="Photo optical clot detection" level="0" type="L"/>
+            <concept code="ALGM" codeSystem="2.16.840.1.113883.5.84" displayName="algorithm" level="1" type="S"/>
+            <concept code="BYCL" codeSystem="2.16.840.1.113883.5.84" displayName="bayesian calculation" level="2" type="L"/>
+            <concept code="GINT" codeSystem="2.16.840.1.113883.5.84" displayName="global introspection" level="1" type="L"/>
+            <concept code="ALGM" codeSystem="2.16.840.1.113883.5.84" displayName="algorithm" level="0" type="S"/>
+            <concept code="BYCL" codeSystem="2.16.840.1.113883.5.84" displayName="bayesian calculation" level="0" type="L"/>
+            <concept code="GINT" codeSystem="2.16.840.1.113883.5.84" displayName="global introspection" level="0" type="L"/>
+            <concept code="0272" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Inhibitory Concentration" level="0" type="S"/>
+            <concept code="0245" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Inhibitory Concentration, macrodilution" level="1" type="L"/>
+            <concept code="0246" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Inhibitory Concentration, microdilution" level="1" type="L"/>
+            <concept code="0275a" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Lethal Concentration (MLC)" level="0" type="L"/>
+            <concept code="0280" codeSystem="2.16.840.1.113883.5.84" displayName="Susceptibility Testing" level="0" type="S"/>
+            <concept code="0240" codeSystem="2.16.840.1.113883.5.84" displayName="Antibiotic sensitivity, disk" level="1" type="L"/>
+            <concept code="0241" codeSystem="2.16.840.1.113883.5.84" displayName="BACTEC susceptibility test" level="1" type="L"/>
+            <concept code="0242" codeSystem="2.16.840.1.113883.5.84" displayName="Disk dilution" level="1" type="L"/>
+            <concept code="0272" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Inhibitory Concentration" level="1" type="S"/>
+            <concept code="0273" codeSystem="2.16.840.1.113883.5.84" displayName="Viral Genotype Susceptibility" level="1" type="L"/>
+            <concept code="0274" codeSystem="2.16.840.1.113883.5.84" displayName="Viral Phenotype Susceptibility" level="1" type="L"/>
+            <concept code="0275" codeSystem="2.16.840.1.113883.5.84" displayName="Gradient Strip" level="1" type="L"/>
+            <concept code="0275a" codeSystem="2.16.840.1.113883.5.84" displayName="Minimum Lethal Concentration (MLC)" level="1" type="L"/>
+            <concept code="0276" codeSystem="2.16.840.1.113883.5.84" displayName="Slow Mycobacteria Susceptibility" level="1" type="L"/>
+            <concept code="0277" codeSystem="2.16.840.1.113883.5.84" displayName="Serum bactericidal titer" level="1" type="L"/>
+            <concept code="0278" codeSystem="2.16.840.1.113883.5.84" displayName="Agar screen" level="1" type="L"/>
+            <concept code="0279" codeSystem="2.16.840.1.113883.5.84" displayName="Disk induction" level="1" type="L"/>
+            <concept code="_VerificationMethod" codeSystem="2.16.840.1.113883.5.84" displayName="VerificationMethod" level="0" type="A"/>
+            <concept code="VDOC" codeSystem="2.16.840.1.113883.5.84" displayName="document verification" level="1" type="L"/>
+            <concept code="VREG" codeSystem="2.16.840.1.113883.5.84" displayName="registry verification" level="1" type="L"/>
+            <concept code="VTOKEN" codeSystem="2.16.840.1.113883.5.84" displayName="electronic token verification" level="1" type="L"/>
+            <concept code="VVOICE" codeSystem="2.16.840.1.113883.5.84" displayName="voice-based verification" level="1" type="L"/>
+            <concept code="_GeneticObservationMethod" codeSystem="2.16.840.1.113883.5.84" displayName="GeneticObservationMethod" level="0" type="A"/>
+            <concept code="PCR" codeSystem="2.16.840.1.113883.5.84" displayName="PCR" level="1" type="L"/>
+        </conceptList>
+    </valueSet>
 </valueSets>
