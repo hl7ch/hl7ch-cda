@@ -6,6 +6,7 @@ CDA-CH V2.0 Sample - Original representation embedded as PDF/A
 History:
 2018.02.06: Tony Schaller, medshare GmbH: Initial Version
 2018.02.12: Tony Schaller, medshare GmbH: Successful PDF/A-1a validation of embedded PDF and added elements: templateId, id, languageCode
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
 
 ********************************************************
 -->
@@ -43,7 +44,7 @@ History:
 	<effectiveTime value="20180206165700+0100"/>
 
 	<!-- Confidentiality code according to the Swiss EPR XDS.b metadata. -->
-	<confidentialityCode code="1051000195109" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="normal"/>
+	<confidentialityCode code="17621005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Normally accessible"/>
 
 	<!-- Document code according to CDA-CH v2.0. -->
 	<languageCode code="en-US"/>
