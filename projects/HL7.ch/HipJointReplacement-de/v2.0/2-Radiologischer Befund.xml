@@ -33,8 +33,8 @@ History:
 
 	<!-- Document code according to CDA-CH v2.0 and case study "hip joint replacement". -->
 	<code code="18748-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnostic imaging study">
-		<!-- Document code mapping to the Swiss EPR XDS.b metadata (EprDocumentTypeCode, 2.16.756.5.30.1.127.3.10.1.27). -->
-		<translation code="371527006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Radiology report"/>
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (DocumentEntry.typeCode	, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<translation code="4201000179104" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Imaging report" />
 	</code>
 
 	<!-- Document title according to CDA-CH v2.0 and case study "hip joint replacement". -->
