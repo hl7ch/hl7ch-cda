@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+    <!-- Chapter 1: Release Info (if publication is a release) -->
+    <!-- ========= -->
+    <release project="2.16.756.5.30.1.127.77.2" prefix="hl7chcda-" signature="develop" date="2018-05-07T16:06:13" versionLabel="2.0.2 (07.05.2018)">
+        <note language="en-US">
+            <span style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;">This is the first official release of CDA-CH v2.0 (2017)</span>
+        </note>
+    </release>
+    
+    <!-- Chapter 2: Mapping based on model list -->
+    <!-- ========= -->
+    <!-- Used to map an instance to a specific Schematron. How to read:
+- For every template-id that is used in instances there is an element map, e.g.
+  <map model="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" templateExt="2017-03-27" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or 
+  <map rootelement="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  
+  - @model       - optional    - hint as to the XML Schema that could be used
+  - @namespace   - mandatory   - default namespace-uri() of the project and of the instance unless specified otherwise
+  or
+  - templateRoot - mandatory   - in HL7v3 this would be an OID. In other instance types it might be something else, but then this mapping file might need adjusted setup
+  - templateExt  - optional    - in HL7v3 this would be any string found in templateId/@extension
+  or
+  - @rootelement - required    - local-name() of the root element of the instance
+  - @namespace   - mandatory   - namespace-uri() of the root element
+  
+  One of the following is required, normally schsvrl makes sense:
+  - @schsvrl     - conditional - path+file name of the SVRL XSL. The path should be relative to this index/map file
+  - @schtext     - conditional - path+file name of the Text XSL. The path should be relative to this index/map file
+  - @sch         - conditional - path+file name of the original Schematron file. The path should be relative to this index/map file
+    
+  Note that the same template may be part of multiple transactions, hence multiple map element could be present for the same template. The attached Schematron
+  will have different names, but will have the exact same rules (same template, same rules) hence only the first match is needed for validation.
+  
+- As final fallback, when no template-id is found in the instance, code should rely on root element of the instance to determine the Schematron file name ... --><!-- template name: CDA-CHv2.0-structuredBody -->
+    <map model="ClinicalDocument" rootelement="ClinicalDocument" namespace="urn:hl7-org:v3" templateRoot="2.16.756.5.30.1.1.10.1.9" sch="hl7chcda-StructuredBody.sch" schsvrl="hl7chcda-StructuredBody.xsl" xsd="ClinicalDocument.xsd"/>
+    <map model="ClinicalDocument" rootelement="ClinicalDocument" namespace="urn:hl7-org:v3" sch="hl7chcda-StructuredBody.sch" schsvrl="hl7chcda-StructuredBody.xsl" xsd="ClinicalDocument.xsd"/>
+   <!-- template name: CDA-CHv2.0-nonXMLBody -->
+    <map model="ClinicalDocument" rootelement="ClinicalDocument" namespace="urn:hl7-org:v3" sch="hl7chcda-NonXMLBody.sch" schsvrl="hl7chcda-NonXMLBody.xsl" xsd="ClinicalDocument.xsd"/>
+   <!-- template name: CDA-CHv2.0-structuredBodyEnhanced -->
+    <map model="ClinicalDocument" rootelement="ClinicalDocument" namespace="urn:hl7-org:v3" templateRoot="2.16.756.5.30.1.1.10.1.14" sch="hl7chcda-StructuredBodyEnhanced.sch" schsvrl="hl7chcda-StructuredBodyEnhanced.xsl" xsd="ClinicalDocument.xsd"/>
+    <map model="ClinicalDocument" rootelement="ClinicalDocument" namespace="urn:hl7-org:v3" sch="hl7chcda-StructuredBodyEnhanced.sch" schsvrl="hl7chcda-StructuredBodyEnhanced.xsl" xsd="ClinicalDocument.xsd"/>
+    
+    <!-- Chapter 3: Mapping based on representing templates -->
+    <!-- ========= -->
+    <!-- Used to map a representing template to a specific Schematron. How to read:
+- For every representing template the schematron file and sch svrl xsl conversion file is mentioned
+- The corresponding root element plus its namespace is mentioned 
+- Every transaction represented by this template is named-->
+    <template id="2.16.756.5.30.1.1.10.1.9" effectiveDate="" sch="hl7chcda-StructuredBody.sch" schsvrl="hl7chcda-StructuredBody.xsl">
+        <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+        <transaction id="2.16.756.5.30.1.127.77.2.4.2" effectiveDate="2017-11-10T09:35:28" statusCode="draft" versionLabel="2017" name="CDA-CH - StructuredBody"/>
+    </template>
+    <template id="2.16.756.5.30.1.1.10.1.12" effectiveDate="" sch="hl7chcda-NonXMLBody.sch" schsvrl="hl7chcda-NonXMLBody.xsl">
+        <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+        <transaction id="2.16.756.5.30.1.127.77.2.4.3" effectiveDate="2017-11-10T09:44:03" statusCode="draft" versionLabel="2017" name="CDA-CH - NonXMLBody"/>
+    </template>
+    <template id="2.16.756.5.30.1.1.10.1.14" effectiveDate="" sch="hl7chcda-StructuredBodyEnhanced.sch" schsvrl="hl7chcda-StructuredBodyEnhanced.xsl">
+        <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+        <transaction id="2.16.756.5.30.1.127.77.2.4.4" effectiveDate="2018-02-12T17:54:58" statusCode="draft" versionLabel="2018" name="CDA-CH - StructuredBody Enhanced"/>
+    </template>
+</mappings>

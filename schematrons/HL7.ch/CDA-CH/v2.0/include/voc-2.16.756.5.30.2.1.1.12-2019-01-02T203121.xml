@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valueSets xmlns="urn:hl7-org:v3" xmlns:local="http://art-decor.org/functions" xmlns:hl7="urn:hl7-org:v3" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-    <valueSet xmlns="" id="2.16.756.5.30.2.1.1.12" name="EmploymentStatus" displayName="Employment Status" effectiveDate="2019-01-02T20:31:21" statusCode="draft" versionLabel="2013" url="http://art-decor.org/decor/services/" ident="hl7chcda-" referencedFrom="cdachsmcp-">
-        <sourceCodeSystem id="2.16.756.5.30.2.1.1.12" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.2.1.1.12"/>
-        <publishingAuthority name="HL7 Benutzergruppe Schweiz">
-            <addrLine>Geschäftsstelle</addrLine>
-            <addrLine>Oberstrasse 222</addrLine>
-            <addrLine>CH-9014 St. Gallen</addrLine>
-            <addrLine type="uri">www.hl7.ch</addrLine>
+    <valueSet xmlns="" id="2.16.756.5.30.2.1.1.12" name="EmploymentStatus" displayName="Employment Status" effectiveDate="2019-01-02T20:31:21" statusCode="draft" versionLabel="2013">
+        <sourceCodeSystem id="2.16.756.5.30.2.1.1.12" identifierName="" canonicalUri="urn:oid:2.16.756.5.30.2.1.1.12" canonicalUriDSTU2="urn:oid:2.16.756.5.30.2.1.1.12" canonicalUriSTU3="urn:oid:2.16.756.5.30.2.1.1.12" canonicalUriR4="urn:oid:2.16.756.5.30.2.1.1.12"/>
+        <publishingAuthority name="medshare GmbH">
+            <addrLine>Buchshaldenstrasse 2</addrLine>
+            <addrLine>CH-3661 Uetendorf</addrLine>
         </publishingAuthority>
         <conceptList>
             <concept code="u" codeSystem="2.16.756.5.30.2.1.1.12" displayName="unemployed" level="0" type="L">

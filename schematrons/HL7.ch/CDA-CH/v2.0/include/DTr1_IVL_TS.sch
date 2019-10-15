@@ -23,7 +23,6 @@
     <!-- width has datatype PQR, which extends CV ((){1}(((0[1-9])|([12]\d)|(3[01]))?)?)? -->
     <assert role="error" test="not(hl7:width[@unit][not(@value)])" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-1-PQR: width element: no unit without value</assert>
     <assert role="error" test="not(hl7:width/hl7:translation)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-2-PQR: width element: no translation</assert>
-    <assert role="error" test="not(hl7:low/@value and hl7:high/@value) or number(substring(concat(hl7:low/@value,'00000000000000'),1,14)) &lt; number(substring(concat(hl7:high/@value,'00000000000000'),1,14))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-7-IVL_TS: low/@value must be before high/@value</assert>
     <assert role="error" test="not(hl7:low[@nullFlavor='PINF'])" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-7-1-IVL_TS: low must be lower than or equal to high. Found low boundary PINF (Positive Infinity)</assert>
     <assert role="error" test="not(hl7:high[@nullFlavor='NINF'])" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-7-2-IVL_TS: low must be lower than or equal to high. Found high boundary NINF (Negative Infinity)</assert>
 
@@ -31,12 +30,12 @@
     -->
     <let name="tum" value="'^(us|ms|s|min|h|d|wk|mo|a|)$'"/>
     <assert role="error" test="matches(hl7:width/@unit, $tum)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-8-IVL_TS: for width only us (microseconds), ms (milliseconds), s (seconds), min (minute), h (hours), d (day), wk (week), mo (month) or a (year) are allowed</assert>
-    <let name="theTS" value="hl7:low/@value"/>
-    <let name="theBC" value="if (starts-with($theTS,'-')) then '-' else ()"/>
-    <let name="theTZ" value="replace($theTS,'-?[^+-]+([+-].*)?$','$1')"/>
+    <let name="theTSLow" value="hl7:low/@value"/>
+    <let name="theBC" value="if (starts-with($theTSLow,'-')) then '-' else ()"/>
+    <let name="theTZ" value="replace($theTSLow,'-?[^+-]+([+-].*)?$','$1')"/>
     <let name="theTZh" value="if (string-length($theTZ)&gt;0) then substring($theTZ,1,3) else ()"/>
     <let name="theTZm" value="if (string-length($theTZ)&gt;3) then substring($theTZ,4) else ()"/>
-    <let name="theBaseTS" value="replace($theTS,'^-?([^+-]+)([+-].*)?','$1')"/>
+    <let name="theBaseTS" value="replace($theTSLow,'^-?([^+-]+)([+-].*)?','$1')"/>
     <let name="theCentury" value="if (substring($theBaseTS,1,2) castable as xs:integer) then substring($theBaseTS,1,2) else ()"/>
     <let name="theYear" value="if (substring($theBaseTS,3,2) castable as xs:integer) then substring($theBaseTS,3,2) else ()"/>
     <let name="theMonth" value="if (substring($theBaseTS,5,2) castable as xs:integer) then substring($theBaseTS,5,2) else ()"/>
@@ -54,8 +53,8 @@
     <let name="cSecond" value="if (empty($theSecond)) then '00' else $theSecond"/>
     <let name="cTZ" value="string-join(($theTZh,$theTZm),':')"/>
     <let name="theTSString" value="string-join(($theBC,$theCentury,$theYear,$theMonth,$theDay,$theHour,$theMinute,$theSecond,$theSubSecond,$theTZ),'')"/>
-    <let name="theDateTime" value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
-    <assert test="empty($theTS) or ($theTS=$theTSString and $theDateTime castable as xs:dateTime)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/low "<value-of select="$theTS"/>" is not a valid timestamp.</assert>
+    <let name="theLowDateTime" value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
+    <assert test="empty($theTSLow) or ($theTSLow=$theTSString and $theLowDateTime castable as xs:dateTime)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/low "<value-of select="$theTSLow"/>" is not a valid timestamp.</assert>
     <let name="theTS" value="hl7:center/@value"/>
     <let name="theBC" value="if (starts-with($theTS,'-')) then '-' else ()"/>
     <let name="theTZ" value="replace($theTS,'-?[^+-]+([+-].*)?$','$1')"/>
@@ -81,12 +80,12 @@
     <let name="theTSString" value="string-join(($theBC,$theCentury,$theYear,$theMonth,$theDay,$theHour,$theMinute,$theSecond,$theSubSecond,$theTZ),'')"/>
     <let name="theDateTime" value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
     <assert test="empty($theTS) or ($theTS=$theTSString and $theDateTime castable as xs:dateTime)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/center "<value-of select="$theTS"/>" is not a valid timestamp.</assert>
-    <let name="theTS" value="hl7:high/@value"/>
-    <let name="theBC" value="if (starts-with($theTS,'-')) then '-' else ()"/>
-    <let name="theTZ" value="replace($theTS,'-?[^+-]+([+-].*)?$','$1')"/>
+    <let name="theTSHigh" value="hl7:high/@value"/>
+    <let name="theBC" value="if (starts-with($theTSHigh,'-')) then '-' else ()"/>
+    <let name="theTZ" value="replace($theTSHigh,'-?[^+-]+([+-].*)?$','$1')"/>
     <let name="theTZh" value="if (string-length($theTZ)&gt;0) then substring($theTZ,1,3) else ()"/>
     <let name="theTZm" value="if (string-length($theTZ)&gt;3) then substring($theTZ,4) else ()"/>
-    <let name="theBaseTS" value="replace($theTS,'^-?([^+-]+)([+-].*)?','$1')"/>
+    <let name="theBaseTS" value="replace($theTSHigh,'^-?([^+-]+)([+-].*)?','$1')"/>
     <let name="theCentury" value="if (substring($theBaseTS,1,2) castable as xs:integer) then substring($theBaseTS,1,2) else ()"/>
     <let name="theYear" value="if (substring($theBaseTS,3,2) castable as xs:integer) then substring($theBaseTS,3,2) else ()"/>
     <let name="theMonth" value="if (substring($theBaseTS,5,2) castable as xs:integer) then substring($theBaseTS,5,2) else ()"/>
@@ -104,6 +103,7 @@
     <let name="cSecond" value="if (empty($theSecond)) then '00' else $theSecond"/>
     <let name="cTZ" value="string-join(($theTZh,$theTZm),':')"/>
     <let name="theTSString" value="string-join(($theBC,$theCentury,$theYear,$theMonth,$theDay,$theHour,$theMinute,$theSecond,$theSubSecond,$theTZ),'')"/>
-    <let name="theDateTime" value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
-    <assert test="empty($theTS) or ($theTS=$theTSString and $theDateTime castable as xs:dateTime)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/high "<value-of select="$theTS"/>" is not a valid timestamp.</assert>
+    <let name="theHighDateTime" value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
+    <assert test="empty($theTSHigh) or ($theTSHigh=$theTSString and $theHighDateTime castable as xs:dateTime)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/high "<value-of select="$theTSHigh"/>" is not a valid timestamp.</assert>
+    <assert role="error" test="empty($theTSLow) or empty($theTSHigh) or not($theLowDateTime castable as xs:dateTime) or not($theHighDateTime castable as xs:dateTime) or xs:dateTime($theLowDateTime) le xs:dateTime($theHighDateTime)" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-7-IVL_TS: low/@value (<value-of select="$theTSLow"/>) must be before high/@value (<value-of select="$theTSHigh"/>)</assert>
 </rule>

@@ -6,6 +6,7 @@
 <rule xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="CS">
     <extends rule="ANY"/>
     <assert role="error" test="(@nullFlavor and not(@code or @typeCode)) or (not(@nullFlavor) and (@code or @typeCode))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_CS">dtr1-1-CS: @code/@typeCode and @nullFlavor are mutually exclusive</assert>
+
     <!-- EIVL_TS.event codeSystem has default 2.16.840.1.113883.5.139 -->
     <assert role="error" test="not(@codeSystem) or @codeSystem = '2.16.840.1.113883.5.139'" see="https://art-decor.org/mediawiki/index.php?title=DTr1_CS">dtr1-2-CS: cannot have codeSystem</assert>
     <!-- EIVL_TS.event codeSystemName has default TimingEvent -->
