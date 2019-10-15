@@ -98,7 +98,7 @@ History:
 					<given>Klebsiella</given>
 					<family>Keller</family>
 				</name>
-				<!-- The patient's gender according to the Swiss EPR XDS.b metadata. -->
+				<!-- The patient's gender.  -->
 				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="Female" />
 				<!-- The patient's birthdate. -->
 				<birthTime value="20120215"/>
