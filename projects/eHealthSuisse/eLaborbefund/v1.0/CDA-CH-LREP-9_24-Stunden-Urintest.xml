@@ -8,6 +8,7 @@ History:
 2017.02.03: Tony Schaller, medshare GmbH (Changing deprecated OID for GS1 GLN to the current one)
 2018.03.15: Tony Schaller, medshare GmbH: Update to make it valid for CDA-CH v2.0 (2017)
 2018.03.15: Tony Schaller, medshare GmbH: Adding a previous observation (used as proof of concept for Schematrons, only)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
 
 ********************************************************
 -->
