@@ -49,9 +49,7 @@
 
 	<effectiveTime value="20120204140000+0100" />
 
-	<confidentialityCode code="1051000195109"
-		codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
-		displayName="Normal" />
+	<confidentialityCode code="17621005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Normally accessible"/>
 
 	<languageCode code="de-CH" />
 
