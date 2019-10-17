@@ -6,6 +6,7 @@
      
      History:
      - 2010-05-18 oliver egger, inital version supporting all cda-ch-ii templates
+     - 2019-10-15: Oliver Egger, ahdis ag: Update to CDA-CH v2.1 (2019)
      ====================================================================== -->
 <project name="schematron support for hl7ch" default="init">
 
@@ -53,7 +54,7 @@
 	<target name="document" description="document schema files with rule" depends="init">
 		<delete file="${schdir}/${sch}_doc_${lang}.html" failonerror="false" />
 		<!-- expand inclusions -->
-		<xslt style="../stylesheets/HL7.ch/CDA-CH/v1.2/cda-ch-doc.xsl" in="${schdir}/${sch}.sch" out="${schdir}/${sch}_doc_${lang}.html" basedir="${schdir}">
+		<xslt style="../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch-doc.xsl" in="${schdir}/${sch}.sch" out="${schdir}/${sch}_doc_${lang}.html" basedir="${schdir}">
 			<param name="language" expression="${lang}" />
 			<classpath>
 				<pathelement location="${schematronpath}/saxon9he.jar" />
@@ -100,160 +101,26 @@
 	
 	<!-- HL7.ch CDA-CH -->
 	<target name="HL7.ch-CDA-CH docxsl cda-ch" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="cda-ch" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v1.2" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-CDA-CH docxsl cda-ch-medication-doc" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="cda-ch-medication-doc" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v1.2" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-CDA-CH all" depends="HL7.ch-CDA-CH docxsl cda-ch, HL7.ch-CDA-CH docxsl cda-ch-medication-doc" description="HL7.ch-CDA-CH all" />
-
-	
-	<!-- IHE-PCC -->
-	<target name="IHE-PCC xsl xphrExtract" depends="init" description="xsl validator, html docu">
 		<antcall target="generateValidator">
-			<param name="schdir" value="../schematrons/IHE/PCC/v5.0" />
-			<param name="sch" value="xphrExtract" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.0" />
 		</antcall>
 	</target>
+		
+	<target name="HL7.ch-CDA-CH" depends="HL7.ch-CDA-CH docxsl cda-ch" description="HL7.ch-CDA-CH all" />
+
 	
-	<target name="IHE-PCC xsl xphrUpdate" depends="init" description="xsl validator, html docu">
-		<antcall target="generateValidator">
-			<param name="schdir" value="../schematrons/IHE/PCC/v5.0" />
-			<param name="sch" value="xphrUpdate" />
+	<target name="HipJointReplacement-de-1" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="1-Zuweisung zur Radiologischen Diagnostik" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.0" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
+
 	
-	<target name="IHE-PCC all" depends="IHE-PCC xsl xphrExtract,IHE-PCC xsl xphrUpdate" description="IHE-PCC all" />
-
-	<!-- SUVA-eMedidoc -->
-	<target name="Suva-eMedidoc 2904 docxsl Behandlungsmeldung" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="2904" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2904 validate 2904-Behandlungsmeldung.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/Suva/eMedidoc/v2.0" />
-			<param name="xml" value="2904-Behandlungsmeldung" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2904" />
-		</antcall>
-	</target>
-	
-	<target name="Suva-eMedidoc 2905 docxsl AUFeinfach" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="2905" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2905 validate 2905-AUFeinfach.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/Suva/eMedidoc/v2.0" />
-			<param name="xml" value="2905-AUFeinfach" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2905" />
-		</antcall>
-	</target>
-	
-	<target name="Suva-eMedidoc 2906 docxsl AUFdetailliert" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="2906" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2906 validate 2906-AUFdetailliert.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/Suva/eMedidoc/v2.0" />
-			<param name="xml" value="2906-AUFdetailliert" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2906" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2907 docxsl MeldungKomplexfall" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="2907" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2907 validate 2907-MeldungKomplexfall.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/Suva/eMedidoc/v2.0" />
-			<param name="xml" value="2907-MeldungKomplexfall" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2907" />
-		</antcall>
-	</target>
-
-
-	<target name="Suva-eMedidoc 2927 docxsl ArztzeugnisUVG" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="2927" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2927 validate ArztzeugnisUVG.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/Suva/eMedidoc/v2.0" />
-			<param name="xml" value="2927-ArztzeugnisUVG" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2927" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2928 docxsl Ärztlicher Zwischenbericht" depends="init" description="build schematron xsl and generate document">
-		<antcall target="documentAndGenerateValidator">
-			<param name="sch" value="2928" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc 2928 validate ÄrztlicherZwischenbericht.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/Suva/eMedidoc/v2.0" />
-			<param name="xml" value="2928-ÄrztlicherZwischenbericht" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2928" />
-		</antcall>
-	</target>
-
-	<target name="Suva-eMedidoc all" depends="Suva-eMedidoc 2904 docxsl Behandlungsmeldung,Suva-eMedidoc 2904 validate 2904-Behandlungsmeldung.xml,Suva-eMedidoc 2905 docxsl AUFeinfach,Suva-eMedidoc 2905 validate 2905-AUFeinfach.xml,Suva-eMedidoc 2906 docxsl AUFdetailliert,Suva-eMedidoc 2906 validate 2906-AUFdetailliert.xml,Suva-eMedidoc 2907 docxsl MeldungKomplexfall,Suva-eMedidoc 2907 validate 2907-MeldungKomplexfall.xml,Suva-eMedidoc 2927 docxsl ArztzeugnisUVG,Suva-eMedidoc 2927 validate ArztzeugnisUVG.xml,Suva-eMedidoc 2928 docxsl Ärztlicher Zwischenbericht,Suva-eMedidoc 2928 validate ÄrztlicherZwischenbericht.xml" description="Suva all" />
-
-	<!-- SVV-KZBT -->
-	<target name="SVV-KZBT docxsl svv-kzbt" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="schdir" value="../schematrons/SVV/KZBT/v20090228" />
-			<param name="sch" value="svv-kzbt" />
-		</antcall>
-	</target>
-
-	<target name="SVV-KZBT validate HWS.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/SVV/de-KZBT/v20090208" />
-			<param name="xml" value="HWS" />
-			<param name="schdir" value="../schematrons/SVV/KZBT/v20090228" />
-			<param name="sch" value="svv-kzbt" />
-		</antcall>
-	</target>
-
-	<target name="SVV-KZBT all" depends="SVV-KZBT docxsl svv-kzbt,SVV-KZBT validate HWS.xml" description="SVV all" />
-	
-	
-	<!-- HL7.ch-de-AuffahrUnfall-->
+	<!-- HL7.ch-de-AuffahrUnfall
 	<target name="HL7.ch-de-AuffahrUnfall validate 1_KZBT.xml" depends="init" description="validate">
 		<antcall target="validate">
 			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
@@ -346,71 +213,8 @@
 	
     <target name="HL7.ch-de-AuffahrUnfall all" depends="HL7.ch-de-AuffahrUnfall validate 1_KZBT.xml,HL7.ch-de-AuffahrUnfall validate 2_xPHRExtractSpital.xml,HL7.ch-de-AuffahrUnfall validate 3_SpitalaustrittsberichtAmbulant.xml,HL7.ch-de-AuffahrUnfall validate 4_BehandlungsmeldungSpital.xml,HL7.ch-de-AuffahrUnfall validate 5_ArbeitsunfähigkeitsmeldungSpital.xml,HL7.ch-de-AuffahrUnfall validate 6_ArztzeugnisUVGHausarzt.xml,HL7.ch-de-AuffahrUnfall validate 8_xPHRUpdateHausarzt.xml,HL7.ch-de-AuffahrUnfall validate 9_xPHRExtractKardiologie.xml,HL7.ch-de-AuffahrUnfall validate 11_xPHRUpdate2Hausarzt.xml,HL7.ch-de-AuffahrUnfall validate 12_ÄrztlicherZwischenberichtHausarzt.xml">
             
-    </target>
+    </target> -->
 
-
-	
-	<!-- SchematronTutorial -->
-	<target name="HL7.ch-SchematronTutorial xsl minimal" depends="init" description="xsl validator, html docu">
-		<antcall target="generateValidator">
-			<param name="schdir" value="../projects/HL7.ch/SchematronTutorial/project_schematrons" />
-			<param name="sch" value="minimal" />
-		</antcall>
-	</target>
-
-	<target name="HL7.ch-SchematronTutorial docxsl minimal_docu" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="schdir" value="../projects/HL7.ch/SchematronTutorial/project_schematrons" />
-			<param name="sch" value="minimal_docu" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-SchematronTutorial docxsl tutorial" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="schdir" value="../projects/HL7.ch/SchematronTutorial/project_schematrons" />
-			<param name="sch" value="tutorial" />
-		</antcall>
-	</target>
-
-	<target name="HL7.ch-SchematronTutorial validate minimal_ok" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/SchematronTutorial" />
-			<param name="xml" value="minimal_ok" />
-			<param name="schdir" value="../projects/HL7.ch/SchematronTutorial/project_schematrons" />
-			<param name="sch" value="tutorial" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-SchematronTutorial validate minimal_fails" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/SchematronTutorial" />
-			<param name="xml" value="minimal_fails" />
-			<param name="schdir" value="../projects/HL7.ch/SchematronTutorial/project_schematrons" />
-			<param name="sch" value="tutorial" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-SchematronTutorial all" depends="HL7.ch-SchematronTutorial xsl minimal,HL7.ch-SchematronTutorial docxsl minimal_docu,HL7.ch-SchematronTutorial docxsl tutorial,HL7.ch-SchematronTutorial validate minimal_ok,HL7.ch-SchematronTutorial validate minimal_fails" description="validate">
-	</target>
-	
-	<target name="swissmedicalsuite-de-ERezept-1.0 docxsl tutorial" depends="init" description="xsl validator, html docu">
-		<antcall target="documentAndGenerateValidator">
-			<param name="schdir" value="../schematrons/swissmedicalsuite/ERezept/v1.0" />
-			<param name="sch" value="ERezept-1.0" />
-		</antcall>
-	</target>
-	
-	<target name="swissmedicalsuite-de-ERezept-1.0 validate ERezept-1.0.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/swissmedicalsuite/ERezept/v1.0" />
-			<param name="xml" value="SwissMedicalSuite_ERezept" />
-			<param name="schdir" value="../schematrons/swissmedicalsuite/ERezept/v1.0" />
-			<param name="sch" value="ERezept-1.0" />
-		</antcall>
-	</target>
-	
-	<target name="all" depends="HL7.ch-CDA-CH all,IHE-PCC all,Suva-eMedidoc all,SVV-KZBT all,HL7.ch-SchematronTutorial all,HL7.ch-de-AuffahrUnfall all">
-	</target>
 
 	
 	
