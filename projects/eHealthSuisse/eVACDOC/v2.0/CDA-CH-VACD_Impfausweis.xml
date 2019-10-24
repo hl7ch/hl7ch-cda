@@ -377,7 +377,7 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+								<functionCode nullFlavor='NAV'>
 									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
 								</functionCode>
 								<time value="20180604"/>
@@ -536,7 +536,7 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+								<functionCode nullFlavor='NAV'>
 									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
 								</functionCode>
 								<time value="20180604"/>
@@ -684,7 +684,7 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+								<functionCode nullFlavor='NAV'>
 									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
 								</functionCode>
 								<time value="20180604"/>
@@ -810,7 +810,7 @@ History:
 								</assignedEntity>
 							</performer>
 							<author>
-								<functionCode code="309343006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Physician">
+								<functionCode nullFlavor='NAV'>
 									<translation code="221" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical doctors"/>
 								</functionCode>
 								<time value="20180604"/>
