@@ -242,13 +242,6 @@ History:
 			<xs:element name="componentOf" type="hl7v3:POCD_MT000040.Component1" minOccurs="0"/>
 			<xs:element name="component" type="hl7v3:POCD_MT000040.Component2"/>
 		</xs:sequence>
-		<xs:attribute name="ID" type="xs:ID">
-			<xs:annotation>
-				<xs:appinfo>
-					<jaxb:property name="ID_attr"/>
-				</xs:appinfo>
-			</xs:annotation>
-		</xs:attribute>
 		<xs:attribute name="nullFlavor" type="hl7v3:NullFlavor" use="optional"/>
 		<xs:attribute name="classCode" type="hl7v3:ActClinicalDocument" use="optional" fixed="DOCCLIN"/>
 		<xs:attribute name="moodCode" type="hl7v3:ActMood" use="optional" fixed="EVN"/>
@@ -694,13 +687,6 @@ History:
 			<xs:element name="signatureCode" type="hl7v3:CS"/>
 			<xs:element name="assignedEntity" type="hl7v3:POCD_MT000040.AssignedEntity"/>
 		</xs:sequence>
-		<xs:attribute name="ID" type="xs:ID">
-			<xs:annotation>
-				<xs:appinfo>
-					<jaxb:property name="ID_attr"/>
-				</xs:appinfo>
-			</xs:annotation>
-		</xs:attribute>
 		<xs:attribute name="nullFlavor" type="hl7v3:NullFlavor" use="optional"/>
 		<xs:attribute name="typeCode" type="hl7v3:ParticipationType" use="optional" fixed="LA"/>
 		<xs:attribute name="contextControlCode" type="hl7v3:ContextControl" use="optional" fixed="OP"/>
