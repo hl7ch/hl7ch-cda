@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.127.3.10.1.13"
+             name="DocumentEntry.languageCode"
+             displayName="DocumentEntry.languageCode"
+             statusCode="final"
+             versionLabel="201907.1-stable"
+             effectiveDate="2019-11-03T11:28:28"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Sprache des Dokumentes gemäss Anhang 3 EPDV-EDI. Definiert die Sprache in welcher das Dokument verfasst wurde.<br clear="none"/>
+            </desc>
+      <desc language="en-US">Document language as per Annex 3  EPRO-FDHA. Defines the language in which the document was written.<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">Langue du document selon l'annexe 3 ODEP-DFI. Définit la langue dans laquelle est rédigé le document.<br clear="none"/>
+            </desc>
+      <desc language="it-CH">Lingua del documento secondo l'allegato 3 OCIP-DFI. Definisce la lingua nella quale è stato redatto il documento.<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.316"
+                        identifierName="Tags for Identifying Languages - RFC5646"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.316"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.316"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.316"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.316"/>
+      <sourceCodeSystem id="2.16.756.5.30.1.127.3.10.12"
+                        identifierName="ch-ehealth-codesystem-language"
+                        canonicalUri="urn:oid:2.16.756.5.30.1.127.3.10.12"
+                        canonicalUriDSTU2="urn:oid:2.16.756.5.30.1.127.3.10.12"
+                        canonicalUriSTU3="urn:oid:2.16.756.5.30.1.127.3.10.12"
+                        canonicalUriR4="urn:oid:2.16.756.5.30.1.127.3.10.12"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <completeCodeSystem codeSystem="2.16.840.1.113883.6.316"
+                          codeSystemName="Tags for Identifying Languages - RFC5646"/>
+      <conceptList>
+                <concept code="ar"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Arabic"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Arabisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Arabe"/>
+                    <designation language="it-CH" type="preferred" displayName="Arabo"/>
+                    <designation language="en-US" type="preferred" displayName="Arabic"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="bn"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Bengali"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Bengalisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Bengali"/>
+                    <designation language="it-CH" type="preferred" displayName="Bengalese"/>
+                    <designation language="en-US" type="preferred" displayName="Bengali"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="cs"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Czech"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Tschechisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Tchèque"/>
+                    <designation language="it-CH" type="preferred" displayName="Ceco"/>
+                    <designation language="en-US" type="preferred" displayName="Czech"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="da"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Danish"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Dänisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Danois"/>
+                    <designation language="it-CH" type="preferred" displayName="Danese"/>
+                    <designation language="en-US" type="preferred" displayName="Danish"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="de"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="German"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Deutsch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Allemand"/>
+                    <designation language="it-CH" type="preferred" displayName="Tedesco"/>
+                    <designation language="en-US" type="preferred" displayName="German"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="de-AT"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="German (Austria)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Deutsch (Österreich)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Allemand (Autriche)"/>
+                    <designation language="it-CH" type="preferred" displayName="Tedesco (Austria)"/>
+                    <designation language="en-US" type="preferred" displayName="German (Austria)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="de-CH"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="German (Switzerland)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Deutsch (Schweiz)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Allemand (Suisse)"/>
+                    <designation language="it-CH" type="preferred" displayName="Tedesco (Svizzera)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="German (Switzerland)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="de-DE"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="German (Germany)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Deutsch (Deutschland)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Allemand (Allemagne)"/>
+                    <designation language="it-CH" type="preferred" displayName="Tedesco (Germania)"/>
+                    <designation language="en-US" type="preferred" displayName="German (Germany)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="el"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Greek"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Griechisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Grec"/>
+                    <designation language="it-CH" type="preferred" displayName="Greco"/>
+                    <designation language="en-US" type="preferred" displayName="Greek"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Englisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Anglais"/>
+                    <designation language="it-CH" type="preferred" displayName="Inglese"/>
+                    <designation language="en-US" type="preferred" displayName="English"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-AU"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (Australia)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Englisch (Australien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Anglais (Australie)"/>
+                    <designation language="it-CH" type="preferred" displayName="Inglese (Australia)"/>
+                    <designation language="en-US" type="preferred" displayName="English (Australia)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-CA"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (Canada)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Englisch (Kanada)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Anglais (Canada)"/>
+                    <designation language="it-CH" type="preferred" displayName="Inglese (Canada)"/>
+                    <designation language="en-US" type="preferred" displayName="English (Canada)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-GB"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (Great Britain)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Englisch (Grossbritannien)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Anglais (Grande Bretagne)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Inglese (Gran Bretagna)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="English (Great Britain)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-IN"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (India)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Englisch (Indien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Anglais (Inde)"/>
+                    <designation language="it-CH" type="preferred" displayName="Inglese (India)"/>
+                    <designation language="en-US" type="preferred" displayName="English (India)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-NZ"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (New Zealand)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Englisch (Neuseeland)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Anglais (Nouvelle Zélande)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Inglese (Nuova Zelanda)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="English (New Zealand)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-SG"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (Singapore)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Englisch (Singapur)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Anglais (Singapour)"/>
+                    <designation language="it-CH" type="preferred" displayName="Inglese (Singapore)"/>
+                    <designation language="en-US" type="preferred" displayName="English (Singapore)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="en-US"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="English (United States)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Englisch (USA)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Anglais (États Unis)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Inglese (Stati Uniti)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="English (United States)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="es"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Spanish"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Spanisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Espagnol"/>
+                    <designation language="it-CH" type="preferred" displayName="Spagnolo"/>
+                    <designation language="en-US" type="preferred" displayName="Spanish"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="es-AR"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Spanish (Argentina)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Spanisch (Argentinien)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Espagnol (Argentine)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Spagnolo (Argentina)"/>
+                    <designation language="en-US" type="preferred" displayName="Spanish (Argentina)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="es-ES"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Spanish (Spain)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Spanisch (Spanien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Espagnol (Espagne)"/>
+                    <designation language="it-CH" type="preferred" displayName="Spagnolo (Spagna)"/>
+                    <designation language="en-US" type="preferred" displayName="Spanish (Spain)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="es-UY"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Spanish (Uruguay)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Spanisch (Uruguay)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Espagnol (Uruguay)"/>
+                    <designation language="it-CH" type="preferred" displayName="Spagnolo (Uruguay)"/>
+                    <designation language="en-US" type="preferred" displayName="Spanish (Uruguay)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fi"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Finnish"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Finnisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Finnois"/>
+                    <designation language="it-CH" type="preferred" displayName="Finlandese"/>
+                    <designation language="en-US" type="preferred" displayName="Finnish"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fr"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="French"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Französisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Français"/>
+                    <designation language="it-CH" type="preferred" displayName="Francese"/>
+                    <designation language="en-US" type="preferred" displayName="French"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fr-BE"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="French (Belgium)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Französisch (Belgien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Français (Belgique)"/>
+                    <designation language="it-CH" type="preferred" displayName="Francese (Belgio)"/>
+                    <designation language="en-US" type="preferred" displayName="French (Belgium)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fr-CH"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="French (Switzerland)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Französisch (Schweiz)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Français (Suisse)"/>
+                    <designation language="it-CH" type="preferred" displayName="Francese (Svizzera)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="French (Switzerland)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fr-FR"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="French (France)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Französisch (Frankreich)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Français (France)"/>
+                    <designation language="it-CH" type="preferred" displayName="Francese (Francia)"/>
+                    <designation language="en-US" type="preferred" displayName="French (France)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fy"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Frysian"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Friesisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Frison"/>
+                    <designation language="it-CH" type="preferred" displayName="Frisone"/>
+                    <designation language="en-US" type="preferred" displayName="Frysian"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="fy-NL"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Frysian (Netherlands)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Friesisch (Niederlande)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Frison (Pays-Bas)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Frisone (Paesi Bassi)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Frysian (Netherlands)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="hi"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Hindi"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Hindi"/>
+                    <designation language="fr-CH" type="preferred" displayName="Hindi"/>
+                    <designation language="it-CH" type="preferred" displayName="Hindi"/>
+                    <designation language="en-US" type="preferred" displayName="Hindi"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="hr"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Croatian"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Kroatisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Croate"/>
+                    <designation language="it-CH" type="preferred" displayName="Croato"/>
+                    <designation language="en-US" type="preferred" displayName="Croatian"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="it"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Italian"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Italienisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Italien"/>
+                    <designation language="it-CH" type="preferred" displayName="Italiano"/>
+                    <designation language="en-US" type="preferred" displayName="Italian"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="it-CH"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Italian (Switzerland)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Italienisch (Schweiz)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Italien (Suisse)"/>
+                    <designation language="it-CH" type="preferred" displayName="Italiano (Svizzera)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Italian (Switzerland)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="it-IT"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Italian (Italy)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Italienisch (Italien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Italien (Italie)"/>
+                    <designation language="it-CH" type="preferred" displayName="Italiano (Italia)"/>
+                    <designation language="en-US" type="preferred" displayName="Italian (Italy)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="ja"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Japanese"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Japanisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Japonais"/>
+                    <designation language="it-CH" type="preferred" displayName="Giapponese"/>
+                    <designation language="en-US" type="preferred" displayName="Japanese"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="ko"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Korean"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Koreanisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Coréen"/>
+                    <designation language="it-CH" type="preferred" displayName="Coreano"/>
+                    <designation language="en-US" type="preferred" displayName="Korean"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="nl"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Dutch"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Niederländisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Néerlandais"/>
+                    <designation language="it-CH" type="preferred" displayName="Olandese"/>
+                    <designation language="en-US" type="preferred" displayName="Dutch"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="nl-BE"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Dutch (Belgium)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Niederländisch (Belgien)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Néerlandais (Belgique)"/>
+                    <designation language="it-CH" type="preferred" displayName="Olandese (Belgio)"/>
+                    <designation language="en-US" type="preferred" displayName="Dutch (Belgium)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="nl-NL"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Dutch (Netherlands)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Niederländisch (Niederlande)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Néerlandais (Pays-Bas)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Olandese (Paesi Bassi)"/>
+                    <designation language="en-US" type="preferred" displayName="Dutch (Netherlands)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="no"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Norwegian"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Norwegisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Norvégien"/>
+                    <designation language="it-CH" type="preferred" displayName="Norvegese"/>
+                    <designation language="en-US" type="preferred" displayName="Norwegian"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="no-NO"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Norwegian (Norway)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Norwegisch (Norwegen)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Norvégien (Norvège)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Norvegese (Norvegia)"/>
+                    <designation language="en-US" type="preferred" displayName="Norwegian (Norway)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="pa"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Punjabi"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Panjabi"/>
+                    <designation language="fr-CH" type="preferred" displayName="Panjabi"/>
+                    <designation language="it-CH" type="preferred" displayName="Panjabi"/>
+                    <designation language="en-US" type="preferred" displayName="Punjabi"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="pl"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Polish"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Polnisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Polonais"/>
+                    <designation language="it-CH" type="preferred" displayName="Polacco"/>
+                    <designation language="en-US" type="preferred" displayName="Polish"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="pt"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Portuguese"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Portugiesisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Portugais"/>
+                    <designation language="it-CH" type="preferred" displayName="Portoghese"/>
+                    <designation language="en-US" type="preferred" displayName="Portuguese"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="pt-BR"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Portuguese (Brazil)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Portugiesisch (Brasilien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Portugais (Brésil)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Portoghese (Brasile)"/>
+                    <designation language="en-US" type="preferred" displayName="Portuguese (Brazil)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="rm"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Romansh"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Rätoromanisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Rhéto-roman"/>
+                    <designation language="it-CH" type="preferred" displayName="Romancio"/>
+                    <designation language="en-US" type="preferred" displayName="Romansh"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="ru"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Russian"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Russisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Russe"/>
+                    <designation language="it-CH" type="preferred" displayName="Russo"/>
+                    <designation language="en-US" type="preferred" displayName="Russian"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="ru-RU"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Russian (Russia)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Russisch (Russland)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Russe (Russie)"/>
+                    <designation language="it-CH" type="preferred" displayName="Russo (Russia)"/>
+                    <designation language="en-US" type="preferred" displayName="Russian (Russia)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="sr"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Serbian"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Serbisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Serbe"/>
+                    <designation language="it-CH" type="preferred" displayName="Serbo"/>
+                    <designation language="en-US" type="preferred" displayName="Serbian"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="sr-RS"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Serbian (Serbia)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Serbisch (Serbien)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Serbe (Serbie)"/>
+                    <designation language="it-CH" type="preferred" displayName="Serbo (Serbia)"/>
+                    <designation language="en-US" type="preferred" displayName="Serbian (Serbia)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="sv"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Swedish"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Schwedisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Suédois"/>
+                    <designation language="it-CH" type="preferred" displayName="Svedese"/>
+                    <designation language="en-US" type="preferred" displayName="Swedish"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="sv-SE"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Swedish (Sweden)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Schwedisch (Schweden)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Suédois (Suède)"/>
+                    <designation language="it-CH" type="preferred" displayName="Svedese (Svezia)"/>
+                    <designation language="en-US" type="preferred" displayName="Swedish (Sweden)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="te"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Telegu"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Telegu"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Telegu"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="zh"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Chinese"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Chinesisch"/>
+                    <designation language="fr-CH" type="preferred" displayName="Chinois"/>
+                    <designation language="it-CH" type="preferred" displayName="Cinese"/>
+                    <designation language="en-US" type="preferred" displayName="Chinese"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="zh-CN"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Chinese (China)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Chinesisch (China)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Chinois (Chine)"/>
+                    <designation language="it-CH" type="preferred" displayName="Cinese (Cina)"/>
+                    <designation language="en-US" type="preferred" displayName="Chinese (China)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="zh-HK"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Chinese (Hong Kong)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Chinesisch (Hong Kong)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Chinois (Hong Kong)"/>
+                    <designation language="it-CH" type="preferred" displayName="Cinese (Hong Kong)"/>
+                    <designation language="en-US" type="preferred" displayName="Chinese (Hong Kong)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="zh-SG"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Chinese (Singapore)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Chinesisch (Singapur)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Chinois (Singapour)"/>
+                    <designation language="it-CH" type="preferred" displayName="Cinese (Singapore)"/>
+                    <designation language="en-US" type="preferred" displayName="Chinese (Singapore)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="zh-TW"
+                  codeSystem="2.16.840.1.113883.6.316"
+                  displayName="Chinese (Taiwan)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Chinesisch (Taiwan)"/>
+                    <designation language="fr-CH" type="preferred" displayName="Chinois (Taïwan)"/>
+                    <designation language="it-CH" type="preferred" displayName="Cinese (Taiwan)"/>
+                    <designation language="en-US" type="preferred" displayName="Chinese (Taiwan)"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+                <concept code="OTHER"
+                  codeSystem="2.16.756.5.30.1.127.3.10.12"
+                  displayName="Other language"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Andere Sprache"/>
+                    <designation language="fr-CH" type="preferred" displayName="Autre langue"/>
+                    <designation language="it-CH" type="preferred" displayName="Altra lingua"/>
+                    <designation language="en-US" type="preferred" displayName="Other language"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>
