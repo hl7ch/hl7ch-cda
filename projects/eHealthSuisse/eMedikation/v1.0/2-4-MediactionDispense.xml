@@ -249,10 +249,10 @@
 										</pharm:asContent>
 										<pharm:ingredient classCode="ACTI">
 											<pharm:quantity>
-												<pharm:numerator unit="mg" value="50"
+												<numerator unit="mg" value="50"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 													xsi:type="PQ" />
-												<pharm:denominator value="1"
+												<denominator value="1"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 													xsi:type="PQ" />
 											</pharm:quantity>

@@ -233,7 +233,7 @@
 							</entryRelationship>
 
 							<!-- TODO: Curre3ntly Schematron allows only one concern entry
-							One or more Pharmaceutical Advice Concern entries
+							One or more Pharmaceutical Advice Concern entries -->
 							<entryRelationship typeCode='REFR'
 								inversionInd='false'>
 								<act classCode='ACT' moodCode='EVN'>
@@ -253,10 +253,8 @@
 										<low value='20120204140000+0100' />
 									</effectiveTime>
 
-									<entryRelationship typeCode='SUBJ'
-										inversionInd='false'>
-										<observation classCode='OBS' moodCode='EVN'
-											negationInd=' false'>
+									<entryRelationship typeCode='SUBJ' inversionInd='false'>
+										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
 											<templateId root='2.16.840.1.113883.10.20.1.28' />
 											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
 											<id root="1CDBAEF6-3456-11E6-B67B-9E71128CAE77" />
@@ -274,14 +272,12 @@
 													<reference value="#padv.1" />
 												</originalText>
 											</value>
-											<!-/- Typ 
 											<interpretationCode code='2'
-												codeSystem='2.16.756.5.30.1.127.77.4.11.3' displayName="Intervention"></interpretationCode> -/->
+												codeSystem='2.16.756.5.30.1.127.77.4.11.3' displayName="Intervention"></interpretationCode>
 										</observation>
 									</entryRelationship>
 								</act>
 							</entryRelationship>
- 							-->
 
 						</observation>
 					</entry>
