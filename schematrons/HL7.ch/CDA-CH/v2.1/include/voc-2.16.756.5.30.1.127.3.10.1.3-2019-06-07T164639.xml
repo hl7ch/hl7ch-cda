@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.127.3.10.1.3"
+             name="DocumentEntry.classCode"
+             displayName="DocumentEntry.classCode"
+             statusCode="deprecated"
+             versionLabel="201907.0-stable"
+             effectiveDate="2019-06-07T16:46:39"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Dokumentenklasse gemäss EPDV-EDI Anhang 3<span style="text-decoration: none;">
+                    <br clear="none"/>
+                </span>
+            </desc>
+      <desc language="en-US">Document class as per EPRO-FDHA Annex 3<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">Classification du document selon l'annexe 3 ODEP-DFI<br clear="none"/>
+            </desc>
+      <desc language="it-CH">Classe del documento secondo l'allegato 3 OCIP-DFI<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="http://snomed.info/sct"
+                        canonicalUriDSTU2="http://snomed.info/sct"
+                        canonicalUriSTU3="http://snomed.info/sct"
+                        canonicalUriR4="http://snomed.info/sct"/>
+      <sourceCodeSystem id="2.16.756.5.30.1.127.3.4"
+                        identifierName="SNOMED Clinical Terms Swiss Extension"
+                        canonicalUri="urn:oid:2.16.756.5.30.1.127.3.4"
+                        canonicalUriDSTU2="urn:oid:2.16.756.5.30.1.127.3.4"
+                        canonicalUriSTU3="urn:oid:2.16.756.5.30.1.127.3.4"
+                        canonicalUriR4="urn:oid:2.16.756.5.30.1.127.3.4"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="371531000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Report of clinical encounter (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Bericht aufgrund einer Konsultation"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Report of clinical encounter"/>
+                </concept>
+                <concept code="721927009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Referral note (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Zuweisungsschreiben"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Referral note"/>
+                </concept>
+                <concept code="721963009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Order (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Untersuchungsauftrag"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Order"/>
+                </concept>
+                <concept code="422735006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Summary clinical document (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Zusammenfassender Bericht"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Summary clinical document"/>
+                </concept>
+                <concept code="371525003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Clinical procedure report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Interventionsbericht / Untersuchungsresultat"/>
+                    <designation language="fr-CH" type="preferred" displayName="Rapport d'examen"/>
+                    <designation language="it-CH" type="preferred" displayName="Risultato d'esame"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Clinical procedure report"/>
+                </concept>
+                <concept code="734163000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Care Plan (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Behandlungsplan"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Care Plan"/>
+                </concept>
+                <concept code="440545006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Prescription record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Verschreibung / Rezept"/>
+                    <designation language="fr-CH" type="preferred" displayName="Ordonnance"/>
+                    <designation language="it-CH" type="preferred" displayName="Ricetta medica"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Prescription record"/>
+                </concept>
+                <concept code="184216000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Patient record type (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Langzeitdokumentation"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Patient record type"/>
+                </concept>
+                <concept code="371537001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Consent report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Einwilligung zur Behandlung"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Consentement du patient"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Consenso del paziente"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Consent report"/>
+                </concept>
+                <concept code="371538006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Advance directive report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Patientenverfügung"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Directives anticipées du patient"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Direttive anticipate del paziente"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Advance directive report"/>
+                </concept>
+                <concept code="722160009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Audit trail report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Rückverfolgung der EPD Zugriffe"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Audit trail report"/>
+                </concept>
+                <concept code="722216001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Emergency medical identification record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Notfall-ID / Ausweis"/>
+                    <designation language="fr-CH" type="preferred" displayName="Passeport d'urgence"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Passaporto d'emergenza"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Emergency medical identification record"/>
+                </concept>
+                <concept code="772790007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Organ donor card (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Organspendeausweis"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO "/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Organ donor card"/>
+                </concept>
+                <concept code="405624007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Administrative documentation (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Administratives Dokument"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Administrative documentation"/>
+                </concept>
+                <concept code="417319006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Record of health event (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Dokument zu gesundheitsrelevantem Ereignis"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Record of health event"/>
+                </concept>
+                <concept code="2171000195109"
+                  codeSystem="2.16.756.5.30.1.127.3.4"
+                  displayName="Obstetrical Record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Schwangerschafts-/ Geburtsbericht"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Obstetrical Record"/>
+                </concept>
+                <concept code="419891008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Record artifact (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Nicht näher bezeichnetes Dokument"/>
+                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="en-US" type="preferred" displayName="Record artifact"/>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

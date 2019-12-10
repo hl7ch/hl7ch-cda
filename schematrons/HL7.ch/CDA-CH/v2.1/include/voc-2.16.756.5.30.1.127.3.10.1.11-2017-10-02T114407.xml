@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             name="EprHealthcareFacilityTypeCode"
+             displayName="EprHealthcareFacilityTypeCode"
+             versionLabel="201704.1-beta"
+             id="2.16.756.5.30.1.127.3.10.1.11"
+             statusCode="deprecated"
+             effectiveDate="2017-10-02T11:44:07"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Typ der Gesundheitseinrichtung gemäss Anhang 3 EPDV-EDI, Kapitel 2.6. <br clear="none"/>
+                <br clear="none"/>Dieser Code beschreibt den Typ der Gesundheitseinrichtung, in der das Dokument während des Behandlungsprozesses erstellt wurde. Der Patient kann im Zusammenhang mit der Berechtigungsteuerung diese Information nutzen, um beispielsweise in seinen Rechteattributen allen Dokumenten aus einem bestimmten Gesundheitseinrichtungstyp eine bestimmte Vertraulichkeitsstufe zuzuordnen.<br clear="none"/>
+            </desc>
+      <desc language="en-US">Type of healthcare facility as per Annex 3  EPRO-FDHA, Chapter 2.6.<br clear="none"/>
+                <br clear="none"/>This code describes the type of healthcare facility in which the document was compiled during the treatment process. In conjunction with the authorisation control, the patient can use this information to assign all documents from a specific type of healthcare facility to a specific confidentiality level in their rights and attributes, for example.<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">Type de l'institution de santé selon l'annexe 3 ODEP-DFI, chapitre 2.6<br clear="none"/>
+                <br clear="none"/>Ce code décrit le type de l'institution de santé qui a élaboré le document pendant le processus thérapeutique. Le patient peut utiliser cette information pour gérer les droits d'accès et définir, dans les règles d'accès, un même niveau de confidentialité pour tous les documents émanant d'un type d'institution donné.<br clear="none"/>
+            </desc>
+      <desc language="it-CH">Tipo di istituzione sanitaria secondo l'allegato 3 OCIP-DFI, capitolo 2.6.<br clear="none"/>
+                <br clear="none"/>Questo codice descrive il tipo di istituzione sanitaria nella quale è stato creato il documento durante il processo terapeutico. Il paziente può utilizzare questa informazione in relazione al controllo delle autorizzazioni, ad esempio per attribuire un determinato grado di riservatezza a tutti i documenti provenienti da un determinato tipo di istituzione sanitaria.<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="http://snomed.info/sct"
+                        canonicalUriDSTU2="http://snomed.info/sct"
+                        canonicalUriSTU3="http://snomed.info/sct"
+                        canonicalUriR4="http://snomed.info/sct"/>
+      <publishingAuthority name="medshare GmbH">
+                <addrLine>Buchshaldenstrasse 2</addrLine>
+                <addrLine>CH-3661 Uetendorf</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="722171005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Diagnostic institution (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Institution für medizinische Diagnostik"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Institut d’aide au diagnostic"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Istituto di diagnostica medica"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Diagnostic institution"/>
+                </concept>
+                <concept code="225728007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Accident and Emergency department (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Notfall-/Rettungsdienste"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Service d'urgence et de sauvetage"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Servizio di pronto soccorso e di salvataggio"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Accident and Emergency department "/>
+                </concept>
+                <concept code="394747008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Health Authority (qualifier value)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Gesundheitsbehörde"/>
+                    <designation language="fr-CH" type="preferred" displayName="Autorité sanitaire"/>
+                    <designation language="it-CH" type="preferred" displayName="Autorità sanitaria"/>
+                    <designation language="en-US" type="preferred" displayName="Health Authority "/>
+                </concept>
+                <concept code="66280005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Private home-based care (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Organisation für Pflege zu Hause"/>
+                    <designation language="fr-CH" type="preferred" displayName="Soins à domicile"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Servizio di assistenza e cura a domicilio"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Private home-based care "/>
+                </concept>
+                <concept code="22232009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Hospital (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Stationäre Einrichtung/Spital"/>
+                    <designation language="fr-CH" type="preferred" displayName="Hôpital"/>
+                    <designation language="it-CH" type="preferred" displayName="Ospedale"/>
+                    <designation language="en-US" type="preferred" displayName="Hospital "/>
+                </concept>
+                <concept code="722172003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Military health institution (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Armeeärztliche Dienste"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Service sanitaire de l'armée"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Servizio di medicina militare"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Military health institution"/>
+                </concept>
+                <concept code="722173008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Prison based care site (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Gesundheitseinrichtung in der Haftanstalt"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Service de santé en milieu carcéral"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Struttura sanitaria in uno stabilimento carcerario"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Prison based care site"/>
+                </concept>
+                <concept code="42665001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Nursing home (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Pflegeheim"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Etablissement médico-social"/>
+                    <designation language="it-CH" type="preferred" displayName="Casa di cura"/>
+                    <designation language="en-US" type="preferred" displayName="Nursing home "/>
+                </concept>
+                <concept code="264372000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Pharmacy (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Apotheke"/>
+                    <designation language="fr-CH" type="preferred" displayName="Pharmacie"/>
+                    <designation language="it-CH" type="preferred" displayName="Farmacia"/>
+                    <designation language="en-US" type="preferred" displayName="Pharmacy "/>
+                </concept>
+                <concept code="35971002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Ambulatory care site (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Ambulante Einrichtung/Ambulatorium"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Etablissement ambulatoire"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Struttura ambulatoriale, incl. gli studi medici"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Ambulatory care site"/>
+                </concept>
+                <concept code="80522000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Rehabilitation hospital (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Organisation für stationäre Rehabilitation"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Réadaptation stationnaire"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Istituto di riabilitazione stazionaria"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Rehabilitation hospital "/>
+                </concept>
+                <concept code="394778007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Client's or patient's home (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Domizil des Patienten"/>
+                    <designation language="fr-CH" type="preferred" displayName="Domicile du patient"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Domicilio del paziente"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Client's or patient's home"/>
+                </concept>
+                <concept code="288565001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Medical center (environment)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Telemedizinische Einrichtung"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Institut de télémédecine"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Centro di telemedicina"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Telemedicine institution"/>
+                </concept>
+                <concept code="43741000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  codeSystemName="SNOMED CT"
+                  displayName="Site of care (social concept)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Andere Gesundheitsorganisation"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Autres prestataires de soins"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Altre organizzazioni sanitarie"/>
+                    <designation language="en-US" type="preferred" displayName="Other Site of Care"/>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>
