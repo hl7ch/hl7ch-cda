@@ -9,7 +9,7 @@ History:
 2018.04.14: Tony Schaller, medshare GmbH: Update to make it valid against the latest Schematron Rules, generated from ART-DECOR
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
-
+2019.11.12: Oliver Egger, ahdis ag: removed xsi:type='IVL-TS' in author.time, is TS
 ********************************************************
 -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
@@ -943,7 +943,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -995,7 +995,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1047,7 +1047,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+                                                <time value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1099,7 +1099,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1151,7 +1151,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1203,7 +1203,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1255,7 +1255,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1307,7 +1307,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1359,7 +1359,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1411,7 +1411,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1463,7 +1463,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1515,7 +1515,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1567,7 +1567,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1619,7 +1619,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1671,7 +1671,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1723,7 +1723,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1775,7 +1775,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1827,7 +1827,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -1879,7 +1879,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309102500+0100"/>
+												<time  value="20160309102500+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -2050,7 +2050,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20180315103000+0100"/>
+												<time  value="20180315103000+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
@@ -2240,7 +2240,7 @@ History:
 													<originalText>Laborfachperson</originalText>
 													<translation xsi:type="CE" code="3212" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO-08" displayName="Medical and pathology laboratory technicians"/>
 												</functionCode>
-												<time xsi:type="IVL_TS" value="20160309182700+0100"/>
+												<time  value="20160309182700+0100"/>
 												<assignedAuthor>
 													<id root="2.51.1.3" extension="7608888888888"/>
 													<addr use="PUB">
