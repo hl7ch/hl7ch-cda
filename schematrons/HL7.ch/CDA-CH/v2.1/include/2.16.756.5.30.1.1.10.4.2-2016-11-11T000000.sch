@@ -22,51 +22,51 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]"
-         id="d20e5171-false-d873780e0">
+         id="d20e5171-false-d398193e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@classCode) = ('ACT')">(chpcc_entry_AnnotationComments): The value for classCode SHALL be 'ACT'. Found: "<value-of select="@classCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@moodCode) = ('EVN')">(chpcc_entry_AnnotationComments): The value for moodCode SHALL be 'EVN'. Found: "<value-of select="@moodCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2']) &gt;= 1">(chpcc_entry_AnnotationComments): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2']) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40']) &gt;= 1">(chpcc_entry_AnnotationComments): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40']) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']) &gt;= 1">(chpcc_entry_AnnotationComments): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:id) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:id appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:code[(@code = '48767-8' and @codeSystem = '2.16.840.1.113883.6.1')]) &gt;= 1">(chpcc_entry_AnnotationComments): element hl7:code[(@code = '48767-8' and @codeSystem = '2.16.840.1.113883.6.1')] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:code[(@code = '48767-8' and @codeSystem = '2.16.840.1.113883.6.1')]) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:code[(@code = '48767-8' and @codeSystem = '2.16.840.1.113883.6.1')] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:text[not(@nullFlavor)]) &gt;= 1">(chpcc_entry_AnnotationComments): element hl7:text[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:text[not(@nullFlavor)]) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:text[not(@nullFlavor)] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:statusCode[@code = 'completed' or @code = doc('include/voc-2.16.840.1.113883.1.11.20025-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]) &gt;= 1">(chpcc_entry_AnnotationComments): element hl7:statusCode[@code = 'completed' or @code = doc('include/voc-2.16.840.1.113883.1.11.20025-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="count(hl7:statusCode[@code = 'completed' or @code = doc('include/voc-2.16.840.1.113883.1.11.20025-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]) &lt;= 1">(chpcc_entry_AnnotationComments): element hl7:statusCode[@code = 'completed' or @code = doc('include/voc-2.16.840.1.113883.1.11.20025-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -76,13 +76,13 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2']"
-         id="d20e5180-false-d873917e0">
+         id="d20e5180-false-d398330e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_AnnotationComments): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.4.2')">(chpcc_entry_AnnotationComments): The value for root SHALL be '2.16.756.5.30.1.1.10.4.2'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -92,13 +92,13 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40']"
-         id="d20e5185-false-d873932e0">
+         id="d20e5185-false-d398345e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_AnnotationComments): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@root) = ('2.16.840.1.113883.10.20.1.40')">(chpcc_entry_AnnotationComments): The value for root SHALL be '2.16.840.1.113883.10.20.1.40'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -108,13 +108,13 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']"
-         id="d20e5191-false-d873947e0">
+         id="d20e5191-false-d398360e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_AnnotationComments): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.5.3.1.4.2')">(chpcc_entry_AnnotationComments): The value for root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.4.2'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -124,19 +124,19 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:id"
-         id="d20e5196-false-d873961e0">
+         id="d20e5196-false-d398374e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_AnnotationComments): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="@root">(chpcc_entry_AnnotationComments): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(chpcc_entry_AnnotationComments): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="not(@extension) or string-length(@extension)&gt;0">(chpcc_entry_AnnotationComments): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
    <!--
@@ -146,28 +146,28 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:code[(@code = '48767-8' and @codeSystem = '2.16.840.1.113883.6.1')]"
-         id="d20e5214-false-d873981e0">
+         id="d20e5214-false-d398394e0">
       <extends rule="CD"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_AnnotationComments): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@code) = ('48767-8')">(chpcc_entry_AnnotationComments): The value for code SHALL be '48767-8'. Found: "<value-of select="@code"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@codeSystem) = ('2.16.840.1.113883.6.1')">(chpcc_entry_AnnotationComments): The value for codeSystem SHALL be '2.16.840.1.113883.6.1'. Found: "<value-of select="@codeSystem"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@codeSystemName) = ('LOINC')">(chpcc_entry_AnnotationComments): The value for codeSystemName SHALL be 'LOINC'. Found: "<value-of select="@codeSystemName"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(chpcc_entry_AnnotationComments): Attribute @codeSystemName SHALL be of data type 'st'  - '<value-of select="@codeSystemName"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@displayName) = ('Annotation comment')">(chpcc_entry_AnnotationComments): The value for displayName SHALL be 'Annotation comment'. Found: "<value-of select="@displayName"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="not(@displayName) or string-length(@displayName)&gt;0">(chpcc_entry_AnnotationComments): Attribute @displayName SHALL be of data type 'st'  - '<value-of select="@displayName"/>'</assert>
    </rule>
    <!--
@@ -177,16 +177,16 @@ Item: (cdach_other_TextElementWithReferenceToNarrativeText)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:text[not(@nullFlavor)]"
-         id="d873982e52-false-d874013e0">
+         id="d398395e52-false-d398426e0">
       <extends rule="ED"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_TextElementWithReferenceToNarrativeText): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="count(hl7:reference[not(@nullFlavor)]) &gt;= 1">(cdach_other_TextElementWithReferenceToNarrativeText): element hl7:reference[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="count(hl7:reference[not(@nullFlavor)]) &lt;= 1">(cdach_other_TextElementWithReferenceToNarrativeText): element hl7:reference[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -196,20 +196,20 @@ Item: (cdach_other_TextElementWithReferenceToNarrativeText)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:text[not(@nullFlavor)]/hl7:reference[not(@nullFlavor)]"
-         id="d873982e54-false-d874032e0">
+         id="d398395e54-false-d398445e0">
       <extends rule="TEL"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_TextElementWithReferenceToNarrativeText): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="@value">(cdach_other_TextElementWithReferenceToNarrativeText): attribute @value SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="starts-with(@value,'#')">(cdach_other_TextElementWithReferenceToNarrativeText): The @value attribute content MUST conform to the format '#xxx', where xxx is the ID of the corresponding <content/> element.</assert>
       <let name="idvalue" value="substring-after(@value,'#')"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.14-2018-04-18T000000.html"
               test="ancestor::hl7:structuredBody//*[@ID=$idvalue]">(cdach_other_TextElementWithReferenceToNarrativeText): No narrative text found for this reference (no content element within this document has an ID that corresponds to '<value-of select="$idvalue"/>').</assert>
    </rule>
    <!--
@@ -219,18 +219,18 @@ Item: (chpcc_entry_AnnotationComments)
 -->
 
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:statusCode[@code = 'completed' or @code = doc('include/voc-2.16.840.1.113883.1.11.20025-DYNAMIC.xml')//valueSet[1]/conceptList/*/@code]"
-         id="d20e5231-false-d874049e0">
+         id="d20e5231-false-d398462e0">
       <extends rule="CS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_entry_AnnotationComments): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <let name="theCode" value="@code"/>
       <let name="theCodeSystem" value="@codeSystem"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.20025-DYNAMIC.xml')//valueSet[1]/conceptList/concept[@code = $theCode] or completeCodeSystem)">(chpcc_entry_AnnotationComments): The element value SHALL be one of '2.16.840.1.113883.1.11.20025 ActStatusCompleted (DYNAMIC)'.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.html"
               test="string(@code) = ('completed')">(chpcc_entry_AnnotationComments): The value for code SHALL be 'completed'. Found: "<value-of select="@code"/>"</assert>
    </rule>
 
@@ -247,22 +247,22 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
 -->
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]) &gt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]) &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:time) &gt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:time is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:time) &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:time appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:assignedAuthor) &gt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:assignedAuthor is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:assignedAuthor) &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:assignedAuthor appears too often [max 1x].</assert>
    </rule>
 
@@ -274,18 +274,18 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AuthorCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <let name="theCode" value="@code"/>
       <let name="theCodeSystem" value="@codeSystem"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem]])">(cdach_other_AuthorCompilationWithNameAddrTelecom): The element value SHALL be one of '2.16.840.1.113883.1.11.10267 ParticipationFunction (DYNAMIC)'.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="(@code and @codeSystem) or (@nullFlavor='NAV')">(cdach_other_AuthorCompilationWithNameAddrTelecom): Either a code with its code system or nullFlavor='NAV' is required.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@nullFlavor) or (hl7:originalText)">(cdach_other_AuthorCompilationWithNameAddrTelecom): Other Caregivers description MUST be declared in the originalText element in case of nullFlavor.</assert>
    </rule>
 
@@ -296,28 +296,28 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
 -->
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]/hl7:translation">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="@code">(cdach_other_AuthorCompilationWithNameAddrTelecom): attribute @code SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@code) or (string-length(@code) &gt; 0 and not(matches(@code,'\s')))">(cdach_other_AuthorCompilationWithNameAddrTelecom): Attribute @code SHALL be of data type 'cs'  - '<value-of select="@code"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="@codeSystem">(cdach_other_AuthorCompilationWithNameAddrTelecom): attribute @codeSystem SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@codeSystem) or matches(@codeSystem,'^[0-2](\.(0|[1-9]\d*))*$')">(cdach_other_AuthorCompilationWithNameAddrTelecom): Attribute @codeSystem SHALL be of data type 'oid'  - '<value-of select="@codeSystem"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="@codeSystemName">(cdach_other_AuthorCompilationWithNameAddrTelecom): attribute @codeSystemName SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_other_AuthorCompilationWithNameAddrTelecom): Attribute @codeSystemName SHALL be of data type 'st'  - '<value-of select="@codeSystemName"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="@displayName">(cdach_other_AuthorCompilationWithNameAddrTelecom): attribute @displayName SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_other_AuthorCompilationWithNameAddrTelecom): Attribute @displayName SHALL be of data type 'st'  - '<value-of select="@displayName"/>'</assert>
    </rule>
 
@@ -329,10 +329,10 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:time">
       <extends rule="TS.CH.TZ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AuthorCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(*)">(cdach_other_AuthorCompilationWithNameAddrTelecom): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
    </rule>
 
@@ -343,30 +343,30 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
 -->
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(assignedAuthoringDevice/softwareName) or (representedOrganization)">(cdach_other_AuthorCompilationWithNameAddrTelecom): For device authors the element representedOrganization is REQUIRED.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:addr) &gt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:addr is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:telecom) &gt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:telecom is required [min 1x].</assert>
       <let name="elmcount"
            value="count(hl7:assignedPerson | hl7:assignedAuthoringDevice)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="$elmcount &gt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): choice (hl7:assignedPerson  or  hl7:assignedAuthoringDevice) does not contain enough elements [min 1x]</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="$elmcount &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): choice (hl7:assignedPerson  or  hl7:assignedAuthoringDevice) contains too many elements [max 1x]</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:assignedPerson) &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:assignedPerson appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:assignedAuthoringDevice) &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:assignedAuthoringDevice appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="count(hl7:representedOrganization) &lt;= 1">(cdach_other_AuthorCompilationWithNameAddrTelecom): element hl7:representedOrganization appears too often [max 1x].</assert>
    </rule>
 
@@ -378,16 +378,16 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:id">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AuthorCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="@root">(cdach_other_AuthorCompilationWithNameAddrTelecom): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@root) or (string-length(@root) &gt; 0 and not(matches(@root,'\s')))">(cdach_other_AuthorCompilationWithNameAddrTelecom): Attribute @root SHALL be of data type 'cs'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_AuthorCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
 
@@ -407,43 +407,43 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
               see="eCH-0007"
               test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetAddressLine) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetAddressLine) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetName) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:houseNumber) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:houseNumber appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:additionalLocator) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:additionalLocator appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postBox) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postBox appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:state) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:state appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:city) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:city) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postalCode) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postalCode) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:country) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:country) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country appears too often [max 1x].</assert>
    </rule>
 
@@ -455,7 +455,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:streetAddressLine">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.12 "
@@ -470,7 +470,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:streetAddressLine">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.12 "
@@ -485,7 +485,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:streetName">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.13 "
@@ -500,7 +500,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:houseNumber">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.14 "
@@ -515,7 +515,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:additionalLocator">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.15 "
@@ -530,7 +530,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:postBox">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.16 "
@@ -545,7 +545,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:state">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -557,7 +557,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:city">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -569,7 +569,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:postalCode">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -581,7 +581,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:addr/hl7:country">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.24.2 "
@@ -596,7 +596,7 @@ Item: (cdach_other_AuthorCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:telecom">
       <extends rule="TEL"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.16-2019-10-24T161306.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AuthorCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -613,10 +613,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
 -->
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="count(hl7:name) &gt;= 1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:name is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="count(hl7:name) &lt;= 1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:name appears too often [max 1x].</assert>
    </rule>
 
@@ -628,16 +628,16 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name">
       <extends rule="PN"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@use) = ('L') or not(@use)">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for use SHALL be 'L'. Found: "<value-of select="@use"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="count(hl7:family[not(tokenize(@qualifier, '\s'))]) &gt;= 1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:family[not(tokenize(@qualifier, '\s'))] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="count(hl7:given[not(tokenize(@qualifier, '\s'))]) &gt;= 1">(cdach_other_PersonNameInformationCompilation-eCH-0011): element hl7:given[not(tokenize(@qualifier, '\s'))] is required [min 1x].</assert>
    </rule>
 
@@ -649,10 +649,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:prefix">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@qualifier) = ('AC')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for qualifier SHALL be 'AC'. Found: "<value-of select="@qualifier"/>"</assert>
    </rule>
 
@@ -664,13 +664,13 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:family[not(tokenize(@qualifier, '\s'))]">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier) or string-length(@qualifier) &gt; 0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'  - '<value-of select="@qualifier"/>'</assert>
    </rule>
 
@@ -682,10 +682,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:family">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@qualifier) = ('BR')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for qualifier SHALL be 'BR'. Found: "<value-of select="@qualifier"/>"</assert>
    </rule>
 
@@ -697,13 +697,13 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:given[not(tokenize(@qualifier, '\s'))]">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier) or string-length(@qualifier) &gt; 0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'  - '<value-of select="@qualifier"/>'</assert>
    </rule>
 
@@ -715,10 +715,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:given">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@qualifier) = ('CL')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for qualifier SHALL be 'CL'. Found: "<value-of select="@qualifier"/>"</assert>
    </rule>
 
@@ -730,10 +730,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name">
       <extends rule="PN"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@use) = ('P')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for use SHALL be 'P'. Found: "<value-of select="@use"/>"</assert>
    </rule>
 
@@ -745,10 +745,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:prefix">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@qualifier) = ('TITLE')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for qualifier SHALL be 'TITLE'. Found: "<value-of select="@qualifier"/>"</assert>
    </rule>
 
@@ -760,13 +760,13 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:family[not(tokenize(@qualifier, '\s'))]">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier) or string-length(@qualifier) &gt; 0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'  - '<value-of select="@qualifier"/>'</assert>
    </rule>
 
@@ -778,13 +778,13 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:given[not(tokenize(@qualifier, '\s'))]">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier) or string-length(@qualifier) &gt; 0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'  - '<value-of select="@qualifier"/>'</assert>
    </rule>
 
@@ -796,10 +796,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name">
       <extends rule="PN"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@use) = ('ASGN')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for use SHALL be 'ASGN'. Found: "<value-of select="@use"/>"</assert>
    </rule>
 
@@ -811,10 +811,10 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:prefix">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="string(@qualifier) = ('TITLE')">(cdach_other_PersonNameInformationCompilation-eCH-0011): The value for qualifier SHALL be 'TITLE'. Found: "<value-of select="@qualifier"/>"</assert>
    </rule>
 
@@ -826,13 +826,13 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:family[not(tokenize(@qualifier, '\s'))]">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier) or string-length(@qualifier) &gt; 0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'  - '<value-of select="@qualifier"/>'</assert>
    </rule>
 
@@ -844,13 +844,13 @@ Item: (cdach_other_PersonNameInformationCompilation-eCH-0011)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedPerson/hl7:name/hl7:given[not(tokenize(@qualifier, '\s'))]">
       <extends rule="ENXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ENXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_PersonNameInformationCompilation-eCH-0011): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ENXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier)">(cdach_other_PersonNameInformationCompilation-eCH-0011): attribute @qualifier MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.34-2018-04-18T000000.html"
               test="not(@qualifier) or string-length(@qualifier) &gt; 0">(cdach_other_PersonNameInformationCompilation-eCH-0011): Attribute @qualifier SHALL be of data type 'set_cs'  - '<value-of select="@qualifier"/>'</assert>
    </rule>
 
@@ -867,13 +867,13 @@ Item: (cdach_other_DeviceCompilationWithName)
 -->
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedAuthoringDevice">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
               test="count(hl7:manufacturerModelName) &lt;= 1">(cdach_other_DeviceCompilationWithName): element hl7:manufacturerModelName appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
               test="count(hl7:softwareName) &gt;= 1">(cdach_other_DeviceCompilationWithName): element hl7:softwareName is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
               test="count(hl7:softwareName) &lt;= 1">(cdach_other_DeviceCompilationWithName): element hl7:softwareName appears too often [max 1x].</assert>
    </rule>
 
@@ -885,7 +885,7 @@ Item: (cdach_other_DeviceCompilationWithName)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedAuthoringDevice/hl7:manufacturerModelName">
       <extends rule="SC"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='SC' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_DeviceCompilationWithName): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SC". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -897,7 +897,7 @@ Item: (cdach_other_DeviceCompilationWithName)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:assignedAuthoringDevice/hl7:softwareName">
       <extends rule="SC"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.21-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='SC' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_DeviceCompilationWithName): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SC". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -914,13 +914,13 @@ Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
 -->
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="count(hl7:name) &gt;= 1">(cdach_other_OrganizationCompilationWithNameAddrTelecom): element hl7:name is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="count(hl7:telecom) &gt;= 1">(cdach_other_OrganizationCompilationWithNameAddrTelecom): element hl7:telecom is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="count(hl7:addr) &gt;= 1">(cdach_other_OrganizationCompilationWithNameAddrTelecom): element hl7:addr is required [min 1x].</assert>
    </rule>
 
@@ -932,16 +932,16 @@ Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:id">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_OrganizationCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="@root">(cdach_other_OrganizationCompilationWithNameAddrTelecom): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="not(@extension) or string-length(@extension)&gt;0">(cdach_other_OrganizationCompilationWithNameAddrTelecom): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
 
@@ -953,7 +953,7 @@ Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:name">
       <extends rule="ON"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ON' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_OrganizationCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ON". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -965,7 +965,7 @@ Item: (cdach_other_OrganizationCompilationWithNameAddrTelecom)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:telecom">
       <extends rule="TEL"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.27-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_OrganizationCompilationWithNameAddrTelecom): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -985,43 +985,43 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
               see="eCH-0007"
               test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetAddressLine) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetAddressLine) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetName) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:houseNumber) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:houseNumber appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:additionalLocator) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:additionalLocator appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postBox) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postBox appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:state) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:state appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:city) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:city) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postalCode) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postalCode) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:country) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:country) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country appears too often [max 1x].</assert>
    </rule>
 
@@ -1033,7 +1033,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:streetAddressLine">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.12 "
@@ -1048,7 +1048,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:streetAddressLine">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.12 "
@@ -1063,7 +1063,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:streetName">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.13 "
@@ -1078,7 +1078,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:houseNumber">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.14 "
@@ -1093,7 +1093,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:additionalLocator">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.15 "
@@ -1108,7 +1108,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:postBox">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.16 "
@@ -1123,7 +1123,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:state">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -1135,7 +1135,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:city">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -1147,7 +1147,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:postalCode">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -1159,7 +1159,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]]/hl7:act[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.40'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.2']]/hl7:author[hl7:functionCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.10267-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:assignedAuthor/hl7:representedOrganization/hl7:addr/hl7:country">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.24.2 "

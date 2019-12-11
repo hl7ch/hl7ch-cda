@@ -137,7 +137,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.14'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]"
-                 see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T113250/tmp-2.16.756.5.30.1.1.10.1.14-2018-04-18T000000.html">(CDA-CHv2.0-structuredBodyEnhanced): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.14'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.1.14-2018-04-18T000000.html">(CDA-CHv2.0-structuredBodyEnhanced): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.14'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.14-2018-04-18T000000.sch"/>
@@ -147,24 +147,17 @@
    <!-- Create phases for more targeted validation on large instances -->
    <phase id="AllExceptClosed">
       <active pattern="template-2.16.756.5.30.1.1.10.1.14-2018-04-18T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.1-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.13-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.13-2019-01-01T212258"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.14-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.15-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.3-2019-10-15T092607"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.4-2018-04-18T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.40-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.40-2019-01-01T211332"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.43-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.43-2019-11-19T115925"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.46-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.5-2018-04-18T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.2.6-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.1-2018-04-18T000000"/>
@@ -174,12 +167,8 @@
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.20-2016-11-11T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.21-2016-11-11T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.29-2018-04-18T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.70-2017-09-14T172519"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.9.23-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
       <active pattern="template-2.16.840.1.113883.10.12.201-2005-09-07T000000"/>
       <active pattern="template-2.16.840.1.113883.10.12.301-2005-09-07T000000"/>
@@ -198,14 +187,8 @@
    <phase id="CDA-CHv2.0-structuredBodyEnhanced-closed">
       <active pattern="template-2.16.756.5.30.1.1.10.1.14-2018-04-18T000000-closed"/>
    </phase>
-   <phase id="cdach_header_Patient-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.1-2018-04-18T000000"/>
-   </phase>
    <phase id="cdach_header_Patient-20190912T145302">
       <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
-   </phase>
-   <phase id="cdach_header_DocumentReplacement-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.13-2018-04-18T000000"/>
    </phase>
    <phase id="cdach_header_DocumentReplacement-20190101T212258">
       <active pattern="template-2.16.756.5.30.1.1.10.2.13-2019-01-01T212258"/>
@@ -219,38 +202,23 @@
    <phase id="cdach_header_OrderReference">
       <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
    </phase>
-   <phase id="cdach_header_Custodian-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000"/>
-   </phase>
    <phase id="cdach_header_Custodian-20191015T092607">
       <active pattern="template-2.16.756.5.30.1.1.10.2.3-2019-10-15T092607"/>
    </phase>
    <phase id="cdach_header_InformationRecipient">
       <active pattern="template-2.16.756.5.30.1.1.10.2.4-2018-04-18T000000"/>
    </phase>
-   <phase id="cdach_header_Employer-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.40-2018-04-18T000000"/>
-   </phase>
    <phase id="cdach_header_Employer-20190101T211332">
       <active pattern="template-2.16.756.5.30.1.1.10.2.40-2019-01-01T211332"/>
    </phase>
-   <phase id="cdach_header_PatientContact-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.43-2018-04-18T000000"/>
-   </phase>
    <phase id="cdach_header_PatientContact-20191119T115925">
       <active pattern="template-2.16.756.5.30.1.1.10.2.43-2019-11-19T115925"/>
-   </phase>
-   <phase id="cdach_header_HealthService-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.46-2018-04-18T000000"/>
    </phase>
    <phase id="cdach_header_HealthService-20190101T205333">
       <active pattern="template-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333"/>
    </phase>
    <phase id="cdach_header_LegalAuthenticator">
       <active pattern="template-2.16.756.5.30.1.1.10.2.5-2018-04-18T000000"/>
-   </phase>
-   <phase id="cdach_header_Authenticator-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.2.6-2018-04-18T000000"/>
    </phase>
    <phase id="cdach_header_Authenticator-20190101T202044">
       <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
@@ -279,23 +247,11 @@
    <phase id="chpcc_entry_VitalSignsObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.21-2016-11-11T000000"/>
    </phase>
-   <phase id="cdach_entry_ExternalDocument">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.29-2018-04-18T000000"/>
-   </phase>
-   <phase id="cdach_entry_InabilityToWorkObservation">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.70-2017-09-14T172519"/>
-   </phase>
    <phase id="cdach_entry_ObservationMedia">
       <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
    </phase>
-   <phase id="cdach_other_Author-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.9.23-2018-04-18T000000"/>
-   </phase>
    <phase id="cdach_other_Author-20190912T134828">
       <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
-   </phase>
-   <phase id="cdach_other_Performer-20180418T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-04-18T000000"/>
    </phase>
    <phase id="cdach_other_Performer-20181224T195104">
       <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
@@ -334,11 +290,7 @@
    <!-- Include schematrons from templates with explicit * or ** context (but no representing templates), only those used in scenario template -->
 
    <!-- cdach_header_Patient -->
-   <include href="include/2.16.756.5.30.1.1.10.2.1-2018-04-18T000000.sch"/>
-   <!-- cdach_header_Patient -->
    <include href="include/2.16.756.5.30.1.1.10.2.1-2019-09-12T145302.sch"/>
-   <!-- cdach_header_DocumentReplacement -->
-   <include href="include/2.16.756.5.30.1.1.10.2.13-2018-04-18T000000.sch"/>
    <!-- cdach_header_DocumentReplacement -->
    <include href="include/2.16.756.5.30.1.1.10.2.13-2019-01-01T212258.sch"/>
    <!-- cdach_header_InsuranceCard -->
@@ -348,27 +300,17 @@
    <!-- cdach_header_OrderReference -->
    <include href="include/2.16.756.5.30.1.1.10.2.16-2018-04-18T000000.sch"/>
    <!-- cdach_header_Custodian -->
-   <include href="include/2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.sch"/>
-   <!-- cdach_header_Custodian -->
    <include href="include/2.16.756.5.30.1.1.10.2.3-2019-10-15T092607.sch"/>
    <!-- cdach_header_InformationRecipient -->
    <include href="include/2.16.756.5.30.1.1.10.2.4-2018-04-18T000000.sch"/>
    <!-- cdach_header_Employer -->
-   <include href="include/2.16.756.5.30.1.1.10.2.40-2018-04-18T000000.sch"/>
-   <!-- cdach_header_Employer -->
    <include href="include/2.16.756.5.30.1.1.10.2.40-2019-01-01T211332.sch"/>
    <!-- cdach_header_PatientContact -->
-   <include href="include/2.16.756.5.30.1.1.10.2.43-2018-04-18T000000.sch"/>
-   <!-- cdach_header_PatientContact -->
    <include href="include/2.16.756.5.30.1.1.10.2.43-2019-11-19T115925.sch"/>
-   <!-- cdach_header_HealthService -->
-   <include href="include/2.16.756.5.30.1.1.10.2.46-2018-04-18T000000.sch"/>
    <!-- cdach_header_HealthService -->
    <include href="include/2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.sch"/>
    <!-- cdach_header_LegalAuthenticator -->
    <include href="include/2.16.756.5.30.1.1.10.2.5-2018-04-18T000000.sch"/>
-   <!-- cdach_header_Authenticator -->
-   <include href="include/2.16.756.5.30.1.1.10.2.6-2018-04-18T000000.sch"/>
    <!-- cdach_header_Authenticator -->
    <include href="include/2.16.756.5.30.1.1.10.2.6-2019-01-01T202044.sch"/>
    <!-- cdach_header_DataEnterer -->
@@ -387,18 +329,10 @@
    <include href="include/2.16.756.5.30.1.1.10.4.20-2016-11-11T000000.sch"/>
    <!-- chpcc_entry_VitalSignsObservation -->
    <include href="include/2.16.756.5.30.1.1.10.4.21-2016-11-11T000000.sch"/>
-   <!-- cdach_entry_ExternalDocument -->
-   <include href="include/2.16.756.5.30.1.1.10.4.29-2018-04-18T000000.sch"/>
-   <!-- cdach_entry_InabilityToWorkObservation -->
-   <include href="include/2.16.756.5.30.1.1.10.4.70-2017-09-14T172519.sch"/>
    <!-- cdach_entry_ObservationMedia -->
    <include href="include/2.16.756.5.30.1.1.10.4.83-2018-04-18T000000.sch"/>
    <!-- cdach_other_Author -->
-   <include href="include/2.16.756.5.30.1.1.10.9.23-2018-04-18T000000.sch"/>
-   <!-- cdach_other_Author -->
    <include href="include/2.16.756.5.30.1.1.10.9.23-2019-09-12T134828.sch"/>
-   <!-- cdach_other_Performer -->
-   <include href="include/2.16.756.5.30.1.1.10.9.31-2018-04-18T000000.sch"/>
    <!-- cdach_other_Performer -->
    <include href="include/2.16.756.5.30.1.1.10.9.31-2018-12-24T195104.sch"/>
    <!-- CDASection -->

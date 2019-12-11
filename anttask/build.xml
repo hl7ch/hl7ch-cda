@@ -103,7 +103,7 @@
 	<target name="HL7.ch-CDA-CH docxsl cda-ch" depends="init" description="xsl validator, html docu">
 		<antcall target="generateValidator">
 			<param name="sch" value="hl7chcda-StructuredBody" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.0" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
 		</antcall>
 	</target>
 		
@@ -114,109 +114,86 @@
 		<antcall target="validate">
 			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
 			<param name="xml" value="1-Zuweisung zur Radiologischen Diagnostik" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.0" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
 			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
 
-	
-	<!-- HL7.ch-de-AuffahrUnfall
-	<target name="HL7.ch-de-AuffahrUnfall validate 1_KZBT.xml" depends="init" description="validate">
+
+	<target name="HipJointReplacement-de-2" depends="init" description="validate">
 		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="1_KZBT" />
-			<param name="schdir" value="../schematrons/SVV/KZBT/v20090228" />
-			<param name="sch" value="svv-kzbt" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-de-AuffahrUnfall validate 2_xPHRExtractSpital.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="2_xPHRExtractSpital" />
-			<param name="schdir" value="../schematrons/IHE/PCC/v5.0" />
-			<param name="sch" value="xphrExtract" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-de-AuffahrUnfall validate 3_SpitalaustrittsberichtAmbulant.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="3_SpitalaustrittsberichtAmbulant" />
-			<param name="sch" value="cda-ch" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v1.2" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-de-AuffahrUnfall validate 4_BehandlungsmeldungSpital.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="4_BehandlungsmeldungSpital" />
-			<param name="sch" value="cda-ch" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v1.2" />
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="2-Radiologischer Befund" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
 
-	<target name="HL7.ch-de-AuffahrUnfall validate 5_ArbeitsunfähigkeitsmeldungSpital.xml" depends="init" description="validate">
+	<target name="HipJointReplacement-de-3" depends="init" description="validate">
 		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="5_ArbeitsunfähigkeitsmeldungSpital" />
-			<param name="sch" value="cda-ch" />
-			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v1.2" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-de-AuffahrUnfall validate 6_ArztzeugnisUVGHausarzt.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="6_ArztzeugnisUVGHausarzt" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2927" />
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="3-Ueberweisung zur konsiliarischen Beurteilung" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
 
-	<target name="HL7.ch-de-AuffahrUnfall validate 8_xPHRUpdateHausarzt.xml" depends="init" description="validate">
+	<target name="HipJointReplacement-de-4" depends="init" description="validate">
 		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="8_xPHRUpdateHausarzt" />
-			<param name="schdir" value="../schematrons/IHE/PCC/v5.0" />
-			<param name="sch" value="xphrUpdate" />
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="4-Konsiliarbericht" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
 	
-	<target name="HL7.ch-de-AuffahrUnfall validate 9_xPHRExtractKardiologie.xml" depends="init" description="validate">
+	<target name="HipJointReplacement-de-5" depends="init" description="validate">
 		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="9_xPHRExtractKardiologie" />
-			<param name="schdir" value="../schematrons/IHE/PCC/v5.0" />
-			<param name="sch" value="xphrExtract" />
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="5-Spitalzuweisung" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
-	
-	<target name="HL7.ch-de-AuffahrUnfall validate 11_xPHRUpdate2Hausarzt.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="11_xPHRUpdate2Hausarzt" />
-			<param name="schdir" value="../schematrons/IHE/PCC/v5.0" />
-			<param name="sch" value="xphrUpdate" />
-		</antcall>
-	</target>
-	
-	<target name="HL7.ch-de-AuffahrUnfall validate 12_ÄrztlicherZwischenberichtHausarzt.xml" depends="init" description="validate">
-		<antcall target="validate">
-			<param name="projectdir" value="../projects/HL7.ch/de-AuffahrUnfall/v1.0" />
-			<param name="xml" value="12_ÄrztlicherZwischenberichtHausarzt" />
-			<param name="schdir" value="../schematrons/Suva/eMedidoc/v2.0" />
-			<param name="sch" value="2928" />
-		</antcall>
-	</target>
-	
-    <target name="HL7.ch-de-AuffahrUnfall all" depends="HL7.ch-de-AuffahrUnfall validate 1_KZBT.xml,HL7.ch-de-AuffahrUnfall validate 2_xPHRExtractSpital.xml,HL7.ch-de-AuffahrUnfall validate 3_SpitalaustrittsberichtAmbulant.xml,HL7.ch-de-AuffahrUnfall validate 4_BehandlungsmeldungSpital.xml,HL7.ch-de-AuffahrUnfall validate 5_ArbeitsunfähigkeitsmeldungSpital.xml,HL7.ch-de-AuffahrUnfall validate 6_ArztzeugnisUVGHausarzt.xml,HL7.ch-de-AuffahrUnfall validate 8_xPHRUpdateHausarzt.xml,HL7.ch-de-AuffahrUnfall validate 9_xPHRExtractKardiologie.xml,HL7.ch-de-AuffahrUnfall validate 11_xPHRUpdate2Hausarzt.xml,HL7.ch-de-AuffahrUnfall validate 12_ÄrztlicherZwischenberichtHausarzt.xml">
-            
-    </target> -->
 
+	<target name="HipJointReplacement-de-6" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="6-Praeoperative Untersuchung" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
 
+	<target name="HipJointReplacement-de-7" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="7-Operationsbericht" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
+
+	<target name="HipJointReplacement-de-8" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="8-Kurzbericht bei Spitalentlassung" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
+
+	<target name="HipJointReplacement-de-9" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/HL7.ch/HipJointReplacement-de/v2.0" />
+			<param name="xml" value="9-Spital-Austrittsbericht" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
 	
-	
+	<target name="HipJointReplacement-de" depends="HipJointReplacement-de-1,HipJointReplacement-de-2,HipJointReplacement-de-3,HipJointReplacement-de-4,HipJointReplacement-de-5,HipJointReplacement-de-6,HipJointReplacement-de-7,HipJointReplacement-de-8,HipJointReplacement-de-9" description="validate" >
+		<echo message="finished"/>
+	</target>
 
 </project>

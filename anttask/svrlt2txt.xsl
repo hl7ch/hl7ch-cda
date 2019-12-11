@@ -6,6 +6,8 @@
 	<xsl:template match="//svrl:schematron-output">
 		<xsl:for-each select="svrl:failed-assert">
 			<xsl:value-of select="@role" />:<xsl:value-of select="svrl:text" />
+            <xsl:text>&#xa;</xsl:text><xsl:text>&#xd;</xsl:text>
+            <xsl:text>&#xa;</xsl:text><xsl:text>&#xd;</xsl:text>
 		</xsl:for-each>
 	</xsl:template>
 </xsl:stylesheet>
