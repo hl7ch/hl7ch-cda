@@ -99,7 +99,7 @@
 			</assignedPerson>
 			<representedOrganization>
 				<id extension="7601000234438" root="2.51.1.3" />
-				<name>Hauszarzt</name>
+				<name>Hausarzt</name>
 				<telecom nullFlavor="NI" />
 				<addr>
 					<streetAddressLine>Krankenstrasse 2</streetAddressLine>
