@@ -9,7 +9,8 @@
 <!-- 2018.04.11: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation 
 	of ordonnace) -->
 <!-- 2018.06.16: Tony Schaller, medshare GmbH (Refactoring for better validation results: Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation) -->
-<!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019) -->
+<!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020) -->
+<!-- 2020.02.03: Oliver Egger, ahdis ag: Update to CDA-CH EMED (2020) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -226,9 +227,10 @@
 							<!-- CH-PHARM Medication Treatment Plan Item Entry Content Module -->
 							<templateId root="2.16.756.5.30.1.1.10.4.34" />
 
-							<!-- A normal substanceAdministration act that may not contain any 
-								subordinate substanceAdministration acts. -->
-							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+			
+                            <!-- split dosing -->
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+              
 
 							<!-- consolidated mtp -->
 							<id root="D0F885CA-AFA6-4E7E-905D-F7698F9607AA" />
@@ -271,6 +273,7 @@
 												<pharm:capacityQuantity value="30" />
 											</pharm:containerPackagedMedicine>
 										</pharm:asContent>
+                    <!-- FIXME
 										<pharm:ingredient classCode="ACTI">
 											<pharm:quantity>
 												<numerator unit="mg" value="50"
@@ -287,6 +290,7 @@
 												<pharm:name>Metoprolol</pharm:name>
 											</pharm:ingredient>
 										</pharm:ingredient>
+                    -->
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
@@ -459,6 +463,7 @@
 												<pharm:capacityQuantity value="30" />
 											</pharm:containerPackagedMedicine>
 										</pharm:asContent>
+                    <!-- FIXME
 										<pharm:ingredient classCode="ACTI">
 											<pharm:quantity>
 												<numerator unit="mg" value="10"
@@ -475,6 +480,7 @@
 												<pharm:name>amlodipine</pharm:name>
 											</pharm:ingredient>
 										</pharm:ingredient>
+                    -->
 									</manufacturedMaterial>
 								</manufacturedProduct>
 
@@ -550,7 +556,7 @@
             <section>
               <templateId root="2.16.756.5.30.1.1.10.3.73"/>
               <templateId root="2.16.756.5.30.1.1.10.3.2"/>
-              <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment [Interpretation] Narrative"/>
+              <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation comment"/>
               <title>Kommentar</title>
               <text>
                 <content ID='co1'>

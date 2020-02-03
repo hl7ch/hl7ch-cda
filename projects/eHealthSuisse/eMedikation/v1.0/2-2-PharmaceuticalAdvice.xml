@@ -8,7 +8,8 @@
 <!-- 2017.06.29: Oliver Egger, ahdis gmbh (Adaption to IPAG Report June 2017) -->
 <!-- 2018.04.11: Oliver Egger, ahdis gmbh (Adaption to feedback from consultation of ordonnace) -->
 <!-- 2018.06.16: Tony Schaller, medshare GmbH (Refactoring for better validation results: Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation) -->
-<!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019) -->
+<!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020) -->
+<!-- 2020.02.03: Oliver Egger, ahdis ag: Update to CDA-CH EMED (2020) -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -44,9 +45,9 @@
 	<!-- IHE PHARM PADV -->
 	<code code="61356-2" codeSystem="2.16.840.1.113883.6.1"
 		codeSystemName="LOINC" displayName="Medication pharmaceutical advice.extended" >
-		<!-- Document code mapping to the Swiss EPR XDS.b metadata (DocumentEntry.typeCode	, 2.16.756.5.30.1.127.3.10.1.27). -->
+		<!-- Document code mapping to the Swiss EPR XDS.b metadata (DocumentEntry.typeCode	, 2.16.756.5.30.1.127.3.10.1.27). 
 		<translation code="419891008" codeSystem="2.16.840.1.113883.6.96"
-			codeSystemName="SNOMED CT" displayName="Record artifact (record artifact)" />
+			codeSystemName="SNOMED CT" displayName="Record artifact (record artifact)" /> -->
 	</code>	
 
 	<title>Kommentar zur Medikation</title>
@@ -236,53 +237,6 @@
 										</externalDocument>
 									</reference>
 								</substanceAdministration>
-							</entryRelationship>
-
-							<!-- TODO: Curre3ntly Schematron allows only one concern entry
-							One or more Pharmaceutical Advice Concern entries -->
-							<entryRelationship typeCode='REFR'
-								inversionInd='false'>
-								<act classCode='ACT' moodCode='EVN'>
-									<templateId root='2.16.756.5.30.1.1.10.4.81' />
-									<templateId root='2.16.840.1.113883.10.20.1.27' />
-									<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5.1' />
-									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.5' />
-
-									<id root="9CDBAEF6-2971-11E6-B67B-9E71128CAE77" />
-
-									<code nullFlavor='NA' />
-									<text>
-										<reference value="#padv.1" />
-									</text>
-									<statusCode code='active' />
-									<effectiveTime>
-										<low value='20120204140000+0100' />
-									</effectiveTime>
-
-									<entryRelationship typeCode='SUBJ' inversionInd='false'>
-										<observation classCode='OBS' moodCode='EVN' negationInd='false'>
-											<templateId root='2.16.840.1.113883.10.20.1.28' />
-											<templateId root='1.3.6.1.4.1.19376.1.5.3.1.4.5' />
-											<id root="1CDBAEF6-3456-11E6-B67B-9E71128CAE77" />
-											<code code='282291009' displayName='Diagnosis'
-												codeSystem='2.16.840.1.113883.6.96' codeSystemName='SNOMED CT' />
-											<text>
-												<reference value="#padv.1" />
-											</text>
-											<statusCode code='completed' />
-											<effectiveTime>
-												<low value='20120204140000+0100' />
-											</effectiveTime>
-											<value xsi:type='CD' nullFlavor="NAV">
-												<originalText>
-													<reference value="#padv.1" />
-												</originalText>
-											</value>
-											<interpretationCode code='2'
-												codeSystem='2.16.756.5.30.1.127.77.4.11.3' displayName="Intervention"></interpretationCode>
-										</observation>
-									</entryRelationship>
-								</act>
 							</entryRelationship>
 
 						</observation>
