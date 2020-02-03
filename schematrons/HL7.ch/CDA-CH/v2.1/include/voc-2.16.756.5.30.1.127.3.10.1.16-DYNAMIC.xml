@@ -7,29 +7,26 @@
              id="2.16.756.5.30.1.127.3.10.1.16"
              name="DocumentEntry.mimeType"
              displayName="DocumentEntry.mimeType"
-             statusCode="final"
-             versionLabel="201907.1-stable"
-             effectiveDate="2019-11-03T14:37:24"
+             effectiveDate="2019-12-11T14:58:57"
+             statusCode="draft"
+             versionLabel="201907.2-stable"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">
-      <desc language="de-CH">MIME Typ des Dokumentes gemäss Anhang 3 EPDG.<br clear="none"/>
-            </desc>
-      <desc language="en-US">MIME type of the document as per Annex; EPRO-FDHA.<br clear="none"/>
-            </desc>
-      <desc language="fr-CH">MIME Type du document selon l'annexe 3 ODEP-DFI.<br clear="none"/>
-            </desc>
-      <desc language="it-CH">Tipo MIME del documento secondo l'allegato 3 OCIP-DFI.<br clear="none"/>
-            </desc>
+      <desc language="de-CH">MIME Typ des Dokumentes gemäss Anhang 3 EPDG.</desc>
+      <desc language="en-US">MIME type of the document as per Annex; EPRO-FDHA.</desc>
+      <desc language="fr-CH">MIME Type du document selon l'annexe 3 ODEP-DFI.</desc>
+      <desc language="it-CH">Tipo MIME del documento secondo l'allegato 3 OCIP-DFI.</desc>
       <sourceCodeSystem id="2.16.840.1.113883.5.79"
                         identifierName="Media Type"
                         canonicalUri="urn:oid:2.16.840.1.113883.5.79"
                         canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.79"
                         canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.79"
                         canonicalUriR4="urn:oid:2.16.840.1.113883.5.79"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
             </publishingAuthority>
       <conceptList>
                 <concept code="application/dicom"

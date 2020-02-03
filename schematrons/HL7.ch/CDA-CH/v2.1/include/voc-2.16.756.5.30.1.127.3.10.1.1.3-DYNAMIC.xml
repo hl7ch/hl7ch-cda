@@ -7,33 +7,34 @@
              id="2.16.756.5.30.1.127.3.10.1.1.3"
              name="DocumentEntry.authorRole"
              displayName="DocumentEntry.authorRole"
-             statusCode="final"
-             versionLabel="201907.1-stable"
-             effectiveDate="2019-10-30T13:20:13"
+             effectiveDate="2019-12-11T09:15:32"
+             statusCode="draft"
+             versionLabel="201907.2-stable"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">
-      <desc language="de-CH">Rolle des Autors.<br clear="none"/>
-                <br clear="none"/>Dieser Code definiert die Rolle des Authors vom Dokument. Dies ist ein Sub-Attribut von epd_xds_author.<br clear="none"/>
-            </desc>
-      <desc language="en-US">Role of the author.<br clear="none"/>
-                <br clear="none"/>This code defines the role of the author of the document. This is a sub-attribute of epd_xds_author.<br clear="none"/>
-            </desc>
-      <desc language="fr-CH">Rôle de l'auteur.<br clear="none"/>
-                <br clear="none"/>Ce code définit le rôle de l'auteur du document. Il s'agit d'un sous-attribut de epd_xds_author.<br clear="none"/>
-            </desc>
-      <desc language="it-CH">Ruolo dell'autore.<br clear="none"/>
-                <br clear="none"/>Questo codice definisce il ruolo dell'autore <span style="display: inline !important; float: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: arial,helvetica,clean,sans-serif; font-size: 13px; font-size-adjust: none; font-stretch: 100%; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 15.86px; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">del documento</span>. È un sottoattributo di epd_xds_author.<br clear="none"/>
-            </desc>
+      <desc language="de-CH">Rolle des Autors.
+     Dieser Code definiert die Rolle des Authors vom Dokument. Dies ist ein Sub-Attribut von epd_xds_author.
+    </desc>
+      <desc language="en-US">Role of the author.
+      This code defines the role of the author of the document. This is a sub-attribute of epd_xds_author.
+    </desc>
+      <desc language="fr-CH">Rôle de l'auteur.
+      Ce code définit le rôle de l'auteur du document. Il s'agit d'un sous-attribut de epd_xds_author.
+    </desc>
+      <desc language="it-CH">Ruolo dell'autore.
+      Questo codice definisce il ruolo dell'autore del documento. È un sottoattributo di epd_xds_author.
+    </desc>
       <sourceCodeSystem id="2.16.756.5.30.1.127.3.10.6"
                         identifierName="ch-ehealth-codesystem-role"
                         canonicalUri="urn:oid:2.16.756.5.30.1.127.3.10.6"
                         canonicalUriDSTU2="urn:oid:2.16.756.5.30.1.127.3.10.6"
                         canonicalUriSTU3="urn:oid:2.16.756.5.30.1.127.3.10.6"
                         canonicalUriR4="urn:oid:2.16.756.5.30.1.127.3.10.6"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
             </publishingAuthority>
       <conceptList>
                 <concept code="PAT"
@@ -44,7 +45,7 @@
                     <designation language="de-CH" type="preferred" displayName="Patient"/>
                     <designation language="fr-CH" type="preferred" displayName="Patient"/>
                     <designation language="it-CH" type="preferred" displayName="Paziente"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Pazient"/>
                 </concept>
                 <concept code="HCP"
                   codeSystem="2.16.756.5.30.1.127.3.10.6"
@@ -60,7 +61,9 @@
                     <designation language="it-CH"
                          type="preferred"
                          displayName="Professionista della salute"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Persuna spezialisada dal sectur da sanadad"/>
                 </concept>
                 <concept code="ASS"
                   codeSystem="2.16.756.5.30.1.127.3.10.6"
@@ -70,7 +73,7 @@
                     <designation language="de-CH" type="preferred" displayName="Hilfsperson"/>
                     <designation language="fr-CH" type="preferred" displayName="Auxiliaire"/>
                     <designation language="it-CH" type="preferred" displayName="Persona ausiliara"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Persuna d'agid"/>
                 </concept>
                 <concept code="REP"
                   codeSystem="2.16.756.5.30.1.127.3.10.6"
@@ -80,7 +83,7 @@
                     <designation language="de-CH" type="preferred" displayName="Stellvertretung"/>
                     <designation language="fr-CH" type="preferred" displayName="Représentant"/>
                     <designation language="it-CH" type="preferred" displayName="Rappresentante"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Substituziun"/>
                 </concept>
                 <concept code="TCU"
                   codeSystem="2.16.756.5.30.1.127.3.10.6"
@@ -94,7 +97,7 @@
                          type="preferred"
                          displayName="Utilisateur technique"/>
                     <designation language="it-CH" type="preferred" displayName="Utente tecnico"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Utilisader tecnic"/>
                 </concept>
             </conceptList>
    </valueSet>

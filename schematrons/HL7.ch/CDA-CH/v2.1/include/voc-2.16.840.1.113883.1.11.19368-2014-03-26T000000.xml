@@ -23,9 +23,10 @@
                         canonicalUriDSTU2="http://hl7.org/fhir/v3/RoleClass"
                         canonicalUriSTU3="http://hl7.org/fhir/v3/RoleClass"
                         canonicalUriR4="http://terminology.hl7.org/CodeSystem/v3-RoleClass"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
             </publishingAuthority>
       <conceptList>
                 <concept code="PAT"

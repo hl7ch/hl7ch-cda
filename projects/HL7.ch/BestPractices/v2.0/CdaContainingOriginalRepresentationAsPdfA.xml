@@ -6,7 +6,7 @@ CDA-CH V2.0 Sample - Original representation embedded as PDF/A
 History:
 2018.02.06: Tony Schaller, medshare GmbH: Initial Version
 2018.02.12: Tony Schaller, medshare GmbH: Successful PDF/A-1a validation of embedded PDF and added elements: templateId, id, languageCode
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 
 ********************************************************
 -->
@@ -21,13 +21,14 @@ History:
 
 	<!-- CDA-CH V2 specification (optional, but informative template id). -->
 	<templateId root="2.16.756.5.30.1.1.1.1.4"/>
-	<!-- CDA-CH V2 ART-DECOR model - structuredBody enhanced. -->
-	<templateId root="2.16.756.5.30.1.1.10.1.14"/>
 	<!-- HL7 CDA R2 (2005) having a structuredBody. -->
 	<templateId root="2.16.840.1.113883.10.12.2"/>
 	<!-- HL7 CDA R2 (2005). -->
 	<templateId root="2.16.840.1.113883.10.12.1"/>
-
+    
+    <!-- CDA-CH v2.0 structuredBody  -->
+    <templateId root="2.16.756.5.30.1.1.10.1.9"/>
+    
 	<!-- Document id according to CDA-CH v2.0. -->
 	<id root="11778932-3D19-486B-AFE6-E32A1165C978"/>
 

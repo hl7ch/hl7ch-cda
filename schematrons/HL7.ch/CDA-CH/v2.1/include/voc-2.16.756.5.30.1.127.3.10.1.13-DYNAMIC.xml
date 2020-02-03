@@ -7,20 +7,16 @@
              id="2.16.756.5.30.1.127.3.10.1.13"
              name="DocumentEntry.languageCode"
              displayName="DocumentEntry.languageCode"
-             statusCode="final"
-             versionLabel="201907.1-stable"
-             effectiveDate="2019-11-03T11:28:28"
+             effectiveDate="2019-12-11T10:04:39"
+             statusCode="draft"
+             versionLabel="201907.2-stable"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">
-      <desc language="de-CH">Sprache des Dokumentes gemäss Anhang 3 EPDV-EDI. Definiert die Sprache in welcher das Dokument verfasst wurde.<br clear="none"/>
-            </desc>
-      <desc language="en-US">Document language as per Annex 3  EPRO-FDHA. Defines the language in which the document was written.<br clear="none"/>
-            </desc>
-      <desc language="fr-CH">Langue du document selon l'annexe 3 ODEP-DFI. Définit la langue dans laquelle est rédigé le document.<br clear="none"/>
-            </desc>
-      <desc language="it-CH">Lingua del documento secondo l'allegato 3 OCIP-DFI. Definisce la lingua nella quale è stato redatto il documento.<br clear="none"/>
-            </desc>
+      <desc language="de-CH">Sprache des Dokumentes gemäss Anhang 3 EPDV-EDI. Definiert die Sprache in welcher das Dokument verfasst wurde.</desc>
+      <desc language="en-US">Document language as per Annex 3 EPRO-FDHA. Defines the language in which the document was written.</desc>
+      <desc language="fr-CH">Langue du document selon l'annexe 3 ODEP-DFI. Définit la langue dans laquelle est rédigé le document.</desc>
+      <desc language="it-CH">Lingua del documento secondo l'allegato 3 OCIP-DFI. Definisce la lingua nella quale è stato redatto il documento.</desc>
       <sourceCodeSystem id="2.16.840.1.113883.6.316"
                         identifierName="Tags for Identifying Languages - RFC5646"
                         canonicalUri="urn:oid:2.16.840.1.113883.6.316"
@@ -33,9 +29,10 @@
                         canonicalUriDSTU2="urn:oid:2.16.756.5.30.1.127.3.10.12"
                         canonicalUriSTU3="urn:oid:2.16.756.5.30.1.127.3.10.12"
                         canonicalUriR4="urn:oid:2.16.756.5.30.1.127.3.10.12"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
             </publishingAuthority>
       <completeCodeSystem codeSystem="2.16.840.1.113883.6.316"
                           codeSystemName="Tags for Identifying Languages - RFC5646"/>
@@ -49,7 +46,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Arabe"/>
                     <designation language="it-CH" type="preferred" displayName="Arabo"/>
                     <designation language="en-US" type="preferred" displayName="Arabic"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Arab"/>
                 </concept>
                 <concept code="bn"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -60,7 +57,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Bengali"/>
                     <designation language="it-CH" type="preferred" displayName="Bengalese"/>
                     <designation language="en-US" type="preferred" displayName="Bengali"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Bengal"/>
                 </concept>
                 <concept code="cs"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -71,7 +68,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Tchèque"/>
                     <designation language="it-CH" type="preferred" displayName="Ceco"/>
                     <designation language="en-US" type="preferred" displayName="Czech"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Tschec"/>
                 </concept>
                 <concept code="da"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -82,7 +79,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Danois"/>
                     <designation language="it-CH" type="preferred" displayName="Danese"/>
                     <designation language="en-US" type="preferred" displayName="Danish"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Danais"/>
                 </concept>
                 <concept code="de"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -93,7 +90,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Allemand"/>
                     <designation language="it-CH" type="preferred" displayName="Tedesco"/>
                     <designation language="en-US" type="preferred" displayName="German"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Tudestg"/>
                 </concept>
                 <concept code="de-AT"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -106,7 +103,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Allemand (Autriche)"/>
                     <designation language="it-CH" type="preferred" displayName="Tedesco (Austria)"/>
                     <designation language="en-US" type="preferred" displayName="German (Austria)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Tudestg (Austria)"/>
                 </concept>
                 <concept code="de-CH"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -119,7 +116,7 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="German (Switzerland)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Tudestg (Svizra)"/>
                 </concept>
                 <concept code="de-DE"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -134,7 +131,7 @@
                          displayName="Allemand (Allemagne)"/>
                     <designation language="it-CH" type="preferred" displayName="Tedesco (Germania)"/>
                     <designation language="en-US" type="preferred" displayName="German (Germany)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Tudestg (Germania)"/>
                 </concept>
                 <concept code="el"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -145,7 +142,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Grec"/>
                     <designation language="it-CH" type="preferred" displayName="Greco"/>
                     <designation language="en-US" type="preferred" displayName="Greek"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Grec"/>
                 </concept>
                 <concept code="en"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -156,7 +153,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Anglais"/>
                     <designation language="it-CH" type="preferred" displayName="Inglese"/>
                     <designation language="en-US" type="preferred" displayName="English"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Englais"/>
                 </concept>
                 <concept code="en-AU"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -169,7 +166,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Anglais (Australie)"/>
                     <designation language="it-CH" type="preferred" displayName="Inglese (Australia)"/>
                     <designation language="en-US" type="preferred" displayName="English (Australia)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Englais (Australia)"/>
                 </concept>
                 <concept code="en-CA"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -180,7 +177,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Anglais (Canada)"/>
                     <designation language="it-CH" type="preferred" displayName="Inglese (Canada)"/>
                     <designation language="en-US" type="preferred" displayName="English (Canada)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Englais (Canada)"/>
                 </concept>
                 <concept code="en-GB"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -199,7 +196,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="English (Great Britain)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Englais (Gronda Britannia)"/>
                 </concept>
                 <concept code="en-IN"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -210,7 +209,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Anglais (Inde)"/>
                     <designation language="it-CH" type="preferred" displayName="Inglese (India)"/>
                     <designation language="en-US" type="preferred" displayName="English (India)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Englais (India)"/>
                 </concept>
                 <concept code="en-NZ"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -229,7 +228,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="English (New Zealand)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Englais (Nova Zelanda)"/>
                 </concept>
                 <concept code="en-SG"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -240,7 +241,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Anglais (Singapour)"/>
                     <designation language="it-CH" type="preferred" displayName="Inglese (Singapore)"/>
                     <designation language="en-US" type="preferred" displayName="English (Singapore)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Englais (Singapur)"/>
                 </concept>
                 <concept code="en-US"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -257,7 +258,7 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="English (United States)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Englais (USA)"/>
                 </concept>
                 <concept code="es"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -268,7 +269,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Espagnol"/>
                     <designation language="it-CH" type="preferred" displayName="Spagnolo"/>
                     <designation language="en-US" type="preferred" displayName="Spanish"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Spagnol"/>
                 </concept>
                 <concept code="es-AR"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -285,7 +286,7 @@
                          type="preferred"
                          displayName="Spagnolo (Argentina)"/>
                     <designation language="en-US" type="preferred" displayName="Spanish (Argentina)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Spagnol (Argentina)"/>
                 </concept>
                 <concept code="es-ES"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -296,7 +297,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Espagnol (Espagne)"/>
                     <designation language="it-CH" type="preferred" displayName="Spagnolo (Spagna)"/>
                     <designation language="en-US" type="preferred" displayName="Spanish (Spain)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Spagnol (Spagna)"/>
                 </concept>
                 <concept code="es-UY"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -307,7 +308,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Espagnol (Uruguay)"/>
                     <designation language="it-CH" type="preferred" displayName="Spagnolo (Uruguay)"/>
                     <designation language="en-US" type="preferred" displayName="Spanish (Uruguay)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Spagnol (Uruguai)"/>
                 </concept>
                 <concept code="fi"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -318,7 +319,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Finnois"/>
                     <designation language="it-CH" type="preferred" displayName="Finlandese"/>
                     <designation language="en-US" type="preferred" displayName="Finnish"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Finlandais"/>
                 </concept>
                 <concept code="fr"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -329,7 +330,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Français"/>
                     <designation language="it-CH" type="preferred" displayName="Francese"/>
                     <designation language="en-US" type="preferred" displayName="French"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Franzos"/>
                 </concept>
                 <concept code="fr-BE"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -342,7 +343,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Français (Belgique)"/>
                     <designation language="it-CH" type="preferred" displayName="Francese (Belgio)"/>
                     <designation language="en-US" type="preferred" displayName="French (Belgium)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Franzos (Belgia)"/>
                 </concept>
                 <concept code="fr-CH"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -357,7 +358,7 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="French (Switzerland)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Franzos (Svizra)"/>
                 </concept>
                 <concept code="fr-FR"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -370,7 +371,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Français (France)"/>
                     <designation language="it-CH" type="preferred" displayName="Francese (Francia)"/>
                     <designation language="en-US" type="preferred" displayName="French (France)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Franzos (Frantscha)"/>
                 </concept>
                 <concept code="fy"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -381,7 +382,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Frison"/>
                     <designation language="it-CH" type="preferred" displayName="Frisone"/>
                     <designation language="en-US" type="preferred" displayName="Frysian"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Fris"/>
                 </concept>
                 <concept code="fy-NL"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -398,7 +399,7 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Frysian (Netherlands)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Fris (Pajais Bass)"/>
                 </concept>
                 <concept code="hi"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -409,7 +410,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Hindi"/>
                     <designation language="it-CH" type="preferred" displayName="Hindi"/>
                     <designation language="en-US" type="preferred" displayName="Hindi"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Hindi"/>
                 </concept>
                 <concept code="hr"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -420,7 +421,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Croate"/>
                     <designation language="it-CH" type="preferred" displayName="Croato"/>
                     <designation language="en-US" type="preferred" displayName="Croatian"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Croat"/>
                 </concept>
                 <concept code="it"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -431,7 +432,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Italien"/>
                     <designation language="it-CH" type="preferred" displayName="Italiano"/>
                     <designation language="en-US" type="preferred" displayName="Italian"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Talian"/>
                 </concept>
                 <concept code="it-CH"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -446,7 +447,7 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Italian (Switzerland)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Talian (Svizra)"/>
                 </concept>
                 <concept code="it-IT"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -459,7 +460,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Italien (Italie)"/>
                     <designation language="it-CH" type="preferred" displayName="Italiano (Italia)"/>
                     <designation language="en-US" type="preferred" displayName="Italian (Italy)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Talian (Italia)"/>
                 </concept>
                 <concept code="ja"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -470,7 +471,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Japonais"/>
                     <designation language="it-CH" type="preferred" displayName="Giapponese"/>
                     <designation language="en-US" type="preferred" displayName="Japanese"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Giapunais"/>
                 </concept>
                 <concept code="ko"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -481,7 +482,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Coréen"/>
                     <designation language="it-CH" type="preferred" displayName="Coreano"/>
                     <designation language="en-US" type="preferred" displayName="Korean"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Corean"/>
                 </concept>
                 <concept code="nl"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -492,7 +493,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Néerlandais"/>
                     <designation language="it-CH" type="preferred" displayName="Olandese"/>
                     <designation language="en-US" type="preferred" displayName="Dutch"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Ollandais"/>
                 </concept>
                 <concept code="nl-BE"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -507,7 +508,7 @@
                          displayName="Néerlandais (Belgique)"/>
                     <designation language="it-CH" type="preferred" displayName="Olandese (Belgio)"/>
                     <designation language="en-US" type="preferred" displayName="Dutch (Belgium)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Ollandais (Belgia)"/>
                 </concept>
                 <concept code="nl-NL"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -524,7 +525,9 @@
                          type="preferred"
                          displayName="Olandese (Paesi Bassi)"/>
                     <designation language="en-US" type="preferred" displayName="Dutch (Netherlands)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Ollandais (Pajais Bass)"/>
                 </concept>
                 <concept code="no"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -535,7 +538,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Norvégien"/>
                     <designation language="it-CH" type="preferred" displayName="Norvegese"/>
                     <designation language="en-US" type="preferred" displayName="Norwegian"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Norvegiais"/>
                 </concept>
                 <concept code="no-NO"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -550,7 +553,9 @@
                          type="preferred"
                          displayName="Norvegese (Norvegia)"/>
                     <designation language="en-US" type="preferred" displayName="Norwegian (Norway)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Norvegiais (Norvegia)"/>
                 </concept>
                 <concept code="pa"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -561,7 +566,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Panjabi"/>
                     <designation language="it-CH" type="preferred" displayName="Panjabi"/>
                     <designation language="en-US" type="preferred" displayName="Punjabi"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Punjabi"/>
                 </concept>
                 <concept code="pl"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -572,7 +577,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Polonais"/>
                     <designation language="it-CH" type="preferred" displayName="Polacco"/>
                     <designation language="en-US" type="preferred" displayName="Polish"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Polac"/>
                 </concept>
                 <concept code="pt"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -583,7 +588,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Portugais"/>
                     <designation language="it-CH" type="preferred" displayName="Portoghese"/>
                     <designation language="en-US" type="preferred" displayName="Portuguese"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Portugais"/>
                 </concept>
                 <concept code="pt-BR"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -598,7 +603,9 @@
                          type="preferred"
                          displayName="Portoghese (Brasile)"/>
                     <designation language="en-US" type="preferred" displayName="Portuguese (Brazil)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Portugais (Brasilia)"/>
                 </concept>
                 <concept code="rm"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -609,7 +616,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Rhéto-roman"/>
                     <designation language="it-CH" type="preferred" displayName="Romancio"/>
                     <designation language="en-US" type="preferred" displayName="Romansh"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Rumantsch"/>
                 </concept>
                 <concept code="ru"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -620,7 +627,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Russe"/>
                     <designation language="it-CH" type="preferred" displayName="Russo"/>
                     <designation language="en-US" type="preferred" displayName="Russian"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Russ"/>
                 </concept>
                 <concept code="ru-RU"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -631,7 +638,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Russe (Russie)"/>
                     <designation language="it-CH" type="preferred" displayName="Russo (Russia)"/>
                     <designation language="en-US" type="preferred" displayName="Russian (Russia)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Russ (Russia)"/>
                 </concept>
                 <concept code="sr"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -642,7 +649,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Serbe"/>
                     <designation language="it-CH" type="preferred" displayName="Serbo"/>
                     <designation language="en-US" type="preferred" displayName="Serbian"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Serb"/>
                 </concept>
                 <concept code="sr-RS"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -653,7 +660,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Serbe (Serbie)"/>
                     <designation language="it-CH" type="preferred" displayName="Serbo (Serbia)"/>
                     <designation language="en-US" type="preferred" displayName="Serbian (Serbia)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Serb (Serbia)"/>
                 </concept>
                 <concept code="sv"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -664,7 +671,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Suédois"/>
                     <designation language="it-CH" type="preferred" displayName="Svedese"/>
                     <designation language="en-US" type="preferred" displayName="Swedish"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Svedais"/>
                 </concept>
                 <concept code="sv-SE"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -677,18 +684,18 @@
                     <designation language="fr-CH" type="preferred" displayName="Suédois (Suède)"/>
                     <designation language="it-CH" type="preferred" displayName="Svedese (Svezia)"/>
                     <designation language="en-US" type="preferred" displayName="Swedish (Sweden)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Svedais (Svezia)"/>
                 </concept>
                 <concept code="te"
                   codeSystem="2.16.840.1.113883.6.316"
                   displayName="Telegu"
                   level="0"
                   type="L">
-                    <designation language="de-CH" type="preferred" displayName="Telegu"/>
-                    <designation language="fr-CH" type="preferred" displayName="TODO"/>
-                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="de-CH" type="preferred" displayName="Telugu"/>
+                    <designation language="fr-CH" type="preferred" displayName="Telugu"/>
+                    <designation language="it-CH" type="preferred" displayName="Telugu"/>
                     <designation language="en-US" type="preferred" displayName="Telegu"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Telugu"/>
                 </concept>
                 <concept code="zh"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -699,7 +706,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Chinois"/>
                     <designation language="it-CH" type="preferred" displayName="Cinese"/>
                     <designation language="en-US" type="preferred" displayName="Chinese"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Chinais"/>
                 </concept>
                 <concept code="zh-CN"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -710,7 +717,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Chinois (Chine)"/>
                     <designation language="it-CH" type="preferred" displayName="Cinese (Cina)"/>
                     <designation language="en-US" type="preferred" displayName="Chinese (China)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Chinais (China)"/>
                 </concept>
                 <concept code="zh-HK"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -723,7 +730,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Chinois (Hong Kong)"/>
                     <designation language="it-CH" type="preferred" displayName="Cinese (Hong Kong)"/>
                     <designation language="en-US" type="preferred" displayName="Chinese (Hong Kong)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Chinais (HongKong)"/>
                 </concept>
                 <concept code="zh-SG"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -736,7 +743,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Chinois (Singapour)"/>
                     <designation language="it-CH" type="preferred" displayName="Cinese (Singapore)"/>
                     <designation language="en-US" type="preferred" displayName="Chinese (Singapore)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Chinais (Singapur)"/>
                 </concept>
                 <concept code="zh-TW"
                   codeSystem="2.16.840.1.113883.6.316"
@@ -747,7 +754,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Chinois (Taïwan)"/>
                     <designation language="it-CH" type="preferred" displayName="Cinese (Taiwan)"/>
                     <designation language="en-US" type="preferred" displayName="Chinese (Taiwan)"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Chinais (Taiwan)"/>
                 </concept>
                 <concept code="OTHER"
                   codeSystem="2.16.756.5.30.1.127.3.10.12"
@@ -758,7 +765,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Autre langue"/>
                     <designation language="it-CH" type="preferred" displayName="Altra lingua"/>
                     <designation language="en-US" type="preferred" displayName="Other language"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Autras linguas"/>
                 </concept>
             </conceptList>
    </valueSet>

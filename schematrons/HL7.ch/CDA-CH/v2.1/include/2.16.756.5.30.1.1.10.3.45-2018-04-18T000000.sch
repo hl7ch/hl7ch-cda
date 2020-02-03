@@ -33,45 +33,45 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]"
-         id="d20e5035-false-d397850e0">
+         id="d20e5045-false-d1660412e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="hl7:text/hl7:renderMultiMedia/@referencedObject=hl7:entry/hl7:observationMedia[hl7:templateId/@root='2.16.756.5.30.1.1.10.4.83']/@ID">(cdach_section_OriginalRepresentationCoded): The referenced multimedia object MUST be declared in an entry of the same section.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="hl7:entry/hl7:observationMedia[hl7:templateId/@root='2.16.756.5.30.1.1.10.4.83']/hl7:value/@mediaType='application/pdf'">(cdach_section_OriginalRepresentationCoded): The referenced multimedia object MUST have the mime type set tp 'application/pdf'.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']) &gt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:id) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:id appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:code[(@code = '55108-5' and @codeSystem = '2.16.840.1.113883.6.1')]) &gt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:code[(@code = '55108-5' and @codeSystem = '2.16.840.1.113883.6.1')] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:code[(@code = '55108-5' and @codeSystem = '2.16.840.1.113883.6.1')]) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:code[(@code = '55108-5' and @codeSystem = '2.16.840.1.113883.6.1')] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:title[not(@nullFlavor)]) &gt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:title[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:title[not(@nullFlavor)]) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:title[not(@nullFlavor)] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:text[not(@nullFlavor)][hl7:renderMultiMedia]) &gt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:text[not(@nullFlavor)][hl7:renderMultiMedia] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:text[not(@nullFlavor)][hl7:renderMultiMedia]) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:text[not(@nullFlavor)][hl7:renderMultiMedia] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:entry[hl7:observationMedia[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.83']]]) &gt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:entry[hl7:observationMedia[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.83']]] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:entry[hl7:observationMedia[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.83']]]) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:entry[hl7:observationMedia[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.83']]] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -81,13 +81,13 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']"
-         id="d20e5040-false-d397909e0">
+         id="d20e5050-false-d1660471e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.3.45')">(cdach_section_OriginalRepresentationCoded): The value for root SHALL be '2.16.756.5.30.1.1.10.3.45'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -97,19 +97,19 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:id"
-         id="d20e5045-false-d397923e0">
+         id="d20e5055-false-d1660485e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="@root">(cdach_section_OriginalRepresentationCoded): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_section_OriginalRepresentationCoded): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not(@extension) or string-length(@extension)&gt;0">(cdach_section_OriginalRepresentationCoded): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
    <!--
@@ -119,13 +119,13 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:code[(@code = '55108-5' and @codeSystem = '2.16.840.1.113883.6.1')]"
-         id="d20e5063-false-d397943e0">
+         id="d20e5073-false-d1660505e0">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="@nullFlavor or (@code='55108-5' and @codeSystem='2.16.840.1.113883.6.1' and @displayName='Clinical presentation' and @codeSystemName='LOINC')">(cdach_section_OriginalRepresentationCoded): The element value SHALL be one of 'code '55108-5' codeSystem '2.16.840.1.113883.6.1' displayName='Clinical presentation' codeSystemName='LOINC''.</assert>
    </rule>
    <!--
@@ -135,24 +135,24 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:title[not(@nullFlavor)]"
-         id="d20e5068-false-d397959e0">
+         id="d20e5078-false-d1660521e0">
       <extends rule="ST"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ST' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <let name="languageCode"
            value="substring(ancestor::hl7:ClinicalDocument/hl7:languageCode/@code,1,2)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not($languageCode='ge') or (text()='Original Darstellung')">(cdach_section_OriginalRepresentationCoded): The German title must read 'Original Darstellung'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not($languageCode='fr') or (text()='Représentation originale')">(cdach_section_OriginalRepresentationCoded): The French title must read 'Représentation originale'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not($languageCode='it') or (text()='Rappresentazione originale')">(cdach_section_OriginalRepresentationCoded): The Italian title must read 'Rappresentazione originale'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not($languageCode='en') or (text()='Original representation')">(cdach_section_OriginalRepresentationCoded): The English title must read 'Original representation'</assert>
    </rule>
    <!--
@@ -162,16 +162,16 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)][hl7:renderMultiMedia]"
-         id="d20e5105-false-d397969e0">
+         id="d20e5115-false-d1660531e0">
       <extends rule="SD.TEXT"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='SD.TEXT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_section_OriginalRepresentationCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SD.TEXT". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:renderMultiMedia[not(@nullFlavor)]) &gt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:renderMultiMedia[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="count(hl7:renderMultiMedia[not(@nullFlavor)]) &lt;= 1">(cdach_section_OriginalRepresentationCoded): element hl7:renderMultiMedia[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -181,9 +181,9 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:text[not(@nullFlavor)][hl7:renderMultiMedia]/hl7:renderMultiMedia[not(@nullFlavor)]"
-         id="d20e5110-false-d397988e0">
+         id="d20e5120-false-d1660550e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="@referencedObject">(cdach_section_OriginalRepresentationCoded): attribute @referencedObject SHALL be present.</assert>
    </rule>
 
@@ -194,10 +194,10 @@ Item: (cdach_section_OriginalRepresentationCoded)
 -->
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.45']]/hl7:entry[hl7:observationMedia[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.83']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="string(@typeCode) = ('DRIV')">(cdach_section_OriginalRepresentationCoded): The value for typeCode SHALL be 'DRIV'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.html"
               test="not(@typeCode) or string-length(@typeCode)&gt;0">(cdach_section_OriginalRepresentationCoded): Attribute @typeCode SHALL be of data type 'st'  - '<value-of select="@typeCode"/>'</assert>
    </rule>
 </pattern>

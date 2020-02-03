@@ -3,56 +3,75 @@
     <!-- Chapter 1: Release Info (if publication is a release) -->
     <!-- ========= --><release project="2.16.756.5.30.1.127.77.2"
             prefix="hl7chcda-"
-            signature="20191210T174418"
-            date="2019-12-10T17:44:18"
-            versionLabel="2.1.0 (10.12.2019)">
+            signature="20200121T135051"
+            date="2020-01-21T13:50:51"
+            versionLabel="2.1.0 (21.01.2020)">
       <note xmlns:cda="urn:hl7-org:v3"
             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:hl7="urn:hl7-org:v3"
             language="en-US">
-                <span style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;">remove template associations to old templates to prevent schematron generation for those<br clear="none"/>create explicit includes - otherwise we have schematron templates active for old rules</span>
-                <br clear="none"
-             style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;"/>
-                <span class="xforms-group"
-               id="alltabs≡xf-1801⊙1"
-               style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;">
-                    <span class="xforms-control xforms-output"
-                  id="alltabs≡xf-1803⊙1"
-                  style="display: inline;">
-                        <span class="xforms-output-output" id="alltabs≡xf-1803≡≡c⊙1">retiring 2017 templates where there are 2019 draft templates<br clear="none"/>
-                        </span>
-                    </span>
-                </span>
-                <span style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;">
-                    <span style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;">
-                        <div class="xforms-control xforms-output xforms-mediatype-text-html xforms-mediatype-text"
-                    id="alltabs≡xf-1804⊙1"
-                    style="display: inline; zoom: 1; font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px;">
-                            <div class="xforms-output-output"
-                       id="alltabs≡xf-1804≡≡c⊙1"
-                       style="zoom: 1;">Issue  <a class=""
-                        href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.7"
-                        target="_blank"
-                        style="color: rgb(0, 136, 204); text-decoration-line: none;">7</a>  "addr and telecom in Custodian 0..1" with status "Closed". Last event (2018-09-14T14:31:51):<br clear="none"/>Issue  <a class=""
-                        href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.8"
-                        target="_blank"
-                        style="color: rgb(0, 136, 204); text-decoration-line: none;">8</a>  "Authenticator example does not validate" with status "Closed". Last event (2019-01-01T20:27:40):<br clear="none"/>Issue  <a class=""
-                        href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.9"
-                        target="_blank"
-                        style="color: rgb(0, 136, 204); text-decoration-line: none;">9</a>  "Health Service - documentationOf example does not validate" with status "Closed". Last event (2019-01-01T20:54:18):<br clear="none"/>Issue  <a class=""
-                        href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.10"
-                        target="_blank"
-                        style="color: rgb(0, 136, 204); text-decoration-line: none;">10</a>  "Employer example does not validate" with status "Closed". Last event (2019-01-01T21:13:18):<br clear="none"/>Issue  <a class=""
-                        href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.12"
-                        target="_blank"
-                        style="color: rgb(0, 136, 204); text-decoration-line: none;">12</a>  "hl7:representedCustodianOrganization telecom and addr max card 1" with status "Closed". Last event (2019-08-21T15:06:06):<br clear="none"/>Issue  <a class=""
-                        href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.13"
-                        target="_blank"
-                        style="color: rgb(0, 136, 204); text-decoration-line: none;">13</a>  "How to handle language code OTHER?" with status "Closed". Last event (2019-09-12T14:40:12):</div>
-                        </div>
-                    </span>
-                </span>
+                <table class="detail zebra-table"
+                width="100%"
+                style="font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 12px; border-collapse: collapse; border-width: 1px; border-style: solid; border-image: initial; max-width: 100%; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-spacing: 0px; color: rgb(51, 51, 51);">
+                    <tbody>
+                        <tr class="not-selectable zebra-row-odd xforms-repeat-selected-item-1"
+                   id="alltabs≡xf-1809⊙1"
+                   style="background-color: inherit; color: black;">
+                            <td colspan="1" rowspan="1" style="vertical-align: top; padding: 6px;">
+                                <span class="xforms-group" id="alltabs≡xf-1813⊙1">
+                                    <b>
+                                        <span class="xforms-control xforms-output xforms-readonly"
+                                 id="alltabs≡xf-1814⊙1"
+                                 style="display: inline;">
+                                            <span class="xforms-output-output" id="alltabs≡xf-1814≡≡c⊙1">Release: </span>
+                                        </span>
+                                        <span class="xforms-control xforms-output"
+                                 id="alltabs≡xf-1815⊙1"
+                                 style="display: inline;">
+                                            <span class="xforms-output-output" id="alltabs≡xf-1815≡≡c⊙1">2.1.0 (21.01.2020)</span>
+                                        </span>
+                                    </b>
+                                </span>
+                                <div class="xforms-control xforms-output xforms-mediatype-text-html xforms-mediatype-text"
+                          id="alltabs≡xf-1816⊙1"
+                          style="display: inline; zoom: 1;">
+                                    <div class="xforms-output-output"
+                             id="alltabs≡xf-1816≡≡c⊙1"
+                             style="zoom: 1;">remove template associations to old templates to prevent schematron generation for those<br clear="none"/>create explicit includes - otherwise we have schematron templates active for old rules<br clear="none"/>
+                                        <span class="xforms-group" id="alltabs≡xf-1801⊙1">retiring 2017 templates where there are 2020 draft templates<br clear="none"/>added remark sections and original representation to cda ch v2.1 structuredbody template<br clear="none"/>
+                                        </span>
+                                        <div class="xforms-control xforms-output xforms-mediatype-text-html xforms-mediatype-text"
+                                id="alltabs≡xf-1804⊙1"
+                                style="display: inline; zoom: 1;">
+                                            <div class="xforms-output-output"
+                                   id="alltabs≡xf-1804≡≡c⊙1"
+                                   style="zoom: 1;">Issue  <a class=""
+                                    href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.7"
+                                    target="_blank"
+                                    style="color: rgb(0, 136, 204); text-decoration-line: none;">7</a>  "addr and telecom in Custodian 0..1" with status "Closed". Last event (2018-09-14T14:31:51):<br clear="none"/>Issue  <a class=""
+                                    href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.8"
+                                    target="_blank"
+                                    style="color: rgb(0, 136, 204); text-decoration-line: none;">8</a>  "Authenticator example does not validate" with status "Closed". Last event (2019-01-01T20:27:40):<br clear="none"/>Issue  <a class=""
+                                    href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.9"
+                                    target="_blank"
+                                    style="color: rgb(0, 136, 204); text-decoration-line: none;">9</a>  "Health Service - documentationOf example does not validate" with status "Closed". Last event (2019-01-01T20:54:18):<br clear="none"/>Issue  <a class=""
+                                    href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.10"
+                                    target="_blank"
+                                    style="color: rgb(0, 136, 204); text-decoration-line: none;">10</a>  "Employer example does not validate" with status "Closed". Last event (2019-01-01T21:13:18):<br clear="none"/>Issue  <a class=""
+                                    href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.12"
+                                    target="_blank"
+                                    style="color: rgb(0, 136, 204); text-decoration-line: none;">12</a>  "hl7:representedCustodianOrganization telecom and addr max card 1" with status "Closed". Last event (2019-08-21T15:06:06):<br clear="none"/>Issue  <a class=""
+                                    href="http://art-decor.org/art-decor/decor-issues--hl7chcda-?id=2.16.756.5.30.1.127.77.2.6.13"
+                                    target="_blank"
+                                    style="color: rgb(0, 136, 204); text-decoration-line: none;">13</a>  "How to handle language code OTHER?" with status "Closed". Last event (2019-09-12T14:40:12):</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </note>
    </release>
     
@@ -126,7 +145,7 @@
       <transaction id="2.16.756.5.30.1.127.77.2.4.2"
                    effectiveDate="2017-11-10T09:35:28"
                    statusCode="draft"
-                   versionLabel="2017"
+                   versionLabel="2020"
                    name="CDA-CH - StructuredBody"/>
    </template>
    <template id="2.16.756.5.30.1.1.10.1.12"
@@ -137,18 +156,7 @@
       <transaction id="2.16.756.5.30.1.127.77.2.4.3"
                    effectiveDate="2017-11-10T09:44:03"
                    statusCode="draft"
-                   versionLabel="2017"
+                   versionLabel="2020"
                    name="CDA-CH - NonXMLBody"/>
-   </template>
-   <template id="2.16.756.5.30.1.1.10.1.14"
-             effectiveDate=""
-             sch="hl7chcda-StructuredBodyEnhanced.sch"
-             schsvrl="hl7chcda-StructuredBodyEnhanced.xsl">
-      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
-      <transaction id="2.16.756.5.30.1.127.77.2.4.4"
-                   effectiveDate="2018-02-12T17:54:58"
-                   statusCode="draft"
-                   versionLabel="2018"
-                   name="CDA-CH - StructuredBody Enhanced"/>
    </template>
 </mappings>

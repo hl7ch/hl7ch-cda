@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Schematron file for transaction CDA-CH - StructuredBody 2017 (2.16.756.5.30.1.127.77.2.4.2 2017-11-10T09:35:28)</title>
+   <title>Schematron file for transaction CDA-CH - StructuredBody 2020 (2.16.756.5.30.1.127.77.2.4.2 2017-11-10T09:35:28)</title>
    <ns uri="urn:hl7-org:v3" prefix="hl7"/>
    <ns uri="urn:hl7-org:v3" prefix="cda"/>
    <ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
@@ -137,13 +137,139 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]"
-                 see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.1.9-2019-10-17T152241.html">(CDA-CHv2.0-structuredBody): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.1.9-2019-10-17T152241.html">(CDA-CHv2.0-structuredBody): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.9-2019-10-17T152241.sch"/>
    <include href="include/2.16.756.5.30.1.1.10.1.9-2019-10-17T152241-closed.sch"/>
 
 
+   <!-- Create phases for more targeted validation on large instances -->
+   <phase id="AllExceptClosed">
+      <active pattern="template-2.16.756.5.30.1.1.10.1.9-2019-10-17T152241"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.13-2019-01-01T212258"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.14-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.15-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.3-2019-10-15T092607"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.4-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.40-2019-01-01T211332"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.43-2019-11-19T115925"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.5-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.3.2-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
+      <active pattern="template-2.16.840.1.113883.10.12.201-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.301-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.302-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.303-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.304-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.305-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.306-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.307-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.308-2005-09-07T000000"/>
+      <active pattern="template-2.16.840.1.113883.10.12.309-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDA-CHv2.0-structuredBody">
+      <active pattern="template-2.16.756.5.30.1.1.10.1.9-2019-10-17T152241"/>
+   </phase>
+   <phase id="CDA-CHv2.0-structuredBody-closed">
+      <active pattern="template-2.16.756.5.30.1.1.10.1.9-2019-10-17T152241-closed"/>
+   </phase>
+   <phase id="cdach_header_Patient-20190912T145302">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
+   </phase>
+   <phase id="cdach_header_DocumentReplacement-20190101T212258">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.13-2019-01-01T212258"/>
+   </phase>
+   <phase id="cdach_header_InsuranceCard">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.14-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Insurance">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.15-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_OrderReference">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Custodian-20191015T092607">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.3-2019-10-15T092607"/>
+   </phase>
+   <phase id="cdach_header_InformationRecipient">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.4-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Employer-20190101T211332">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.40-2019-01-01T211332"/>
+   </phase>
+   <phase id="cdach_header_PatientContact-20191119T115925">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.43-2019-11-19T115925"/>
+   </phase>
+   <phase id="cdach_header_HealthService-20190101T205333">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333"/>
+   </phase>
+   <phase id="cdach_header_LegalAuthenticator">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.5-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Authenticator-20190101T202044">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
+   </phase>
+   <phase id="cdach_header_DataEnterer">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_section_RemarksCoded">
+      <active pattern="template-2.16.756.5.30.1.1.10.3.2-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_section_OriginalRepresentationCoded">
+      <active pattern="template-2.16.756.5.30.1.1.10.3.45-2018-04-18T000000"/>
+   </phase>
+   <phase id="chpcc_entry_AnnotationComments">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-11T000000"/>
+   </phase>
+   <phase id="cdach_entry_ObservationMedia">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_other_Author-20190912T134828">
+      <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
+   </phase>
+   <phase id="cdach_other_Performer-20181224T195104">
+      <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
+   </phase>
+   <phase id="CDASection">
+      <active pattern="template-2.16.840.1.113883.10.12.201-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDAAct">
+      <active pattern="template-2.16.840.1.113883.10.12.301-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDAEncounter">
+      <active pattern="template-2.16.840.1.113883.10.12.302-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDAObservation">
+      <active pattern="template-2.16.840.1.113883.10.12.303-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDAObservationMedia">
+      <active pattern="template-2.16.840.1.113883.10.12.304-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDAOrganizer">
+      <active pattern="template-2.16.840.1.113883.10.12.305-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDAProcedure">
+      <active pattern="template-2.16.840.1.113883.10.12.306-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDARegionOfInterest">
+      <active pattern="template-2.16.840.1.113883.10.12.307-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDASubstanceAdministration">
+      <active pattern="template-2.16.840.1.113883.10.12.308-2005-09-07T000000"/>
+   </phase>
+   <phase id="CDASupply">
+      <active pattern="template-2.16.840.1.113883.10.12.309-2005-09-07T000000"/>
+   </phase>
 
    <!-- Include schematrons from templates with explicit * or ** context (but no representing templates), only those used in scenario template -->
 
@@ -173,9 +299,37 @@
    <include href="include/2.16.756.5.30.1.1.10.2.6-2019-01-01T202044.sch"/>
    <!-- cdach_header_DataEnterer -->
    <include href="include/2.16.756.5.30.1.1.10.2.7-2018-04-18T000000.sch"/>
+   <!-- cdach_section_RemarksCoded -->
+   <include href="include/2.16.756.5.30.1.1.10.3.2-2018-04-18T000000.sch"/>
+   <!-- cdach_section_OriginalRepresentationCoded -->
+   <include href="include/2.16.756.5.30.1.1.10.3.45-2018-04-18T000000.sch"/>
+   <!-- chpcc_entry_AnnotationComments -->
+   <include href="include/2.16.756.5.30.1.1.10.4.2-2016-11-11T000000.sch"/>
+   <!-- cdach_entry_ObservationMedia -->
+   <include href="include/2.16.756.5.30.1.1.10.4.83-2018-04-18T000000.sch"/>
    <!-- cdach_other_Author -->
    <include href="include/2.16.756.5.30.1.1.10.9.23-2019-09-12T134828.sch"/>
    <!-- cdach_other_Performer -->
    <include href="include/2.16.756.5.30.1.1.10.9.31-2018-12-24T195104.sch"/>
+   <!-- CDASection -->
+   <include href="include/2.16.840.1.113883.10.12.201-2005-09-07T000000.sch"/>
+   <!-- CDAAct -->
+   <include href="include/2.16.840.1.113883.10.12.301-2005-09-07T000000.sch"/>
+   <!-- CDAEncounter -->
+   <include href="include/2.16.840.1.113883.10.12.302-2005-09-07T000000.sch"/>
+   <!-- CDAObservation -->
+   <include href="include/2.16.840.1.113883.10.12.303-2005-09-07T000000.sch"/>
+   <!-- CDAObservationMedia -->
+   <include href="include/2.16.840.1.113883.10.12.304-2005-09-07T000000.sch"/>
+   <!-- CDAOrganizer -->
+   <include href="include/2.16.840.1.113883.10.12.305-2005-09-07T000000.sch"/>
+   <!-- CDAProcedure -->
+   <include href="include/2.16.840.1.113883.10.12.306-2005-09-07T000000.sch"/>
+   <!-- CDARegionOfInterest -->
+   <include href="include/2.16.840.1.113883.10.12.307-2005-09-07T000000.sch"/>
+   <!-- CDASubstanceAdministration -->
+   <include href="include/2.16.840.1.113883.10.12.308-2005-09-07T000000.sch"/>
+   <!-- CDASupply -->
+   <include href="include/2.16.840.1.113883.10.12.309-2005-09-07T000000.sch"/>
 
 </schema>

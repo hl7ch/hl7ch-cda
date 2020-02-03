@@ -191,6 +191,26 @@
 			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
+
+	<target name="Cara-CDA-CH-1" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/Cara" />
+			<param name="xml" value="1.MTP.1-mme-dupont-Arde-cda_Java" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
+
+	<target name="eHS-eMedication-CDA-CH-1-1" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/eHealthSuisse/eMedikation/v1.0" />
+			<param name="xml" value="1-1-MedicationTreatmentPlan" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
+	
+	
 	
 	<target name="HipJointReplacement-de" depends="HipJointReplacement-de-1,HipJointReplacement-de-2,HipJointReplacement-de-3,HipJointReplacement-de-4,HipJointReplacement-de-5,HipJointReplacement-de-6,HipJointReplacement-de-7,HipJointReplacement-de-8,HipJointReplacement-de-9" description="validate" >
 		<echo message="finished"/>

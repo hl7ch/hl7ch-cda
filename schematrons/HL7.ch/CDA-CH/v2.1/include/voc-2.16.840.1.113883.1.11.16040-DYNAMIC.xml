@@ -41,9 +41,10 @@
                         canonicalUriDSTU2="urn:oid:1.0.3166.1"
                         canonicalUriSTU3="urn:oid:1.0.3166.1"
                         canonicalUriR4="urn:oid:1.0.3166.1"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
             </publishingAuthority>
       <completeCodeSystem codeSystem="1.0.3166.1" codeSystemName="ISO 3166 Part 1 Country Codes"/>
       <conceptList>

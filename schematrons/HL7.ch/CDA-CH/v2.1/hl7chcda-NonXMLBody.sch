@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Schematron file for transaction CDA-CH - NonXMLBody 2017 (2.16.756.5.30.1.127.77.2.4.3 2017-11-10T09:44:03)</title>
+   <title>Schematron file for transaction CDA-CH - NonXMLBody 2020 (2.16.756.5.30.1.127.77.2.4.3 2017-11-10T09:44:03)</title>
    <ns uri="urn:hl7-org:v3" prefix="hl7"/>
    <ns uri="urn:hl7-org:v3" prefix="cda"/>
    <ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
@@ -137,13 +137,83 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.12'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.3'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]"
-                 see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20191210T174418/tmp-2.16.756.5.30.1.1.10.1.12-2018-04-18T000000.html">(CDA-CHv2.0-nonXMLBody): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.12'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.3'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/hl7chcda-html-20200121T135051/tmp-2.16.756.5.30.1.1.10.1.12-2018-04-18T000000.html">(CDA-CHv2.0-nonXMLBody): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.12'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.3'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.12-2018-04-18T000000.sch"/>
    <include href="include/2.16.756.5.30.1.1.10.1.12-2018-04-18T000000-closed.sch"/>
 
 
+   <!-- Create phases for more targeted validation on large instances -->
+   <phase id="AllExceptClosed">
+      <active pattern="template-2.16.756.5.30.1.1.10.1.12-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.13-2019-01-01T212258"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.14-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.15-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.3-2019-10-15T092607"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.4-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.40-2019-01-01T211332"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.43-2019-11-19T115925"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.5-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
+   </phase>
+   <phase id="CDA-CHv2.0-nonXMLBody">
+      <active pattern="template-2.16.756.5.30.1.1.10.1.12-2018-04-18T000000"/>
+   </phase>
+   <phase id="CDA-CHv2.0-nonXMLBody-closed">
+      <active pattern="template-2.16.756.5.30.1.1.10.1.12-2018-04-18T000000-closed"/>
+   </phase>
+   <phase id="cdach_header_Patient-20190912T145302">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
+   </phase>
+   <phase id="cdach_header_DocumentReplacement-20190101T212258">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.13-2019-01-01T212258"/>
+   </phase>
+   <phase id="cdach_header_InsuranceCard">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.14-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Insurance">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.15-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_OrderReference">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Custodian-20191015T092607">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.3-2019-10-15T092607"/>
+   </phase>
+   <phase id="cdach_header_InformationRecipient">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.4-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Employer-20190101T211332">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.40-2019-01-01T211332"/>
+   </phase>
+   <phase id="cdach_header_PatientContact-20191119T115925">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.43-2019-11-19T115925"/>
+   </phase>
+   <phase id="cdach_header_HealthService-20190101T205333">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333"/>
+   </phase>
+   <phase id="cdach_header_LegalAuthenticator">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.5-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_header_Authenticator-20190101T202044">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
+   </phase>
+   <phase id="cdach_header_DataEnterer">
+      <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
+   </phase>
+   <phase id="cdach_other_Author-20190912T134828">
+      <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
+   </phase>
+   <phase id="cdach_other_Performer-20181224T195104">
+      <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
+   </phase>
 
    <!-- Include schematrons from templates with explicit * or ** context (but no representing templates), only those used in scenario template -->
 

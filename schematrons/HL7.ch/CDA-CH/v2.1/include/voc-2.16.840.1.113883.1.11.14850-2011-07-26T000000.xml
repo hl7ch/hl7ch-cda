@@ -23,9 +23,10 @@
                         canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.79"
                         canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.79"
                         canonicalUriR4="urn:oid:2.16.840.1.113883.5.79"/>
-      <publishingAuthority name="medshare GmbH">
-                <addrLine>Buchshaldenstrasse 2</addrLine>
-                <addrLine>CH-3661 Uetendorf</addrLine>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
             </publishingAuthority>
       <conceptList>
                 <concept code="multipart/x-hl7-cda-level-one"
