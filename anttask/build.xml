@@ -173,6 +173,16 @@
 			<param name="sch" value="hl7chcda-StructuredBody" />
 		</antcall>
 	</target>
+	
+	<target name="CdaContainingOriginalRepresentationAsPdfA" depends="init" description="validate">
+		<antcall target="validate">
+			<param name="projectdir" value="../projects/HL7.ch/BestPractices/v2.0" />
+			<param name="xml" value="CdaContainingOriginalRepresentationAsPdfA" />
+			<param name="schdir" value="../schematrons/HL7.ch/CDA-CH/v2.1" />
+			<param name="sch" value="hl7chcda-StructuredBody" />
+		</antcall>
+	</target>
+
 
 	<target name="HipJointReplacement-de-8" depends="init" description="validate">
 		<antcall target="validate">

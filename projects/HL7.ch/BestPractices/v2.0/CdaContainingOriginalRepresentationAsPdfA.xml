@@ -116,7 +116,7 @@ History:
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>Always</given>
 					<family>Ready</family>
-					<suffix>General practitioner</suffix>
+					<!-- <suffix>General practitioner</suffix> CDA-CH defines no suffix -->
 				</name>
 			</assignedPerson>
 			<!-- The author's organization. -->
@@ -208,7 +208,9 @@ History:
 
 	<!-- The legal authenticator of the document according to CDA-CH v2.0. -->
 	<legalAuthenticator>
-		<!-- Timestamp of the signature. -->
+    <!-- Template id according to CDA-CH v2.0 -->
+       <templateId root="2.16.756.5.30.1.1.10.2.5"/>
+ 		<!-- Timestamp of the signature. -->
 		<time value="20171003"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
@@ -220,7 +222,7 @@ History:
 					<prefix qualifier="AC">Dr. med.</prefix>
 					<given>Always</given>
 					<family>Ready</family>
-					<suffix>General practitioner</suffix>
+					<!-- <suffix>General practitioner</suffix> CDA-CH defines no suffix -->
 				</name>
 			</assignedPerson>
 		</assignedEntity>
