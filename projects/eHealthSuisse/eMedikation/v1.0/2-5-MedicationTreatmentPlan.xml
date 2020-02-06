@@ -244,10 +244,10 @@
 										determinerCode="KIND">
 										<templateId root="2.16.756.5.30.1.1.10.4.33" />
 										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
-										<code code="C08CA01" codeSystem="2.16.840.1.113883.6.73"
-											codeSystemName="ATC WHO" displayName="amlodipine">
+										<code code="7680500440334" codeSystem="2.51.1.1"
+													codeSystemName="GTIN" displayName="NORVASC Tabl 10 mg">
 											<originalText>
-												<reference value="#mtp.1.ingredient" />
+												<reference value="#mtp.1.brandedmedication" />
 											</originalText>
 										</code>
 										<name>NORVASC Tabl 10 mg</name>
@@ -275,9 +275,9 @@
 											</pharm:quantity>
 											<pharm:ingredient classCode="MMAT"
 												determinerCode="KIND">
-												<pharm:code code="C08CA01" codeSystem="2.16.840.1.113883.6.73"
-													codeSystemName="ATC WHO" displayName="amlodipine" />
-												<pharm:name>amlodipine</pharm:name>
+											   <pharm:code code="386864001" codeSystem="2.16.840.1.113883.6.96"
+                                                    codeSystemName="SNOMED CT" displayName="Amlodipine (substance)" />
+												<pharm:name>Amlodipine</pharm:name>
 											</pharm:ingredient>
 										</pharm:ingredient>
 									</manufacturedMaterial>

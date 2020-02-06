@@ -232,8 +232,8 @@
 										<templateId root="2.16.756.5.30.1.1.10.4.33" />
 										<!-- http://compendium.ch/prod/triatec-tabl-2-5-mg/de -->
 										<templateId root="1.3.6.1.4.1.19376.1.9.1.3.1" />
-										<code code="C07AB02" codeSystem="2.16.840.1.113883.6.73"
-											codeSystemName="ATC WHO" displayName="Metoprolol">
+										<code code="7680521101306" codeSystem="2.51.1.1"
+													codeSystemName="GTIN" displayName="BELOC ZOK Ret Tabl 50 mg 30 Stk">
 											<originalText>
 												<reference value="#dis.1.ingredient" />
 											</originalText>
@@ -265,8 +265,8 @@
 											</pharm:quantity>
 											<pharm:ingredient classCode="MMAT"
 												determinerCode="KIND">
-												<pharm:code code="C07AB02" codeSystem="2.16.840.1.113883.6.73"
-													codeSystemName="ATC WHO" displayName="Metoprolol" />
+                                                <pharm:code code="372826007" codeSystem="2.16.840.1.113883.6.96"
+                                                codeSystemName="SNOMED CT" displayName="Metoprolol (substance)" />
 												<pharm:name>Metoprolol</pharm:name>
 											</pharm:ingredient>
 										</pharm:ingredient>
@@ -325,11 +325,6 @@
 											<doseQuantity>
 												<center value="1" />
 											</doseQuantity>
-											<consumable>
-												<manufacturedProduct>
-													<manufacturedMaterial nullFlavor="NA" />
-												</manufacturedProduct>
-											</consumable>
 										</substanceAdministration>
 									</entryRelationship>
 									<entryRelationship typeCode='COMP'>
@@ -343,11 +338,6 @@
 											<doseQuantity>
 												<center value="0.5" />
 											</doseQuantity>
-											<consumable>
-												<manufacturedProduct>
-													<manufacturedMaterial nullFlavor="NA" />
-												</manufacturedProduct>
-											</consumable>
 										</substanceAdministration>
 									</entryRelationship>
 								</substanceAdministration>
