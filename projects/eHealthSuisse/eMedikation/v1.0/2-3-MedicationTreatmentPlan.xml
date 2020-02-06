@@ -289,7 +289,12 @@
 									<doseQuantity>
 										<center value="1" />
 									</doseQuantity>
-								</substanceAdministration>
+                                    <consumable>
+                                      <manufacturedProduct>
+                                        <manufacturedMaterial nullFlavor="NA" />
+                                      </manufacturedProduct>
+                                    </consumable>
+  								</substanceAdministration>
 							</entryRelationship>
 							<entryRelationship typeCode='COMP'>
 								<!-- abends 0.5 stück -->
@@ -302,6 +307,11 @@
 									<doseQuantity>
 										<center value="0.5" />
 									</doseQuantity>
+                                    <consumable>
+                                      <manufacturedProduct>
+                                        <manufacturedMaterial nullFlavor="NA" />
+                                      </manufacturedProduct>
+                                    </consumable>
 								</substanceAdministration>
 							</entryRelationship>
 							<entryRelationship typeCode="RSON">

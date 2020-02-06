@@ -325,6 +325,11 @@
 											<doseQuantity>
 												<center value="1" />
 											</doseQuantity>
+                                            <consumable>
+                                              <manufacturedProduct>
+                                                <manufacturedMaterial nullFlavor="NA" />
+                                              </manufacturedProduct>
+                                            </consumable>      
 										</substanceAdministration>
 									</entryRelationship>
 									<entryRelationship typeCode='COMP'>
@@ -338,6 +343,11 @@
 											<doseQuantity>
 												<center value="0.5" />
 											</doseQuantity>
+                                            <consumable>
+                                              <manufacturedProduct>
+                                                <manufacturedMaterial nullFlavor="NA" />
+                                              </manufacturedProduct>
+                                            </consumable>      
 										</substanceAdministration>
 									</entryRelationship>
 								</substanceAdministration>

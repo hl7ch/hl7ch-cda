@@ -293,7 +293,6 @@
 	   										<pharm:code code="386864001" codeSystem="2.16.840.1.113883.6.96"
                                                     codeSystemName="SNOMED CT" displayName="Amlodipine (substance)" />
 												<pharm:name>Amlodipine</pharm:name>
-													<pharm:name>amlodipine</pharm:name>
 											</pharm:ingredient>
 										</pharm:ingredient>
 									</manufacturedMaterial>
