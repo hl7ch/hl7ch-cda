@@ -258,8 +258,7 @@
 												codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 100 Stk" />
 												<!-- Brand name (package) -->
 												<pharm:name>TRIATEC Tabl 2.5 mg</pharm:name>
-												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
-												displayName="Tablet" />
+												<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet" />
 												<pharm:capacityQuantity value="20" />
 											</pharm:containerPackagedMedicine>
 										</pharm:asContent>
@@ -369,8 +368,7 @@
 												codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 100 Stk" />
 												<!-- Brand name (package) -->
 												<pharm:name>TRIATEC Tabl 2.5 mg</pharm:name>
-												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
-												displayName="Tablet" />
+												<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet" />
 												<pharm:capacityQuantity value="20" />
 											</pharm:containerPackagedMedicine>
 										</pharm:asContent>

@@ -253,8 +253,7 @@
 													codeSystemName="GTIN" displayName="BELOC ZOK Ret Tabl 50 mg 30 Stk" />
 												<!-- Brand name (package) -->
 												<pharm:name>BELOC ZOK Ret Tabl 50 mg</pharm:name>
-												<pharm:formCode code="TAB" codeSystem="2.16.840.1.113883.5.85"
-													displayName="Tablet" />
+												<pharm:formCode code="10219000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Tablet" />
 												<pharm:capacityQuantity value="30" />
 											</pharm:containerPackagedMedicine>
 										</pharm:asContent>
