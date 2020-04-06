@@ -7,9 +7,9 @@
              id="2.16.756.5.30.1.127.3.10.1.11"
              name="DocumentEntry.healthcareFacilityTypeCode"
              displayName="DocumentEntry.healthcareFacilityTypeCode"
-             effectiveDate="2019-11-14T17:08:39"
-             statusCode="draft"
+             statusCode="final"
              versionLabel="201907.2-stable"
+             effectiveDate="2019-11-14T17:08:39"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">
@@ -56,7 +56,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Diagnostic institution"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Instituziun per diagnostica medicinala"/>
                 </concept>
                 <concept code="225728007"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -75,7 +77,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Accident and Emergency department"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Servetsch d'urgenza e da salvament"/>
                 </concept>
                 <concept code="394747008"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -87,7 +91,9 @@
                     <designation language="fr-CH" type="preferred" displayName="Autorité sanitaire"/>
                     <designation language="it-CH" type="preferred" displayName="Autorità sanitaria"/>
                     <designation language="en-US" type="preferred" displayName="Health Authority"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Autoritad da sanadad"/>
                 </concept>
                 <concept code="66280005"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -105,7 +111,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Private home-based care"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Organisaziun per la tgira a chasa"/>
                 </concept>
                 <concept code="22232009"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -119,7 +127,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Hôpital"/>
                     <designation language="it-CH" type="preferred" displayName="Ospedale"/>
                     <designation language="en-US" type="preferred" displayName="Hospital"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Ospital"/>
                 </concept>
                 <concept code="722172003"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -139,7 +147,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Military health institution"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Servetsch da medischina militara"/>
                 </concept>
                 <concept code="722173008"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -158,7 +168,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Prison based care site"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Structura da sanadad en in stabiliment giudizial"/>
                 </concept>
                 <concept code="42665001"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -172,7 +184,7 @@
                          displayName="Etablissement médico-social"/>
                     <designation language="it-CH" type="preferred" displayName="Casa di cura"/>
                     <designation language="en-US" type="preferred" displayName="Nursing home"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Chasa da tgira"/>
                 </concept>
                 <concept code="264372000"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -184,7 +196,7 @@
                     <designation language="fr-CH" type="preferred" displayName="Pharmacie"/>
                     <designation language="it-CH" type="preferred" displayName="Farmacia"/>
                     <designation language="en-US" type="preferred" displayName="Pharmacy"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Apoteca"/>
                 </concept>
                 <concept code="35971002"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -204,7 +216,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Ambulatory care site"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Instituziun ambulanta/ambulatori"/>
                 </concept>
                 <concept code="80522000"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -224,7 +238,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Rehabilitation hospital"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Institut da reabilitaziun staziunara"/>
                 </concept>
                 <concept code="394778007"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -242,7 +258,7 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Client's or patient's home"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Domicil dal pazient"/>
                 </concept>
                 <concept code="288565001"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -262,7 +278,9 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Telemedicine institution"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Instituziun da telemedischina"/>
                 </concept>
                 <concept code="264358009"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -275,7 +293,7 @@
                     <designation language="de-CH" type="preferred" displayName="Arztpraxis"/>
                     <designation language="fr-CH" type="preferred" displayName="Cabinet médical"/>
                     <designation language="it-CH" type="preferred" displayName="Studio medico"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Pratica da medi"/>
                 </concept>
                 <concept code="43741000"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -293,7 +311,9 @@
                          type="preferred"
                          displayName="Altre organizzazioni sanitarie"/>
                     <designation language="en-US" type="preferred" displayName="Other Site of Care"/>
-                    <designation language="rm-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Autras organisaziuns dals fatgs da tgira"/>
                 </concept>
             </conceptList>
    </valueSet>

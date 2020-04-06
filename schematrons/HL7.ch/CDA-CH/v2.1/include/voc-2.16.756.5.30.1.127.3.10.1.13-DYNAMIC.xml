@@ -7,9 +7,9 @@
              id="2.16.756.5.30.1.127.3.10.1.13"
              name="DocumentEntry.languageCode"
              displayName="DocumentEntry.languageCode"
-             effectiveDate="2019-12-11T10:04:39"
-             statusCode="draft"
+             statusCode="final"
              versionLabel="201907.2-stable"
+             effectiveDate="2019-12-11T10:04:39"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">

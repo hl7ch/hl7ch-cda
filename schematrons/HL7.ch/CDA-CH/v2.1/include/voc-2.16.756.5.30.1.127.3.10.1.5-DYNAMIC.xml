@@ -7,9 +7,9 @@
              id="2.16.756.5.30.1.127.3.10.1.5"
              name="DocumentEntry.confidentialityCode"
              displayName="DocumentEntry.confidentialityCode"
-             effectiveDate="2019-12-11T09:52:17"
-             statusCode="draft"
+             statusCode="final"
              versionLabel="201907.2-stable"
+             effectiveDate="2019-12-11T09:52:17"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">
