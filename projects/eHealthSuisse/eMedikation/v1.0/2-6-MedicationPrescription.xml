@@ -262,7 +262,7 @@
 										<code code="7680500440334" codeSystem="2.51.1.1"
 													codeSystemName="GTIN" displayName="NORVASC Tabl 10 mg">
 											<originalText>
-												<reference value="#pre.1.ingredient" />
+												<reference value="#pre.1.brandedmedication" />
 											</originalText>
 										</code>
 										<name>NORVASC Tabl 10 mg</name>
@@ -330,7 +330,7 @@
 								<supply moodCode="RQO" classCode="SPLY">
 									<templateId root="1.3.6.1.4.1.19376.1.9.1.3.8" />
 									<independentInd value="false" />
-									<quantity unit="1" value="1" />
+									<quantity value="1" />
 								</supply>
 							</entryRelationship>
 
