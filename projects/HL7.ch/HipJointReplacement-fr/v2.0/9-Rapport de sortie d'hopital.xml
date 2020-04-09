@@ -6,7 +6,7 @@ CDA-CH V2.0 Sample
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 
 ********************************************************
 -->
@@ -309,7 +309,7 @@ History:
 					<title>Préambule</title>
 					<text>
 						<content>
-							Nous vous remercions des soins que vous avez administrés au patient susmentionné qui a été hospitalisé dans notre établissement du 29/10/2007 au 10/11/2007 et a été admis dans votre centre de rééducation le 10/11/2007.<br/>
+							Nous vous remercions des soins que vous avez administrés au patient susmentionné qui a été hospitalisé dans notre établissement du 29/10/2017 au 10/11/2017 et a été admis dans votre centre de rééducation le 10/11/2017.<br/>
 							<br/>
 						</content>
 						<content styleCode="Italics">
@@ -543,19 +543,23 @@ History:
 						<list>
 							<item>
 								<content ID="a1">
-									<linkHtml href="9-Laborbericht_Spital.pdf">Résumé du rapport de sortie du laboratoire</linkHtml><br/>
+									<linkHtml href="9-Laborbericht_Spital.pdf">Résumé du rapport de sortie du laboratoire</linkHtml>
+									<br/>
 								</content>
 							</item>
 							<item>
 								<content ID="a2">
-									<linkHtml href="7-Rapport d'operation.xml">Copie du rapport d'OP</linkHtml><br/>
+									<linkHtml href="7-Rapport d'operation.xml">Copie du rapport d'OP</linkHtml>
+									<br/>
 								</content>
 							</item>
 							<item>
 								<content ID="a3">
 									Les radiographies, vous recevrez par la poste traditionnelle. Un précompte électronique, nous vous ajouterions ici:<br/>
-									<linkHtml href="mustermaxhuefte1.jpg">Radiographies préopératoire</linkHtml><br/>
-									<linkHtml href="mustermaxhuefte2.jpg">Radiographies postopératoire</linkHtml><br/>
+									<linkHtml href="mustermaxhuefte1.jpg">Radiographies préopératoire</linkHtml>
+									<br/>
+									<linkHtml href="mustermaxhuefte2.jpg">Radiographies postopératoire</linkHtml>
+									<br/>
 								</content>
 							</item>
 						</list>
@@ -563,7 +567,7 @@ History:
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
 							<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération"/>
-							<effectiveTime value="20071109"/>
+							<effectiveTime value="20171109"/>
 							<value xsi:type="CD" code="11502-2" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération">
 								<originalText>
 									<reference value="#a1"/>
@@ -582,7 +586,7 @@ History:
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
 							<code code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération"/>
-							<effectiveTime value="20071030"/>
+							<effectiveTime value="20171030"/>
 							<value xsi:type="CD" code="11504-8" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport d'opération">
 								<originalText>
 									<reference value="#a2"/>
@@ -604,7 +608,7 @@ History:
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
 							<code code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Radiographie"/>
-							<effectiveTime value="20071109"/>
+							<effectiveTime value="20171109"/>
 							<value xsi:type="CD" code="11522-0" codeSystem="2.16.840.1.113883.6.1" displayName="Radiographie">
 								<originalText>
 									<reference value="#a3"/>

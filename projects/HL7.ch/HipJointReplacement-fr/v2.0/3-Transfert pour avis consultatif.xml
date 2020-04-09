@@ -6,7 +6,7 @@ CDA-CH V2.0 Sample
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 
 ********************************************************
 -->
@@ -259,7 +259,7 @@ History:
 							<br/>
 					</content>
 					<content>
-						Monsieur Untel s'est présenté le 3/10/2007 dans mon cabinet en raison de douleurs croissantes au niveau de l'articulation droite de la hanche ...<br/>
+						Monsieur Untel s'est présenté le 3/10/2017 dans mon cabinet en raison de douleurs croissantes au niveau de l'articulation droite de la hanche ...<br/>
 						</content>
 						<content styleCode="Italics">
 							Résumé de la pathologie actuelle<br/>
@@ -309,8 +309,9 @@ History:
 					<text>
 						<content>
 							<content>
-								Radio du bassin et prises selon Lauenstein deux côtés du 6/10/2007:<br/>
-								<renderMultiMedia referencedObject="MM1"/><br/>
+								Radio du bassin et prises selon Lauenstein deux côtés du 6/10/2017:<br/>
+								<renderMultiMedia referencedObject="MM1"/>
+								<br/>
 								<br/>
 						</content>
 						<content styleCode="Italics">

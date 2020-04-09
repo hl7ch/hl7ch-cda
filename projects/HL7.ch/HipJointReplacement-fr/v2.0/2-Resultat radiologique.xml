@@ -6,7 +6,7 @@ CDA-CH V2.0 Sample
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 
 ********************************************************
 -->
@@ -251,7 +251,7 @@ History:
 					<title>Préambule</title>
 					<text>
 						<content>
-							Veuillez accepter nos remerciements pour votre aimable instruction du 3/10/2007 en vue de l'examen radiologique du patient susmentionné. 
+							Veuillez accepter nos remerciements pour votre aimable instruction du 3/10/2017 en vue de l'examen radiologique du patient susmentionné. 
 							La radiographie créé le trouveront ici: <linkHtml href="https://medshare.net/fileadmin/downloads/cda-ch/mustermaxhuefte1.jpg">RoDiag Webaccess</linkHtml><br/>
 							<br/>
 						</content>
@@ -263,12 +263,12 @@ History:
 			</component>
 			<!-- 
 			********************************************************
-			  Radio du bassin du 6/10/2007
+			  Radio du bassin du 6/10/2017
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Radio du bassin du 6/10/2007</title>
+					<title>Radio du bassin du 6/10/2017</title>
 					<text>
 						<content styleCode="Italics">
 							Spécification de l'examen réalisé et de la date d'examen dans le titre.<br/>
@@ -279,12 +279,12 @@ History:
 			</component>
 			<!-- 
 			********************************************************
-			  Prise de vues d'après Lauenstein deux côtés du 6/10/2007
+			  Prise de vues d'après Lauenstein deux côtés du 6/10/2017
 			********************************************************
 			-->
 			<component>
 				<section>
-					<title>Prise de vues d'après Lauenstein deux côtés du 6/10/2007</title>
+					<title>Prise de vues d'après Lauenstein deux côtés du 6/10/2017</title>
 					<text>
 						<content styleCode="Italics">
 							Spécification de l'examen réalisé et de la date d'examen dans le titre.<br/>

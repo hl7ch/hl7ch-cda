@@ -6,7 +6,7 @@ CDA-CH V2.0 Sample
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 
 ********************************************************
 -->
@@ -307,7 +307,7 @@ History:
 					<title>Préambule</title>
 					<text>
 						<content>
-							Nous vous informons de la rééducation stationnaire du patient susmentionné du 10/11/2007 au 01/12/2007 à la suite de l'implantation d'une endoprothèse totale à l'articulation droite de la hanche le 30/10/2007 dans l'hôpital cantonal.<br/>
+							Nous vous informons de la rééducation stationnaire du patient susmentionné du 10/11/2017 au 01/12/2017 à la suite de l'implantation d'une endoprothèse totale à l'articulation droite de la hanche le 30/10/2017 dans l'hôpital cantonal.<br/>
 						</content>
 						<content styleCode="Italics">
 							Préambule avec indication de la durée de l'hospitalisation<br/>

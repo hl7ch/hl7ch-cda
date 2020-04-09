@@ -6,8 +6,7 @@ CDA-CH V2.0 Sample
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 
 ********************************************************
 -->
@@ -334,6 +333,7 @@ History:
 					<text>
 						<content styleCode="Italics">
 							Consigli per ulteriori cure<br/>
+							
 						</content>
 						<content>
 							Seguirà un rapporto dettagliato.<br/>

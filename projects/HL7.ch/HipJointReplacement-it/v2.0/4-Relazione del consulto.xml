@@ -5,8 +5,7 @@ CDA-CH V2.0 Sample
 
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
-
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 ********************************************************
 -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>

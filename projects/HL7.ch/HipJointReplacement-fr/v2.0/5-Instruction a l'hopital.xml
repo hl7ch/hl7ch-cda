@@ -6,8 +6,7 @@ CDA-CH V2.0 Sample
 History:
 2018.02.03: Tony Schaller, medshare GmbH: Update from CDA-CH v1.2 (2009) to CDA-CH v2.0 (2017)
 2018.06.16: Tony Schaller, medshare GmbH: Refactoring for better validation results (Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation)
-2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2019)
-
+2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020)
 ********************************************************
 -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
@@ -271,7 +270,7 @@ History:
 					<title>Préambule</title>
 					<text>
 						<content>
-							Conformément à la recommandation du Dr Spécialiste dans son avis consultatif du 15/10/2007, je vous serais reconnaissant de bien vouloir convoquer le patient susmentionné en vue d'un traitement opératoire.<br/>
+							Conformément à la recommandation du Dr Spécialiste dans son avis consultatif du 15/10/2017, je vous serais reconnaissant de bien vouloir convoquer le patient susmentionné en vue d'un traitement opératoire.<br/>
 						</content>
 						<content styleCode="Italics">
 							Préambule<br/>
@@ -350,8 +349,9 @@ History:
 					<title>Diagnostic d'imagerie</title>
 					<text>
 						<content>
-							Radio du bassin et prises selon Lauenstein deux côtés du 6/10/2007:<br/>
-							<renderMultiMedia referencedObject="MM1"/><br/>
+							Radio du bassin et prises selon Lauenstein deux côtés du 6/10/2017:<br/>
+							<renderMultiMedia referencedObject="MM1"/>
+							<br/>
 							<br/>
 						</content>
 						<content styleCode="Italics">
@@ -395,7 +395,7 @@ History:
 						<list>
 							<item>
 								<content ID="a1">
-									<linkHtml href="4-Rapport de consultation.xml">Copie du rapport de consultation du Dr. Spécialiste du 15/10/2007</linkHtml>
+									<linkHtml href="4-Rapport de consultation.xml">Copie du rapport de consultation du Dr. Spécialiste du 15/10/2017</linkHtml>
 									<br/>
 								</content>
 							</item>
@@ -404,7 +404,7 @@ History:
 					<entry>
 						<observation classCode="COND" moodCode="EVN">
 							<code code="11488-4" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport de consultation"/>
-							<effectiveTime value="20071030"/>
+							<effectiveTime value="20171030"/>
 							<value xsi:type="CD" code="11488-4" codeSystem="2.16.840.1.113883.6.1" displayName="Rapport de consultation">
 								<originalText>
 									<reference value="#a1"/>
