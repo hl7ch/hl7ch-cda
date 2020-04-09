@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.127.3.10.1.9"
+             name="DocumentEntry.formatCode"
+             displayName="DocumentEntry.formatCode"
+             statusCode="final"
+             versionLabel="201907.2-stable"
+             effectiveDate="2020-02-26T16:53:06"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Format des Dokumentes gemäss Anhang 3 EPDV-EDI. <br clear="none"/>
+                <br clear="none"/>Dieser eindeutige Code definiert das Format des XDS Dokumentes. Zusammen mit dem mimeType, sollte es dem potentiellen Konsumenten genügend Informationen liefern, ob er in der Lage ist, das Dokument zu verarbeiten.</desc>
+      <desc language="en-US">Document format as per Annex; EPRO-FDHA. <br clear="none"/>
+                <br clear="none"/>This unambiguous code defines the format of the XDS document. Together with the mimetype, this should provide the potential consumer with sufficient information as to whether they are in a position to process the document.<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">Format du document selon l'annexe 3 ODEP-DFI.<br clear="none"/>
+                <br clear="none"/>Ce code univoque définit le format du document XDS. Combiné au mimeType, il doit fournir à l'utilisateur suffisamment d'informations pour savoir s'il est en mesure de traiter le document.<br clear="none"/>
+                <br clear="none"/>
+            </desc>
+      <desc language="it-CH">Formato del documento secondo l'allegato 3 OCIP-DFI.<br clear="none"/>
+                <br clear="none"/>Questo codice univoco definisce il formato del documento XDS. Insieme al tipo MIME, intende fornire al potenziale consumatore sufficienti informazioni per capire se è in grado o meno di elaborare il documento.<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.756.5.30.1.127.3.10.10"
+                        identifierName="ch-ehealth-codesystem-format"
+                        canonicalUri="urn:oid:2.16.756.5.30.1.127.3.10.10"
+                        canonicalUriDSTU2="urn:oid:2.16.756.5.30.1.127.3.10.10"
+                        canonicalUriSTU3="urn:oid:2.16.756.5.30.1.127.3.10.10"
+                        canonicalUriR4="urn:oid:2.16.756.5.30.1.127.3.10.10"/>
+      <sourceCodeSystem id="1.2.840.10008.2.6.1"
+                        identifierName="DICOM UID"
+                        canonicalUri="urn:oid:1.2.840.10008.2.6.1"
+                        canonicalUriDSTU2="urn:oid:1.2.840.10008.2.6.1"
+                        canonicalUriSTU3="urn:oid:1.2.840.10008.2.6.1"
+                        canonicalUriR4="urn:oid:1.2.840.10008.2.6.1"/>
+      <sourceCodeSystem id="1.3.6.1.4.1.19376.1.2.3"
+                        identifierName="DocumentReference Format Code Set"
+                        canonicalUri="http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"
+                        canonicalUriDSTU2="http://hl7.org/fhir/ValueSet/formatcodes"
+                        canonicalUriSTU3="http://hl7.org/fhir/ValueSet/formatcodes"
+                        canonicalUriR4="http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"/>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="urn:che:epr:EPR_Unstructured_Document"
+                  codeSystem="2.16.756.5.30.1.127.3.10.10"
+                  displayName="Unstructured EPR document"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Unstrukturiertes EPD Dokument"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Document DEP non structuré"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Documento CIP non strutturato"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Unstructured EPR document"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Document DEP betg structurà"/>
+                </concept>
+                <concept code="1.2.840.10008.5.1.4.1.1.88.59"
+                  codeSystem="1.2.840.10008.2.6.1"
+                  displayName="DICOM Manifest (DICOM KOS SOP Class UID)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="KOS Dokument"/>
+                    <designation language="fr-CH" type="preferred" displayName="Document KOS"/>
+                    <designation language="it-CH" type="preferred" displayName="Documento KOS "/>
+                    <designation language="en-US" type="preferred" displayName="IHE KOS document"/>
+                    <designation language="rm-CH" type="preferred" displayName="Document KOS"/>
+                </concept>
+                <concept code="urn:ihe:rad:TEXT"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="XDS-I CDA Wrapped Text Report (XDS-I)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">According to Table 4.68.4.1.2.3-1: XDS-I.b-specific Metadata Requirements</desc>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="CDA Wrapped Text Report"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="CDA Wrapped Text Report"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="CDA Wrapped Text Report"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="CDA Wrapped Text Report"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="CDA Wrapped Text Report"/>
+                </concept>
+                <concept code="urn:ihe:rad:PDF"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="XDS-I PDF (XDS-I)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">According to Table 4.68.4.1.2.3-1: XDS-I.b-specific Metadata Requirements</desc>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="PDF Radiology Report"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="PDF Radiology Report"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="PDF Radiology Report"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="PDF Radiology Report"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="PDF Radiology Report"/>
+                </concept>
+                <concept code="urn:ihe:rad:CDA:ImagingReportStructuredHeadings:2013"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="XDS-I Imaging Report with Structured Headings (XDS-I)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">According to Table 4.68.4.1.2.3-1: XDS-I.b-specific Metadata Requirements<br clear="none"/>
+                    </desc>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="CDA Imaging Report with Structured Headings"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="CDA Imaging Report with Structured Headings"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="CDA Imaging Report with Structured Headings"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="CDA Imaging Report with Structured Headings"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="CDA Imaging Report with Structured Headings"/>
+                </concept>
+                <concept code="urn:ihe:iti:xds-sd:pdf:2008"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Scanned Documents (PDF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="PDF embedded in CDA per XDS-SD profile"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="PDF embedded in CDA per XDS-SD profile"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="PDF embedded in CDA per XDS-SD profile"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="PDF embedded in CDA per XDS-SD profile"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="PDF embedded in CDA per XDS-SD profile"/>
+                </concept>
+                <concept code="urn:ihe:iti:xds-sd:text:2008"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Scanned Documents (text)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Text embedded in CDA per XDS-SD profile"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Text embedded in CDA per XDS-SD profile"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Text embedded in CDA per XDS-SD profile"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Text embedded in CDA per XDS-SD profile"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Text embedded in CDA per XDS-SD profile"/>
+                </concept>
+                <concept code="urn:ihe:pharm:pml:2013"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Community Medication List"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Community Medication List"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Community Medication List"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Community Medication List"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Community Medication List"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Community Medication List"/>
+                </concept>
+                <concept code="urn:ihe:pharm:pre:2010"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Community Prescription"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Community Prescription"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Community Prescription"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Community Prescription"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Community Prescription"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Community Prescription"/>
+                </concept>
+                <concept code="urn:ihe:pharm:dis:2010"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Community Dispense"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Community Dispense"/>
+                    <designation language="fr-CH" type="preferred" displayName="Community Dispense"/>
+                    <designation language="it-CH" type="preferred" displayName="Community Dispense"/>
+                    <designation language="en-US" type="preferred" displayName="Community Dispense"/>
+                    <designation language="rm-CH" type="preferred" displayName="Community Dispense"/>
+                </concept>
+                <concept code="urn:ihe:pharm:mtp:2015"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Community Medication Treatment Plan"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Community Medication Treatment Plan"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Community Medication Treatment Plan"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Community Medication Treatment Plan"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Community Medication Treatment Plan"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Community Medication Treatment Plan"/>
+                </concept>
+                <concept code="urn:ihe:pharm:padv:2010"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Community Pharmaceutical Advice"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Community Pharmaceutical Advice"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Community Pharmaceutical Advice"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Community Pharmaceutical Advice"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Community Pharmaceutical Advice"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Community Pharmaceutical Advice"/>
+                </concept>
+                <concept code="urn:ihe:lab:xd-lab:2008"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="CDA Laboratory Report"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="CDA Laboratory Report"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="CDA Laboratory Report"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="CDA Laboratory Report"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="CDA Laboratory Report"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="CDA Laboratory Report"/>
+                </concept>
+                <concept code="urn:ihe:pcc:ic:2009"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="Immunization Content (IC)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Immunization Content (IC)"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Immunization Content (IC)"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Immunization Content (IC)"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Immunization Content (IC)"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Immunization Content (IC)"/>
+                </concept>
+                <concept code="urn:ihe:iti:xds:2017:mimeTypeSufficient"
+                  codeSystem="1.3.6.1.4.1.19376.1.2.3"
+                  displayName="MimeType sufficient"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="MimeType sufficient"/>
+                    <designation language="de-CH" type="preferred" displayName="MimeType sufficient"/>
+                    <designation language="fr-CH" type="preferred" displayName="MimeType sufficient"/>
+                    <designation language="it-CH" type="preferred" displayName="MimeType sufficient"/>
+                    <designation language="rm-CH" type="preferred" displayName="MimeType sufficient"/>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -7,7 +7,7 @@
              id="2.16.840.1.113883.4.642.3.1"
              name="DocumentEntry.sourcePatientInfo.PID-8"
              displayName="DocumentEntry.sourcePatientInfo.PID-8"
-             statusCode="final"
+             statusCode="deprecated"
              versionLabel="201907.1-stable"
              effectiveDate="2019-11-03T14:34:10"
              url="http://art-decor.org/decor/services/"

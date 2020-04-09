@@ -7,7 +7,7 @@
              id="2.16.756.5.30.1.127.3.10.1.16"
              name="DocumentEntry.mimeType"
              displayName="DocumentEntry.mimeType"
-             statusCode="final"
+             statusCode="deprecated"
              versionLabel="201907.1-stable"
              effectiveDate="2019-11-03T14:37:24"
              url="http://art-decor.org/decor/services/"

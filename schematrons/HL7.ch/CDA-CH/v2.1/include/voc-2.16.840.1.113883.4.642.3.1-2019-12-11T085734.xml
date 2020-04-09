@@ -7,9 +7,9 @@
              id="2.16.840.1.113883.4.642.3.1"
              name="DocumentEntry.sourcePatientInfo.PID-8"
              displayName="DocumentEntry.sourcePatientInfo.PID-8"
-             effectiveDate="2019-12-11T08:57:34"
-             statusCode="draft"
+             statusCode="final"
              versionLabel="201907.2-stable"
+             effectiveDate="2019-12-11T08:57:34"
              url="http://art-decor.org/decor/services/"
              ident="ch-epr-"
              referencedFrom="hl7chcda-">

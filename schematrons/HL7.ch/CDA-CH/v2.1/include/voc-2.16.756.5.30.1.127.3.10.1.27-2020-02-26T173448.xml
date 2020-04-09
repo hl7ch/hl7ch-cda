@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.756.5.30.1.127.3.10.1.27"
+             name="DocumentEntry.typeCode"
+             displayName="DocumentEntry.typeCode"
+             effectiveDate="2020-02-26T17:34:48"
+             statusCode="draft"
+             versionLabel="201907.0-beta"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-epr-"
+             referencedFrom="hl7chcda-">
+      <desc language="de-CH">Typ des Dokumentes (2.16.756.5.30.1.127.3.10.1.27) gemäss Anhang 3 der Verordnungen zum EPDG.<br clear="none"/>
+                <br clear="none"/>Der Code definiert den Typ eines Dokuments (z.B. Austrittsbericht, Labor-Bericht). Jeder Dokumenten-Typ sollte genau einer Dokumentenklasse zugeordnet sein.<br clear="none"/>
+            </desc>
+      <desc language="en-US">Type of document as per Annex 3 EPRO-FDHA.<br clear="none"/>
+                <br clear="none"/>The code defines a document’s type (e.g. discharge report, laboratory report). Each document type should be assigned to precisely one document class.<br clear="none"/>
+            </desc>
+      <desc language="fr-CH">Type du document selon l'annexe 3 ODEP-DFI.<br clear="none"/>
+                <br clear="none"/>Le code définit le type de document (p. ex. rapport de sortie, rapport de laboratoire). Chaque type de document doit être  associé à une seule classification.<br clear="none"/>
+            </desc>
+      <desc language="it-CH">Tipo di documento secondo l'allegato 3 OCIP-DFI.<br clear="none"/>
+                <br clear="none"/>Il codice definisce il tipo di documento (p. es. rapporto di dimissione, rapporto di laboratorio). Ciascun tipo di documento dovrebbe essere associato a una sola classe di documenti.<br clear="none"/>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="http://snomed.info/sct"
+                        canonicalUriDSTU2="http://snomed.info/sct"
+                        canonicalUriSTU3="http://snomed.info/sct"
+                        canonicalUriR4="http://snomed.info/sct"/>
+      <sourceCodeSystem id="2.16.756.5.30.1.127.3.4"
+                        identifierName="SNOMED Clinical Terms Swiss Extension"
+                        canonicalUri="urn:oid:2.16.756.5.30.1.127.3.4"
+                        canonicalUriDSTU2="urn:oid:2.16.756.5.30.1.127.3.4"
+                        canonicalUriSTU3="urn:oid:2.16.756.5.30.1.127.3.4"
+                        canonicalUriR4="urn:oid:2.16.756.5.30.1.127.3.4"/>
+      <publishingAuthority name="ahdis ag">
+                <addrLine>c/o The Hub Zürich Association</addrLine>
+                <addrLine>Sihlquai 131</addrLine>
+                <addrLine>8005 Zürich</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="371529009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="History and physical report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Anamnese / Untersuchungsbericht"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Anamnèse / rapport d’analyse"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Anamnesi / Rapporto di visita medica"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Anamnesa / rapport da consultaziun"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="History and physical report"/>
+                </concept>
+                <concept code="419891008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Record artifact (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Nicht näher bezeichnetes Dokument"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Document non précisé"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Documento non meglio specificato"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Document betg specifitgà pli precis"/>
+                    <designation language="en-US" type="preferred" displayName="Record artifact"/>
+                </concept>
+                <concept code="721965002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laboratory order (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Laborauftrag"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Mandat d’analyse en laboratoire"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Richiesta di analisi di laboratorio"/>
+                    <designation language="rm-CH" type="preferred" displayName="Incumbensa da labor"/>
+                    <designation language="en-US" type="preferred" displayName="Laboratory Order"/>
+                </concept>
+                <concept code="721966001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pathology order (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Pathologieauftrag"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Mandat de rapport d’examen pathologique "/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Richiesta di esame istologico"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Incumbensa da patologia"/>
+                    <designation language="en-US" type="preferred" displayName="Pathology order"/>
+                </concept>
+                <concept code="2161000195103"
+                  codeSystem="2.16.756.5.30.1.127.3.4"
+                  displayName="Imaging order (record articact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Bildgebungsauftrag"/>
+                    <designation language="fr-CH" type="preferred" displayName="Mandat d’imagerie"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Richiesta di immaginografia"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Incumbensa da far in maletg"/>
+                    <designation language="en-US" type="preferred" displayName="Imaging Order"/>
+                </concept>
+                <concept code="4201000179104"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Imaging report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Befundbericht zur Bildgebung"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Rapport de résultat relatif à l’imagerie"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Referto di immaginografia"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Rapport dal resultat dals maletgs"/>
+                    <designation language="en-US" type="preferred" displayName="Imaging report"/>
+                </concept>
+                <concept code="737427001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Clinical Management plan (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Behandlungsplan"/>
+                    <designation language="fr-CH" type="preferred" displayName="Plan de traitement"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Piano di trattamento"/>
+                    <designation language="rm-CH" type="preferred" displayName="Plan da tractament"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Clinical Management plan"/>
+                </concept>
+                <concept code="765492005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Non-drug prescription record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Non-drug prescription"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Nicht-Arzneimittel-Verschreibung / Rezept"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Prescription sans médicaments / ordonnance"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Prescrizione non di medicamenti"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Prescripziun senza medischinas / recept"/>
+                </concept>
+                <concept code="773130005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Nursing care plan (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Pflegeplan"/>
+                    <designation language="fr-CH" type="preferred" displayName="Plan de soins"/>
+                    <designation language="it-CH" type="preferred" displayName="Piano di cura"/>
+                    <designation language="rm-CH" type="preferred" displayName="Plan da tgira"/>
+                    <designation language="en-US" type="preferred" displayName="Nursing care plan"/>
+                </concept>
+                <concept code="736055001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rehabilitation care plan (record articact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Rehabilitationsplan"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Plan de réhabilitation"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Piano di riabilitazione"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Plan da reabilitaziun"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Rehabilitation care plan"/>
+                </concept>
+                <concept code="761938008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Medicinal Prescription record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Arzneimittel-Verschreibung / Rezept"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Prescription de médicaments / ordonnance"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Prescrizione di medicamenti"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Prescripziun da medischinas / recept"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Medicinal Prescription record"/>
+                </concept>
+                <concept code="722446000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Allergy record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Allergieausweis"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Carnet des allergies"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Passaporto delle allergie"/>
+                    <designation language="rm-CH" type="preferred" displayName="Attest d'allergia"/>
+                    <designation language="en-US" type="preferred" displayName="Allergy record"/>
+                </concept>
+                <concept code="772786005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Medical certificate (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Ärztliches Attest"/>
+                    <designation language="fr-CH" type="preferred" displayName="Certificat médical"/>
+                    <designation language="it-CH" type="preferred" displayName="Certificato medico"/>
+                    <designation language="rm-CH" type="preferred" displayName="Attest medical"/>
+                    <designation language="en-US" type="preferred" displayName="Medical certificate"/>
+                </concept>
+                <concept code="373942005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Discharge summary (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Austrittsbericht"/>
+                    <designation language="fr-CH" type="preferred" displayName="Rapport de sortie"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Rapporto di dimissione"/>
+                    <designation language="rm-CH" type="preferred" displayName="Rapport d’extrada"/>
+                    <designation language="en-US" type="preferred" displayName="Discharge summary"/>
+                </concept>
+                <concept code="371535009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Transfer summary report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Überweisungsbericht"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Rapport de transfert"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Rapporto di trasferimento"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Rapport d'assegnaziun"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Transfer summary report"/>
+                </concept>
+                <concept code="445300006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Emergency department record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Notfallberichtt"/>
+                    <designation language="fr-CH" type="preferred" displayName="Rapport d’urgence"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Referto di pronto soccorso"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Rapport davart in cas d'urgenza"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Emergency department record"/>
+                </concept>
+                <concept code="445418005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Professional allied to medicine clinical report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Dokument ausserhalb des Behandlungskontextes"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Document hors contexte de traitement"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Documento al di fuori del contesto trattato"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Document ordaifer il context dal tractament"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Professional allied to medicine clinical report"/>
+                </concept>
+                <concept code="371530004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Clinical consultation report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Beurteilung durch Fachspezialisten"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Évaluation par des spécialistes"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Valutazione dello specialista"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Rapport da la consultaziun clinica"/>
+                    <designation language="en-US" type="preferred" displayName="Consultation report"/>
+                </concept>
+                <concept code="4241000179101"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laboratory report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Laborbericht"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Rapport de laboratoire"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Referto di laboratorio"/>
+                    <designation language="rm-CH" type="preferred" displayName="Rapport da labor"/>
+                    <designation language="en-US" type="preferred" displayName="Laboratory report"/>
+                </concept>
+                <concept code="371526002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operative report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Operationsbericht"/>
+                    <designation language="fr-CH" type="preferred" displayName="Rapport d’opération"/>
+                    <designation language="it-CH" type="preferred" displayName="Rapporto operatorio"/>
+                    <designation language="rm-CH" type="preferred" displayName="Rapport d'operaziun"/>
+                    <designation language="en-US" type="preferred" displayName="Operative report"/>
+                </concept>
+                <concept code="371532007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Progress report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Verlaufsbericht"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Rapport d’historique"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Rapporto sul decorso"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Rapport da l'andament"/>
+                    <designation language="en-US" type="preferred" displayName="Progress note"/>
+                </concept>
+                <concept code="787148009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Digital representation of specimen (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Bild"/>
+                    <designation language="fr-CH" type="preferred" displayName="Image"/>
+                    <designation language="it-CH" type="preferred" displayName="Immagine"/>
+                    <designation language="rm-CH" type="preferred" displayName="Maletg"/>
+                    <designation language="en-US" type="preferred" displayName="Image"/>
+                </concept>
+                <concept code="41000179103"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Immunization record (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Impfausweis"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Carnet de vaccination"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Certificato di vaccinazione"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Attest da vaccinaziun"/>
+                    <designation language="en-US" type="preferred" displayName="Immunization record"/>
+                </concept>
+                <concept code="371528001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pathology report (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Pathologiebericht"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Rapport d’examen pathologique"/>
+                    <designation language="it-CH" type="preferred" displayName="Referto istologico"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Rapport da la patologia"/>
+                    <designation language="en-US" type="preferred" displayName="Pathology report"/>
+                </concept>
+                <concept code="721912009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Medication summary document (record artifact)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Medikationsliste"/>
+                    <designation language="fr-CH" type="preferred" displayName="Liste de médication"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Elenco dei medicamenti"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Glista da medicaziun"/>
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Medication summary document"/>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>
