@@ -4335,7 +4335,7 @@ History:
 									<pharm:containerPackagedMedicine
 										classCode="CONT" determinerCode="INSTANCE">
 										<!-- National medicinal product code (package-level) -->
-										<pharm:code code="7680538751228" codeSystem="2.51.1.1" codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 100 Stk" />
+										<pharm:code code="7680538751228" codeSystem="2.51.1.1" codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 20 Stk" />
 										<!-- DMST v3.1: 17.5.2.1 Description du Médicament -->
 										<!-- Brand name (package) -->
 										<pharm:name>TRIATEC Tabl 2.5 mg</pharm:name>
