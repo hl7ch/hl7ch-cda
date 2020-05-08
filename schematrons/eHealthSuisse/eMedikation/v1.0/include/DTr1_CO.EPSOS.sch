@@ -3,6 +3,9 @@
     DTR1 CO.EPSOS - Coded Ordinal
     Status: draft
 -->
-<rule xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="CO.EPSOS">
+<rule xmlns="http://purl.oclc.org/dsdl/schematron"
+      abstract="true"
+      id="CO.EPSOS"
+      see="https://art-decor.org/mediawiki/index.php?title=DTr1_CO.EPSOS">
     <extends rule="CO"/>
 </rule>

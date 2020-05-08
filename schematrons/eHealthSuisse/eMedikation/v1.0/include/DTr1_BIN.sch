@@ -5,5 +5,8 @@
 -->
 <rule xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="BIN">
     <extends rule="ANY"/>
-    <assert role="error" test="@nullFlavor or count(*)&gt;0  or text()[string-length(normalize-space())&gt;0]">dtr1-1-BIN: there must be a nullFlavor, or content must be non-empty</assert>
+
+    <assert role="error"
+           test="@nullFlavor | * | text()[string-length(normalize-space()) gt 0]"
+           see="https://art-decor.org/mediawiki/index.php?title=DTr1_BIN">dtr1-1-BIN: there must be a nullFlavor, or content must be non-empty</assert>
 </rule>

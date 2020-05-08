@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             xmlns:pharm="urn:ihe:pharm"
+             id="2.16.840.1.113883.1.11.14570"
+             name="AdministrableDrugForm"
+             displayName="AdministrableDrugForm"
+             effectiveDate="2014-03-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1360-20160323"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachemed-">
+      <desc language="en-US">
+                <p>
+                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+                <b>description: </b>
+                <p>Indicates the form in which the drug product should be administered.</p>
+                <p>This element only needs to be specified when (a) the form in which the drug is measured for dispensing differs from the form in which the drug is administered; and (b) the form in which the quantity of the administered drug being administered is not expressed as a discrete measured mass or volume. <i>Usage:</i>
+                </p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.85"
+                        identifierName="Orderable Drug Form"
+                        canonicalUri="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+                        canonicalUriDSTU2="http://hl7.org/fhir/v3/orderableDrugForm"
+                        canonicalUriSTU3="http://hl7.org/fhir/v3/orderableDrugForm"
+                        canonicalUriR4="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="APPFUL"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Applicatorful"
+                  level="0"
+                  type="L"/>
+                <concept code="PUFF"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Puff"
+                  level="0"
+                  type="L"/>
+                <concept code="SCOOP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Scoops"
+                  level="0"
+                  type="L"/>
+                <concept code="SPRY"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Sprays"
+                  level="0"
+                  type="L"/>
+                <concept code="DROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Drops"
+                  level="0"
+                  type="S"/>
+                <concept code="NDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Nasal Drops"
+                  level="1"
+                  type="L"/>
+                <concept code="OPDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Ophthalmic Drops"
+                  level="1"
+                  type="L"/>
+                <concept code="ORDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Oral Drops"
+                  level="1"
+                  type="L"/>
+                <concept code="OTDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Otic Drops"
+                  level="1"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

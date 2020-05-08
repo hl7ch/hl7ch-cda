@@ -3,7 +3,9 @@
     DTR1 CV - Coded Value
     Status: draft
 -->
-<rule xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="CV">
+<rule xmlns="http://purl.oclc.org/dsdl/schematron"
+      abstract="true"
+      id="CV"
+      see="https://art-decor.org/mediawiki/index.php?title=DTr1_CV">
     <extends rule="CE"/>
-    <assert role="error" test="not(hl7:translation)">dtr1-1-CV: cannot have translation</assert>
 </rule>
