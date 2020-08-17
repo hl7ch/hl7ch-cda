@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+    <!-- Chapter 1: Release Info (if publication is a release) -->
+    <!-- ========= --><release project="2.16.756.5.30.1.127.77.1"
+            prefix="cdachvacd-"
+            signature="20200813T090711"
+            date="2020-08-13T09:07:11"
+            versionLabel="2.1.1 (13.08.2020)">
+      <note xmlns:cda="urn:hl7-org:v3"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xhtml="http://www.w3.org/1999/xhtml"
+            xmlns:hl7="urn:hl7-org:v3"
+            language="en-US">Intermediate version for Projectathon 2020 testing (Schematron update only, no content changed)<br clear="none"/>
+            </note>
+   </release>
+    
+    <!-- Chapter 2: Mapping based on model list -->
+    <!-- ========= -->
+    <!-- Used to map an instance to a specific Schematron. How to read:
+- For every template-id that is used in instances there is an element map, e.g.
+  <map model="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" templateExt="2017-03-27" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or 
+  <map rootelement="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  
+  - @model       - optional    - hint as to the XML Schema that could be used
+  - @namespace   - mandatory   - default namespace-uri() of the project and of the instance unless specified otherwise
+  or
+  - templateRoot - mandatory   - in HL7v3 this would be an OID. In other instance types it might be something else, but then this mapping file might need adjusted setup
+  - templateExt  - optional    - in HL7v3 this would be any string found in templateId/@extension
+  or
+  - @rootelement - required    - local-name() of the root element of the instance
+  - @namespace   - mandatory   - namespace-uri() of the root element
+  
+  One of the following is required, normally schsvrl makes sense:
+  - @schsvrl     - conditional - path+file name of the SVRL XSL. The path should be relative to this index/map file
+  - @schtext     - conditional - path+file name of the Text XSL. The path should be relative to this index/map file
+  - @sch         - conditional - path+file name of the original Schematron file. The path should be relative to this index/map file
+    
+  Note that the same template may be part of multiple transactions, hence multiple map element could be present for the same template. The attached Schematron
+  will have different names, but will have the exact same rules (same template, same rules) hence only the first match is needed for validation.
+  
+- As final fallback, when no template-id is found in the instance, code should rely on root element of the instance to determine the Schematron file name ... --><!-- template name: CDA-CH-VACD-ADM-V21 -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="2.16.756.5.30.1.1.10.1.16"
+        sch="cdachvacd-Administration.sch"
+        schsvrl="cdachvacd-Administration.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="cdachvacd-Administration.sch"
+        schsvrl="cdachvacd-Administration.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: CDA-CH-VACD-CER-V21 -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="2.16.756.5.30.1.1.10.1.15"
+        sch="cdachvacd-Certificate.sch"
+        schsvrl="cdachvacd-Certificate.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="cdachvacd-Certificate.sch"
+        schsvrl="cdachvacd-Certificate.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: CDA-CH-VACD-REQ-V21 -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="2.16.756.5.30.1.1.10.1.17"
+        sch="cdachvacd-RecommendationRequest.sch"
+        schsvrl="cdachvacd-RecommendationRequest.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="cdachvacd-RecommendationRequest.sch"
+        schsvrl="cdachvacd-RecommendationRequest.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: CDA-CH-VACD-RSP-V21 -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="2.16.756.5.30.1.1.10.1.18"
+        sch="cdachvacd-RecommendationResponse.sch"
+        schsvrl="cdachvacd-RecommendationResponse.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="cdachvacd-RecommendationResponse.sch"
+        schsvrl="cdachvacd-RecommendationResponse.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: CDA-CH-VACD-VRC-V21 -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="2.16.756.5.30.1.1.10.1.19"
+        sch="cdachvacd-VaccinationRecord.sch"
+        schsvrl="cdachvacd-VaccinationRecord.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="cdachvacd-VaccinationRecord.sch"
+        schsvrl="cdachvacd-VaccinationRecord.xsl"
+        xsd="ClinicalDocument.xsd"/>
+    
+    <!-- Chapter 3: Mapping based on representing templates -->
+    <!-- ========= -->
+    <!-- Used to map a representing template to a specific Schematron. How to read:
+- For every representing template the schematron file and sch svrl xsl conversion file is mentioned
+- The corresponding root element plus its namespace is mentioned 
+- Every transaction represented by this template is named--><template id="2.16.756.5.30.1.1.10.1.16"
+             effectiveDate=""
+             sch="cdachvacd-Administration.sch"
+             schsvrl="cdachvacd-Administration.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.756.5.30.1.127.77.1.4.3"
+                   effectiveDate="2018-04-10T17:59:06"
+                   statusCode="pending"
+                   versionLabel="2018"
+                   name="CDA-CH-VACD - Immunization Administration"/>
+   </template>
+   <template id="2.16.756.5.30.1.1.10.1.15"
+             effectiveDate=""
+             sch="cdachvacd-Certificate.sch"
+             schsvrl="cdachvacd-Certificate.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.756.5.30.1.127.77.1.4.4"
+                   effectiveDate="2018-04-10T18:04:10"
+                   statusCode="pending"
+                   versionLabel="2018"
+                   name="CDA-CH-VACD - Immunization Certificate"/>
+   </template>
+   <template id="2.16.756.5.30.1.1.10.1.17"
+             effectiveDate=""
+             sch="cdachvacd-RecommendationRequest.sch"
+             schsvrl="cdachvacd-RecommendationRequest.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.756.5.30.1.127.77.1.4.5"
+                   effectiveDate="2018-04-10T18:08:44"
+                   statusCode="pending"
+                   versionLabel="2018"
+                   name="CDA-CH-VACD - Immunization Recommendation Request"/>
+   </template>
+   <template id="2.16.756.5.30.1.1.10.1.18"
+             effectiveDate=""
+             sch="cdachvacd-RecommendationResponse.sch"
+             schsvrl="cdachvacd-RecommendationResponse.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.756.5.30.1.127.77.1.4.6"
+                   effectiveDate="2018-04-10T18:09:59"
+                   statusCode="pending"
+                   versionLabel="2018"
+                   name="CDA-CH-VACD - Immunization Recommendation Response"/>
+   </template>
+   <template id="2.16.756.5.30.1.1.10.1.19"
+             effectiveDate=""
+             sch="cdachvacd-VaccinationRecord.sch"
+             schsvrl="cdachvacd-VaccinationRecord.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.756.5.30.1.127.77.1.4.7"
+                   effectiveDate="2018-04-10T18:10:49"
+                   statusCode="pending"
+                   versionLabel="2018"
+                   name="CDA-CH-VACD - Vaccination Record"/>
+   </template>
+</mappings>
