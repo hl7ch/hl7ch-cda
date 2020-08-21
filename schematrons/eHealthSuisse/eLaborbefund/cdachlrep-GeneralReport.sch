@@ -145,7 +145,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.10']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.1.10-2020-06-26T000000.html">(CDA-CH-LREP-GR-V14): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.10']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.1.10-2020-06-26T000000.html">(CDA-CH-LREP-GR-V14): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.10']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.10-2020-06-26T000000.sch"/>
@@ -173,10 +173,10 @@
       <active pattern="template-2.16.756.5.30.1.1.10.3.4-2016-11-11T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.46-2020-06-26T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2018-04-19T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2016-11-11T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.76-2020-06-26T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.77-2020-06-26T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2018-04-19T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.11-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.118-2020-06-26T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.12-2019-08-20T000000"/>
@@ -188,7 +188,7 @@
       <active pattern="template-2.16.756.5.30.1.1.10.4.18-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.19-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.20-2020-04-21T150751"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.20-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.21-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.22-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.29-2018-04-18T000000"/>
@@ -224,13 +224,13 @@
    <phase id="cdach_header_OrderReference">
       <active pattern="template-2.16.756.5.30.1.1.10.2.16-2018-04-18T000000"/>
    </phase>
-   <phase id="chpalm_header_RecordTargetNonHumanSubject-20190820T000000">
+   <phase id="chpalm_header_RecordTargetNonHumanSubject">
       <active pattern="template-2.16.756.5.30.1.1.10.2.26-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_header_RecordTargetHumanPatientWithNonHumanSubject-20190820T000000">
+   <phase id="chpalm_header_RecordTargetHumanPatientWithNonHumanSubject">
       <active pattern="template-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_header_DocumentationOfLaboratoryPerformer-20190820T000000">
+   <phase id="chpalm_header_DocumentationOfLaboratoryPerformer">
       <active pattern="template-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000"/>
    </phase>
    <phase id="cdach_header_HealthService-20190101T205333">
@@ -239,13 +239,13 @@
    <phase id="cdachlrep_header_Recipient">
       <active pattern="template-2.16.756.5.30.1.1.10.2.57-2020-06-26T000000"/>
    </phase>
-   <phase id="cdachlrep_header_Patient-20200626T000000">
+   <phase id="cdachlrep_header_Patient">
       <active pattern="template-2.16.756.5.30.1.1.10.2.58-2020-06-26T000000"/>
    </phase>
-   <phase id="cdachlrep_header_Author-20200626T000000">
+   <phase id="cdachlrep_header_Author">
       <active pattern="template-2.16.756.5.30.1.1.10.2.59-2020-06-26T000000"/>
    </phase>
-   <phase id="cdachlrep_header_Custodian-20200626T000000">
+   <phase id="cdachlrep_header_Custodian">
       <active pattern="template-2.16.756.5.30.1.1.10.2.60-2020-06-26T000000"/>
    </phase>
    <phase id="cdachlrep_header_LegalAuthenticator">
@@ -263,11 +263,11 @@
    <phase id="cdach_section_OriginalRepresentationCoded-20200714T122851">
       <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
    </phase>
-   <phase id="cdachvacd_section_OtherRelevantObservationsCoded-20200626T000000">
+   <phase id="cdachvacd_section_OtherRelevantObservationsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.46-2020-06-26T000000"/>
    </phase>
-   <phase id="chpcc_section_CurrentPregnancyCoded-20180419T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2018-04-19T000000"/>
+   <phase id="chpcc_section_CurrentPregnancyCoded">
+      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2016-11-11T000000"/>
    </phase>
    <phase id="cdachlrep_section_LaboratoryReportItemCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.76-2020-06-26T000000"/>
@@ -275,73 +275,73 @@
    <phase id="cdachlrep_section_LaboratorySpecialtyCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.77-2020-06-26T000000"/>
    </phase>
-   <phase id="chpcc_entry_PregnancyObservationDeliveryDate-20180419T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2018-04-19T000000"/>
+   <phase id="chpcc_entry_PregnancyObservationDeliveryDate">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_entry_SpecimenCollection-20190820T000000">
+   <phase id="chpalm_entry_SpecimenCollection">
       <active pattern="template-2.16.756.5.30.1.1.10.4.11-2019-08-20T000000"/>
    </phase>
    <phase id="cdachlrep_entry_LaboratoryReportDataProcessingEntry">
       <active pattern="template-2.16.756.5.30.1.1.10.4.118-2020-06-26T000000"/>
    </phase>
-   <phase id="chpalm_entry_SpecimenReceived-20190820T000000">
+   <phase id="chpalm_entry_SpecimenReceived">
       <active pattern="template-2.16.756.5.30.1.1.10.4.12-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_NotificationOrganizer-20190820T000000">
+   <phase id="chpalm_entry_NotificationOrganizer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.13-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_NotifiableCondition-20190820T000000">
+   <phase id="chpalm_entry_NotifiableCondition">
       <active pattern="template-2.16.756.5.30.1.1.10.4.14-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_CaseIdentification-20190820T000000">
+   <phase id="chpalm_entry_CaseIdentification">
       <active pattern="template-2.16.756.5.30.1.1.10.4.15-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_OutbreakIdentification-20190820T000000">
+   <phase id="chpalm_entry_OutbreakIdentification">
       <active pattern="template-2.16.756.5.30.1.1.10.4.16-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryIsolateOrganizer-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryIsolateOrganizer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.17-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_MultimediaEmbeddedContent-20190820T000000">
+   <phase id="chpalm_entry_MultimediaEmbeddedContent">
       <active pattern="template-2.16.756.5.30.1.1.10.4.18-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryBatteryOrganizer-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryBatteryOrganizer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.19-2019-08-20T000000"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments-20161112T000000">
+   <phase id="chpcc_entry_AnnotationComments">
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_VitalSignsOrganizer-20200421T150751">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.20-2020-04-21T150751"/>
+   <phase id="chpcc_entry_VitalSignsOrganizer">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.20-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_VitalSignsObservation-20161112T000000">
+   <phase id="chpcc_entry_VitalSignsObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.21-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_entry_PreviousObservation-20190820T000000">
+   <phase id="chpalm_entry_PreviousObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.22-2019-08-20T000000"/>
    </phase>
    <phase id="cdach_entry_ExternalDocument">
       <active pattern="template-2.16.756.5.30.1.1.10.4.29-2018-04-18T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryObservation-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.3-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_NonHumanSubject-20190820T000000">
+   <phase id="chpalm_entry_NonHumanSubject">
       <active pattern="template-2.16.756.5.30.1.1.10.4.5-2019-08-20T000000"/>
    </phase>
    <phase id="chpalm_entry_HumanPatientWithNonHumanSubject">
       <active pattern="template-2.16.756.5.30.1.1.10.4.6-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryPerformer-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryPerformer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.7-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryResultsValidator-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryResultsValidator">
       <active pattern="template-2.16.756.5.30.1.1.10.4.8-2019-08-20T000000"/>
    </phase>
    <phase id="cdach_entry_ObservationMedia">
       <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
    </phase>
-   <phase id="cdachvacd_entry_GestationalAgeAtBirth-20200626T000000">
+   <phase id="cdachvacd_entry_GestationalAgeAtBirth">
       <active pattern="template-2.16.756.5.30.1.1.10.4.84-2020-06-26T000000"/>
    </phase>
    <phase id="cdachlrep_entry_LaboratoryIsolateOrganizerPathogenDetection">
@@ -350,13 +350,13 @@
    <phase id="cdachlrep_entry_NotifiableConditionSignificantPathogen">
       <active pattern="template-2.16.756.5.30.1.1.10.4.86-2020-06-26T000000"/>
    </phase>
-   <phase id="cdachlrep_entry_LaboratoryBatteryOrganizerAntibiogram-20200626T000000">
+   <phase id="cdachlrep_entry_LaboratoryBatteryOrganizerAntibiogram">
       <active pattern="template-2.16.756.5.30.1.1.10.4.87-2020-06-26T000000"/>
    </phase>
    <phase id="cdachlrep_entry_NotificationOrganizerSignificantPathogens">
       <active pattern="template-2.16.756.5.30.1.1.10.4.88-2020-06-26T000000"/>
    </phase>
-   <phase id="chpcc_entry_PregnancyObservation-20161112T000000">
+   <phase id="chpcc_entry_PregnancyObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.92-2016-11-12T000000"/>
    </phase>
    <phase id="cdach_other_Performer-20181224T195104">
@@ -402,13 +402,13 @@
    <!-- cdachvacd_section_OtherRelevantObservationsCoded -->
    <include href="include/2.16.756.5.30.1.1.10.3.46-2020-06-26T000000.sch"/>
    <!-- chpcc_section_CurrentPregnancyCoded -->
-   <include href="include/2.16.756.5.30.1.1.10.3.53-2018-04-19T000000.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.3.53-2016-11-11T000000.sch"/>
    <!-- cdachlrep_section_LaboratoryReportItemCoded -->
    <include href="include/2.16.756.5.30.1.1.10.3.76-2020-06-26T000000.sch"/>
    <!-- cdachlrep_section_LaboratorySpecialtyCoded -->
    <include href="include/2.16.756.5.30.1.1.10.3.77-2020-06-26T000000.sch"/>
    <!-- chpcc_entry_PregnancyObservationDeliveryDate -->
-   <include href="include/2.16.756.5.30.1.1.10.4.102-2018-04-19T000000.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.102-2016-11-12T000000.sch"/>
    <!-- chpalm_entry_SpecimenCollection -->
    <include href="include/2.16.756.5.30.1.1.10.4.11-2019-08-20T000000.sch"/>
    <!-- cdachlrep_entry_LaboratoryReportDataProcessingEntry -->
@@ -432,7 +432,7 @@
    <!-- chpcc_entry_AnnotationComments -->
    <include href="include/2.16.756.5.30.1.1.10.4.2-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_VitalSignsOrganizer -->
-   <include href="include/2.16.756.5.30.1.1.10.4.20-2020-04-21T150751.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.20-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_VitalSignsObservation -->
    <include href="include/2.16.756.5.30.1.1.10.4.21-2016-11-12T000000.sch"/>
    <!-- chpalm_entry_PreviousObservation -->

@@ -25,48 +25,48 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]"
-         id="d41e7398-false-d1147332e0">
+         id="d41e4945-false-d1136689e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47']) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47']) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6']) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6']) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:id) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:id appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:code[(@code = '11369-6' and @codeSystem = '2.16.840.1.113883.6.1')]) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:code[(@code = '11369-6' and @codeSystem = '2.16.840.1.113883.6.1')] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:code[(@code = '11369-6' and @codeSystem = '2.16.840.1.113883.6.1')]) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:code[(@code = '11369-6' and @codeSystem = '2.16.840.1.113883.6.1')] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:title[not(@nullFlavor)]) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:title[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:title[not(@nullFlavor)]) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:title[not(@nullFlavor)] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:text[not(@nullFlavor)]) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:text[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:text[not(@nullFlavor)]) &lt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:text[not(@nullFlavor)] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="count(hl7:entry[hl7:substanceAdministration[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.89'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.12'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.24']]]) &gt;= 1">(chpcc_section_ImmunizationsCoded): element hl7:entry[hl7:substanceAdministration[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.89'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.12'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.24']]] is required [min 1x].</assert>
    </rule>
    <!--
@@ -76,13 +76,13 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47']"
-         id="d41e7409-false-d1147503e0">
+         id="d41e4956-false-d1136865e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.3.47')">(chpcc_section_ImmunizationsCoded): The value for root SHALL be '2.16.756.5.30.1.1.10.3.47'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -92,13 +92,13 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6']"
-         id="d41e7414-false-d1147518e0">
+         id="d41e4961-false-d1136880e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@root) = ('2.16.840.1.113883.10.20.1.6')">(chpcc_section_ImmunizationsCoded): The value for root SHALL be '2.16.840.1.113883.10.20.1.6'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -108,13 +108,13 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']"
-         id="d41e7419-false-d1147533e0">
+         id="d41e4966-false-d1136895e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.5.3.1.3.23')">(chpcc_section_ImmunizationsCoded): The value for root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.3.23'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -124,19 +124,19 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:id"
-         id="d41e7424-false-d1147547e0">
+         id="d41e4971-false-d1136909e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="@root">(chpcc_section_ImmunizationsCoded): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(chpcc_section_ImmunizationsCoded): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not(@extension) or string-length(@extension)&gt;0">(chpcc_section_ImmunizationsCoded): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
    <!--
@@ -146,31 +146,31 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:code[(@code = '11369-6' and @codeSystem = '2.16.840.1.113883.6.1')]"
-         id="d41e7443-false-d1147567e0">
+         id="d41e4990-false-d1136929e0">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@code) = ('11369-6')">(chpcc_section_ImmunizationsCoded): The value for code SHALL be '11369-6'. Found: "<value-of select="@code"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not(@code) or string-length(@code)&gt;0">(chpcc_section_ImmunizationsCoded): Attribute @code SHALL be of data type 'st'  - '<value-of select="@code"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@codeSystem) = ('2.16.840.1.113883.6.1')">(chpcc_section_ImmunizationsCoded): The value for codeSystem SHALL be '2.16.840.1.113883.6.1'. Found: "<value-of select="@codeSystem"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@codeSystemName) = ('LOINC')">(chpcc_section_ImmunizationsCoded): The value for codeSystemName SHALL be 'LOINC'. Found: "<value-of select="@codeSystemName"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(chpcc_section_ImmunizationsCoded): Attribute @codeSystemName SHALL be of data type 'st'  - '<value-of select="@codeSystemName"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@displayName) = ('HISTORY OF IMMUNIZATIONS')">(chpcc_section_ImmunizationsCoded): The value for displayName SHALL be 'HISTORY OF IMMUNIZATIONS'. Found: "<value-of select="@displayName"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not(@displayName) or string-length(@displayName)&gt;0">(chpcc_section_ImmunizationsCoded): Attribute @displayName SHALL be of data type 'st'  - '<value-of select="@displayName"/>'</assert>
    </rule>
    <!--
@@ -180,27 +180,27 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:title[not(@nullFlavor)]"
-         id="d41e7454-false-d1147600e0">
+         id="d41e5001-false-d1136962e0">
       <extends rule="ST"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ST' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="text()='Immunizations' or text()='Impfungen' or text()='Vaccinations' or text()='Vaccinazioni'">(chpcc_section_ImmunizationsCoded): the element content of hl7:title[not(@nullFlavor)] SHALL be ''Immunizations' or 'Impfungen' or 'Vaccinations' or 'Vaccinazioni''. Found: "<value-of select="."/>"</assert>
       <let name="languageCode"
            value="substring(/hl7:ClinicalDocument/hl7:languageCode/@code,1,2)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not($languageCode='en') or (text()='Immunizations')">(chpcc_section_ImmunizationsCoded): The English title MUST read 'Immunizations'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not($languageCode='de') or (text()='Impfungen')">(chpcc_section_ImmunizationsCoded): The German title must MUST read 'Impfungen'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not($languageCode='fr') or (text()='Vaccinations')">(chpcc_section_ImmunizationsCoded): The French title MUST read 'Vaccinations'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="not($languageCode='it') or (text()='Vaccinazioni')">(chpcc_section_ImmunizationsCoded): The Italian title MUST read 'Vaccinazioni'</assert>
    </rule>
    <!--
@@ -210,10 +210,10 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
 
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:text[not(@nullFlavor)]"
-         id="d41e7484-false-d1147620e0">
+         id="d41e5031-false-d1136982e0">
       <extends rule="SD.TEXT"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='SD.TEXT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpcc_section_ImmunizationsCoded): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SD.TEXT". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -224,7 +224,7 @@ Item: (chpcc_section_ImmunizationsCoded)
 -->
    <rule context="*[hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]]/hl7:section[hl7:templateId[@root = '2.16.756.5.30.1.1.10.3.47'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.23']]/hl7:entry[hl7:substanceAdministration[hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.89'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.12'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.24']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000.html"
               test="string(@typeCode) = ('DRIV')">(chpcc_section_ImmunizationsCoded): The value for typeCode SHALL be 'DRIV'. Found: "<value-of select="@typeCode"/>"</assert>
    </rule>
 </pattern>

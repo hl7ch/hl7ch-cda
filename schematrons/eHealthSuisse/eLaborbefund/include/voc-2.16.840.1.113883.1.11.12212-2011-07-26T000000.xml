@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xhtml="http://www.w3.org/1999/xhtml"
+             xmlns:hl7="urn:hl7-org:v3"
+             id="2.16.840.1.113883.1.11.12212"
+             name="MaritalStatus"
+             displayName="MaritalStatus"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="cdachvacd-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>The domestic partnership status of a person.</p>
+                <p>
+                    <i>Example:</i> Married, separated, divorced, widowed, common-law marriage.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.2"
+                        identifierName="MaritalStatus"
+                        canonicalUri="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        canonicalUriDSTU2="http://hl7.org/fhir/v3/MaritalStatus"
+                        canonicalUriSTU3="http://hl7.org/fhir/v3/MaritalStatus"
+                        canonicalUriR4="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <sourceCodeSystem id="2.16.840.1.113883.6.21"
+                        identifierName="NUBC UB92"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.21"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.21"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.21"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.21"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <completeCodeSystem codeSystem="2.16.840.1.113883.6.21" codeSystemName="NUBC UB92"/>
+      <conceptList>
+                <concept code="A"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Annulled"
+                  level="0"
+                  type="L"/>
+                <concept code="D"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Divorced"
+                  level="0"
+                  type="L"/>
+                <concept code="I"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Interlocutory"
+                  level="0"
+                  type="L"/>
+                <concept code="L"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Legally Separated"
+                  level="0"
+                  type="L"/>
+                <concept code="M"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Married"
+                  level="0"
+                  type="L"/>
+                <concept code="P"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Polygamous"
+                  level="0"
+                  type="L"/>
+                <concept code="S"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Never Married"
+                  level="0"
+                  type="L"/>
+                <concept code="T"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Domestic partner"
+                  level="0"
+                  type="L"/>
+                <concept code="W"
+                  codeSystem="2.16.840.1.113883.5.2"
+                  displayName="Widowed"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

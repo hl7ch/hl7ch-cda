@@ -22,9 +22,9 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]"
-         id="d41e1883-false-d276349e0">
+         id="d41e1498-false-d469680e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']] is required [min 1x].</assert>
    </rule>
    <!--
@@ -34,24 +34,24 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]"
-         id="d41e1979-false-d276366e0">
+         id="d41e1594-false-d469697e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27']) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27']) &lt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']) &lt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:patientRole[hl7:patient]) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:patientRole[hl7:patient] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:patientRole[hl7:patient]) &lt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:patientRole[hl7:patient] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -61,13 +61,13 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27']"
-         id="d41e1984-false-d276401e0">
+         id="d41e1599-false-d469732e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.2.27')">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): The value for root SHALL be '2.16.756.5.30.1.1.10.2.27'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -77,16 +77,16 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']"
-         id="d41e1989-false-d276416e0">
+         id="d41e1604-false-d469747e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.3.3.1.3')">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): The value for root SHALL be '1.3.6.1.4.1.19376.1.3.3.1.3'. Found: "<value-of select="@root"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="//hl7:templateId[@root='1.3.6.1.4.1.19376.1.3.3.1.3.1']">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): In addition to the elements specified in the CDA header for the patient, the non-human subject SHALL be represented in a Subject element in level 3 entries in the structuredBody.</assert>
    </rule>
    <!--
@@ -96,21 +96,21 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]"
-         id="d41e1997-false-d276430e0">
+         id="d41e1612-false-d469761e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:id) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:id is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:addr) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:addr is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:telecom) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:telecom is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]) &lt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -120,22 +120,22 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:id"
-         id="d41e2002-false-d276467e0">
+         id="d41e1617-false-d469798e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="@extension">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): attribute @extension SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="not(@extension) or string-length(@extension)&gt;0">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="@root">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
    </rule>
    <!--
@@ -145,10 +145,10 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:addr"
-         id="d41e2031-false-d276488e0">
+         id="d41e1646-false-d469819e0">
       <extends rule="AD"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='AD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:AD". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -158,10 +158,10 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:telecom"
-         id="d41e2037-false-d276498e0">
+         id="d41e1652-false-d469829e0">
       <extends rule="TEL"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -171,21 +171,21 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]"
-         id="d41e2043-false-d276511e0">
+         id="d41e1658-false-d469842e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:name) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:name is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]) &lt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:birthTime) &gt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:birthTime is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="count(hl7:birthTime) &lt;= 1">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): element hl7:birthTime appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -195,10 +195,10 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:name"
-         id="d41e2048-false-d276544e0">
+         id="d41e1663-false-d469875e0">
       <extends rule="PN"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='PN' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:PN". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -208,15 +208,15 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]"
-         id="d41e2054-false-d276557e0">
+         id="d41e1669-false-d469888e0">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <let name="theCode" value="@code"/>
       <let name="theCodeSystem" value="@codeSystem"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="@nullFlavor or exists(doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem]])">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): The element value SHALL be one of '2.16.840.1.113883.1.11.1 AdministrativeGender (DYNAMIC)'.</assert>
    </rule>
    <!--
@@ -226,13 +226,13 @@ Item: (chpalm_header_RecordTargetHumanPatientWithNonHumanSubject)
 -->
 
    <rule context="*[hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]]/hl7:recordTarget[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.27'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.3.3.1.3']]/hl7:patientRole[hl7:patient]/hl7:patient[hl7:administrativeGenderCode[concat(@code, @codeSystem) = doc('include/voc-2.16.840.1.113883.1.11.1-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]]/hl7:birthTime"
-         id="d41e2059-false-d276577e0">
+         id="d41e1674-false-d469908e0">
       <extends rule="TS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.27-2019-08-20T000000.html"
               test="not(*)">(chpalm_header_RecordTargetHumanPatientWithNonHumanSubject): <value-of select="local-name()"/> with datatype TS, SHOULD NOT have child elements.</assert>
    </rule>
 </pattern>

@@ -3,14 +3,15 @@
     <!-- Chapter 1: Release Info (if publication is a release) -->
     <!-- ========= --><release project="2.16.756.5.30.1.127.77.1"
             prefix="cdachvacd-"
-            signature="20200813T090711"
-            date="2020-08-13T09:07:11"
-            versionLabel="2.1.1 (13.08.2020)">
+            signature="20200819T145048"
+            date="2020-08-19T14:50:48"
+            versionLabel="2.1.2 (19.08.2020)">
       <note xmlns:cda="urn:hl7-org:v3"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:xhtml="http://www.w3.org/1999/xhtml"
             xmlns:hl7="urn:hl7-org:v3"
-            language="en-US">Intermediate version for Projectathon 2020 testing (Schematron update only, no content changed)<br clear="none"/>
+            language="en-US">
+                <div>Correction to 2.1.1 (rejected templates were delivered instead of the active versions)</div>
             </note>
    </release>
     

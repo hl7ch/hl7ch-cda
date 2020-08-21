@@ -27,18 +27,18 @@ Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
 
    <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]"
-         id="d41e2296-false-d276973e0">
+         id="d41e1730-false-d470055e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']) &gt;= 1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']) &lt;= 1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="count(hl7:serviceEvent) &gt;= 1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:serviceEvent is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="count(hl7:serviceEvent) &lt;= 1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:serviceEvent appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -48,13 +48,13 @@ Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
 
    <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']"
-         id="d41e2298-false-d277038e0">
+         id="d41e1732-false-d470120e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_DocumentationOfLaboratoryPerformer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.2.28')">(chpalm_header_DocumentationOfLaboratoryPerformer): The value for root SHALL be '2.16.756.5.30.1.1.10.2.28'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -64,9 +64,9 @@ Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
 
    <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent"
-         id="d41e2303-false-d277091e0">
+         id="d41e1737-false-d470173e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="count(hl7:effectiveTime) &lt;= 1">(chpalm_header_DocumentationOfLaboratoryPerformer): element hl7:effectiveTime appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -76,10 +76,10 @@ Item: (chpalm_header_DocumentationOfLaboratoryPerformer)
 -->
 
    <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.28']]/hl7:serviceEvent/hl7:effectiveTime"
-         id="d41e2305-false-d277149e0">
+         id="d41e1739-false-d470231e0">
       <extends rule="IVL_TS.CH.TZ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200813T090700/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachlrep-html-20200819T151127/tmp-2.16.756.5.30.1.1.10.2.28-2019-08-20T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(chpalm_header_DocumentationOfLaboratoryPerformer): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 

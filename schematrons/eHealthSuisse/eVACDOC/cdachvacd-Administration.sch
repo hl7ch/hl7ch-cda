@@ -145,7 +145,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.16']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.1.16-2020-06-26T000000.html">(CDA-CH-VACD-ADM-V21): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.16']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.1.16-2020-06-26T000000.html">(CDA-CH-VACD-ADM-V21): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.16']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.16-2020-06-26T000000.sch"/>
@@ -170,12 +170,12 @@
       <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.101-2016-11-11T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2020-04-28T104756"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2020-04-29T124735"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2016-11-12T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.89-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.94-2016-11-12T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2018-04-19T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.96-2018-04-19T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
       <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
@@ -219,35 +219,35 @@
    <phase id="cdach_header_Authenticator-20190101T202044">
       <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
    </phase>
-   <phase id="cdachvacd_header_Patient-20200626T000000">
+   <phase id="cdachvacd_header_Patient">
       <active pattern="template-2.16.756.5.30.1.1.10.2.68-2020-06-26T000000"/>
    </phase>
    <phase id="cdach_header_DataEnterer">
       <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
    </phase>
-   <phase id="chpcc_section_ImmunizationsCoded-20161112T000000">
+   <phase id="chpcc_section_ImmunizationsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000"/>
    </phase>
    <phase id="chpcc_entry_ImmunizationPerformer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.101-2016-11-11T000000"/>
    </phase>
-   <phase id="chpcc_entry_ImmunizationSeriesNumber-20200428T104756">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2020-04-28T104756"/>
+   <phase id="chpcc_entry_ImmunizationSeriesNumber">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_ReactionObservation-20200429T124735">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2020-04-29T124735"/>
+   <phase id="chpcc_entry_ReactionObservation">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments-20161112T000000">
+   <phase id="chpcc_entry_AnnotationComments">
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_Immunization-20161112T000000">
+   <phase id="chpcc_entry_Immunization">
       <active pattern="template-2.16.756.5.30.1.1.10.4.89-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_ManufacturedProduct-20161112T000000">
+   <phase id="chpcc_entry_ManufacturedProduct">
       <active pattern="template-2.16.756.5.30.1.1.10.4.94-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_TargetOfTheImmunization-20180419T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2018-04-19T000000"/>
+   <phase id="chpcc_entry_TargetOfTheImmunization">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2016-11-12T000000"/>
    </phase>
    <phase id="chpcc_entry_RecommendationCategory">
       <active pattern="template-2.16.756.5.30.1.1.10.4.96-2018-04-19T000000"/>
@@ -292,9 +292,9 @@
    <!-- chpcc_entry_ImmunizationPerformer -->
    <include href="include/2.16.756.5.30.1.1.10.4.101-2016-11-11T000000.sch"/>
    <!-- chpcc_entry_ImmunizationSeriesNumber -->
-   <include href="include/2.16.756.5.30.1.1.10.4.119-2020-04-28T104756.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.119-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_ReactionObservation -->
-   <include href="include/2.16.756.5.30.1.1.10.4.120-2020-04-29T124735.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.120-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_AnnotationComments -->
    <include href="include/2.16.756.5.30.1.1.10.4.2-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_Immunization -->
@@ -302,7 +302,7 @@
    <!-- chpcc_entry_ManufacturedProduct -->
    <include href="include/2.16.756.5.30.1.1.10.4.94-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_TargetOfTheImmunization -->
-   <include href="include/2.16.756.5.30.1.1.10.4.95-2018-04-19T000000.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.95-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_RecommendationCategory -->
    <include href="include/2.16.756.5.30.1.1.10.4.96-2018-04-19T000000.sch"/>
    <!-- cdach_other_Author -->

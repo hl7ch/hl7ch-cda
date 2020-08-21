@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeSystems>
+   <codeSystem ref="2.16.840.1.113883.6.139" name="ICPC-2" displayName="ICPC-2"/>
+</codeSystems>

@@ -16,12 +16,12 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]"
-         id="d41e3333-false-d1124276e0">
+         id="d41e2316-false-d1120639e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]) &gt;= 1">(cdach_header_Custodian): element hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]) &lt;= 1">(cdach_header_Custodian): element hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -31,18 +31,18 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]"
-         id="d41e3386-false-d1124319e0">
+         id="d41e2369-false-d1120682e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']) &gt;= 1">(cdach_header_Custodian): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']) &lt;= 1">(cdach_header_Custodian): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:assignedCustodian[hl7:representedCustodianOrganization]) &gt;= 1">(cdach_header_Custodian): element hl7:assignedCustodian[hl7:representedCustodianOrganization] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:assignedCustodian[hl7:representedCustodianOrganization]) &lt;= 1">(cdach_header_Custodian): element hl7:assignedCustodian[hl7:representedCustodianOrganization] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -52,13 +52,13 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']"
-         id="d41e3391-false-d1124358e0">
+         id="d41e2374-false-d1120721e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.2.3')">(cdach_header_Custodian): The value for root SHALL be '2.16.756.5.30.1.1.10.2.3'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -68,12 +68,12 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]"
-         id="d41e3396-false-d1124385e0">
+         id="d41e2379-false-d1120748e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:representedCustodianOrganization) &gt;= 1">(cdach_header_Custodian): element hl7:representedCustodianOrganization is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:representedCustodianOrganization) &lt;= 1">(cdach_header_Custodian): element hl7:representedCustodianOrganization appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -83,15 +83,15 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization"
-         id="d41e3398-false-d1124427e0">
+         id="d41e2381-false-d1120790e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:id[not(@nullFlavor)]) &gt;= 1">(cdach_header_Custodian): element hl7:id[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:name) &gt;= 1">(cdach_header_Custodian): element hl7:name is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="count(hl7:name) &lt;= 1">(cdach_header_Custodian): element hl7:name appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -101,19 +101,19 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:id[not(@nullFlavor)]"
-         id="d41e3400-false-d1124469e0">
+         id="d41e2383-false-d1120832e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="@root">(cdach_header_Custodian): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_header_Custodian): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="not(@extension) or string-length(@extension)&gt;0">(cdach_header_Custodian): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
    <!--
@@ -123,10 +123,10 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:name"
-         id="d41e3418-false-d1124488e0">
+         id="d41e2401-false-d1120851e0">
       <extends rule="ON"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ON' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ON". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -136,10 +136,10 @@ Item: (cdach_header_Custodian)
 -->
 
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:telecom"
-         id="d41e3424-false-d1124498e0">
+         id="d41e2407-false-d1120861e0">
       <extends rule="TEL"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.2.3-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_Custodian): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -159,43 +159,43 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
               see="eCH-0007"
               test="not(hl7:state) or not(upper-case(hl7:country/text())='CH') or (upper-case(hl7:state/text())=('AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FL', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'))">(cdach_other_AddressInformationCompilation-eCH-0010): eCH-0007 cantonFlAbbreviationType restricts valid state values for Switzerland</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetAddressLine) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetAddressLine) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetAddressLine appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:streetName) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:streetName appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:houseNumber) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:houseNumber appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:additionalLocator) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:additionalLocator appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postBox) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postBox appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:state) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:state appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:city) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:city) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:city appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postalCode) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:postalCode) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:postalCode appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:country) &gt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="count(hl7:country) &lt;= 1">(cdach_other_AddressInformationCompilation-eCH-0010): element hl7:country appears too often [max 1x].</assert>
    </rule>
 
@@ -207,7 +207,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:streetAddressLine">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.12 "
@@ -222,7 +222,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:streetAddressLine">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.12 "
@@ -237,7 +237,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:streetName">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.13 "
@@ -252,7 +252,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:houseNumber">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.14 "
@@ -267,7 +267,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:additionalLocator">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.15 "
@@ -282,7 +282,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:postBox">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.16 "
@@ -297,7 +297,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:state">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -309,7 +309,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:city">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -321,7 +321,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:postalCode">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
 
@@ -333,7 +333,7 @@ Item: (cdach_other_AddressInformationCompilation-eCH-0010)
    <rule context="*[hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]]/hl7:custodian[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.3']]/hl7:assignedCustodian[hl7:representedCustodianOrganization]/hl7:representedCustodianOrganization/hl7:addr/hl7:country">
       <extends rule="ADXP"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.9.35-2018-04-18T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ADXP' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_other_AddressInformationCompilation-eCH-0010): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ADXP". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
               see="eCH-0010 V7.0, section 5.24.2 "

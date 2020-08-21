@@ -145,7 +145,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.18']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200813T090711/tmp-2.16.756.5.30.1.1.10.1.18-2020-06-26T000000.html">(CDA-CH-VACD-RSP-V21): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.18']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachvacd-html-20200819T145048/tmp-2.16.756.5.30.1.1.10.1.18-2020-06-26T000000.html">(CDA-CH-VACD-RSP-V21): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.18']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.18-2020-06-26T000000.sch"/>
@@ -177,14 +177,14 @@
       <active pattern="template-2.16.756.5.30.1.1.10.3.5-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.50-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.51-2016-11-12T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2018-04-19T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2016-11-11T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.100-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.101-2016-11-11T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2018-04-19T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.11-2019-08-20T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2020-04-28T104756"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.12-2019-08-20T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2020-04-29T124735"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.13-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.14-2019-08-20T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.15-2019-08-20T000000"/>
@@ -208,7 +208,7 @@
       <active pattern="template-2.16.756.5.30.1.1.10.4.92-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.93-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.94-2016-11-12T000000"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2018-04-19T000000"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.96-2018-04-19T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.97-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.98-2016-11-12T000000"/>
@@ -255,7 +255,7 @@
    <phase id="cdach_header_Authenticator-20190101T202044">
       <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
    </phase>
-   <phase id="cdachvacd_header_PatientMasked-20200626T000000">
+   <phase id="cdachvacd_header_PatientMasked">
       <active pattern="template-2.16.756.5.30.1.1.10.2.69-2020-06-26T000000"/>
    </phase>
    <phase id="cdach_header_DataEnterer">
@@ -264,136 +264,136 @@
    <phase id="cdach_section_RemarksCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.2-2018-04-18T000000"/>
    </phase>
-   <phase id="chpcc_section_ActiveProblemsCoded-20161112T000000">
+   <phase id="chpcc_section_ActiveProblemsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.25-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_section_LaboratorySpecialtyCoded-20190820T000000">
+   <phase id="chpalm_section_LaboratorySpecialtyCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.3-2019-08-20T000000"/>
    </phase>
-   <phase id="cdachvacd_section_OtherRelevantObservationsCoded-20200626T000000">
+   <phase id="cdachvacd_section_OtherRelevantObservationsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.46-2020-06-26T000000"/>
    </phase>
-   <phase id="chpcc_section_ImmunizationsCoded-20161112T000000">
+   <phase id="chpcc_section_ImmunizationsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.47-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_section_ImmunizationRecommendationsCoded-20161112T000000">
+   <phase id="chpcc_section_ImmunizationRecommendationsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.48-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_section_LaboratoryReportItemCoded-20190820T000000">
+   <phase id="chpalm_section_LaboratoryReportItemCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.5-2019-08-20T000000"/>
    </phase>
-   <phase id="chpcc_section_HistoryOfPastIllnessCoded-20161112T000000">
+   <phase id="chpcc_section_HistoryOfPastIllnessCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.50-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_section_AllergiesOtherAdverseReactionsCoded-20161112T000000">
+   <phase id="chpcc_section_AllergiesOtherAdverseReactionsCoded">
       <active pattern="template-2.16.756.5.30.1.1.10.3.51-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_section_CurrentPregnancyCoded-20180419T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2018-04-19T000000"/>
+   <phase id="chpcc_section_CurrentPregnancyCoded">
+      <active pattern="template-2.16.756.5.30.1.1.10.3.53-2016-11-11T000000"/>
    </phase>
-   <phase id="chpcc_entry_ProblemStatusObservation-20161112T000000">
+   <phase id="chpcc_entry_ProblemStatusObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.100-2016-11-12T000000"/>
    </phase>
    <phase id="chpcc_entry_ImmunizationPerformer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.101-2016-11-11T000000"/>
    </phase>
-   <phase id="chpcc_entry_PregnancyObservationDeliveryDate-20180419T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2018-04-19T000000"/>
+   <phase id="chpcc_entry_PregnancyObservationDeliveryDate">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.102-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_entry_SpecimenCollection-20190820T000000">
+   <phase id="chpalm_entry_SpecimenCollection">
       <active pattern="template-2.16.756.5.30.1.1.10.4.11-2019-08-20T000000"/>
    </phase>
-   <phase id="chpcc_entry_ImmunizationSeriesNumber-20200428T104756">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2020-04-28T104756"/>
+   <phase id="chpcc_entry_ImmunizationSeriesNumber">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.119-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_entry_SpecimenReceived-20190820T000000">
+   <phase id="chpalm_entry_SpecimenReceived">
       <active pattern="template-2.16.756.5.30.1.1.10.4.12-2019-08-20T000000"/>
    </phase>
-   <phase id="chpcc_entry_ReactionObservation-20200429T124735">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2020-04-29T124735"/>
+   <phase id="chpcc_entry_ReactionObservation">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.120-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_entry_NotificationOrganizer-20190820T000000">
+   <phase id="chpalm_entry_NotificationOrganizer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.13-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_NotifiableCondition-20190820T000000">
+   <phase id="chpalm_entry_NotifiableCondition">
       <active pattern="template-2.16.756.5.30.1.1.10.4.14-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_CaseIdentification-20190820T000000">
+   <phase id="chpalm_entry_CaseIdentification">
       <active pattern="template-2.16.756.5.30.1.1.10.4.15-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_OutbreakIdentification-20190820T000000">
+   <phase id="chpalm_entry_OutbreakIdentification">
       <active pattern="template-2.16.756.5.30.1.1.10.4.16-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryIsolateOrganizer-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryIsolateOrganizer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.17-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_MultimediaEmbeddedContent-20190820T000000">
+   <phase id="chpalm_entry_MultimediaEmbeddedContent">
       <active pattern="template-2.16.756.5.30.1.1.10.4.18-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryBatteryOrganizer-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryBatteryOrganizer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.19-2019-08-20T000000"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments-20161112T000000">
+   <phase id="chpcc_entry_AnnotationComments">
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
    </phase>
-   <phase id="chpalm_entry_PreviousObservation-20190820T000000">
+   <phase id="chpalm_entry_PreviousObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.22-2019-08-20T000000"/>
    </phase>
    <phase id="cdach_entry_ExternalDocument">
       <active pattern="template-2.16.756.5.30.1.1.10.4.29-2018-04-18T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryObservation-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.3-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryReportDataProcessingEntry-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryReportDataProcessingEntry">
       <active pattern="template-2.16.756.5.30.1.1.10.4.4-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_NonHumanSubject-20190820T000000">
+   <phase id="chpalm_entry_NonHumanSubject">
       <active pattern="template-2.16.756.5.30.1.1.10.4.5-2019-08-20T000000"/>
    </phase>
    <phase id="chpalm_entry_HumanPatientWithNonHumanSubject">
       <active pattern="template-2.16.756.5.30.1.1.10.4.6-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryPerformer-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryPerformer">
       <active pattern="template-2.16.756.5.30.1.1.10.4.7-2019-08-20T000000"/>
    </phase>
-   <phase id="chpalm_entry_LaboratoryResultsValidator-20190820T000000">
+   <phase id="chpalm_entry_LaboratoryResultsValidator">
       <active pattern="template-2.16.756.5.30.1.1.10.4.8-2019-08-20T000000"/>
    </phase>
-   <phase id="cdachvacd_entry_GestationalAgeAtBirth-20200626T000000">
+   <phase id="cdachvacd_entry_GestationalAgeAtBirth">
       <active pattern="template-2.16.756.5.30.1.1.10.4.84-2020-06-26T000000"/>
    </phase>
-   <phase id="chpcc_entry_Immunization-20161112T000000">
+   <phase id="chpcc_entry_Immunization">
       <active pattern="template-2.16.756.5.30.1.1.10.4.89-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_ProblemConcern-20161112T000000">
+   <phase id="chpcc_entry_ProblemConcern">
       <active pattern="template-2.16.756.5.30.1.1.10.4.90-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_AllergiesAndIntolerancesConcern-20161112T000000">
+   <phase id="chpcc_entry_AllergiesAndIntolerancesConcern">
       <active pattern="template-2.16.756.5.30.1.1.10.4.91-2016-11-12T000000"/>
    </phase>
    <phase id="chpcc_entry_PregnancyObservation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.92-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_ImmunizationRecommendation-20161112T000000">
+   <phase id="chpcc_entry_ImmunizationRecommendation">
       <active pattern="template-2.16.756.5.30.1.1.10.4.93-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_ManufacturedProduct-20161112T000000">
+   <phase id="chpcc_entry_ManufacturedProduct">
       <active pattern="template-2.16.756.5.30.1.1.10.4.94-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_TargetOfTheImmunization-20180419T000000">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2018-04-19T000000"/>
+   <phase id="chpcc_entry_TargetOfTheImmunization">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.95-2016-11-12T000000"/>
    </phase>
    <phase id="chpcc_entry_RecommendationCategory">
       <active pattern="template-2.16.756.5.30.1.1.10.4.96-2018-04-19T000000"/>
    </phase>
-   <phase id="chpcc_entry_Problem-20161112T000000">
+   <phase id="chpcc_entry_Problem">
       <active pattern="template-2.16.756.5.30.1.1.10.4.97-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_AllergyOrIntolerance-20161112T000000">
+   <phase id="chpcc_entry_AllergyOrIntolerance">
       <active pattern="template-2.16.756.5.30.1.1.10.4.98-2016-11-12T000000"/>
    </phase>
-   <phase id="chpcc_entry_Severity-20161112T000000">
+   <phase id="chpcc_entry_Severity">
       <active pattern="template-2.16.756.5.30.1.1.10.4.99-2016-11-12T000000"/>
    </phase>
    <phase id="cdach_other_Author-20190912T134828">
@@ -450,21 +450,21 @@
    <!-- chpcc_section_AllergiesOtherAdverseReactionsCoded -->
    <include href="include/2.16.756.5.30.1.1.10.3.51-2016-11-12T000000.sch"/>
    <!-- chpcc_section_CurrentPregnancyCoded -->
-   <include href="include/2.16.756.5.30.1.1.10.3.53-2018-04-19T000000.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.3.53-2016-11-11T000000.sch"/>
    <!-- chpcc_entry_ProblemStatusObservation -->
    <include href="include/2.16.756.5.30.1.1.10.4.100-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_ImmunizationPerformer -->
    <include href="include/2.16.756.5.30.1.1.10.4.101-2016-11-11T000000.sch"/>
    <!-- chpcc_entry_PregnancyObservationDeliveryDate -->
-   <include href="include/2.16.756.5.30.1.1.10.4.102-2018-04-19T000000.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.102-2016-11-12T000000.sch"/>
    <!-- chpalm_entry_SpecimenCollection -->
    <include href="include/2.16.756.5.30.1.1.10.4.11-2019-08-20T000000.sch"/>
    <!-- chpcc_entry_ImmunizationSeriesNumber -->
-   <include href="include/2.16.756.5.30.1.1.10.4.119-2020-04-28T104756.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.119-2016-11-12T000000.sch"/>
    <!-- chpalm_entry_SpecimenReceived -->
    <include href="include/2.16.756.5.30.1.1.10.4.12-2019-08-20T000000.sch"/>
    <!-- chpcc_entry_ReactionObservation -->
-   <include href="include/2.16.756.5.30.1.1.10.4.120-2020-04-29T124735.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.120-2016-11-12T000000.sch"/>
    <!-- chpalm_entry_NotificationOrganizer -->
    <include href="include/2.16.756.5.30.1.1.10.4.13-2019-08-20T000000.sch"/>
    <!-- chpalm_entry_NotifiableCondition -->
@@ -512,7 +512,7 @@
    <!-- chpcc_entry_ManufacturedProduct -->
    <include href="include/2.16.756.5.30.1.1.10.4.94-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_TargetOfTheImmunization -->
-   <include href="include/2.16.756.5.30.1.1.10.4.95-2018-04-19T000000.sch"/>
+   <include href="include/2.16.756.5.30.1.1.10.4.95-2016-11-12T000000.sch"/>
    <!-- chpcc_entry_RecommendationCategory -->
    <include href="include/2.16.756.5.30.1.1.10.4.96-2018-04-19T000000.sch"/>
    <!-- chpcc_entry_Problem -->
