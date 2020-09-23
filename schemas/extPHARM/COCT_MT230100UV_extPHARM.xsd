@@ -8,6 +8,7 @@ History:
 2012.06.00 Juergen Brandstaetter, CodeWerk Software Services and Development GmbH, Austria (COCT_MT230100UV.xsd extension based on HL7 V3 Normative Edition 2010)
 2013.05.18 Tony Schaller, medshare GmbH, Switzerland (integration to CDA R2 2005 schemas)
 2018.06.16 Tony Schaller, medshare GmbH, Switzerland (Namespace update to urn:ihe:pharm and other updates according to http://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_Suppl_PRE.pdf, Appendix B1)
+2020.07.09 Tony Schaller, medshare GmbH, Switzerland (fixed namespaces and datatypes for pharm:quantity according to https://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_Pharmacy_Suppl_PRE.pdf)
 
 *******************************************************************************
 -->
@@ -146,7 +147,7 @@ History:
 	<xs:complexType name="COCT_MT230100UV.Content">
 		<xs:sequence>
 			<xs:group ref="hl7v3:InfrastructureRootElements"/>
-			<xs:element name="quantity" type="hl7v3:RTO_QTY_QTY" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quantity" type="hl7v3:RTO_PQ_PQ" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="containerPackagedMedicine" type="pharm:COCT_MT230100UV.PackagedMedicine"
 				minOccurs="1"
 			maxOccurs="1"/>
@@ -196,7 +197,7 @@ History:
 	<xs:complexType name="COCT_MT230100UV.Ingredient">
 		<xs:sequence>
 			<xs:group ref="hl7v3:InfrastructureRootElements"/>
-			<xs:element name="quantity" type="pharm:Quantity" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quantity" type="hl7v3:RTO_PQ_PQ" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="ingredient" type="pharm:COCT_MT230100UV.Substance" nillable="true"
 				minOccurs="0"
 			maxOccurs="1"/>
@@ -363,7 +364,7 @@ History:
 	<xs:complexType name="COCT_MT230100UV.Part">
 		<xs:sequence>
 			<xs:group ref="hl7v3:InfrastructureRootElements"/>
-			<xs:element name="quantity" type="hl7v3:RTO_QTY_QTY" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quantity" type="hl7v3:RTO_PQ_PQ" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="partMedicine" type="pharm:COCT_MT230100UV.Medicine" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="subjectOf" type="pharm:COCT_MT230100UV.Subject4" nillable="true" minOccurs="0"
 			maxOccurs="unbounded"/>
@@ -422,7 +423,7 @@ History:
 	<xs:complexType name="COCT_MT230100UV.SubContent">
 		<xs:sequence>
 			<xs:group ref="hl7v3:InfrastructureRootElements"/>
-			<xs:element name="quantity" type="hl7v3:RTO_QTY_QTY" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quantity" type="hl7v3:RTO_PQ_PQ" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="containedPackagedMedicine" type="pharm:COCT_MT230100UV.PackagedMedicine"
 				nillable="true"
 				minOccurs="0"
@@ -435,7 +436,7 @@ History:
 	<xs:complexType name="COCT_MT230100UV.SubIngredient">
 		<xs:sequence>
 			<xs:group ref="hl7v3:InfrastructureRootElements"/>
-			<xs:element name="quantity" type="hl7v3:RTO_QTY_QTY" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quantity" type="hl7v3:RTO_PQ_PQ" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="ingredient" type="pharm:COCT_MT230100UV.Substance" nillable="true"
 				minOccurs="0"
 			maxOccurs="1"/>
@@ -594,7 +595,7 @@ History:
 	<xs:complexType name="COCT_MT230100UV.SuperContent">
 		<xs:sequence>
 			<xs:group ref="hl7v3:InfrastructureRootElements"/>
-			<xs:element name="quantity" type="hl7v3:RTO_QTY_QTY" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quantity" type="hl7v3:RTO_PQ_PQ" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="containerPackagedMedicine" type="pharm:COCT_MT230100UV.PackagedMedicine"
 				minOccurs="1"
 			maxOccurs="1"/>
@@ -614,35 +615,5 @@ History:
 		</xs:sequence>
 		<!-- <xs:attributeGroup ref="hl7v3:InfrastructureRootAttributes"/> -->
 		<xs:attribute name="classCode" type="hl7v3:RoleClassTerritoryOfAuthority" use="required"/>
-	</xs:complexType>
-	<xs:complexType name="Quantity">
-		<xs:annotation>
-			<xs:appinfo>
-				<diff>RTO_QTY_QTY</diff>
-			</xs:appinfo>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="hl7v3:QTY">
-				<xs:sequence>
-					<xs:element name="numerator" type="hl7v3:QTY">
-						<xs:annotation>
-							<xs:documentation>
-								The quantity that is being divided in the ratio.  The
-								default is the integer number 1 (one).
-							</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="denominator" type="hl7v3:QTY">
-						<xs:annotation>
-							<xs:documentation>
-								The quantity that devides the numerator in the ratio.
-								The default is the integer number 1 (one).
-								The denominator must not be zero.
-							</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>
