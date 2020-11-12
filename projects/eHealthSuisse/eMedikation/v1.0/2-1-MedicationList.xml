@@ -7,6 +7,7 @@
 <!-- 2018.06.16: Tony Schaller, medshare GmbH (Refactoring for better validation results: Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation) -->
 <!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020) -->
 <!-- 2020.02.03: Oliver Egger, ahdis ag: Update to CDA-CH EMED (2020) -->
+<!-- 2020.11.12: Michaela Ziegler, ahdis ag: Add missing elements in dispense entry, corresponding to 1-2-MedicationList -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -160,6 +161,7 @@
 						<table>
 							<thead>
 								<tr>
+									<th>Typ des Dokuments</th>
 									<th>Präpartename</th>
 									<th>Wirkstoffname</th>
 									<th>Galenische Form</th>
@@ -177,6 +179,7 @@
 							</thead>
 							<tbody>
 								<tr ID="mtp.1">
+									<td ID="mtp.1.documenttype">Medication Treatment Plan document</td>
 									<td ID="mtp.1.brandedmedication">Triatec</td>
 									<td ID="mtp.1.ingredient">Ramipril</td>
 									<td ID="mtp.1.packageform">Tbl</td>
@@ -193,8 +196,54 @@
 								</tr>
 							</tbody>
 						</table>
+						<table>
+							<thead>
+								<tr>
+									<th>Typ des Dokuments</th>
+									<th>Präpartename</th>
+									<th>Wirkstoffname</th>
+									<th>Galenische Form</th>
+									<th>Dosis pro Einheit</th>
+									<th>Anzahl Packungen</th>
+									<th>Packungsgrösse</th>
+									<th>Dosierung</th>
+									<th>Dos.Morgen</th>
+									<th>Dos.Mittag</th>
+									<th>Dos.Abend</th>
+									<th>Dos.Nacht</th>
+									<th>Verabreichungsweg</th>
+									<th>Kommentar</th>
+									<th>Behandlungsrund</th>
+									<th>Datum/Zeit der Abgabe/ Anwendung</th>
+									<th>Identifikation des Empfängers</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="dis.1">
+									<td ID="dis.1.documenttype">Medication Dispense document</td>
+									<td ID="dis.1.brandedmedication">Triatec</td>
+									<td ID="dis.1.ingredient">Ramipril</td>
+									<td ID="dis.1.dosequantity">2.5 mg</td>
+									<td ID="dis.1.packageform">Tbl</td>
+									<td ID="dis.1.nopackages">1</td>
+									<td ID="dis.1.packagesize">20</td>
+									<td ID="dis.1.dosageintakemode">Morgens 1/2 Tablette nehmen</td>
+									<td ID="dis.1.dosagemorning">0.5</td>
+									<td ID="dis.1.dosagelunch">0</td>
+									<td ID="dis.1.dosageevening">0</td>
+									<td ID="dis.1.dosagenight">0</td>
+									<td ID="dis.1.routecode">oral</td>
+									<td ID="dis.1.note"></td>
+									<td ID="dis.1.datefromto"></td>
+									<td ID="dis.1.reason">Bluthochdruck</td>
+									<td ID="dis.1.dipsensedate"></td>
+									<td ID="dis.1.dipsenseto"></td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
 
+					<!-- MTP -->
 					<entry>
 						<substanceAdministration classCode="SBADM"
 							moodCode="INT">
@@ -321,6 +370,7 @@
 							</entryRelationship>
 						</substanceAdministration>
 					</entry>
+
 					<!-- DIS -->
 					<entry>
 						<supply classCode="SPLY" moodCode="EVN">
@@ -337,7 +387,7 @@
 							<id root="488BD23A-20C6-11E6-B67B-9E71128CAE77" />
 
 							<text>
-								<reference value="#mtp.1" />
+								<reference value="#dis.1" />
 							</text>
 
 							<quantity value="1" />
@@ -354,7 +404,7 @@
 										<code code="7680538751228" codeSystem="2.51.1.1"
 										codeSystemName="GTIN" displayName="TRIATEC Tabl 2.5 mg 20 Stk" >
 											<originalText>
-												<reference value="#mtp.1.brandedmedication" />
+												<reference value="#dis.1.brandedmedication" />
 											</originalText>
 										</code>
 										<name>TRIATEC Tabl 2.5 mg</name>
@@ -410,6 +460,62 @@
 										</externalDocument>
 									</reference>
 								</substanceAdministration>
+							</entryRelationship>
+
+							<!-- dosage insruction -->
+							<entryRelationship typeCode='COMP'>
+								<substanceAdministration classCode='SBADM'
+									moodCode='INT'>
+									<templateId root='1.3.6.1.4.1.19376.1.9.1.3.6' />
+									<!-- A normal substanceAdministration act that may not contain any 
+										subordinate substanceAdministration acts. -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+									<effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+										xsi:type="IVL_TS">
+										<low value="20111129" />
+									</effectiveTime>
+									<effectiveTime xsi:type='EIVL_TS' operator='A'>
+										<event code='ACM' />
+									</effectiveTime>
+									<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+										displayName="Oral use" />
+									<doseQuantity>
+										<center value="0.5">
+										</center>
+									</doseQuantity>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor='NA' />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration moodCode="INT"
+									classCode="SBADM">
+									<templateId root="2.16.756.5.30.1.1.10.4.37" />
+									<text>
+										<reference value="#dis.1.dosageintakemode" />
+									</text>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedMaterial nullFlavor="NA" />
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>							
+							<entryRelationship typeCode="COMP">
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.756.5.30.1.1.10.4.2" />
+									<templateId root="2.16.840.1.113883.10.20.1.40" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2" />
+									<code code="48767-8" codeSystem="2.16.840.1.113883.6.1"
+										codeSystemName="LOINC" displayName="Annotation comment" />
+									<text>
+										<reference value="#dis.1.note" />
+									</text>
+									<statusCode code="completed" />
+								</act>
 							</entryRelationship>
 						</supply>
 					</entry>
