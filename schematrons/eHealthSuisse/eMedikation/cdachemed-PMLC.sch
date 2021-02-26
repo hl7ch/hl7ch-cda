@@ -146,7 +146,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.3']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.1.3-2016-05-13T000000.html">(MedicationCardDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.3']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.1.3-2016-05-13T000000.html">(MedicationCardDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.3']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.3-2016-05-13T000000.sch"/>
@@ -196,7 +196,7 @@
    <phase id="IHEFullfillmentInstructions">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3.1-2019-10-16T160148"/>
    </phase>
-   <phase id="IHEInternalReferenceEntry">
+   <phase id="IHEInternalReferenceEntry-20191016T161202">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.4.1-2019-10-16T161202"/>
    </phase>
    <phase id="IHESubstitutionPermissionContentModule">
@@ -241,7 +241,7 @@
    <phase id="MedicationCardSectionContentModule">
       <active pattern="template-2.16.756.5.30.1.1.10.3.9-2016-05-21T000000"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments-20161112T000000">
+   <phase id="chpcc_entry_AnnotationComments">
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
    </phase>
    <phase id="ManufacturedMaterialEntryContentModule-20191211T113424">

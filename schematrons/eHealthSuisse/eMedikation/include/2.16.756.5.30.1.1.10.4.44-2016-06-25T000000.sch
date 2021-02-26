@@ -22,77 +22,80 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]"
-         id="d41e15624-false-d254278e0">
+         id="d41e15395-false-d261951e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@moodCode) = ('EVN')">(PharmaceuticalAdviceItemEntryContentModule): The value for moodCode SHALL be 'EVN'. Found: "<value-of select="@moodCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.44']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.44'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.44']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.44'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.3']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.3'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.3']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.3'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:id[not(@nullFlavor)]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:id[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:code[(@code = 'OK' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CHANGE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CANCEL' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'SUSPEND' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'REFUSE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'COMMENT' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1')]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:code[(@code = 'OK' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CHANGE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CANCEL' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'SUSPEND' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'REFUSE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'COMMENT' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1')] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:code[(@code = 'OK' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CHANGE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CANCEL' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'SUSPEND' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'REFUSE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'COMMENT' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1')]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:code[(@code = 'OK' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CHANGE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CANCEL' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'SUSPEND' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'REFUSE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'COMMENT' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1')] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:text[not(@nullFlavor)][hl7:reference]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:text[not(@nullFlavor)][hl7:reference] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:text[not(@nullFlavor)][hl7:reference]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:text[not(@nullFlavor)][hl7:reference] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:statusCode[@code = 'active' or @code = 'completed']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:statusCode[@code = 'active' or @code = 'completed'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:statusCode[@code = 'active' or @code = 'completed']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:statusCode[@code = 'active' or @code = 'completed'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:effectiveTime) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:effectiveTime appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:author) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:author appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:author) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:author appears too often [max 1x].</assert>
       <let name="elmcount"
            value="count(hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.45']]] | hl7:entryRelationship[@typeCode='REFR' and hl7:supply[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.46']]] | hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.47']]])"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="$elmcount &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): choice (hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.45']]]  or  hl7:entryRelationship[@typeCode='REFR' and hl7:supply[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.46']]]  or  hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.47']]]) does not contain enough elements [min 1x]</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="$elmcount &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): choice (hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.45']]]  or  hl7:entryRelationship[@typeCode='REFR' and hl7:supply[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.46']]]  or  hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.47']]]) contains too many elements [max 1x]</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.45']]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.45']]] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:entryRelationship[@typeCode='REFR' and hl7:supply[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.46']]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[@typeCode='REFR' and hl7:supply[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.46']]] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.47']]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.47']]] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              test="count(hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.2']]]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.2']]] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -102,13 +105,13 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.4.44']"
-         id="d41e15628-false-d254397e0">
+         id="d41e15399-false-d262072e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.4.44')">(PharmaceuticalAdviceItemEntryContentModule): The value for root SHALL be '2.16.756.5.30.1.1.10.4.44'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -118,13 +121,13 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.3']"
-         id="d41e15636-false-d254412e0">
+         id="d41e15407-false-d262087e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.9.1.3.3')">(PharmaceuticalAdviceItemEntryContentModule): The value for root SHALL be '1.3.6.1.4.1.19376.1.9.1.3.3'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -134,10 +137,10 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:id[not(@nullFlavor)]"
-         id="d41e15646-false-d254426e0">
+         id="d41e15417-false-d262101e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -147,13 +150,13 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:code[(@code = 'OK' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CHANGE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'CANCEL' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'SUSPEND' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'REFUSE' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1') or (@code = 'COMMENT' and @codeSystem = '1.3.6.1.4.1.19376.1.9.2.1')]"
-         id="d41e15654-false-d254437e0">
+         id="d41e15425-false-d262112e0">
       <extends rule="CD"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="@nullFlavor or (@code='OK' and @codeSystem='1.3.6.1.4.1.19376.1.9.2.1') or (@code='CHANGE' and @codeSystem='1.3.6.1.4.1.19376.1.9.2.1') or (@code='CANCEL' and @codeSystem='1.3.6.1.4.1.19376.1.9.2.1') or (@code='SUSPEND' and @codeSystem='1.3.6.1.4.1.19376.1.9.2.1') or (@code='REFUSE' and @codeSystem='1.3.6.1.4.1.19376.1.9.2.1') or (@code='COMMENT' and @codeSystem='1.3.6.1.4.1.19376.1.9.2.1')">(PharmaceuticalAdviceItemEntryContentModule): The element value SHALL be one of 'code 'OK' codeSystem '1.3.6.1.4.1.19376.1.9.2.1' or code 'CHANGE' codeSystem '1.3.6.1.4.1.19376.1.9.2.1' or code 'CANCEL' codeSystem '1.3.6.1.4.1.19376.1.9.2.1' or code 'SUSPEND' codeSystem '1.3.6.1.4.1.19376.1.9.2.1' or code 'REFUSE' codeSystem '1.3.6.1.4.1.19376.1.9.2.1' or code 'COMMENT' codeSystem '1.3.6.1.4.1.19376.1.9.2.1''.</assert>
    </rule>
    <!--
@@ -163,12 +166,12 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:text[not(@nullFlavor)][hl7:reference]"
-         id="d41e15676-false-d254463e0">
+         id="d41e15447-false-d262138e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:reference[not(@nullFlavor)]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:reference[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:reference[not(@nullFlavor)]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:reference[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -184,13 +187,13 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:statusCode[@code = 'active' or @code = 'completed']"
-         id="d41e15683-false-d254488e0">
+         id="d41e15454-false-d262163e0">
       <extends rule="CS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="@nullFlavor or (@code='active') or (@code='completed')">(PharmaceuticalAdviceItemEntryContentModule): The element value SHALL be one of 'code 'active' or code 'completed''.</assert>
    </rule>
    <!--
@@ -200,9 +203,9 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:effectiveTime"
-         id="d41e15692-false-d254506e0">
+         id="d41e15463-false-d262181e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="@value">(PharmaceuticalAdviceItemEntryContentModule): attribute @value SHALL be present.</assert>
    </rule>
    <!--
@@ -225,7 +228,7 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.45']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
    </rule>
 
@@ -236,7 +239,7 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[@typeCode='REFR' and hl7:supply[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.46']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
    </rule>
 
@@ -247,7 +250,7 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[@typeCode='REFR' and hl7:substanceAdministration[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.47']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
    </rule>
 
@@ -258,62 +261,59 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[@typeCode='REFR' and hl7:act[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.81']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@inversionInd) = ('false') or not(@inversionInd)">(PharmaceuticalAdviceItemEntryContentModule): The value for inversionInd SHALL be 'false'. Found: "<value-of select="@inversionInd"/>"</assert>
    </rule>
+
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.4.44
 Context: *[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]
 Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
-
-   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]"
-         id="d41e15759-false-d254587e0">
+   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@inversionInd) = ('false') or not(@inversionInd)">(PharmaceuticalAdviceItemEntryContentModule): The value for inversionInd SHALL be 'false'. Found: "<value-of select="@inversionInd"/>"</assert>
    </rule>
+
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.4.44
 Context: *[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']]
 Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
-
-   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']]"
-         id="d41e15770-false-d254608e0">
+   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@classCode) = ('SBADM')">(PharmaceuticalAdviceItemEntryContentModule): The value for classCode SHALL be 'SBADM'. Found: "<value-of select="@classCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@moodCode) = ('INT')">(PharmaceuticalAdviceItemEntryContentModule): The value for moodCode SHALL be 'INT'. Found: "<value-of select="@moodCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7'] appears too often [max 1x].</assert>
    </rule>
+
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.4.44
 Context: *[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']
 Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
-
-   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']"
-         id="d41e15776-false-d254634e0">
+   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.7']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.7']">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.9.1.3.7')">(PharmaceuticalAdviceItemEntryContentModule): The value for root SHALL be '1.3.6.1.4.1.19376.1.9.1.3.7'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -323,12 +323,12 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]]"
-         id="d41e15783-false-d254646e0">
+         id="d41e15554-false-d262325e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@inversionInd) = ('false') or not(@inversionInd)">(PharmaceuticalAdviceItemEntryContentModule): The value for inversionInd SHALL be 'false'. Found: "<value-of select="@inversionInd"/>"</assert>
    </rule>
    <!--
@@ -338,21 +338,21 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]]/hl7:organizer[hl7:statusCode[@code = 'completed']]"
-         id="d41e15794-false-d254697e0">
+         id="d41e15565-false-d262420e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@classCode) = ('CLUSTER')">(PharmaceuticalAdviceItemEntryContentModule): The value for classCode SHALL be 'CLUSTER'. Found: "<value-of select="@classCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@moodCode) = ('EVN')">(PharmaceuticalAdviceItemEntryContentModule): The value for moodCode SHALL be 'EVN'. Found: "<value-of select="@moodCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:statusCode[@code = 'completed']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:statusCode[@code = 'completed'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:statusCode[@code = 'completed']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:statusCode[@code = 'completed'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:component[hl7:seperatableInd]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:component[hl7:seperatableInd] is required [min 1x].</assert>
    </rule>
    <!--
@@ -362,9 +362,9 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]]/hl7:organizer[hl7:statusCode[@code = 'completed']]/hl7:statusCode[@code = 'completed']"
-         id="d41e15800-false-d254744e0">
+         id="d41e15571-false-d262489e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@code) = ('completed')">(PharmaceuticalAdviceItemEntryContentModule): The value for code SHALL be 'completed'. Found: "<value-of select="@code"/>"</assert>
    </rule>
    <!--
@@ -374,12 +374,12 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]]/hl7:organizer[hl7:statusCode[@code = 'completed']]/hl7:component[hl7:seperatableInd]"
-         id="d41e15805-false-d254770e0">
+         id="d41e15576-false-d262537e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:seperatableInd[not(@nullFlavor)]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:seperatableInd[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:seperatableInd[not(@nullFlavor)]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:seperatableInd[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -389,9 +389,9 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:organizer[hl7:component[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.2']]]]]/hl7:organizer[hl7:statusCode[@code = 'completed']]/hl7:component[hl7:seperatableInd]/hl7:seperatableInd[not(@nullFlavor)]"
-         id="d41e15807-false-d254823e0">
+         id="d41e15578-false-d262629e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@value) = ('false')">(PharmaceuticalAdviceItemEntryContentModule): The value for value SHALL be 'false'. Found: "<value-of select="@value"/>"</assert>
    </rule>
    <!--
@@ -401,12 +401,12 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]"
-         id="d41e15817-false-d254833e0">
+         id="d41e15588-false-d262639e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('REFR')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'REFR'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@inversionInd) = ('false') or not(@inversionInd)">(PharmaceuticalAdviceItemEntryContentModule): The value for inversionInd SHALL be 'false'. Found: "<value-of select="@inversionInd"/>"</assert>
    </rule>
    <!--
@@ -416,45 +416,48 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]"
-         id="d41e15828-false-d254864e0">
+         id="d41e15599-false-d262670e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@classCode) = ('SBADM')">(PharmaceuticalAdviceItemEntryContentModule): The value for classCode SHALL be 'SBADM'. Found: "<value-of select="@classCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@moodCode) = ('INT')">(PharmaceuticalAdviceItemEntryContentModule): The value for moodCode SHALL be 'INT'. Found: "<value-of select="@moodCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:effectiveTime[@xsi:type='IVL_TS']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:effectiveTime[@xsi:type='IVL_TS'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:effectiveTime[@operator='A' and @xsi:type='EIVL_TS']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:effectiveTime[@operator='A' and @xsi:type='EIVL_TS'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              test="count(hl7:repeatNumber) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:repeatNumber is required [min 1x].</assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:repeatNumber) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:repeatNumber appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:routeCode[concat(@code, @codeSystem) = doc('include/voc-2.16.756.5.30.1.1.11.2-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:routeCode[concat(@code, @codeSystem) = doc('include/voc-2.16.756.5.30.1.1.11.2-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:doseQuantity) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:doseQuantity appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:rateQuantity) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:rateQuantity appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:consumable[hl7:manufacturedProduct]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:consumable[hl7:manufacturedProduct] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:consumable[hl7:manufacturedProduct]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:consumable[hl7:manufacturedProduct] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -464,13 +467,13 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']"
-         id="d41e15834-false-d254948e0">
+         id="d41e15605-false-d262756e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(PharmaceuticalAdviceItemEntryContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.9.1.3.6')">(PharmaceuticalAdviceItemEntryContentModule): The value for root SHALL be '1.3.6.1.4.1.19376.1.9.1.3.6'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -480,16 +483,16 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@xsi:type='IVL_TS']"
-         id="d254949e164-false-d254961e0">
+         id="d262757e164-false-d262769e0">
       <extends rule="IVL_TS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:low) &lt;= 1">(DosageInstructionsStartStopFrequency): element hl7:low appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:high) &lt;= 1">(DosageInstructionsStartStopFrequency): element hl7:high appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -499,13 +502,13 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@xsi:type='IVL_TS']/hl7:low"
-         id="d254949e171-false-d254984e0">
+         id="d262757e171-false-d262792e0">
       <extends rule="TS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(*)">(DosageInstructionsStartStopFrequency): <value-of select="local-name()"/> with datatype TS, SHOULD NOT have child elements.</assert>
    </rule>
    <!--
@@ -515,13 +518,13 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@xsi:type='IVL_TS']/hl7:high"
-         id="d254949e177-false-d254997e0">
+         id="d262757e177-false-d262805e0">
       <extends rule="TS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(*)">(DosageInstructionsStartStopFrequency): <value-of select="local-name()"/> with datatype TS, SHOULD NOT have child elements.</assert>
    </rule>
    <!--
@@ -531,19 +534,19 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='EIVL_TS']"
-         id="d254949e184-false-d255008e0">
+         id="d262757e184-false-d262816e0">
       <extends rule="EIVL_TS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='EIVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:EIVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="string(@operator) = ('A')">(DosageInstructionsStartStopFrequency): The value for operator SHALL be 'A'. Found: "<value-of select="@operator"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:event[not(@nullFlavor)]) &gt;= 1">(DosageInstructionsStartStopFrequency): element hl7:event[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:event[not(@nullFlavor)]) &lt;= 1">(DosageInstructionsStartStopFrequency): element hl7:event[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -553,18 +556,18 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='EIVL_TS']/hl7:event[not(@nullFlavor)]"
-         id="d254949e193-false-d255031e0">
+         id="d262757e193-false-d262839e0">
       <extends rule="CS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@code">(DosageInstructionsStartStopFrequency): attribute @code SHALL be present.</assert>
       <let name="theAttValue"
            value="distinct-values(tokenize(normalize-space(@code),'\s'))"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(@code) or empty($theAttValue[not(. = (doc('include/voc-2.16.756.5.30.1.127.77.4.11.2-DYNAMIC.xml')/*/valueSet/conceptList/concept/@code))])">(DosageInstructionsStartStopFrequency): The value for code SHALL be selected from value set '2.16.756.5.30.1.127.77.4.11.2' TimingEvent (DYNAMIC).</assert>
    </rule>
    <!--
@@ -574,23 +577,23 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS']"
-         id="d254949e202-false-d255055e0">
+         id="d262757e202-false-d262863e0">
       <extends rule="SXPR_TS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="string(@operator) = ('A')">(DosageInstructionsStartStopFrequency): The value for operator SHALL be 'A'. Found: "<value-of select="@operator"/>"</assert>
       <let name="xsiLocalName"
            value="if (contains(@xsi:type, ':')) then substring-after(@xsi:type,':') else @xsi:type"/>
       <let name="xsiLocalNS"
            value="if (contains(@xsi:type, ':')) then namespace-uri-for-prefix(substring-before(@xsi:type,':'),.) else namespace-uri-for-prefix('',.)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@nullFlavor or ($xsiLocalName='SXPR_TS' and $xsiLocalNS='urn:hl7-org:v3')">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SXPR_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:comp[@xsi:type='EIVL_TS'][not(@nullFlavor)]) &gt;= 1">(DosageInstructionsStartStopFrequency): element hl7:comp[@xsi:type='EIVL_TS'][not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:comp[@operator='I' and @xsi:type='EIVL_TS'][not(@nullFlavor)]) &gt;= 1">(DosageInstructionsStartStopFrequency): element hl7:comp[@operator='I' and @xsi:type='EIVL_TS'][not(@nullFlavor)] is mandatory [min 1x].</assert>
    </rule>
    <!--
@@ -600,19 +603,19 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS']/hl7:comp[@xsi:type='EIVL_TS'][not(@nullFlavor)]"
-         id="d254949e213-false-d255078e0">
+         id="d262757e213-false-d262886e0">
       <let name="xsiLocalName"
            value="if (contains(@xsi:type, ':')) then substring-after(@xsi:type,':') else @xsi:type"/>
       <let name="xsiLocalNS"
            value="if (contains(@xsi:type, ':')) then namespace-uri-for-prefix(substring-before(@xsi:type,':'),.) else namespace-uri-for-prefix('',.)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@nullFlavor or ($xsiLocalName='EIVL_TS' and $xsiLocalNS='urn:hl7-org:v3')">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:EIVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:event[not(@nullFlavor)]) &gt;= 1">(DosageInstructionsStartStopFrequency): element hl7:event[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:event[not(@nullFlavor)]) &lt;= 1">(DosageInstructionsStartStopFrequency): element hl7:event[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -622,18 +625,18 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS']/hl7:comp[@xsi:type='EIVL_TS'][not(@nullFlavor)]/hl7:event[not(@nullFlavor)]"
-         id="d254949e217-false-d255099e0">
+         id="d262757e217-false-d262907e0">
       <extends rule="CS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@code">(DosageInstructionsStartStopFrequency): attribute @code SHALL be present.</assert>
       <let name="theAttValue"
            value="distinct-values(tokenize(normalize-space(@code),'\s'))"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(@code) or empty($theAttValue[not(. = (doc('include/voc-2.16.756.5.30.1.127.77.4.11.2-DYNAMIC.xml')/*/valueSet/conceptList/concept/@code))])">(DosageInstructionsStartStopFrequency): The value for code SHALL be selected from value set '2.16.756.5.30.1.127.77.4.11.2' TimingEvent (DYNAMIC).</assert>
    </rule>
    <!--
@@ -643,22 +646,22 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS']/hl7:comp[@operator='I' and @xsi:type='EIVL_TS'][not(@nullFlavor)]"
-         id="d254949e227-false-d255123e0">
+         id="d262757e227-false-d262931e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="string(@operator) = ('I')">(DosageInstructionsStartStopFrequency): The value for operator SHALL be 'I'. Found: "<value-of select="@operator"/>"</assert>
       <let name="xsiLocalName"
            value="if (contains(@xsi:type, ':')) then substring-after(@xsi:type,':') else @xsi:type"/>
       <let name="xsiLocalNS"
            value="if (contains(@xsi:type, ':')) then namespace-uri-for-prefix(substring-before(@xsi:type,':'),.) else namespace-uri-for-prefix('',.)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@nullFlavor or ($xsiLocalName='EIVL_TS' and $xsiLocalNS='urn:hl7-org:v3')">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:EIVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:event[not(@nullFlavor)]) &gt;= 1">(DosageInstructionsStartStopFrequency): element hl7:event[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="count(hl7:event[not(@nullFlavor)]) &lt;= 1">(DosageInstructionsStartStopFrequency): element hl7:event[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -668,18 +671,18 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:effectiveTime[@operator='A' and @xsi:type='SXPR_TS']/hl7:comp[@operator='I' and @xsi:type='EIVL_TS'][not(@nullFlavor)]/hl7:event[not(@nullFlavor)]"
-         id="d254949e233-false-d255148e0">
+         id="d262757e233-false-d262956e0">
       <extends rule="CS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@code">(DosageInstructionsStartStopFrequency): attribute @code SHALL be present.</assert>
       <let name="theAttValue"
            value="distinct-values(tokenize(normalize-space(@code),'\s'))"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(@code) or empty($theAttValue[not(. = (doc('include/voc-2.16.756.5.30.1.127.77.4.11.2-DYNAMIC.xml')/*/valueSet/conceptList/concept/@code))])">(DosageInstructionsStartStopFrequency): The value for code SHALL be selected from value set '2.16.756.5.30.1.127.77.4.11.2' TimingEvent (DYNAMIC).</assert>
    </rule>
    <!--
@@ -695,15 +698,15 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:routeCode[concat(@code, @codeSystem) = doc('include/voc-2.16.756.5.30.1.1.11.2-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]"
-         id="d254949e251-false-d255185e0">
+         id="d262757e251-false-d262993e0">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <let name="theCode" value="@code"/>
       <let name="theCodeSystem" value="@codeSystem"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="@nullFlavor or exists(doc('include/voc-2.16.756.5.30.1.1.11.2-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem]])">(DosageInstructionsStartStopFrequency): The element value SHALL be one of '2.16.756.5.30.1.1.11.2 RouteOfAdministration (EDQM) (DYNAMIC)'.</assert>
    </rule>
    <!--
@@ -713,10 +716,10 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:approachSiteCode"
-         id="d254949e256-false-d255205e0">
+         id="d262757e256-false-d263013e0">
       <extends rule="CD"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -726,22 +729,37 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:doseQuantity"
-         id="d254949e259-false-d255215e0">
+         id="d262757e259-false-d263023e0">
       <extends rule="IVL_PQ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_PQ' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_PQ". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(hl7:low/@value) or matches(string(hl7:low/@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): value/low @value is not a valid PQ number<value-of select="hl7:low/@value"/>
       </assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(hl7:high/@value) or matches(string(hl7:high/@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): value/high @value is not a valid PQ number<value-of select="hl7:high/@value"/>
       </assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(hl7:center/@value) or matches(string(hl7:center/@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): value/center @value is not a valid PQ number<value-of select="hl7:center/@value"/>
+      </assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              test="@unit">(DosageInstructionsStartStopFrequency): attribute @unit SHALL be present.</assert>
+      <let name="theAttValue"
+           value="distinct-values(tokenize(normalize-space(@unit),'\s'))"/>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              test="not(@unit) or empty($theAttValue[not(. = (doc('include/voc-2.16.756.5.30.1.1.11.83-DYNAMIC.xml')/*/valueSet/conceptList/concept/@code))])">(DosageInstructionsStartStopFrequency): The value for unit SHALL be selected from value set '2.16.756.5.30.1.1.11.83' UnitsOfPresentation (DYNAMIC).</assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              test="@value">(DosageInstructionsStartStopFrequency): attribute @value SHALL be present.</assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              test="not(@value) or matches(string(@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): Attribute @value is not a valid real number <value-of select="@value"/>
       </assert>
    </rule>
    <!--
@@ -751,21 +769,21 @@ Item: (DosageInstructionsStartStopFrequency)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:rateQuantity"
-         id="d254949e261-false-d255232e0">
+         id="d262757e269-false-d263060e0">
       <extends rule="IVL_PQ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_PQ' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsStartStopFrequency): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_PQ". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(hl7:low/@value) or matches(string(hl7:low/@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): value/low @value is not a valid PQ number<value-of select="hl7:low/@value"/>
       </assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(hl7:high/@value) or matches(string(hl7:high/@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): value/high @value is not a valid PQ number<value-of select="hl7:high/@value"/>
       </assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.35-2019-08-27T163005.html"
               test="not(hl7:center/@value) or matches(string(hl7:center/@value), '^[-+]?\d*\.?[0-9]+([eE][-+]?\d+)?$')">(DosageInstructionsStartStopFrequency): value/center @value is not a valid PQ number<value-of select="hl7:center/@value"/>
       </assert>
    </rule>
@@ -776,12 +794,12 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:consumable[hl7:manufacturedProduct]"
-         id="d41e15841-false-d255249e0">
+         id="d41e15612-false-d263077e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:manufacturedProduct[hl7:manufacturedMaterial[@nullFlavor = 'NA']]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:manufacturedProduct[hl7:manufacturedMaterial[@nullFlavor = 'NA']] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:manufacturedProduct[hl7:manufacturedMaterial[@nullFlavor = 'NA']]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:manufacturedProduct[hl7:manufacturedMaterial[@nullFlavor = 'NA']] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -791,12 +809,12 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:consumable[hl7:manufacturedProduct]/hl7:manufacturedProduct[hl7:manufacturedMaterial[@nullFlavor = 'NA']]"
-         id="d41e15843-false-d255265e0">
+         id="d41e15614-false-d263093e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:manufacturedMaterial[@nullFlavor = 'NA']) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:manufacturedMaterial[@nullFlavor = 'NA'] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:manufacturedMaterial[@nullFlavor = 'NA']) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:manufacturedMaterial[@nullFlavor = 'NA'] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -806,9 +824,9 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:consumable[hl7:manufacturedProduct]/hl7:manufacturedProduct[hl7:manufacturedMaterial[@nullFlavor = 'NA']]/hl7:manufacturedMaterial[@nullFlavor = 'NA']"
-         id="d41e15845-false-d255281e0">
+         id="d41e15616-false-d263109e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@nullFlavor) = ('NA')">(PharmaceuticalAdviceItemEntryContentModule): The value for nullFlavor SHALL be 'NA'. Found: "<value-of select="@nullFlavor"/>"</assert>
    </rule>
    <!--
@@ -818,18 +836,18 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]"
-         id="d255286e102-false-d255291e0">
+         id="d263114e102-false-d263119e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="string(@typeCode) = ('COMP')">(DosageInstructionsEntryDosageChange): The value for typeCode SHALL be 'COMP'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:sequenceNumber[not(@nullFlavor)]) &gt;= 1">(DosageInstructionsEntryDosageChange): element hl7:sequenceNumber[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:sequenceNumber[not(@nullFlavor)]) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:sequenceNumber[not(@nullFlavor)] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:substanceAdministration[hl7:consumable]) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:substanceAdministration[hl7:consumable] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -839,13 +857,13 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:sequenceNumber[not(@nullFlavor)]"
-         id="d255286e111-false-d255317e0">
+         id="d263114e111-false-d263145e0">
       <extends rule="INT"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='INT' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsEntryDosageChange): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:INT". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="not(@value) or matches(@value, '^-?[1-9]\d*$|^+?\d*$')">(DosageInstructionsEntryDosageChange): @value is not a valid INT number <value-of select="@value"/>
       </assert>
    </rule>
@@ -856,21 +874,21 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]"
-         id="d255286e113-false-d255330e0">
+         id="d263114e113-false-d263158e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:effectiveTime[@xsi:type='EIVL_TS']) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:effectiveTime[@xsi:type='EIVL_TS'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:doseQuantity) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:doseQuantity appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:rateQuantity) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:rateQuantity appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct]) &gt;= 1">(DosageInstructionsEntryDosageChange): element hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct]) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -880,20 +898,20 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:effectiveTime[@xsi:type='EIVL_TS']"
-         id="d255286e115-false-d255360e0">
+         id="d263114e115-false-d263188e0">
       <extends rule="EIVL_TS"/>
       <let name="xsiLocalName"
            value="if (contains(@xsi:type, ':')) then substring-after(@xsi:type,':') else @xsi:type"/>
       <let name="xsiLocalNS"
            value="if (contains(@xsi:type, ':')) then namespace-uri-for-prefix(substring-before(@xsi:type,':'),.) else namespace-uri-for-prefix('',.)"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="@nullFlavor or ($xsiLocalName='EIVL_TS' and $xsiLocalNS='urn:hl7-org:v3')">(DosageInstructionsEntryDosageChange): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:EIVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:event[not(@nullFlavor)]) &gt;= 1">(DosageInstructionsEntryDosageChange): element hl7:event[not(@nullFlavor)] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:event[not(@nullFlavor)]) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:event[not(@nullFlavor)] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -903,18 +921,18 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:effectiveTime[@xsi:type='EIVL_TS']/hl7:event[not(@nullFlavor)]"
-         id="d255286e122-false-d255381e0">
+         id="d263114e122-false-d263209e0">
       <extends rule="CS"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(DosageInstructionsEntryDosageChange): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="@code">(DosageInstructionsEntryDosageChange): attribute @code SHALL be present.</assert>
       <let name="theAttValue"
            value="distinct-values(tokenize(normalize-space(@code),'\s'))"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="not(@code) or empty($theAttValue[not(. = (doc('include/voc-2.16.756.5.30.1.127.77.4.11.2-DYNAMIC.xml')/*/valueSet/conceptList/concept/@code))])">(DosageInstructionsEntryDosageChange): The value for code SHALL be selected from value set '2.16.756.5.30.1.127.77.4.11.2' TimingEvent (DYNAMIC).</assert>
    </rule>
    <!--
@@ -923,6 +941,23 @@ Context: *[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/h
 Item: (DosageInstructionsEntryDosageChange)
 -->
 
+   <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:doseQuantity"
+         id="d263114e131-false-d263235e0">
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              test="@unit">(DosageInstructionsEntryDosageChange): attribute @unit SHALL be present.</assert>
+      <let name="theAttValue"
+           value="distinct-values(tokenize(normalize-space(@unit),'\s'))"/>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              test="not(@unit) or empty($theAttValue[not(. = (doc('include/voc-2.16.756.5.30.1.1.11.83-DYNAMIC.xml')/*/valueSet/conceptList/concept/@code))])">(DosageInstructionsEntryDosageChange): The value for unit SHALL be selected from value set '2.16.756.5.30.1.1.11.83' UnitsOfPresentation (DYNAMIC).</assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              test="@value">(DosageInstructionsEntryDosageChange): attribute @value SHALL be present.</assert>
+      <assert role="error"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              test="not(@value) or (string-length(@value) &gt; 0 and not(matches(@value,'\s')))">(DosageInstructionsEntryDosageChange): Attribute @value SHALL be of data type 'cs'  - '<value-of select="@value"/>'</assert>
+   </rule>
    <!--
 Template derived rules for ID: 2.16.756.5.30.1.1.10.4.36
 Context: *[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:rateQuantity
@@ -936,12 +971,12 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct]"
-         id="d255286e135-false-d255423e0">
+         id="d263114e143-false-d263271e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:manufacturedProduct[not(@nullFlavor)][hl7:manufacturedMaterial[@nullFlavor = 'NA']]) &gt;= 1">(DosageInstructionsEntryDosageChange): element hl7:manufacturedProduct[not(@nullFlavor)][hl7:manufacturedMaterial[@nullFlavor = 'NA']] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:manufacturedProduct[not(@nullFlavor)][hl7:manufacturedMaterial[@nullFlavor = 'NA']]) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:manufacturedProduct[not(@nullFlavor)][hl7:manufacturedMaterial[@nullFlavor = 'NA']] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -951,12 +986,12 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct]/hl7:manufacturedProduct[not(@nullFlavor)][hl7:manufacturedMaterial[@nullFlavor = 'NA']]"
-         id="d255286e137-false-d255439e0">
+         id="d263114e145-false-d263287e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:manufacturedMaterial[@nullFlavor = 'NA']) &gt;= 1">(DosageInstructionsEntryDosageChange): element hl7:manufacturedMaterial[@nullFlavor = 'NA'] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="count(hl7:manufacturedMaterial[@nullFlavor = 'NA']) &lt;= 1">(DosageInstructionsEntryDosageChange): element hl7:manufacturedMaterial[@nullFlavor = 'NA'] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -966,9 +1001,9 @@ Item: (DosageInstructionsEntryDosageChange)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:substanceAdministration[hl7:templateId[@root='1.3.6.1.4.1.19376.1.9.1.3.6']]]/hl7:substanceAdministration[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.3.6']]/hl7:entryRelationship[@typeCode='COMP' and hl7:substanceAdministration and (../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.8'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.10'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.9'] or ../hl7:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.4.11']) and not(hl7:substanceAdministration/hl7:templateId)]/hl7:substanceAdministration[hl7:consumable]/hl7:consumable[not(@nullFlavor)][hl7:manufacturedProduct]/hl7:manufacturedProduct[not(@nullFlavor)][hl7:manufacturedMaterial[@nullFlavor = 'NA']]/hl7:manufacturedMaterial[@nullFlavor = 'NA']"
-         id="d255286e139-false-d255455e0">
+         id="d263114e147-false-d263303e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.36-2017-01-23T163055.html"
               test="string(@nullFlavor) = ('NA')">(DosageInstructionsEntryDosageChange): The value for nullFlavor SHALL be 'NA'. Found: "<value-of select="@nullFlavor"/>"</assert>
    </rule>
 
@@ -979,7 +1014,7 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:entryRelationship[hl7:act[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.2']]]">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('COMP')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'COMP'. Found: "<value-of select="@typeCode"/>"</assert>
    </rule>
    <!--
@@ -989,15 +1024,15 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:reference[@typeCode = 'XCRPT'][hl7:externalDocument]"
-         id="d41e15865-false-d255479e0">
+         id="d41e15636-false-d263327e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="string(@typeCode) = ('XCRPT')">(PharmaceuticalAdviceItemEntryContentModule): The value for typeCode SHALL be 'XCRPT'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:externalDocument[hl7:id]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:externalDocument[hl7:id] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:externalDocument[hl7:id]) &lt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:externalDocument[hl7:id] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -1007,9 +1042,9 @@ Item: (PharmaceuticalAdviceItemEntryContentModule)
 -->
 
    <rule context="*[hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]]/hl7:observation[hl7:templateId[@root='2.16.756.5.30.1.1.10.4.44']]/hl7:reference[@typeCode = 'XCRPT'][hl7:externalDocument]/hl7:externalDocument[hl7:id]"
-         id="d41e15874-false-d255499e0">
+         id="d41e15645-false-d263347e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.4.44-2016-06-25T000000.html"
               test="count(hl7:id[not(@nullFlavor)]) &gt;= 1">(PharmaceuticalAdviceItemEntryContentModule): element hl7:id[not(@nullFlavor)] is mandatory [min 1x].</assert>
    </rule>
    <!--

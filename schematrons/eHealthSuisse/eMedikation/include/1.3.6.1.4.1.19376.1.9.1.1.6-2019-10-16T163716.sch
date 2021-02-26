@@ -24,36 +24,36 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]"
-         id="d41e1484-false-d6636e0">
+         id="d41e1310-false-d6236e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6']) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6']) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:id) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:id is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:id) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:id appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:code[(@code = '77603-9' and @codeSystem = '2.16.840.1.113883.6.1') or @nullFlavor]) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:code[(@code = '77603-9' and @codeSystem = '2.16.840.1.113883.6.1') or @nullFlavor] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:code[(@code = '77603-9' and @codeSystem = '2.16.840.1.113883.6.1') or @nullFlavor]) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:code[(@code = '77603-9' and @codeSystem = '2.16.840.1.113883.6.1') or @nullFlavor] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:component[hl7:structuredBody]) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:component[hl7:structuredBody] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:component[hl7:structuredBody]) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:component[hl7:structuredBody] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -63,13 +63,13 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6']"
-         id="d41e1486-false-d6723e0">
+         id="d41e1312-false-d6323e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(IHEMedicationTreatmentPlanDocumentContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.9.1.1.6')">(IHEMedicationTreatmentPlanDocumentContentModule): The value for root SHALL be '1.3.6.1.4.1.19376.1.9.1.1.6'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -79,13 +79,13 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']"
-         id="d41e1491-false-d6738e0">
+         id="d41e1317-false-d6338e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(IHEMedicationTreatmentPlanDocumentContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="string(@root) = ('1.3.6.1.4.1.19376.1.5.3.1.1.1')">(IHEMedicationTreatmentPlanDocumentContentModule): The value for root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.1.1'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -95,10 +95,10 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]/hl7:id"
-         id="d41e1496-false-d6752e0">
+         id="d41e1322-false-d6352e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(IHEMedicationTreatmentPlanDocumentContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
    </rule>
    <!--
@@ -108,13 +108,13 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]/hl7:code[(@code = '77603-9' and @codeSystem = '2.16.840.1.113883.6.1') or @nullFlavor]"
-         id="d41e1498-false-d6763e0">
+         id="d41e1324-false-d6363e0">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(IHEMedicationTreatmentPlanDocumentContentModule): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="@nullFlavor or (@code='77603-9' and @codeSystem='2.16.840.1.113883.6.1' and @displayName='Medication treatment plan.extended' and @codeSystemName='LOINC')">(IHEMedicationTreatmentPlanDocumentContentModule): The element value SHALL be one of 'code '77603-9' codeSystem '2.16.840.1.113883.6.1' displayName='Medication treatment plan.extended' codeSystemName='LOINC''.</assert>
    </rule>
    <!--
@@ -124,12 +124,12 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]/hl7:component[hl7:structuredBody]"
-         id="d41e1503-false-d6815e0">
+         id="d41e1329-false-d6415e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:structuredBody[hl7:component]) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:structuredBody[hl7:component] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:structuredBody[hl7:component]) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:structuredBody[hl7:component] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -139,12 +139,12 @@ Item: (IHEMedicationTreatmentPlanDocumentContentModule)
 -->
 
    <rule context="*[hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]]/hl7:ClinicalDocument[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.6'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1']]/hl7:component[hl7:structuredBody]/hl7:structuredBody[hl7:component]"
-         id="d41e1505-false-d6903e0">
+         id="d41e1331-false-d6503e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:component[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.2.6']]]) &gt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:component[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.2.6']]] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-1.3.6.1.4.1.19376.1.9.1.1.6-2019-10-16T163716.html"
               test="count(hl7:component[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.2.6']]]) &lt;= 1">(IHEMedicationTreatmentPlanDocumentContentModule): element hl7:component[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.2.6']]] appears too often [max 1x].</assert>
    </rule>
 

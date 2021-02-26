@@ -146,7 +146,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.1']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.1.4-2016-05-21T000000.html">(MedicationPrescriptionDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.1']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.1.4-2016-05-21T000000.html">(MedicationPrescriptionDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.1']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.4-2016-05-21T000000.sch"/>
@@ -157,6 +157,7 @@
    <phase id="AllExceptClosed">
       <active pattern="template-2.16.756.5.30.1.1.10.1.4-2016-05-21T000000"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3-2019-10-16T160148"/>
+      <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3.1-2019-10-16T160148"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.15-2018-01-11T153425"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.16-2020-02-03T182616"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.9.1-2018-01-10T153425"/>
@@ -192,6 +193,9 @@
    </phase>
    <phase id="IHEPatientMedicationInstructions">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3-2019-10-16T160148"/>
+   </phase>
+   <phase id="IHEFullfillmentInstructions">
+      <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3.1-2019-10-16T160148"/>
    </phase>
    <phase id="IHERenewalPeriodContentModule">
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.15-2018-01-11T153425"/>
@@ -241,7 +245,7 @@
    <phase id="cdach_section_OriginalRepresentationCoded-20200714T122851">
       <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments-20161112T000000">
+   <phase id="chpcc_entry_AnnotationComments">
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
    </phase>
    <phase id="ManufacturedMaterialEntryContentModule-20191211T113424">
@@ -279,6 +283,8 @@
 
    <!-- IHEPatientMedicationInstructions -->
    <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.3-2019-10-16T160148.sch"/>
+   <!-- IHEFullfillmentInstructions -->
+   <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.3.1-2019-10-16T160148.sch"/>
    <!-- IHERenewalPeriodContentModule -->
    <include href="include/1.3.6.1.4.1.19376.1.9.1.3.15-2018-01-11T153425.sch"/>
    <!-- IHEValidationStepEntryContentModule -->

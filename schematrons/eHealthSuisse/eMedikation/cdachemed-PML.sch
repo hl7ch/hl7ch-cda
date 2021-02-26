@@ -146,7 +146,7 @@
       <rule context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.13']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20200729T164922/tmp-2.16.756.5.30.1.1.10.1.13-2018-01-22T151726.html">(MedicationListDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.13']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.1.13-2018-01-22T151726.html">(MedicationListDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.13']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.13-2018-01-22T151726.sch"/>
@@ -157,20 +157,14 @@
    <phase id="AllExceptClosed">
       <active pattern="template-2.16.756.5.30.1.1.10.1.13-2018-01-22T151726"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.1-2016-11-12T000000"/>
-      <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.1.1-2019-10-16T172932"/>
-      <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.1.2-2019-10-16T172813"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.2-2016-11-12T000000"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3-2019-10-16T160148"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3.1-2019-10-16T160148"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.4.1-2019-10-16T161202"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.5-2016-11-12T000000"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.6-2016-11-12T000000"/>
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.1-2019-08-27T161343"/>
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.10-2016-07-07T000000"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.15-2018-01-11T153425"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.16-2020-02-03T182616"/>
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.2-2019-09-10T231842"/>
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.7-2017-03-31T144301"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.9.1-2018-01-10T153425"/>
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.9.2-2018-01-10T153425"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.1-2019-09-12T145302"/>
@@ -184,6 +178,7 @@
       <active pattern="template-2.16.756.5.30.1.1.10.2.6-2019-01-01T202044"/>
       <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.44-2018-01-22T154038"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.33-2019-12-11T113424"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.34-2019-12-11T113152"/>
@@ -198,6 +193,7 @@
       <active pattern="template-2.16.756.5.30.1.1.10.4.52-2016-09-13T153318"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.53-2018-01-11T211057"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.81-2016-01-11T111304"/>
+      <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
       <active pattern="template-2.16.756.5.30.1.1.10.9.31-2018-12-24T195104"/>
    </phase>
@@ -210,12 +206,6 @@
    <phase id="IHESeverityEntry">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.1-2016-11-12T000000"/>
    </phase>
-   <phase id="IHEProblemStatusObservation">
-      <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.1.1-2019-10-16T172932"/>
-   </phase>
-   <phase id="IHEHealthStatusObservation">
-      <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.1.2-2019-10-16T172813"/>
-   </phase>
    <phase id="IHECommentEntry">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.2-2016-11-12T000000"/>
    </phase>
@@ -225,7 +215,7 @@
    <phase id="IHEFullfillmentInstructions">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.3.1-2019-10-16T160148"/>
    </phase>
-   <phase id="IHEInternalReferenceEntry">
+   <phase id="IHEInternalReferenceEntry-20191016T161202">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.4.1-2019-10-16T161202"/>
    </phase>
    <phase id="IHEProblemEntry">
@@ -234,23 +224,11 @@
    <phase id="IHEAllergyAndIntoleranceEntry">
       <active pattern="template-1.3.6.1.4.1.19376.1.5.3.1.4.6-2016-11-12T000000"/>
    </phase>
-   <phase id="IHEMedicineEntryContentModule">
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.1-2019-08-27T161343"/>
-   </phase>
-   <phase id="IHEMTPReferenceEntryContentModule">
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.10-2016-07-07T000000"/>
-   </phase>
    <phase id="IHERenewalPeriodContentModule">
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.15-2018-01-11T153425"/>
    </phase>
    <phase id="IHEValidationStepEntryContentModule">
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.16-2020-02-03T182616"/>
-   </phase>
-   <phase id="IHEPrescriptionItemEntryContentModule">
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.2-2019-09-10T231842"/>
-   </phase>
-   <phase id="IHEMedicationTreatmentPlanItemEntryContentModule">
-      <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.7-2017-03-31T144301"/>
    </phase>
    <phase id="IHESubstitutionPermissionContentModule">
       <active pattern="template-1.3.6.1.4.1.19376.1.9.1.3.9.1-2018-01-10T153425"/>
@@ -291,7 +269,10 @@
    <phase id="MedicationListSectionContentModule">
       <active pattern="template-2.16.756.5.30.1.1.10.3.44-2018-01-22T154038"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments-20161112T000000">
+   <phase id="cdach_section_OriginalRepresentationCoded-20200714T122851">
+      <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
+   </phase>
+   <phase id="chpcc_entry_AnnotationComments">
       <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
    </phase>
    <phase id="ManufacturedMaterialEntryContentModule-20191211T113424">
@@ -345,6 +326,9 @@
    <phase id="PharmaceuticalAdviceConcernEntryContentModule">
       <active pattern="template-2.16.756.5.30.1.1.10.4.81-2016-01-11T111304"/>
    </phase>
+   <phase id="cdach_entry_ObservationMedia">
+      <active pattern="template-2.16.756.5.30.1.1.10.4.83-2018-04-18T000000"/>
+   </phase>
    <phase id="cdach_other_Author-20190912T134828">
       <active pattern="template-2.16.756.5.30.1.1.10.9.23-2019-09-12T134828"/>
    </phase>
@@ -356,10 +340,6 @@
 
    <!-- IHESeverityEntry -->
    <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.1-2016-11-12T000000.sch"/>
-   <!-- IHEProblemStatusObservation -->
-   <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.1.1-2019-10-16T172932.sch"/>
-   <!-- IHEHealthStatusObservation -->
-   <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.1.2-2019-10-16T172813.sch"/>
    <!-- IHECommentEntry -->
    <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.2-2016-11-12T000000.sch"/>
    <!-- IHEPatientMedicationInstructions -->
@@ -372,18 +352,10 @@
    <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.5-2016-11-12T000000.sch"/>
    <!-- IHEAllergyAndIntoleranceEntry -->
    <include href="include/1.3.6.1.4.1.19376.1.5.3.1.4.6-2016-11-12T000000.sch"/>
-   <!-- IHEMedicineEntryContentModule -->
-   <include href="include/1.3.6.1.4.1.19376.1.9.1.3.1-2019-08-27T161343.sch"/>
-   <!-- IHEMTPReferenceEntryContentModule -->
-   <include href="include/1.3.6.1.4.1.19376.1.9.1.3.10-2016-07-07T000000.sch"/>
    <!-- IHERenewalPeriodContentModule -->
    <include href="include/1.3.6.1.4.1.19376.1.9.1.3.15-2018-01-11T153425.sch"/>
    <!-- IHEValidationStepEntryContentModule -->
    <include href="include/1.3.6.1.4.1.19376.1.9.1.3.16-2020-02-03T182616.sch"/>
-   <!-- IHEPrescriptionItemEntryContentModule -->
-   <include href="include/1.3.6.1.4.1.19376.1.9.1.3.2-2019-09-10T231842.sch"/>
-   <!-- IHEMedicationTreatmentPlanItemEntryContentModule -->
-   <include href="include/1.3.6.1.4.1.19376.1.9.1.3.7-2017-03-31T144301.sch"/>
    <!-- IHESubstitutionPermissionContentModule -->
    <include href="include/1.3.6.1.4.1.19376.1.9.1.3.9.1-2018-01-10T153425.sch"/>
    <!-- IHESubstitutionActContentModule -->
@@ -410,6 +382,8 @@
    <include href="include/2.16.756.5.30.1.1.10.2.7-2018-04-18T000000.sch"/>
    <!-- MedicationListSectionContentModule -->
    <include href="include/2.16.756.5.30.1.1.10.3.44-2018-01-22T154038.sch"/>
+   <!-- cdach_section_OriginalRepresentationCoded -->
+   <include href="include/2.16.756.5.30.1.1.10.3.45-2020-07-14T122851.sch"/>
    <!-- chpcc_entry_AnnotationComments -->
    <include href="include/2.16.756.5.30.1.1.10.4.2-2016-11-12T000000.sch"/>
    <!-- ManufacturedMaterialEntryContentModule -->
@@ -442,6 +416,8 @@
    <include href="include/2.16.756.5.30.1.1.10.4.53-2018-01-11T211057.sch"/>
    <!-- PharmaceuticalAdviceConcernEntryContentModule -->
    <include href="include/2.16.756.5.30.1.1.10.4.81-2016-01-11T111304.sch"/>
+   <!-- cdach_entry_ObservationMedia -->
+   <include href="include/2.16.756.5.30.1.1.10.4.83-2018-04-18T000000.sch"/>
    <!-- cdach_other_Author -->
    <include href="include/2.16.756.5.30.1.1.10.9.23-2019-09-12T134828.sch"/>
    <!-- cdach_other_Performer -->
