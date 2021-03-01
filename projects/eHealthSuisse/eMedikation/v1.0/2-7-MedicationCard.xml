@@ -11,6 +11,7 @@
 <!-- 2018.06.16: Tony Schaller, medshare GmbH (Refactoring for better validation results: Schematron using eHealth Connector and 'HL7 - CDA Release 2 (strict)' using IHE EVS Client, Gazelle ObjectsChecker validation) -->
 <!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020) -->
 <!-- 2020.02.03: Oliver Egger, ahdis ag: Update to CDA-CH EMED (2020) -->
+<!-- 2021.03.01: Annatina Foppa, eHealth Suisse: Update to CDA-CH EMED v0.97 -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -242,6 +243,7 @@
 							<effectiveTime xsi:type="IVL_TS">
 								<low value="20120204" />
 							</effectiveTime>
+							<repeatNumber value='7' />
 							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
 								displayName="Oral use" />
 							<consumable>
@@ -278,7 +280,7 @@
 												<numerator unit="mg" value="50"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 													xsi:type="PQ" />
-												<denominator value="1"
+												<denominator unit="732936001" value="1"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 													xsi:type="PQ" />
 											</pharm:quantity>
@@ -301,9 +303,7 @@
 									<effectiveTime xsi:type='EIVL_TS'>
 										<event code='ACM' />
 									</effectiveTime>
-									<doseQuantity>
-										<center value="1" />
-									</doseQuantity>
+									<doseQuantity unit="732936001" value="1" />
                                     <consumable>
                                       <manufacturedProduct>
                                            <manufacturedMaterial nullFlavor="NA" />
@@ -319,9 +319,7 @@
 									<effectiveTime xsi:type='EIVL_TS'>
 										<event code='ACV' />
 									</effectiveTime>
-									<doseQuantity>
-										<center value="0.5" />
-									</doseQuantity>
+									<doseQuantity unit="732936001" value="0.5" />
                                     <consumable>
                                        <manufacturedProduct>
                                            <manufacturedMaterial nullFlavor="NA" />
@@ -426,12 +424,10 @@
 									<event code='ACV' />
 								</comp>
 							</effectiveTime>
+							<repeatNumber value='7' />
 							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
 								displayName="Oral use" />
-							<doseQuantity>
-								<center value="1">
-								</center>
-							</doseQuantity>
+							<doseQuantity unit="732936001" value="1" />
 							<consumable>
 
 								<manufacturedProduct classCode="MANU">
@@ -466,7 +462,7 @@
 												<numerator unit="mg" value="10"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 													xsi:type="PQ" />
-												<denominator value="1"
+												<denominator unit="732936001" value="1"
 													xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 													xsi:type="PQ" />
 											</pharm:quantity>
