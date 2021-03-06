@@ -214,7 +214,7 @@
 								<reference value="#padv.1.note" />
 							</text>
 							<statusCode code="completed" />
-							<effectiveTime value='20120204140000+0100' />
+							<effectiveTime value="20120204140000+0100" />
 
 							<entryRelationship typeCode='REFR'>
 								<substanceAdministration classCode='SBADM'
