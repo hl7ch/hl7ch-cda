@@ -11,6 +11,7 @@
 <!-- 2019.10.15: Oliver Egger, ahdis ag: Update from CDA-CH v2.0 (2017) to CDA-CH v2.1 (2020) -->
 <!-- 2020.02.03: Oliver Egger, ahdis ag: Update to CDA-CH EMED (2020) -->
 <!-- 2021.03.01: Annatina Foppa, eHealth Suisse: Update to CDA-CH EMED v0.97. Some issues remained unresolved, concerning repeatNumber and doseQuantity, see https://art-decor.org/art-decor/decor-issues%2D%2Dch-pharm -->
+<!-- 2021.04.28: Michaela Ziegler, ahdis ag: Correct value of "Dosis pro Einheit" in section.text.table -->
 <!-- ************************************************************ -->
 <?xml-stylesheet type='text/xsl' href='../../../../stylesheets/HL7.ch/CDA-CH/v2.0/cda-ch.xsl'?>
 <ClinicalDocument xmlns:pharm="urn:ihe:pharm"
@@ -181,7 +182,7 @@
 									<td ID="mtp.1.brandedmedication">Beloc Zok</td>
 									<td ID="mtp.1.ingredient">Metoprolol</td>
 									<td ID="mtp.1.packageform"> Ret Tbl</td>
-									<td ID="mtp.1.dosequantity">2.5 mg</td>
+									<td ID="mtp.1.dosequantity">50 mg</td>
 									<td ID="mtp.1.dosageintakemode">Morgens 1 und abends 1/2 Tablette nehmen</td>
 									<td ID="mtp.1.dosagemorning">1</td>
 									<td ID="mtp.1.dosagelunch">0</td>
