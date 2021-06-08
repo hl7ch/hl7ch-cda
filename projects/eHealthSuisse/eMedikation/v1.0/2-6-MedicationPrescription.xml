@@ -27,7 +27,7 @@
 	<templateId root="2.16.756.5.30.1.1.10.1.4" />
 	<id root="D41D72BA-2100-11E6-B67B-9E71128CAE77" />
 	<code code="57833-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Prescription for medication">
-		<translation xsi:type="CD" code="761938008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Medicinal Prescription record (record artifact)" />
+		<translation xsi:type="CD" code="761938008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Medicinal prescription record (record artifact)" />
 	</code>
 	<title>Rezept</title>
 	<effectiveTime value="20120204140000+0100" />
