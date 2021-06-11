@@ -310,19 +310,6 @@
 									</manufacturedMaterial>
 								</manufacturedProduct>
 							</consumable>
-							<entryRelationship typeCode="COMP">
-								<substanceAdministration moodCode="INT" classCode="SBADM">
-									<templateId root="2.16.756.5.30.1.1.10.4.37" />
-									<text>
-										<reference value="#mtp.1.dosageintakemode" />
-									</text>
-									<consumable>
-										<manufacturedProduct>
-											<manufacturedMaterial nullFlavor="NA" />
-										</manufacturedProduct>
-									</consumable>
-								</substanceAdministration>
-							</entryRelationship>
 							<entryRelationship typeCode="RSON">
 								<observation classCode="OBS" moodCode="EVN">
 									<templateId root="2.16.756.5.30.1.1.10.4.41" />
@@ -444,7 +431,6 @@
 									<effectiveTime xsi:type='EIVL_TS' operator='A'>
 										<event code='MORN' />
 									</effectiveTime>
-									<repeatNumber nullFlavor="NI" />
 									<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1" displayName="Oral use" />
 									<doseQuantity unit="732936001" value="0.5" />
 									<consumable>
