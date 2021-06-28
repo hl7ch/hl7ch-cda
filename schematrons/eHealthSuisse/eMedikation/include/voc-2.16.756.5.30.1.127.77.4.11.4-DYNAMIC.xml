@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             xmlns:pharm="urn:ihe:pharm"
+             id="2.16.756.5.30.1.127.77.4.11.4"
+             name="PCCTFVol2ProblemType"
+             displayName="ProblemType"
+             effectiveDate="2016-07-12T21:49:34"
+             statusCode="draft"
+             versionLabel="2021"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-pharm-"
+             referencedFrom="cdachemed-">
+      <desc language="en-US">see 6.3.4.14.7 PCC TF Vol 2</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="http://snomed.info/sct"
+                        canonicalUriDSTU2="http://snomed.info/sct"
+                        canonicalUriSTU3="http://snomed.info/sct"
+                        canonicalUriR4="http://snomed.info/sct"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="64572001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Disease (disorder)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="Condition"/>
+                    <designation language="de-CH" type="preferred" displayName="Verfassung"/>
+                    <designation language="fr-CH" type="preferred" displayName="Condition"/>
+                    <designation language="it-CH" type="preferred" displayName="Condizione"/>
+                    <designation language="rm-CH" type="preferred" displayName="Verfassung"/>
+                </concept>
+                <concept code="418799008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Finding reported by subject or history provider (finding)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="Symptom"/>
+                    <designation language="de-CH" type="preferred" displayName="Symptom"/>
+                    <designation language="fr-CH" type="preferred" displayName="Symptôme"/>
+                    <designation language="it-CH" type="preferred" displayName="Sintomo"/>
+                    <designation language="rm-CH" type="preferred" displayName="Symptom"/>
+                </concept>
+                <concept code="404684003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Clinical finding (finding)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="Finding"/>
+                    <designation language="de-CH" type="preferred" displayName="Befund"/>
+                    <designation language="fr-CH" type="preferred" displayName="Découverte"/>
+                    <designation language="it-CH" type="preferred" displayName="Risultato"/>
+                    <designation language="rm-CH" type="preferred" displayName="Befund"/>
+                </concept>
+                <concept code="409586006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Complaint (finding)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="Complaint"/>
+                    <designation language="de-CH" type="preferred" displayName="Beschwerden"/>
+                    <designation language="fr-CH" type="preferred" displayName="Plainte"/>
+                    <designation language="it-CH" type="preferred" displayName="Disturbo"/>
+                    <designation language="rm-CH" type="preferred" displayName="Beschwerden"/>
+                </concept>
+                <concept code="248536006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Finding of functional performance and activity (finding)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US"
+                         type="preferred"
+                         displayName="Functional limitation"/>
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Funktionale Einschränkung"/>
+                    <designation language="fr-CH"
+                         type="preferred"
+                         displayName="Limitation fonctionnelle"/>
+                    <designation language="it-CH"
+                         type="preferred"
+                         displayName="Limitazione funzionale"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Funktionale Einschränkung"/>
+                </concept>
+                <concept code="55607006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Problem (finding)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="Problem"/>
+                    <designation language="de-CH" type="preferred" displayName="Problem"/>
+                    <designation language="fr-CH" type="preferred" displayName="Problème"/>
+                    <designation language="it-CH" type="preferred" displayName="Problema"/>
+                    <designation language="rm-CH" type="preferred" displayName="Problem"/>
+                </concept>
+                <concept code="282291009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diagnosis interpretation (observable entity)"
+                  level="0"
+                  type="L">
+                    <designation language="en-US" type="preferred" displayName="Diagnosis"/>
+                    <designation language="de-CH" type="preferred" displayName="Diagnose"/>
+                    <designation language="fr-CH" type="preferred" displayName="Diagnostic"/>
+                    <designation language="it-CH" type="preferred" displayName="Diagnosi"/>
+                    <designation language="rm-CH" type="preferred" displayName="Diagnose"/>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

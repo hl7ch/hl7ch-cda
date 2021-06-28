@@ -9,7 +9,7 @@
              displayName="ActivePharmaceuticalIngredient"
              effectiveDate="2020-09-25T11:02:35"
              statusCode="draft"
-             versionLabel="202009"
+             versionLabel="2021"
              url="http://art-decor.org/decor/services/"
              ident="ch-pharm-"
              referencedFrom="cdachemed-">
@@ -26,6 +26,94 @@
             </publishingAuthority>
       <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
       <conceptList>
+                <concept code="1156222009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Trofosfamide (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Trofosfamide"/>
+                    <designation language="fr-CH" type="preferred" displayName="trofosfamide"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Trofosfamide"/>
+                    <designation language="en-US" type="preferred" displayName="Trofosfamide"/>
+                </concept>
+                <concept code="1156231009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Obidoxime chloride (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Obidoxim chlorid"/>
+                    <designation language="fr-CH" type="preferred" displayName="obidoxime chlorure"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Obidoxim chlorid"/>
+                    <designation language="en-US" type="preferred" displayName="Obidoxime chloride"/>
+                </concept>
+                <concept code="1156230005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ajmaline (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Ajmalin"/>
+                    <designation language="fr-CH" type="preferred" displayName="ajmaline"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Ajmalin"/>
+                    <designation language="en-US" type="preferred" displayName="Ajmaline"/>
+                </concept>
+                <concept code="1156228008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Darvadstrocel (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Darvadstrocel"/>
+                    <designation language="fr-CH" type="preferred" displayName="darvadstrocel"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Darvadstrocel"/>
+                    <designation language="en-US" type="preferred" displayName="Darvadstrocel"/>
+                </concept>
+                <concept code="1156227003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Levomethadone (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Levomethadon"/>
+                    <designation language="fr-CH" type="preferred" displayName="lévométhadone"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Levomethadon"/>
+                    <designation language="en-US" type="preferred" displayName="Levomethadone"/>
+                </concept>
+                <concept code="1156229000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Butylscopolamine (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Butylscopolamin"/>
+                    <designation language="fr-CH" type="preferred" displayName="butylscopolamine"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Butylscopolamin"/>
+                    <designation language="en-US" type="preferred" displayName="Butylscopolamine"/>
+                </concept>
+                <concept code="1156223004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Opipramol (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Opipramol"/>
+                    <designation language="fr-CH" type="preferred" displayName="opipramol"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Opipramol"/>
+                    <designation language="en-US" type="preferred" displayName="Opipramol"/>
+                </concept>
+                <concept code="1156232002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Flufenamic acid (substance)"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Flufenaminsäure"/>
+                    <designation language="fr-CH" type="preferred" displayName="acide flufénamique"/>
+                    <designation language="it-CH" type="preferred" displayName="TODO"/>
+                    <designation language="rm-CH" type="preferred" displayName="Flufenaminsäure"/>
+                    <designation language="en-US" type="preferred" displayName="Flufenamic acid"/>
+                </concept>
                 <concept code="259496005"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="5-aminolevulinic acid (substance)"
@@ -3860,21 +3948,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Diphenhydramin"/>
                     <designation language="en-US" type="preferred" displayName="Diphenhydramine"/>
                 </concept>
-                <concept code="428126001"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Diphtheria vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Diphtherie-Impfstoff"/>
-                    <designation language="fr-CH" type="preferred" displayName="diphtérie vaccin"/>
-                    <designation language="it-CH" type="preferred" displayName="Difterite vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Diphtherie-Impfstoff"/>
-                    <designation language="en-US" type="preferred" displayName="Diphtheria vaccine"/>
-                </concept>
                 <concept code="387453004"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Dipotassium clorazepate (substance)"
@@ -5952,27 +6025,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Guanfacin"/>
                     <designation language="en-US" type="preferred" displayName="Guanfacine"/>
                 </concept>
-                <concept code="412374001"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Haemophilus influenzae type b vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Haemophilus-influenza-b-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="vaccin Haemophilus influenza type B"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Anti-Hemophilus influenzae tipo B (Hib) vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Haemophilus-influenza-b-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Haemophilus influenzae type b vaccine"/>
-                </concept>
                 <concept code="395735005"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Halcinonide (substance)"
@@ -6017,25 +6069,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Heparin"/>
                     <designation language="en-US" type="preferred" displayName="Heparin"/>
                 </concept>
-                <concept code="396423004"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Hepatitis A virus vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Hepatitis-A-Impfstoff"/>
-                    <designation language="fr-CH" type="preferred" displayName="hépatite A vaccin"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Epatite A (HAV) vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Hepatitis-A-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Hepatitis A virus vaccine"/>
-                </concept>
                 <concept code="303233001"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Hepatitis B antigen (substance)"
@@ -6050,46 +6083,6 @@
                          displayName="Epatite B antigene purificato"/>
                     <designation language="rm-CH" type="preferred" displayName="Hepatitis B Antigen"/>
                     <designation language="en-US" type="preferred" displayName="Hepatitis B antigen"/>
-                </concept>
-                <concept code="412402004"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Hepatitis B virus recombinant vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Hepatitis-B-Impfstoff, rekombiniert, monovalent"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="hépatite B vaccin recombiné, monovalent"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Epatite B vaccino ricombinato (ADNr)"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Hepatitis-B-Impfstoff, rekombiniert, monovalent"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Hepatitis B virus recombinant vaccine"/>
-                </concept>
-                <concept code="396424005"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Hepatitis B virus vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Hepatitis-B-Impfstoff"/>
-                    <designation language="fr-CH" type="preferred" displayName="vaccin hépatite B"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Epatite B (HBV) vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Hepatitis-B-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Hepatitis B virus vaccine"/>
                 </concept>
                 <concept code="703831002"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -6270,48 +6263,6 @@
                     <designation language="en-US"
                          type="preferred"
                          displayName="Human menopausal gonadotropin"/>
-                </concept>
-                <concept code="722219008"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Human papilloma virus type 16 and type 18 vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Papillomavirus (human)-Impfstoff, Typ 16 und Typ 18"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="papillomavirus vaccin humain, type 16 et type 18"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Papillomavirus umano tipo 16 e tipo 18 (HPV) vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Papillomavirus (human)-Impfstoff, Typ 16 und Typ 18"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Human papilloma virus type 16 and type 18 vaccine"/>
-                </concept>
-                <concept code="724330005"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Human papilloma virus type 9 vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Papillomavirus (human)-Impfstoff, Typ 9"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="papillomavirus vaccin humain, type 9"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Papillomavirus umano tipo 9 (HPV) vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Papillomavirus (human)-Impfstoff, Typ 9"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Human papilloma virus type 9 vaccine"/>
                 </concept>
                 <concept code="38218009"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -6705,27 +6656,6 @@
                          displayName="Immunglobulin M human (IgM)"/>
                     <designation language="en-US" type="preferred" displayName="Immunoglobulin M"/>
                 </concept>
-                <concept code="396435000"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Inactivated Poliovirus vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Poliomyelitis-Impfstoff inaktiviert"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="poliomyélite vaccin inactivé"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Poliomielite vaccino inattivato"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Poliomyelitis-Impfstoff inaktiviert"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Inactivated Poliovirus vaccine"/>
-                </concept>
                 <concept code="702801003"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Indacaterol (substance)"
@@ -6769,27 +6699,6 @@
                     <designation language="it-CH" type="preferred" displayName="Infliximab"/>
                     <designation language="rm-CH" type="preferred" displayName="Infliximab"/>
                     <designation language="en-US" type="preferred" displayName="Infliximab"/>
-                </concept>
-                <concept code="419826009"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Influenza split virion vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Influenza-Spalt-Impfstoff, inaktiviert"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="vaccin grippal inactivé, virion fragmenté"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Influenza vaccino inattivato, virus frammentati"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Influenza-Spalt-Impfstoff, inaktiviert"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Influenza split virion vaccine"/>
                 </concept>
                 <concept code="72164009"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -7704,25 +7613,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Lithiumsulfat"/>
                     <designation language="en-US" type="preferred" displayName="Lithium sulfate"/>
                 </concept>
-                <concept code="764303004"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Live typhoid vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Typhus-Lebend-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="typhus vaccin vivant"/>
-                    <designation language="it-CH" type="preferred" displayName="Tifo vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Typhus-Lebend-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Live typhoid vaccine"/>
-                </concept>
                 <concept code="708808004"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Lixisenatide (substance)"
@@ -8036,46 +7926,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Maraviroc"/>
                     <designation language="en-US" type="preferred" displayName="Maraviroc"/>
                 </concept>
-                <concept code="396427003"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Measles vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Masern-Lebend-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="rougeole vaccin vivant"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Morbillo vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Masern-Lebend-Impfstoff"/>
-                    <designation language="en-US" type="preferred" displayName="Measles vaccine"/>
-                </concept>
-                <concept code="396429000"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Measles, mumps and rubella vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Masern-Mumps-Röteln-Lebendimpfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="rougeole-oreillons-rubéole vaccin vivant"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Morbillo, parotite, rosolia vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Masern-Mumps-Röteln-Lebendimpfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Measles, mumps and rubella vaccine"/>
-                </concept>
                 <concept code="387311004"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Mebendazole (substance)"
@@ -8230,44 +8080,6 @@
                     <designation language="it-CH" type="preferred" displayName="Memantina"/>
                     <designation language="rm-CH" type="preferred" displayName="Memantin"/>
                     <designation language="en-US" type="preferred" displayName="Memantine"/>
-                </concept>
-                <concept code="768366003"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Meningococcus group C vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Meningokokken C-Saccharid-T-Konjugat-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="méningite vaccin polysaccharidique C, conjugué T"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Meningite vaccino polisaccaridico C, coniugato"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Meningokokken C-Saccharid-T-Konjugat-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Meningococcus group C vaccine"/>
-                </concept>
-                <concept code="424891007"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Meningococcus vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Meningokokken-Impfstoff"/>
-                    <designation language="fr-CH" type="preferred" displayName="méningite vaccin"/>
-                    <designation language="it-CH" type="preferred" displayName="Meningite vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Meningokokken-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Meningococcus vaccine"/>
                 </concept>
                 <concept code="59560006"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -8778,25 +8590,6 @@
                     <designation language="it-CH" type="preferred" displayName="Moxonidina"/>
                     <designation language="rm-CH" type="preferred" displayName="Moxonidin"/>
                     <designation language="en-US" type="preferred" displayName="Moxonidine"/>
-                </concept>
-                <concept code="396431009"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Mumps vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Mumps-Lebend-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="virus des oreillons vaccin vivant"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Parotite vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Mumps-Lebend-Impfstoff"/>
-                    <designation language="en-US" type="preferred" displayName="Mumps vaccine"/>
                 </concept>
                 <concept code="387397004"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -9934,19 +9727,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Permethrin"/>
                     <designation language="en-US" type="preferred" displayName="Permethrin"/>
                 </concept>
-                <concept code="396433007"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Pertussis vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH" type="preferred" displayName="Pertussis-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="vaccin anticoquelucheux"/>
-                    <designation language="it-CH" type="preferred" displayName="Pertosse vaccino"/>
-                    <designation language="rm-CH" type="preferred" displayName="Pertussis-Impfstoff"/>
-                    <designation language="en-US" type="preferred" displayName="Pertussis vaccine"/>
-                </concept>
                 <concept code="704226002"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Pertuzumab (substance)"
@@ -10265,27 +10045,6 @@
                     <designation language="it-CH" type="preferred" displayName="Plerixafor"/>
                     <designation language="rm-CH" type="preferred" displayName="Plerixafor"/>
                     <designation language="en-US" type="preferred" displayName="Plerixafor"/>
-                </concept>
-                <concept code="417011002"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Pneumococcal polysaccharide vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Pneumokokken-Polysaccharid-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="pneumocoque vaccin polysaccharidique"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Pneumococchi vaccino polisaccaridico"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Pneumokokken-Polysaccharid-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Pneumococcal polysaccharide vaccine"/>
                 </concept>
                 <concept code="421952002"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -11351,25 +11110,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Rotigotin"/>
                     <designation language="en-US" type="preferred" displayName="Rotigotine"/>
                 </concept>
-                <concept code="396438003"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Rubella vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Röteln-Lebend-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="rubéole vaccin vivant"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Rosolia vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Röteln-Lebend-Impfstoff"/>
-                    <designation language="en-US" type="preferred" displayName="Rubella vaccine"/>
-                </concept>
                 <concept code="429835003"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Rufinamide (substance)"
@@ -12038,27 +11778,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Sulfamethoxazol"/>
                     <designation language="en-US" type="preferred" displayName="Sulfamethoxazole"/>
                 </concept>
-                <concept code="703745000"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Sulfamethoxazole and trimethoprim (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Sulfamethoxazol und Trimethoprim"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="sulfaméthoxazole et triméthoprime"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Sulfametossazolo e trimetoprim"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Sulfamethoxazol und Trimethoprim"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Sulfamethoxazole and trimethoprim"/>
-                </concept>
                 <concept code="387248006"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Sulfasalazine (substance)"
@@ -12344,23 +12063,6 @@
                          type="preferred"
                          displayName="Tetanus immunoglobulin of human origin"/>
                 </concept>
-                <concept code="412375000"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Tetanus vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Tetanus-Adsorbat-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="tétanos vaccin adsorbé"/>
-                    <designation language="it-CH" type="preferred" displayName="Tetano vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Tetanus-Adsorbat-Impfstoff"/>
-                    <designation language="en-US" type="preferred" displayName="Tetanus vaccine"/>
-                </concept>
                 <concept code="387309008"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Tetracaine (substance)"
@@ -12489,27 +12191,6 @@
                     <designation language="it-CH" type="preferred" displayName="Ticagrelor"/>
                     <designation language="rm-CH" type="preferred" displayName="Ticagrelor"/>
                     <designation language="en-US" type="preferred" displayName="Ticagrelor"/>
-                </concept>
-                <concept code="398783009"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Tick-borne encephalitis vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="FSME-Impfstoff, inaktiviert"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="encéphalite verno-estivale FSME inactivé vaccin"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Meningoencefalite verno-estiva (FSME) vaccino inattivato"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="FSME-Impfstoff, inaktiviert"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Tick-borne encephalitis vaccine"/>
                 </concept>
                 <concept code="418313005"
                   codeSystem="2.16.840.1.113883.6.96"
@@ -13210,44 +12891,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Vareniclin"/>
                     <designation language="en-US" type="preferred" displayName="Varenicline"/>
                 </concept>
-                <concept code="412529007"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Varicella virus live vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Varizellen-Lebend-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="vaccin varicelle vivant"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Varicella vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Varizellen-Lebend-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Varicella virus live vaccine"/>
-                </concept>
-                <concept code="396442000"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Varicella virus vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Varizellen-Impfstoff"/>
-                    <designation language="fr-CH" type="preferred" displayName="vaccin varicelle"/>
-                    <designation language="it-CH" type="preferred" displayName="Varicella vaccino"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Varizellen-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Varicella virus vaccine"/>
-                </concept>
                 <concept code="259858000"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Varicella-zoster virus antibody (substance)"
@@ -13452,27 +13095,6 @@
                     <designation language="it-CH" type="preferred" displayName="Xilometazolina"/>
                     <designation language="rm-CH" type="preferred" displayName="Xylometazolin"/>
                     <designation language="en-US" type="preferred" displayName="Xylometazoline"/>
-                </concept>
-                <concept code="396444004"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Yellow fever vaccine (substance)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Gelbfieber-Lebend-Impfstoff"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="fièvre jaune vaccin vivant"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Febbre gialla vaccino vivo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Gelbfieber-Lebend-Impfstoff"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Yellow fever vaccine"/>
                 </concept>
                 <concept code="387010007"
                   codeSystem="2.16.840.1.113883.6.96"

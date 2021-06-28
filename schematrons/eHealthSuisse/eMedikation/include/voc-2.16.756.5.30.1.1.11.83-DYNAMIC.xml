@@ -5,8 +5,8 @@
              xmlns:hl7="urn:hl7-org:v3"
              xmlns:pharm="urn:ihe:pharm"
              id="2.16.756.5.30.1.1.11.83"
-             name="UnitsOfPresentation"
-             displayName="UnitsOfPresentation"
+             name="UnitCode"
+             displayName="UnitCode"
              effectiveDate="2021-02-10T22:24:02"
              statusCode="draft"
              versionLabel="2021"
@@ -37,9 +37,8 @@
                   displayName="Actuation (unit of presentation)"
                   level="0"
                   type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Betätigung (Sprühstoss)"/>
+                    <designation language="de-CH" type="synonym" displayName="Sprühstoss"/>
+                    <designation language="de-CH" type="preferred" displayName="Hub"/>
                     <designation language="fr-CH" type="preferred" displayName="bouffée"/>
                     <designation language="it-CH" type="preferred" displayName="Erogazione"/>
                     <designation language="rm-CH"
@@ -107,10 +106,10 @@
                   displayName="Block (unit of presentation)"
                   level="0"
                   type="L">
-                    <designation language="de-CH" type="preferred" displayName="Stein"/>
+                    <designation language="de-CH" type="preferred" displayName="Block"/>
                     <designation language="fr-CH" type="preferred" displayName="bloc"/>
                     <designation language="it-CH" type="preferred" displayName="Blocco"/>
-                    <designation language="rm-CH" type="preferred" displayName="Stein"/>
+                    <designation language="rm-CH" type="preferred" displayName="Block"/>
                     <designation language="en-US" type="preferred" displayName="Block"/>
                 </concept>
                 <concept code="732986007"
@@ -278,17 +277,6 @@
                     <designation language="rm-CH" type="preferred" displayName="Weithalsgefäss"/>
                     <designation language="en-US" type="preferred" displayName="Jar"/>
                 </concept>
-                <concept code="733000006"
-                  codeSystem="2.16.840.1.113883.6.96"
-                  displayName="Lozenge (unit of presentation)"
-                  level="0"
-                  type="L">
-                    <designation language="de-CH" type="preferred" displayName="Lutschtablette"/>
-                    <designation language="fr-CH" type="preferred" displayName="pastille dure"/>
-                    <designation language="it-CH" type="preferred" displayName="Pastiglia"/>
-                    <designation language="rm-CH" type="preferred" displayName="Lutschtablette"/>
-                    <designation language="en-US" type="preferred" displayName="Lozenge"/>
-                </concept>
                 <concept code="733001005"
                   codeSystem="2.16.840.1.113883.6.96"
                   displayName="Lyophilisate (unit of presentation)"
@@ -338,10 +326,10 @@
                   displayName="Patch (unit of presentation)"
                   level="0"
                   type="L">
-                    <designation language="de-CH" type="preferred" displayName="Pflaster"/>
+                    <designation language="de-CH" type="preferred" displayName="Patch"/>
                     <designation language="fr-CH" type="preferred" displayName="patch"/>
                     <designation language="it-CH" type="preferred" displayName="Cerotto"/>
-                    <designation language="rm-CH" type="preferred" displayName="Pflaster"/>
+                    <designation language="rm-CH" type="preferred" displayName="Patch"/>
                     <designation language="en-US" type="preferred" displayName="Patch"/>
                 </concept>
                 <concept code="733006000"
@@ -731,7 +719,7 @@
                 </concept>
                 <concept code="umol"
                   codeSystem="2.16.840.1.113883.6.8"
-                  displayName="micromol"
+                  displayName="micromole"
                   level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="µmol"/>
@@ -850,7 +838,7 @@
                     <designation language="rm-CH" type="preferred" displayName="cm3"/>
                     <designation language="en-US" type="preferred" displayName="cm3"/>
                 </concept>
-                <concept code="S"
+                <concept code="s"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Second"
                   level="0"
@@ -861,7 +849,7 @@
                     <designation language="rm-CH" type="preferred" displayName="sec"/>
                     <designation language="en-US" type="preferred" displayName="sec"/>
                 </concept>
-                <concept code="MIN"
+                <concept code="min"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Minute"
                   level="0"
@@ -872,7 +860,7 @@
                     <designation language="rm-CH" type="preferred" displayName="min"/>
                     <designation language="en-US" type="preferred" displayName="min"/>
                 </concept>
-                <concept code="HR"
+                <concept code="h"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Hour"
                   level="0"
@@ -883,7 +871,7 @@
                     <designation language="rm-CH" type="preferred" displayName="h"/>
                     <designation language="en-US" type="preferred" displayName="h"/>
                 </concept>
-                <concept code="D"
+                <concept code="d"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Day"
                   level="0"
@@ -905,7 +893,7 @@
                     <designation language="rm-CH" type="preferred" displayName="Dos"/>
                     <designation language="en-US" type="preferred" displayName="Dose"/>
                 </concept>
-                <concept code="tbs_m"
+                <concept code="[tbs_m]"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="tablespoon - metric"
                   level="0"
@@ -918,7 +906,7 @@
                     <designation language="rm-CH" type="preferred" displayName="Esslöffel"/>
                     <designation language="en-US" type="preferred" displayName="tablespoon - metric"/>
                 </concept>
-                <concept code="10*6.U"
+                <concept code="10*6.{Unit}"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="(the number ten for arbitrary powers ^ 6) * Unit"
                   level="0"
@@ -929,7 +917,7 @@
                     <designation language="rm-CH" type="preferred" displayName="MioU"/>
                     <designation language="en-US" type="preferred" displayName="MioU"/>
                 </concept>
-                <concept code="10*6.iU"
+                <concept code="10*6.[iU]"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="MillionInternationalUnit"
                   level="0"
@@ -942,7 +930,7 @@
                          type="preferred"
                          displayName="MillionInternationalUnit"/>
                 </concept>
-                <concept code="PPM "
+                <concept code="[ppm]"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Parts Per Million"
                   level="0"
@@ -964,9 +952,9 @@
                     <designation language="rm-CH" type="preferred" displayName="Packung"/>
                     <designation language="en-US" type="preferred" displayName="Package"/>
                 </concept>
-                <concept code="U{PIECE(S)}"
+                <concept code="{Piece}"
                   codeSystem="2.16.840.1.113883.6.8"
-                  displayName="Piece(s)"
+                  displayName="Piece"
                   level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Stk"/>
@@ -975,7 +963,7 @@
                     <designation language="rm-CH" type="preferred" displayName="Stk"/>
                     <designation language="en-US" type="preferred" displayName="Piece(s)"/>
                 </concept>
-                <concept code="tsp_m"
+                <concept code="[tsp_m]"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="teaspoon - metric"
                   level="0"
@@ -986,7 +974,7 @@
                     <designation language="rm-CH" type="preferred" displayName="Teelöffel"/>
                     <designation language="en-US" type="preferred" displayName="teaspoon - metric"/>
                 </concept>
-                <concept code="10*3.U"
+                <concept code="10*3.{Unit}"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Thousand Per * Unit"
                   level="0"
@@ -997,7 +985,7 @@
                     <designation language="rm-CH" type="preferred" displayName="Tausend Einheiten"/>
                     <designation language="en-US" type="preferred" displayName="Thousand Per * Unit"/>
                 </concept>
-                <concept code="U"
+                <concept code="{Unit}"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Unit"
                   level="0"
@@ -1008,7 +996,7 @@
                     <designation language="rm-CH" type="preferred" displayName="Einheit"/>
                     <designation language="en-US" type="preferred" displayName="unit"/>
                 </concept>
-                <concept code="iU"
+                <concept code="[iU]"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="international unit"
                   level="0"
@@ -1027,7 +1015,7 @@
                          displayName="Internationale Einheit"/>
                     <designation language="en-US" type="preferred" displayName="international unit"/>
                 </concept>
-                <concept code="CFU"
+                <concept code="[CFU]"
                   codeSystem="2.16.840.1.113883.6.8"
                   displayName="Colony Forming Units"
                   level="0"

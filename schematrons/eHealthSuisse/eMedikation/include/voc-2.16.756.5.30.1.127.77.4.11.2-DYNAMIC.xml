@@ -9,10 +9,16 @@
              displayName="TimingEvent"
              effectiveDate="2020-07-10T00:28:08"
              statusCode="draft"
-             versionLabel="2020"
+             versionLabel="2021"
              url="http://art-decor.org/decor/services/"
              ident="ch-pharm-"
              referencedFrom="cdachemed-">
+      <sourceCodeSystem id="2.16.840.1.113883.4.642.4.76"
+                        identifierName=""
+                        canonicalUri="http://hl7.org/fhir/event-timing"
+                        canonicalUriDSTU2="http://hl7.org/fhir/event-timing"
+                        canonicalUriSTU3="http://hl7.org/fhir/event-timing"
+                        canonicalUriR4="http://hl7.org/fhir/event-timing"/>
       <sourceCodeSystem id="2.16.840.1.113883.5.139"
                         identifierName="TimingEvent"
                         canonicalUri="http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -25,10 +31,146 @@
                 <addrLine type="uri">www.e-health-suisse.ch</addrLine>
             </publishingAuthority>
       <conceptList>
+                <concept code="PHS"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="After Sleep"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH"
+                         type="preferred"
+                         displayName="Nach dem Einschlafen"/>
+                    <designation language="fr-CH" type="preferred" displayName="Après le coucher"/>
+                    <designation language="it-CH" type="preferred" displayName="Dopo il sonno"/>
+                    <designation language="rm-CH"
+                         type="preferred"
+                         displayName="Nach dem Einschlafen"/>
+                    <designation language="en-US" type="preferred" displayName="After Sleep"/>
+                </concept>
+                <concept code="NIGHT"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Night"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Nacht"/>
+                    <designation language="fr-CH" type="preferred" displayName="Nuit"/>
+                    <designation language="it-CH" type="preferred" displayName="Notte"/>
+                    <designation language="rm-CH" type="preferred" displayName="Nacht"/>
+                    <designation language="en-US" type="preferred" displayName="Night"/>
+                </concept>
+                <concept code="EVE.late"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Late Evening"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Später Abend"/>
+                    <designation language="fr-CH" type="preferred" displayName="Fin de soirée"/>
+                    <designation language="it-CH" type="preferred" displayName="Tarda serata"/>
+                    <designation language="rm-CH" type="preferred" displayName="Später Abend"/>
+                    <designation language="en-US" type="preferred" displayName="Late Evening"/>
+                </concept>
+                <concept code="EVE.early"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Early Evening"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Früher Abend"/>
+                    <designation language="fr-CH" type="preferred" displayName="Début de soirée"/>
+                    <designation language="it-CH" type="preferred" displayName="Prima serata"/>
+                    <designation language="rm-CH" type="preferred" displayName="Früher Abend"/>
+                    <designation language="en-US" type="preferred" displayName="Early Evening"/>
+                </concept>
+                <concept code="EVE"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Evening"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Abend"/>
+                    <designation language="fr-CH" type="preferred" displayName="Soirée"/>
+                    <designation language="it-CH" type="preferred" displayName="Sera"/>
+                    <designation language="rm-CH" type="preferred" displayName="Abend"/>
+                    <designation language="en-US" type="preferred" displayName="Evening"/>
+                </concept>
+                <concept code="AFT.late"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Late Afternoon"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Später Nachmittag"/>
+                    <designation language="fr-CH" type="preferred" displayName="Fin d’après-midi"/>
+                    <designation language="it-CH" type="preferred" displayName="Tardo pomeriggio"/>
+                    <designation language="rm-CH" type="preferred" displayName="Später Nachmittag"/>
+                    <designation language="en-US" type="preferred" displayName="Late Afternoon"/>
+                </concept>
+                <concept code="AFT.early"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Early Afternoon"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Früher Nachmittag"/>
+                    <designation language="fr-CH" type="preferred" displayName="Début d’après-midi"/>
+                    <designation language="it-CH" type="preferred" displayName="Primo pomeriggio"/>
+                    <designation language="rm-CH" type="preferred" displayName="Früher Nachmittag"/>
+                    <designation language="en-US" type="preferred" displayName="Early Afternoon"/>
+                </concept>
+                <concept code="AFT"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Afternoon"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Nachmittag"/>
+                    <designation language="fr-CH" type="preferred" displayName="Après-midi"/>
+                    <designation language="it-CH" type="preferred" displayName="Pomeriggio"/>
+                    <designation language="rm-CH" type="preferred" displayName="Nachmittag"/>
+                    <designation language="en-US" type="preferred" displayName="Afternoon"/>
+                </concept>
+                <concept code="NOON"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Noon"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Mittag"/>
+                    <designation language="fr-CH" type="preferred" displayName="Midi"/>
+                    <designation language="it-CH" type="preferred" displayName="Mezzogiorno"/>
+                    <designation language="rm-CH" type="preferred" displayName="Mittag"/>
+                    <designation language="en-US" type="preferred" displayName="Noon"/>
+                </concept>
+                <concept code="MORN.late"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Late Morning"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Später Morgen"/>
+                    <designation language="fr-CH" type="preferred" displayName="Fin de matinée"/>
+                    <designation language="it-CH" type="preferred" displayName="Tarda mattinata"/>
+                    <designation language="rm-CH" type="preferred" displayName="Später Morgen"/>
+                    <designation language="en-US" type="preferred" displayName="Late Morning"/>
+                </concept>
+                <concept code="MORN.early"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Early Morning"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Früher Morgen"/>
+                    <designation language="fr-CH" type="preferred" displayName="Début de matinée"/>
+                    <designation language="it-CH" type="preferred" displayName="Prima mattina"/>
+                    <designation language="rm-CH" type="preferred" displayName="Früher Morgen"/>
+                    <designation language="en-US" type="preferred" displayName="Early Morning"/>
+                </concept>
+                <concept code="MORN"
+                  codeSystem="2.16.840.1.113883.4.642.4.76"
+                  displayName="Morning"
+                  level="0"
+                  type="L">
+                    <designation language="de-CH" type="preferred" displayName="Morgen"/>
+                    <designation language="fr-CH" type="preferred" displayName="Matinée"/>
+                    <designation language="it-CH" type="preferred" displayName="Mattina"/>
+                    <designation language="rm-CH" type="preferred" displayName="Morgen"/>
+                    <designation language="en-US" type="preferred" displayName="Morning"/>
+                </concept>
                 <concept code="AC"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="Before the meal"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Vor der Mahlzeit"/>
                     <designation language="fr-CH" type="preferred" displayName="Avant le repas"/>
@@ -40,7 +182,7 @@
                   codeSystem="2.16.840.1.113883.5.139"
                   codeSystemName="TimingEvent"
                   displayName="Before sleep"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH"
                          type="preferred"
@@ -57,7 +199,7 @@
                 <concept code="ACD"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="Before lunch"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Vor dem Mittagessen"/>
                     <designation language="fr-CH"
@@ -70,7 +212,7 @@
                 <concept code="ACM"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="Before breakfast"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Vor dem Frühstück"/>
                     <designation language="fr-CH"
@@ -83,7 +225,7 @@
                 <concept code="ACV"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="Before dinner"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Vor dem Abendessen"/>
                     <designation language="fr-CH"
@@ -96,8 +238,8 @@
                 <concept code="C"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="During meals"
-                  level="1"
-                  type="S">
+                  level="0"
+                  type="L">
                     <designation language="de-CH"
                          type="preferred"
                          displayName="Während der Mahlzeit"/>
@@ -109,7 +251,7 @@
                 <concept code="CD"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="During lunch"
-                  level="2"
+                  level="0"
                   type="L">
                     <designation language="de-CH"
                          type="preferred"
@@ -124,7 +266,7 @@
                 <concept code="CM"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="During breakfast"
-                  level="2"
+                  level="0"
                   type="L">
                     <designation language="de-CH"
                          type="preferred"
@@ -141,7 +283,7 @@
                 <concept code="CV"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="During dinner"
-                  level="2"
+                  level="0"
                   type="L">
                     <designation language="de-CH"
                          type="preferred"
@@ -153,86 +295,10 @@
                     <designation language="rm-CH" type="preferred" displayName="Durant tschaina"/>
                     <designation language="en-US" type="preferred" displayName="During dinner"/>
                 </concept>
-                <concept code="IC"
-                  codeSystem="2.16.840.1.113883.5.139"
-                  displayName="Between meals"
-                  level="1"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Zwischen den Mahlzeiten"/>
-                    <designation language="fr-CH" type="preferred" displayName="Entre les repas"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Tra un pasto e l'altro"/>
-                    <designation language="rm-CH" type="preferred" displayName="Tranter ils pasts"/>
-                    <designation language="en-US" type="preferred" displayName="Between meals"/>
-                </concept>
-                <concept code="ICD"
-                  codeSystem="2.16.840.1.113883.5.139"
-                  displayName="Between lunch and dinner"
-                  level="1"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Zwischen Mittag- und Abendessen"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="Entre le repas de midi et du soir"/>
-                    <designation language="it-CH" type="preferred" displayName="Tra pranzo e cena"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Tranter gentar e tschaina"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Between lunch and dinner"/>
-                </concept>
-                <concept code="ICM"
-                  codeSystem="2.16.840.1.113883.5.139"
-                  displayName="Between breakfast and lunch"
-                  level="1"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Zwischen Frühstück und Mittagessen"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="Entre le petit-déjeuner et le repas de midi"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Tra colazione e pranzo"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Tranter ensolver e gentar"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Between breakfast and lunch"/>
-                </concept>
-                <concept code="ICV"
-                  codeSystem="2.16.840.1.113883.5.139"
-                  displayName="Between dinner and bedtime"
-                  level="1"
-                  type="L">
-                    <designation language="de-CH"
-                         type="preferred"
-                         displayName="Zwischen Abendessen und Schlafenszeit"/>
-                    <designation language="fr-CH"
-                         type="preferred"
-                         displayName="Entre le repas du soir et le coucher"/>
-                    <designation language="it-CH"
-                         type="preferred"
-                         displayName="Tra la cena e l'ora di andare a letto"/>
-                    <designation language="rm-CH"
-                         type="preferred"
-                         displayName="Tranter tschaina ed ir a durmir"/>
-                    <designation language="en-US"
-                         type="preferred"
-                         displayName="Between dinner and bedtime"/>
-                </concept>
                 <concept code="PC"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="After the meal"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Nach dem Essen"/>
                     <designation language="fr-CH" type="preferred" displayName="Après le repas"/>
@@ -243,7 +309,7 @@
                 <concept code="PCD"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="After lunch"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH"
                          type="preferred"
@@ -258,7 +324,7 @@
                 <concept code="PCM"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="After breakfast"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Nach dem Frühstück"/>
                     <designation language="fr-CH"
@@ -273,7 +339,7 @@
                 <concept code="PCV"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="After dinner"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Nach dem Abendessen"/>
                     <designation language="fr-CH"
@@ -286,7 +352,7 @@
                 <concept code="WAKE"
                   codeSystem="2.16.840.1.113883.5.139"
                   displayName="Upon waking up"
-                  level="1"
+                  level="0"
                   type="L">
                     <designation language="de-CH" type="preferred" displayName="Beim Aufwachen"/>
                     <designation language="fr-CH" type="preferred" displayName="Au réveil"/>

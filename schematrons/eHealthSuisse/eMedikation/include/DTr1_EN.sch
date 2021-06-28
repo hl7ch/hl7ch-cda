@@ -21,7 +21,7 @@
            see="https://art-decor.org/mediawiki/index.php?title=DTr1_EN">dtr1-1.3-EN: entity name that is not null shall not be empty</assert>
     
     <report role="warning"
-           test="*[not(@nullFlavor)][normalize-space(.)='']"
+           test="*[not(self::*:validTime | @nullFlavor)][normalize-space(.)='']"
            see="https://art-decor.org/mediawiki/index.php?title=DTr1_EN">dtr1-3-EN: empty name particles should not be present.</report>
     <report role="warning"
            test="substring(normalize-space(.),1,1)='&#34;'"
