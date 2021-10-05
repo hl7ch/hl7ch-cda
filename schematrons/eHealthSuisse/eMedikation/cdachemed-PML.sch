@@ -143,10 +143,10 @@
    <!-- MedicationListDocument -->
    <pattern>
       <title>MedicationListDocument</title>
-      <rule context="/">
+      <rule fpi="RUL-EXPEL" context="/">
          <assert role="warning"
                  test="descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.13']]"
-                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.1.13-2018-01-22T151726.html">(MedicationListDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.13']]</assert>
+                 see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.1.13-2018-01-22T151726.html">(MedicationListDocument): Instance is expected to have the following element: descendant-or-self::hl7:ClinicalDocument[hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.9'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.2'] and hl7:templateId[@root = '2.16.840.1.113883.10.12.1'] and hl7:templateId[@root = '2.16.756.5.30.1.127.1.4'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.1.1'] and hl7:templateId[@root = '1.3.6.1.4.1.19376.1.9.1.1.5'] and hl7:templateId[@root = '2.16.756.5.30.1.1.10.1.13']]</assert>
       </rule>
    </pattern>
    <include href="include/2.16.756.5.30.1.1.10.1.13-2018-01-22T151726.sch"/>
@@ -179,10 +179,8 @@
       <active pattern="template-2.16.756.5.30.1.1.10.2.7-2018-04-18T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.44-2018-01-22T154038"/>
       <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.33-2019-12-11T113424"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.34-2019-12-11T113152"/>
-      <active pattern="template-2.16.756.5.30.1.1.10.4.37-2016-09-13T160607"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.41-2016-06-13T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.42-2016-06-17T000000"/>
       <active pattern="template-2.16.756.5.30.1.1.10.4.43-2019-09-11T170549"/>
@@ -272,9 +270,6 @@
    <phase id="cdach_section_OriginalRepresentationCoded-20200714T122851">
       <active pattern="template-2.16.756.5.30.1.1.10.3.45-2020-07-14T122851"/>
    </phase>
-   <phase id="chpcc_entry_AnnotationComments">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.2-2016-11-12T000000"/>
-   </phase>
    <phase id="ManufacturedMaterialEntryContentModule-20191211T113424">
       <active pattern="template-2.16.756.5.30.1.1.10.4.33-2019-12-11T113424"/>
    </phase>
@@ -283,9 +278,6 @@
    </phase>
    <phase id="MedicationTreatmentPlanEntryContentModule-20191211T113152-closed">
       <active pattern="template-2.16.756.5.30.1.1.10.4.34-2019-12-11T113152-closed"/>
-   </phase>
-   <phase id="DosageIntakeModeEntryContentModule">
-      <active pattern="template-2.16.756.5.30.1.1.10.4.37-2016-09-13T160607"/>
    </phase>
    <phase id="TreatmentReasonEntryContentModule">
       <active pattern="template-2.16.756.5.30.1.1.10.4.41-2016-06-13T000000"/>
@@ -384,15 +376,11 @@
    <include href="include/2.16.756.5.30.1.1.10.3.44-2018-01-22T154038.sch"/>
    <!-- cdach_section_OriginalRepresentationCoded -->
    <include href="include/2.16.756.5.30.1.1.10.3.45-2020-07-14T122851.sch"/>
-   <!-- chpcc_entry_AnnotationComments -->
-   <include href="include/2.16.756.5.30.1.1.10.4.2-2016-11-12T000000.sch"/>
    <!-- ManufacturedMaterialEntryContentModule -->
    <include href="include/2.16.756.5.30.1.1.10.4.33-2019-12-11T113424.sch"/>
    <!-- MedicationTreatmentPlanEntryContentModule -->
    <include href="include/2.16.756.5.30.1.1.10.4.34-2019-12-11T113152.sch"/>
    <include href="include/2.16.756.5.30.1.1.10.4.34-2019-12-11T113152-closed.sch"/>
-   <!-- DosageIntakeModeEntryContentModule -->
-   <include href="include/2.16.756.5.30.1.1.10.4.37-2016-09-13T160607.sch"/>
    <!-- TreatmentReasonEntryContentModule -->
    <include href="include/2.16.756.5.30.1.1.10.4.41-2016-06-13T000000.sch"/>
    <!-- DispenseItemEntryContentModule -->

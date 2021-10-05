@@ -21,10 +21,10 @@
             </desc>
       <sourceCodeSystem id="2.16.840.1.113883.6.121"
                         identifierName="Tags for the Identification of Languages"
-                        canonicalUri="urn:oid:2.16.840.1.113883.6.121"
-                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.121"
-                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.121"
-                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.121"/>
+                        canonicalUri="urn:ietf:bcp:47"
+                        canonicalUriDSTU2="urn:ietf:bcp:47"
+                        canonicalUriSTU3="urn:ietf:bcp:47"
+                        canonicalUriR4="urn:ietf:bcp:47"/>
       <publishingAuthority name="eHealth Suisse">
                 <addrLine>Schwarzenburgstrasse 165</addrLine>
                 <addrLine>CH-3003 Bern</addrLine>

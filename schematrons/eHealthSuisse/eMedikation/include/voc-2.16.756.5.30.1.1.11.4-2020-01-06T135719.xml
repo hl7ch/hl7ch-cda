@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cda="urn:hl7-org:v3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:hl7="urn:hl7-org:v3"
+             xmlns:pharm="urn:ihe:pharm"
+             id="2.16.756.5.30.1.1.11.4"
+             name="IHEPharmaceuticalAdviceStatusList"
+             displayName="IHE Pharmaceutical Advice Status List"
+             effectiveDate="2020-01-06T13:57:19"
+             statusCode="draft"
+             url="http://art-decor.org/decor/services/"
+             ident="ch-pharm-"
+             referencedFrom="cdachemed-">
+      <sourceCodeSystem id="1.3.6.1.4.1.19376.1.9.2.1"
+                        identifierName=""
+                        canonicalUri="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"
+                        canonicalUriDSTU2="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"
+                        canonicalUriSTU3="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"
+                        canonicalUriR4="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
+      <publishingAuthority name="eHealth Suisse">
+                <addrLine>Schwarzenburgstrasse 165</addrLine>
+                <addrLine>CH-3003 Bern</addrLine>
+                <addrLine type="uri">www.e-health-suisse.ch</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="OK"
+                  codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+                  displayName="OK"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">
+                        <u>
+                            <span style="left: 196.608px; top: 389.013px; transform: scaleX(1.00088);">
+    Usage in case when this Pharmaceutical Advice references a Medication Treatment Plan 
+</span>
+                        </u>
+                        <span style="left: 196.608px; top: 399.893px; transform: scaleX(0.982137);">
+                            <u>
+    Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 413.077px; transform: scaleX(1.00356);">Medication Treatment Plan</span>
+                        <span style="left: 301.699px; top: 413.077px; transform: scaleX(0.999049);"> Item is active (allow to document complementary information).<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 426.261px; transform: scaleX(0.999303);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Prescription Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 439.573px; transform: scaleX(0.99921);">Prescription Item is active (e.g., can be dispensed, no change expected but allowed if </span>
+                        <span style="left: 196.608px; top: 450.45px; transform: scaleX(0.998595);">recommended medication given</span>
+                        <span style="left: 319.747px; top: 450.45px; transform: scaleX(1.0044);">).<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 463.637px; transform: scaleX(0.998587);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Dispense Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 476.821px; transform: scaleX(0.999775);">Dispense Item is active (e.g., resumed from being suspended).</span>
+                        <br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="CHANGE"
+                  codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+                  displayName="CHANGE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">
+                        <u>
+                            <span style="left: 196.608px; top: 492.693px; transform: scaleX(1.00088);">
+    Usage in case when this Pharmaceutical Advice references a Medication Treatment Plan 
+</span>
+                        </u>
+                        <span style="left: 196.608px; top: 503.701px; transform: scaleX(0.982137);">
+                            <u>
+    Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 516.885px; transform: scaleX(1.00162);">Change of planning.<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 530.069px; transform: scaleX(0.999303);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Prescription Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 543.253px; transform: scaleX(0.998273);">Dispense with </span>
+                        <span style="left: 196.608px; top: 543.253px; transform: scaleX(0.998273);">change expected<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 556.437px; transform: scaleX(0.998587);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Dispense Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 569.749px; transform: scaleX(1.00015);">Change in any information element of the Dispense Item except th</span>
+                        <span style="left: 451.968px; top: 569.749px; transform: scaleX(1.00106);">e medication (</span>
+                        <span style="left: 507.005px; top: 569.749px; transform: scaleX(0.998897);">e.g., </span>
+                        <span style="left: 525.562px; top: 569.749px; transform: scaleX(1.0026);">dosage</span>
+                        <span style="left: 196.598px; top: 580.761px; transform: scaleX(1.00513);">instructions</span>
+                        <span style="left: 241.526px; top: 580.761px; transform: scaleX(0.99927);">, patient instructions, etc.). The original Medicine Entry Item referenced by the </span>
+                        <span style="left: 196.598px; top: 591.637px; transform: scaleX(1.00062);">Dispense Item shall be unchanged.</span>
+                        <br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="REFUSE"
+                  codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+                  displayName="REFUSE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">
+                        <u>
+                            <span style="left: 196.608px; top: 607.509px; transform: scaleX(1.00088);">
+    Usage in case when this Pharmaceutical Advice references a Medication Treatment Plan 
+</span>
+                        </u>
+                        <span style="left: 196.608px; top: 618.517px; transform: scaleX(0.982137);">
+                            <u>
+    Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 631.829px; transform: scaleX(0.999932);">Refusal to integrate this medication in the treatment plan until further discussion with the </span>
+                        <span style="left: 196.608px; top: 642.706px; transform: scaleX(1.00051);">medication treatment planner<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 655.893px; transform: scaleX(0.999303);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Prescription Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 669.077px; transform: scaleX(1.00047);">Refusal to dispense until further discussion with prescr</span>
+                        <span style="left: 407.549px; top: 669.077px; transform: scaleX(1.00009);">iber</span>
+                        <br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="CANCEL"
+                  codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+                  displayName="CANCEL"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">
+                        <u>
+                            <span style="left: 196.608px; top: 115.093px; transform: scaleX(1.00088);">
+    Usage in case when this Pharmaceutical Advice references a Medication Treatment Plan 
+</span>
+                        </u>
+                        <span style="left: 196.608px; top: 126.101px; transform: scaleX(0.982137);">
+                            <u>
+    Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 139.413px; transform: scaleX(1.00079);">Definite cancelation of the Medication Treatment Plan Item (item will not be part of the </span>
+                        <span style="left: 196.608px; top: 150.425px; transform: scaleX(0.997907);">treatment plan any more).<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 163.477px; transform: scaleX(0.9993);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Prescription Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 176.661px; transform: scaleX(0.99686);">Definite </span>
+                        <span style="left: 230.4px; top: 176.661px; transform: scaleX(0.998627);">cancelation</span>
+                        <span style="left: 274.176px; top: 176.661px; transform: scaleX(1.00262);"> of the </span>
+                        <span style="left: 301.056px; top: 176.661px; transform: scaleX(1.00332);">Prescription Item</span>
+                        <span style="left: 367.488px; top: 176.661px; transform: scaleX(1.00093);"> (item will not be dispensed)<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 189.845px; transform: scaleX(0.999128);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Dispense item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 203.029px; transform: scaleX(1.00073);">Definite stopping of the dispensed medication (patient stops intak</span>
+                        <span style="left: 448.896px; top: 203.029px; transform: scaleX(0.999206);">e of the medication)</span>
+                        <br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="SUSPEND"
+                  codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+                  displayName="SUSPEND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">
+                        <u>
+                            <span style="left: 196.608px; top: 218.901px; transform: scaleX(1.00088);">
+    Usage in case when this Pharmaceutical Advice references a Medication Treatment Plan 
+</span>
+                        </u>
+                        <span style="left: 196.608px; top: 229.909px; transform: scaleX(0.982137);">
+                            <u>
+    Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 243.221px; transform: scaleX(1.0009);">Medication Treatment Plan Item is temporarily set to suspended with the decision on how to </span>
+                        <span style="left: 196.608px; top: 254.233px; transform: scaleX(0.999706);">continue postponed to a later point of time (e.g., release it again by setting it to OK, finally </span>
+                        <span style="left: 196.608px; top: 265.369px; transform: scaleX(0.999949);">cancel it by setting to CANCEL, etc.). The item shall not be part of the active treatment plan </span>
+                        <span style="left: 196.608px; top: 276.245px; transform: scaleX(1.00193);">during set to suspended.<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 289.429px; transform: scaleX(0.999303);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Prescription Item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 302.741px; transform: scaleX(1.00029);">Prescription Item is temporarily set to suspended with the decision on how to continue </span>
+                        <span style="left: 196.608px; top: 313.753px; transform: scaleX(0.999319);">postponed to a later point of time (e.g., release it again by setting it to OK, finally cancel it </span>
+                        <span style="left: 196.608px; top: 324.629px; transform: scaleX(1.00016);">by setting to CANCEL, etc.). The item shall not be dispensed during set to s</span>
+                        <span style="left: 489.091px; top: 324.629px; transform: scaleX(1.00425);">uspended.<br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 337.813px; transform: scaleX(0.999128);">
+                            <u>Usage in case when this Pharmaceutical Advice references a Dispense item:
+    </u>
+                            <br clear="none"/>
+                        </span>
+                        <span style="left: 196.608px; top: 351.125px; transform: scaleX(1.00016);">Dispense item is temporarily set to suspended with the decision on how to continue </span>
+                        <span style="left: 196.608px; top: 362.137px; transform: scaleX(0.999257);">postponed to a later point of time (e.g., release it again by setting it to OK, finally c</span>
+                        <span style="left: 516.096px; top: 362.137px; transform: scaleX(1.00191);">ancel it </span>
+                        <span style="left: 196.608px; top: 373.148px; transform: scaleX(0.999856);">by setting to CANCEL, etc.). The medication shall not be taken by the patient during set to </span>
+                        <span style="left: 196.608px; top: 384.159px; transform: scaleX(1.00347);">suspended.</span>
+                        <br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="COMMENT"
+                  codeSystem="1.3.6.1.4.1.19376.1.9.2.1"
+                  displayName="COMMENT"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">
+                        <span style="left: 196.608px; top: 400.021px; transform: scaleX(0.999129);">General usage: Comment on the referenced item</span>
+                        <br clear="none"/>
+                    </desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

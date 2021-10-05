@@ -21,22 +21,23 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]"
-         id="d41e8602-false-d223379e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]"
+         id="d42e8598-false-d223663e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="string(@typeCode) = ('DOC')">(cdach_header_HealthService): The value for typeCode SHALL be 'DOC'. Found: "<value-of select="@typeCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']) &gt;= 1">(cdach_header_HealthService): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46'] is mandatory [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']) &lt;= 1">(cdach_header_HealthService): element hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']) &gt;= 1">(cdach_header_HealthService): element hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN'] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']) &lt;= 1">(cdach_header_HealthService): element hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN'] appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -45,14 +46,15 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']"
-         id="d41e8609-false-d223445e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']"
+         id="d42e8605-false-d223729e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_HealthService): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="string(@root) = ('2.16.756.5.30.1.1.10.2.46')">(cdach_header_HealthService): The value for root SHALL be '2.16.756.5.30.1.1.10.2.46'. Found: "<value-of select="@root"/>"</assert>
    </rule>
    <!--
@@ -61,25 +63,26 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']"
-         id="d41e8614-false-d223495e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']"
+         id="d42e8610-false-d223779e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="string(@classCode) = ('ACT')">(cdach_header_HealthService): The value for classCode SHALL be 'ACT'. Found: "<value-of select="@classCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="string(@moodCode) = ('EVN')">(cdach_header_HealthService): The value for moodCode SHALL be 'EVN'. Found: "<value-of select="@moodCode"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV']) &gt;= 1">(cdach_header_HealthService): element hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV'] is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV']) &lt;= 1">(cdach_header_HealthService): element hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV'] appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:effectiveTime) &gt;= 1">(cdach_header_HealthService): element hl7:effectiveTime is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:effectiveTime) &lt;= 1">(cdach_header_HealthService): element hl7:effectiveTime appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -88,20 +91,21 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:id"
-         id="d41e8620-false-d223590e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:id"
+         id="d42e8616-false-d223874e0">
       <extends rule="II"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_HealthService): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="@root">(cdach_header_HealthService): attribute @root SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@root) or matches(@root,'^[0-2](\.(0|[1-9]\d*))*$') or matches(@root,'^[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}$') or matches(@root,'^[A-Za-z][A-Za-z\d\-]*$')">(cdach_header_HealthService): Attribute @root SHALL be of data type 'uid'  - '<value-of select="@root"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@extension) or string-length(@extension)&gt;0">(cdach_header_HealthService): Attribute @extension SHALL be of data type 'st'  - '<value-of select="@extension"/>'</assert>
    </rule>
    <!--
@@ -110,41 +114,42 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV']"
-         id="d41e8638-false-d223609e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV']"
+         id="d42e8634-false-d223893e0">
       <extends rule="CE"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CE' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_HealthService): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="string(@nullFlavor) = ('NAV')">(cdach_header_HealthService): The value for nullFlavor SHALL be 'NAV'. Found: "<value-of select="@nullFlavor"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@nullFlavor) or string-length(@nullFlavor)&gt;0">(cdach_header_HealthService): Attribute @nullFlavor SHALL be of data type 'st'  - '<value-of select="@nullFlavor"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@code)">(cdach_header_HealthService): attribute @code MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@code) or (string-length(@code) &gt; 0 and not(matches(@code,'\s')))">(cdach_header_HealthService): Attribute @code SHALL be of data type 'cs'  - '<value-of select="@code"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@codeSystem)">(cdach_header_HealthService): attribute @codeSystem MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@codeSystem) or matches(@codeSystem,'^[0-2](\.(0|[1-9]\d*))*$')">(cdach_header_HealthService): Attribute @codeSystem SHALL be of data type 'oid'  - '<value-of select="@codeSystem"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@codeSystemName)">(cdach_header_HealthService): attribute @codeSystemName MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_header_HealthService): Attribute @codeSystemName SHALL be of data type 'st'  - '<value-of select="@codeSystemName"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@displayName)">(cdach_header_HealthService): attribute @displayName MAY NOT be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_header_HealthService): Attribute @displayName SHALL be of data type 'st'  - '<value-of select="@displayName"/>'</assert>
    </rule>
    <!--
@@ -153,31 +158,32 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV']/hl7:translation"
-         id="d41e8654-false-d223649e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:code[not(@code)][not(@codeSystem)][not(@codeSystemName)][not(@displayName)][@nullFlavor = 'NAV']/hl7:translation"
+         id="d42e8650-false-d223933e0">
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="@code">(cdach_header_HealthService): attribute @code SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@code) or (string-length(@code) &gt; 0 and not(matches(@code,'\s')))">(cdach_header_HealthService): Attribute @code SHALL be of data type 'cs'  - '<value-of select="@code"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="@codeSystem">(cdach_header_HealthService): attribute @codeSystem SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@codeSystem) or matches(@codeSystem,'^[0-2](\.(0|[1-9]\d*))*$')">(cdach_header_HealthService): Attribute @codeSystem SHALL be of data type 'oid'  - '<value-of select="@codeSystem"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="@codeSystemName">(cdach_header_HealthService): attribute @codeSystemName SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@codeSystemName) or string-length(@codeSystemName)&gt;0">(cdach_header_HealthService): Attribute @codeSystemName SHALL be of data type 'st'  - '<value-of select="@codeSystemName"/>'</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="@displayName">(cdach_header_HealthService): attribute @displayName SHALL be present.</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(@displayName) or string-length(@displayName)&gt;0">(cdach_header_HealthService): Attribute @displayName SHALL be of data type 'st'  - '<value-of select="@displayName"/>'</assert>
    </rule>
    <!--
@@ -186,23 +192,24 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:effectiveTime"
-         id="d41e8669-false-d223677e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:effectiveTime"
+         id="d42e8665-false-d223961e0">
       <extends rule="IVL_TS.CH.TZ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='IVL_TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_HealthService): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:IVL_TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:low) &gt;= 1">(cdach_header_HealthService): element hl7:low is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:low) &lt;= 1">(cdach_header_HealthService): element hl7:low appears too often [max 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:high) &gt;= 1">(cdach_header_HealthService): element hl7:high is required [min 1x].</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="count(hl7:high) &lt;= 1">(cdach_header_HealthService): element hl7:high appears too often [max 1x].</assert>
    </rule>
    <!--
@@ -211,14 +218,15 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:effectiveTime/hl7:low"
-         id="d41e8674-false-d223704e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:effectiveTime/hl7:low"
+         id="d42e8670-false-d223988e0">
       <extends rule="TS.CH.TZ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_HealthService): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(*)">(cdach_header_HealthService): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
    </rule>
    <!--
@@ -227,14 +235,15 @@ Context: *[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46
 Item: (cdach_header_HealthService)
 -->
 
-   <rule context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:effectiveTime/hl7:high"
-         id="d41e8680-false-d223717e0">
+   <rule fpi="RULC-1"
+         context="*[hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]]/hl7:documentationOf[hl7:templateId[@root = '2.16.756.5.30.1.1.10.2.46']]/hl7:serviceEvent[@classCode = 'ACT'][@moodCode = 'EVN']/hl7:effectiveTime/hl7:high"
+         id="d42e8676-false-d224001e0">
       <extends rule="TS.CH.TZ"/>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(cdach_header_HealthService): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TS". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
       <assert role="error"
-              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210222T200028/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
+              see="http://ehealthsuisse.art-decor.org/cdachemed-html-20210623T090058/tmp-2.16.756.5.30.1.1.10.2.46-2019-01-01T205333.html"
               test="not(*)">(cdach_header_HealthService): <value-of select="local-name()"/> with datatype TS.CH.TZ, SHOULD NOT have child elements.</assert>
    </rule>
 </pattern>

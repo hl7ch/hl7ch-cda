@@ -8,7 +8,7 @@
       abstract="true"
       id="IVL_TS">
     <extends rule="SXCM_TS"/>
-
+    
     <!--<assert role="error" test="(@nullFlavor and not(@value|@unit|hl7:*)) or (not(@nullFlavor) and (@value|hl7:*))" see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS"
         >dtr1-1-IVL_TS: null violation. Cannot have @nullFlavor and @value or child elements, or the other way around</assert>-->
     <assert role="error"
@@ -53,7 +53,7 @@
     <assert role="error"
            test="not(hl7:high[@nullFlavor='NINF'])"
            see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-7-2-IVL_TS: low must be lower than or equal to high. Found high boundary NINF (Negative Infinity)</assert>
-
+    
     <!-- for width only us (microseconds),	ms (milliseconds),	s (seconds), min (minute), h (hours), d (day), wk (week), mo (month) and a (year) are allowed.
     -->
     <let name="tum" value="'^(us|ms|s|min|h|d|wk|mo|a|)$'"/>
@@ -62,133 +62,156 @@
            see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-8-IVL_TS: for width only us (microseconds), ms (milliseconds), s (seconds), min (minute), h (hours), d (day), wk (week), mo (month) or a (year) are allowed</assert>
     
     <let name="theTSLow" value="hl7:low/@value"/>
-    <let name="theBC" value="if (starts-with($theTSLow,'-')) then '-' else ()"/>
-    <let name="theTZ" value="replace($theTSLow,'-?[^+-]+([+-].*)?$','$1')"/>
-    <let name="theTZh"
-        value="if (string-length($theTZ)&gt;0) then substring($theTZ,1,3) else ()"/>
-    <let name="theTZm"
-        value="if (string-length($theTZ)&gt;3) then substring($theTZ,4) else ()"/>
-    <let name="theBaseTS" value="replace($theTSLow,'^-?([^+-]+)([+-].*)?','$1')"/>
-    <let name="theCentury"
-        value="if (substring($theBaseTS,1,2) castable as xs:integer) then substring($theBaseTS,1,2) else ()"/>
-    <let name="theYear"
-        value="if (substring($theBaseTS,3,2) castable as xs:integer) then substring($theBaseTS,3,2) else ()"/>
-    <let name="theMonth"
-        value="if (substring($theBaseTS,5,2) castable as xs:integer) then substring($theBaseTS,5,2) else ()"/>
-    <let name="theDay"
-        value="if (substring($theBaseTS,7,2) castable as xs:integer) then substring($theBaseTS,7,2) else ()"/>
-    <let name="theHour"
-        value="if (substring($theBaseTS,9,2) castable as xs:integer) then substring($theBaseTS,9,2) else ()"/>
-    <let name="theMinute"
-        value="if (substring($theBaseTS,11,2) castable as xs:integer) then substring($theBaseTS,11,2) else ()"/>
-    <let name="theSecond"
-        value="if (substring($theBaseTS,13,2) castable as xs:integer) then substring($theBaseTS,13,2) else ()"/>
-    <let name="theSubSecond"
-        value="if (substring($theBaseTS,16) castable as xs:integer) then substring($theBaseTS,15) else ()"/>
+    <let name="theBCLow"
+        value="if (starts-with($theTSLow,'-')) then '-' else ()"/>
+    <let name="theTZLow" value="replace($theTSLow,'-?[^+-]+([+-].*)?$','$1')"/>
+    <let name="theTZhLow"
+        value="if (string-length($theTZLow)&gt;0) then substring($theTZLow,1,3) else ()"/>
+    <let name="theTZmLow"
+        value="if (string-length($theTZLow)&gt;3) then substring($theTZLow,4) else ()"/>
+    <let name="theBaseTSLow"
+        value="replace($theTSLow,'^-?([^+-]+)([+-].*)?','$1')"/>
+    <let name="theCenturyLow"
+        value="if (substring($theBaseTSLow,1,2) castable as xs:integer) then substring($theBaseTSLow,1,2) else ()"/>
+    <let name="theYearLow"
+        value="if (substring($theBaseTSLow,3,2) castable as xs:integer) then substring($theBaseTSLow,3,2) else ()"/>
+    <let name="theMonthLow"
+        value="if (substring($theBaseTSLow,5,2) castable as xs:integer) then substring($theBaseTSLow,5,2) else ()"/>
+    <let name="theDayLow"
+        value="if (substring($theBaseTSLow,7,2) castable as xs:integer) then substring($theBaseTSLow,7,2) else ()"/>
+    <let name="theHourLow"
+        value="if (substring($theBaseTSLow,9,2) castable as xs:integer) then substring($theBaseTSLow,9,2) else ()"/>
+    <let name="theMinuteLow"
+        value="if (substring($theBaseTSLow,11,2) castable as xs:integer) then substring($theBaseTSLow,11,2) else ()"/>
+    <let name="theSecondLow"
+        value="if (substring($theBaseTSLow,13,2) castable as xs:integer) then substring($theBaseTSLow,13,2) else ()"/>
+    <let name="theSubSecondLow"
+        value="if (substring($theBaseTSLow,16) castable as xs:integer) then substring($theBaseTSLow,15) else ()"/>
     
-    <let name="cCentury"
-        value="if (empty($theCentury)) then '00' else $theCentury"/>
-    <let name="cYear" value="if (empty($theYear)) then '00' else $theYear"/>
-    <let name="cMonth" value="if (empty($theMonth)) then '01' else $theMonth"/>
-    <let name="cDay" value="if (empty($theDay)) then '01' else $theDay"/>
-    <let name="cHour" value="if (empty($theHour)) then '00' else $theHour"/>
-    <let name="cMinute" value="if (empty($theMinute)) then '00' else $theMinute"/>
-    <let name="cSecond" value="if (empty($theSecond)) then '00' else $theSecond"/>
-    <let name="cTZ" value="string-join(($theTZh,$theTZm),':')"/>
+    <let name="cCenturyLow"
+        value="if (empty($theCenturyLow)) then '00' else $theCenturyLow"/>
+    <let name="cYearLow"
+        value="if (empty($theYearLow)) then '00' else $theYearLow"/>
+    <let name="cMonthLow"
+        value="if (empty($theMonthLow)) then '01' else $theMonthLow"/>
+    <let name="cDayLow" value="if (empty($theDayLow)) then '01' else $theDayLow"/>
+    <let name="cHourLow"
+        value="if (empty($theHourLow)) then '00' else $theHourLow"/>
+    <let name="cMinuteLow"
+        value="if (empty($theMinuteLow)) then '00' else $theMinuteLow"/>
+    <let name="cSecondLow"
+        value="if (empty($theSecondLow)) then '00' else $theSecondLow"/>
+    <let name="cTZLow" value="string-join(($theTZhLow,$theTZmLow),':')"/>
     
-    <let name="theTSString"
-        value="string-join(($theBC,$theCentury,$theYear,$theMonth,$theDay,$theHour,$theMinute,$theSecond,$theSubSecond,$theTZ),'')"/>
+    <let name="theTSStringLow"
+        value="string-join(($theBCLow,$theCenturyLow,$theYearLow,$theMonthLow,$theDayLow,$theHourLow,$theMinuteLow,$theSecondLow,$theSubSecondLow,$theTZLow),'')"/>
     <let name="theLowDateTime"
-        value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
+        value="concat($theBCLow,$cCenturyLow,$cYearLow,'-',$cMonthLow,'-',$cDayLow,'T',$cHourLow,':',$cMinuteLow,':',$cSecondLow,$theSubSecondLow,$cTZLow)"/>
     
-    <assert test="empty($theTSLow) or ($theTSLow=$theTSString and $theLowDateTime castable as xs:dateTime)"
+    <assert test="empty($theTSLow) or ($theTSLow=$theTSStringLow and $theLowDateTime castable as xs:dateTime)"
            see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/low "<value-of select="$theTSLow"/>" is not a valid timestamp.</assert>
     
-    <let name="theTS" value="hl7:center/@value"/>
-    <let name="theBC" value="if (starts-with($theTS,'-')) then '-' else ()"/>
-    <let name="theTZ" value="replace($theTS,'-?[^+-]+([+-].*)?$','$1')"/>
-    <let name="theTZh"
-        value="if (string-length($theTZ)&gt;0) then substring($theTZ,1,3) else ()"/>
-    <let name="theTZm"
-        value="if (string-length($theTZ)&gt;3) then substring($theTZ,4) else ()"/>
-    <let name="theBaseTS" value="replace($theTS,'^-?([^+-]+)([+-].*)?','$1')"/>
-    <let name="theCentury"
-        value="if (substring($theBaseTS,1,2) castable as xs:integer) then substring($theBaseTS,1,2) else ()"/>
-    <let name="theYear"
-        value="if (substring($theBaseTS,3,2) castable as xs:integer) then substring($theBaseTS,3,2) else ()"/>
-    <let name="theMonth"
-        value="if (substring($theBaseTS,5,2) castable as xs:integer) then substring($theBaseTS,5,2) else ()"/>
-    <let name="theDay"
-        value="if (substring($theBaseTS,7,2) castable as xs:integer) then substring($theBaseTS,7,2) else ()"/>
-    <let name="theHour"
-        value="if (substring($theBaseTS,9,2) castable as xs:integer) then substring($theBaseTS,9,2) else ()"/>
-    <let name="theMinute"
-        value="if (substring($theBaseTS,11,2) castable as xs:integer) then substring($theBaseTS,11,2) else ()"/>
-    <let name="theSecond"
-        value="if (substring($theBaseTS,13,2) castable as xs:integer) then substring($theBaseTS,13,2) else ()"/>
-    <let name="theSubSecond"
-        value="if (substring($theBaseTS,16) castable as xs:integer) then substring($theBaseTS,15) else ()"/>
+    <let name="theTSCenter" value="hl7:center/@value"/>
+    <let name="theBCCenter"
+        value="if (starts-with($theTSCenter,'-')) then '-' else ()"/>
+    <let name="theTZCenter"
+        value="replace($theTSCenter,'-?[^+-]+([+-].*)?$','$1')"/>
+    <let name="theTZhCenter"
+        value="if (string-length($theTZCenter)&gt;0) then substring($theTZCenter,1,3) else ()"/>
+    <let name="theTZmCenter"
+        value="if (string-length($theTZCenter)&gt;3) then substring($theTZCenter,4) else ()"/>
+    <let name="theBaseTSCenter"
+        value="replace($theTSCenter,'^-?([^+-]+)([+-].*)?','$1')"/>
+    <let name="theCenturyCenter"
+        value="if (substring($theBaseTSCenter,1,2) castable as xs:integer) then substring($theBaseTSCenter,1,2) else ()"/>
+    <let name="theYearCenter"
+        value="if (substring($theBaseTSCenter,3,2) castable as xs:integer) then substring($theBaseTSCenter,3,2) else ()"/>
+    <let name="theMonthCenter"
+        value="if (substring($theBaseTSCenter,5,2) castable as xs:integer) then substring($theBaseTSCenter,5,2) else ()"/>
+    <let name="theDayCenter"
+        value="if (substring($theBaseTSCenter,7,2) castable as xs:integer) then substring($theBaseTSCenter,7,2) else ()"/>
+    <let name="theHourCenter"
+        value="if (substring($theBaseTSCenter,9,2) castable as xs:integer) then substring($theBaseTSCenter,9,2) else ()"/>
+    <let name="theMinuteCenter"
+        value="if (substring($theBaseTSCenter,11,2) castable as xs:integer) then substring($theBaseTSCenter,11,2) else ()"/>
+    <let name="theSecondCenter"
+        value="if (substring($theBaseTSCenter,13,2) castable as xs:integer) then substring($theBaseTSCenter,13,2) else ()"/>
+    <let name="theSubSecondCenter"
+        value="if (substring($theBaseTSCenter,16) castable as xs:integer) then substring($theBaseTSCenter,15) else ()"/>
     
-    <let name="cCentury"
-        value="if (empty($theCentury)) then '00' else $theCentury"/>
-    <let name="cYear" value="if (empty($theYear)) then '00' else $theYear"/>
-    <let name="cMonth" value="if (empty($theMonth)) then '01' else $theMonth"/>
-    <let name="cDay" value="if (empty($theDay)) then '01' else $theDay"/>
-    <let name="cHour" value="if (empty($theHour)) then '00' else $theHour"/>
-    <let name="cMinute" value="if (empty($theMinute)) then '00' else $theMinute"/>
-    <let name="cSecond" value="if (empty($theSecond)) then '00' else $theSecond"/>
-    <let name="cTZ" value="string-join(($theTZh,$theTZm),':')"/>
+    <let name="cCenturyCenter"
+        value="if (empty($theCenturyCenter)) then '00' else $theCenturyCenter"/>
+    <let name="cYearCenter"
+        value="if (empty($theYearCenter)) then '00' else $theYearCenter"/>
+    <let name="cMonthCenter"
+        value="if (empty($theMonthCenter)) then '01' else $theMonthCenter"/>
+    <let name="cDayCenter"
+        value="if (empty($theDayCenter)) then '01' else $theDayCenter"/>
+    <let name="cHourCenter"
+        value="if (empty($theHourCenter)) then '00' else $theHourCenter"/>
+    <let name="cMinuteCenter"
+        value="if (empty($theMinuteCenter)) then '00' else $theMinuteCenter"/>
+    <let name="cSecondCenter"
+        value="if (empty($theSecondCenter)) then '00' else $theSecondCenter"/>
+    <let name="cTZCenter" value="string-join(($theTZhCenter,$theTZmCenter),':')"/>
     
-    <let name="theTSString"
-        value="string-join(($theBC,$theCentury,$theYear,$theMonth,$theDay,$theHour,$theMinute,$theSecond,$theSubSecond,$theTZ),'')"/>
-    <let name="theDateTime"
-        value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
+    <let name="theTSStringCenter"
+        value="string-join(($theBCCenter,$theCenturyCenter,$theYearCenter,$theMonthCenter,$theDayCenter,$theHourCenter,$theMinuteCenter,$theSecondCenter,$theSubSecondCenter,$theTZCenter),'')"/>
+    <let name="theCenterDateTime"
+        value="concat($theBCCenter,$cCenturyCenter,$cYearCenter,'-',$cMonthCenter,'-',$cDayCenter,'T',$cHourCenter,':',$cMinuteCenter,':',$cSecondCenter,$theSubSecondCenter,$cTZCenter)"/>
     
-    <assert test="empty($theTS) or ($theTS=$theTSString and $theDateTime castable as xs:dateTime)"
-           see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/center "<value-of select="$theTS"/>" is not a valid timestamp.</assert>
+    <assert test="empty($theTSCenter) or ($theTSCenter=$theTSStringCenter and $theCenterDateTime castable as xs:dateTime)"
+           see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/center "<value-of select="$theTSCenter"/>" is not a valid timestamp.</assert>
     
     <let name="theTSHigh" value="hl7:high/@value"/>
-    <let name="theBC" value="if (starts-with($theTSHigh,'-')) then '-' else ()"/>
-    <let name="theTZ" value="replace($theTSHigh,'-?[^+-]+([+-].*)?$','$1')"/>
-    <let name="theTZh"
-        value="if (string-length($theTZ)&gt;0) then substring($theTZ,1,3) else ()"/>
-    <let name="theTZm"
-        value="if (string-length($theTZ)&gt;3) then substring($theTZ,4) else ()"/>
-    <let name="theBaseTS"
+    <let name="theBCHigh"
+        value="if (starts-with($theTSHigh,'-')) then '-' else ()"/>
+    <let name="theTZHigh" value="replace($theTSHigh,'-?[^+-]+([+-].*)?$','$1')"/>
+    <let name="theTZhHigh"
+        value="if (string-length($theTZHigh)&gt;0) then substring($theTZHigh,1,3) else ()"/>
+    <let name="theTZmHigh"
+        value="if (string-length($theTZHigh)&gt;3) then substring($theTZHigh,4) else ()"/>
+    <let name="theBaseTSHigh"
         value="replace($theTSHigh,'^-?([^+-]+)([+-].*)?','$1')"/>
-    <let name="theCentury"
-        value="if (substring($theBaseTS,1,2) castable as xs:integer) then substring($theBaseTS,1,2) else ()"/>
-    <let name="theYear"
-        value="if (substring($theBaseTS,3,2) castable as xs:integer) then substring($theBaseTS,3,2) else ()"/>
-    <let name="theMonth"
-        value="if (substring($theBaseTS,5,2) castable as xs:integer) then substring($theBaseTS,5,2) else ()"/>
-    <let name="theDay"
-        value="if (substring($theBaseTS,7,2) castable as xs:integer) then substring($theBaseTS,7,2) else ()"/>
-    <let name="theHour"
-        value="if (substring($theBaseTS,9,2) castable as xs:integer) then substring($theBaseTS,9,2) else ()"/>
-    <let name="theMinute"
-        value="if (substring($theBaseTS,11,2) castable as xs:integer) then substring($theBaseTS,11,2) else ()"/>
-    <let name="theSecond"
-        value="if (substring($theBaseTS,13,2) castable as xs:integer) then substring($theBaseTS,13,2) else ()"/>
-    <let name="theSubSecond"
-        value="if (substring($theBaseTS,16) castable as xs:integer) then substring($theBaseTS,15) else ()"/>
+    <let name="theCenturyHigh"
+        value="if (substring($theBaseTSHigh,1,2) castable as xs:integer) then substring($theBaseTSHigh,1,2) else ()"/>
+    <let name="theYearHigh"
+        value="if (substring($theBaseTSHigh,3,2) castable as xs:integer) then substring($theBaseTSHigh,3,2) else ()"/>
+    <let name="theMonthHigh"
+        value="if (substring($theBaseTSHigh,5,2) castable as xs:integer) then substring($theBaseTSHigh,5,2) else ()"/>
+    <let name="theDayHigh"
+        value="if (substring($theBaseTSHigh,7,2) castable as xs:integer) then substring($theBaseTSHigh,7,2) else ()"/>
+    <let name="theHourHigh"
+        value="if (substring($theBaseTSHigh,9,2) castable as xs:integer) then substring($theBaseTSHigh,9,2) else ()"/>
+    <let name="theMinuteHigh"
+        value="if (substring($theBaseTSHigh,11,2) castable as xs:integer) then substring($theBaseTSHigh,11,2) else ()"/>
+    <let name="theSecondHigh"
+        value="if (substring($theBaseTSHigh,13,2) castable as xs:integer) then substring($theBaseTSHigh,13,2) else ()"/>
+    <let name="theSubSecondHigh"
+        value="if (substring($theBaseTSHigh,16) castable as xs:integer) then substring($theBaseTSHigh,15) else ()"/>
     
-    <let name="cCentury"
-        value="if (empty($theCentury)) then '00' else $theCentury"/>
-    <let name="cYear" value="if (empty($theYear)) then '00' else $theYear"/>
-    <let name="cMonth" value="if (empty($theMonth)) then '01' else $theMonth"/>
-    <let name="cDay" value="if (empty($theDay)) then '01' else $theDay"/>
-    <let name="cHour" value="if (empty($theHour)) then '00' else $theHour"/>
-    <let name="cMinute" value="if (empty($theMinute)) then '00' else $theMinute"/>
-    <let name="cSecond" value="if (empty($theSecond)) then '00' else $theSecond"/>
-    <let name="cTZ" value="string-join(($theTZh,$theTZm),':')"/>
+    <let name="cCenturyHigh"
+        value="if (empty($theCenturyHigh)) then '00' else $theCenturyHigh"/>
+    <let name="cYearHigh"
+        value="if (empty($theYearHigh)) then '00' else $theYearHigh"/>
+    <let name="cMonthHigh"
+        value="if (empty($theMonthHigh)) then '01' else $theMonthHigh"/>
+    <let name="cDayHigh"
+        value="if (empty($theDayHigh)) then '01' else $theDayHigh"/>
+    <let name="cHourHigh"
+        value="if (empty($theHourHigh)) then '00' else $theHourHigh"/>
+    <let name="cMinuteHigh"
+        value="if (empty($theMinuteHigh)) then '00' else $theMinuteHigh"/>
+    <let name="cSecondHigh"
+        value="if (empty($theSecondHigh)) then '00' else $theSecondHigh"/>
+    <let name="cTZHigh" value="string-join(($theTZhHigh,$theTZmHigh),':')"/>
     
-    <let name="theTSString"
-        value="string-join(($theBC,$theCentury,$theYear,$theMonth,$theDay,$theHour,$theMinute,$theSecond,$theSubSecond,$theTZ),'')"/>
+    <let name="theTSStringHigh"
+        value="string-join(($theBCHigh,$theCenturyHigh,$theYearHigh,$theMonthHigh,$theDayHigh,$theHourHigh,$theMinuteHigh,$theSecondHigh,$theSubSecondHigh,$theTZHigh),'')"/>
     <let name="theHighDateTime"
-        value="concat($theBC,$cCentury,$cYear,'-',$cMonth,'-',$cDay,'T',$cHour,':',$cMinute,':',$cSecond,$theSubSecond,$cTZ)"/>
+        value="concat($theBCHigh,$cCenturyHigh,$cYearHigh,'-',$cMonthHigh,'-',$cDayHigh,'T',$cHourHigh,':',$cMinuteHigh,':',$cSecondHigh,$theSubSecondHigh,$cTZHigh)"/>
     
-    <assert test="empty($theTSHigh) or ($theTSHigh=$theTSString and $theHighDateTime castable as xs:dateTime)"
+    <assert test="empty($theTSHigh) or ($theTSHigh=$theTSStringHigh and $theHighDateTime castable as xs:dateTime)"
            see="https://art-decor.org/mediawiki/index.php?title=DTr1_IVL_TS">dtr1-9-IVL_TS: <value-of select="local-name()"/>/high "<value-of select="$theTSHigh"/>" is not a valid timestamp.</assert>
     
     <assert role="error"
